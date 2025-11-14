@@ -1,0 +1,16 @@
+.titulomsg {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+	color: #196588;
+	text-decoration: none;
+}
+.txtform {
+	font-family: Geneva, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+}
+.bot {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	background-color: #C5DCDE;
+}

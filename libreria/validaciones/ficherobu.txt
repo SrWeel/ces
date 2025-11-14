@@ -1,0 +1,1 @@
+select compra_id from dns_compras inner join app_proveedor on dns_compras.proveevar_id=app_proveedor.provee_id where tipdoc_id='1' and (provee_ruc='0604422550001' or provee_cedula='SN') and compra_nfactura='001-002-000000200'

@@ -1,0 +1,61 @@
+<style type="text/css">
+<!--
+#responsive-form{
+    max-width:600px /*-- cambiar esto para conseguir el ancho de la forma deseada --*/;
+    margin:0 auto;
+        width:100%;
+}
+.form-row{
+    width: 100%;
+}
+.column-half, .column-full{
+    float: left;
+    position: relative;
+    padding: 0.65rem;
+    width:100%;
+    -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box
+}
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+ 
+/**---------------- Media query ----------------**/
+@media only screen and (min-width: 48em) { 
+    .column-half{
+        width: 50%;
+    }
+}
+
+
+-->
+</style>
+
+<div id="responsive-form" class="clearfix">
+ 
+<div class="form-row">
+<div class="column-half">Nombre [text* first-name]</div>
+<div class="column-half">Apellido [text* last-name]</div>
+</div>
+ 
+<div class="form-row">
+<div class="column-half">Email [email* your-email]</div>
+<div class="column-half">Telefono [text* your-phone]</div>
+</div>
+ 
+<div class="form-row">
+<div class="column-full">Titulo [text* your-subject]</div>
+</div>
+ 
+<div class="form-row">
+<div class="column-full">Mensaje  [textarea your-message]</div>
+</div>
+ 
+<div class="form-row">
+<div class="column-full">[submit "Enviar"]</div>
+</div>
+ 
+</div><!--end responsive-form-->

@@ -1,0 +1,12 @@
+update cesdb_arextension.dns_antecedentesfamiliaresnewconext set antef_descripcion='MADRE Y HERMANA CON HIPERTENSION ARTERIAL' where antef_id=25
+update cesdb_arextension.dns_newtraumatologiagridexamenfisico set gexamfis_observacion='LIMITACION A LOS MOVIMIENTOS ACTIVOS Y PASIVOS DE LA ARTICULACION DE HOMBRO CODO Y MUÑECA, EDEMA + A NIVEL DE MUÑECA DERECHA' where gexamfis_id=1364
+update cesdb_arextension.dns_antecedentespersonalesnewconext set antep_descripcion='' where antep_id=46
+update cesdb_arextension.dns_antecedentespersonalesnewconext set antep_descripcion='' where antep_id=46
+update cesdb_arextension.dns_antecedentespersonalesnewconext set antep_descripcion=' APP: ROSACEA MINOXICLINA DE 100MG QDX 30DIAS (FALTA COMPLETAR 15 DIAS)
+AQX: APENDICECTOMIA A LOS 16 AÑOS, RESECCION DE PTERIGION EN OJO DERECHO HACE 10 AÑOS. REDUCCION ABIERTA + OTS + PLASTIA TENDON ROTULIANO HACE 9 MESES ' where antep_id=46
+update cesdb_arextension.dns_newtraumatologiagridorgano set gorgano_observacion='RODILLA DERECHA, 5TO DEDO DE MANO IZQUIERDA ' where gorgano_id=554
+update cesdb_arextension.dns_newtraumatologiagridexamenfisico set gexamfis_observacion='' where gexamfis_id=1389
+update cesdb_arextension.dns_newtraumatologiagridexamenfisico set gexamfis_observacion='' where gexamfis_id=1390
+update cesdb_arextension.dns_newtraumatologiagridexamenfisico set gexamfis_observacion='RODILLA DERECHA PRESENCIA DE CICATRIZ QUELOIDE, CRUJIDO ARTICULAR PRESENTE, NO EDEMA, RANGOS DE MOVILIDAD ACTIVOS Y PASIVOS CONSERVADOS, FUERZA MUSCULAR 5/5 SENSIBILIDAD' where gexamfis_id=1390
+update cesdb_arextension.dns_newtraumatologiagridexamenfisico set gexamfis_observacion='RODILLA DERECHA PRESENCIA DE CICATRIZ QUELOIDE, CRUJIDO ARTICULAR PRESENTE, NO EDEMA, RANGOS DE MOVILIDAD ACTIVOS Y PASIVOS CONSERVADOS, FUERZA MUSCULAR 5/5 SENSIBILIDAD' where gexamfis_id=1390
+update cesdb_arextension.dns_newtraumatologiagridexamenfisico set gexamfis_observacion='MANO IZQUIERDA 5TO DEDO LIMITACION FLEXION INTERFALANGICA PROXIMAL ' where gexamfis_id=1389

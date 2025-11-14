@@ -1,0 +1,59 @@
+#content {
+
+position:relative;
+/* background-image: url(http://www.conservatorionacional.com.ec/conservatorio/templates/conserv/images/contenido_r3_c4.jpg);*/
+	width: 987px; 
+	padding: 0px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	margin-right: auto;
+	margin-left: auto; 	
+	/* opera does not like 'margin:20px auto' */
+
+	text-align:left; 
+	/* part 2 of 2 centering hack */
+	width: 987px; /* ie5win fudge begins */
+	voice-family: "\"}\"";
+	voice-family:inherit;
+	width: 987px;
+	font-family: Georgia, "Times New Roman", serif;
+  font-size        : 11px;
+  height: 315px;
+ z-index:0; 
+	}
+html>body #content {
+	width: 987px; /* ie5win fudge ends */
+	 z-index:0; 
+	}
+
+
+
+/* John's black voodoo CSS trickery supa kung foo grip */
+#container
+{
+	border: solid;
+	border-width: 1px;
+	 border-color: #efefef;
+	
+	 clear: both;
+}
+
+#jbl_magic_maincontent{
+    position: absolute;
+	width: 987px;
+	height: 315px;
+	top: 0px;
+	left: 0px;
+	
+	z-index: 12;
+	clear: both;
+	text-indent: 20px;
+	/*margin-left: 10px;
+	-moz-opacity     : 0.60; 
+	filter           : Alpha(opacity=85, finishopacity=85, style=1); */
+	overflow: auto;
+	overflow-x: auto;
+	/*padding: 3px 5px 3px 2px;*/
+
+
+}

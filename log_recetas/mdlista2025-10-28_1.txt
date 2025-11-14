@@ -1,0 +1,4 @@
+update cesdb_arextension.dns_newtraumatologiagridexamenfisico set gexamfis_observacion='' where gexamfis_id=990
+update cesdb_arextension.dns_newtraumatologiagridexamenfisico set gexamfis_observacion='' where gexamfis_id=990
+update cesdb_arextension.dns_newtraumatologiagridexamenfisico set gexamfis_observacion='PERSISTE EDEMA +, EQUIMOSIS MALEOLAR, DOLOR Y LIMITACION A LA MOVILIDAD ACTIVA Y PASIVA' where gexamfis_id=990
+update cesdb_arextension.dns_antecedentespersonalesnewconext set antep_descripcion='INFILTRACION LUMBAR EL 29/09/2025 ' where antep_id=33

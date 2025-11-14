@@ -1,0 +1,43 @@
+.contentslide{
+
+border-bottom-width: 4px;
+padding: 4px;
+width: 300px;
+height: 120px;
+}
+
+.contentslide .opacitylayer{ /*Do not edit this rule unless you're familiar with CSS opacity behavior*/
+width: 100%;
+height: 100%;
+
+
+}
+
+.contentslide .contentdiv{
+display: none;
+}
+
+.pagination{
+width: 210px; /*Width of pagination DIV. To equal that of Content Slider's width, take into account the later's left/right paddings!*/
+text-align: right;
+padding: 0 0 0px 0;
+display:none;
+}
+
+* html .pagination{ /*Simplified box model hack to get IE5 to display width equal to that of Content Slider's*/
+width: 220px; /*IE5 width*/
+w\idth: 220px; /*IE6 width*/
+}
+
+.pagination a{
+	padding: 0 2px;
+	text-decoration: none;
+	color: #FFFFFF;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+}
+
+.pagination a:hover, .pagination a.selected{
+color: #000;
+background-color: #FEE496;
+}

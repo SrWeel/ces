@@ -1,0 +1,38 @@
+insert into dns_certificadogenerado (certif_id,especi_id,clie_ci,med_ci,certifg_texto,usua_id,certifg_fecharegistro,nd_otorgado,emp_id,centro_id,certifg_especialidad,certifg_code) values ('7','','1726744269','1726811381','  <p style="text-align:center"><strong>CERTIFICADO MEDICO REPOSO</strong></p>
+
+<p style="text-align:center"><strong>SUB-BODEGA QUIROFANO</strong></p>
+
+<p style="text-align:right">QUITO,  27 de Octubre de 2025</p>
+
+<p style="text-align:justify"> </p>
+
+<p style="text-align:justify"><strong>CERTIFICO</strong>, por medio del presente que, LUIS ARMANDO SALTOS LARA, con CI: 1726744269, HC: 1726744269 que recide en LA ARGELIA BARRIO SAN CARLOS DEL SUR CALLE S19, Teléfono: 0995113100 presenta como causa de enfermedad: S800 Contusión de la rodilla M238 Otros trastornos internos de la rodilla  TEST . Por lo que se require reposo absoluto a partir de la fecha.  </p>
+
+<p style="text-align:justify"><strong>FECHA DE REPOSO: </strong></p>
+
+<p style="text-align:justify">Desde: 2025-10-20 ( VEINTE   DE OCTUBRE DE DOS MIL VENTICINCO  ) .<br />
+Hasta: 2025-10-30 ( TREINTA   DE OCTUBRE DE DOS MIL VENTICINCO  ) .</p>
+
+<p style="text-align:justify"><strong>Total, de días:</strong> 11.</p>
+
+<p style="text-align:justify"><strong>Diagnostico con codificación CIE-10: </strong></p>
+
+<p><ul><li>S800 Contusión de la rodilla</li><li>M238 Otros trastornos internos de la rodilla</li></ul></p>
+
+<p><strong>Tipo de contingencia:</strong> ENFERMEDAD GENERAL</p>
+
+<p><strong>Institución: </strong>CORPORACION FAVORITA</p>
+
+<p><strong>Puesto de Trabajo:</strong> PREVENCION Y SEGURIDAD</p>
+
+<p>Particular para fines pertinentes.</p>
+
+<p> </p>
+
+<p> </p>
+
+<p>________________________________________</p>
+
+<p><b>DR. DIEGO  MAURICIO CAJAMARCA VERGARA</b><br><br>COD: 1726811381<br>MSP: 1726811381<p> </p><p> </p></p>
+
+<p> </p>  <div align="center"><br><img src="temporal/QR_202510271545501_177.jpg" height="120" width="120" ><br>CERT717267442691726811381171202510270345504287</div>','1','2025-10-27','','1','12','','CERT717267442691726811381171202510270345504287');

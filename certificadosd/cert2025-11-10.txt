@@ -1,0 +1,41 @@
+insert into dns_certificadogenerado (certif_id,especi_id,clie_ci,med_ci,certifg_texto,usua_id,certifg_fecharegistro,nd_otorgado,emp_id,centro_id,certifg_especialidad,certifg_code) values ('4','','1711467884','1212121212','  <p style="text-align:center">CLÍ,NICA DE ESPECIALIDADES DEL SUR</p>
+
+<p><span style="font-size:9px">SECTOR EL BEATERIO BARRIO EL CONDE N1 FONO: 3816769 </span></p>
+
+<p><span style="font-size:9px">MAIL: <a href="mailto:pichinchahumana_beaterio@pichincha.gob.ec">pichinchahumana_</a><a href="mailto:pichinchahumana_beaterio@pichincha.gob.ec">beaterio@pichincha.gob.ec</a></span></p>
+
+<p><span style="font-size:9px">Quito, de mayo del 2021</span></p>
+
+<p><span style="font-size:9px">Certifico haber examinado la  Señor/ Señora------ con cédula de identidad :</span></p>
+
+<p><span style="font-size:9px">Institución donde labora:</span></p>
+
+<p><span style="font-size:9px">Cargo que desempeña:</span></p>
+
+<p><span style="font-size:9px">Con diagnóstico de COVID 19 VIRUS IDENTIFICADO CIE 10 U071. Síntomas: fiebre por 48h tos, congestión nasal y malestar general.</span></p>
+
+<p><span style="font-size:9px">PruebaRPT PCR SARS COV 2 POSITIVA , anexo documento.</span></p>
+
+<p><span style="font-size:9px">Reposo desde el    mayo del 2021 hata el   mayo del 2021 </span></p>
+
+<p><span style="font-size:9px">Días de reposo: 7 ( siete) .</span></p>
+
+<p><span style="font-size:9px">No apto para teletrabajo.</span></p>
+
+<p>Atentamente.</p>
+
+<p> </p>
+
+<p> </p>
+
+<p>Dra. Verónica Alexandra Salazar Velasco</p>
+
+<p>MSP L23F2N005</p>
+
+<p> </p>
+
+<p> </p>
+
+<p> </p>
+
+<p> </p>  <div align="center"><br><img src="temporal/QR_202511101414341_144.jpg" height="120" width="120" ><br>CERT417114678841212121212141202511100214332596</div>','1','2025-11-10','','1','12','','CERT417114678841212121212141202511100214332596');

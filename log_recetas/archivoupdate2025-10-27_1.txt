@@ -1,0 +1,1 @@
+update cesdb_arextension.dns_gridconvenios set gconve_convenio='3',gconve_precio='20' where gconve_id='2'

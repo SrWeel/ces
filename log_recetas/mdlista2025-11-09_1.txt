@@ -1,0 +1,3 @@
+update cesdb_arextension.dns_newtraumatologiagridorgano set gorgano_observacion='' where gorgano_id=564
+update cesdb_arextension.dns_newtraumatologiagridorgano set gorgano_observacion='EDEMA GENERALIZADO EN DEDOS ESPECIALMENTE 3 DEDO PIE BRILLANTE CIRCULACION DISTAL DEFICIENTE ' where gorgano_id=564
+update cesdb_arextension.dns_newtraumatologiagridorgano set gorgano_observacion='EDEMA GENERALIZADO EN DEDOS ESPECIALMENTE 3 DEDO PIE BRILLANTE CIRCULACION DISTAL DEFICIENTE ' where gorgano_id=564

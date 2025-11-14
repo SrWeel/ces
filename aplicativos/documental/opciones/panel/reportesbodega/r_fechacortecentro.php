@@ -1,0 +1,129 @@
+<?php
+ini_set('display_errors',0);
+error_reporting(E_ALL);
+header('Content-Type: text/html; charset=UTF-8');
+$tiempossss="44450000";
+ini_set("session.cookie_lifetime",$tiempossss);
+ini_set("session.gc_maxlifetime",$tiempossss);
+session_start();
+
+
+$codigo_pr=$_POST["codigo_pr"];
+$lote_pr=$_POST["lote_pr"];
+$fechai=$_POST["fechai"];
+$categ_id=$_POST["categ_id"];
+
+$centro_id=$_POST["centro_id"];
+$subcateg_id=$_POST["subcateg_id"];
+
+
+
+if(@$_SESSION['ces1313777_sessid_inicio'])
+{
+$director='../../../../../';
+include("../../../../../cfg/clases.php");
+include("../../../../../cfg/declaracion.php");
+include(@$director."libreria/estructura/aqualis_master.php");
+$sqltotal="";
+
+$objformulario= new  ValidacionesFormulario();
+
+$b_periodoac="";
+$per_activo=0;
+$per_activo=$objformulario->replace_cmb("dns_periodobodega","perio_activo,perio_anio"," where perio_activo=",1,$DB_gogess);
+
+$ncentro=$objformulario->replace_cmb("dns_centrosalud","centro_id,centro_nombre"," where centro_id=",$centro_id,$DB_gogess);
+
+$subcateg_id=$_POST["subcateg_id"];
+
+?>
+<div align="center">
+  <table width="100%" border="0" cellpadding="0" cellspacing="0">
+    <tr>
+      <td><div align="center"><strong>CL&Iacute,NICA DE ESPECIALIDADES DEL SUR</strong></div></td>
+    </tr>
+    <tr>
+      <td><div align="center"><strong>Bodega: <?php echo $ncentro; ?> Fecha de Corte: </strong><?php echo $fechai; ?></div></td>
+    </tr>
+    <tr>
+      <td><div align="center"></div></td>
+    </tr>
+  </table>
+</div>
+<?php
+if($categ_id==2)
+{
+$bu_fcorte="select distinct det.cuadrobm_id,moviin_nlote,moviin_preciocompra,moviin_fechadecaducidad from dns_movimientoinventario det inner join cmb_dns_cuadrobasicomedicamentos cm on cm.cuadrobm_id=det.cuadrobm_id where date_format(moviin_fecharegistro, '%Y-%m-%d')<='".$fechai."' and year(moviin_fecharegistro) >=".$per_activo." and cm.categ_id='".$categ_id."' and  cm.subcateg_id='".$subcateg_id."' and tipom_id=1 and centro_id='".$centro_id."' and perioac_id>='".$per_activo."' order by nombre_med asc";
+}
+else
+{
+  $bu_fcorte="select distinct det.cuadrobm_id,moviin_nlote,moviin_preciocompra,moviin_fechadecaducidad from dns_movimientoinventario det inner join cmb_dns_cuadrobasicomedicamentos cm on cm.cuadrobm_id=det.cuadrobm_id where date_format(moviin_fecharegistro, '%Y-%m-%d')<='".$fechai."' and year(moviin_fecharegistro) >=".$per_activo." and cm.categ_id='".$categ_id."' and tipom_id=1 and centro_id='".$centro_id."' and perioac_id>='".$per_activo."' order by nombre_med asc";
+
+}
+
+//echo $bu_fcorte;
+?>
+<br>
+<br>
+<table width="90%" border="1" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td><div align="center"><strong>C&oacute;digo</strong></div></td>
+    <td><div align="center"><strong>Lote</strong></div></td>
+    <td><div align="center"><strong>Fec. Cad.</strong></div></td>
+    <td><div align="center"><strong>Nombre del Producto</strong></div></td>
+    <td><div align="center"><strong>Saldo</strong></div></td>
+    <td><div align="center"><strong>Costo</strong></div></td>
+    <td><div align="center"><strong>Total</strong></div></td>
+  </tr>
+  <?php
+  $saldo=0; 
+  $SUMA_TOTALES=0;
+  $rs_listafcorte = $DB_gogess->executec($bu_fcorte);
+                   if($rs_listafcorte)
+				   {
+						while (!$rs_listafcorte->EOF) {
+						
+					$datop=array();				
+					$datop=$objBodega->nombre_pr('',$rs_listafcorte->fields["cuadrobm_id"],$DB_gogess);
+					
+					$stock_ac=0;
+                    $stock_ac=$objBodega->stock_alafechacentro($centro_id,$rs_listafcorte->fields["cuadrobm_id"],$fechai,$rs_listafcorte->fields["moviin_nlote"],$per_activo,$DB_gogess);
+					
+					$total_valor=0;
+					$total_valor=$stock_ac*$rs_listafcorte->fields["moviin_preciocompra"];					
+					$total_valor=number_format($total_valor, 2, '.', '');
+					if($stock_ac>0)
+					{
+					?>
+					<tr>
+						<td><?php echo $datop["codigo"]; ?></td>
+						<td><?php echo $rs_listafcorte->fields["moviin_nlote"]; ?></td>
+						<td nowrap="nowrap"><?php echo $rs_listafcorte->fields["moviin_fechadecaducidad"];  ?></td>
+						<td><?php echo $datop["nombre"]; ?></td>
+						<td><?php echo $stock_ac; ?></td>
+						<td><?php echo $rs_listafcorte->fields["moviin_preciocompra"]; ?></td>
+						<td><?php echo $total_valor; ?></td>
+  </tr>					
+					<?php		
+						  $SUMA_TOTALES=$SUMA_TOTALES+$total_valor;		
+					}
+                         $rs_listafcorte->MoveNext();
+                       }
+				}	   
+  
+  
+  ?>
+  
+  <tr>
+    <td><div align="center"><strong>TOTALES</strong></div></td>
+    <td><div align="center"><strong></strong></div></td>
+    <td><div align="center"><strong></strong></div></td>
+    <td><div align="center"><strong></strong></div></td>
+    <td><div align="center"><strong></strong></div></td>
+    <td><div align="center"><strong></strong></div></td>
+    <td><div align="center"><strong><?php echo $SUMA_TOTALES; ?></strong></div></td>
+  </tr>
+</table>
+<?php
+}
+?>

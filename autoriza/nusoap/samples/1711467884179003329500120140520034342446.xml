@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<factura version="1.0.0" id="comprobante" >
+<infoTributaria>
+<ambiente>1</ambiente>
+<tipoEmision>1</tipoEmision>
+<razonSocial>Citibank, N.A. Sucursal Ecuador</razonSocial>
+<nombreComercial>Citibank, N.A. Sucursal Ecuador</nombreComercial>
+<ruc>1790033295001</ruc>
+<claveAcceso>2005201401179003329500110010020000020933434244619</claveAcceso>
+<codDoc>01</codDoc>
+<estab>001</estab>
+<ptoEmi>002</ptoEmi>
+<secuencial>000002093</secuencial>
+<dirMatriz>Av. Republica del Salvador No N36-230 y Av. Naciones Unidas Esquina</dirMatriz>
+</infoTributaria>
+<infoFactura>
+<fechaEmision>20/05/2014</fechaEmision>
+<dirEstablecimiento>Av. Republica del Salvador No N36-230 y Av. Naciones Unidas Esquina</dirEstablecimiento>
+<contribuyenteEspecial>5368</contribuyenteEspecial>
+<obligadoContabilidad>SI</obligadoContabilidad>
+<tipoIdentificacionComprador>04</tipoIdentificacionComprador>
+<razonSocialComprador>NOMBRE OFUSCADO 148746</razonSocialComprador>
+<identificacionComprador>0990001243001</identificacionComprador>
+<totalSinImpuestos>8.93</totalSinImpuestos>
+<totalDescuento>0.00</totalDescuento>
+<totalConImpuestos>
+<totalImpuesto>
+<codigo>2</codigo>
+<codigoPorcentaje>2</codigoPorcentaje>
+<baseImponible>8.93</baseImponible>
+<valor>1.07</valor>
+</totalImpuesto>
+</totalConImpuestos>
+<propina>0.00</propina>
+<importeTotal>10.00</importeTotal>
+<moneda>DOLAR</moneda>
+</infoFactura>
+<detalles>
+<detalle>
+<codigoPrincipal>F102</codigoPrincipal>
+<codigoAuxiliar>F102</codigoAuxiliar>
+<descripcion>EMISION CHEQUE INTERNACIONAL</descripcion>
+<cantidad>1.00</cantidad>
+<precioUnitario>8.93</precioUnitario>
+<descuento>0.00</descuento>
+<precioTotalSinImpuesto>8.93</precioTotalSinImpuesto>
+<impuestos>
+<impuesto>
+<codigo>2</codigo>
+<codigoPorcentaje>2</codigoPorcentaje>
+<tarifa>12.00</tarifa>
+<baseImponible>8.93</baseImponible>
+<valor>1.07</valor>
+</impuesto>
+</impuestos>
+</detalle>
+</detalles>
+<infoAdicional>
+<campoAdicional nombre="direccionComprador">BOYACA 1205 Y 9 DE OCTUBRE GUAYAQUIL</campoAdicional>
+<campoAdicional nombre="CorreoCliente">martha.serrano@citi.com</campoAdicional>
+</infoAdicional>
+</factura>

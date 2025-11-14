@@ -1,0 +1,15 @@
+<?php printf("<link href='%sfe.css' rel='stylesheet' type='text/css'>",$ap_path);?>
+<?php
+switch ($seccapl) 
+	{
+     case 1:
+         {
+            include("clave.php");		
+         }
+         break;  
+    
+     default:	  
+         include($ap_path."clave.php");		 
+    }  
+
+?> 

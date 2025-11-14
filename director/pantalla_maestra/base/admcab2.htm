@@ -1,0 +1,84 @@
+<?php
+if ($table)
+{
+  
+?>
+<table width="100%"  border="0" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF" class="fondomenu">
+  <tr>
+    <td bgcolor="#FFFFFF"><table width="332"  border="0" align="center" cellpadding="0" cellspacing="3" bgcolor="#FFFFFF">
+      <tr>       
+         <?php
+           $permiso=strchr($objacceso_session->sess_boton,strval($table."n"));
+          if (!($permiso)){       
+	  ?>
+        <td class="mano"><div align="center"><a href="index.php?campoant=<?php echo $campoant ?>&tableant1=<?php echo $tableant1 ?>&table=<?php echo $table ?>&tableant=<?php echo $tableant ?>&sessid=<?php echo $sessid ?>&listab=<?php echo $listab ?>&campo=<?php echo $campo ?>&obp=<?php echo $obp ?>" target="_top"><img src="<?php echo $objtemplate->path_template ?>images/new.gif" border="0"></a></div></td>
+        <?php
+          }
+           $permiso=strchr($objacceso_session->sess_boton,strval($table."g"));
+          if (!($permiso)){       
+	  ?>
+        <td class="mano" onClick="guardar()"><div align="center"><img src="<?php echo $objtemplate->path_template ?>images/save.gif"></div></td>
+        <?php
+          }
+
+          $permiso=strchr($objacceso_session->sess_boton,strval($table."b"));
+          if (!($permiso)){       
+	  ?>
+        <td class="mano" onClick="borrar()"><div align="center"><img src="<?php echo $objtemplate->path_template ?>images/del.gif"></div></td>
+        <?php
+          }
+          $permiso=strchr($objacceso_session->sess_boton,strval($table."bu"));
+          if (!($permiso)){       
+	  ?>
+        <td class="mano" onClick="buscar()"><div align="center"><img src="<?php echo $objtemplate->path_template ?>images/search.gif"></div></td>
+        <?php
+          } 
+          $permiso=strchr($objacceso_session->sess_boton,strval($table."im"));
+          if (!($permiso)){   
+	  ?>
+        <td class="mano"><div align="center"><a href="modules/fimpresion.php?table=<?php echo $table ?>&opcion=buscar&sessid=<?php echo $sessid ?>&csearch=<?php echo $csearch ?>&fimp=1&listab=<?php echo $listab ?>" target="_blank"><img src="<?php echo $objtemplate->path_template ?>images/print.gif" border="0"></a></div></td>
+        <?php
+          } 
+	  ?>
+      </tr>
+      <tr class="txtmenu">
+       <?php
+          $permiso=strchr($objacceso_session->sess_boton,strval($table."n"));
+          if (!($permiso)){       
+	  ?>
+        <td class="mano" ><div align="center"><a href="index.php?campoant=<?php echo $campoant ?>&tableant1=<?php echo $tableant1 ?>&table=<?php echo $table ?>&tableant=<?php echo $tableant ?>&sessid=<?php echo $sessid ?>&listab=<?php echo $listab ?>&campo=<?php echo $campo ?>&obp=<?php echo $obp ?>" target="_top" class="mano">Nuevo</a></div></td>
+        <?php
+          }
+          $permiso=strchr($objacceso_session->sess_boton,strval($table."g"));
+          if (!($permiso)){       
+	  ?>
+        <td class="mano" onClick="guardar()"><div align="center">Guardar</div></td>
+        <?php
+          }
+
+          $permiso=strchr($objacceso_session->sess_boton,strval($table."b"));
+          if (!($permiso)){       
+	  ?>
+        <td class="mano" onClick="borrar()"><div align="center">Borrar</div></td>
+        <?php
+          }
+          $permiso=strchr($objacceso_session->sess_boton,strval($table."bu"));
+          if (!($permiso)){       
+	  ?>
+        <td class="mano" onClick="imprimir()"><div align="center">Buscar</div></td>
+        <?php
+          }
+          $permiso=strchr($objacceso_session->sess_boton,strval($table."im"));
+          if (!($permiso)){  
+	  ?>
+        <td class="mano"><div align="center"><a href="modules/fimpresion.php?table=<?php echo $table ?>&opcion=buscar&sessid=<?php echo $sessid ?>&csearch=<?php echo $csearch ?>&fimp=1&listab=<?php echo $listab ?>" target="_blank" class="mano">Imprimir</a></div></td>
+        <?php
+          }
+	  ?>
+      </tr>
+    </table></td>
+  </tr>
+</table>
+<?php
+}
+?>

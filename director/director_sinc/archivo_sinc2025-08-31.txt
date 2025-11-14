@@ -1,0 +1,5 @@
+update gogess_sisfield set fie_title='Logo Reporte:' where fie_id='12168';
+update gogess_sisfield set fie_type='' where fie_id='12168';
+update gogess_sisfield set fie_type='txtgrafico' where fie_id='12168';
+update gogess_sisfield set fie_typeweb='txtgrafico' where fie_id='12168';
+update gogess_sisfield set fie_title='Pie de p&aacute;gina:' where fie_id='12169';

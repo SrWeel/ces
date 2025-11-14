@@ -1,0 +1,81 @@
+update cesdb_arextension.dns_antecedentespersonalesnewconext set antep_descripcion='ANTECEDENTE QUIRURGICO DE ARTROSCOPIA DIAGNOSTICA Y TERAPEUTICA EL HACE 3 MESES 17/7/2025' where antep_id=22
+update cesdb_arextension.dns_antecedentespersonalesnewconext set antep_descripcion='ANTECEDENTE QUIRURGICO DE ARTROSCOPIA DIAGNOSTICA Y TERAPEUTICA EL HACE 3 MESES 17/7/2025. RINOSEPTOPLASTIA HACE 7 AÑOS' where antep_id=22
+update cesdb_arextension.dns_antecedentesfamiliaresnewconext set antef_descripcion='MADRE' where antef_id=13
+update cesdb_arextension.dns_newtraumatologiagridorgano set gorgano_observacion='EDEMA EN RODILLA DERECHA' where gorgano_id=274
+update cesdb_arextension.dns_newtraumatologiagridexamenfisico set gexamfis_observacion=' EDEMA EN RODILLA DERECHA, SIGNOS DEL CHOQUE,  NO SIGNOS DE LESION LIGAMENTARIA O MENISCAL. LLENADO CAPILAR ADECUADO, SENSISBILIDAD CONSERVADA' where gexamfis_id=690
+update cesdb_arextension.dns_antecedentespersonalesnewconext set antep_descripcion='A RTROSCOPIA DIAGNOSTICA Y TERAPÉUTICA DE HOMBRO IZQUIERDO 08/09/2025 POR SINDROME DE MANGUITO ROTADOR IZQUIERDO' where antep_id=23
+update cesdb_arextension.dns_antecedentespersonalesnewconext set antep_descripcion='A RTROSCOPIA DIAGNOSTICA Y TERAPÉUTICA DE HOMBRO IZQUIERDO 08/09/2025 POR SINDROME DE MANGUITO ROTADOR IZQUIERDO' where antep_id=23
+update cesdb_arextension.dns_antecedentespersonalesnewconext set antep_descripcion='A RTROSCOPIA DIAGNOSTICA Y TERAPÉUTICA DE HOMBRO IZQUIERDO 08/09/2025 POR SINDROME DE MANGUITO ROTADOR IZQUIERDO
+ANTIPARASITARIO SECNIDAZOL 
+' where antep_id=23
+update cesdb_arextension.dns_antecedentespersonalesnewconext set antep_descripcion='A RTROSCOPIA DIAGNOSTICA Y TERAPÉUTICA DE HOMBRO IZQUIERDO 08/09/2025 POR SINDROME DE MANGUITO ROTADOR IZQUIERDO
+ANTIPARASITARIO SECNIDAZOL 
+' where antep_id=23
+update cesdb_arextension.dns_antecedentespersonalesnewconext set antep_descripcion='A RTROSCOPIA DIAGNOSTICA Y TERAPÉUTICA DE HOMBRO IZQUIERDO 08/09/2025 POR SINDROME DE MANGUITO ROTADOR IZQUIERDO
+ANTIPARASITARIO SECNIDAZOL 
+' where antep_id=23
+update cesdb_arextension.dns_antecedentespersonalesnewconext set antep_descripcion='A RTROSCOPIA DIAGNOSTICA Y TERAPÉUTICA DE HOMBRO IZQUIERDO 08/09/2025 POR SINDROME DE MANGUITO ROTADOR IZQUIERDO
+ANTIPARASITARIO SECNIDAZOL 
+' where antep_id=23
+update cesdb_arextension.dns_antecedentespersonalesnewconext set antep_descripcion='A RTROSCOPIA DIAGNOSTICA Y TERAPÉUTICA DE HOMBRO IZQUIERDO 08/09/2025 POR SINDROME DE MANGUITO ROTADOR IZQUIERDO
+ANTIPARASITARIO SECNIDAZOL 
+SINDROME DE GILBERT DIAGNOSTICADO HACE 7 AÑOS SIN TRATAMIENTO ACTUAL' where antep_id=23
+update cesdb_arextension.dns_newtraumatologiagridexamenfisico set gexamfis_observacion='HOMBRO IZQUIERDO, FLEXION 130 GRADOS, EXTENSION COMPLETA, ABDUCCION 90 GRADOS, ROTACION EXTERNA LIMITADA, ROTACION INTERNA CONSERVADA, FUERZA MUSCULAR Y REFLEJOS CONSERVADOS Y PRESENTES. LLENADO CAPILAR ADECUADO.' where gexamfis_id=714
+update cesdb_arextension.dns_antecedentespersonalesnewconext set antep_descripcion='PENDILAP HACE 3 AÑOS, RESECCIÓN DE QUISTES EN OVARIO DERECHO EN NOVIEMBRE 2024.' where antep_id=24
+update cesdb_arextension.dns_antecedentespersonalesnewconext set antep_descripcion='PENDILAP HACE 3 AÑOS, RESECCIÓN DE QUISTES EN OVARIO DERECHO EN NOVIEMBRE 2024.' where antep_id=24
+update cesdb_arextension.dns_antecedentesfamiliaresnewconext set antef_descripcion='ABUELO MATERNO CON DIABETES MELLITUS' where antef_id=14
+update cesdb_arextension.dns_antecedentesfamiliaresnewconext set antef_descripcion='ABUELO MATERNO' where antef_id=15
+update cesdb_arextension.dns_newtraumatologiagridexamenfisico set gexamfis_observacion='HOMBRO DERECHO ' where gexamfis_id=739
+update cesdb_arextension.dns_newtraumatologiagridexamenfisico set gexamfis_observacion='HOMBRO DERECHO ' where gexamfis_id=739
+update cesdb_arextension.dns_newtraumatologiagridexamenfisico set gexamfis_observacion='HOMBRO DERECHO AL MOMENTO BUENA MOVILIDAD FUERZA MUSCULAR 5/5 REFLEJOS  Y SENSIBILIDAD NORMALES LLENADO CAPILAR ADECUADO' where gexamfis_id=739
+update cesdb_arextension.dns_antecedentesfamiliaresnewconext set antef_descripcion='ABUELA MATERNA CON DIABETES MELLITUS' where antef_id=16
+update cesdb_arextension.dns_antecedentesfamiliaresnewconext set antef_descripcion='ABUELA MATERNA CON DIABETES MELLITUS' where antef_id=16
+update cesdb_arextension.dns_newtraumatologiagridexamenfisico set gexamfis_observacion='PRUEBA DE INCLINCACION POSITIVA' where gexamfis_id=762
+update cesdb_arextension.dns_antecedentespersonalesnewconext set antep_descripcion='' where antep_id=25
+update cesdb_arextension.dns_antecedentespersonalesnewconext set antep_descripcion='DIABETES MELLITUS TIPO 2 EN TTO CON INSULINA 20UI AM' where antep_id=25
+update cesdb_arextension.dns_newtraumatologiagridexamenfisico set gexamfis_observacion='EN MIEMBRO SUPERIOR DERECHO PRESENTA EN HOMBRO DOLOR A LA DIGITOPRESION EN CARA ANTERIOR, LATERAL Y POSTERIOR DEL HOMBRO, LIMITACION A LA ABDUCCION, FLEXION Y EXTENSION DOLOROSAS. PULSOS PRESENTES LLENADO CAPILAS 2-3 SEGUNDOS.' where gexamfis_id=789
+update cesdb_arextension.dns_newtraumatologiagridexamenfisico set gexamfis_observacion='AL EXMANE FISICO GENUVALGO CON DISTANCIA DE 10 CM INTERMALEOLAR BUENA MOVILIDAD NO SIGNOS DE CONDROMALACIA FUERZA TONO Y SENSIBILIDAD CONSERVADA
+EN PIES BILATERAL SE EVIDENCIA CAIDA DE ARCO PLANTAR 
+
+AL EXMANE FISICO GENUVALGO CON DISTANCIA DE 10 CM INTERMALEOLAR BUENA MOVILIDAD NO SIGNOS DE CONDROMALACIA FUERZA TONO Y SENSIBILIDAD CONSERVADA
+EN PIES BILATERAL SE EVIDENCIA CAIDA DE ARCO PLANTAR 
+
+' where gexamfis_id=815
+update cesdb_arextension.dns_newtraumatologiagridexamenfisico set gexamfis_observacion='AL EXMANE FISICO GENUVALGO CON DISTANCIA DE 10 CM INTERMALEOLAR BUENA MOVILIDAD NO SIGNOS DE CONDROMALACIA FUERZA TONO Y SENSIBILIDAD CONSERVADA
+EN PIES BILATERAL SE EVIDENCIA CAIDA DE ARCO PLANTAR 
+
+AL EXMANE FISICO GENUVALGO CON DISTANCIA DE 10 CM INTERMALEOLAR BUENA MOVILIDAD NO SIGNOS DE CONDROMALACIA FUERZA TONO Y SENSIBILIDAD CONSERVADA
+EN PIES BILATERAL SE EVIDENCIA CAIDA DE ARCO PLANTAR 
+
+' where gexamfis_id=815
+update cesdb_arextension.dns_newtraumatologiagridexamenfisico set gexamfis_observacion='AL EXMANE FISICO GENUVALGO CON DISTANCIA DE 10 CM INTERMALEOLAR BUENA MOVILIDAD NO SIGNOS DE CONDROMALACIA FUERZA TONO Y SENSIBILIDAD CONSERVADA
+EN PIES BILATERAL SE EVIDENCIA CAIDA DE ARCO PLANTAR ' where gexamfis_id=815
+update cesdb_arextension.dns_newtraumatologiagridexamenfisico set gexamfis_observacion='AL EXMANE FISICO GENUVALGO CON DISTANCIA DE 10 CM INTERMALEOLAR BUENA MOVILIDAD NO SIGNOS DE CONDROMALACIA FUERZA TONO Y SENSIBILIDAD CONSERVADA
+EN PIES BILATERAL SE EVIDENCIA CAIDA DE ARCO PLANTAR ' where gexamfis_id=815
+update cesdb_arextension.dns_antecedentespersonalesnewconext set antep_descripcion='RTROSCOPIA DIAGNOSTICA Y TERAPÉUTICA DE HOMBRO DERECHO + REPARACIÓN DE SUPRAESPINOSO 25/08/2025 POR SINDROME DE MANGUITO ROTADOR' where antep_id=26
+update cesdb_arextension.dns_newtraumatologiagridexamenfisico set gexamfis_observacion='RONOSUPINACION ADECUADA, LIMITACION A LA FLEXION PALMAR 5 GRADOS, BUENA MOVILIDAD.' where gexamfis_id=864
+update cesdb_arextension.dns_antecedentespersonalesnewconext set antep_descripcion='CIRUGÍA DE RODILLA DERECHA HACE 18 AÑOS' where antep_id=27
+update cesdb_arextension.dns_antecedentespersonalesnewconext set antep_descripcion='CIRUGÍA DE RODILLA DERECHA HACE 18 AÑOS' where antep_id=27
+update cesdb_arextension.dns_antecedentespersonalesnewconext set antep_descripcion='CIRUGÍA DE RODILLA DERECHA HACE 18 AÑOS
+CIRUGIA DE FRACTURA DE MUÑECA EL 11/08/2025' where antep_id=27
+update cesdb_arextension.dns_newtraumatologiagridexamenfisico set gexamfis_observacion='EN REGION GLUTEA REFIERE DOLOR A NIVEL DE SACRO Y REGION LUMBAR ' where gexamfis_id=912
+update cesdb_arextension.dns_newconsultaexternagridexamenfisico set gexamfis_observacion='PACIENTE  HIDRATADA AFEBRIL
+CON PRURITO GENERALIZADO, PRESENTA ERUPSIONES CUTANEAS PUNTIFORMES A NIVEL DE ROSTRO Y CUELLO' where gexamfis_id=276
+update cesdb_arextension.dns_antecedentespersonalesnewconext set antep_descripcion='NO REFIERE' where antep_id=28
+update cesdb_arextension.dns_newtraumatologiagridorgano set gorgano_observacion='' where gorgano_id=374
+update cesdb_arextension.dns_newtraumatologiagridorgano set gorgano_observacion='' where gorgano_id=374
+update cesdb_arextension.dns_newtraumatologiagridorgano set gorgano_observacion='PTE DISBASICO AUMENTO DEL TRIANGULO DEL TALLE DERECHO APLANAMIENTO DE COLUMNA LUMBAR PRUEBA DE INCLINACION +LASEGUE A 45 GRADOS BILATERAL VALLEIX+ REFLEJOS SENSIBILIDAD NORMALES ' where gorgano_id=374
+update cesdb_arextension.dns_antecedentesfamiliaresnewconext set antef_descripcion='NO REFIERE' where antef_id=17
+update cesdb_arextension.dns_antecedentespersonalesnewconext set antep_descripcion='' where antep_id=29
+update cesdb_arextension.dns_antecedentesfamiliaresnewconext set antef_descripcion='MADRE HTA ' where antef_id=18
+update cesdb_arextension.dns_antecedentesfamiliaresnewconext set antef_descripcion='MADRE CA DE RIÑON' where antef_id=19
+update cesdb_arextension.dns_antecedentespersonalesnewconext set antep_descripcion='NO REFIERE' where antep_id=30
+update cesdb_arextension.dns_antecedentespersonalesnewconext set antep_descripcion='insuficiencia cardiaca congestiva' where antep_id=31
+update cesdb_arextension.dns_newconsultaexternagridorgano set gorgano_observacion='Piel de buen color, ya no hay brotes de exantemas, dolor articular negativo.' where gorgano_id=147
+update cesdb_arextension.dns_newconsultaexternagridorgano set gorgano_observacion='' where gorgano_id=141
+update cesdb_arextension.dns_newconsultaexternagridorgano set gorgano_observacion='' where gorgano_id=141
+update cesdb_arextension.dns_newconsultaexternagridorgano set gorgano_observacion='Piel de buen color, ya no hay brotes de exantemas, dolor articular negativo.' where gorgano_id=141
+update cesdb_arextension.dns_antecedentespersonalesnewconext set antep_descripcion='NO REFIERE' where antep_id=32
+update cesdb_arextension.dns_antecedentesfamiliaresnewconext set antef_descripcion='NO REFIERE' where antef_id=20
+update cesdb_arextension.dns_newtraumatologiagridorgano set gorgano_observacion='' where gorgano_id=384
+update cesdb_arextension.dns_newtraumatologiagridorgano set gorgano_observacion='PACIENTE CONSCIENTE ORIENTADA, EXTREMIDAD SUPERIOR IZQUIERDA, DOLOR A NIVEL DE LA INSERCION DEL TENDON EXTENSOR' where gorgano_id=384

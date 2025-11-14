@@ -1,0 +1,6 @@
+insert into dns_gridfuncionprofesional (prof_id,grdifun_activo,usua_enlace,grdifun_fecharegistro,usua_id) values ('35','1','011212121212120250920120625477','2025-09-22 10:14:50','1')
+insert into dns_gridfuncionprofesional (prof_id,grdifun_activo,usua_enlace,grdifun_fecharegistro,usua_id) values ('76','1','011212121212120250920122308267','2025-09-22 10:15:32','1')
+insert into dns_gridfuncionprofesional (prof_id,grdifun_activo,usua_enlace,grdifun_fecharegistro,usua_id) values ('911123','1','011212121212120250922041959425','2025-09-22 16:23:05','1')
+insert into dns_gridfuncionprofesional (prof_id,grdifun_activo,usua_enlace,grdifun_fecharegistro,usua_id) values ('30','1','011212121212120250922043631261','2025-09-22 16:38:47','1')
+insert into dns_gridfuncionprofesional (prof_id,grdifun_activo,usua_enlace,grdifun_fecharegistro,usua_id) values ('37','1','01121212121212025092204424311','2025-09-22 16:44:59','1')
+insert into dns_gridfuncionprofesional (prof_id,grdifun_activo,usua_enlace,grdifun_fecharegistro,usua_id) values ('911118','1','011212121212120250922045023456','2025-09-22 16:52:59','1')

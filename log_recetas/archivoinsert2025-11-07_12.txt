@@ -1,0 +1,7 @@
+insert into dns_newdiagnosticolaboratorio (diagn_cie,diagn_descripcion,diagn_tipo,lab_enlace,diagn_fecharegistro,usua_id) values ('Z013','Examen de la presión sanguínea','DEFINITIVO','101121212121212025110712261482','2025-11-07 12:26:14','1')
+insert into dns_gridhematologico (ghemato_tipo,ghemato_valor,labinfor_enlace,ghemato_fecharegistro,usua_id) values ('25','12','1011212121212120251107122713399','2025-11-07 12:28:35','1')
+insert into cesdb_arextension.dns_diagnosticolaboratorioinforme (diagn_cie,diagn_descripcion,diagn_tipo,labinfor_enlace,diagn_fecharegistro,usua_id) values ('A482','Enfermedad de los legionarios no neumónica (fiebre de Pontiac)','DEFINITIVO','1011212121212120251107122713399','2025-11-07 12:29:04','1')
+insert into dns_gridhematologico (ghemato_tipo,ghemato_valor,labinfor_enlace,ghemato_fecharegistro,usua_id) values ('32','100','1011212121212120251107122713399','2025-11-07 12:29:49','1')
+insert into dns_gridhematologico (ghemato_tipo,ghemato_valor,labinfor_enlace,ghemato_fecharegistro,usua_id) values ('5','9999','1011212121212120251107122713399','2025-11-07 12:35:40','1')
+insert into dns_gridhematologico (ghemato_tipo,ghemato_valor,labinfor_enlace,ghemato_fecharegistro,usua_id) values ('32','888888888888','1011212121212120251107122713399','2025-11-07 12:36:19','1')
+insert into dns_diagnosticonewimagensolicitud (diagn_cie,diagn_descripcion,diagn_tipo,imgag_enlace,diagn_fecharegistro,usua_id) values ('Z013','Examen de la presiÃ³n sanguÃ­nea','DEFINITIVO','1011212121212120251107021618352','2025-11-07 14:16:18','1')

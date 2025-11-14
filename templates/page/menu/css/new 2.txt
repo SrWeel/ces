@@ -1,0 +1,13 @@
+el ticket 30 ---cerrajeria y computacion
+---------------------------------------
+
+ 	franklin.aguas@gmail.com  - carpintero aluminio y vidrio
+	florecitarockera2086@hotmail.com   cerrajeria  si tiene
+	
+	xsorayasilvam@gmail.com aun no le autorixzan lo pagado
+	
+	domohomeservices@gmail.com  cerrajeria  
+	
+	
+	select fpagcl_id,provee_id,cant_id,app_requerimiento.tiempres_id,requ_grafico,requ_paracuando,provee_id,fpagcl_id,app_requerimiento.requ_id,app_requerimiento.requ_categoria,requ_observacion,requ_fecharegistro,ADDDATE(requ_fecharegistro, INTERVAL tiempres_horas DAY) as fecha_fin,requ_barrio,requ_sector,IFNULL(app_manolevantada.usua_id,0) as usuamano_id,IFNULL(manol_aceptado,0) as manol_aceptado ,IFNULL(manol_nointeresa,0) as manol_nointeresa from app_requerimiento inner join app_tiemporespuesta on app_requerimiento.tiempres_id=app_tiemporespuesta.tiempres_id left join app_manolevantada on app_requerimiento.requ_id=app_manolevantada.requ_id where 
+	( IFNULL(app_manolevantada.usua_id,0)=0 and IFNULL(app_manolevantada.manol_aceptado,0)=0 and IFNULL(app_manolevantada.manol_nointeresa,0)=0 and app_requerimiento.usua_id!=77 ) or ( IFNULL(app_manolevantada.usua_id,0)=77 and IFNULL(app_manolevantada.manol_aceptado,0)=0 and IFNULL(app_manolevantada.manol_nointeresa,0)=0 and app_requerimiento.usua_id!=77 ) order by app_requerimiento.requ_id desc

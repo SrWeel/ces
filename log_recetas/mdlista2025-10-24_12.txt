@@ -1,0 +1,3 @@
+update cesdb_arextension.dns_antecedentespersonalesnewconext set antep_descripcion='STYEYUDTYU' where antep_id=19
+update cesdb_arextension.dns_antecedentespersonalesnewconext set antep_descripcion='DTRYURY' where antep_id=20
+update cesdb_arextension.dns_newconsultaexternagridorgano set gorgano_observacion='' where gorgano_id=91

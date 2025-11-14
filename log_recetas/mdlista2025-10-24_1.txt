@@ -1,0 +1,4 @@
+update cesdb_arextension.dns_antecedentespersonalesnewconext set antep_descripcion='CIRUGIA DE MANO DERECHA TUNEL CARPIANO HACE 3 ANOS' where antep_id=21
+update cesdb_arextension.dns_antecedentesfamiliaresnewconext set antef_descripcion='ABUELA MATERNA Y PATERNA' where antef_id=11
+update cesdb_arextension.dns_antecedentesfamiliaresnewconext set antef_descripcion='ABUELA MATERNA Y PATERNA HIPOTIROIDISMO' where antef_id=12
+update cesdb_arextension.dns_newconsultaexternagridexamenfisico set gexamfis_observacion='SUAVE DEPRESIBLE, DOLOROSO A LA PALPACION EN EPIGASTRIO, MESOGASTRIO, HIPOGASTRIO E IPOCONDRIO DERECO MURPHY DUDOSO, PUNTOS URETERALES NEGATIVOS, PU;O PERCUSION NEGATIVO. NO SIGNOS APENDICULARES NI DE IRRITACION PERITONEAL' where gexamfis_id=254

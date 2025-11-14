@@ -1,0 +1,10 @@
+D0m02016
+
+
+SELECT * FROM `app_usuario` inner join app_ciudadservicio on app_usuario.usua_id=app_ciudadservicio.usua_id inner join app_canton on app_ciudadservicio.cant_id=app_canton.cant_id where cant_nombre='GUAYAQUIL'
+
+
+<a href="index.php?snp=<?php echo $linksvarencri; ?>" >
+
+
+CREATE  VIEW `app_requerimiento_vista` AS select `app_requerimiento`.`requ_id` AS `requ_id`,`app_requerimiento`.`usua_id` AS `usua_id`,`app_usuario`.`usua_nombre` AS `usua_nombre`,`app_usuario`.`usua_apellido` AS `usua_apellido`,`app_usuario`.`usua_email` AS `usua_email`,`app_requerimiento`.`requ_observacion` AS `requ_observacion`,`app_requerimiento`.`requ_categoria` AS `requ_categoria`,`app_tiemporespuesta`.`tiempres_nombre` AS `tiempres_nombre`,`app_pais`.`pais_nombre` AS `pais_nombre`,`app_canton`.`cant_nombre` AS `cant_nombre`,`app_requerimiento`.`requ_sector` AS `requ_sector`,`app_requerimiento`.`requ_barrio` AS `requ_barrio`,`app_requerimiento`.`requ_paracuando` AS `requ_paracuando`,`app_formapagocliente`.`fpagcl_nombre` AS `fpagcl_nombre`,`app_proveematerial`.`provee_nombre` AS `provee_nombre`,`app_requerimiento`.`ennot_id` AS `ennot_id`,requ_fecharegistro from ((((((`app_requerimiento` join `app_usuario` on((`app_requerimiento`.`usua_id` = `app_usuario`.`usua_id`))) join `app_tiemporespuesta` on((`app_requerimiento`.`tiempres_id` = `app_tiemporespuesta`.`tiempres_id`))) join `app_pais` on((`app_requerimiento`.`pais_id` = `app_pais`.`pais_id`))) left join `app_canton` on((`app_requerimiento`.`cant_id` = `app_canton`.`cant_id`))) join `app_formapagocliente` on((`app_requerimiento`.`fpagcl_id` = `app_formapagocliente`.`fpagcl_id`))) join `app_proveematerial` on((`app_requerimiento`.`provee_id` = `app_proveematerial`.`provee_id`)));

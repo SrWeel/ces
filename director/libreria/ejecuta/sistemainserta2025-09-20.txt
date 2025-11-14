@@ -1,0 +1,3 @@
+insert into app_usuariosperfil (usua_id,per_codobj,per_activo,per_fechamod) values ('8','217',1,'2025-09-20 05:48:21')
+insert into app_usuariosperfil (usua_id,per_codobj,per_activo,per_fechamod) values ('8','218',1,'2025-09-20 05:49:19')
+insert into cesdb_arextension.dns_convenios (tippo_id,conve_nombre,conve_descuento,conve_redpublica) values (8,'SALUDSA',0,0)

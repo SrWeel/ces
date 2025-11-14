@@ -1,0 +1,27 @@
+insert into dns_certificadogenerado (certif_id,especi_id,clie_ci,med_ci,certifg_texto,usua_id,certifg_fecharegistro,nd_otorgado,emp_id,centro_id,certifg_especialidad,certifg_code) values ('1','','1754982369','1714420278','  <p style="text-align:center"><strong>CERTIFICADO UNICO DE SALUD</strong></p>
+
+<p style="text-align:center"><span style="font-size:18px"><strong>ARTROCENTRO</strong></span></p>
+
+<p style="text-align:right"><b>UNICODIGO:</b>52492</p>
+
+<p style="text-align:right"><!--StartFragment-->ARTROCENTRO,  01 de Septiembre de 2025<!--EndFragment--></p>
+
+<p>Certifico haber atendido a <!--StartFragment-->MARTIN ALEJANDRO<!--EndFragment--> <!--StartFragment-->MOLINA PAREDES<!--EndFragment--> con cedula <!--StartFragment-->1754982369. Quien al momento se encuentra en condiciones estables de salud.<!--EndFragment--></p>
+
+<p><!--StartFragment--><!--EndFragment--></p>
+
+<p> </p>
+
+<p> </p>
+
+<p><b>DR. RENATO ESTUARDO GUERRA ESCOBAR</b><br><br>COD: 1714420278<br>MSP: 1714420278<p> </p><p> </p><!--EndFragment--><!--EndFragment--></p>
+
+<p> </p>
+
+<p><span style="font-size:11px">Certificado válido por 30 días.</span></p>
+
+<p><!--StartFragment--><!--EndFragment--></p>
+
+<p> </p>
+
+<p style="text-align:center"><span style="font-size:11px">DOCUMENTO GRATUITO</span></p>  <div align="center"><br><img src="temporal/QR_202509011458152_31.jpg" height="120" width="120" ><br>CERT11754982369171442027832202509010258152133</div>','2','2025-09-01','','1','1','','CERT11754982369171442027832202509010258152133');

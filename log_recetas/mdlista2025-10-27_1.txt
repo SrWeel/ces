@@ -1,0 +1,4 @@
+update cesdb_arextension.dns_newtraumatologiagridexamenfisico set gexamfis_observacion=' EDEMA EN RODILLA DERECHA, SIGNOS DEL CHOQUE,  NO SIGNOS DE LESION LIGAMENTARIA O MENISCAL. LLENADO CAPILAR ADECUADO, SENSISBILIDAD CONSERVADA' where gexamfis_id=690
+update cesdb_arextension.dns_newtraumatologiagridexamenfisico set gexamfis_observacion=' EDEMA EN RODILLA DERECHA, SIGNOS DEL CHOQUE,  NO SIGNOS DE LESION LIGAMENTARIA O MENISCAL. LLENADO CAPILAR ADECUADO, SENSISBILIDAD CONSERVADA' where gexamfis_id=690
+update cesdb_arextension.dns_antecedentespersonaleshospi set antep_descripcion='ARTROSCOPIA TERAPEUTICA HACE 3 MESES' where antep_id=1
+update cesdb_arextension.dns_newtraumatologiagridexamenfisico set gexamfis_observacion=' EDEMA EN RODILLA DERECHA, SIGNOS DEL CHOQUE,  NO SIGNOS DE LESION LIGAMENTARIA O MENISCAL. LLENADO CAPILAR ADECUADO, SENSISBILIDAD CONSERVADA' where gexamfis_id=690

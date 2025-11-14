@@ -1,0 +1,1 @@
+update dns_signosvitales set signovita_presionarterial='115/80',signovita_temperaturabucal='36.3',signovita_talla='1.83',signovita_perimetrocefalico='',signovita_frecuenciacardiaca='110',signovita_frecuenciarespiratoria='22',signovita_peso='92.93',signovita_saturacionoxigeno='91',signovita_masacorporal='27.75',signovita_observaciones='' where signovita_id='105'

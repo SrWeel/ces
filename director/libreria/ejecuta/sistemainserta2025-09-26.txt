@@ -1,0 +1,1 @@
+insert into cesdb_arextension.dns_convenios (tippo_id,conve_nombre,conve_descuento,conve_redpublica) values (1,'SPAT',0,0)

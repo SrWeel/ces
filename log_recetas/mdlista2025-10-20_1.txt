@@ -1,0 +1,11 @@
+update cesdb_arextension.dns_antecedentespersonalesnewconext set antep_descripcion='DISPLASIA DE CADERAS EN INFANCIA, ESGUINCE DE TOBILLO DERECHO HACE 1 ANO ' where antep_id=14
+update cesdb_arextension.dns_antecedentesfamiliaresnewconext set antef_descripcion='HIPOTIROIDISMO MADRE' where antef_id=9
+update cesdb_arextension.dns_newtraumatologiagridorgano set gorgano_observacion='COLUMNA DORSAL DOLOR EN REGION DORSAL, NO HEMATOMA, NO LIMITACION FUNCIONAL 
+EXTREMIDAD INFERIOR DERECHA A NIVEL DE TOBILLO SE EVIDENCIA EDEMA +, DOLOR A LA DIGITOPRESION EN MALEOLO EXTERNO, LIMITACION FUNCIONAL, FUERZA MUSCULAR 4/5, SENSIBILIDAD REFLEJOS Y PULSOS CONSERVADOS ' where gorgano_id=254
+update cesdb_arextension.dns_newtraumatologiagridorgano set gorgano_observacion='COLUMNA DORSAL 
+TOBILLO DERECHO ' where gorgano_id=254
+update cesdb_arextension.dns_newtraumatologiagridexamenfisico set gexamfis_observacion='
+EXTREMIDAD INFERIOR DERECHA A NIVEL DE TOBILLO SE EVIDENCIA EDEMA +, DOLOR A LA DIGITOPRESION EN MALEOLO EXTERNO, LIMITACION FUNCIONAL, FUERZA MUSCULAR 4/5, SENSIBILIDAD REFLEJOS Y PULSOS CONSERVADOS ' where gexamfis_id=640
+update cesdb_arextension.dns_newtraumatologiagridexamenfisico set gexamfis_observacion='EXTREMIDAD INFERIOR DERECHA A NIVEL DE TOBILLO SE EVIDENCIA EDEMA +, DOLOR A LA DIGITOPRESION EN MALEOLO EXTERNO, LIMITACION FUNCIONAL, FUERZA MUSCULAR 4/5, SENSIBILIDAD REFLEJOS Y PULSOS CONSERVADOS ' where gexamfis_id=640
+update cesdb_arextension.dns_newtraumatologiagridexamenfisico set gexamfis_observacion='COLUMNA DORSAL DOLOR EN REGION DORSAL, NO HEMATOMA, NO LIMITACION FUNCIONAL ' where gexamfis_id=637
+update cesdb_arextension.dns_newtraumatologiagridexamenfisico set gexamfis_observacion='EXTREMIDAD INFERIOR DERECHA A NIVEL DE TOBILLO SE EVIDENCIA EDEMA +, DOLOR A LA DIGITOPRESION EN MALEOLO EXTERNO, LIMITACION FUNCIONAL, FUERZA MUSCULAR 4/5, SENSIBILIDAD REFLEJOS Y PULSOS CONSERVADOS ' where gexamfis_id=640

@@ -1,0 +1,403 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>EPICRISIS</title>
+<style type="text/css">
+<!--
+body,td,th {
+	font-family: Arial;
+	font-size: 11px;
+}
+.borde_all{
+	border: 1px solid #000000;
+}
+.css_5 {font-size: 5px}
+.css_6 {font-size: 6px}
+.css_7 {font-size: 7px}
+.css_8 {font-size: 8px}
+.css_9 {font-size: 9px}
+.css_10 {font-size: 10px}
+.css_11 {font-size: 11px}
+.css_12 {font-size: 12px}
+
+@page { margin: 10px; } 
+body { margin: 10px; } 
+.style1 {font-size: 12px; font-weight: bold; }
+-->
+</style>
+</head>
+
+<body>
+<table width="101%" height="16" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td bgcolor="#CCCCFF" class="style1">A DATOS DEL ESTABLECIMIENTO Y USUARIO / PACIENTE
+      <div align="right"></div></td>
+  </tr>
+</table>
+<table width="570" cellpadding="0" cellspacing="0">
+  <tr>
+    <td colspan="10" bgcolor="#CCFFCC" class="borde_all"><div align="center">INSTITUCION DEL SISTEMA </div></td>
+    <td colspan="9" bgcolor="#CCFFCC" class="borde_all"><div align="center">UNICODIGO</div></td>
+    <td colspan="12" bgcolor="#CCFFCC" class="borde_all"><div align="center">ESTABLECIMIENTO DE SALUD </div></td>
+    <td colspan="3" bgcolor="#CCFFCC" class="borde_all"><div align="center">HCU</div></td>
+    <td colspan="3" bgcolor="#CCFFCC" class="borde_all"><div align="center">N&deg;&nbsp;ARCHIVO</div></td>
+    <td colspan="10" bgcolor="#CCFFCC" class="borde_all"><div align="center"><strong>N&deg;&nbsp; HOJA </strong></div></td>
+  </tr>
+  <tr>
+    <td colspan="10" class="borde_all css_8"><div align="center">-centro-</div></td>
+    <td colspan="9" class="borde_all css_8"><div align="center">-hc-</div></td>
+    <td colspan="12" class="borde_all css_8"><div align="center">-centro-</div></td>
+    <td colspan="3" class="borde_all css_8"><div align="center">-hc-</div></td>
+    <td colspan="3" class="borde_all css_8"><div align="center">-hcpinos-</div></td>
+    <td colspan="10" class="borde_all css_8"><div align="center"></div></td>
+  </tr>
+</table>
+<table width="570" cellpadding="0" cellspacing="0">
+  <tr>
+    <td colspan="9" bgcolor="#CCFFCC" class="borde_all"><div align="center">NOMBRE</div></td>
+    <td colspan="12" bgcolor="#CCFFCC" class="borde_all"><div align="center">APELLIDO</div></td>
+    <td colspan="3" bgcolor="#CCFFCC" class="borde_all"><div align="center">SEXO (M-F) </div></td>
+    <td colspan="3" bgcolor="#CCFFCC" class="borde_all"><div align="center">EDAD</div></td>
+    <td colspan="4" bgcolor="#CCFFCC" class="borde_all"><div align="center">CONDICION DE EDAD (MARCAR) </div>
+        <div align="center"></div></td>
+  </tr>
+  <tr>
+    <td colspan="9" rowspan="2" class="borde_all css_8"><div align="center">-nombre- </div></td>
+    <td colspan="12" rowspan="2" class="borde_all css_8"><div align="center">-apellido- </div></td>
+    <td colspan="3" rowspan="2" class="borde_all css_8"><div align="center">-sexo- </div></td>
+    <td colspan="3" rowspan="2" class="borde_all css_8"><div align="center"></div></td>
+    <td bgcolor="#CCFFCC" class="borde_all css_8"><div align="center">H</div></td>
+    <td bgcolor="#CCFFCC" class="borde_all css_8"><div align="center">D</div></td>
+    <td bgcolor="#CCFFCC" class="borde_all css_8"><div align="center">M</div></td>
+    <td bgcolor="#CCFFCC" class="borde_all css_8"><div align="center">A</div></td>
+  </tr>
+  <tr>
+    <td class="borde_all css_8">&nbsp;</td>
+    <td class="borde_all css_8">&nbsp;</td>
+    <td class="borde_all css_8">&nbsp;</td>
+    <td class="borde_all css_8">&nbsp;</td>
+  </tr>
+</table>
+<table width="570" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td class="borde_all"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+      <tr>
+        <td width="35%" bgcolor="#CCCCFF" class="style1">B  RESUMEN DEL CUADRO CL&Iacute;NICO</td>
+        <td width="27%" bgcolor="#CCCCFF" class="css_8">&nbsp;</td>
+        </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td class="borde_all" ><table width="100%" border="0" cellpadding="0" cellspacing="0">
+      <tr>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td height="100" valign="top" class="borde_all" >
+	  <p>-anam_resumenclinico-    </p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+	<p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    </td>
+  </tr>
+</table><br />
+<table width="570" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td class="borde_all"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+      <tr>
+        <td width="40%" bgcolor="#CCCCFF" class="style1">C RESUMEN DE EVOLUCI&Oacute;N Y COMPLICACIONES</td>
+        
+      </tr>
+    </table></td>
+  </tr>
+  
+  <tr>
+    <td height="150" valign="top" class="borde_all" >
+	  <p>-anam_resumenevolucion-	</p>
+     <p>&nbsp;</p></td>
+  </tr>
+</table><br />
+<table width="570" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td class="borde_all"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+      <tr>
+        <td width="35%" bgcolor="#CCCCFF" class="style1">D HALLAZGOS RELEVANTES DE EX&Aacute;MENES Y PROCEDIMIENTOS DIAGN&Oacute;STICOS</td>
+        
+        </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td class="borde_all" ></td>
+  </tr>
+  <tr>
+    <td height="140" valign="top" class="borde_all css_10" >
+	  <p>-anam_hallazgos-	</p>
+      <p>&nbsp;</p></td>
+  </tr>
+</table>
+<table width="570" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td ><table width="100%" border="0" cellpadding="0" cellspacing="0">
+      <tr>
+        <td width="40%" class="css_11"><b>SNS-MSP / HCU-form.006 / 2021 </b></td>
+        <td width="38%" class="css_11"><div align="right">
+          <blockquote>
+            <p><strong>EPICRISIS (1) </strong></p>
+          </blockquote>
+        </div></td>
+      </tr>
+    </table></td>
+  </tr>
+</table>
+<div style="page-break-after:always;"></div>
+
+<table width="570" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td class="borde_all"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+      <tr>
+        <td width="17%" bgcolor="#CCCCFF" class="style1">E RESUMEN DE TRATAMIENTO Y PROCEDIMIENTOS TERAP&Eacute;UTICOS</td>
+        </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td class="borde_all" ><table width="100%" border="0" cellpadding="0" cellspacing="0">
+      <tr>
+        
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td height="130" valign="top" class="borde_all css_10" > <p>-anam_resumentratamiento-</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p><strong>PROXIMO CONTROL: </strong></p></td>
+  </tr>
+</table>
+<table width="570" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td class="borde_all"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+      <tr>
+        <td width="17%" bgcolor="#CCCCFF" class="style1">F INDICACIONES DE ALTA / EGRESO </td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td class="borde_all" ><table width="100%" border="0" cellpadding="0" cellspacing="0">
+      <tr> </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td height="130" valign="top" class="borde_all css_10" ><p>-anam_resumentratamiento-</p>
+        <p>&nbsp;</p></td>
+  </tr>
+</table>
+<table width="570" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td class="borde_all"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+      <tr>
+        <td bgcolor="#CCCCFF" class="css_11"><b>G DIAGNOSTICO DE ALTA / EGRESO </b></td>
+        </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td valign="top" class="borde_all" ><table width="100%" border="0" cellpadding="0" cellspacing="0">
+      <tr>
+        <td width="3%"><div align="center"></div></td>
+        <td width="29%">&nbsp;</td>
+        <td width="9%"><div align="center">CIE</div></td>
+        <td width="5%"><div align="center">PRE</div></td>
+        <td width="4%"><div align="center">DEF</div></td>
+        </tr>
+      <tr>
+        <td rowspan="3" bgcolor="#CCFFCC" class="borde_all"><div align="center">DIAGNOSTICO PRINCIPAL </div>          
+          <div align="center"></div>          <div align="center"></div></td>
+        <td class="borde_all">-diagnostico1-</td>
+        <td class="borde_all"><div align="center">-cie1-</div></td>
+        <td class="borde_all"><div align="center">-pre1-</div></td>
+        <td class="borde_all"><div align="center">-def1-</div></td>
+        </tr>
+      <tr>
+        <td class="borde_all">-diagnostico2-</td>
+        <td class="borde_all"><div align="center">-cie2-</div></td>
+        <td class="borde_all"><div align="center">-pre2-</div></td>
+        <td class="borde_all"><div align="center">-def2-</div></td>
+        </tr>
+      <tr>
+        <td class="borde_all">-diagnostico3-</td>
+        <td class="borde_all"><div align="center">-cie3-</div></td>
+        <td class="borde_all"><div align="center">-pre3-</div></td>
+        <td class="borde_all"><div align="center">-def3-</div></td>
+        </tr>
+      <tr>
+        <td rowspan="3" bgcolor="#CCFFCC" class="borde_all"><div align="center">DIAGNOSTICO SECUNDARIO </div>          <div align="center"></div>          <div align="center"></div></td>
+        <td class="borde_all">-diagnosticoeg1-</td>
+        <td class="borde_all"><div align="center">-cieeg1-</div></td>
+        <td class="borde_all"><div align="center">-preeg1-</div></td>
+        <td class="borde_all"><div align="center">-defeg1-</div></td>
+        </tr>
+      <tr>
+        <td class="borde_all">-diagnosticoeg2-</td>
+        <td class="borde_all"><div align="center">-cieeg2-</div></td>
+        <td class="borde_all"><div align="center">-preeg2-</div></td>
+        <td class="borde_all"><div align="center">-defeg2-</div></td>
+        </tr>
+      <tr>
+        <td class="borde_all">-diagnosticoeg3-</td>
+        <td class="borde_all"><div align="center">-cieeg3-</div></td>
+        <td class="borde_all"><div align="center">-preeg3-</div></td>
+        <td class="borde_all"><div align="center">-defeg3-</div></td>
+        </tr>
+    </table></td>
+  </tr>
+</table>
+<table width="570" cellpadding="0" cellspacing="0">
+  
+  <tr>
+    <td colspan="10" bgcolor="#CCFFCC" class="borde_all css_8"><div align="center"><strong>CAUSA EXTERNA </strong></div></td>
+    <td width="441" colspan="12" class="borde_all css_8"><div align="center"></div></td>
+  </tr>
+</table>
+<table width="570" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td class="borde_all"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+      <tr>
+        <td width="40%" bgcolor="#CCCCFF" class="style1">H. CONDICION DE ALTA /  EGRESO</td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td valign="top" class="borde_all" ><table width="100%" border="0" cellpadding="0" cellspacing="0">
+      <tr>
+        <td width="13%" valign="top" bgcolor="#CCFFCC" class="borde_all css_7"> ALTA MEDICA </td>
+        <td width="5%" valign="top" class="borde_all css_7"><div align="center">-anam_altadefinitiva-</div></td>
+        <td width="11%" valign="top" bgcolor="#CCFFCC" class="borde_all css_7"> ASINTOMATICO </td>
+        <td width="5%" valign="top" class="borde_all css_7"><div align="center">-anam_asintomatico-</div></td>
+        <td width="13%" valign="top" bgcolor="#CCFFCC" class="borde_all css_7">DISCAPACIDAD </td>
+        <td width="5%" valign="top" class="borde_all css_7"><div align="center">-anam_discapacidadmoderada-</div></td>
+        <td width="11%" valign="top" bgcolor="#CCFFCC" class="borde_all css_7">RETIRO NO AUTORIZADO </td>
+        <td width="5%" valign="top" class="borde_all css_7"><div align="center">-anam_retiroautorizado-</div></td>
+        <td width="9%" valign="top" bgcolor="#CCFFCC" class="borde_all css_7">DEFUNCION MENOR A 48 HORAS </td>
+        <td width="5%" valign="top" class="borde_all css_7"><div align="center">-anam_defuncionmenos48-</div></td>
+        <td width="12%" valign="top" bgcolor="#CCFFCC" class="borde_all css_7">DIAS DE ESTADIA </td>
+        <td width="6%" valign="top" class="borde_all css_7"><div align="center">-anam_diasestadia-</div></td>
+      </tr>
+    </table>
+        <table width="100%" border="0" cellpadding="0" cellspacing="0">
+          <tr>
+            <td width="13%" height="22" valign="top" bgcolor="#CCFFCC" class="borde_all css_7"> ALTA VOLUNTARIA </td>
+            <td width="5%" valign="top" class="borde_all css_7"><div align="center">-anam_altatransitoria-</div></td>
+            <td width="9%" valign="top" bgcolor="#CCFFCC" class="borde_all css_7">DEFUNCION MAS DE 48 HORAS </td>
+            <td width="5%" valign="top" class="borde_all css_7"><div align="center">-anam_defuncionmas48-</div></td>
+            <td width="12%" valign="top" bgcolor="#CCFFCC" class="borde_all css_7">DIAS DE REPOSO </td>
+            <td width="6%" valign="top" class="borde_all css_7"><div align="center">-anam_diasincapacidad-</div></td>
+          </tr>
+      </table></td>
+  </tr>
+</table>
+<br />
+
+<table width="570" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td class="borde_all"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+      <tr>
+        <td width="40%" bgcolor="#CCCCFF" class="style1">I. M&Eacute;DICOS TRATANTES</td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td valign="top" class="borde_all" ><table width="570" border="0" cellpadding="0" cellspacing="0">
+      <tr>
+        <td bgcolor="#CCFFCC"><div align="center"></div></td>
+        <td bgcolor="#CCFFCC"><div align="center">NOMBRES</div></td>
+        <td bgcolor="#CCFFCC"><div align="center">ESPECIALIDAD</div></td>
+        <td bgcolor="#CCFFCC"><div align="center">CODIGO</div></td>
+        <td nowrap="nowrap" bgcolor="#CCFFCC"><div align="center">PERIODO DE RESPONSABILIDAD </div></td>
+        </tr>
+      <tr>
+        <td bgcolor="#CCFFCC" class="borde_all"><div align="center">1</div></td>
+        <td class="borde_all">-nombre1-</td>
+        <td class="borde_all">-espe1-</td>
+        <td class="borde_all">-code1-</td>
+        <td class="borde_all">-periodo1-</td>
+        </tr>
+      <tr>
+        <td bgcolor="#CCFFCC" class="borde_all"><div align="center">2</div></td>
+        <td class="borde_all">-nombre2-</td>
+        <td class="borde_all">-espe2-</td>
+        <td class="borde_all">-code2-</td>
+        <td class="borde_all">-periodo2-</td>
+        </tr>
+      <tr>
+        <td bgcolor="#CCFFCC" class="borde_all"><div align="center">3</div></td>
+        <td class="borde_all">-nombre3-</td>
+        <td class="borde_all">-espe3-</td>
+        <td class="borde_all">-code3-</td>
+        <td class="borde_all">-periodo3-</td>
+        </tr>
+      <tr>
+        <td bgcolor="#CCFFCC" class="borde_all"><div align="center">4</div></td>
+        <td class="borde_all">-nombre4-</td>
+        <td class="borde_all">-espe4-</td>
+        <td class="borde_all">-code4-</td>
+        <td class="borde_all">-periodo4-</td>
+        </tr>
+
+    </table></td>
+  </tr>
+</table>
+<table width="570" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td class="borde_all"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+      <tr>
+        <td width="40%" bgcolor="#CCCCFF" class="style1">J. DATOS DEL PROFESIONAL RESPONSABLE </td>
+      </tr>
+    </table></td>
+  </tr>
+</table>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+  
+  <tr>
+    <td width="10%" valign="top" bgcolor="#CCFFCC" class="borde_all css_7"><div align="center">FECHA</div></td>
+    <td width="10%" valign="top" bgcolor="#CCFFCC" class="borde_all css_7"><div align="center">HORA</div></td>
+    <td width="21%" valign="top" bgcolor="#CCFFCC" class="borde_all css_7"><div align="center">NOMBRE DEL PROFESIONAL </div></td>
+  </tr>
+</table>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+  
+  <tr>
+    <td width="30%" valign="top" nowrap="nowrap" class="borde_all css_8"><div align="center">-anam_fecharegistro-</div></td>
+    <td width="29%" valign="top" nowrap="nowrap" class="borde_all css_8"><div align="center">-fechhora-</div></td>
+    <td width="41%" valign="top" class="borde_all css_8"><div align="center">-medico-</div></td>
+  </tr>
+</table>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+  
+  <tr>
+    <td width="2%" valign="top" bgcolor="#CCFFCC" class="borde_all css_7"><div align="center">NUMERO DE IDENTIFICACION  </div></td>
+    <td width="2%" valign="top" bgcolor="#CCFFCC" class="borde_all css_7"><div align="center">FIRMA</div></td>
+    <td width="2%" valign="top" bgcolor="#CCFFCC" class="borde_all css_7"><div align="center">SELLO</div></td>
+  </tr>
+</table>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+  
+  <tr>
+    <td width="34%" valign="top" class="borde_all css_8">-medico-</td>
+    <td width="34%" valign="top" class="borde_all css_8"><div align="center"></div></td>
+    <td width="32%" valign="top" class="borde_all css_8">&nbsp;</td>
+  </tr>
+</table>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="40%" class="css_11"><b>SNS-MSP / HCU-form.006 / 2021</b></td>
+    <td width="38%" class="css_11"><div align="right"><b>EPICRISIS (2) </b> </div></td>
+  </tr>
+</table>
+</body>
+</html>

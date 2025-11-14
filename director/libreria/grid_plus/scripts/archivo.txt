@@ -1,0 +1,1 @@
+caucab_id,emp_id,caucab_anio,caucab_mes,caucab_fechareg,caucab_nregistro,caucab_sede,usua_id,

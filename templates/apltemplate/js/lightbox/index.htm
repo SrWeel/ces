@@ -1,0 +1,28 @@
+
+<script type="text/javascript" src="../_common/js/mootools.js"></script>
+<script type="text/javascript" src="lightbox.js"></script>
+
+
+
+</head>
+<body>
+
+	
+		<div id="example">
+			<a href="images/26.jpg" rel="lightbox[mando]" id="image1" title="image 1"><img src="images/26t.jpg" border="0" alt="" /></a>
+		  <div class="lightboxDesc image1">My description for image 1</div>
+		  <a href="images/27.jpg" rel="lightbox[mando]" id="image2" title="image 2"><img src="images/27t.jpg" border="0" alt="" /></a>
+		  <div class="lightboxDesc image2">My description for image 2</div>
+		  <a href="images/28.jpg" rel="lightbox[mando]" id="image3" title="image 3"><img src="images/28t.jpg" border="0" alt="" /></a>
+		  <div class="lightboxDesc image3">My description for image 3</div>
+		
+		<script type="text/javascript">
+			window.addEvent('domready',function(){
+				Lightbox.init({descriptions: '.lightboxDesc', showControls: true});
+			});
+		</script>
+		</div>
+		
+		
+</body>
+</html>

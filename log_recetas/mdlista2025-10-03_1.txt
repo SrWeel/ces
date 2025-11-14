@@ -1,0 +1,6 @@
+update cesdb_arextension.dns_antecedentespersonalesnewconext set antep_descripcion='mmmmmm' where antep_id=11
+update cesdb_arextension.dns_antecedentespersonalesnewconext set antep_descripcion='mmmmmm' where antep_id=12
+update cesdb_arextension.dns_antecedentespersonalesnewconext set antep_descripcion='mmmm' where antep_id=13
+update cesdb_arextension.dns_antecedentesfamiliaresnewconext set antef_descripcion='mmmmmm' where antef_id=8
+update cesdb_arextension.dns_newtraumatologiagridorgano set gorgano_observacion='SIN EVIDENCIA DE P' where gorgano_id=250
+update cesdb_arextension.dns_newtraumatologiagridexamenfisico set gexamfis_observacion='KJKJKJK' where gexamfis_id=624

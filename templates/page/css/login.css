@@ -1,0 +1,54 @@
+/*****************************************************************
+ * LOGIN
+ ****************************************************************/
+.login input.btn-submit {
+	/*#3D5AA6*/
+	background-color: #173899;
+	border: 1px solid #FFFFFF;
+	color: #FFFFFF;
+	font-weight: bold;
+}
+
+.login input.btn-submit:active {
+	border: 1px solid #E3E3E3;
+}
+
+.login {
+	border: 1px dotted #3D5AA6;
+	border-collapse: collapse;
+}
+
+.login th {
+	background-color: #E3E3E3;
+	padding-right: 10px;
+	text-align: right;
+	vertical-align: middle;
+	width: 12em;
+	padding-top: 3px;
+}
+
+.login td {
+	padding-left: 2px;
+	padding-right: 2px;
+	vertical-align: middle;
+}
+
+
+
+.login table {
+	margin: 0 auto;
+}
+
+.barraSuperior {
+	background-color: #333333!important;
+	font-size: 10pt;
+	font-weight: bold;
+	color: white;
+	padding: 5px;
+	margin: 0px 0px 0px 2px;
+	height: 20px;
+}
+
+label.error{color:red;font-style:italic;font-weight:normal;}
+input.error{border:1px solid red;}
+

@@ -1,0 +1,281 @@
+1,Activos
+1.1,Activo Corriente
+1.1.1,Efectivo y Equivalentes a Efectivo
+1.1.1.1,Caja
+1.1.1.2,Caja Chica Contabilidad
+1.1.1.3,Caja chica Tesoreria
+1.1.1.3,Bancos
+1.1.1.3.1,Bolivariano
+1.1.1.3.2,Coop. Policia Nacional
+1.1.1.3.3,Pichincha
+1.1.1.4,Aportes Coop. Policía Nacional
+1.1.2,Activos Financieros
+1.1.2.5,Cuentas por Cobrar
+1.1.2.5.1,Clientes Comerciales
+1.1.2.5.5,Tarjetas de credito por cobrar
+1.1.3,Inventario
+1.1.3.4,Suministros o materiales a ser consumidos en la prestación de servicios
+1.1.3.4.1,Inv. Insumos
+1.1.3.4.2,Inv. Medicamentos
+1.1.4,Servicios y otros Pagos Anticipados
+1.1.4.3,Anticipo a Proveedores
+1.1.4.4,Anticipos Empleados
+1.1.4.5,Prestamos empleados
+1.1.5,Activos por Impuestos Corrientes
+1.1.5.1,IVA sobre Compras
+1.1.5.1.1,IVA sobre Compras
+1.1.5.2,Retenciones del IVA
+1.1.5.2.1,30% Bienes
+1.1.5.2.2,70% Servicios
+1.1.5.3,Retenciones en la Fuente del Impuesto a la Renta
+1.1.5.3.1,1% Bienes Muebles de Naturaleza Corporal
+1.1.5.3.2,2% Servicios
+1.1.5.3.9,2.75% Servicios
+1.1.5.3.11,1.75% Régimen Microempresas
+1.2,Activos No Corrientes
+1.2.1,Propiedad  Planta y Equipos
+1.2.1.3,Construcciones en Curso 
+1.2.1.4,Instalaciones 
+1.2.1.5,Muebles y Enseres
+1.2.1.6,Maquinarias y Equipos
+1.2.1.7,Equipos de Computación
+1.2.1.9,Otras Propiedades  Planta y Equipo
+1.2.1.11,(-) Depreciación Acumulada Propiedades  Planta y Equipo
+1.2.1.15,Construcciones en Curso Subsuelo
+1.2.2,Propiedades de Inversion
+1.2.2.3,(-) Depreciación Acumulada de Propiedades de Inversión
+1.2.3,Activos Biológicos
+1.2.4,Intangibles
+1.2.4.7,Licencia Software
+1.2.6,Activos Financieros No Corrientes
+1.2.7,Otros Activos No Corrientes
+1.2.7.1,Cuentas por Cobrar Socios o Accionistas No Corriente
+2,Pasivos
+2.1,Pasivo Corriente
+2.1.3,Cuentas y Documentos por Pagar
+2.1.3.1,Cuentas por Pagar
+2.1.3.1.1,Proveedores
+2.1.3.1.3,Cuenta de Control
+2.1.4,Obligaciones Con Instituciones Financieras
+2.1.4.1,Obligaciones con Instituciones Financieras Locales
+2.1.4.1.1,Prestamo Coop Policia Nacional Porción Corriente
+2.1.5,Provisiones
+2.1.7,Otras Obligaciones Corrientes
+2.1.7.1,Retenciones del I.E.S.S.
+2.1.7.1.1,Aporte IESS por Pagar
+2.1.7.2,Retenciones en la Fuente de Impuestos a la Renta
+2.1.7.2.1,1% Bienes Muebles de Naturaleza Corporal
+2.1.7.2.3,8% Honorarios  Arrendamientos  Docencia  Deportistas
+2.1.7.2.5,10% Honorarios Profesionales y Dietas
+2.1.7.2.9,2.75% Servicios
+2.1.7.2.12,1.75% Régimen Microempresas
+2.1.7.3,Retenciones del Impuesto al Valor Agregado
+2.1.7.3.1,30% Bienes
+2.1.7.3.2,70% Servicios
+2.1.7.4,IVA Sobre Ventas
+2.1.7.4.1,IVA sobre Ventas
+2.1.7.5,Impuestos por Pagar
+2.1.7.5.2,Impuestos por pagar 
+2.1.7.6,Beneficios Sociales por Pagar
+2.1.7.6.1,Décimo Tercer Sueldo por pagar
+2.1.7.6.2,Décimo Cuarto Sueldo por pagar
+2.1.7.6.4,11.15% Aportes Patronales I.E.S.S.
+2.1.7.6.6,Fondos de Reservas
+2.1.7.7,Nominas
+2.1.7.7.1,Sueldos por Pagar
+2.1.7.7.2,Liquidación por Pagar
+2.1.8,Cuentas por Pagar Diversas/Relacionadas
+2.1.10,Anticipos de Clientes
+2.1.12,Porción Corriente de Provisiones por Beneficios a Empleados
+2.2,Pasivo No Corriente
+2.2.2,Cuentas y Documentos por Pagar
+2.2.3,Obligaciones con Instituciones Financieras
+2.2.3.1,Obligaciones con Instituciones Financieras Locales No Corrientes
+2.2.3.1.1,Prestamo Coop Policia Nacional Porción No Corriente
+2.2.4,Cuenta por Pagar Diversas/Relacionadas
+2.2.4.1,Cuenta por Pagar Socios o Accionistas Inversión Original
+2.2.4.2,Cuenta por Pagar No Corriente Socio Patricio Guzmán
+2.2.4.3,Cuenta por Pagar No Corriente Socio Francisco Guzmán
+2.2.4.4,Cuenta por Pagar No Corriente Socio Renato Guerra
+2.2.4.8,Aporte Futuras Capitalizaciones ANES.
+2.2.4.11,Aporte Futuras Capitalizaciones .
+2.2.4.12,Cuenta por Pagar No Corriente Socio Francisco Silva
+2.2.6,Anticipos de Clientes
+2.2.7,Provisiones por Beneficios a Empleados
+2.2.8,Pasivo Diferido
+3,Patrimonio
+3.1,Patrimonio Atribuible a Propietarios
+3.1.1,Capital Social
+3.1.1.1,Capital Social suscrito o pagado
+3.1.2,Aportes de Socios o Accionistas para Futura Capitalización 
+3.1.4,Reservas
+3.1.4.1,Legal
+3.1.5,Otros Resultados Integrales
+3.1.6,Resultados Acumulados
+3.1.6.1,Resultados Acumulados
+3.1.7,Resultado del Ejercicio
+3.1.7.1,Resultado del Ejercicio
+3.2,Participación No Controladas
+4,Ingresos
+4.1,Ingresos Actividades Ordinarias 
+4.1.1,Prestación de Servicios
+4.1.1.1,Servicios de Consulta 
+4.1.1.2,Servicios de  Emergencia
+4.1.1.3,Servicios de Hospitalización
+4.1.1.4,Servicios de Quirofano
+4.1.1.5,Servicios de Terapia Intensiva (UCI)
+4.1.1.6,Equipo Servicio de Apoyo 
+4.1.1.7,Servicios de Neonatología
+4.1.1.8,Servicios de Laboratorio 
+4.1.1.9,Servicios de Rayos X
+4.1.1.10,Servicios de Ecografías 
+4.1.1.11,Servicios de Alimentación 
+4.1.1.12,Servicios de Rehabilitación 
+4.1.1.13,Servicios Hospitalario Complementario
+4.1.1.14,Servicios Materno Infantil 
+4.1.1.15,Servicios Hospitalario Recargos Adicionales
+4.1.1.16,Servicio de Esterilización 
+4.1.1.17,Servicios de Lavandería
+4.1.2,Medicamentos e Insumos 
+4.1.2.1,Medicamentos 
+4.1.2.2,Insumos 
+4.1.3,Rebaja y/o Descuento sobre Ventas 
+4.1.4,Otros Ingresos
+4.1.4.1,Otros Ingresos por Descuentos Personal 
+4.2,Otros Ingresos de Actividades Ordinarias 
+4.2.1,Arrendamientos 
+4.2.1.1,Cesión de Espacio Físico 
+4.2.1.2,Intereses
+4.2.1.3,Servicios de Administración
+4.3,Otros Ingresos Financieros 
+5,Costos y Gastos
+5.1,Costos de Venta y Producción 
+5.1.1,Materiales Utilizados o Productos Vendidos 
+5.1.1.1,Bienes No Producidos 
+5.1.1.1.1,Costo Insumos 
+5.1.1.1.2,Costo Medicamentos
+5.1.1.1.3,Aire Compimido 
+5.1.1.1.4,CO2
+5.1.1.1.5,Costo Insumos Especiales 
+5.1.1.1.6,Oxígeno
+5.1.1.1.7,Costo Equipos Menores 
+5.1.2,Mano de obra Directa 
+5.1.2.1,Sueldos Personal Quirofano 
+5.1.2.1.1,Sueldo Quirofano 
+5.1.2.1.2,Décimo Tercer Sueldo Personal Quirofano 
+5.1.2.1.3,Décimo Cuarto Sueldo Personal Quirofano 
+5.1.2.1.4,Aportes Patronales al I.E.S.S Personal Quirofano 
+5.1.2.1.5,Fondos de Reserva Personal Quirofano 
+5.1.2.1.6,Bonificaciones Personal Quirofano 
+5.1.2.2,Honorarios de Enfermería Qui.
+5.1.2.3,Honorarios Anestesiologo Qui.
+5.1.2.4,Honorarios Médicos Cirujanos
+5.1.2.5,Honorarios Médicos Chequeos Prequirurgicos 
+5.1.2.6,Honorarios Médicos Hospitalización 
+5.1.2.6.1,Honorarios Médico Residente Hosp.
+5.1.2.6.2,Honorarios Enfermería Hosp.
+5.1.2.6.3,Honorarios Médico Tratante
+5.1.2.6.4,Honorarios Médico Rehabilitación 
+5.1.2.6.5,Servicios Médicos 
+5.1.2.7,Honorarios Médicos UCI
+5.1.2.7.1,Honorarios Médico Residente UCI
+5.1.2.7.2,Honorarios de Enfermería UCI 
+5.1.2.7.3,Honorarios Médico Tratante UCI
+5.1.2.8,Servicios de Imagen
+5.1.2.8.1,Intensificador de Imagen (IDI)
+5.1.2.8.2,Servicios de Rayos X
+5.1.2.8.3,Servicios de Ecografía 
+5.1.2.9,Servicio de Laboratorio 
+5.1.2.10,Servicio de Alimentación Personal Médico
+5.1.2.10.1,Alimentación Quirofano 
+5.1.2.10.2,Alimentación Hospitalización 
+5.1.2.11,Servicios de Consulta Médica
+5.1.2.12,Honorarios Médicos Emergencia 
+5.1.2.12.1,Honorarios Médico Tratante Emergencia 
+5.1.2.12.2,Honorarios Enfermería Emergencia 
+5.1.3,Mano de Obra Indirecta
+5.1.3.1,Honorarios de Prestación de Servicios 
+5.1.3.1.1,Servicios Prestados Limpieza 
+5.1.3.1.2,Servicios Prestados Farmacéutico
+5.1.4,Costos Indirectos de Fabricación
+5.1.4.1,Depreciación Propiedades Plantas y Equipos
+5.1.4.2,Suministros Materiales y Repuestos Costos 
+5.1.4.3,Manejo Desechos Hospitalarios
+5.1.4.4,Otros Indirectos 
+5.1.4.4.1,Lavado de Ropa Hospitalaria 
+5.1.4.4.2,Servicios de Esterilización 
+5.1.4.4.3,Servicios de  Alimentación Pacientes
+5.1.4.4.4,Servicio de Ambulancia 
+5.1.4.4.5,Servicios de Desinfección 
+5.2,Gastos 
+5.2.1,Gastos de Actividades Ordinarias 
+5.2.1.1,Gastos de Ventas 
+5.2.1.1.1,Mantenimiento Equipos Vtas.
+5.2.1.1.2,Publicidad y Promoción Vtas.
+5.2.1.1.3,Depreciaciones Propiedades Planta y Equipo Vtas.
+5.2.1.1.5,Menaje de Hospitalización 
+5.2.1.2,Gastos Administrativos 
+5.2.1.2.1,Sueldos y Salarios
+5.2.1.2.1.1,Gasto Sueldos Adm.
+5.2.1.2.1.2,Horas Extras Adm.
+5.2.1.2.1.3,Bonificaciones Adm.
+5.2.1.2.1.4,Aporte Patronal al I.E.S.S Adm.
+5.2.1.2.1.5,Fondos de Reserva Adm.
+5.2.1.2.1.6,Gasto Décimo Tercer Sueldo Adm.
+5.2.1.2.1.7,Gasto Décimo Cuarto Sueldo Adm.
+5.2.1.2.1.8,Vacaciones Adm.
+5.2.1.2.1.9,Desahucio Adm.
+5.2.1.2.1.10,Alimentación Adm.
+5.2.1.2.2,Mantenimiento Equipos Adm.
+5.2.1.2.3,Publicidad y Promoción Adm.
+5.2.1.2.4,Impuesto a los Consumos Especiales Adm.
+5.2.1.2.5,Depreciaciones Propiedades Planta y Equipo Adm.
+5.2.1.2.6,Otros Gastos Adm.
+5.2.1.2.7,Honorarios de Prestación de Servicios 
+5.2.1.2.7.1,Servicios Prestados Administrativos
+5.2.1.2.7.2,Servicios Prestados Gerencia
+5.2.1.2.7.3,Honorarios Profesionales Contabilidad
+5.2.1.2.7.4,Servicios de Infraestructura Tecnológica
+5.2.1.2.7.5,Servicios Guardiania
+5.2.1.2.7.6,Alimentación Guardiania
+5.2.1.2.7.7,Movilización y Transporte Personal
+5.2.1.2.7.8,Prestación de Servicios 
+5.2.1.2.8,Capacitación y Gestión de Representación 
+5.2.1.2.8.1,Alimentación de Representación 
+5.2.1.2.8.2,Gastos de Gestión Adm.
+5.2.1.2.8.3,Gastos de Viaje y Representación Adm.
+5.2.1.2.8.4,Movilización y Transporte Adm.
+5.2.1.2.8.5,Capacitación y Entrenamiento Adm.
+5.2.1.2.9,Gastos Legales
+5.2.1.2.9.1,Honorarios Abogados
+5.2.1.2.9.2,Gasto Seguro Responsabilidad Civil 
+5.2.1.2.10,Servicios Basicos 
+5.2.1.2.10.1,Servicios de Agua
+5.2.1.2.10.2,Servicios de Energía Electrica 
+5.2.1.2.10.3,Servicios de Internet
+5.2.1.2.10.4,Servicios de Televisión Pagada 
+5.2.1.2.10.5,Servicios de Telefonía 
+5.2.1.2.11,Servicios de Software
+5.2.1.2.11.1,Software Contable 
+5.2.1.2.11.2,Software Hospitalario
+5.2.1.2.12,DATAFAST
+5.2.1.2.13,Suministros y Materiales 
+5.2.1.2.13.1,Suministros de oficina
+5.2.1.2.13.2,Suministros de Limpieza
+5.2.1.2.13.3,Uniformes Personal Adm.
+5.2.1.2.13.4,Materiales Y Herramientas 
+5.2.1.2.13.5,Mantenimiento y Reparación 
+5.2.1.2.14,Mantenimiento Edificio 
+5.2.1.2.14.1,Control de Plagas 
+5.2.1.2.14.2,Mantenimiento Generador
+5.2.1.2.14.3,Mantenimiento General 
+5.2.1.3,Gastos Financieros 
+5.2.1.3.1,Intereses
+5.2.1.3.2,Gastos Bancarios 
+5.2.1.3.3,Gastos Bancarios T/C
+5.2.1.3.4,Otros Gastos Financieros
+5.2.2,Gastos No Operacionales 
+5.2.2.1,Otros Gastos 
+5.2.2.1.1,Retenciones Asumidas
+5.2.2.1.2,Otros Gastos por Descuento de Personal 
+5.2.3,Gastos de Operaciones Descontinuadas 

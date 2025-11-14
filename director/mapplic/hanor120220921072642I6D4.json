@@ -1,0 +1,15 @@
+{
+	"mapwidth":"1200",
+	"mapheight":"760",
+	"categories":[
+
+	],
+	"levels":[
+		{
+			"id":"world",
+			"title":"World",
+			"map":"mapplic/maps/mapa_hanor.svg",
+			"locations":[]
+		}
+	]
+  }

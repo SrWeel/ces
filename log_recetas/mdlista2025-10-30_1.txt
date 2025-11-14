@@ -1,0 +1,35 @@
+update cesdb_arextension.dns_newtraumatologiagridexamenfisico set gexamfis_observacion='REGION CERVICAL CADENAS TENSAS
+HOMBRO IZQUIERDO PRESENCIA DE CICATRICES DOLOROSO A LA PALPACION EN ACROMION BUENOS RANGOS DE MOVILIDAD ACTIVA Y PASIVA ADECUADOS FUERZA MUSCULAR 3/5
+HOMBRO DERECHO DOLOR A LA PALPACION EN CARA ANTERIOR, LIMITACION FUNCIONAL A LOS MOVIMIENTOS FLEXION ANTERIOR 120º ROTACION INTERNA 45º QUE LLEGA A L3, NEER`HK + FUERZA MUSCULAR 4/5 
+TAC DE HOMBRO DERECHO SE EVIDENCIA PROTESIS DE HOMBRO ESTABLE CON SIGNOS DE FRACTURA DE ACROMION ' where gexamfis_id=1139
+update cesdb_arextension.dns_newtraumatologiagridexamenfisico set gexamfis_observacion='REGION CERVICAL CADENAS TENSAS
+HOMBRO IZQUIERDO PRESENCIA DE CICATRICES DOLOROSO A LA PALPACION EN ACROMION BUENOS RANGOS DE MOVILIDAD ACTIVA Y PASIVA ADECUADOS FUERZA MUSCULAR 3/5
+HOMBRO DERECHO DOLOR A LA PALPACION EN CARA ANTERIOR, LIMITACION FUNCIONAL A LOS MOVIMIENTOS FLEXION ANTERIOR 120º ROTACION INTERNA 45º QUE LLEGA A L3, NEER`HK + FUERZA MUSCULAR 4/5 
+TAC DE HOMBRO DERECHO SE EVIDENCIA PROTESIS DE HOMBRO ESTABLE CON SIGNOS DE FRACTURA DE ACROMION ' where gexamfis_id=1139
+update cesdb_arextension.dns_newtraumatologiagridexamenfisico set gexamfis_observacion='REGION CERVICAL CADENAS TENSAS
+HOMBRO IZQUIERDO PRESENCIA DE CICATRICES DOLOROSO A LA PALPACION EN ACROMION BUENOS RANGOS DE MOVILIDAD ACTIVA Y PASIVA ADECUADOS FUERZA MUSCULAR 3/5
+HOMBRO DERECHO DOLOR A LA PALPACION EN CARA ANTERIOR, LIMITACION FUNCIONAL A LOS MOVIMIENTOS FLEXION ANTERIOR 120º ROTACION INTERNA 45º QUE LLEGA A L3, NEER`HK + FUERZA MUSCULAR 4/5 
+TAC DE HOMBRO DERECHO SE EVIDENCIA PROTESIS DE HOMBRO ESTABLE CON SIGNOS DE FRACTURA DE ACROMION ' where gexamfis_id=1139
+update cesdb_arextension.dns_newtraumatologiagridorgano set gorgano_observacion='OMALGIA DERECHA ' where gorgano_id=464
+update cesdb_arextension.dns_newtraumatologiagridexamenfisico set gexamfis_observacion='HOMBRO DERECHO DOLOR A LA PALPACION EN CARA LATERAL LIMITACION FUNCIONAL, SIGNOS NEER+ HK+ JOBE + FUERZA MUSCULAR 4/5 REFLEJOS CONSERVADOS, LLENADO CAPILAR ADECUADO
+IDG SINDROME DE MANGUITO ROTADOR M751 
+' where gexamfis_id=1164
+update cesdb_arextension.dns_antecedentespersonalesnewconext set antep_descripcion='CIRUGIA Hombro izquierdo hace 14 años, coxartrosis cirugía no especifica hace 10 años, artroscopia de rodilla izquierda hace 22 años cirugía abierta de rodilla hace 21 años, hernia inguinal bilateral hace 1 año,' where antep_id=37
+update cesdb_arextension.dns_newtraumatologiagridorgano set gorgano_observacion='DOLOR DE HOMBROS ' where gorgano_id=474
+update cesdb_arextension.dns_newtraumatologiagridexamenfisico set gexamfis_observacion='' where gexamfis_id=1189
+update cesdb_arextension.dns_newtraumatologiagridexamenfisico set gexamfis_observacion='' where gexamfis_id=1189
+update cesdb_arextension.dns_newtraumatologiagridexamenfisico set gexamfis_observacion='HOMBRO IZQUIERDO VESTIGIO DE CICATRICES PREVIAS RANGOS DE MOVILIDAD CONSERVADOS, NEER + HK + FUERZA MUSCULAR 4/5 
+HOMBRO DERECHO DOLOR A LA DIGITOPRESION EN CARA ANTERIOR LIMITACION FUNCIONAL FLEXION ANTERIOR Y ABDUCCION FUERZA MUSCULAR 4/5 
+HOMBRO DERECHO NEER + HK + FUERZA MUSCULAR 4/5 
+HOMBRO DERECHO DOLOR A LA DIGITOPRESION EN CARA ANTERIOR LIMITACION FUNCIONAL FLEXION ANTERIOR 100% ROTACION INTERNA 45º FUERZA MUSCULAR 4/5 ' where gexamfis_id=1189
+update cesdb_arextension.dns_newtraumatologiagridexamenfisico set gexamfis_observacion='HOMBRO IZQUIERDO VESTIGIO DE CICATRICES PREVIAS RANGOS DE MOVILIDAD CONSERVADOS, NEER + HK + FUERZA MUSCULAR 4/5 
+HOMBRO DERECHO DOLOR A LA DIGITOPRESION EN CARA ANTERIOR LIMITACION FUNCIONAL FLEXION ANTERIOR Y ABDUCCION FUERZA MUSCULAR 4/5 
+HOMBRO DERECHO NEER + HK + FUERZA MUSCULAR 4/5 
+HOMBRO DERECHO DOLOR A LA DIGITOPRESION EN CARA ANTERIOR LIMITACION FUNCIONAL FLEXION ANTERIOR 100% ROTACION INTERNA 45º FUERZA MUSCULAR 4/5 ' where gexamfis_id=1189
+update cesdb_arextension.dns_newtraumatologiagridexamenfisico set gexamfis_observacion='HOMBRO IZQUIERDO VESTIGIO DE CICATRICES PREVIAS RANGOS DE MOVILIDAD CONSERVADOS, NEER + HK + FUERZA MUSCULAR 4/5 
+HOMBRO DERECHO DOLOR A LA DIGITOPRESION EN CARA ANTERIOR LIMITACION FUNCIONAL FLEXION ANTERIOR 100% ROTACION INTERNA 45º FUERZA MUSCULAR 4/5 ' where gexamfis_id=1189
+update cesdb_arextension.dns_antecedentespersonalesnewconext set antep_descripcion='' where antep_id=40
+update cesdb_arextension.dns_antecedentespersonalesnewconext set antep_descripcion='' where antep_id=40
+update cesdb_arextension.dns_antecedentespersonalesnewconext set antep_descripcion='FRACTURA DE FEMUR HACE 2 AÑOS 
+AMIGDALECTOMIA HACE 1 AÑO' where antep_id=40
+update cesdb_arextension.dns_newtraumatologiagridexamenfisico set gexamfis_observacion='DOLOR A LA PALPACION EN CARA INTERNA DE TOBILLO DERECHO Y TIBIA ANTERIOR. ' where gexamfis_id=1240

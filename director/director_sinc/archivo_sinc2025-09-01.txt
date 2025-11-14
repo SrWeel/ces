@@ -1,0 +1,2 @@
+update gogess_sisfield set fie_title='Razon Social:' where fie_id='12170';
+update gogess_sisfield set fie_anchocolomna='12' where fie_id='12171';

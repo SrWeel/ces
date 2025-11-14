@@ -1,0 +1,1140 @@
+update gogess_sisfield set fie_evitaambiguo='',fie_styleobj='form-control',fie_sqlorder='',fie_activarprt=1,fie_tablac='',fie_verificac=0,fie_txtizq='',fie_lineas=0,fie_tabindex=0,fie_valiextra='',fie_attrib='',fie_txtextra='',fie_typeweb='txtgraficopeke',fie_lencampo='25',fie_name='conve_bddpaciente',tab_name='cesdb_arextension.dns_convenios',fie_title='Base Datos Paciente:',fie_type='txtgraficopeke',fie_tabledb='cesdb_arextension.dns_convenios',fie_datadb='',fie_active=1,fie_activesearch=1,fie_obl=0,fie_value='',fie_style='cmbforms',fie_group='1',fie_sql='',fie_sendvar='',fie_tactive=1,fie_inactivoftabla='0',fie_campoafecta='',fie_activelista=1,fie_xmlformato='NULL',fie_xmlactivo=0,fie_sqlconexiontabla='',fie_naleatorio=0,field_type='',field_flags='',fie_camporecibe='',fie_activogrid='',fie_orden=12,fie_limpiarengrid='',field_maxcaracter='',fie_archivo='',fie_mascara='',fie_iconoarchivo='',fie_activarbuscador='',fie_tablabusca='',fie_camposbusca='',fie_campodevuelve='',fie_ordengrid=0,fie_titlereporte='',fie_typereport='',fie_guarda=1,fie_x=0,fie_y=0,fie_placeholder='',fie_archivogrid='',fie_groupprint='0',fie_anchocolomna='1',fie_tablasubgrid='',fie_campoenlacesub='',fie_tablasubgridcampos='',fie_tablasubcampoid='',fie_tblcombogrid='',fie_campoidcombogrid='',fie_campofecharegistro='',fie_tituloscamposgrid='',fie_camposobligatoriosgrid='',fie_camposgridselect='',fie_alias='',ttbl_id=0,fie_camposumar='',fie_crear=0,fie_scriptbuscador='' where fie_id=12183 
+update gogess_sisfield set fie_evitaambiguo='',fie_styleobj='form-control',fie_sqlorder='',fie_activarprt=1,fie_tablac='',fie_verificac=0,fie_txtizq='',fie_lineas=0,fie_tabindex=0,fie_valiextra='',fie_attrib='',fie_txtextra='',fie_typeweb='selectpeke',fie_lencampo='25',fie_name='clie_cobertura',tab_name='app_cliente',fie_title='Porcentaje Cobertura:',fie_type='selectpeke',fie_tabledb='cesdb_arcombos.cmb_porcentajecobertura',fie_datadb='porcob_id,porcob_nombre',fie_active=1,fie_activesearch=1,fie_obl=0,fie_value='',fie_style='cmbforms',fie_group='3',fie_sql='where porcob_nombre=',fie_sendvar='',fie_tactive=1,fie_inactivoftabla='0',fie_campoafecta='',fie_activelista=1,fie_xmlformato='NULL',fie_xmlactivo=0,fie_sqlconexiontabla='',fie_naleatorio=0,field_type='int',field_flags='',fie_camporecibe='',fie_activogrid='',fie_orden=13,fie_limpiarengrid='',field_maxcaracter='',fie_archivo='',fie_mascara='',fie_iconoarchivo='',fie_activarbuscador='',fie_tablabusca='',fie_camposbusca='',fie_campodevuelve='',fie_ordengrid=0,fie_titlereporte='',fie_typereport='',fie_guarda=1,fie_x=0,fie_y=0,fie_placeholder='',fie_archivogrid='',fie_groupprint='0',fie_anchocolomna='12',fie_tablasubgrid='',fie_campoenlacesub='',fie_tablasubgridcampos='',fie_tablasubcampoid='',fie_tblcombogrid='',fie_campoidcombogrid='',fie_campofecharegistro='',fie_tituloscamposgrid='',fie_camposobligatoriosgrid='',fie_camposgridselect='',fie_alias='',ttbl_id=0,fie_camposumar='',fie_crear=0,fie_scriptbuscador='' where fie_id=12217 
+update gogess_sisfield set fie_evitaambiguo='',fie_styleobj='form-control',fie_sqlorder='',fie_activarprt=1,fie_tablac='',fie_verificac=0,fie_txtizq='',fie_lineas=0,fie_tabindex=0,fie_valiextra='',fie_attrib='',fie_txtextra='',fie_typeweb='selectpeke',fie_lencampo='25',fie_name='clie_copago',tab_name='app_cliente',fie_title='COPAGO:',fie_type='selectpeke',fie_tabledb='cesdb_arcombos.cmb_porcentajecobertura',fie_datadb='porcob_id,porcob_copago',fie_active=1,fie_activesearch=1,fie_obl=0,fie_value='',fie_style='cmbforms',fie_group='3',fie_sql='where porcob_copago=',fie_sendvar='',fie_tactive=1,fie_inactivoftabla='0',fie_campoafecta='',fie_activelista=1,fie_xmlformato='NULL',fie_xmlactivo=0,fie_sqlconexiontabla='',fie_naleatorio=0,field_type='int',field_flags='',fie_camporecibe='',fie_activogrid='',fie_orden=14,fie_limpiarengrid='',field_maxcaracter='',fie_archivo='',fie_mascara='',fie_iconoarchivo='',fie_activarbuscador='',fie_tablabusca='',fie_camposbusca='',fie_campodevuelve='',fie_ordengrid=0,fie_titlereporte='',fie_typereport='',fie_guarda=1,fie_x=0,fie_y=0,fie_placeholder='',fie_archivogrid='',fie_groupprint='0',fie_anchocolomna='1',fie_tablasubgrid='',fie_campoenlacesub='',fie_tablasubgridcampos='',fie_tablasubcampoid='',fie_tblcombogrid='',fie_campoidcombogrid='',fie_campofecharegistro='',fie_tituloscamposgrid='',fie_camposobligatoriosgrid='',fie_camposgridselect='',fie_alias='',ttbl_id=0,fie_camposumar='',fie_crear=0,fie_scriptbuscador='' where fie_id=12218 
+update gogess_sisfield set fie_evitaambiguo='',fie_styleobj='form-control',fie_sqlorder='',fie_activarprt=1,fie_tablac='',fie_verificac=0,fie_txtizq='',fie_lineas=0,fie_tabindex=0,fie_valiextra='',fie_attrib='',fie_txtextra='',fie_typeweb='text',fie_lencampo='25',fie_name='clie_deducible',tab_name='app_cliente',fie_title='Deducible:',fie_type='text',fie_tabledb='app_cliente',fie_datadb='',fie_active=1,fie_activesearch=1,fie_obl=0,fie_value='',fie_style='cmbforms',fie_group='3',fie_sql='',fie_sendvar='',fie_tactive=1,fie_inactivoftabla='0',fie_campoafecta='',fie_activelista=1,fie_xmlformato='NULL',fie_xmlactivo=0,fie_sqlconexiontabla='',fie_naleatorio=0,field_type='int',field_flags='',fie_camporecibe='',fie_activogrid='',fie_orden=15,fie_limpiarengrid='',field_maxcaracter='',fie_archivo='',fie_mascara='',fie_iconoarchivo='',fie_activarbuscador='',fie_tablabusca='',fie_camposbusca='',fie_campodevuelve='',fie_ordengrid=0,fie_titlereporte='',fie_typereport='',fie_guarda=1,fie_x=0,fie_y=0,fie_placeholder='',fie_archivogrid='',fie_groupprint='0',fie_anchocolomna='1',fie_tablasubgrid='',fie_campoenlacesub='',fie_tablasubgridcampos='',fie_tablasubcampoid='',fie_tblcombogrid='',fie_campoidcombogrid='',fie_campofecharegistro='',fie_tituloscamposgrid='',fie_camposobligatoriosgrid='',fie_camposgridselect='',fie_alias='',ttbl_id=0,fie_camposumar='',fie_crear=0,fie_scriptbuscador='' where fie_id=12219 
+update dns_formatoreceta set emp_id=1,forrect_nombre='RECETAS',forrect_texto='<table border="0" cellpadding="2" cellspacing="2" style="width:950px">
+	<tbody>
+		<tr>
+			<td>
+			<table border="0" cellpadding="2" cellspacing="2" style="width:100%">
+				<tbody>
+					<tr>
+						<td>-logo-<br />
+						-direccionemp-</td>
+						<td>Raz&oacute;n Social: -razons-<br />
+						Responsable t&eacute;cnico: -medico-<br />
+						Especialidad: -cargo-<br />
+						Cel: -cel-</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<hr /></td>
+			<td>&nbsp;</td>
+			<td>
+			<table border="0" cellpadding="2" cellspacing="2" style="width:100%">
+				<tbody>
+					<tr>
+						<td>-logo-<br />
+						-direccionemp-</td>
+						<td>Raz&oacute;n Social: -razons-<br />
+						Responsable t&eacute;cnico: -medico-<br />
+						Especialidad: -cargo-<br />
+						Cel: -cel-</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<hr /></td>
+		</tr>
+		<tr>
+			<td>
+			<p><strong>RECETARIO M&Eacute;DICO</strong></p>
+
+			<p>M&uacute;mero Receta: -codigo-<br />
+			Fecha de prescripci&oacute;n: -fecha-<br />
+			Fecha de vigencia de la receta: 8 D&amp;icute;as<br />
+			Paciente: -clie_nombre- -clie_apellido-<br />
+			EDAD: -edad-<br />
+			N&uacute;mero historia cl&iacute;nica: -clie_rucci-<br />
+			Diagn&oacute;stico CIE: -diagnostico-</p>
+
+			<p><strong>RP.</strong></p>
+
+			<p>-receta-</p>
+
+			<p><strong>M&eacute;dico:</strong> -usua_nombre- -usua_apellido-<br />
+			<strong>C&oacute;digo Profesional:</strong> -usua_msp-</p>
+
+			<p><br />
+			<strong>Firma:</strong>.........................................................</p>
+
+			<p><br />
+			<strong>Sello:</strong>..........................................................</p>
+
+			<p>&nbsp;</p>
+
+			<p>&nbsp;</p>
+			</td>
+			<td>&nbsp;</td>
+			<td>
+			<p><strong>RECETARIO M&Eacute;DICO</strong></p>
+
+			<p><strong>INDICACIONES</strong></p>
+
+			<p>-indicaciones-</p>
+
+			<p>Comunicarse de inmediato con el prescriptor o acudir a Emergecias en caso de: -encasode-</p>
+			&nbsp;
+
+			<p><strong>M&eacute;dico:</strong> -usua_nombre- -usua_apellido-<br />
+			<strong>C&oacute;digo Profesional:</strong> -usua_msp-</p>
+
+			<p><br />
+			<strong>Firma:</strong>.........................................................</p>
+
+			<p><br />
+			<strong>Sello:</strong>..........................................................</p>
+			</td>
+		</tr>
+	</tbody>
+</table>',forrect_grafico1='47753VQFJS20200301.logoreceta.png',forrect_grafico2='',forrect_grafico3='',forrect_grafico4='' where forrect_id=1 
+update dns_formatoreceta set emp_id=1,forrect_nombre='RECETAS',forrect_texto='<table border="0" cellpadding="2" cellspacing="2" style="width:950px">
+	<tbody>
+		<tr>
+			<td>
+			<table border="0" cellpadding="2" cellspacing="2" style="width:100%">
+				<tbody>
+					<tr>
+						<td>-logo-<br />
+						-direccionemp-</td>
+						<td>Raz&oacute;n Social: -razons-<br />
+						Responsable t&eacute;cnico: -medico-<br />
+						Cargo: -cargo-<br />
+						Cel: -cel-</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<hr /></td>
+			<td>&nbsp;</td>
+			<td>
+			<table border="0" cellpadding="2" cellspacing="2" style="width:100%">
+				<tbody>
+					<tr>
+						<td>-logo-<br />
+						-direccionemp-</td>
+						<td>Raz&oacute;n Social: -razons-<br />
+						Responsable t&eacute;cnico: -medico-<br />
+						Cargo: -cargo-<br />
+						Cel: -cel-</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<hr /></td>
+		</tr>
+		<tr>
+			<td>
+			<p><strong>RECETARIO M&Eacute;DICO</strong></p>
+
+			<p>M&uacute;mero Receta: -codigo-<br />
+			Fecha de prescripci&oacute;n: -fecha-<br />
+			Fecha de vigencia de la receta: 8 D&amp;icute;as<br />
+			Paciente: -clie_nombre- -clie_apellido-<br />
+			EDAD: -edad-<br />
+			N&uacute;mero historia cl&iacute;nica: -clie_rucci-<br />
+			Diagn&oacute;stico CIE: -diagnostico-</p>
+
+			<p><strong>RP.</strong></p>
+
+			<p>-receta-</p>
+
+			<p><strong>M&eacute;dico:</strong> -usua_nombre- -usua_apellido-<br />
+			<strong>C&oacute;digo Profesional:</strong> -usua_msp-</p>
+
+			<p><br />
+			<strong>Firma:</strong>.........................................................</p>
+
+			<p><br />
+			<strong>Sello:</strong>..........................................................</p>
+
+			<p>&nbsp;</p>
+
+			<p>&nbsp;</p>
+			</td>
+			<td>&nbsp;</td>
+			<td>
+			<p><strong>RECETARIO M&Eacute;DICO</strong></p>
+
+			<p><strong>INDICACIONES</strong></p>
+
+			<p>-indicaciones-</p>
+
+			<p>Comunicarse de inmediato con el prescriptor o acudir a Emergecias en caso de: -encasode-</p>
+			&nbsp;
+
+			<p><strong>M&eacute;dico:</strong> -usua_nombre- -usua_apellido-<br />
+			<strong>C&oacute;digo Profesional:</strong> -usua_msp-</p>
+
+			<p><br />
+			<strong>Firma:</strong>.........................................................</p>
+
+			<p><br />
+			<strong>Sello:</strong>..........................................................</p>
+			</td>
+		</tr>
+	</tbody>
+</table>',forrect_grafico1='47753VQFJS20200301.logoreceta.png',forrect_grafico2='',forrect_grafico3='',forrect_grafico4='' where forrect_id=1 
+update dns_formatoreceta set emp_id=1,forrect_nombre='RECETAS',forrect_texto='<table border="0" cellpadding="2" cellspacing="2" style="width:950px">
+	<tbody>
+		<tr>
+			<td>
+			<table border="0" cellpadding="2" cellspacing="2" style="width:100%">
+				<tbody>
+					<tr>
+						<td>-logo-<br />
+						-direccionemp-</td>
+						<td>Raz&oacute;n Social: -razons-<br />
+						Responsable t&eacute;cnico: -medico-<br />
+						Cargo: -cargo-<br />
+						Cel: -cel-</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<hr /></td>
+			<td>&nbsp;</td>
+			<td>
+			<table border="0" cellpadding="2" cellspacing="2" style="width:100%">
+				<tbody>
+					<tr>
+						<td>-logo-<br />
+						-direccionemp-</td>
+						<td>Raz&oacute;n Social: -razons-<br />
+						Responsable t&eacute;cnico: -medico-<br />
+						Cargo: -cargo-<br />
+						Cel: -cel-</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<hr /></td>
+		</tr>
+		<tr>
+			<td>
+			<p><strong>RECETARIO M&Eacute;DICO</strong></p>
+
+			<p>M&uacute;mero Receta: -codigo-<br />
+			Fecha de prescripci&oacute;n: -fecha-<br />
+			Fecha de vigencia de la receta: 8 D&amp;icute;as<br />
+			Paciente: -clie_nombre- -clie_apellido-<br />
+			EDAD: -edad-<br />
+			N&uacute;mero historia cl&iacute;nica: -clie_rucci-<br />
+			Diagn&oacute;stico CIE: -diagnostico-</p>
+
+			<p><strong>RP.</strong></p>
+
+			<p>-receta-</p>
+
+			<p><strong>M&eacute;dico:</strong> -usua_nombre- -usua_apellido-<br />
+			<strong>C&oacute;digo Profesional:</strong> -usua_msp-</p>
+
+			<p><br />
+			<strong>Firma:</strong>.........................................................</p>
+
+			<p><br />
+			<strong>Sello:</strong>..........................................................</p>
+
+			<p>&nbsp;</p>
+
+			<p>&nbsp;</p>
+			</td>
+			<td>&nbsp;</td>
+			<td>
+			<p><strong>RECETARIO M&Eacute;DICO</strong></p>
+
+			<p><strong>INDICACIONES</strong></p>
+
+			<p>-indicaciones-</p>
+
+			<p>Comunicarse de inmediato con el prescriptor o acudir a Emergecias en caso de: -encasode-</p>
+			&nbsp;
+
+			<p><strong>M&eacute;dico:</strong> -usua_nombre- -usua_apellido-<br />
+			<strong>C&oacute;digo Profesional:</strong> -usua_msp-</p>
+
+			<p><br />
+			<strong>Firma:</strong>.........................................................</p>
+
+			<p><br />
+			<strong>Sello:</strong>..........................................................</p>
+			</td>
+		</tr>
+	</tbody>
+</table>',forrect_grafico1='47753VQFJS20200301.logoreceta.png',forrect_grafico2='',forrect_grafico3='',forrect_grafico4='' where forrect_id=1 
+update dns_formatoreceta set emp_id=1,forrect_nombre='RECETAS',forrect_texto='<table border="0" cellpadding="2" cellspacing="2" style="width:950px">
+	<tbody>
+		<tr>
+			<td>
+			<table border="0" cellpadding="2" cellspacing="2" style="height:95px; width:344px">
+				<tbody>
+					<tr>
+						<td>-logo-<br />
+						-direccionemp-</td>
+						<td>Raz&oacute;n Social: -razons-<br />
+						Responsable t&eacute;cnico: -medico-<br />
+						Cargo: -cargo-<br />
+						Cel: -cel-</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<hr /></td>
+			<td>&nbsp;</td>
+			<td>
+			<table border="0" cellpadding="2" cellspacing="2" style="width:100%">
+				<tbody>
+					<tr>
+						<td>-logo-<br />
+						-direccionemp-</td>
+						<td>Raz&oacute;n Social: -razons-<br />
+						Responsable t&eacute;cnico: -medico-<br />
+						Cargo: -cargo-<br />
+						Cel: -cel-</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<hr /></td>
+		</tr>
+		<tr>
+			<td>
+			<p><strong>RECETARIO M&Eacute;DICO</strong></p>
+
+			<p>M&uacute;mero Receta: -codigo-<br />
+			Fecha de prescripci&oacute;n: -fecha-<br />
+			Fecha de vigencia de la receta: 8 D&amp;icute;as<br />
+			Paciente: -clie_nombre- -clie_apellido-<br />
+			EDAD: -edad-<br />
+			N&uacute;mero historia cl&iacute;nica: -clie_rucci-<br />
+			Diagn&oacute;stico CIE: -diagnostico-</p>
+
+			<p><strong>RP.</strong></p>
+
+			<p>-receta-</p>
+
+			<p><strong>M&eacute;dico:</strong> -usua_nombre- -usua_apellido-<br />
+			<strong>C&oacute;digo Profesional:</strong> -usua_msp-</p>
+
+			<p><br />
+			<strong>Firma:</strong>.........................................................</p>
+
+			<p><br />
+			<strong>Sello:</strong>..........................................................</p>
+
+			<p>&nbsp;</p>
+
+			<p>&nbsp;</p>
+			</td>
+			<td>&nbsp;</td>
+			<td>
+			<p><strong>RECETARIO M&Eacute;DICO</strong></p>
+
+			<p><strong>INDICACIONES</strong></p>
+
+			<p>-indicaciones-</p>
+
+			<p>Comunicarse de inmediato con el prescriptor o acudir a Emergecias en caso de: -encasode-</p>
+			&nbsp;
+
+			<p><strong>M&eacute;dico:</strong> -usua_nombre- -usua_apellido-<br />
+			<strong>C&oacute;digo Profesional:</strong> -usua_msp-</p>
+
+			<p><br />
+			<strong>Firma:</strong>.........................................................</p>
+
+			<p><br />
+			<strong>Sello:</strong>..........................................................</p>
+			</td>
+		</tr>
+	</tbody>
+</table>',forrect_grafico1='47753VQFJS20200301.logoreceta.png',forrect_grafico2='',forrect_grafico3='',forrect_grafico4='' where forrect_id=1 
+update dns_formatoreceta set emp_id=1,forrect_nombre='RECETAS',forrect_texto='<table border="0" cellpadding="2" cellspacing="2" style="width:950px">
+	<tbody>
+		<tr>
+			<td>
+			<table border="0" cellpadding="2" cellspacing="2" style="height:95px; width:374px">
+				<tbody>
+					<tr>
+						<td>-logo-<br />
+						-direccionemp-</td>
+						<td>Raz&oacute;n Social: -razons-<br />
+						Responsable t&eacute;cnico: -medico-<br />
+						Cargo: -cargo-<br />
+						Cel: -cel-</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<hr /></td>
+			<td>&nbsp;</td>
+			<td>
+			<table border="0" cellpadding="2" cellspacing="2" style="width:100%">
+				<tbody>
+					<tr>
+						<td>-logo-<br />
+						-direccionemp-</td>
+						<td>Raz&oacute;n Social: -razons-<br />
+						Responsable t&eacute;cnico: -medico-<br />
+						Cargo: -cargo-<br />
+						Cel: -cel-</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<hr /></td>
+		</tr>
+		<tr>
+			<td>
+			<p><strong>RECETARIO M&Eacute;DICO</strong></p>
+
+			<p>M&uacute;mero Receta: -codigo-<br />
+			Fecha de prescripci&oacute;n: -fecha-<br />
+			Fecha de vigencia de la receta: 8 D&amp;icute;as<br />
+			Paciente: -clie_nombre- -clie_apellido-<br />
+			EDAD: -edad-<br />
+			N&uacute;mero historia cl&iacute;nica: -clie_rucci-<br />
+			Diagn&oacute;stico CIE: -diagnostico-</p>
+
+			<p><strong>RP.</strong></p>
+
+			<p>-receta-</p>
+
+			<p><strong>M&eacute;dico:</strong> -usua_nombre- -usua_apellido-<br />
+			<strong>C&oacute;digo Profesional:</strong> -usua_msp-</p>
+
+			<p><br />
+			<strong>Firma:</strong>.........................................................</p>
+
+			<p><br />
+			<strong>Sello:</strong>..........................................................</p>
+
+			<p>&nbsp;</p>
+
+			<p>&nbsp;</p>
+			</td>
+			<td>&nbsp;</td>
+			<td>
+			<p><strong>RECETARIO M&Eacute;DICO</strong></p>
+
+			<p><strong>INDICACIONES</strong></p>
+
+			<p>-indicaciones-</p>
+
+			<p>Comunicarse de inmediato con el prescriptor o acudir a Emergecias en caso de: -encasode-</p>
+			&nbsp;
+
+			<p><strong>M&eacute;dico:</strong> -usua_nombre- -usua_apellido-<br />
+			<strong>C&oacute;digo Profesional:</strong> -usua_msp-</p>
+
+			<p><br />
+			<strong>Firma:</strong>.........................................................</p>
+
+			<p><br />
+			<strong>Sello:</strong>..........................................................</p>
+			</td>
+		</tr>
+	</tbody>
+</table>',forrect_grafico1='47753VQFJS20200301.logoreceta.png',forrect_grafico2='',forrect_grafico3='',forrect_grafico4='' where forrect_id=1 
+update dns_formatoreceta set emp_id=1,forrect_nombre='RECETAS',forrect_texto='<table border="0" cellpadding="2" cellspacing="2" style="width:950px">
+	<tbody>
+		<tr>
+			<td>
+			<table border="0" cellpadding="2" cellspacing="2" style="height:95px; width:428px">
+				<tbody>
+					<tr>
+						<td>-logo-<br />
+						-direccionemp-</td>
+						<td>Raz&oacute;n Social: -razons-<br />
+						Responsable t&eacute;cnico: -medico-<br />
+						Cargo: -cargo-<br />
+						Cel: -cel-</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<hr /></td>
+			<td>&nbsp;</td>
+			<td>
+			<table border="0" cellpadding="2" cellspacing="2" style="height:95px; width:561px">
+				<tbody>
+					<tr>
+						<td>-logo-<br />
+						-direccionemp-</td>
+						<td>Raz&oacute;n Social: -razons-<br />
+						Responsable t&eacute;cnico: -medico-<br />
+						Cargo: -cargo-<br />
+						Cel: -cel-</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<hr /></td>
+		</tr>
+		<tr>
+			<td>
+			<p><strong>RECETARIO M&Eacute;DICO</strong></p>
+
+			<p>M&uacute;mero Receta: -codigo-<br />
+			Fecha de prescripci&oacute;n: -fecha-<br />
+			Fecha de vigencia de la receta: 8 D&amp;icute;as<br />
+			Paciente: -clie_nombre- -clie_apellido-<br />
+			EDAD: -edad-<br />
+			N&uacute;mero historia cl&iacute;nica: -clie_rucci-<br />
+			Diagn&oacute;stico CIE: -diagnostico-</p>
+
+			<p><strong>RP.</strong></p>
+
+			<p>-receta-</p>
+
+			<p><strong>M&eacute;dico:</strong> -usua_nombre- -usua_apellido-<br />
+			<strong>C&oacute;digo Profesional:</strong> -usua_msp-</p>
+
+			<p><br />
+			<strong>Firma:</strong>.........................................................</p>
+
+			<p><br />
+			<strong>Sello:</strong>..........................................................</p>
+
+			<p>&nbsp;</p>
+
+			<p>&nbsp;</p>
+			</td>
+			<td>&nbsp;</td>
+			<td>
+			<p><strong>RECETARIO M&Eacute;DICO</strong></p>
+
+			<p><strong>INDICACIONES</strong></p>
+
+			<p>-indicaciones-</p>
+
+			<p>Comunicarse de inmediato con el prescriptor o acudir a Emergecias en caso de: -encasode-</p>
+			&nbsp;
+
+			<p><strong>M&eacute;dico:</strong> -usua_nombre- -usua_apellido-<br />
+			<strong>C&oacute;digo Profesional:</strong> -usua_msp-</p>
+
+			<p><br />
+			<strong>Firma:</strong>.........................................................</p>
+
+			<p><br />
+			<strong>Sello:</strong>..........................................................</p>
+			</td>
+		</tr>
+	</tbody>
+</table>',forrect_grafico1='47753VQFJS20200301.logoreceta.png',forrect_grafico2='',forrect_grafico3='',forrect_grafico4='' where forrect_id=1 
+update dns_formatoreceta set emp_id=1,forrect_nombre='RECETAS',forrect_texto='<table border="0" cellpadding="2" cellspacing="2" style="width:950px">
+	<tbody>
+		<tr>
+			<td>
+			<table border="0" cellpadding="2" cellspacing="2" style="height:95px; width:428px">
+				<tbody>
+					<tr>
+						<td>-logo-<br />
+						-direccionemp-</td>
+						<td>Raz&oacute;n Social: -razons-<br />
+						Responsable t&eacute;cnico: -medico-<br />
+						Cargo: -cargo-<br />
+						Cel: -cel-</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<hr /></td>
+			<td>&nbsp;</td>
+			<td>
+			<table border="0" cellpadding="2" cellspacing="2" style="height:95px; width:515px">
+				<tbody>
+					<tr>
+						<td>-logo-<br />
+						-direccionemp-</td>
+						<td>Raz&oacute;n Social: -razons-<br />
+						Responsable t&eacute;cnico: -medico-<br />
+						Cargo: -cargo-<br />
+						Cel: -cel-</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<hr /></td>
+		</tr>
+		<tr>
+			<td>
+			<p><strong>RECETARIO M&Eacute;DICO</strong></p>
+
+			<p>M&uacute;mero Receta: -codigo-<br />
+			Fecha de prescripci&oacute;n: -fecha-<br />
+			Fecha de vigencia de la receta: 8 D&amp;icute;as<br />
+			Paciente: -clie_nombre- -clie_apellido-<br />
+			EDAD: -edad-<br />
+			N&uacute;mero historia cl&iacute;nica: -clie_rucci-<br />
+			Diagn&oacute;stico CIE: -diagnostico-</p>
+
+			<p><strong>RP.</strong></p>
+
+			<p>-receta-</p>
+
+			<p><strong>M&eacute;dico:</strong> -usua_nombre- -usua_apellido-<br />
+			<strong>C&oacute;digo Profesional:</strong> -usua_msp-</p>
+
+			<p><br />
+			<strong>Firma:</strong>.........................................................</p>
+
+			<p><br />
+			<strong>Sello:</strong>..........................................................</p>
+
+			<p>&nbsp;</p>
+
+			<p>&nbsp;</p>
+			</td>
+			<td>&nbsp;</td>
+			<td>
+			<p><strong>RECETARIO M&Eacute;DICO</strong></p>
+
+			<p><strong>INDICACIONES</strong></p>
+
+			<p>-indicaciones-</p>
+
+			<p>Comunicarse de inmediato con el prescriptor o acudir a Emergecias en caso de: -encasode-</p>
+			&nbsp;
+
+			<p><strong>M&eacute;dico:</strong> -usua_nombre- -usua_apellido-<br />
+			<strong>C&oacute;digo Profesional:</strong> -usua_msp-</p>
+
+			<p><br />
+			<strong>Firma:</strong>.........................................................</p>
+
+			<p><br />
+			<strong>Sello:</strong>..........................................................</p>
+			</td>
+		</tr>
+	</tbody>
+</table>',forrect_grafico1='47753VQFJS20200301.logoreceta.png',forrect_grafico2='',forrect_grafico3='',forrect_grafico4='' where forrect_id=1 
+update dns_formatoreceta set emp_id=1,forrect_nombre='RECETAS',forrect_texto='<table border="0" cellpadding="2" cellspacing="2" style="width:950px">
+	<tbody>
+		<tr>
+			<td>
+			<table border="0" cellpadding="2" cellspacing="2" style="height:95px; width:428px">
+				<tbody>
+					<tr>
+						<td>-logo-<br />
+						-direccionemp-</td>
+						<td>Raz&oacute;n Social: -razons-<br />
+						Responsable t&eacute;cnico: -medico-<br />
+						Cargo: -cargo-<br />
+						Cel: -cel-</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<hr /></td>
+			<td>&nbsp;</td>
+			<td>
+			<table border="0" cellpadding="2" cellspacing="2" style="height:95px; width:515px">
+				<tbody>
+					<tr>
+						<td>-logo-<br />
+						-direccionemp-</td>
+						<td>Raz&oacute;n Social: -razons-<br />
+						Responsable t&eacute;cnico: -medico-<br />
+						Cargo: -cargo-<br />
+						Cel: -cel-</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<hr /></td>
+		</tr>
+		<tr>
+			<td>
+			<p><strong>RECETARIO M&Eacute;DICO</strong></p>
+
+			<p>M&uacute;mero Receta: -codigo-<br />
+			Fecha de prescripci&oacute;n: -fecha-<br />
+			Fecha de vigencia de la receta: 8 D&amp;icute;as<br />
+			Paciente: -clie_nombre- -clie_apellido-<br />
+			EDAD: -edad-<br />
+			N&uacute;mero historia cl&iacute;nica: -clie_rucci-<br />
+			Diagn&oacute;stico CIE: -diagnostico-</p>
+
+			<p><strong>RP.</strong></p>
+
+			<p>-receta-</p>
+
+			<p><strong>M&eacute;dico:</strong> -usua_nombre- -usua_apellido-<br />
+			<strong>C&oacute;digo Profesional:</strong> -usua_msp-</p>
+
+			<p><br />
+			<strong>Firma:</strong>.........................................................</p>
+
+			<p><br />
+			<strong>Sello:</strong>..........................................................</p>
+
+			<p>&nbsp;</p>
+
+			<p>&nbsp;</p>
+			</td>
+			<td>&nbsp;</td>
+			<td>
+			<p><strong>RECETARIO M&Eacute;DICO</strong></p>
+
+			<p><strong>INDICACIONES</strong></p>
+
+			<p>-indicaciones-</p>
+
+			<p>Comunicarse de inmediato con el prescriptor o acudir a Emergecias en caso de: -encasode-</p>
+			&nbsp;
+
+			<p><strong>M&eacute;dico:</strong> -usua_nombre- -usua_apellido-<br />
+			<strong>C&oacute;digo Profesional:</strong> -usua_msp-</p>
+
+			<p><br />
+			<strong>Firma:</strong>.........................................................</p>
+
+			<p><br />
+			<strong>Sello:</strong>..........................................................</p>
+			</td>
+		</tr>
+	</tbody>
+</table>',forrect_grafico1='47753VQFJS20200301.logoreceta.png',forrect_grafico2='',forrect_grafico3='',forrect_grafico4='' where forrect_id=1 
+update dns_formatoreceta set emp_id=1,forrect_nombre='RECETAS',forrect_texto='<table border="0" cellpadding="2" cellspacing="2" style="width:950px">
+	<tbody>
+		<tr>
+			<td>
+			<table border="0" cellpadding="2" cellspacing="2" style="height:95px; width:396px">
+				<tbody>
+					<tr>
+						<td>-logo-<br />
+						-direccionemp-</td>
+						<td>Raz&oacute;n Social: -razons-<br />
+						Responsable t&eacute;cnico: -medico-<br />
+						Cargo: -cargo-<br />
+						Cel: -cel-</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<hr /></td>
+			<td>&nbsp;</td>
+			<td>
+			<table border="0" cellpadding="2" cellspacing="2" style="height:95px; width:515px">
+				<tbody>
+					<tr>
+						<td>-logo-<br />
+						-direccionemp-</td>
+						<td>Raz&oacute;n Social: -razons-<br />
+						Responsable t&eacute;cnico: -medico-<br />
+						Cargo: -cargo-<br />
+						Cel: -cel-</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<hr /></td>
+		</tr>
+		<tr>
+			<td>
+			<p><strong>RECETARIO M&Eacute;DICO</strong></p>
+
+			<p>M&uacute;mero Receta: -codigo-<br />
+			Fecha de prescripci&oacute;n: -fecha-<br />
+			Fecha de vigencia de la receta: 8 D&amp;icute;as<br />
+			Paciente: -clie_nombre- -clie_apellido-<br />
+			EDAD: -edad-<br />
+			N&uacute;mero historia cl&iacute;nica: -clie_rucci-<br />
+			Diagn&oacute;stico CIE: -diagnostico-</p>
+
+			<p><strong>RP.</strong></p>
+
+			<p>-receta-</p>
+
+			<p><strong>M&eacute;dico:</strong> -usua_nombre- -usua_apellido-<br />
+			<strong>C&oacute;digo Profesional:</strong> -usua_msp-</p>
+
+			<p><br />
+			<strong>Firma:</strong>.........................................................</p>
+
+			<p><br />
+			<strong>Sello:</strong>..........................................................</p>
+
+			<p>&nbsp;</p>
+
+			<p>&nbsp;</p>
+			</td>
+			<td>&nbsp;</td>
+			<td>
+			<p><strong>RECETARIO M&Eacute;DICO</strong></p>
+
+			<p><strong>INDICACIONES</strong></p>
+
+			<p>-indicaciones-</p>
+
+			<p>Comunicarse de inmediato con el prescriptor o acudir a Emergecias en caso de: -encasode-</p>
+			&nbsp;
+
+			<p><strong>M&eacute;dico:</strong> -usua_nombre- -usua_apellido-<br />
+			<strong>C&oacute;digo Profesional:</strong> -usua_msp-</p>
+
+			<p><br />
+			<strong>Firma:</strong>.........................................................</p>
+
+			<p><br />
+			<strong>Sello:</strong>..........................................................</p>
+			</td>
+		</tr>
+	</tbody>
+</table>',forrect_grafico1='47753VQFJS20200301.logoreceta.png',forrect_grafico2='',forrect_grafico3='',forrect_grafico4='' where forrect_id=1 
+update dns_formatoreceta set emp_id=1,forrect_nombre='RECETAS',forrect_texto='<table border="0" cellpadding="2" cellspacing="2" style="width:950px">
+	<tbody>
+		<tr>
+			<td>
+			<table border="0" cellpadding="2" cellspacing="2" style="height:95px; width:396px">
+				<tbody>
+					<tr>
+						<td>-logo-<br />
+						-direccionemp-</td>
+						<td>Raz&oacute;n Social: -razons-<br />
+						Responsable t&eacute;cnico: -medico-<br />
+						Cargo: -cargo-<br />
+						Cel: -cel-</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<hr /></td>
+			<td>&nbsp;</td>
+			<td>
+			<table border="0" cellpadding="2" cellspacing="2" style="height:95px; width:467px">
+				<tbody>
+					<tr>
+						<td>-logo-<br />
+						-direccionemp-</td>
+						<td>Raz&oacute;n Social: -razons-<br />
+						Responsable t&eacute;cnico: -medico-<br />
+						Cargo: -cargo-<br />
+						Cel: -cel-</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<hr /></td>
+		</tr>
+		<tr>
+			<td>
+			<p><strong>RECETARIO M&Eacute;DICO</strong></p>
+
+			<p>M&uacute;mero Receta: -codigo-<br />
+			Fecha de prescripci&oacute;n: -fecha-<br />
+			Fecha de vigencia de la receta: 8 D&amp;icute;as<br />
+			Paciente: -clie_nombre- -clie_apellido-<br />
+			EDAD: -edad-<br />
+			N&uacute;mero historia cl&iacute;nica: -clie_rucci-<br />
+			Diagn&oacute;stico CIE: -diagnostico-</p>
+
+			<p><strong>RP.</strong></p>
+
+			<p>-receta-</p>
+
+			<p><strong>M&eacute;dico:</strong> -usua_nombre- -usua_apellido-<br />
+			<strong>C&oacute;digo Profesional:</strong> -usua_msp-</p>
+
+			<p><br />
+			<strong>Firma:</strong>.........................................................</p>
+
+			<p><br />
+			<strong>Sello:</strong>..........................................................</p>
+
+			<p>&nbsp;</p>
+
+			<p>&nbsp;</p>
+			</td>
+			<td>&nbsp;</td>
+			<td>
+			<p><strong>RECETARIO M&Eacute;DICO</strong></p>
+
+			<p><strong>INDICACIONES</strong></p>
+
+			<p>-indicaciones-</p>
+
+			<p>Comunicarse de inmediato con el prescriptor o acudir a Emergecias en caso de: -encasode-</p>
+			&nbsp;
+
+			<p><strong>M&eacute;dico:</strong> -usua_nombre- -usua_apellido-<br />
+			<strong>C&oacute;digo Profesional:</strong> -usua_msp-</p>
+
+			<p><br />
+			<strong>Firma:</strong>.........................................................</p>
+
+			<p><br />
+			<strong>Sello:</strong>..........................................................</p>
+			</td>
+		</tr>
+	</tbody>
+</table>',forrect_grafico1='47753VQFJS20200301.logoreceta.png',forrect_grafico2='',forrect_grafico3='',forrect_grafico4='' where forrect_id=1 
+update dns_formatoreceta set emp_id=1,forrect_nombre='RECETAS',forrect_texto='<table border="0" cellpadding="2" cellspacing="2" style="width:950px">
+	<tbody>
+		<tr>
+			<td>
+			<table border="0" cellpadding="2" cellspacing="2" style="height:95px; width:378px">
+				<tbody>
+					<tr>
+						<td>-logo-<br />
+						-direccionemp-</td>
+						<td>Raz&oacute;n Social: -razons-<br />
+						Responsable t&eacute;cnico: -medico-<br />
+						Cargo: -cargo-<br />
+						Cel: -cel-</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<hr /></td>
+			<td>&nbsp;</td>
+			<td>
+			<table border="0" cellpadding="2" cellspacing="2" style="height:95px; width:409px">
+				<tbody>
+					<tr>
+						<td>-logo-<br />
+						-direccionemp-</td>
+						<td>Raz&oacute;n Social: -razons-<br />
+						Responsable t&eacute;cnico: -medico-<br />
+						Cargo: -cargo-<br />
+						Cel: -cel-</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<hr /></td>
+		</tr>
+		<tr>
+			<td>
+			<p><strong>RECETARIO M&Eacute;DICO</strong></p>
+
+			<p>M&uacute;mero Receta: -codigo-<br />
+			Fecha de prescripci&oacute;n: -fecha-<br />
+			Fecha de vigencia de la receta: 8 D&amp;icute;as<br />
+			Paciente: -clie_nombre- -clie_apellido-<br />
+			EDAD: -edad-<br />
+			N&uacute;mero historia cl&iacute;nica: -clie_rucci-<br />
+			Diagn&oacute;stico CIE: -diagnostico-</p>
+
+			<p><strong>RP.</strong></p>
+
+			<p>-receta-</p>
+
+			<p><strong>M&eacute;dico:</strong> -usua_nombre- -usua_apellido-<br />
+			<strong>C&oacute;digo Profesional:</strong> -usua_msp-</p>
+
+			<p><br />
+			<strong>Firma:</strong>.........................................................</p>
+
+			<p><br />
+			<strong>Sello:</strong>..........................................................</p>
+
+			<p>&nbsp;</p>
+
+			<p>&nbsp;</p>
+			</td>
+			<td>&nbsp;</td>
+			<td>
+			<p><strong>RECETARIO M&Eacute;DICO</strong></p>
+
+			<p><strong>INDICACIONES</strong></p>
+
+			<p>-indicaciones-</p>
+
+			<p>Comunicarse de inmediato con el prescriptor o acudir a Emergecias en caso de: -encasode-</p>
+			&nbsp;
+
+			<p><strong>M&eacute;dico:</strong> -usua_nombre- -usua_apellido-<br />
+			<strong>C&oacute;digo Profesional:</strong> -usua_msp-</p>
+
+			<p><br />
+			<strong>Firma:</strong>.........................................................</p>
+
+			<p><br />
+			<strong>Sello:</strong>..........................................................</p>
+			</td>
+		</tr>
+	</tbody>
+</table>',forrect_grafico1='47753VQFJS20200301.logoreceta.png',forrect_grafico2='',forrect_grafico3='',forrect_grafico4='' where forrect_id=1 
+update dns_formatoreceta set emp_id=1,forrect_nombre='RECETAS',forrect_texto='<table border="0" cellpadding="2" cellspacing="2" style="height:634px; width:916px">
+	<tbody>
+		<tr>
+			<td>
+			<table border="0" cellpadding="2" cellspacing="2" style="height:95px; width:378px">
+				<tbody>
+					<tr>
+						<td>-logo-<br />
+						-direccionemp-</td>
+						<td>Raz&oacute;n Social: -razons-<br />
+						Responsable t&eacute;cnico: -medico-<br />
+						Cargo: -cargo-<br />
+						Cel: -cel-</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<hr /></td>
+			<td>&nbsp;</td>
+			<td>
+			<table border="0" cellpadding="2" cellspacing="2" style="height:95px; width:409px">
+				<tbody>
+					<tr>
+						<td>-logo-<br />
+						-direccionemp-</td>
+						<td>Raz&oacute;n Social: -razons-<br />
+						Responsable t&eacute;cnico: -medico-<br />
+						Cargo: -cargo-<br />
+						Cel: -cel-</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<hr /></td>
+		</tr>
+		<tr>
+			<td>
+			<p><strong>RECETARIO M&Eacute;DICO</strong></p>
+
+			<p>M&uacute;mero Receta: -codigo-<br />
+			Fecha de prescripci&oacute;n: -fecha-<br />
+			Fecha de vigencia de la receta: 8 D&amp;icute;as<br />
+			Paciente: -clie_nombre- -clie_apellido-<br />
+			EDAD: -edad-<br />
+			N&uacute;mero historia cl&iacute;nica: -clie_rucci-<br />
+			Diagn&oacute;stico CIE: -diagnostico-</p>
+
+			<p><strong>RP.</strong></p>
+
+			<p>-receta-</p>
+
+			<p><strong>M&eacute;dico:</strong> -usua_nombre- -usua_apellido-<br />
+			<strong>C&oacute;digo Profesional:</strong> -usua_msp-</p>
+
+			<p><br />
+			<strong>Firma:</strong>.........................................................</p>
+
+			<p><br />
+			<strong>Sello:</strong>..........................................................</p>
+
+			<p>&nbsp;</p>
+
+			<p>&nbsp;</p>
+			</td>
+			<td>&nbsp;</td>
+			<td>
+			<p><strong>RECETARIO M&Eacute;DICO</strong></p>
+
+			<p><strong>INDICACIONES</strong></p>
+
+			<p>-indicaciones-</p>
+
+			<p>Comunicarse de inmediato con el prescriptor o acudir a Emergecias en caso de: -encasode-</p>
+			&nbsp;
+
+			<p><strong>M&eacute;dico:</strong> -usua_nombre- -usua_apellido-<br />
+			<strong>C&oacute;digo Profesional:</strong> -usua_msp-</p>
+
+			<p><br />
+			<strong>Firma:</strong>.........................................................</p>
+
+			<p><br />
+			<strong>Sello:</strong>..........................................................</p>
+			</td>
+		</tr>
+	</tbody>
+</table>',forrect_grafico1='47753VQFJS20200301.logoreceta.png',forrect_grafico2='',forrect_grafico3='',forrect_grafico4='' where forrect_id=1 
+update dns_formatoreceta set emp_id=1,forrect_nombre='RECETAS',forrect_texto='<table border="0" cellpadding="2" cellspacing="2" style="height:634px; width:880px">
+	<tbody>
+		<tr>
+			<td>
+			<table border="0" cellpadding="2" cellspacing="2" style="height:95px; width:378px">
+				<tbody>
+					<tr>
+						<td>-logo-<br />
+						-direccionemp-</td>
+						<td>Raz&oacute;n Social: -razons-<br />
+						Responsable t&eacute;cnico: -medico-<br />
+						Cargo: -cargo-<br />
+						Cel: -cel-</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<hr /></td>
+			<td>&nbsp;</td>
+			<td>
+			<table border="0" cellpadding="2" cellspacing="2" style="height:95px; width:409px">
+				<tbody>
+					<tr>
+						<td>-logo-<br />
+						-direccionemp-</td>
+						<td>Raz&oacute;n Social: -razons-<br />
+						Responsable t&eacute;cnico: -medico-<br />
+						Cargo: -cargo-<br />
+						Cel: -cel-</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<hr /></td>
+		</tr>
+		<tr>
+			<td>
+			<p><strong>RECETARIO M&Eacute;DICO</strong></p>
+
+			<p>M&uacute;mero Receta: -codigo-<br />
+			Fecha de prescripci&oacute;n: -fecha-<br />
+			Fecha de vigencia de la receta: 8 D&amp;icute;as<br />
+			Paciente: -clie_nombre- -clie_apellido-<br />
+			EDAD: -edad-<br />
+			N&uacute;mero historia cl&iacute;nica: -clie_rucci-<br />
+			Diagn&oacute;stico CIE: -diagnostico-</p>
+
+			<p><strong>RP.</strong></p>
+
+			<p>-receta-</p>
+
+			<p><strong>M&eacute;dico:</strong> -usua_nombre- -usua_apellido-<br />
+			<strong>C&oacute;digo Profesional:</strong> -usua_msp-</p>
+
+			<p><br />
+			<strong>Firma:</strong>.........................................................</p>
+
+			<p><br />
+			<strong>Sello:</strong>..........................................................</p>
+
+			<p>&nbsp;</p>
+
+			<p>&nbsp;</p>
+			</td>
+			<td>&nbsp;</td>
+			<td>
+			<p><strong>RECETARIO M&Eacute;DICO</strong></p>
+
+			<p><strong>INDICACIONES</strong></p>
+
+			<p>-indicaciones-</p>
+
+			<p>Comunicarse de inmediato con el prescriptor o acudir a Emergecias en caso de: -encasode-</p>
+			&nbsp;
+
+			<p><strong>M&eacute;dico:</strong> -usua_nombre- -usua_apellido-<br />
+			<strong>C&oacute;digo Profesional:</strong> -usua_msp-</p>
+
+			<p><br />
+			<strong>Firma:</strong>.........................................................</p>
+
+			<p><br />
+			<strong>Sello:</strong>..........................................................</p>
+			</td>
+		</tr>
+	</tbody>
+</table>',forrect_grafico1='47753VQFJS20200301.logoreceta.png',forrect_grafico2='',forrect_grafico3='',forrect_grafico4='' where forrect_id=1 
+update gogess_sisfield set fie_evitaambiguo='',fie_styleobj='form-control',fie_sqlorder='',fie_activarprt=1,fie_tablac='',fie_verificac=0,fie_txtizq='',fie_lineas=0,fie_tabindex=0,fie_valiextra='',fie_attrib='',fie_txtextra='',fie_typeweb='text',fie_lencampo='25',fie_name='atenc_fechaatmedicina',tab_name='dns_atencion',fie_title='Fechaatmedicina:',fie_type='text',fie_tabledb='dns_atencion',fie_datadb='',fie_active=0,fie_activesearch=1,fie_obl=0,fie_value='',fie_style='cmbforms',fie_group='1',fie_sql='',fie_sendvar='',fie_tactive=1,fie_inactivoftabla='0',fie_campoafecta='',fie_activelista=1,fie_xmlformato='NULL',fie_xmlactivo=0,fie_sqlconexiontabla='',fie_naleatorio=0,field_type='',field_flags='',fie_camporecibe='',fie_activogrid='',fie_orden=38,fie_limpiarengrid='',field_maxcaracter='',fie_archivo='',fie_mascara='',fie_iconoarchivo='',fie_activarbuscador='',fie_tablabusca='',fie_camposbusca='',fie_campodevuelve='',fie_ordengrid=0,fie_titlereporte='',fie_typereport='',fie_guarda=1,fie_x=0,fie_y=0,fie_placeholder='',fie_archivogrid='',fie_groupprint='0',fie_anchocolomna='1',fie_tablasubgrid='',fie_campoenlacesub='',fie_tablasubgridcampos='',fie_tablasubcampoid='',fie_tblcombogrid='',fie_campoidcombogrid='',fie_campofecharegistro='',fie_tituloscamposgrid='',fie_camposobligatoriosgrid='',fie_camposgridselect='',fie_alias='',ttbl_id=0,fie_camposumar='',fie_crear=0,fie_scriptbuscador='' where fie_id=12227 
+update gogess_sisfield set fie_evitaambiguo='',fie_styleobj='form-control',fie_sqlorder='',fie_activarprt=1,fie_tablac='',fie_verificac=0,fie_txtizq='',fie_lineas=0,fie_tabindex=0,fie_valiextra='',fie_attrib='',fie_txtextra='',fie_typeweb='text',fie_lencampo='25',fie_name='atenc_fechaatpsicologia',tab_name='dns_atencion',fie_title='Fechaatpsicologia:',fie_type='text',fie_tabledb='dns_atencion',fie_datadb='',fie_active=0,fie_activesearch=1,fie_obl=0,fie_value='',fie_style='cmbforms',fie_group='1',fie_sql='',fie_sendvar='',fie_tactive=1,fie_inactivoftabla='0',fie_campoafecta='',fie_activelista=1,fie_xmlformato='NULL',fie_xmlactivo=0,fie_sqlconexiontabla='',fie_naleatorio=0,field_type='',field_flags='',fie_camporecibe='',fie_activogrid='',fie_orden=39,fie_limpiarengrid='',field_maxcaracter='',fie_archivo='',fie_mascara='',fie_iconoarchivo='',fie_activarbuscador='',fie_tablabusca='',fie_camposbusca='',fie_campodevuelve='',fie_ordengrid=0,fie_titlereporte='',fie_typereport='',fie_guarda=1,fie_x=0,fie_y=0,fie_placeholder='',fie_archivogrid='',fie_groupprint='0',fie_anchocolomna='1',fie_tablasubgrid='',fie_campoenlacesub='',fie_tablasubgridcampos='',fie_tablasubcampoid='',fie_tblcombogrid='',fie_campoidcombogrid='',fie_campofecharegistro='',fie_tituloscamposgrid='',fie_camposobligatoriosgrid='',fie_camposgridselect='',fie_alias='',ttbl_id=0,fie_camposumar='',fie_crear=0,fie_scriptbuscador='' where fie_id=12228 
+update gogess_sisfield set fie_evitaambiguo='',fie_styleobj='form-control',fie_sqlorder='',fie_activarprt=1,fie_tablac='',fie_verificac=0,fie_txtizq='',fie_lineas=0,fie_tabindex=0,fie_valiextra='',fie_attrib='',fie_txtextra='',fie_typeweb='text',fie_lencampo='25',fie_name='atenc_fechaatodontologia',tab_name='dns_atencion',fie_title='Fechaatodontologia:',fie_type='text',fie_tabledb='dns_atencion',fie_datadb='',fie_active=0,fie_activesearch=1,fie_obl=0,fie_value='',fie_style='cmbforms',fie_group='1',fie_sql='',fie_sendvar='',fie_tactive=1,fie_inactivoftabla='0',fie_campoafecta='',fie_activelista=1,fie_xmlformato='NULL',fie_xmlactivo=0,fie_sqlconexiontabla='',fie_naleatorio=0,field_type='',field_flags='',fie_camporecibe='',fie_activogrid='',fie_orden=40,fie_limpiarengrid='',field_maxcaracter='',fie_archivo='',fie_mascara='',fie_iconoarchivo='',fie_activarbuscador='',fie_tablabusca='',fie_camposbusca='',fie_campodevuelve='',fie_ordengrid=0,fie_titlereporte='',fie_typereport='',fie_guarda=1,fie_x=0,fie_y=0,fie_placeholder='',fie_archivogrid='',fie_groupprint='0',fie_anchocolomna='1',fie_tablasubgrid='',fie_campoenlacesub='',fie_tablasubgridcampos='',fie_tablasubcampoid='',fie_tblcombogrid='',fie_campoidcombogrid='',fie_campofecharegistro='',fie_tituloscamposgrid='',fie_camposobligatoriosgrid='',fie_camposgridselect='',fie_alias='',ttbl_id=0,fie_camposumar='',fie_crear=0,fie_scriptbuscador='' where fie_id=12229 
+update gogess_sisfield set fie_evitaambiguo='',fie_styleobj='form-control',fie_sqlorder='',fie_activarprt=1,fie_tablac='',fie_verificac=0,fie_txtizq='',fie_lineas=0,fie_tabindex=0,fie_valiextra='',fie_attrib='',fie_txtextra='',fie_typeweb='text',fie_lencampo='25',fie_name='atenc_fechaatrehabilitacion',tab_name='dns_atencion',fie_title='Fechaatrehabilitacion:',fie_type='text',fie_tabledb='dns_atencion',fie_datadb='',fie_active=0,fie_activesearch=1,fie_obl=0,fie_value='',fie_style='cmbforms',fie_group='1',fie_sql='',fie_sendvar='',fie_tactive=1,fie_inactivoftabla='0',fie_campoafecta='',fie_activelista=1,fie_xmlformato='NULL',fie_xmlactivo=0,fie_sqlconexiontabla='',fie_naleatorio=0,field_type='',field_flags='',fie_camporecibe='',fie_activogrid='',fie_orden=41,fie_limpiarengrid='',field_maxcaracter='',fie_archivo='',fie_mascara='',fie_iconoarchivo='',fie_activarbuscador='',fie_tablabusca='',fie_camposbusca='',fie_campodevuelve='',fie_ordengrid=0,fie_titlereporte='',fie_typereport='',fie_guarda=1,fie_x=0,fie_y=0,fie_placeholder='',fie_archivogrid='',fie_groupprint='0',fie_anchocolomna='1',fie_tablasubgrid='',fie_campoenlacesub='',fie_tablasubgridcampos='',fie_tablasubcampoid='',fie_tblcombogrid='',fie_campoidcombogrid='',fie_campofecharegistro='',fie_tituloscamposgrid='',fie_camposobligatoriosgrid='',fie_camposgridselect='',fie_alias='',ttbl_id=0,fie_camposumar='',fie_crear=0,fie_scriptbuscador='' where fie_id=12230 
+update gogess_sisfield set fie_evitaambiguo='',fie_styleobj='form-control',fie_sqlorder='',fie_activarprt=1,fie_tablac='',fie_verificac=0,fie_txtizq='',fie_lineas=5,fie_tabindex=0,fie_valiextra='',fie_attrib='',fie_txtextra='',fie_typeweb='textarea',fie_lencampo='25',fie_name='atenc_alergias',tab_name='dns_atencion',fie_title='Alergias:',fie_type='textarea',fie_tabledb='dns_atencion',fie_datadb='',fie_active=1,fie_activesearch=1,fie_obl=0,fie_value='',fie_style='cmbforms',fie_group='1',fie_sql='',fie_sendvar='',fie_tactive=1,fie_inactivoftabla='0',fie_campoafecta='',fie_activelista=1,fie_xmlformato='NULL',fie_xmlactivo=0,fie_sqlconexiontabla='',fie_naleatorio=0,field_type='',field_flags='',fie_camporecibe='',fie_activogrid='',fie_orden=42,fie_limpiarengrid='',field_maxcaracter='',fie_archivo='',fie_mascara='',fie_iconoarchivo='',fie_activarbuscador='',fie_tablabusca='',fie_camposbusca='',fie_campodevuelve='',fie_ordengrid=0,fie_titlereporte='',fie_typereport='',fie_guarda=1,fie_x=0,fie_y=0,fie_placeholder='',fie_archivogrid='',fie_groupprint='0',fie_anchocolomna='12',fie_tablasubgrid='',fie_campoenlacesub='',fie_tablasubgridcampos='',fie_tablasubcampoid='',fie_tblcombogrid='',fie_campoidcombogrid='',fie_campofecharegistro='',fie_tituloscamposgrid='',fie_camposobligatoriosgrid='',fie_camposgridselect='',fie_alias='',ttbl_id=0,fie_camposumar='',fie_crear=0,fie_scriptbuscador='' where fie_id=12231 

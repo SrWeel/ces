@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="07f0c92e-7bf6-4c93-80cc-47b21f8b0d04" name="Changes" comment="second">
+      <change afterPath="$PROJECT_DIR$/libreria/campos/campon.php" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerConfigs">
+    <option name="configs">
+      <option value="$PROJECT_DIR$/director/adodb/composer.json" />
+      <option value="$PROJECT_DIR$/formularioweb/qr/composer.json" />
+      <option value="$PROJECT_DIR$/pdfroles/tcpdf/composer.json" />
+      <option value="$PROJECT_DIR$/director/vendors/Chart.js/composer.json" />
+      <option value="$PROJECT_DIR$/pdfformularios/qr/composer.json" />
+      <option value="$PROJECT_DIR$/libreria/adodb/composer.json" />
+      <option value="$PROJECT_DIR$/pdfroles/libs/PHPExcel-1.8/composer.json" />
+      <option value="$PROJECT_DIR$/certificadosd/qr/composer.json" />
+      <option value="$PROJECT_DIR$/vendors/Chart.js/composer.json" />
+    </option>
+  </component>
+  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/pdfroles/composer.json</pharConfigPath>
+    <execution />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="PHP File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <excluded-from-favorite>
+      <branch-storage>
+        <map>
+          <entry type="LOCAL">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$" source="master" />
+              </list>
+            </value>
+          </entry>
+        </map>
+      </branch-storage>
+    </excluded-from-favorite>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;SrWeel&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/SrWeel/ces.git&quot;,
+    &quot;accountId&quot;: &quot;6270765f-0505-452d-91c0-d7111930fc5f&quot;
+  }
+}</component>
+  <component name="PhpServers">
+    <servers>
+      <server host="localhost" id="ae19df1d-4f88-42a4-98db-2a3e65adceb7" name="apache" />
+    </servers>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration">
+    <include_path>
+      <path value="$PROJECT_DIR$/formularioweb/qr/vendor/endroid/qr-code" />
+      <path value="$PROJECT_DIR$/formularioweb/qr/vendor/composer" />
+      <path value="$PROJECT_DIR$/formularioweb/qr/vendor/symfony/property-access" />
+      <path value="$PROJECT_DIR$/formularioweb/qr/vendor/khanamiryan/qrcode-detector-decoder" />
+      <path value="$PROJECT_DIR$/formularioweb/qr/vendor/symfony/inflector" />
+      <path value="$PROJECT_DIR$/formularioweb/qr/vendor/dasprid/enum" />
+      <path value="$PROJECT_DIR$/formularioweb/qr/vendor/symfony/options-resolver" />
+      <path value="$PROJECT_DIR$/formularioweb/qr/vendor/symfony/polyfill-ctype" />
+      <path value="$PROJECT_DIR$/formularioweb/qr/vendor/myclabs/php-enum" />
+      <path value="$PROJECT_DIR$/formularioweb/qr/vendor/bacon/bacon-qr-code" />
+      <path value="$PROJECT_DIR$/pdfformularios/qr/vendor/myclabs/php-enum" />
+      <path value="$PROJECT_DIR$/pdfformularios/qr/vendor/bacon/bacon-qr-code" />
+      <path value="$PROJECT_DIR$/pdfformularios/qr/vendor/endroid/qr-code" />
+      <path value="$PROJECT_DIR$/pdfformularios/qr/vendor/composer" />
+      <path value="$PROJECT_DIR$/pdfformularios/qr/vendor/symfony/property-access" />
+      <path value="$PROJECT_DIR$/pdfformularios/qr/vendor/khanamiryan/qrcode-detector-decoder" />
+      <path value="$PROJECT_DIR$/pdfformularios/qr/vendor/symfony/inflector" />
+      <path value="$PROJECT_DIR$/pdfformularios/qr/vendor/dasprid/enum" />
+      <path value="$PROJECT_DIR$/pdfformularios/qr/vendor/symfony/options-resolver" />
+      <path value="$PROJECT_DIR$/pdfformularios/qr/vendor/symfony/polyfill-ctype" />
+      <path value="$PROJECT_DIR$/certificadosd/qr/vendor/dasprid/enum" />
+      <path value="$PROJECT_DIR$/certificadosd/qr/vendor/symfony/options-resolver" />
+      <path value="$PROJECT_DIR$/certificadosd/qr/vendor/symfony/property-access" />
+      <path value="$PROJECT_DIR$/certificadosd/qr/vendor/symfony/polyfill-ctype" />
+      <path value="$PROJECT_DIR$/certificadosd/qr/vendor/symfony/inflector" />
+      <path value="$PROJECT_DIR$/certificadosd/qr/vendor/bacon/bacon-qr-code" />
+      <path value="$PROJECT_DIR$/certificadosd/qr/vendor/myclabs/php-enum" />
+      <path value="$PROJECT_DIR$/certificadosd/qr/vendor/endroid/qr-code" />
+      <path value="$PROJECT_DIR$/certificadosd/qr/vendor/composer" />
+      <path value="$PROJECT_DIR$/certificadosd/qr/vendor/khanamiryan/qrcode-detector-decoder" />
+    </include_path>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 4
+}</component>
+  <component name="ProjectId" id="34kw1X8o1CbE1faDGE2PTdSUEUK" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;PHP Web Page.Unnamed.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;F:/wamp/www/ces/libreria/campos&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;,
+    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
+    ]
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\wamp\www\ces\libreria\campos" />
+      <recent name="F:\wamp\www\ces" />
+      <recent name="F:\wamp\www\ces\aplicativos" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\wamp\www\ces\aplicativos\documental\opciones\panel\calendariodiario" />
+      <recent name="F:\wamp\www\ces\aplicativos" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Unnamed" type="PhpWebAppRunConfigurationType" factoryName="PHP Web Application" nameIsGenerated="true" server_name="apache" start_url="/ces/index.php">
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-3aa1da707db6-JavaScript-PS-252.26830.95" />
+        <option value="bundled-php-predefined-a98d8de5180a-9b563d34894c-com.jetbrains.php.sharedIndexes-PS-252.26830.95" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="07f0c92e-7bf6-4c93-80cc-47b21f8b0d04" name="Changes" comment="" />
+      <created>1761770701500</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1761770701500</updated>
+      <workItem from="1761770726449" duration="6628000" />
+      <workItem from="1761782294793" duration="2327000" />
+      <workItem from="1761800766989" duration="595000" />
+      <workItem from="1762322943866" duration="5287000" />
+      <workItem from="1762452017037" duration="1957000" />
+      <workItem from="1762477498289" duration="362000" />
+      <workItem from="1762528471279" duration="5670000" />
+      <workItem from="1762755782819" duration="1868000" />
+      <workItem from="1762787688298" duration="22050000" />
+      <workItem from="1762829379374" duration="2395000" />
+      <workItem from="1762954020883" duration="2705000" />
+      <workItem from="1763006412477" duration="104000" />
+      <workItem from="1763075174447" duration="70000" />
+      <workItem from="1763121721576" duration="2197000" />
+      <workItem from="1763134234926" duration="1159000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="second" />
+    <option name="LAST_COMMIT_MESSAGE" value="second" />
+  </component>
+</project>

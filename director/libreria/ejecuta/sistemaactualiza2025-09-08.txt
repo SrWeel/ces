@@ -1,0 +1,75 @@
+update app_empresa set emp_ruc='1793193923001',emp_nombre='CLÍNICA DE ESPECIALIDADES DEL SUR',emp_direccion='Av. Rodrigo de Chavez OE 2-115 y Pedro de Alfaro',emp_telefono='0979070739',emp_estado=1,prob_codigo='17',cant_codigo='1701',temp_id=4,emp_logo='gogess_data17856MZOWM20210824.png',pais_id=1,emp_email='artrofixsa@gmail.com',emp_restaporcentaje='6.5',emp_valorgastosadm='10',emp_valoriva='12',emp_xml='',emp_leyendapdf='',emp_cabecerareportes='<div align="center">
+<b>CLÍ,NICA DE ESPECIALIDADES DEL SUR
+<br>
+Av. Rodrigo de Chavez OE 2-115 y Pedro de Alfaro
+<br>
+RUC: 1793193923001
+<br></b>
+</div>',emp_salariominimo=460,emp_departamento='DIRECCIÓN DE TALENTO HUMANO',emp_logoreporte='gogess_data62602QQGPT20250831.png',emp_piedepagina='HECTOR CHICA OE1-58 Y JOSE OLMEDO, URB ACOSTA SOBERON No.PB,A UNA CUADRA DE LA AVENIDA PRINCIPAL<br>Email: artrofixsa@gmail.com<br> Cel: 0979070739',emp_razonsocial='GUERRA ESCOBAR RENATO ESTUARDO' where emp_id=1 
+update app_empresa set emp_ruc='1793193923001',emp_nombre='CLÍNICA DE ESPECIALIDADES DEL SUR',emp_direccion='Av. Rodrigo de Chavez OE 2-115 y Pedro de Alfaro',emp_telefono='0979070739',emp_estado=1,prob_codigo='17',cant_codigo='1701',temp_id=4,emp_logo='gogess_data76627LSZ20250908.png',pais_id=1,emp_email='artrofixsa@gmail.com',emp_restaporcentaje='6.5',emp_valorgastosadm='10',emp_valoriva='12',emp_xml='',emp_leyendapdf='',emp_cabecerareportes='<div align="center">
+<b>CLÍNICA DE ESPECIALIDADES DEL SUR
+<br>
+Av. Rodrigo de Chavez OE 2-115 y Pedro de Alfaro
+<br>
+RUC: 1793193923001
+<br></b>
+</div>',emp_salariominimo=460,emp_departamento='DIRECCIÓN DE TALENTO HUMANO',emp_logoreporte='gogess_data55280IRHIW20250908.png',emp_piedepagina='HECTOR CHICA OE1-58 Y JOSE OLMEDO, URB ACOSTA SOBERON No.PB,A UNA CUADRA DE LA AVENIDA PRINCIPAL<br>Email: artrofixsa@gmail.com<br> Cel: 0979070739',emp_razonsocial='BETSAIDA BARROS' where emp_id=1 
+update app_empresa set emp_ruc='1793193923001',emp_nombre='CLÍNICA DE ESPECIALIDADES DEL SUR',emp_direccion='Av. Rodrigo de Chavez OE 2-115 y Pedro de Alfaro',emp_telefono='0981404079',emp_estado=1,prob_codigo='17',cant_codigo='1701',temp_id=4,emp_logo='gogess_data76627LSZ20250908.png',pais_id=1,emp_email='info@ces.med.ec',emp_restaporcentaje='6.5',emp_valorgastosadm='10',emp_valoriva='12',emp_xml='',emp_leyendapdf='',emp_cabecerareportes='<div align="center">
+<b>CLÍNICA DE ESPECIALIDADES DEL SUR
+<br>
+Av. Rodrigo de Chavez OE 2-115 y Pedro de Alfaro
+<br>
+RUC: 1793193923001
+<br></b>
+</div>',emp_salariominimo=460,emp_departamento='DIRECCIÓN DE TALENTO HUMANO',emp_logoreporte='gogess_data55280IRHIW20250908.png',emp_piedepagina='Av. Rodrigo de Chavez OE 2-115 y Pedro de Alfaro <br>Email: info@ces.med.ec<br> Cel: 0981404079',emp_razonsocial='ING. BETSAIDA BARROS' where emp_id=1 
+update gogess_template set tem_nombre='ADMIN CLÍNICA DE ESPECIALIDADES DEL SUR',tem_autor='Franklin Aguas',tem_detalle='Administrador',tem_url='www.gogess.com',tem_path='pantalla_maestra/tmp_gogess/',tem_active='1' where tem_id=1 
+update gogess_sys set sys_titulo='CLÍNICA DE ESPECIALIDADES DEL SUR',sys_detalle='',sys_pathfavicon='',sys_texto1='',sys_texto2='',sys_texto3='',sys_texto4='',sys_texto5='',sys_texto6='',sys_texto7='',sys_texto8='',sys_facebook='#',sys_twiter='#',sys_google='' where sys_id=1 
+update gogess_template set tem_nombre='ADMIN CLÍNICA DE ESPECIALIDADES SUR',tem_autor='Franklin Aguas',tem_detalle='Administrador',tem_url='www.gogess.com',tem_path='pantalla_maestra/tmp_gogess/',tem_active='1' where tem_id=1 
+update gogess_sys set sys_titulo='CLÍNICA DE ESPECIALIDADES SUR',sys_detalle='',sys_pathfavicon='',sys_texto1='',sys_texto2='',sys_texto3='',sys_texto4='',sys_texto5='',sys_texto6='',sys_texto7='',sys_texto8='',sys_facebook='#',sys_twiter='#',sys_google='' where sys_id=1 
+update app_empresa set emp_ruc='1793193923001',emp_nombre='CLÍNICA DE ESPECIALIDADES SUR',emp_direccion='Av. Rodrigo de Chavez OE 2-115 y Pedro de Alfaro',emp_telefono='0981404079',emp_estado=1,prob_codigo='17',cant_codigo='1701',temp_id=4,emp_logo='gogess_data76627LSZ20250908.png',pais_id=1,emp_email='info@ces.med.ec',emp_restaporcentaje='6.5',emp_valorgastosadm='10',emp_valoriva='12',emp_xml='',emp_leyendapdf='',emp_cabecerareportes='<div align="center">
+<b>CLÍNICA DE ESPECIALIDADES DEL SUR
+<br>
+Av. Rodrigo de Chavez OE 2-115 y Pedro de Alfaro
+<br>
+RUC: 1793193923001
+<br></b>
+</div>',emp_salariominimo=460,emp_departamento='DIRECCIÓN DE TALENTO HUMANO',emp_logoreporte='gogess_data55280IRHIW20250908.png',emp_piedepagina='Av. Rodrigo de Chavez OE 2-115 y Pedro de Alfaro <br>Email: info@ces.med.ec<br> Cel: 0981404079',emp_razonsocial='CLÍNICA DE ESPECIALIDADES SUR' where emp_id=1 
+update dns_certificados set certif_titulo='CERTIFICADO MEDICO CLÍNICA DE ESPECIALIDADES SUR (REPOSO)',certif_contenido='<p style="text-align:center"><strong>CERTIFICADO MEDICO REPOSO</strong></p>
+
+<p style="text-align:center"><strong>-centro-</strong></p>
+
+<p style="text-align:right">-fechaciudad-</p>
+
+<p style="text-align:justify">&nbsp;</p>
+
+<p style="text-align:justify"><strong>CERTIFICO</strong>, por medio del presente que, -clie_nombre- -clie_apellido-, con CI: -clie_rucci-, HC: -clie_rucci- que recide en -clie_direccion-, Tel&eacute;fono: -clie_celular- presenta como causa de enfermedad: -enfermedad- . Por lo que se require reposo absoluto a partir de la fecha. &nbsp;</p>
+
+<p style="text-align:justify"><strong>FECHA DE REPOSO: </strong></p>
+
+<p style="text-align:justify">Desde: -desde- (-ndesde-) .<br />
+Hasta: -hasta- (-nhasta-) .</p>
+
+<p style="text-align:justify"><strong>Total, de d&iacute;as:</strong> -dias-.</p>
+
+<p style="text-align:justify"><strong>Diagnostico con codificaci&oacute;n CIE-10: </strong></p>
+
+<p>-diagnostico-</p>
+
+<p><strong>Tipo de contingencia:</strong> -tcontingencia-</p>
+
+<p><strong>Instituci&oacute;n: </strong>-clie_dondetrabaja-</p>
+
+<p><strong>Puesto de Trabajo:</strong> -clie_puestotrabaja-</p>
+
+<p>Particular para fines pertinentes.</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>________________________________________</p>
+
+<p>-medico-</p>
+
+<p>&nbsp;</p>',certif_activo=1,emp_id=1 where certif_id=7 
+update app_usuario set emp_id=1,usua_ciruc='0700803422',usua_nombre='HUGO EDGAR',usua_clave='e82fe93a6beb6459ed6c6c9d79310153',usua_email='hbarros@ces.med.ec',usua_fecha_uingreso='2025-09-04 16:05:05',usua_hora_uingreso='16:05:05',usua_fecha_cambioclv='2025-08-21 09:09:33',usua_estado=1,usua_apellido='BARROS FLORES',usua_code='',usua_celular='0991974566',usua_direcciondom='',usua_telefonodom='',usua_archivo='',usua_genero='MASCULINO',jobt_id=0,especi_id=0,usua_usuario='0700803422',usua_codigoiniciales='HB',subespeci_id=0,centro_id='',usua_codigobiometrico='',usua_codigo='',usua_msp='',usua_siglastitulo='',estab_id=0,pemision_id=0,usua_carnetconadis='',usua_tipodiscapacidad='',usua_porcentajediscapacidad='',civil_id=2,usua_fechaingrero=NULL,usua_piefirma='DR. HUGO BARROS',usua_nacionalidad='',tipcont_id=0,func_id=0,nac_id=56,usua_fechanacimiento='0000-00-00',usua_fechasalida=NULL,usua_archivocenecyt='',usua_adm=0,etn_id=6,usua_archivoauxiliares='',usua_etiquetadiscapacidad='',usua_etiquetainfodns='',usua_etiquetaprofesional='',usua_subadm=0,usua_horascontrato='',usua_admrecaudacion=0,tipoh_id=0,usua_enlace='011711467884120210812045340431',usua_gridfuncionprofesional='',usua_gridcentros='',usua_etiquetaruc='',usua_tiporuc=0,usua_ruc='',usua_nombreruc='',usua_direccionruc='',usua_paisruc=0,usua_provinciaruc='',usua_cantonruc='',usua_telefonoruc='',usua_mailruc='',usua_gridrucprofesional='',usua_gridructarifario='',usua_etiquetaseguro='',conve_id=0,usua_agenda='1',usua_infovarios='',estabr_id=0,pemisionr_id=0,estabnc_id=0,pemisionnc_id=0,usua_puedehacernc=0,usua_farmacia=0,usua_clvfirma='',usua_procesatomafisica=0,usua_puedeanularventa=0,usua_puedeanularcompra=0,usua_permisomodificacionform=0,usua_permitirotrbredp=0,usua_permitirreposicion=0,usua_laboratorio=0,usua_permisoepi=0,usua_tiempoepi=0,usua_permitirab=0,usua_permitepedido=0,usua_cafeteria=0,usua_cargo='Traumatólogo' where usua_id=2 

@@ -1,0 +1,49 @@
+ALTER TABLE app_usuario 
+ADD CONSTRAINT `fk_app_usuario_tius_id` 
+FOREIGN KEY (`tius_id`)
+REFERENCES `app_tipousuario` (`tius_id`)
+- Georeferenciación
+- Reservación Hotelera
+- Reservacion Gastronómica
+- Gestion de datos.
+- Reportes.
+Costo portal web(Aplicativo web)
+Costo de 2100 dol.
+ 
+Aplicativo Android
+Costo 1700 dol.
+ 
+Aplicativo IOs
+Costo 1700 dol.
+
+ALTER TABLE app_estadia
+ADD CONSTRAINT `fk_app_tipoestadia_tipoesta_id` 
+FOREIGN KEY (`tipoesta_id`)
+REFERENCES `app_tipoestadia` (`tipoesta_id`)
+
+
+ALTER TABLE app_detalleestadia
+ADD CONSTRAINT `fk_app_estadia_esta_id` 
+FOREIGN KEY (`esta_id`)
+REFERENCES `app_estadia` (`esta_id`)
+
+
+ALTER TABLE app_producto
+ADD CONSTRAINT `fk_app_producto_emp_id` 
+FOREIGN KEY (`emp_id`)
+REFERENCES `app_empresa` (`emp_id`)
+
+ALTER TABLE app_producto
+ADD CONSTRAINT `fk_app_producto_cateprod_id` 
+FOREIGN KEY (`cateprod_id`)
+REFERENCES `app_categoriaproducto` (`cateprod_id`)
+
+ALTER TABLE app_plan
+ADD CONSTRAINT `fk_app_plan_emp_id` 
+FOREIGN KEY (`emp_id`)
+REFERENCES `app_empresa` (`emp_id`)
+
+ALTER TABLE app_detalleplan
+ADD CONSTRAINT `fk_app_detalleplan_plan_id` 
+FOREIGN KEY (`plan_id`)
+REFERENCES `app_plan` (`plan_id`)

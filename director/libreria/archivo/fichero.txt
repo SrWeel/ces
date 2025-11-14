@@ -1,0 +1,1 @@
+insert into file_kpi (kpi_regio,kip_dateexp,kip_between,kpi_groupvar,kpi_var,kpi_farm,kpi_value,kpi_fecha,kpi_archivo) values ('Oklahoma Farms','30-Nov-16 (16-501)','Analysis of production performance between 16-469 and 16-496','Inventory Information','PercentGestatingSowInventory','Total','59.02','2016-12-26','201611 ok nov.csv');

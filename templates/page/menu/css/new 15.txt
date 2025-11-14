@@ -1,0 +1,21 @@
+dep_nombreedificio
+
+dep_edificio
+
+
+http://10.1.13.103/siscadep/
+ 
+usuario: admin
+clave : admin
+
+
+En virtud de la revisión de la información cargada en el aplicativo de Catastro Judicial (módulo de prueba) que se puede acceder en el link del correo precedente y en base a la reunión mantenida el día 30 de diciembre del presente, remito las observaciones al aplicativo:
+ 
+En el campo “Resolución” aumentar la opción de cargar en formato PDF la o las Resoluciones de cada dependencia judicial.
+Formular las visualizaciones y acceso al Catastro según tipo de usuario (administrador, usuario interno, usuario externo); adicionalmente la notificación en caso de cambios que deseen realizar las Direcciones Provinciales, deberá llegar a la Dirección Nacional de Planificación para la aprobación.
+Mejorar la interfaz para usuarios internos y externos acorde a los insumos que serán proporcionados por la Dirección Nacional de Comunicación
+Migrar el campo “Fecha de publicación Registro Oficial” con el formato adecuado.
+Ajustar el texto para la visualización de la información que será mostrada a la ciudadanía, con el objetivo de contar con un solo cuadro con toda la información y eliminar los ascensores.
+En los campos “Dispone de sala de audiencia” “Dispone de cámara Gesell” “ Equipada cámara Gesell” “Archivo intervenido” “Manejo de protocolo archivístico” “Dispone sala lúdica” “Sala lúdica equipada” “Dispone de sala de mediación” “El centro de mediación se encuentra certificado” “Área de ingreso de causas” “Archivo centralizado” “Área de jueces diferenciadas”, aumentar en el combo de selección el campo N/A.
+En el campo “Estatus del inmueble” aumentar en el combo de selección todas las alternativas que se tiene en la base del Catastro en formato excel.
+Adicionalmente, aumentar el campo “Nombre de edificio”  y “Edificio”; los cuales servirán para ubicar de mejor manera las dependencias judiciales y otros campos de información que se encuentran ubicadas en un mismo inmueble, esto según lo evidenciado en la reunión mantenida el día de hoy (para lo cual se adjunta formato Excel con la información necesaria).  

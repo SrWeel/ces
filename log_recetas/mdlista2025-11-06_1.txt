@@ -1,0 +1,4 @@
+update cesdb_arextension.dns_antecedentespersonalesnewconext set antep_descripcion='ARTROSCOPIA DIAGNOSTICA Y TERAPÉUTICA DE HOMBRO IZQUIERDO  FECHA: 27/09/2024' where antep_id=44
+update cesdb_arextension.dns_newtraumatologiagridexamenfisico set gexamfis_observacion=' MOVIMIENTOS NO LIMITADOS LLENADO CAPILAR ADECUADO, ' where gexamfis_id=1264
+update cesdb_arextension.dns_newtraumatologiagridexamenfisico set gexamfis_observacion='CODO DERECHO DOLOR A LA PALPACION A NIVEL DE OLECRACONO EDEMA LIGERA EQUIMOSIS LIMITACION A LA FLEXOEXTENSION PRONOSUPINACION NORMAL PULSOS Y SENSIBIIDAD NORMALES' where gexamfis_id=1289
+update cesdb_arextension.dns_newtraumatologiagridexamenfisico set gexamfis_observacion='SE EVIDENCIA EDEMA +, DOLOR A LA PALPACION A NIVEL DE TERCIO INFERIOR DE ANTEBRAZO Y MUÑECA DERECHA' where gexamfis_id=1314

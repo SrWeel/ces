@@ -1,0 +1,1 @@
+update cesdb_arextension.dns_newemergenciadiagnosticoanamnesis set diagn_cie='R100',diagn_descripcion='Abdomen agudo',diagn_tipo='DEFINITIVO',diagn_alta='1' where diagn_id='41'

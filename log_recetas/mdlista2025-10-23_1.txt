@@ -1,0 +1,4 @@
+update cesdb_arextension.dns_newconsultaexternagridorgano set gorgano_observacion='OTALGIA BILATERAL ' where gorgano_id=86
+update cesdb_arextension.dns_newconsultaexternagridexamenfisico set gexamfis_observacion='' where gexamfis_id=207
+update cesdb_arextension.dns_newconsultaexternagridexamenfisico set gexamfis_observacion='OIDOS DERECHO CAE PERMEABLE CON PRESENCIA DE TAPON CERUMEN QUE OCLUYE EL 100% DEL  OIDO MEDIO.
+IZQUIERDO CAE PERMEABLE CON VESTIGIO DE CERUMEN Y LIQUIDO SEROSO AMARILLENTO MT PARCIALMENTE OBSERVABLE HIPERMICA APARENTE ROTURA PARCIAL ' where gexamfis_id=207

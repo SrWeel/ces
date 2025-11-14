@@ -1,0 +1,21 @@
+update cesdb_arextension.dns_antecedentespersonalesnewconext set antep_descripcion='ALERGIAS: CIPROFLOXACINA METRONIDAZOL, PARACETAMOL
+APP: HIPOTIROIDISMO DESDE HACE 5 AÑOS EN TRATAMIENTO CON LEVOTIROXINA 50MCG QD
+AQX: NO REFIERE
+APF: HIPOTIROIDISMO EN TIAS MATERNA Y DIABETES MELLITUS EN TIA MATERNA' where antep_id=41
+update cesdb_arextension.dns_antecedentespersonalesnewconext set antep_descripcion='ALERGIAS: CIPROFLOXACINA METRONIDAZOL, PARACETAMOL
+APP: HIPOTIROIDISMO DESDE HACE 5 AÑOS EN TRATAMIENTO CON LEVOTIROXINA 50MCG QD
+AQX: NO REFIERE
+APF: HIPOTIROIDISMO EN TIAS MATERNA Y DIABETES MELLITUS EN TIA MATERNA' where antep_id=41
+update cesdb_arextension.dns_antecedentespersonalesnewconext set antep_descripcion='ALERGIAS: CIPROFLOXACINA METRONIDAZOL, PARACETAMOL
+AQX: NO REFIERE
+' where antep_id=41
+update cesdb_arextension.dns_antecedentespersonalesnewconext set antep_descripcion='APP: HIPOTIROIDISMO DESDE HACE 5 AÑOS EN TRATAMIENTO CON LEVOTIROXINA 50MCG QD' where antep_id=42
+update cesdb_arextension.dns_antecedentesfamiliaresnewconext set antef_descripcion='HIPOTIROIDISMO EN TIAS MATERNA Y DIABETES MELLITUS EN TIA MATERNA' where antef_id=24
+update cesdb_arextension.dns_antecedentespersonalesnewconext set antep_descripcion='AQX: POLIDACTILIA HACE 3 AÑOS' where antep_id=43
+update cesdb_arextension.dns_newconsultaexternagridexamenfisico set gexamfis_observacion='SIN EVIDENCIA DE PATOLOGIA' where gexamfis_id=434
+update cesdb_arextension.dns_newconsultaexternagridexamenfisico set gexamfis_observacion='SIN EVIDENCIA DE PATOLOGIA' where gexamfis_id=434
+update cesdb_arextension.dns_newconsultaexternagridexamenfisico set gexamfis_observacion='BOCA MUCOSA ORAL HUMEDA, PRESENCIA DE LESIONES TIPO VESICULAS EN PALADAS Y OROFARINGE, CONGESTIVA ERITEMATOSA, AMIGDALAS POCO HIPERTROFICAS GRADO 1' where gexamfis_id=434
+update cesdb_arextension.dns_newconsultaexternagridexamenfisico set gexamfis_observacion='BOCA MUCOSA ORAL HUMEDA, PRESENCIA DE LESIONES TIPO VESICULAS EN PALADAS Y OROFARINGE, CONGESTIVA ERITEMATOSA, AMIGDALAS POCO HIPERTROFICAS GRADO 1' where gexamfis_id=434
+update cesdb_arextension.dns_newconsultaexternagridexamenfisico set gexamfis_observacion='SIN EVIDENCIA DE PATOLOGIA' where gexamfis_id=430
+update cesdb_arextension.dns_newconsultaexternagridexamenfisico set gexamfis_observacion='SIN EVIDENCIA DE PATOLOGIA' where gexamfis_id=430
+update cesdb_arextension.dns_newconsultaexternagridexamenfisico set gexamfis_observacion='EN EXTREMIDADES SE EVIDENCIA LESIONES TIPO VESICULAS DISEMINASDAS EN ESXTREMIDADES EN PALMA Y PLANTAS DE PIES' where gexamfis_id=430

@@ -1,0 +1,251 @@
+<?php
+
+	  
+
+	        $enlace_general=$rs_datosmenu->fields["mnupan_campoenlace"]."x";
+
+		    $objformulario->sendvar["fechax"]=date("Y-m-d H:i:s");	
+
+		    $objformulario->sendvar[$enlace_general]=@$_SESSION['ces1313777_sessid_emp_id'];	
+
+            $objformulario->sendvar["horax"]=date("H:i:s");
+
+			$objformulario->sendvar["usua_idx"]=@$_SESSION['ces1313777_sessid_inicio'];
+
+			$objformulario->sendvar["usr_tpingx"]=0;
+            $objformulario->sendvar["centro_idx"]=$_SESSION['ces1313777_centro_id'];
+			//$objformulario->sendvar["usr_usuarioactivax"]=$_SESSION['ces1313777_sessid_inicio'];
+
+			
+		    $codig_unicovalor='';
+			$unico_number='';
+			$unico_number=strtoupper(uniqid());			
+			$codig_unicovalor=date("Y-m-d").$_SESSION['ces1313777_sessid_inicio'].$unico_number;
+					
+			$objformulario->sendvar["cuentb_enlacex"]=$codig_unicovalor;		
+			 
+
+$objformulario->generar_formulario(@$submit,$table,1,$DB_gogess); 
+$objformulario->generar_formulario_bootstrap(@$submit,$table,2,$DB_gogess); 
+$objformulario->generar_formulario_bootstrap(@$submit,$table,3,$DB_gogess); 
+$objformulario->generar_formulario_bootstrap(@$submit,$table,4,$DB_gogess); 
+$objformulario->generar_formulario_bootstrap(@$submit,$table,5,$DB_gogess); 
+$objformulario->generar_formulario_bootstrap(@$submit,$table,6,$DB_gogess); 
+$objformulario->generar_formulario_bootstrap(@$submit,$table,7,$DB_gogess); 
+$objformulario->generar_formulario_bootstrap(@$submit,$table,8,$DB_gogess); 
+$objformulario->generar_formulario_bootstrap(@$submit,$table,9,$DB_gogess); 
+$objformulario->generar_formulario_bootstrap(@$submit,$table,10,$DB_gogess); 
+
+    
+
+if($csearch)
+
+{
+
+ $valoropcion='actualizar';
+
+}
+
+else
+
+{
+
+ $valoropcion='guardar';
+
+}
+
+
+
+echo "<input name='csearch' type='hidden' value=''>
+
+<input name='idab' type='hidden' value=''>
+
+<input name='opcion_".$table."' type='hidden' value='".$valoropcion."' id='opcion_".$table."' >
+
+<input name='table' type='hidden' value='".$table."'>";
+
+
+
+?>
+
+<!-- <button type="button" class="mb-sm btn btn-info" onclick="genera_bgcierre()" style="cursor:pointer"> PROCESANDO CIERRE BG</button> -->
+&nbsp; &nbsp;  &nbsp; 
+<button type="button" class="mb-sm btn btn-info" onclick="genera_ercierre()" style="cursor:pointer"> PROCESANDO CIERRE ER</button>  
+
+
+<br>
+<div id="gen_bgdata">...</div>
+<br>
+
+<div id=div_<?php echo $table ?> > </div>
+<div id="divBody_buscadorgeneral"></div>
+
+<script type="text/javascript">
+<!--
+
+
+function buscar_dataform(id)
+{
+
+abrir_standar('templateformsweb/maestro_standar_standar/buscadorform/busca_data.php','Buscador','divBody_buscadorgeneral','divDialog_buscadorgeneral',550,500,id,0,0,0,0,0,0);
+
+}
+
+function crear_dataform(id,valor)
+{
+
+abrir_standar('templateformsweb/maestro_standar_standar/crearform/formulario.php','New','divBody_buscadorgeneral','divDialog_buscadorgeneral',550,500,id,valor,0,0,0,0,0);
+
+}
+
+
+
+//$( "#usua_fechaingrero" ).datepicker({dateFormat: 'yy-mm-dd'});
+//$( "#horae_desde" ).datepicker({dateFormat: 'yy-mm-dd'});
+//$( "#horae_hasta" ).datepicker({dateFormat: 'yy-mm-dd'});
+
+<?php
+echo $rs_tabla->fields["tab_codigo"];
+?>
+
+
+//  End -->
+</script>
+<?php
+echo $objformulario->generar_formulario_nfechas($table,$DB_gogess);
+
+?>
+
+
+
+<?php
+if($table=='lpin_plancuentas')
+{
+//===================================
+
+if($csearch)
+{
+
+$busca_usado="select count(*) as total from lpin_detallecomprobantecontable_vista where detcc_cuentacontable='".$objformulario->contenid["planc_codigoc"]."'";
+$rs_busado = $DB_gogess->executec($busca_usado);
+
+echo "Usado en: ".$rs_busado->fields["total"];
+
+if($rs_busado->fields["total"]>0)
+{
+?>
+
+<script type="text/javascript">
+<!--
+
+
+$('#boton_guardarformdata').hide();
+$('#boton_guardarformdata2').hide();
+
+//  End -->
+</script>
+
+
+<?php
+}
+
+
+}
+
+
+//==================================
+}
+
+?>
+
+<script type="text/javascript">
+<!--
+
+$( "#planc_codigoc" ).on( "change", function() {
+
+ver_sitienevalor();
+
+} );
+
+function ver_sitienevalor()
+{
+    
+	  $("#valida_cuenta").load("templateformsweb/maestro_standar_standar/valida_cuenta.php",{
+        planc_codigoc:$('#planc_codigoc').val()
+	  },function(result){  
+	
+	
+	  });  
+	  $("#valida_cuenta").html("Espere un momento..."); 	  
+
+}
+
+
+function genera_bgcierre()
+{
+    
+    if($('#cierre_id').val()=='')
+{
+
+	alert("Guarde el registro antes de generar los acientos");
+	return false;
+}
+
+
+    if (window.confirm("Esta seguro que desea procesar ?")) {
+      
+    
+    
+	  $("#gen_bgdata").load("templateformsweb/maestro_standar_cierrecontable/proceso/balanceg.php",{
+        fecha_inicio:$('#cierre_fechainicio').val(),
+        fecha_fin:$('#cierre_fechafin').val(),
+		cierre_id:$('#cierre_id').val()
+	  },function(result){  
+	
+	
+	  });  
+	  $("#gen_bgdata").html("Espere un momento..."); 	  
+	  
+	  
+    }
+
+}
+
+
+function genera_ercierre()
+{
+    
+    if($('#cierre_id').val()=='')
+{
+
+	alert("Guarde el registro antes de generar los acientos");
+	return false;
+}
+
+
+    if (window.confirm("Esta seguro que desea procesar ?")) {
+      
+    
+    
+	  $("#gen_bgdata").load("templateformsweb/maestro_standar_cierrecontable/proceso/balancer.php",{
+        fecha_inicio:$('#cierre_fechainicio').val(),
+        fecha_fin:$('#cierre_fechafin').val(),
+		cierre_id:$('#cierre_id').val()
+	  },function(result){  
+	
+	
+	  });  
+	  $("#gen_bgdata").html("Espere un momento..."); 	  
+	  
+	  
+    }
+
+}
+
+
+
+//  End -->
+</script>
+
+<div id="valida_cuenta"></div>
+

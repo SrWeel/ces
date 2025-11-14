@@ -1,0 +1,38 @@
+insert into dns_certificadogenerado (certif_id,especi_id,clie_ci,med_ci,certifg_texto,usua_id,certifg_fecharegistro,nd_otorgado,emp_id,centro_id,certifg_especialidad,certifg_code) values ('7','','1879110034567','1714420278','  <p style="text-align:center"><strong>CERTIFICADO MEDICO REPOSO</strong></p>
+
+<p style="text-align:center"><strong>ARTROCENTRO</strong></p>
+
+<p style="text-align:right">QUITO,  14 de Agosto de 2025</p>
+
+<p style="text-align:justify"> </p>
+
+<p style="text-align:justify"><strong>CERTIFICO</strong>, por medio del presente que, GONZALO FERNANDO PELLIZZARI CID, con CI: 1879110034567, HC: 1879110034567 que recide en VALLE DE LOS CHILLOS, Teléfono: 0992826961 presenta como causa de enfermedad: M511 Trastornos de disco lumbar y otros, con radiculopatía  REPOSO DOMICILIARIO . Por lo que se require reposo absoluto a partir de la fecha.  </p>
+
+<p style="text-align:justify"><strong>FECHA DE REPOSO: </strong></p>
+
+<p style="text-align:justify">Desde: 2025-08-14 ( CATORCE   DE AGOSTO DE DOS MIL VENTICINCO  ) .<br />
+Hasta: 2025-08-28 ( VENTIOCHO   DE AGOSTO DE DOS MIL VENTICINCO  ) .</p>
+
+<p style="text-align:justify"><strong>Total, de días:</strong> 15.</p>
+
+<p style="text-align:justify"><strong>Diagnostico con codificación CIE-10: </strong></p>
+
+<p><ul><li>M511 Trastornos de disco lumbar y otros, con radiculopatía</li></ul></p>
+
+<p><strong>Tipo de contingencia:</strong> ENFERMEDAD GENERAL</p>
+
+<p><strong>Institución: </strong>NO APLICA</p>
+
+<p><strong>Puesto de Trabajo:</strong> </p>
+
+<p>Particular para fines pertinentes.</p>
+
+<p> </p>
+
+<p> </p>
+
+<p>________________________________________</p>
+
+<p><b>DR. RENATO ESTUARDO GUERRA ESCOBAR</b><br><br>COD: 1714420278<br>MSP: 1714420278<p> </p><p> </p></p>
+
+<p> </p>  <div align="center"><br><img src="temporal/QR_202508141752012_77.jpg" height="120" width="120" ><br>CERT71879110034567171442027872202508140552012301</div>','2','2025-08-14','','1','1','','CERT71879110034567171442027872202508140552012301');

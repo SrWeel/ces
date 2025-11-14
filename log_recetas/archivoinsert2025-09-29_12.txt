@@ -1,0 +1,1 @@
+insert into dns_newdiagnosticolaboratorio (diagn_cie,diagn_descripcion,diagn_tipo,lab_enlace,diagn_fecharegistro,usua_id) values ('Z005','Examen de donante potencial de órgano o tejido','DEFINITIVO','1011212121212120250929041321108','2025-09-29 16:13:21','1')

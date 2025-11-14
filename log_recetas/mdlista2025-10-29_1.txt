@@ -1,0 +1,36 @@
+update cesdb_arextension.dns_antecedentesfamiliaresnewconext set antef_descripcion='CANCER OVARICO ABUELA MATERNA ' where antef_id=21
+update cesdb_arextension.dns_newtraumatologiagridorgano set gorgano_observacion='RODILLA DERECHA ' where gorgano_id=414
+update cesdb_arextension.dns_newtraumatologiagridexamenfisico set gexamfis_observacion='' where gexamfis_id=1040
+update cesdb_arextension.dns_newtraumatologiagridexamenfisico set gexamfis_observacion=' RODILLA DERECHA EDEMA ++ CON SIGNO DE CHOQUE POSITIVO, DOLOR A LA DIGITOPRESION EN COMPARTIMENTO INTERNO, BOZTEZO INTERNO IMPRESIONA POSITIVO, CAJON ANTERIOR NEGATIVO, FUERZA MUSCULAR NO VALORADA POR DOLOR' where gexamfis_id=1040
+update cesdb_arextension.dns_antecedentesfamiliaresnewconext set antef_descripcion='' where antef_id=22
+update cesdb_arextension.dns_antecedentesfamiliaresnewconext set antef_descripcion='ABUELO MATERNO DIABETES MELLITUS ' where antef_id=22
+update cesdb_arextension.dns_newtraumatologiagridorgano set gorgano_observacion='TOBILLO IZQUIERDO ' where gorgano_id=424
+update cesdb_arextension.dns_newtraumatologiagridexamenfisico set gexamfis_observacion='' where gexamfis_id=1072
+update cesdb_arextension.dns_newtraumatologiagridexamenfisico set gexamfis_observacion='' where gexamfis_id=1072
+update cesdb_arextension.dns_newtraumatologiagridexamenfisico set gexamfis_observacion='TOBILLO IZ DOLOR EDEMA A NIVEL DE MALEOLO EXTERNO LIMITACION A LOS MOVIMIENTOS BUENA CIRCULACION SENSIBILIDAD NORMAL' where gexamfis_id=1072
+update cesdb_arextension.dns_antecedentespersonalesnewconext set antep_descripcion='DIABETES MELLITUS II ' where antep_id=34
+update cesdb_arextension.dns_antecedentespersonalesnewconext set antep_descripcion='DIABETES MELLITUS II ' where antep_id=34
+update cesdb_arextension.dns_newtraumatologiagridorgano set gorgano_observacion='CABEZA, HEMIROSTRO DERECHO, COLUMNA DORSO LUMBAR, RODILLAS ' where gorgano_id=434
+update cesdb_arextension.dns_newtraumatologiagridexamenfisico set gexamfis_observacion='' where gexamfis_id=1076
+update cesdb_arextension.dns_newtraumatologiagridexamenfisico set gexamfis_observacion='' where gexamfis_id=1076
+update cesdb_arextension.dns_newtraumatologiagridexamenfisico set gexamfis_observacion='PACIENTE CONSCIENTE ORIENTADO EN 3 ESFERAS AFEBRIL ROMBERT DUDOSO CABEZA DOLOR A LA PALPACION EN REGION FRONTO PARIETAL DERECHA DISCRETO EDEMA PRESENTE
+ROSTRO EDEMA HEMIROSTRO DERECHO A PREDOMINIO DE MACIZO FACIAL CON EXCORIACIONES EN PROCESO DE CICATRIZACION, NARIZ PRESENCIA DE SUTURA ESTABLE CON HERIDA EN PROCESO DE CICATRIZACION' where gexamfis_id=1076
+update cesdb_arextension.dns_newtraumatologiagridexamenfisico set gexamfis_observacion='NARIZ PRESENCIA DE SUTURA ESTABLE CON HERIDA EN PROCESO DE CICATRIZACION' where gexamfis_id=1083
+update cesdb_arextension.dns_newtraumatologiagridexamenfisico set gexamfis_observacion='PACIENTE CONSCIENTE ORIENTADO EN 3 ESFERAS AFEBRIL ROMBERT DUDOSO CABEZA DOLOR A LA PALPACION EN REGION FRONTO PARIETAL DERECHA DISCRETO EDEMA PRESENTE
+ROSTRO EDEMA HEMIROSTRO DERECHO A PREDOMINIO DE MACIZO FACIAL CON EXCORIACIONES EN PROCESO DE CICATRIZACION' where gexamfis_id=1076
+update cesdb_arextension.dns_newtraumatologiagridexamenfisico set gexamfis_observacion=', COLUMNAR DORSAL DE LADO DERECHO PRESENCIA DE EXCORIACION SUPERFICIAL PRUEBAS FUNCIONALES NORMALES, REGION CERVICAL LIGERA LIMITACION A LOS MOVIMIENTOS DE ROTACION' where gexamfis_id=1090
+update cesdb_arextension.dns_newtraumatologiagridexamenfisico set gexamfis_observacion=', COLUMNAR DORSAL DE LADO DERECHO PRESENCIA DE EXCORIACION SUPERFICIAL PRUEBAS FUNCIONALES NORMALES, REGION CERVICAL LIGERA LIMITACION A LOS MOVIMIENTOS DE ROTACION RODILLAS NO EDEMA PRUEBAS FUNCIONALES NORMALES, REFLEJOS OTS CONSERVADOS' where gexamfis_id=1090
+update cesdb_arextension.dns_antecedentesfamiliaresnewconext set antef_descripcion='ABUELA MATERNA CON HIPERTENSIÓN ARTERIAL' where antef_id=23
+update cesdb_arextension.dns_newtraumatologiagridorgano set gorgano_observacion='HOMBRO IZQUIERDO ' where gorgano_id=444
+update cesdb_arextension.dns_newtraumatologiagridexamenfisico set gexamfis_observacion='' where gexamfis_id=1114
+update cesdb_arextension.dns_newtraumatologiagridexamenfisico set gexamfis_observacion='REGION CERVICAL TENSA DOLOROSA A LA DIGITOPRESION 
+HOMBRO IZQUIERDO HERIDA CON PUNTOS ESTABLES Y ADECUADA CICATRIZACION NO SIGNOS DE INFECCION, MOVILIDAD DISTAL ADECUADA, LLENADO CAPILAR OPTIMO, RANGOS DE MOVILIDAD LIMITADOS, SENSIBILIDAD CONSERVADA. ' where gexamfis_id=1114
+update cesdb_arextension.dns_newtraumatologiagridexamenfisico set gexamfis_observacion='REGION CERVICAL TENSA DOLOROSA A LA DIGITOPRESION 
+HOMBRO IZQUIERDO HERIDA CON PUNTOS ESTABLES Y ADECUADA CICATRIZACION NO SIGNOS DE INFECCION, MOVILIDAD DISTAL ADECUADA, LLENADO CAPILAR OPTIMO, RANGOS DE MOVILIDAD LIMITADOS, SENSIBILIDAD CONSERVADA. ' where gexamfis_id=1114
+update cesdb_arextension.dns_antecedentespersonalesnewconext set antep_descripcion='HIPERTENSION ARTERIAL DE ALARGA DATA EN TTO LOSATAN 100MG QD ' where antep_id=35
+update cesdb_arextension.dns_antecedentespersonalesnewconext set antep_descripcion='HIPOTIROIDISMO ' where antep_id=36
+update cesdb_arextension.dns_antecedentespersonalesnewconext set antep_descripcion='HIPOTIROIDISMO ' where antep_id=36
+update cesdb_arextension.dns_antecedentespersonalesnewconext set antep_descripcion='HIPOTIROIDISMO ' where antep_id=36
+update cesdb_arextension.dns_antecedentespersonalesnewconext set antep_descripcion='HIPOTIROIDISMO EN TTO LEVOTIROXINA 25MCG QD ' where antep_id=36
+update cesdb_arextension.dns_newtraumatologiagridorgano set gorgano_observacion='DOLOR DE HOMBRO IZQUIERDO ' where gorgano_id=454
+update cesdb_arextension.dns_newtraumatologiagridexamenfisico set gexamfis_observacion='' where gexamfis_id=1139

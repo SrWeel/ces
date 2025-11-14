@@ -1,0 +1,3 @@
+2-->select * from efacsistema_producto left join cesdb_arextension.dns_gridconvenios on efacsistema_producto.prod_enlace=cesdb_arextension.dns_gridconvenios.prod_enlace where prod_codigo='RX-PELVIS' and gconve_convenio='14'-->2023-02-10 08:54:29
+2-->select * from efacsistema_producto left join cesdb_arextension.dns_gridconvenios on efacsistema_producto.prod_enlace=cesdb_arextension.dns_gridconvenios.prod_enlace where prod_codigo='RX-PELVIS' and gconve_convenio='14'-->2023-02-10 08:54:29
+2-->select * from efacsistema_producto left join cesdb_arextension.dns_gridconvenios on efacsistema_producto.prod_enlace=cesdb_arextension.dns_gridconvenios.prod_enlace where prod_codigo='RX-PELVIS' and gconve_convenio='14'-->2023-02-10 08:54:29

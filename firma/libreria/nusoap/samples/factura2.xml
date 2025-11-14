@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<factura id="comprobante" version="1.0.0"><infoTributaria><ambiente>1</ambiente><tipoEmision>1</tipoEmision><razonSocial>ASISTENCIA TECNOLOGICA COOPERATIVA S.A.</razonSocial><ruc>1712546769001</ruc><claveAcceso>0603201401171254676900101001001000000002712165235</claveAcceso><codDoc>01</codDoc><estab>001</estab><ptoEmi>001</ptoEmi><secuencial>000000002</secuencial><dirMatriz>AV. ELOY ALFARO N32-614 Y BELGICA - EDIFICIO CEVALLOS 2DO PISO</dirMatriz></infoTributaria><infoFactura><fechaEmision>06/03/2014</fechaEmision><obligadoContabilidad>NO</obligadoContabilidad><tipoIdentificacionComprador>05</tipoIdentificacionComprador><razonSocialComprador>CASTILLO RODRIGUEZ MARIANA DE JESUS RAQUEL</razonSocialComprador><identificacionComprador>1702400522</identificacionComprador><totalSinImpuestos>125.00</totalSinImpuestos><totalDescuento>0.00</totalDescuento><totalConImpuestos><totalImpuesto><codigo>2</codigo><codigoPorcentaje>2</codigoPorcentaje><baseImponible>125.00</baseImponible><valor>15.00</valor></totalImpuesto></totalConImpuestos><propina>0.00</propina><importeTotal>140.00</importeTotal><moneda>DOLAR</moneda></infoFactura><detalles><detalle><codigoPrincipal>NDSL</codigoPrincipal><descripcion>ND TRANSACCION SPI</descripcion><cantidad>1</cantidad><precioUnitario>125.00</precioUnitario><descuento>0.00</descuento><precioTotalSinImpuesto>125.00</precioTotalSinImpuesto><impuestos><impuesto><codigo>2</codigo><codigoPorcentaje>2</codigoPorcentaje><tarifa>12.0</tarifa><baseImponible>125.00</baseImponible><valor>15.00</valor></impuesto></impuestos></detalle></detalles><ds:Signature xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:etsi="http://uri.etsi.org/01903/v1.3.2#" Id="Signature666113">
+<ds:SignedInfo Id="Signature-SignedInfo531403">
+<ds:CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"></ds:CanonicalizationMethod>
+<ds:SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"></ds:SignatureMethod>
+<ds:Reference Id="SignedPropertiesID938540" Type="http://uri.etsi.org/01903#SignedProperties" URI="#Signature666113-SignedProperties758383">
+<ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"></ds:DigestMethod>
+<ds:DigestValue>Wjt3dDD6jfgrjfWPR//mD/RTKy8=</ds:DigestValue>
+</ds:Reference>
+<ds:Reference URI="#Certificate1878514">
+<ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"></ds:DigestMethod>
+<ds:DigestValue>nAeQ7ZMO6bWJus27lEeB//l6kAE=</ds:DigestValue>
+</ds:Reference>
+<ds:Reference Id="Reference-ID-742414" URI="">
+<ds:Transforms>
+<ds:Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"></ds:Transform>
+</ds:Transforms>
+<ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"></ds:DigestMethod>
+<ds:DigestValue>i/ofWnyxEjfRUcGtaXmZIXo1284=</ds:DigestValue>
+</ds:Reference>
+</ds:SignedInfo>
+<ds:SignatureValue Id="SignatureValue118460">
+YHROCrW3s0s2yG6wsNtLYOqInJw9CmP/sVFvaZo40hzlPu6KrKpazXMFAHLlPLzyDNqlqfXLyMSR
+ti+XP5etK1pI4nyd65lCe5sGd2FFqVfn9SFqK8FIdPDvRGViO7qCx7ArcOLMVGxmrHP5zDWecfHa
+83KkaPewS/o2Tbx4CR2RJRMga6zGcoN0DOibTePboTnKPYnKGj9bmTkJEzkDW82rblk+1ys1TR66
+BbFUsth2zg6OWwkVm19umKVZ7pdPwTp6zjiw1nbUfPPO3NMhFdssJ4a4s1nxRYrNAFxU0p4EOiDc
+Wi8nVKHM62q0ThqFiQy+9j5oyFcoaIp1XOezag==
+</ds:SignatureValue>
+<ds:KeyInfo Id="Certificate1878514">
+<ds:X509Data>
+<ds:X509Certificate>
+MIIJtTCCB52gAwIBAgIETkKZgTANBgkqhkiG9w0BAQsFADCBoTELMAkGA1UEBhMCRUMxIjAgBgNV
+BAoTGUJBTkNPIENFTlRSQUwgREVMIEVDVUFET1IxNzA1BgNVBAsTLkVOVElEQUQgREUgQ0VSVElG
+SUNBQ0lPTiBERSBJTkZPUk1BQ0lPTi1FQ0lCQ0UxDjAMBgNVBAcTBVFVSVRPMSUwIwYDVQQDExxB
+QyBCQU5DTyBDRU5UUkFMIERFTCBFQ1VBRE9SMB4XDTE0MDQxMDE4MzAxN1oXDTE1MDQxMDE5MDAx
+N1owgb4xCzAJBgNVBAYTAkVDMSIwIAYDVQQKExlCQU5DTyBDRU5UUkFMIERFTCBFQ1VBRE9SMTcw
+NQYDVQQLEy5FTlRJREFEIERFIENFUlRJRklDQUNJT04gREUgSU5GT1JNQUNJT04tRUNJQkNFMQ4w
+DAYDVQQHEwVRVUlUTzFCMBEGA1UEBRMKMDAwMDA2ODU2NDAtBgNVBAMTJkNSSVNUSElBTiBWSU5J
+Q0lPIExMVU1JUVVJTkdBIE1BUkNJTExPMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA
+7AJSA7xoeRf5DfWmJL2ginyTp/CK7RNoMWz4gJUjE6AxylW6RwJvvqFgWWsq9NWC6bnkJtbLGOdf
+7zeZIqgr8hNnrtmvC6IoLDoqvqAxrU8yjdZe9+aWcWf5OB8choLucsnaqfEezABjc6cdPK2qHsXX
+bcmmyxLjww2WTJUowSDI7VZiFvCgfNsOOiKCQNFnk3AWBmHeJO9G5RuMePMeZeHcr8Gq5Gr0gxYG
+HNjuQlwV1Q4XY2rmeUqzYuSRSLGztoVlzjaGKPSXD3naGGC7rRag5kF2eX+PZ2Mrd2MT5AbB8L+G
+9MOD+XdfesbgLGrWBmSS/ddFSmgFksz6ySlbdQIDAQABo4IE1DCCBNAwCwYDVR0PBAQDAgeAMGYG
+A1UdIARfMF0wWwYLKwYBBAGCqDsCAQEwTDBKBggrBgEFBQcCARY+aHR0cDovL3d3dy5lY2kuYmNl
+LmVjL3BvbGl0aWNhLWNlcnRpZmljYWRvL3BlcnNvbmEtbmF0dXJhbC5wZGYwgZEGCCsGAQUFBwEB
+BIGEMIGBMD4GCCsGAQUFBzABhjJodHRwOi8vb2NzcC5lY2kuYmNlLmVjL2VqYmNhL3B1YmxpY3dl
+Yi9zdGF0dXMvb2NzcDA/BggrBgEFBQcwAYYzaHR0cDovL29jc3AxLmVjaS5iY2UuZWMvZWpiY2Ev
+cHVibGljd2ViL3N0YXR1cy9vY3NwMBoGCisGAQQBgqg7AwEEDBMKMTcxMjU0Njc2OTAhBgorBgEE
+AYKoOwMCBBMTEUNSSVNUSElBTiBWSU5JQ0lPMBsGCisGAQQBgqg7AwMEDRMLTExVTUlRVUlOR0Ew
+GAYKKwYBBAGCqDsDBAQKEwhNQVJDSUxMTzAqBgorBgEEAYKoOwMHBBwTGkxBIEZMT1JJREEgTE9U
+RSAxIFkgU0hZUklTMBkGCisGAQQBgqg7AwgECxMJMDIyMzMyMzI4MBUGCisGAQQBgqg7AwkEBxMF
+UXVpdG8wFwYKKwYBBAGCqDsDDAQJEwdFQ1VBRE9SMB0GCisGAQQBgqg7AwsEDxMNMTcxMjU0Njc2
+OTAwMTAgBgorBgEEAYKoOwMzBBITEFNPRlRXQVJFLUFSQ0hJVk8wIQYDVR0RBBowGIEWY2xsdW1p
+cXVpbmdhQGdtYWlsLmNvbTCCAd8GA1UdHwSCAdYwggHSMIIBzqCCAcqgggHGhoHVbGRhcDovL2Jj
+ZXFsZGFwc3VicDEuYmNlLmVjL2NuPUNSTDEyMyxjbj1BQyUyMEJBTkNPJTIwQ0VOVFJBTCUyMERF
+TCUyMEVDVUFET1IsbD1RVUlUTyxvdT1FTlRJREFEJTIwREUlMjBDRVJUSUZJQ0FDSU9OJTIwREUl
+MjBJTkZPUk1BQ0lPTi1FQ0lCQ0Usbz1CQU5DTyUyMENFTlRSQUwlMjBERUwlMjBFQ1VBRE9SLGM9
+RUM/Y2VydGlmaWNhdGVSZXZvY2F0aW9uTGlzdD9iYXNlhjRodHRwOi8vd3d3LmVjaS5iY2UuZWMv
+Q1JML2VjaV9iY2VfZWNfY3JsZmlsZWNvbWIuY3JspIG1MIGyMQswCQYDVQQGEwJFQzEiMCAGA1UE
+ChMZQkFOQ08gQ0VOVFJBTCBERUwgRUNVQURPUjE3MDUGA1UECxMuRU5USURBRCBERSBDRVJUSUZJ
+Q0FDSU9OIERFIElORk9STUFDSU9OLUVDSUJDRTEOMAwGA1UEBxMFUVVJVE8xJTAjBgNVBAMTHEFD
+IEJBTkNPIENFTlRSQUwgREVMIEVDVUFET1IxDzANBgNVBAMTBkNSTDEyMzArBgNVHRAEJDAigA8y
+MDE0MDQxMDE4MzAxN1qBDzIwMTUwNDEwMTkwMDE3WjAfBgNVHSMEGDAWgBQY+fD75jIcmWY5KsqL
+sml9SSe/zjAdBgNVHQ4EFgQU7o74Xt5lNBWYQ6gH6jxG5Foi++cwCQYDVR0TBAIwADAZBgkqhkiG
+9n0HQQAEDDAKGwRWOC4xAwIEsDANBgkqhkiG9w0BAQsFAAOCAgEAGiTfpeaTjHpQNuMqIIwg/2LP
+rB0T7y5szxruwUJ/oLMfbhDAFj//7BRUbq/5Go1Ax5rSlx3HoIQCvMo5LwdVIdYySuyR6sgkWRC9
+vR490v2eeWtjj+bKVMIcUxaEdGACaqBDA0l3rCoO1Eb4n2SxGFXhVjEL4rmIh4eHuGX7NEZjPw5C
+LgDZTbunkkkU6p0iiWwBbDxqKI6QDS/t+8kke5yEUbJs/rG6golkJ7muXgQ081O7IklcfMqgKTRI
+BQ8IICQm7krvnqZrtS2ECJnPRZj+bcbV4NhDEZuUDxAx44fxCiGCoL4ME/LO9xFja1cPZO5yLOeq
+y0Rlj3GfJj82r6JogEjuf1xWlCPE/VYWZujS636AEt6bykKbkSuNb1PsPQjBM1LjYNoggAjosOPZ
+gpKMQVAPbinU7NwZEx3Je8SgkIFXrlQzU1nG8w7YDV/cb9K6qp6anNh8sgFVzX2DBxyhyYlH+hZL
+6GHDfy13zVRclfg8hZvw5Ep9gl9uM1rLG2bFCj7eXWm0qk0PE6ABSpDtuad6tLI5ZP40IAfzwnhw
+LufRqwRyjyZ00iZkSkHtzyzdHA2don1QxQrWyl/SzCVM2ytizjnGFFYnEbM6OfY6hriC0oosX/Sv
+AsUmeHexLb6XkVo89OxW1ivfpke8OY7BRrPINZrDiHLWyyMSIro=
+</ds:X509Certificate>
+</ds:X509Data>
+<ds:KeyValue>
+<ds:RSAKeyValue>
+<ds:Modulus>
+7AJSA7xoeRf5DfWmJL2ginyTp/CK7RNoMWz4gJUjE6AxylW6RwJvvqFgWWsq9NWC6bnkJtbLGOdf
+7zeZIqgr8hNnrtmvC6IoLDoqvqAxrU8yjdZe9+aWcWf5OB8choLucsnaqfEezABjc6cdPK2qHsXX
+bcmmyxLjww2WTJUowSDI7VZiFvCgfNsOOiKCQNFnk3AWBmHeJO9G5RuMePMeZeHcr8Gq5Gr0gxYG
+HNjuQlwV1Q4XY2rmeUqzYuSRSLGztoVlzjaGKPSXD3naGGC7rRag5kF2eX+PZ2Mrd2MT5AbB8L+G
+9MOD+XdfesbgLGrWBmSS/ddFSmgFksz6ySlbdQ==
+</ds:Modulus>
+<ds:Exponent>AQAB</ds:Exponent>
+</ds:RSAKeyValue>
+</ds:KeyValue>
+</ds:KeyInfo>
+<ds:Object Id="Signature666113-Object437023"><etsi:QualifyingProperties Target="#Signature666113"><etsi:SignedProperties Id="Signature666113-SignedProperties758383"><etsi:SignedSignatureProperties><etsi:SigningTime>2014-04-16T09:35:09-05:00</etsi:SigningTime><etsi:SigningCertificate><etsi:Cert><etsi:CertDigest><ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"></ds:DigestMethod><ds:DigestValue>gFWtLGBIDypRRwUXUczDNL0+EVo=</ds:DigestValue></etsi:CertDigest><etsi:IssuerSerial><ds:X509IssuerName>CN=AC BANCO CENTRAL DEL ECUADOR,L=QUITO,OU=ENTIDAD DE CERTIFICACION DE INFORMACION-ECIBCE,O=BANCO CENTRAL DEL ECUADOR,C=EC</ds:X509IssuerName><ds:X509SerialNumber>1312987521</ds:X509SerialNumber></etsi:IssuerSerial></etsi:Cert></etsi:SigningCertificate><etsi:SignaturePolicyIdentifier><etsi:SignaturePolicyId><etsi:SigPolicyId><etsi:Identifier>http://www.facturae.es/politica_de_firma_formato_facturae/politica_de_firma_formato_facturae_v3_1.pdf</etsi:Identifier><etsi:Description>Política de Firma FacturaE v3.1</etsi:Description></etsi:SigPolicyId><etsi:SigPolicyHash><ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"></ds:DigestMethod><ds:DigestValue>Ohixl6upD6av8N7pEvDABhEL6hM=</ds:DigestValue></etsi:SigPolicyHash></etsi:SignaturePolicyId></etsi:SignaturePolicyIdentifier></etsi:SignedSignatureProperties><etsi:SignedDataObjectProperties><etsi:DataObjectFormat ObjectReference="#Reference-ID-742414"><etsi:Description>Descripcion del documento</etsi:Description><etsi:MimeType>text/xml</etsi:MimeType></etsi:DataObjectFormat></etsi:SignedDataObjectProperties></etsi:SignedProperties></etsi:QualifyingProperties></ds:Object></ds:Signature></factura>

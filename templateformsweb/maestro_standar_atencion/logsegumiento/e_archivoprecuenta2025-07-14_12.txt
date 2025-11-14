@@ -1,0 +1,1 @@
+1-->insert into dns_precuenta (precu_observacion,precu_fechainicio,precu_fechafinal,precu_activo,convepr_id,categesp_id,especipr_id,clie_id,atenc_enlace,precu_fecharegistro,usua_id) values ('Consulat','2025-07-14','','1','6','2','16','1','011212121212120250714054726175','2025-07-14 05:48:27','1')-->2025-07-14 05:48:27

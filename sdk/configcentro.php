@@ -1,0 +1,16 @@
+<?php
+$valcentro='007-002-';
+$valcentro='008-002-';
+$valcentro='008-001-';
+$valcentro='007-001-';
+$valcentro='005-001-';
+$valcentro='015-001-';
+$valcentro='002-001-';
+$valcentro='010-001-';
+$valcentro='016-001-';
+$valcentro='006-001-';
+$valcentro='014-001-';
+$valcentro='013-001-';
+$valcentro='012-001-';
+$valcentro='012-002-';
+?>

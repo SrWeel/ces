@@ -1,0 +1,38 @@
+insert into dns_certificadogenerado (certif_id,especi_id,clie_ci,med_ci,certifg_texto,usua_id,certifg_fecharegistro,nd_otorgado,emp_id,centro_id,certifg_especialidad,certifg_code) values ('7','','1720065133','1726811381','  <p style="text-align:center"><strong>CERTIFICADO MEDICO REPOSO</strong></p>
+
+<p style="text-align:center"><strong>CLÍNICA DE ESPECIALIDADES SUR</strong></p>
+
+<p style="text-align:right">QUITO,  24 de Octubre de 2025</p>
+
+<p style="text-align:justify"> </p>
+
+<p style="text-align:justify"><strong>CERTIFICO</strong>, por medio del presente que, LIZETH ESTEFANIA ROMERO LUNA, con CI: 1720065133, HC: 1720065133 que recide en MIGUEL ANGEL CAZARES OE1-132 Y PASAJE MEJIA, Teléfono: 0979295841 presenta como causa de enfermedad: R100 Abdomen agudo   . Por lo que se require reposo absoluto a partir de la fecha.  </p>
+
+<p style="text-align:justify"><strong>FECHA DE REPOSO: </strong></p>
+
+<p style="text-align:justify">Desde: 2025-10-24 ( VENTICUATRO   DE OCTUBRE DE DOS MIL VENTICINCO  ) .<br />
+Hasta: 2025-10-26 ( VENTISEIS   DE OCTUBRE DE DOS MIL VENTICINCO  ) .</p>
+
+<p style="text-align:justify"><strong>Total, de días:</strong> 3.</p>
+
+<p style="text-align:justify"><strong>Diagnostico con codificación CIE-10: </strong></p>
+
+<p><ul><li>R100 Abdomen agudo</li></ul></p>
+
+<p><strong>Tipo de contingencia:</strong> ENFERMEDAD GENERAL</p>
+
+<p><strong>Institución: </strong>VM SHOES</p>
+
+<p><strong>Puesto de Trabajo:</strong> CONTADORA</p>
+
+<p>Particular para fines pertinentes.</p>
+
+<p> </p>
+
+<p> </p>
+
+<p>________________________________________</p>
+
+<p><b>DR. DIEGO  MAURICIO CAJAMARCA VERGARA</b><br><br>COD: 1726811381<br>MSP: 1726811381<p> </p><p> </p></p>
+
+<p> </p>  <div align="center"><br><img src="temporal/QR_202510241759456_67.jpg" height="120" width="120" ><br>CERT71720065133172681138166202510240559442906</div>','6','2025-10-24','','1','1','','CERT71720065133172681138166202510240559442906');

@@ -1,0 +1,3 @@
+<?php
+ $varsend="&sessid=".$sessid; 
+?>

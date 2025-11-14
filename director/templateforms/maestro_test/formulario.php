@@ -1,0 +1,306 @@
+<?php
+$fechax='';
+$submit='';
+$atributos='';
+$ancho='';
+?>
+<script language="javascript">
+<!--
+function validar_ruc(ruc)
+{
+   $("#div_ruc").load("templateforms/maestro/ruc.php",{pruc:ruc},function(result){  
+    
+  });  
+  $("#div_ruc").html("Espere un momento...");
+
+}
+//-->
+</script>				
+
+<div id=div_<?php echo $table ?>></div>
+<form id="form_<?php echo $table; ?>" name="form_<?php echo $table; ?>" method="post" action="">
+<table border="0" cellpadding="0" cellspacing="3">
+  <tr>
+    <td><?php $grafico=$objtemplate->path_template."images/new.png";
+echo $objopciones_botones->vista_opciones('nuevo',$objacceso_session,$grafico,$table,@$tableant1,@$tableant,@$campoant,@$listab,@$campo,@$obp,@$fimp); ?></td>
+    <td><?php $grafico=$objtemplate->path_template."images/save.png";
+echo $objopciones_botones->vista_opciones('guardar',$objacceso_session,$grafico,$table,@$tableant1,@$tableant,@$campoant,@$listab,@$campo,@$obp,@$fimp); ?></td>
+    <td><?php $grafico=$objtemplate->path_template."images/del.png";
+echo $objopciones_botones->vista_opciones('borrar',$objacceso_session,$grafico,$table,@$tableant1,@$tableant,@$campoant,@$listab,@$campo,@$obp,@$fimp); ?></td>
+    <td><?php $grafico=$objtemplate->path_template."images/search.png";
+echo $objopciones_botones->vista_opciones('buscar',$objacceso_session,$grafico,$table,@$tableant1,@$tableant,@$campoant,@$listab,@$campo,@$obp,@$fimp); ?></td>
+    <td><?php $grafico=$objtemplate->path_template."images/print.png";
+echo $objopciones_botones->vista_opciones('imprimir',$objacceso_session,$grafico,$table,@$tableant1,@$tableant,@$campoant,@$listab,@$campo,@$obp,@$fimp); ?></td>
+   
+  </tr>
+</table>
+<table  border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td><?php
+   if (@$csearch)
+				  {
+   //////////////////////////////////
+	$listalinkstr="select * from gogess_subtablatr where subtr_activo=1 and tab_id=".$objtableform->tab_id;
+	
+	$resultadolktr = $DB_gogess->Execute($listalinkstr);
+	
+	if($resultadolktr)
+	{
+  
+      while (!$resultadolktr->EOF) {
+	
+			$comillsp="'";	
+			
+			
+			
+			
+			
+			
+			$dataenc='';
+			$armaencrip='geamv=1&table='.$resultadolktr->fields["subtr_nameenlace"].'&listab='.@$objformulario->contenid[$resultadolktr->fields["subtr_campoenlace"]].'&campo='.$resultadolktr->fields["subtr_campoenlace"].'&obp='.$resultadolktr->fields["subtr_tipoenlace"];
+			$dataenc=base64_encode($armaencrip);			
+			$link_val="index.php?mp=".$dataenc;
+			
+					
+			echo '<input name="botonfactu" type="button" id="botonfactu" value="'.$resultadolktr->fields[maymin("subtr_nombreenlace")].'" onclick="agregar_detalle('.$comillsp.$link_val.$comillsp.','.$comillsp.$resultadolktr->fields[maymin("tab_id")].$comillsp.')" />';
+			
+			 $resultadolktr->MoveNext();
+			//echo "<br>";
+			}
+	
+	}
+	//////////////////////////////
+	}
+	?></td>
+    <td valign="top">&nbsp;</td>
+  </tr>
+  <tr>
+   <td valign="top">
+   <div id=div_ruc></div>
+   <div id=content_tabla >   
+           
+<table border="0" cellpadding="0" cellspacing="0">
+             <tr>
+               <td bgcolor="#F2F2F2"><?php
+		   $objformulario->sendvar["fechax"]=date("Y-m-d H:i:s");
+	
+$objformulario->sendvar["horax"]=date("h:i:s");
+			 $objformulario->sendvar["sisu_idx"]=$_SESSION['iduser1777'];
+$objformulario->generar_formulario($submit,$table,$atributos,$ancho,@$varsend,$sessid,1,$DB_gogess);  
+?></td>
+               <td valign="top" bgcolor="#F2F2F2"><?php
+		   
+$objformulario->generar_formulario($submit,$table,$atributos,$ancho,@$varsend,$sessid,2,$DB_gogess);  
+?>			  </td>
+             </tr>
+           </table>
+<br>
+<input type="button" name="Button" value="Crear Nombre Tabla" onClick="ejecuta_nombre()">
+<br><br>
+
+<input type="button" name="Button" value="Generar Tabla" onClick="ejecuta_tabla()">
+
+<div id="div_procesar" style="height:40px" ></div>
+
+	</div> 
+	 
+	 
+	 </td>
+    <td valign="top"><?php
+	$listalinks="select * from gogess_subtabla where sub_activo=1 and tab_id=".$objtableform->tab_id." order by sub_orden asc";
+
+	$resultadolk = $DB_gogess->Execute($listalinks);
+	
+	if($resultadolk)
+	{
+	
+	   while (!$resultadolk->EOF) 
+	   {
+ 
+			$objbotones->table=$resultadolk->fields[maymin("sub_nameenlace")];
+			$objbotones->sessid=$sessid;
+			$objbotones->listab=$objformulario->contenid[$resultadolk->fields["sub_campoenlace"]];
+			$objbotones->campo=$resultadolk->fields[maymin("sub_campoenlace")];
+			$objbotones->obp=$resultadolk->fields[maymin("sub_tipoenlace")];
+			$objbotones->imagen="pboton.gif";
+			$objbotones->csstexto="aquboton";
+			$objbotones->target="_top";
+			$objbotones->titulo_boton=$resultadolk->fields[maymin("sub_nombreenlace")];
+			$objbotones->alt=$resultadolk->fields[maymin("sub_nombreenlace")];
+			$objbotones->tablamadre=$table;
+			$objbotones->generar_boton(@$csearch,$objtemplate->path_template,@$fimp,$DB_gogess); 
+			
+			echo "<br>";
+			$resultadolk->MoveNext();
+		}
+	
+	}
+	?>
+	
+ <table width="400" border="1" cellpadding="0" cellspacing="0">
+  <tr>
+    <td bgcolor="#B9D7DD"><div align="center"><strong>MAPA</strong></div></td>
+  </tr>
+  <tr>
+    <td bgcolor="#FFFFFF">
+        <?php
+        $busca_lista="select * from appg_reactivos";
+        $result_lista = $DB_gogess->Execute($busca_lista);
+        if($result_lista)
+	     {
+	        while (!$result_lista->EOF) 
+	         {
+	             
+	             echo "&nbsp;<b>".utf8_encode($result_lista->fields["react_nombre"])."</b><br>";
+	             $barea_lista="select * from appg_area where react_id='".$result_lista->fields["react_id"]."' and area_activo=1 order by area_orden asc"; 
+	             $result_listaarealist=$DB_gogess->Execute($barea_lista);
+	             if($result_listaarealist)
+	             {
+	                 while (!$result_listaarealist->EOF) 
+	                  { 
+	                      echo "&nbsp;&nbsp;".utf8_encode($result_listaarealist->fields["area_nombre"])."<br>"; 
+	                        //despliega test
+	                           
+	                           echo '<ul>';
+	                               $lista_test="select * from appg_test where react_id='".$result_lista->fields["react_id"]."' and area_id='".$result_listaarealist->fields["area_id"]."' and test_activo=1";
+	                               $result_testlist=$DB_gogess->Execute($lista_test);
+	                               if($result_testlist)
+	                               {
+	                                    while (!$result_testlist->EOF) 
+	                                    {
+                	                           echo '<li>';
+                	                             //echo $result_testlist->fields["test_id"];
+                	                             
+                	                             $nombre_test="select * from appg_test where test_id='".$result_testlist->fields["test_id"]."'";
+                	                             $result_testname=$DB_gogess->Execute($nombre_test);
+                	                             echo utf8_encode($result_testname->fields["test_nombre"])."<br><b>Campos</b><br>";
+                	                             
+                	                             //lista de campos
+                	                                $lista_campos="select * from appg_escala inner join appg_tipocampo on appg_escala.tipc_id=appg_tipocampo.tipc_id where test_id='".$result_testlist->fields["test_id"]."' order by esca_orden asc";
+                	                                $result_tlcampos=$DB_gogess->Execute($lista_campos);
+                	                                if($result_tlcampos)
+                	                                {
+                	                                    while (!$result_tlcampos->EOF) 
+	                                                    {  
+	                                                       echo "&nbsp;&nbsp;".utf8_encode($result_tlcampos->fields["esca_nombre"])." - ".$result_tlcampos->fields["tipc_nombre"]."<br>";
+	                                                       $result_tlcampos->MoveNext(); 
+	                                                    }     
+                	                                    
+                	                                }
+                	                                
+                	                                
+                	                             //lista de campos     
+                	                             
+                	                           echo '<br></li>';
+	                                       $result_testlist->MoveNext(); 
+	                                    }
+	                               }
+	                               
+	                           echo '</ul>';
+	                           
+	                        //despliega test
+	                        
+	                      
+	                   $result_listaarealist->MoveNext();   
+	                  }  
+	                 
+	             }
+	             
+	             
+	           $result_lista->MoveNext();
+	         }
+	     }      
+        
+        ?>
+    </td>
+  </tr>
+</table>
+	
+	
+	</td>
+  </tr>
+</table>
+<?php        
+if(@$csearch)
+{
+ $valoropcion='actualizar';
+}
+else
+{
+ $valoropcion='guardar';
+}
+echo "<input name='csearch' type='hidden' value=''>
+<input name='idab' type='hidden' value=''>
+<input name='opcion_".$table."' type='hidden' value='".$valoropcion."' id='opcion_".$table."' >
+<input name='table' type='hidden' value='".$table."'>";
+
+?>
+<table border="0" cellpadding="0" cellspacing="3">
+  <tr>
+    <td><?php $grafico=$objtemplate->path_template."images/new.png";
+echo $objopciones_botones->vista_opciones('nuevo',$objacceso_session,$grafico,$table,@$tableant1,@$tableant,@$campoant,@$listab,@$campo,@$obp,@$fimp); ?></td>
+    <td><?php $grafico=$objtemplate->path_template."images/save.png";
+echo $objopciones_botones->vista_opciones('guardar',$objacceso_session,$grafico,$table,@$tableant1,@$tableant,@$campoant,@$listab,@$campo,@$obp,@$fimp); ?></td>
+    <td><?php $grafico=$objtemplate->path_template."images/del.png";
+echo $objopciones_botones->vista_opciones('borrar',$objacceso_session,$grafico,$table,@$tableant1,@$tableant,@$campoant,@$listab,@$campo,@$obp,@$fimp); ?></td>
+    <td><?php $grafico=$objtemplate->path_template."images/search.png";
+echo $objopciones_botones->vista_opciones('buscar',$objacceso_session,$grafico,$table,@$tableant1,@$tableant,@$campoant,@$listab,@$campo,@$obp,@$fimp); ?></td>
+    <td><?php $grafico=$objtemplate->path_template."images/print.png";
+echo $objopciones_botones->vista_opciones('imprimir',$objacceso_session,$grafico,$table,@$tableant1,@$tableant,@$campoant,@$listab,@$campo,@$obp,@$fimp); ?></td>
+   
+  </tr>
+</table>
+</form>
+<div id=divBody_fac ></div>
+<div id=divBody_borrar ></div>
+<script type="text/javascript">
+$(document).ready(function() {
+	$('#content_tabla').corner("round 8px");
+});
+</script>
+
+<script language="javascript">
+<!--
+
+function ejecuta_nombre()
+{
+
+if($('#test_id').val()=='')
+{
+  alert("Por favor guarde el registro antes de generar el nombre de la tabla");
+  return false;
+}
+
+$("#div_procesar").load("templateforms/maestro_test/procesar.php",{
+test_id:$('#test_id').val()
+},function(result){  
+    
+  });  
+  $("#div_procesar").html("Espere un momento...");
+
+}
+
+
+function ejecuta_tabla()
+{
+
+if($('#test_ntabla').val()=='')
+{
+  alert("Por favor guarde el nombre de la tabla para generar la data");
+  return false;
+}
+
+$("#div_procesar").load("templateforms/maestro_test/procesar_data.php",{
+test_id:$('#test_id').val()
+},function(result){  
+    
+  });  
+  $("#div_procesar").html("Espere un momento...");
+
+}
+
+
+
+
+//-->
+</script>

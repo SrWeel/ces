@@ -1,0 +1,1 @@
+1-->update clinica_horarios set horario_centro='1',usua_id=22,dia_id=1,horario_hora='14:00',horario_horafin='18:00',horario_numeropacientes=0,horario_observaciones='',horario_activo=1 where horario_id=77 -->2025-10-04 15:54:21

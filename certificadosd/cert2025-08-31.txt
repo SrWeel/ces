@@ -1,0 +1,27 @@
+insert into dns_certificadogenerado (certif_id,especi_id,clie_ci,med_ci,certifg_texto,usua_id,certifg_fecharegistro,nd_otorgado,emp_id,centro_id,certifg_especialidad,certifg_code) values ('1','','1711467884','1212121212','  <p style="text-align:center"><strong>CERTIFICADO UNICO DE SALUD</strong></p>
+
+<p style="text-align:center"><span style="font-size:18px"><strong>SUB-BODEGA QUIROFANO</strong></span></p>
+
+<p style="text-align:right"><b>UNICODIGO:</b>52492</p>
+
+<p style="text-align:right"><!--StartFragment-->SUB-BODEGA QUIROFANO,  31 de Agosto de 2025<!--EndFragment--></p>
+
+<p>Certifico haber atendido a <!--StartFragment-->Franklin<!--EndFragment--> <!--StartFragment-->Aguas<!--EndFragment--> con cedula <!--StartFragment-->1711467884. Quien al momento se encuentra en condiciones estables de salud.<!--EndFragment--></p>
+
+<p><!--StartFragment--><!--EndFragment--></p>
+
+<p> </p>
+
+<p> </p>
+
+<p><b>Ing. ADMINISTRADOR SISTEMA</b><br><br>COD: 001<br>MSP: 002<p> </p><p> </p><!--EndFragment--><!--EndFragment--></p>
+
+<p> </p>
+
+<p><span style="font-size:11px">Certificado válido por 30 días.</span></p>
+
+<p><!--StartFragment--><!--EndFragment--></p>
+
+<p> </p>
+
+<p style="text-align:center"><span style="font-size:11px">DOCUMENTO GRATUITO</span></p>  <div align="center"><br><img src="temporal/QR_202508311805051_11.jpg" height="120" width="120" ><br>CERT11711467884121212121211202508310605051204</div>','1','2025-08-31','','1','12','','CERT11711467884121212121211202508310605051204');

@@ -1,0 +1,2 @@
+14-->insert into clinica_horarios (horario_centro,usua_id,dia_id,horario_hora,horario_horafin,horario_numeropacientes,horario_observaciones,horario_activo) values ('',10,4,'08:00','09:30',5,'',1)-->2025-10-14 14:19:20
+14-->insert into clinica_horarios (horario_centro,usua_id,dia_id,horario_hora,horario_horafin,horario_numeropacientes,horario_observaciones,horario_activo) values ('',10,2,'10:00','11:30',5,'',1)-->2025-10-14 14:20:20

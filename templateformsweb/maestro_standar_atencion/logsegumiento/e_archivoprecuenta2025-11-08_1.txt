@@ -1,0 +1,1 @@
+38-->insert into dns_precuenta (precu_observacion,precu_fechainicio,precu_fechafinal,precu_activo,convepr_id,categesp_id,especipr_id,clie_id,atenc_enlace,precu_fecharegistro,usua_id) values ('','2025-11-08','2025-11-08','1','22','1','25','210','0117231351563820251108100055426','2025-11-08 22:05:19','38')-->2025-11-08 22:05:19

@@ -1,0 +1,195 @@
+{
+	"mapwidth":"1200",
+	"mapheight":"760",
+	"categories":[
+
+	],
+	"levels":[
+		{
+			"id":"world",
+			"title":"World",
+			"map":"mapplic/maps/mapa_hanor.svg",
+			"locations":[{
+					"id": "hall",
+					"title": "Hall: 3663.925",
+					"description": "Hanor.",
+					"pin": "circular pin-md pin-label",
+					"label": "HL",
+					"fill": "#ff7400",
+					"x": "0.5",
+					"y": "0.43"
+				},{
+					"id": "office",
+					"title": "Office: 61921.009",
+					"description": "Hanor.",
+					"pin": "circular pin-md pin-label",
+					"label": "OF",
+					"fill": "#ff1700",
+					"x": "0.59",
+					"y": "0.43"
+				},{
+					"id": "sp",
+					"title": "Supplies: 5023.374",
+					"description": "Hanor.",
+					"pin": "circular pin-md pin-label",
+					"label": "SP",
+					"fill": "#ff2e00",
+					"x": "0.5",
+					"y": "0.78"
+				},{
+					"id": "z1",
+					"title": "Zone1: 527.829",
+					"description": "Hanor.",
+					"pin": "circular pin-md pin-label",
+					"label": "Z1",
+					"fill": "#00ff00",
+					"x": "0.73",
+					"y": "0.2"
+				},{
+					"id": "2a",
+					"title": "Zone2A: 4866.542",
+					"description": "Hanor.",
+					"pin": "circular pin-md pin-label",
+					"label": "2A",
+					"fill": "#ff4600",
+					"x": "0.57",
+					"y": "0.32"
+				},{
+					"id": "2b",
+					"title": "Zone2B: 2682.942",
+					"description": "Hanor.",
+					"pin": "circular pin-md pin-label",
+					"label": "2B",
+					"fill": "#ffa200",
+					"x": "0.69",
+					"y": "0.32"
+				},{
+					"id": "2c",
+					"title": "Zone2C: 1962.347",
+					"description": "Hanor.",
+					"pin": "circular pin-md pin-label",
+					"label": "2C",
+					"fill": "#ffd100",
+					"x": "0.8",
+					"y": "0.32"
+				},{
+					"id": "2d",
+					"title": "Zone2D: 1034.283",
+					"description": "Hanor.",
+					"pin": "circular pin-md pin-label",
+					"label": "2D",
+					"fill": "#74ff00",
+					"x": "0.91",
+					"y": "0.32"
+				},{
+					"id": "3a",
+					"title": "Zone3A: 1702.038",
+					"description": "Hanor.",
+					"pin": "circular pin-md pin-label",
+					"label": "3A",
+					"fill": "#ffff00",
+					"x": "0.57",
+					"y": "0.53"
+				},{
+					"id": "3b",
+					"title": "Zone3B: 1478.95",
+					"description": "Hanor.",
+					"pin": "circular pin-md pin-label",
+					"label": "3B",
+					"fill": "#d1ff00",
+					"x": "0.69",
+					"y": "0.53"
+				},{
+					"id": "3c",
+					"title": "Zone3C: 849.421",
+					"description": "Hanor.",
+					"pin": "circular pin-md pin-label",
+					"label": "3C",
+					"fill": "#46ff00",
+					"x": "0.8",
+					"y": "0.53"
+				},{
+					"id": "3d",
+					"title": "Zone3D: 566.07",
+					"description": "Hanor.",
+					"pin": "circular pin-md pin-label",
+					"label": "3D",
+					"fill": "#17ff00",
+					"x": "0.91",
+					"y": "0.53"
+				},{
+					"id": "z4",
+					"title": "Zone4: 3793.367",
+					"description": "Hanor.",
+					"pin": "circular pin-md pin-label",
+					"label": "Z4",
+					"fill": "#ff5d00",
+					"x": "0.71",
+					"y": "0.68"
+				},{
+					"id": "z5",
+					"title": "Zone5: 3554.2",
+					"description": "Hanor.",
+					"pin": "circular pin-md pin-label",
+					"label": "Z5",
+					"fill": "#ff8b00",
+					"x": "0.21",
+					"y": "0.68"
+				},{
+					"id": "z6",
+					"title": "Zone6: 1356.502",
+					"description": "Hanor.",
+					"pin": "circular pin-md pin-label",
+					"label": "Z6",
+					"fill": "#b9ff00",
+					"x": "0.21",
+					"y": "0.53"
+				},{
+					"id": "7a",
+					"title": "Zone7A: 1265.008",
+					"description": "Hanor.",
+					"pin": "circular pin-md pin-label",
+					"label": "7A",
+					"fill": "#a2ff00",
+					"x": "0.43",
+					"y": "0.32"
+				},{
+					"id": "7b",
+					"title": "Zone7B: 1777.788",
+					"description": "Hanor.",
+					"pin": "circular pin-md pin-label",
+					"label": "7B",
+					"fill": "#ffe800",
+					"x": "0.32",
+					"y": "0.32"
+				},{
+					"id": "7c",
+					"title": "Zone7C: 1678.505",
+					"description": "Hanor.",
+					"pin": "circular pin-md pin-label",
+					"label": "7C",
+					"fill": "#e8ff00",
+					"x": "0.22",
+					"y": "0.32"
+				},{
+					"id": "7d",
+					"title": "Zone7D: 2402.048",
+					"description": "Hanor.",
+					"pin": "circular pin-md pin-label",
+					"label": "7D",
+					"fill": "#ffb900",
+					"x": "0.1",
+					"y": "0.32"
+				},{
+					"id": "z8",
+					"title": "Zone8: 854.696",
+					"description": "Hanor.",
+					"pin": "circular pin-md pin-label",
+					"label": "Z8",
+					"fill": "#5dff00",
+					"x": "0.2271",
+					"y": "0.2"
+				}]
+		}
+	]
+  }

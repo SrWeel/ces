@@ -1,0 +1,15 @@
+update cesdb_arextension.dns_antecedentespersonalesnewconext set antep_descripcion='HIPERTENSION ARTERIAL DG HACE 7 AÑOS  EN TTO ENALAPRIL 20MG' where antep_id=16
+update cesdb_arextension.dns_antecedentespersonalesnewconext set antep_descripcion='' where antep_id=15
+update cesdb_arextension.dns_antecedentespersonalesnewconext set antep_descripcion='' where antep_id=15
+update cesdb_arextension.dns_antecedentespersonalesnewconext set antep_descripcion=' INFARTO CEREBRAL VS CARDIACO CON SECUELA MOTORA BILATERAL HACE  7 AÑOS' where antep_id=15
+update cesdb_arextension.dns_antecedentespersonalesnewconext set antep_descripcion='GASTRITIS CRONICA EN TTO CON OMEPRAZOL 20MG QD' where antep_id=17
+update cesdb_arextension.dns_antecedentespersonalesnewconext set antep_descripcion='OSTEOSINTENSIS DE FRACTURA HUMERAL DERECHA HACE 8 AÑOS, LIMPIEZA QX + COLOCACION DE INJERTO EN PIERNA DERECHA HACE 7 AÑOS ' where antep_id=18
+update cesdb_arextension.dns_antecedentespersonalesnewconext set antep_descripcion='OSTEOSINTENSIS DE FRACTURA HUMERAL DERECHA HACE 8 AÑOS, LIMPIEZA QX + COLOCACION DE INJERTO EN PIERNA DERECHA HACE 7 AÑOS ' where antep_id=18
+update cesdb_arextension.dns_newconsultaexternagridorgano set gorgano_observacion='DOLOR ABDOMINAL DIFUSO ' where gorgano_id=73
+update cesdb_arextension.dns_newconsultaexternagridorgano set gorgano_observacion='DOLOR ABDOMINAL DIFUSO ' where gorgano_id=73
+update cesdb_arextension.dns_newconsultaexternagridorgano set gorgano_observacion='DOLOR ABDOMINAL DIFUSO, VOMITO' where gorgano_id=73
+update cesdb_arextension.dns_newconsultaexternagridexamenfisico set gexamfis_observacion='' where gexamfis_id=179
+update cesdb_arextension.dns_newconsultaexternagridexamenfisico set gexamfis_observacion='ABDOMEN CON PANICULO ADIPOSO CON DOLOR DIFUSO EN EPIGASTRIO, HIPOCONDRIOS BILATERAL A PREDOMINIO DE IZQUIERDO, MESOGASTRIO, RHA AUMENTADOS, NO TIMPANISMO, SIGNO DE MURPHY IMPRESIONA DUDOSO, PUNTOS URETERALES NEGATIVOS, PUÑOPECUSION DUDOSA, NO SIGNOS DE IRRITACION PERITONEAL ' where gexamfis_id=179
+update cesdb_arextension.dns_antecedentespersonalesnewconext set antep_descripcion='DISPLASIA DE CADERAS EN INFANCIA, ESGUINCE DE TOBILLO DERECHO HACE 1 ANO ' where antep_id=14
+update cesdb_arextension.dns_newtraumatologiagridexamenfisico set gexamfis_observacion='COLUMNA DORSAL DOLOR EN REGION DORSAL, NO HEMATOMA, NO LIMITACION FUNCIONAL ' where gexamfis_id=637
+update cesdb_arextension.dns_newconsultaexternagridexamenfisico set gexamfis_observacion='ABDOMEN CON PANICULO ADIPOSO CON DOLOR DIFUSO EN EPIGASTRIO, HIPOCONDRIOS BILATERAL A PREDOMINIO DE IZQUIERDO, MESOGASTRIO, RHA AUMENTADOS, NO TIMPANISMO, SIGNO DE MURPHY IMPRESIONA DUDOSO, PUNTOS URETERALES NEGATIVOS, PUÑOPECUSION DUDOSA, NO SIGNOS DE IRRITACION PERITONEAL ' where gexamfis_id=179

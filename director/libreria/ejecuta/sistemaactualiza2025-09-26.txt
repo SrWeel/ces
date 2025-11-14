@@ -1,0 +1,5 @@
+update cesdb_arextension.dns_tipoproceso set emp_id=1,tippo_nombre='SPAT',tipdoc_id=1 where tippo_id=1 
+update cesdb_arextension.dns_tipoproceso set emp_id=1,tippo_nombre='CONVENIOS EMPRESARIALES',tipdoc_id=1 where tippo_id=8 
+update cesdb_arextension.dns_tipoproceso set emp_id=1,tippo_nombre='PARTICULAR',tipdoc_id=1 where tippo_id=3 
+update cesdb_arextension.dns_tipoproceso set emp_id=1,tippo_nombre='SEGURO PRIVADO',tipdoc_id=1 where tippo_id=2 
+update gogess_gridfield set fie_id=4096,gridfield_title='Numero Identificacion',gridfield_nameid='repres_cix',gridfield_tipo='text',gridfield_tablecmb='',gridfield_camposcmb='',gridfield_ordercmb='',gridfield_orden=2,gridfield_tamano='3',gridfield_extra='',gridfield_llenarconcombo='0',gridfield_editarengrid='0',gridfield_valordefault='',gridfield_campoafectacheck='',gridfield_orderecibe='0',gridfield_bloqueado='',gridfield_valordefecto='',gridfield_solotxtderecha='',gridfield_buscador=0,gridfield_campoextrasbuscado='',gridfield_filtrobuscador='',gridfield_filtrodespliegalista='' where gridfield_id=867 
