@@ -473,7 +473,45 @@ if($bloque_registro==0)
 ?>
 //grid_extras_4824($('#anam_enlace').val(),0,1);
 //calculo receta
-	
+function genera_cieexterno(codigo, diagn_tipox)
+{
+    $.ajax({
+        url : 'templateformsweb/maestro_standar_anamnesisclinica/searchcie.php',
+        data : { term : codigo },
+        type : 'GET',
+        dataType : 'json',
+        success : function(json) {
+            if(json && json[0]) {
+                $('#diagn_ciex').val(json[0].codigo);
+                $('#diagn_descripcionx').val(json[0].descripcion);
+                $('#diagn_tipox').val(diagn_tipox);
+            }
+        },
+        error : function(xhr, status) {
+            console.log('Error al cargar diagnóstico: ' + status);
+        },
+        complete : function(xhr, status) {
+            // Buscar el grid de diagnósticos automáticamente
+            var html_diagnostico = $('#diagnostico_id').html();
+
+            if(html_diagnostico) {
+                var match = html_diagnostico.match(/grid_extras_(\d+)/);
+
+                if(match && match[1]) {
+                    var grid_id = match[1];
+                    var grid_func_name = 'grid_extras_' + grid_id;
+
+                    if(typeof window[grid_func_name] === 'function') {
+                        var enlace = $('#conext_enlace').val();
+                        if(enlace) {
+                            window[grid_func_name](enlace, 0, 1);
+                        }
+                    }
+                }
+            }
+        }
+    });
+}
 	function calcular_receta()
 	{
 	  var plantra_frecuenciax;
@@ -502,6 +540,103 @@ if($bloque_registro==0)
 
 </script>
 
+
+
 <?php
+// ============================================
+// CÓDIGO PHP PARA CARGAR DIAGNÓSTICOS - CONSULTA EXTERNA
+// ============================================
+
+// Verificar si hay diagnósticos previos en ESTE registro
+$bandera_cie = 0;
+
+if(isset($objformulario->contenid["conext_enlace"]) && $objformulario->contenid["conext_enlace"])
+{
+    // EDITANDO - Verificar si ya tiene diagnósticos guardados
+    $busca_diag = "SELECT COUNT(*) as total FROM dns_newdiagnostico WHERE conext_enlace='".$objformulario->contenid["conext_enlace"]."'";
+    $rs_diag = $DB_gogess->executec($busca_diag, array());
+
+    if($rs_diag && !$rs_diag->EOF)
+    {
+        $bandera_cie = $rs_diag->fields["total"];
+    }
+}
+else if(isset($objformulario->sendvar["conext_enlacex"]))
+{
+    // NUEVO - Verificar si ya se agregaron diagnósticos
+    $busca_diag = "SELECT COUNT(*) as total FROM dns_newdiagnostico WHERE conext_enlace='".$objformulario->sendvar["conext_enlacex"]."'";
+    $rs_diag = $DB_gogess->executec($busca_diag, array());
+
+    if($rs_diag && !$rs_diag->EOF)
+    {
+        $bandera_cie = $rs_diag->fields["total"];
+    }
+}
+
+// SOLO cargar diagnósticos automáticamente si:
+// 1. NO hay diagnósticos guardados ($bandera_cie == 0)
+// 2. Es un registro NUEVO (no está en modo edición)
+if($bandera_cie == 0 && !$csearch && isset($atenc_id) && $atenc_id > 0)
+{
+    // Obtener configuración de la tabla hija de diagnósticos usando gogess_sisfield
+    $busca_campodiag = "SELECT * FROM gogess_sisfield 
+                        WHERE tab_name='dns_newconsultaexternaanamesis' 
+                        AND ttbl_id=1 
+                        AND fie_tablasubgrid!=''";
+
+    $rs_campodiag = $DB_gogess->executec($busca_campodiag, array());
+
+    if($rs_campodiag && !$rs_campodiag->EOF)
+    {
+        $tabla_hija = $rs_campodiag->fields["fie_tablasubgrid"];
+        $campo_enlace = $rs_campodiag->fields["fie_campoenlacesub"];
+
+        // Buscar registro de consulta externa
+        $busca_consulta = "SELECT anam_enlace
+                          FROM dns_newconsultaexternaanamesis
+                          WHERE atenc_id = ".$atenc_id."
+                          ORDER BY anam_id DESC
+                          LIMIT 1";
+
+        $rs_consulta = $DB_gogess->executec($busca_consulta, array());
+
+        if($rs_consulta && !$rs_consulta->EOF && $rs_consulta->fields["anam_enlace"])
+        {
+            $anam_enlace = $rs_consulta->fields["anam_enlace"];
+
+            // Buscar diagnósticos en la tabla hija
+            $busca_listadiag = "SELECT diagn_cie, diagn_tipo
+                               FROM ".$tabla_hija."
+                               WHERE ".$campo_enlace."='".$anam_enlace."'
+                               ORDER BY diagn_id ASC";
+
+            $rs_listd = $DB_gogess->executec($busca_listadiag, array());
+
+            if($rs_listd && !$rs_listd->EOF)
+            {
+                $diagnosticos_array = array();
+
+                echo "<script>";
+
+                while (!$rs_listd->EOF)
+                {
+                    $cie = trim($rs_listd->fields["diagn_cie"]);
+                    $tipo = isset($rs_listd->fields["diagn_tipo"]) ? trim($rs_listd->fields["diagn_tipo"]) : '1';
+
+                    if($cie != '' && !in_array($cie, $diagnosticos_array))
+                    {
+                        echo "genera_cieexterno('".$cie."', '".$tipo."');";
+                        $diagnosticos_array[] = $cie;
+                    }
+
+                    $rs_listd->MoveNext();
+                }
+
+                echo "</script>";
+            }
+        }
+    }
+}
+
 echo $objformulario->generar_formulario_nfechas($table,$DB_gogess);
 ?>
