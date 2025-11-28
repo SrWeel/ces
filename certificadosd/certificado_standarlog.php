@@ -41,19 +41,8 @@ $logo = $objformulario->replace_cmb("app_empresa", "emp_id,emp_logoreporte", "wh
 $logoc ='<img src="../archivo/'.$logo.'" alt="125x125" width="140px">';
 
 
-    $pathlogo = __DIR__ . '/../archivo/' . $logo;
-    if (!file_exists($pathlogo)) {
-        die("ERROR: La imagen no existe: " . $pathlogo);
-    }
+$pathlogo = '/home/ces/public_html/ces/archivo/'.$logo;
 
-    if (!is_readable($pathlogo)) {
-        die("ERROR: La imagen no es legible: " . $pathlogo);
-    }
-
-    $size = getimagesize($pathlogo);
-    if ($size === false) {
-        die("ERROR: No se puede obtener el tamaño de la imagen: " . $pathlogo);
-    }
 $emp_nombre = $objformulario->replace_cmb("app_empresa", "emp_id,emp_nombre", "where emp_id=", 1, $DB_gogess);
 $emp_piedepagina = $objformulario->replace_cmb("app_empresa", "emp_id,emp_piedepagina", "where emp_id=", 1, $DB_gogess);
 $emp_logo = $objformulario->replace_cmb("app_empresa", "emp_id,emp_logo", "where emp_id=", 1, $DB_gogess);
@@ -86,7 +75,8 @@ class MYPDF extends TCPDF {
     public function Header() {
         // Logo
         $image_file = $this->pathlogo;
-        $this->Image($image_file, 70, 7, 60, '', 'PNG', '', 'T', false, 300, '', false, false, 0, true, false, false);
+        $this->Image($image_file, 70, 7,60, '', 'PNG', '', 'T', false, 300, '', false, false, 0, false, false, false);
+		
 		//$image_file = 'der.png';
        // $this->Image($image_file, 140, 7, 60, '', 'PNG', '', 'T', false, 300, '', false, false, 0, false, false, false);
 		

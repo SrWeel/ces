@@ -192,7 +192,7 @@ function bevolucion($usua_id,$fecha,$hora,$DB_gogess)
 <center>
 <table width="100%" border="1" cellpadding="5" cellspacing="0" >
   <tr>
-    <td style="padding-top:6px; padding-bottom:6px; padding-left:6px; padding-right:6px;font-size:10px" >Horario</td>
+    <td style="padding-top:6px; padding-bottom:6px; padding-left:6px; padding-right:6px;font-size:10px" >Horario</td> 
 	<?php
 	$lista_personal="select * from app_usuario where usua_estado=1 and especi_id not in (5,6,0) and usua_id!=74";
 	$rs_personal= $DB_gogess->executec($lista_personal,array());

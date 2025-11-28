@@ -1,0 +1,2 @@
+dns_newhospitalizacionconsultaexterna
+dns_newhospitalizacionconsultaexterna

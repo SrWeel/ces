@@ -1,0 +1,1 @@
+1-->insert into dns_newhospitalizacionconsultaexterna (clie_id,usua_id,centro_id,atenc_id,conext_notasdeevolucion,anam_id,conext_fechar,estaatenc_id,conext_fecharegistro,conext_horar,conext_prescripciones,conext_horaf,conext_enlace) values (1,1,1,1,'',6,'2025-11-27',1,'2025-11-27 22:48:26','22:48','','','1011212121212120251127104826396')-->2025-11-27 22:48:43

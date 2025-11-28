@@ -248,17 +248,17 @@ function genera_cieexterno(codigo,diagn_tipox,idext)
 {
 
 $.ajax({
-    // la URL para la petición
+    // la URL para la peticiï¿½n
     url : 'templateformsweb/maestro_standar_imagenologia/searchcie.php',
-    // la información a enviar
-    // (también es posible utilizar una cadena de datos)
+    // la informaciï¿½n a enviar
+    // (tambiï¿½n es posible utilizar una cadena de datos)
     data : { term : codigo },
-    // especifica si será una petición POST o GET
+    // especifica si serï¿½ una peticiï¿½n POST o GET
     type : 'GET',
-    // el tipo de información que se espera de respuesta
+    // el tipo de informaciï¿½n que se espera de respuesta
     dataType : 'json',
-    // código a ejecutar si la petición es satisfactoria;
-    // la respuesta es pasada como argumento a la función
+    // cï¿½digo a ejecutar si la peticiï¿½n es satisfactoria;
+    // la respuesta es pasada como argumento a la funciï¿½n
     success : function(json) {
         //console.log(json[0]);	
 		$('#diagn_ciex'+idext).val(json[0].codigo);
@@ -266,15 +266,15 @@ $.ajax({
 		$('#diagn_tipox'+idext).val(diagn_tipox);
 		
     },
-    // código a ejecutar si la petición falla;
-    // son pasados como argumentos a la función
-    // el objeto de la petición en crudo y código de estatus de la petición
+    // cï¿½digo a ejecutar si la peticiï¿½n falla;
+    // son pasados como argumentos a la funciï¿½n
+    // el objeto de la peticiï¿½n en crudo y cï¿½digo de estatus de la peticiï¿½n
     error : function(xhr, status) {
-        ///alert('Disculpe, existió un problema');
+        ///alert('Disculpe, existiï¿½ un problema');
     },
-    // código a ejecutar sin importar si la petición falló o no
+    // cï¿½digo a ejecutar sin importar si la peticiï¿½n fallï¿½ o no
     complete : function(xhr, status) {
-        ///alert('Petición realizada');
+        ///alert('Peticiï¿½n realizada');
 		grid_extras_6134($('#imgag_enlace').val(),0,1);
     }
 });

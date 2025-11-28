@@ -103,7 +103,7 @@ function borrar_registro(tabla,campo,valor)
    $(".messages").hide();
     //queremos que esta variable sea global
     var fileExtension = "";
-    //función que observa los cambios del campo file y obtiene información
+    //funciï¿½n que observa los cambios del campo file y obtiene informaciï¿½n
 
 function informacion_archivo(campo)
 {
@@ -116,11 +116,11 @@ function informacion_archivo(campo)
 
         var fileName = file.name;
 
-        //obtenemos la extensión del archivo
+        //obtenemos la extensiï¿½n del archivo
 
         fileExtension = fileName.substring(fileName.lastIndexOf('.') + 1);
 
-        //obtenemos el tamaño del archivo
+        //obtenemos el tamaï¿½o del archivo
 
         var fileSize = file.size;
 
@@ -128,7 +128,7 @@ function informacion_archivo(campo)
 
         var fileType = file.type;
 
-        //mensaje con la información del archivo
+        //mensaje con la informaciï¿½n del archivo
 
 		var megas=0;
 
@@ -160,7 +160,7 @@ function subir_archivo(ncampo,table,anchot,altot,anchoor,altoor)
 
         var message = ""; 
 
-        //hacemos la petición ajax  
+        //hacemos la peticiï¿½n ajax  
 
 		
 
@@ -288,9 +288,9 @@ else
 
 
 
-//como la utilizamos demasiadas veces, creamos una función para 
+//como la utilizamos demasiadas veces, creamos una funciï¿½n para 
 
-//evitar repetición de código
+//evitar repeticiï¿½n de cï¿½digo
 
 function showMessage(message,campo){
 
@@ -385,11 +385,11 @@ $linkapaciente="onClick=ver_formularioenpantalla('aplicativos/documental/datos_s
 
 echo '<button type="button" class="mb-sm btn btn-success" '.$linkapaciente.'  style="cursor:pointer"><span class="glyphicon glyphicon-arrow-left"></span> Regresar a Consulta Externa - Anamnesis y Examen F&iacute;sico </button>&nbsp;&nbsp;&nbsp;';
 
-//$linkimprimir='onClick=genera_pdfevolucion();';
+$linkimprimir='onClick=genera_pdfevolucion();';
 
-//echo '<button type="button" class="mb-sm btn btn-info" '.$linkimprimir.'  style="cursor:pointer"><span class="glyphicon glyphicon-print"></span></button>&nbsp;&nbsp;';
+echo '<button type="button" class="mb-sm btn btn-info" '.$linkimprimir.'  style="cursor:pointer"><span class="glyphicon glyphicon-print"></span></button>&nbsp;&nbsp;';
 
-//echo '<button type="button" class="mb-sm btn btn-primary"  '.$linkeditar.'  style="background-color:#000066"  ><span class="glyphicon glyphicon-plus"></span>NUEVO REGISTRO...</button>';
+echo '<button type="button" class="mb-sm btn btn-primary"  '.$linkeditar.'  style="background-color:#000066"  ><span class="glyphicon glyphicon-plus"></span>NUEVO REGISTRO...</button>';
 
 
 ?>

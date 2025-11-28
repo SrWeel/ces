@@ -231,7 +231,7 @@ if($bloque_registro==1)
 		$template_reemplazo='templateformsweb/maestro_standar_substandar/';
 		
 		}
-		//echo $template_reemplazo;
+		echo $template_reemplazo;
 	
 ?>	
 
@@ -274,7 +274,7 @@ echo '<div id="divBody_foto"></div>';
 
 </div>
  
-<form id="form_<?php echo $table; ?>" name="form_<?php echo $table; ?>" method="post" action="" class="form-horizontal" > 
+<form id="form_<?php echo $table; ?>" name="form_<?php echo $table; ?>" method="post" action="" class="form-horizontal" >
 <?php		
 		echo $botonenvio;
 		include("tablas.php");

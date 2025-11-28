@@ -333,8 +333,6 @@ if($rs_fechainterx)
 
   <div class="col-sm-6"><?php $objformulario->generar_formulario(@$submit,$table,2,$DB_gogess);  ?></div>
 
-
-
 </div>  
 
 <?php

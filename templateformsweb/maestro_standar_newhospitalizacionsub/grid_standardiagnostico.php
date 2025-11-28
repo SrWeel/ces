@@ -198,33 +198,38 @@ if($bloque_registro==1)
 </table>
 </div>
 <?php
-echo '<input name="diagn_numval" type="hidden" id="diagn_numval" value="'.$cuenta.'" />';
+// IMPORTANTE: Usar subtabla en el nombre del campo si existe
+$sufijo_campo = '';
+if(isset($_POST["subtabla"]) && $_POST["subtabla"] > 0) {
+    $sufijo_campo = $_POST["subtabla"];
+}
 
+echo '<input name="diagn_numval'.$sufijo_campo.'" type="hidden" id="diagn_numval'.$sufijo_campo.'" value="'.$cuenta.'" />';
+
+// ELIMINAR O COMENTAR ESTE BLOQUE - Puede causar conflictos
+/*
 if($_POST["bloqueo_data"]==0)
 {
-if($cuenta>0)
-{
-   echo '
-		<script type="text/javascript">
-           guarda_data();
-		</script>   ';
-
+    if($cuenta>0)
+    {
+       echo '
+            <script type="text/javascript">
+               guarda_data();
+            </script>   ';
+    }
 }
-}
-
+*/
 
 if(!(@$_SESSION['ces1313777_sessid_inicio']))
 {
+    echo '
+    <script type="text/javascript">
+    <!--
+    abrir_standar("aplicativos/documental/activar_sesion.php","Activar_Sesi&oacute;n","divBody_acsession'.$_POST["fie_id"].'","divDialog_acsession'.$_POST["fie_id"].'",400,400,"",0,0,0,0,0,0);
+    //  End -->
+    </script>
 
-echo '
-<script type="text/javascript">
-<!--
-abrir_standar("aplicativos/documental/activar_sesion.php","Activar_Sesi&oacute;n","divBody_acsession'.$_POST["fie_id"].'","divDialog_acsession'.$_POST["fie_id"].'",400,400,"",0,0,0,0,0,0);
-//  End -->
-</script>
-
-<div id="divBody_acsession'.$_POST["fie_id"].'"></div>
-';
-
+    <div id="divBody_acsession'.$_POST["fie_id"].'"></div>
+    ';
 }
 ?>
