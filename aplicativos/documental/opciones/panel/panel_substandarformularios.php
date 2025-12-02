@@ -398,7 +398,12 @@ else
 $linkapaciente="onClick=ver_formularioenpantalla('aplicativos/documental/datos_pacientes.php','Editar','divBody_ext','".@$clie_id."','25',0,'".$atenc_id."',0,0,0);";
 }
 
-echo '<p></p><button type="button" class="mb-sm btn btn-success" '.$linkapaciente.'  style="cursor:pointer"><span class="glyphicon glyphicon-arrow-left"></span> REGRESAR </button>&nbsp;&nbsp;&nbsp;';
+//echo '<p></p><button type="button" class="mb-sm btn btn-success" '.$linkapaciente.'  style="cursor:pointer"><span class="glyphicon glyphicon-arrow-left"></span> REGRESAR </button>&nbsp;&nbsp;&nbsp;';
+
+$linkapaciente="onClick=ver_formularioenpantalla('aplicativos/documental/datos_stnnewhospitalizacionanamnesis.php','Editar','divBody_ext','".$anam_id."','".@$clie_id."',210,'".$atenc_id."',0,'".$tipofor_id."','".$centro_id."');";
+
+echo '<button type="button" class="mb-sm btn btn-success" '.$linkapaciente.'  style="cursor:pointer"><span class="glyphicon glyphicon-arrow-left"></span> REGRESAR A HOSPITALIZACION </button>&nbsp;&nbsp;&nbsp;';
+
 echo '<button type="button" class="mb-sm btn btn-primary"  '.$linkeditar.'  style="background-color:#000066"  ><span class="glyphicon glyphicon-plus"></span>NUEVO REGISTRO</button>';
 
 

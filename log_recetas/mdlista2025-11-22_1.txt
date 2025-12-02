@@ -1,0 +1,32 @@
+update cesdb_arextension.dns_antecedentespersonalesnewconext set antep_descripcion=' CRISIS CONVULSIVA DG HACE 10 AÑOS TTO ACIDO VALPROICO 500MG TID ' where antep_id=59
+update cesdb_arextension.dns_newconsultaexternagridorgano set gorgano_observacion='SIGNOS DE DESHIDRATACION ' where gorgano_id=241
+update cesdb_arextension.dns_newconsultaexternagridorgano set gorgano_observacion='CRISIS CONVULSIVA ' where gorgano_id=250
+update cesdb_arextension.dns_newconsultaexternagridexamenfisico set gexamfis_observacion='PACIENTE POSTICTAL DIAFORETICO CON TAQUIPNEA  Y TAQUICARDIA PALIDO LABIO EXCORIACION EN REGION INTERNA, MUCOSAS ORALES SECA CORAZON ' where gexamfis_id=601
+update cesdb_arextension.dns_newconsultaexternagridexamenfisico set gexamfis_observacion='PACIENTE POSTICTAL DIAFORETICO CON TAQUIPNEA  Y TAQUICARDIA PALIDO LABIO EXCORIACION EN REGION INTERNA, MUCOSAS ORALES SECA CORAZON ' where gexamfis_id=601
+update cesdb_arextension.dns_newconsultaexternagridexamenfisico set gexamfis_observacion='PACIENTE POSTICTAL DIAFORETICO CON TAQUIPNEA  Y TAQUICARDIA PALIDO LABIO EXCORIACION EN REGION INTERNA, MUCOSAS ORALES SECA ALIENTO ALCOHOLICO  ' where gexamfis_id=601
+update cesdb_arextension.dns_antecedentespersonalesnewconext set antep_descripcion='TRASTORNO DE HERNIA LUMBAR SIN TTO ACTUAL (DG CON RESONANCIA MAGNETICA)' where antep_id=60
+update cesdb_arextension.dns_newconsultaexternagridorgano set gorgano_observacion='DOLOR DE COLUMNA LUMBAR ' where gorgano_id=254
+update cesdb_arextension.dns_newconsultaexternagridexamenfisico set gexamfis_observacion='TEMBLOR FINO COLUMNA LUMBAR PRUEBA DE INCLINACION POSITIVA STENDLER L4-L5 VALLEIX Y LASSAGE NO IMPRESIONAN POSITIVOS FUERZA MUSCULAR DISMINUIDA, SENSIBILIDAD CONSERVADA' where gexamfis_id=637
+update cesdb_arextension.dns_antecedentespersonalesnewconext set antep_descripcion='' where antep_id=61
+update cesdb_arextension.dns_antecedentespersonalesnewconext set antep_descripcion='' where antep_id=61
+update cesdb_arextension.dns_antecedentespersonalesnewconext set antep_descripcion='ARTRITIS REUMATOIDEA BAJO TRATAMIENTO CLINICO ' where antep_id=62
+update cesdb_arextension.dns_antecedentespersonalesnewconext set antep_descripcion='ARTRITIS REUMATOIDEA BAJO TRATAMIENTO CLINICO ' where antep_id=62
+update cesdb_arextension.dns_newtraumatologiagridexamenfisico set gexamfis_observacion='MUÑECA IZQUIERDA DOLOR A LA DIGITOPRESIONEN TABAQUEERA ANATOMICA 
+ LIMITACION FUNCIONAL A LA FLEXOEXTENSION HIPOESTESIA PRESENTE FUERZA MUSCULAR NO VALORADA POR DOLOR' where gexamfis_id=1939
+update cesdb_arextension.dns_newtraumatologiagridorgano set gorgano_observacion='DOLOR DE MUÑECA IZQUIERDA' where gorgano_id=774
+update cesdb_arextension.dns_newtraumatologiagridexamenfisico set gexamfis_observacion='RODILLA DERCHA EXCORIACION 3 CM DE DIAMETRO EN CARA ANTERIOR, SIGNO DE CHOQUE+, CRUZADO ANTERIOR POSITIVO,BOSTEZO INTERNO Y SIGNO DE STEINMANN POSITIVO PARA MENISCO INTERNO
+TOBILLO DERECHO EXCORIACIONES EN CARA EXTERNA, PIE EDEMA DOLOR EQUIMOSIS EN DORSO DE PIE Y  ANIUVEL DE 4TO Y 5TO METATARSIANO ' where gexamfis_id=1965
+update cesdb_arextension.dns_newtraumatologiagridorgano set gorgano_observacion='DOLOR DE RODILLA Y TOBILLO DERECHO ' where gorgano_id=784
+update cesdb_arextension.dns_newtraumatologiagridexamenfisico set gexamfis_observacion='MANO IZ AL MOMENTO BUENA MOVILIDAD DISMINUCION DE SENSIBILIDAD HIPOESTESIA ' where gexamfis_id=1989
+update cesdb_arextension.dns_newtraumatologiagridexamenfisico set gexamfis_observacion='MANO IZ AL MOMENTO BUENA MOVILIDAD DISMINUCION DE SENSIBILIDAD HIPOESTESIA' where gexamfis_id=1989
+update cesdb_arextension.dns_newtraumatologiagridexamenfisico set gexamfis_observacion='MANO IZ AL MOMENTO BUENA MOVILIDAD DISMINUCION DE SENSIBILIDAD HIPOESTESIA' where gexamfis_id=1989
+update cesdb_arextension.dns_newtraumatologiagridexamenfisico set gexamfis_observacion='MANO IZ AL MOMENTO BUENA MOVILIDAD DISMINUCION DE SENSIBILIDAD HIPOESTESIA, BUENA ADHERENCIA DEL INJERTO LIBRE EN PRIMER DEDO ' where gexamfis_id=1989
+update cesdb_arextension.dns_antecedentespersonalesnewconext set antep_descripcion='ALERGIA PENICILINA ' where antep_id=63
+update cesdb_arextension.dns_antecedentespersonalesnewconext set antep_descripcion='ALERGIA PENICILINA ' where antep_id=63
+update cesdb_arextension.dns_antecedentespersonalesnewconext set antep_descripcion='ALERGIA PENICILINA  
+AQX PROTESIS DE CADERA BILATERAL ' where antep_id=63
+update cesdb_arextension.dns_newtraumatologiagridorgano set gorgano_observacion='OMALGIA IZQUIERDA' where gorgano_id=804
+update cesdb_arextension.dns_newtraumatologiagridexamenfisico set gexamfis_observacion='OMBRO IZQUIERDO DOLOR A LA PALPACION EN CORREDERA BICIPITAL LIMITACION A LA FLEXION ANTERIOR 120º ROTACION INTERNA CONSERVADA JOBE+ FUERZA MUSCULAR 4/5 
+RMN DE HO,BRO IZQUIERDO TENDINITIS BICIPITAL ROTURA PARCIAL DE SUPRAESPINOSO ' where gexamfis_id=2014
+update cesdb_arextension.dns_newtraumatologiagridexamenfisico set gexamfis_observacion='HOMBRO IZQUIERDO DOLOR A LA PALPACION EN CORREDERA BICIPITAL LIMITACION A LA FLEXION ANTERIOR 120º ROTACION INTERNA CONSERVADA JOBE+ FUERZA MUSCULAR 4/5 
+RMN DE HO,BRO IZQUIERDO TENDINITIS BICIPITAL ROTURA PARCIAL DE SUPRAESPINOSO ' where gexamfis_id=2014

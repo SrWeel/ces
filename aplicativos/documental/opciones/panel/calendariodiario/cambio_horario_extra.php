@@ -91,7 +91,11 @@ $rango_hora = 30;
 $arreglo_horas = $obj_util->genera_arrayhora($hora_ini, $rango_hora, $hora_fin);
 
 // ============ FILTRO ESPECIALIDAD ============
-$filtro_espe = " WHERE prof_id NOT IN (38,777,888,911116,77) ORDER BY prof_nombre ASC";
+//$filtro_espe = " WHERE prof_id NOT IN (38,777,888,911116,77) ORDER BY prof_nombre ASC";
+$filtro_espe = ' where prof_id in (select prof.prof_id from app_usuario us 
+inner join dns_gridfuncionprofesional espe on us.usua_enlace=espe.usua_enlace 
+inner join cesdb_arextension.dns_profesion prof on espe.prof_id=prof.prof_id 
+where prof.prof_id not in (38,777,888,911116,77))  order by prof_nombre asc ';
 ?>
 
 <!DOCTYPE html>
@@ -120,7 +124,7 @@ $filtro_espe = " WHERE prof_id NOT IN (38,777,888,911116,77) ORDER BY prof_nombr
         <tr>
             <td class="css_titulocambio">Especialidad:</td>
             <td>
-                <select name="prof_idcambio" id="prof_idcambio" class="form-control css_cambiot" onchange="ver_terapistacalcambio()" required>
+                <select name="prof_idcambio" id="prof_idcambio" class="form-control css_cambiot" onChange="ver_terapistacalcambio()" required>
                     <option value="">-seleccionar-</option>
                     <?php $objformulario->fill_cmb('cesdb_arextension.dns_profesion', 'prof_id,prof_nombre', $prof_id, $filtro_espe, $DB_gogess); ?>
                 </select>
@@ -181,7 +185,7 @@ $filtro_espe = " WHERE prof_id NOT IN (38,777,888,911116,77) ORDER BY prof_nombr
         </tr>
         <tr>
             <td colspan="2" align="center">
-                <button type="button" onclick="guarda_turno()"><?= $modo === 'crear' ? 'CREAR TURNO' : 'ACTUALIZAR' ?></button>
+                <button type="button" onClick="guarda_turno()"><?= $modo === 'crear' ? 'CREAR TURNO' : 'ACTUALIZAR' ?></button>
             </td>
         </tr>
     </table>

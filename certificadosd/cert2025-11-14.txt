@@ -1,0 +1,45 @@
+insert into dns_certificadogenerado (certif_id,especi_id,clie_ci,med_ci,certifg_texto,usua_id,certifg_fecharegistro,nd_otorgado,emp_id,centro_id,certifg_especialidad,certifg_code) values ('5','','1711467884','1212121212','  <p style="text-align:center"><strong>CERTIFICADO MEDICO</strong></p>
+
+<p style="text-align:center"><strong>CLÍNICA DE ESPECIALIDADES SUR</strong></p>
+
+<p style="text-align:right"> </p>
+
+<p style="text-align:right">QuitoQUITO,  14 de Noviembre de 2025</p>
+
+<p style="text-align:justify"> </p>
+
+<p style="text-align:justify"><strong>CERTIFICO</strong>, que el Sr.(a) Franklin Aguas, con cedula de identidad e Historia clinica numero 1711467884, ingreso el QUITO,  14 de Noviembre de 2025, cuyo diagn<!--StartFragment-->ó<!--EndFragment-->stico es:</p>
+
+<p style="text-align:justify"><ul><li>Z013 Examen de la presión sanguínea</li></ul></p>
+
+<p style="text-align:justify">y cirugia realizada: -cirugia-, el -fechacirugia-, por lo cual, NECESITA REPOSO ABSOLUTO, desde el  2025-11-14 hasta el 2025-11-21 </p>
+
+<p style="text-align:justify"> </p>
+
+<p style="text-align:justify">8 dias de reposo.</p>
+
+<p> </p>
+
+<p>El paciente desarrolla su ACTIVIDAD LABORAL como: -actividadlaboral-</p>
+
+<p> </p>
+
+<p> </p>
+
+<p><strong>MEDICO TRATANTE:</strong></p>
+
+<p><b>Ing. ADMINISTRADOR SISTEMA</b><br><br>COD: 001<br>MSP: 002<p> </p><p> </p></p>
+
+<p> </p>
+
+<p> </p>
+
+<p> </p>
+
+<p><strong>Nota:</strong> Este formulario debe ser entregado al patrono por el afiliado para justificar el ausentismo por:</p>
+
+<p> </p>
+
+<p>( ) Enfermedad General    ( ) Accidente de trabajo   ( ) Enfermedad Profesional   ( ) Maternidad (niño vivo)</p>
+
+<p> </p>  <div align="center"><br><img src="temporal/QR_202511141157101_15.jpg" height="120" width="120" ><br>CERT5171146788412121212121120251114115710983</div>','1','2025-11-14','','1','1','','CERT5171146788412121212121120251114115710983');

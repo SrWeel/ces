@@ -1,0 +1,10 @@
+update cesdb_arextension.dns_newtraumatologiagridexamenfisico set gexamfis_observacion='PTE ACUDE A CONTROL RODILLA EN MEJORE CONDICIONES  PERSISTE LIGERO DOLOR EN CARA INTERNA ' where gexamfis_id=1840
+update cesdb_arextension.dns_newtraumatologiagridexamenfisico set gexamfis_observacion='PTE OBESA LASEGUE- LIMITACION A LA ROTACION DE CADERA VALLEIX +
+RX DE COLUMNA FORMACION DE OSTEOFITOS ESPECIALMENTE L3  PINZAMIENTO L5 S1 ' where gexamfis_id=1862
+update cesdb_arextension.dns_newtraumatologiagridorgano set gorgano_observacion='OMALGIA IZQUIERDA + LESION NERVIOSA AXILAR ' where gorgano_id=754
+update cesdb_arextension.dns_newtraumatologiagridexamenfisico set gexamfis_observacion='HOMBRO IZQUIERDO NO DOLOR A LA DIGITOPRESION, LIMITACION FUNCIONAL A LOS MOVIMIENTOS ABDUCCION 40º FLEXION ANTERIOR 60º ROTACION INTERNA QUE LLEGA A L1, ROTACION EXTERNA 40º, SIGNO DE HAWKINS KENEDY +, SIGNO DE NEER+, JOBE+, FUERZA MUSCULAR 2/5, ATROFIA DEL MÚSCULO, HIPOESTESIA EN PARTE SUPERIOR Y EXTERIOR DE HOMBRO, REFLEJOS DISMINUIDOS. ' where gexamfis_id=1889
+update cesdb_arextension.dns_newtraumatologiagridorgano set gorgano_observacion='OMALGIA A PREDOMINIO DE HOMBRO IZQUERDO ' where gorgano_id=764
+update cesdb_arextension.dns_newtraumatologiagridexamenfisico set gexamfis_observacion='SIN EVIDENCIA DE PATOLOGIA' where gexamfis_id=1914
+update cesdb_arextension.dns_newtraumatologiagridexamenfisico set gexamfis_observacion='SIN EVIDENCIA DE PATOLOGIA' where gexamfis_id=1914
+update cesdb_arextension.dns_newtraumatologiagridexamenfisico set gexamfis_observacion=' HOMBROS IZQUIERDO DOLOR EN CARA ANTERIOR, ROTACION INTERNA L5 DOLOROSA , JOBE NEER + FUERZA MUSCULAR 4/5
+' where gexamfis_id=1914

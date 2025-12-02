@@ -1,0 +1,9 @@
+update cesdb_arextension.dns_antecedentespersonalesnewconext set antep_descripcion='CIRUGIA ABIERTA POR LUXACION DE HOMBRO IZQUIERDO HACE 10 AÑOS ' where antep_id=58
+update cesdb_arextension.dns_newtraumatologiagridorgano set gorgano_observacion='OMALGIA IZQUIERDA ' where gorgano_id=714
+update cesdb_arextension.dns_newtraumatologiagridexamenfisico set gexamfis_observacion='' where gexamfis_id=1789
+update cesdb_arextension.dns_newtraumatologiagridexamenfisico set gexamfis_observacion='' where gexamfis_id=1789
+update cesdb_arextension.dns_newtraumatologiagridexamenfisico set gexamfis_observacion='HOMBRO IZQUIERDO DOLOR EN ARTICULACION GLENOHUMERAL, APREHENSION E INESTABILIDAD MULTIDIRECCIONAL PRESENTE, LIMITACION FUNCIONAL A LOS MOVIMIENTOS DE ABDUCCION Y ROTACION EXTERNA, FUERZA MUSCULAR 4/5 SENSIBILIDAD Y ROOTS CONSERVADOS ' where gexamfis_id=1789
+update cesdb_arextension.dns_newtraumatologiagridorgano set gorgano_observacion='OMALGIA IZQUIERDA ' where gorgano_id=724
+update cesdb_arextension.dns_newtraumatologiagridexamenfisico set gexamfis_observacion='' where gexamfis_id=1814
+update cesdb_arextension.dns_newtraumatologiagridexamenfisico set gexamfis_observacion='' where gexamfis_id=1814
+update cesdb_arextension.dns_newtraumatologiagridexamenfisico set gexamfis_observacion='HOMBRO IZQUIERDO DOLOR EN CARA ANTERIOR, LIMITACION FUNCIONAL A LOS MOVIMIENTOS DE FLEXION ANTERIOR Y ROTACION EXTERNA, SIGNOS DE LESION MANGUITO JOBE + NEER +, FUERZA MUSCULAR 4/5 LLENADO CAPILAR ADECUADO PULSOS PRESENTES' where gexamfis_id=1814

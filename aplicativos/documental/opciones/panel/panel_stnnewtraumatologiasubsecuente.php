@@ -103,7 +103,7 @@ function borrar_registro(tabla,campo,valor)
    $(".messages").hide();
     //queremos que esta variable sea global
     var fileExtension = "";
-    //funciï¿½n que observa los cambios del campo file y obtiene informaciï¿½n
+    //función que observa los cambios del campo file y obtiene información
 
 function informacion_archivo(campo)
 {
@@ -116,11 +116,11 @@ function informacion_archivo(campo)
 
         var fileName = file.name;
 
-        //obtenemos la extensiï¿½n del archivo
+        //obtenemos la extensión del archivo
 
         fileExtension = fileName.substring(fileName.lastIndexOf('.') + 1);
 
-        //obtenemos el tamaï¿½o del archivo
+        //obtenemos el tamaño del archivo
 
         var fileSize = file.size;
 
@@ -128,7 +128,7 @@ function informacion_archivo(campo)
 
         var fileType = file.type;
 
-        //mensaje con la informaciï¿½n del archivo
+        //mensaje con la información del archivo
 
 		var megas=0;
 
@@ -160,7 +160,7 @@ function subir_archivo(ncampo,table,anchot,altot,anchoor,altoor)
 
         var message = ""; 
 
-        //hacemos la peticiï¿½n ajax  
+        //hacemos la petición ajax  
 
 		
 
@@ -288,9 +288,9 @@ else
 
 
 
-//como la utilizamos demasiadas veces, creamos una funciï¿½n para 
+//como la utilizamos demasiadas veces, creamos una función para 
 
-//evitar repeticiï¿½n de cï¿½digo
+//evitar repetición de código
 
 function showMessage(message,campo){
 

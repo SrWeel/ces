@@ -45,9 +45,9 @@ body { margin: 10px; }
     <td colspan="10" bgcolor="#CCFFCC" class="borde_all"><div align="center">N&deg; HOJA </div></td>
   </tr>
   <tr>
-    <td colspan="9" class="borde_all css_8"><div align="center">CL&Iacute,NICA DE ESPECIALIDADES DEL SUR PINOSMED CIA.LTDA.</div></td>
+    <td colspan="9" class="borde_all css_8"><div align="center">CLINICA DE ESPECIALIDADES DEL SUR.</div></td>
     <td colspan="12" class="borde_all css_8"><div align="center">52492</div></td>
-    <td colspan="3" class="borde_all css_8"><div align="center">CL&Iacute,NICA DE ESPECIALIDADES DEL SUR PINOSMED CIA.LTDA.</div></td>
+    <td colspan="3" class="borde_all css_8"><div align="center">CLINICA DE ESPECIALIDADES DEL SUR.</div></td>
     <td colspan="3" class="borde_all css_8"><div align="center">-hc-</div></td>
     <td class="borde_all css_8"><div align="center">-hcpinos-</div></td>
     <td colspan="10" class="borde_all css_8"><div align="center"></div></td>

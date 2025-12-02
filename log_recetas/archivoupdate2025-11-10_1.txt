@@ -1,0 +1,2 @@
+update dns_signosvitales set signovita_presionarterial='',signovita_temperaturabucal='36.9',signovita_talla='1.45',signovita_perimetrocefalico='',signovita_frecuenciacardiaca='91',signovita_frecuenciarespiratoria='23',signovita_peso='33.8',signovita_saturacionoxigeno='91',signovita_masacorporal='16.08',signovita_observaciones='' where signovita_id='185'
+update cesdb_arextension.dns_gridplanmedicamentosemergencia set medi_descripcion='IBUPROFENO 400MG SOLIDO ORAL ',medi_posologia='VO C/12 HORAS POR 3 A 5 DIAS ' where medi_id='72'

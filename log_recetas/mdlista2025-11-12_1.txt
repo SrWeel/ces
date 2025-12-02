@@ -1,0 +1,47 @@
+update cesdb_arextension.dns_antecedentespersonalesnewconext set antep_descripcion='NO REFIERE' where antep_id=47
+update cesdb_arextension.dns_antecedentesfamiliaresnewconext set antef_descripcion='NO REFIERE' where antef_id=26
+update cesdb_arextension.dns_antecedentesfamiliaresnewconext set antef_descripcion='APF: NO REFIERE' where antef_id=27
+update cesdb_arextension.dns_newtraumatologiagridexamenfisico set gexamfis_observacion='' where gexamfis_id=1439
+update cesdb_arextension.dns_newtraumatologiagridexamenfisico set gexamfis_observacion='EXAMEN FISICO PACIENTE CONSCIENTE ORIENTADO AFEBRIL, ARTICULACION DE HOMBRO DERECHO LIMITACION Y DOLOR  A LA MOVILIDAD' where gexamfis_id=1439
+update cesdb_arextension.dns_antecedentesfamiliaresnewconext set antef_descripcion='APF: NO REFIERE' where antef_id=28
+update cesdb_arextension.dns_newtraumatologiagridorgano set gorgano_observacion='' where gorgano_id=584
+update cesdb_arextension.dns_newtraumatologiagridorgano set gorgano_observacion=' Hombro derecho con alineación conservada. No se observan deformidades óseas evidentes ni signos inflamatorios locales. Piel íntegra, sin equimosis ni eritema. Tono y trofismo muscular ligeramente disminuidos en región deltoidea.Aprehensión anterior: Positiva.
+
+Prueba de recolocación: Positiva.
+
+Prueba de Neer y Hawkins-Kennedy: Negativas.
+' where gorgano_id=584
+update cesdb_arextension.dns_antecedentespersonalesnewconext set antep_descripcion='' where antep_id=48
+update cesdb_arextension.dns_antecedentespersonalesnewconext set antep_descripcion='Hipotiroidismo tratamiento con levotiroxina ' where antep_id=48
+update cesdb_arextension.dns_antecedentespersonalesnewconext set antep_descripcion='' where antep_id=49
+update cesdb_arextension.dns_antecedentespersonalesnewconext set antep_descripcion='Hipoparatiroidismo: En tratamiento con carbonato de calcio.' where antep_id=49
+update cesdb_arextension.dns_antecedentespersonalesnewconext set antep_descripcion='HIPOTIROIDISMO' where antep_id=50
+update cesdb_arextension.dns_antecedentesfamiliaresnewconext set antef_descripcion='APF: NO REFIERE' where antef_id=29
+update cesdb_arextension.dns_newtraumatologiagridorgano set gorgano_observacion='' where gorgano_id=594
+update cesdb_arextension.dns_newtraumatologiagridorgano set gorgano_observacion='A LA DEAMBULACION DISBASIA, SIGNO DE TALLE DERECHO , LASSEGUE - STLENDER + CERVICAL, REFLEJOS POSITIVOS, SENSIBILIDAD POSITYIVA' where gorgano_id=594
+update cesdb_arextension.dns_antecedentespersonalesnewconext set antep_descripcion='APQ' where antep_id=51
+update cesdb_arextension.dns_antecedentespersonalesnewconext set antep_descripcion='APQ' where antep_id=51
+update cesdb_arextension.dns_antecedentespersonalesnewconext set antep_descripcion='APQ' where antep_id=51
+update cesdb_arextension.dns_antecedentespersonalesnewconext set antep_descripcion='APQ: HISTERECTOMIA HACE 10 AÑOS, MIOMAS' where antep_id=51
+update cesdb_arextension.dns_newconsultaexternagridorgano set gorgano_observacion='' where gorgano_id=212
+update cesdb_arextension.dns_newconsultaexternagridorgano set gorgano_observacion='PACIENTE FEMENINA ORIENTADA SIN SIGNOS DE DIFICULTAD RESPIRATORIA, AMIGDALAS HIPERTROFICSA PRESENCIA DE EXUDADO AMIGDALINO, ADENOPATIAS PRESENTES 
+TORAX SIMETRICO MURMULLO VESICULAR CONSERVADO
+EXTREMIDADES SIMETRICAS LLENADO CAPILAR ' where gorgano_id=212
+update cesdb_arextension.dns_antecedentespersonalesnewconext set antep_descripcion='APP: NO REFIERE' where antep_id=52
+update cesdb_arextension.dns_antecedentesfamiliaresnewconext set antef_descripcion='APF: NO REFIERE' where antef_id=30
+update cesdb_arextension.dns_newtraumatologiagridorgano set gorgano_observacion='PACIENTE CONSCIENTE ORIENTADO, TRIANGULO DE TALLE AUMENTADO LADO IZQUIERDO, PRUEBA DE INCLINACION POSITIVO ASIMETRIA, VALLEX+ , LASSEGUE MIEMBRO INFERIOR DERECHO + A 10° LASSEGUE POSITIVO MII : A 30° , SNELLE POSITIVO , STENDLER POSITIVO , STEWART POSITIVO, REFLEJOS NORMALES, SENSIBILIDAD NORMAL. ' where gorgano_id=604
+update cesdb_arextension.dns_antecedentespersonalesnewconext set antep_descripcion='' where antep_id=53
+update cesdb_arextension.dns_antecedentespersonalesnewconext set antep_descripcion='' where antep_id=53
+update cesdb_arextension.dns_antecedentespersonalesnewconext set antep_descripcion='Hipotiroidismo levotiroxina 0,25 mg cada día' where antep_id=53
+update cesdb_arextension.dns_antecedentespersonalesnewconext set antep_descripcion='Hipotiroidismo levotiroxina 0,25 mg cada día' where antep_id=53
+update cesdb_arextension.dns_antecedentespersonalesnewconext set antep_descripcion='dermatitis atopica' where antep_id=54
+update cesdb_arextension.dns_antecedentespersonalesnewconext set antep_descripcion='dermatitis atópica' where antep_id=54
+update cesdb_arextension.dns_antecedentespersonalesnewconext set antep_descripcion='dermatitis atópica' where antep_id=54
+update cesdb_arextension.dns_newtraumatologiagridorgano set gorgano_observacion='TABIQUE NASAL SE OBSERVA EDEMA Y DESVIACION DEL MISMO HACIA LA DERECHA, HEMATOMA' where gorgano_id=614
+update cesdb_arextension.dns_newtraumatologiagridorgano set gorgano_observacion='TABIQUE NASAL SE OBSERVA EDEMA Y DESVIACION DEL MISMO HACIA LA DERECHA, HEMATOMA' where gorgano_id=614
+update cesdb_arextension.dns_newtraumatologiagridorgano set gorgano_observacion='TABIQUE NASAL SE OBSERVA EDEMA Y DESVIACION DEL MISMO HACIA LA DERECHA, HEMATOMA' where gorgano_id=614
+update cesdb_arextension.dns_antecedentespersonalesnewconext set antep_descripcion='APP: NO REFIERE' where antep_id=55
+update cesdb_arextension.dns_newconsultaexternagridorgano set gorgano_observacion='HACE UN MES LUEGO DE ESFUERZO FISICO PRESENTA DOLOR ABDOMINAL PERIUMBILICAL' where gorgano_id=233
+update cesdb_arextension.dns_newtraumatologiagridexamenfisico set gexamfis_observacion='PRESENTA DOLOR A LA PALPACION EN CARA POSTERIOR DE HOMBRO, LIMITACION FUNCIONAL A LOS MOVIMIENTOS DE ABDCUCION Y ROTACION EXTERNA, SE PALPA CONTRACTURA MUSCULAR A NIVEL DE ESCAPULA (CAPSULA POSTERIOR)' where gexamfis_id=1564
+update cesdb_arextension.dns_newtraumatologiagridexamenfisico set gexamfis_observacion='AL EXAMEN FISICOMOVILIDAD CONSERVADA LEVE DOLOR A LA DIGITOPRESION EN CARA ANTERIOR DE HOMBRO DERECHO A' where gexamfis_id=1614
+update cesdb_arextension.dns_newtraumatologiagridexamenfisico set gexamfis_observacion='DOLOR A LA PLPACION EN CARA ANTERIOR DE HOMBROD ERECHO, SIGNO DE NEER, JOB, POSITIVOS, LEVE LIMITACION FUNCIONAL DE MOVIMIENTOS DEL HOMBRO ' where gexamfis_id=1639

@@ -1,3 +1,9 @@
 app_cliente
 dns_atencion
 dns_newemergenciaanamesis
+app_cliente
+dns_atencion
+dns_atencion
+app_cliente
+dns_atencion
+dns_atencion

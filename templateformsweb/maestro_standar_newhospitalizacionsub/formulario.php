@@ -579,8 +579,8 @@ if($bandera_cie == 0 && !$csearch && isset($atenc_id) && $atenc_id > 0)
             {
                 $diagnosticos_array = array();
 
-//                echo "<script>";
-//                echo "console.log('🔄 Cargando diagnósticos automáticamente (registro nuevo)...');";
+                echo "<script>";
+                echo "console.log('Cargando diagnósticos automáticamente (registro nuevo)...');";
 
                 while (!$rs_listd->EOF)
                 {
@@ -596,20 +596,20 @@ if($bandera_cie == 0 && !$csearch && isset($atenc_id) && $atenc_id > 0)
                     $rs_listd->MoveNext();
                 }
 
-//                echo "console.log('✅ Diagnósticos cargados: ".count($diagnosticos_array)."');";
-//                echo "</script>";
+                echo "console.log('Diagnósticos cargados: ".count($diagnosticos_array)."');";
+                echo "</script>";
             }
         }
     }
 }
-//else if($bandera_cie > 0)
-//{
-//    echo "<script>console.log('ℹ️ Registro ya tiene ".$bandera_cie." diagnóstico(s) guardado(s). No se cargan automáticamente.');</script>";
-//}
-//else if($csearch)
-//{
-//    echo "<script>console.log('ℹ️ Modo edición: No se cargan diagnósticos automáticamente.');</script>";
-//}
+else if($bandera_cie > 0)
+{
+    echo "<script>console.log('ℹ️ Registro ya tiene ".$bandera_cie." diagnóstico(s) guardado(s). No se cargan automáticamente.');</script>";
+}
+else if($csearch)
+{
+    echo "<script>console.log('ℹ️ Modo edición: No se cargan diagnósticos automáticamente.');</script>";
+}
 
 echo $objformulario->generar_formulario_nfechas($table,$DB_gogess);
 ?>

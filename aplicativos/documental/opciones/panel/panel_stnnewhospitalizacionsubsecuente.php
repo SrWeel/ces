@@ -383,11 +383,11 @@ $linkeditar= 'onClick="ver_formularioenpantalla('.$comill_s.'aplicativos/documen
 
 $linkapaciente="onClick=ver_formularioenpantalla('aplicativos/documental/datos_stnnewhospitalizacionanamnesis.php','Editar','divBody_ext','".$anam_id."','".@$clie_id."',210,'".$atenc_id."',0,'".$tipofor_id."','".$centro_id."');";
 
-echo '<button type="button" class="mb-sm btn btn-success" '.$linkapaciente.'  style="cursor:pointer"><span class="glyphicon glyphicon-arrow-left"></span> Regresar a Consulta Externa - Anamnesis y Examen F&iacute;sico </button>&nbsp;&nbsp;&nbsp;';
+echo '<button type="button" class="mb-sm btn btn-success" '.$linkapaciente.'  style="cursor:pointer"><span class="glyphicon glyphicon-arrow-left"></span> REGRESAR A HOSPITALIZACION </button>&nbsp;&nbsp;&nbsp;';
 
-//$linkimprimir='onClick=genera_pdfevolucion();';
+$linkimprimir='onClick=genera_pdfevolucion();';
 
-//echo '<button type="button" class="mb-sm btn btn-info" '.$linkimprimir.'  style="cursor:pointer"><span class="glyphicon glyphicon-print"></span></button>&nbsp;&nbsp;';
+echo '<button type="button" class="mb-sm btn btn-info" '.$linkimprimir.'  style="cursor:pointer"><span class="glyphicon glyphicon-print"></span></button>&nbsp;&nbsp;';
 
 echo '<button type="button" class="mb-sm btn btn-primary"  '.$linkeditar.'  style="background-color:#000066"  ><span class="glyphicon glyphicon-plus"></span>NUEVO REGISTRO...</button>';
 

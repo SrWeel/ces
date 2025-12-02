@@ -1,0 +1,23 @@
+update cesdb_arextension.dns_antecedentespersonalesnewconext set antep_descripcion='APP MIOPIA Y ASTIGMATISMO CON LENTES CORRECTIVOS' where antep_id=56
+update cesdb_arextension.dns_antecedentesfamiliaresnewconext set antef_descripcion='ABUELA MATERNA HIPOTIROIDISMO Y DIABETES MELLITUS' where antef_id=31
+update cesdb_arextension.dns_antecedentesfamiliaresnewconext set antef_descripcion='ABUELA MATERNA HIPOTIROIDISMO Y DIABETES MELLITUS' where antef_id=31
+update cesdb_arextension.dns_antecedentespersonalesnewconext set antep_descripcion='MIOPIA Y ASTIGMATISMO CON LENTES CORRECTIVOS' where antep_id=56
+update cesdb_arextension.dns_newtraumatologiagridorgano set gorgano_observacion='MUÑECA Y MANO DERECHA ' where gorgano_id=664
+update cesdb_arextension.dns_newtraumatologiagridexamenfisico set gexamfis_observacion='MUÑECA DERECHA DOLOR A NIVEL DE ARTICULACION METACARPOFALANGICA DEL PRIMER DEDO  Y EN TABAQUERA ANATOMICA BUENA CIRCULACION Y SENSIBILIDAD CONSERVADAS' where gexamfis_id=1664
+update cesdb_arextension.dns_antecedentespersonalesnewconext set antep_descripcion='REDUCCION + OTS POR FRACTURA DE MUÑECA IZQUIERDA (RADIO DISTAL) HACE 6 AÑOS ' where antep_id=57
+update cesdb_arextension.dns_antecedentesfamiliaresnewconext set antef_descripcion=' CANCER DE TIROIDES ABUELA MATERNA ' where antef_id=32
+update cesdb_arextension.dns_newtraumatologiagridorgano set gorgano_observacion='CONTUSION OJO IZQUIERDO Y LABIOS ' where gorgano_id=676
+update cesdb_arextension.dns_newtraumatologiagridexamenfisico set gexamfis_observacion='SIN EVIDENCIA DE PATOLOGIA' where gexamfis_id=1681
+update cesdb_arextension.dns_newtraumatologiagridexamenfisico set gexamfis_observacion='SIN EVIDENCIA DE PATOLOGIA' where gexamfis_id=1684
+update cesdb_arextension.dns_newtraumatologiagridexamenfisico set gexamfis_observacion=' EDEMA EQUIMOSIS PERIOCULAR IZ BUENA VISION DOLOR A LA PALPACION EN MACIZO FACIAL ' where gexamfis_id=1681
+update cesdb_arextension.dns_newtraumatologiagridexamenfisico set gexamfis_observacion=' EDEMA EQUIMOSIS PERIOCULAR IZ BUENA VISION DOLOR A LA PALPACION EN MACIZO FACIAL ' where gexamfis_id=1681
+update cesdb_arextension.dns_newtraumatologiagridexamenfisico set gexamfis_observacion='ABIOS CON EDEMA DE TEJIDO BLANDO Y LACERACIONES SUPERFICIALES EN PROCESO DE CICATRIZACION ' where gexamfis_id=1684
+update cesdb_arextension.dns_newtraumatologiagridorgano set gorgano_observacion='DOLOR DE RODILLA DERECHA ' where gorgano_id=684
+update cesdb_arextension.dns_newtraumatologiagridexamenfisico set gexamfis_observacion='RODILLA DERECHA SIGNO DE CHOQUE + RESALTO PRESENTE BOSTEZO INTERNO IMPRESIONA + CAJON ANTERIOR POSITIVO, STEINMANN PARA MENISCO INTERNO +, FUERZA MUSCULAR NO VALORADA POR DOLOR, SENSIBILIDAD CONSERVADA, PULSOS DISTALES PRESENTES. 
+' where gexamfis_id=1715
+update cesdb_arextension.dns_newtraumatologiagridorgano set gorgano_observacion='OMALGIA DERECHA' where gorgano_id=694
+update cesdb_arextension.dns_newtraumatologiagridexamenfisico set gexamfis_observacion='SIN EVIDENCIA DE PATOLOGIA' where gexamfis_id=1739
+update cesdb_arextension.dns_newtraumatologiagridexamenfisico set gexamfis_observacion='SIN EVIDENCIA DE PATOLOGIA' where gexamfis_id=1739
+update cesdb_arextension.dns_newtraumatologiagridexamenfisico set gexamfis_observacion='SIN EVIDENCIA DE PATOLOGIA' where gexamfis_id=1739
+update cesdb_arextension.dns_newtraumatologiagridexamenfisico set gexamfis_observacion='HOMBRO DERECHO DOLOR A LA PALPACION EN CARA ANTERIOR, JOBE+ NEER+ HK + LIMITACION FUNCIONAL A LOS MOVIMIENTOS DE FLEXION ANTERIOR 90º Y ABDUCCION 90º, FUERZA MUSCULAR DISMINUIDA, SENSIBILIDAD CONSERVADA' where gexamfis_id=1739
+update cesdb_arextension.dns_newtraumatologiagridexamenfisico set gexamfis_observacion='SIN EVIDENCIA DE PATOLOGIA' where gexamfis_id=1747

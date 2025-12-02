@@ -286,6 +286,14 @@ if($bloque_registro==1)
 
 //}
 
+///////
+$linkimprimir='onClick=genera_pdfevolucion();';
+$medicationadmin='onClick=genera_medicationadmin();';
+
+echo '<button type="button" class="mb-sm btn btn-info" '.$linkimprimir.'  style="cursor:pointer"><span class="glyphicon glyphicon-print"></span>Imprimir notas de enfermeria</button>&nbsp;&nbsp;';
+echo '<button type="button" class="mb-sm btn btn-info" '.$medicationadmin.'  style="cursor:pointer"><span class="glyphicon glyphicon-print"></span>Imprimir administración de medicamentos</button>&nbsp;&nbsp;';
+//////
+
 
 switch ($table) {
     case 'dns_referencia':
@@ -330,6 +338,7 @@ echo '<button type="button" class="mb-sm btn btn-info" '.$linkimprimir.'  style=
 <?php
 }			
 ?>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script type="text/javascript">
 <!--
 
@@ -484,6 +493,44 @@ function genera_interconsultapdf()
 	 }
 
 }
+
+//////////
+function genera_pdfevolucion()
+{
+    var id_registro = $('#<?php echo $campo_primariodata; ?>').val();
+
+    if (!id_registro || id_registro <= 0) {
+        Swal.fire({
+            icon: 'warning',
+            title: '¡Espera!',
+            html: 'Por favor <b>guarda el registro</b> antes de imprimir las notas de enfermería.',
+            confirmButtonText: 'Entendido'
+        });
+        return;
+    }
+
+    var url = "pdfformularios/pdfformenfermeria.php?ssr=<?php echo $campos_data64; ?>|" + id_registro;
+    window.open(url, '_blank');
+}
+//////////
+function genera_medicationadmin()
+{
+    var id_registro = $('#<?php echo $campo_primariodata; ?>').val();
+
+    if (!id_registro || id_registro <= 0) {
+        Swal.fire({
+            icon: 'warning',
+            title: '¡Espera!',
+            html: 'Por favor <b>guarda el registro</b> antes de imprimir .',
+            confirmButtonText: 'Entendido'
+        });
+        return;
+    }
+
+    var url = "pdfformularios/genera_medicationadmin.php?ssr=<?php echo $campos_data64; ?>|" + id_registro;
+    window.open(url, '_blank');
+}
+///////////
 
 //  End -->
 </script>
