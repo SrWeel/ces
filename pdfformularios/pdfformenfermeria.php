@@ -230,7 +230,7 @@ if($_SESSION['ces1313777_sessid_inicio']) {
             
             /* TÍTULOS AZULES */
             .titulo-azul {
-                background-color: #b0bdff;
+                background-color: #CCCCFF;
                 color: black;
                 font-weight: bold;
                 text-align: left;
@@ -240,7 +240,7 @@ if($_SESSION['ces1313777_sessid_inicio']) {
             
             /* ENCABEZADOS VERDES */
             .encabezado-verde {
-                background-color: #b6efb6;
+                background-color: #CCFFCC;
                 color: black;
                 font-weight: bold;
                 text-align: center;
@@ -266,7 +266,7 @@ if($_SESSION['ces1313777_sessid_inicio']) {
             }
             
             .tabla-notas th { 
-                background-color: #b0bdff; 
+                background-color: #CCCCFF; 
                 color: black; 
                 padding: 6px 4px; 
                 text-align: left; 

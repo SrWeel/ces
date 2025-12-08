@@ -237,7 +237,7 @@ if($_SESSION['ces1313777_sessid_inicio']) {
             }
             
             .titulo-azul {
-                background-color: #b0bdff;
+                background-color: #CCCCFF;
                 color: black;
                 font-weight: bold;
                 text-align: left;
@@ -246,7 +246,7 @@ if($_SESSION['ces1313777_sessid_inicio']) {
             }
             
             .encabezado-verde {
-                background-color: #b6efb6;
+                background-color: #CCFFCC;
                 color: black;
                 font-weight: bold;
                 text-align: center;
@@ -270,7 +270,7 @@ if($_SESSION['ces1313777_sessid_inicio']) {
             }
             
             .tabla-medicamentos th { 
-                background-color: #b6efb6; 
+                background-color: #CCFFCC; 
                 color: black; 
                 padding: 6px 4px; 
                 text-align: left; 
