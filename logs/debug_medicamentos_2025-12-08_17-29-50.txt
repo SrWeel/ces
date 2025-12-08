@@ -1,0 +1,61 @@
+=== LOG DE DEPURACIÓN - ADMINISTRACIÓN DE MEDICAMENTOS ===
+Fecha: 2025-12-08 17:29:50
+
+1. INICIO DEL SCRIPT
+   Sesión activa: SÍ
+
+2. PARÁMETROS GET RECIBIDOS:
+   GET completo: Array
+(
+    [ssr] => aWRkYXRhPTMyOCZwVmFyMj0xJnBWYXI0PTEmcFZhcjM9NjY=|2
+)
+
+   ssr INVÁLIDO (no pasa regex)
+
+3. DECODIFICANDO PARÁMETROS
+   Campos separados por |: Array
+(
+    [0] => aWRkYXRhPTMyOCZwVmFyMj0xJnBWYXI0PTEmcFZhcjM9NjY=
+    [1] => 2
+)
+
+   Parámetros decodificados: iddata=328&pVar2=1&pVar4=1&pVar3=66
+   iddata = 328
+   pVar2 = 1
+   pVar4 = 1
+   pVar3 = 66
+
+4. VARIABLES PRINCIPALES:
+   clie_id: 1
+   mnupan_id: 66
+   atenc_id: 1
+   enferm_id: 2
+
+5. INCLUYENDO ARCHIVOS DE CONFIGURACIÓN
+   Incluido: ../cfg/clases.php
+   Incluido: ../cfg/declaracion.php
+
+6. VERIFICANDO CONEXIÓN A BASE DE DATOS
+   Conexión DB_gogess OK
+   Objeto ValidacionesFormulario creado OK
+
+7. CONSULTANDO TABLA dns_enfermeria
+   SQL: SELECT enferm_enlace FROM dns_enfermeria WHERE enferm_id = ?
+   Parámetro: enferm_id = 2
+   ✓ enferm_enlace encontrado: 101170958461743202511170128341
+
+8. CONSULTANDO DATOS DEL PACIENTE
+   ✓ Paciente encontrado: Franklin Aguas
+
+9. CONSULTANDO ADMINISTRACIÓN DE MEDICAMENTOS
+   SQL: SELECT m.gadmmedi_id, m.*, u.usua_nombre, u.usua_apellido, u.usua_codigo, u.usua_codigoiniciales 
+                         FROM dns_gridadmmedicamentos m
+                         LEFT JOIN app_usuario u ON m.usua_id = u.usua_id
+                         WHERE m.enferm_enlace = ?
+                         ORDER BY m.gadmmedi_fecha DESC, m.gadmmedi_hora DESC
+   Parámetro: enferm_enlace = '101170958461743202511170128341'
+
+10. RESULTADOS DE MEDICAMENTOS:
+   ✗ ERROR: Recordset es NULL
+
+11. FIN DEL ANÁLISIS

@@ -218,7 +218,7 @@ if($_SESSION['ces1313777_sessid_inicio']) {
                 width: 100%;
                 border: 1px solid #000;
                 border-collapse: collapse;
-                margin-bottom: 10px;
+                margin-bottom: 3px;
             }
             
             .tabla-datos td {
@@ -266,12 +266,12 @@ if($_SESSION['ces1313777_sessid_inicio']) {
             }
             
             .tabla-notas th { 
-                background-color: #2c3e50; 
-                color: white; 
+                background-color: #b0bdff; 
+                color: black; 
                 padding: 6px 4px; 
                 text-align: left; 
                 border: 1px solid #000;
-                font-size: 9px;
+                font-size: 7px;
                 font-weight: bold;
             }
             

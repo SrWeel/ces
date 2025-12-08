@@ -535,4 +535,4 @@ function genera_medicationadmin()
 //  End -->
 </script>
 <div id="divBody_turnos"></div>
-<div id="genera_pro"></div>
+<div    id="genera_pro"></div>

@@ -1,0 +1,1 @@
+insert into cesdb_arextension.dns_gridadmmedicamentos (gadmmedi_medicamento,gadmmedi_dosis,gadmmedi_via,gadmmedi_frecuencia,gadmmedi_fecha,gadmmedi_hora,gadmmedi_responsable,enferm_enlace,gadmmedi_fecharegistro,usua_id) values ('PARASHAH','1','2','2','2025-12-02','11 : 25','YO MISMO','101170958461743202511170128341','2025-12-08 10:42:38','1')
