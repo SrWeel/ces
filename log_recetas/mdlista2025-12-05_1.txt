@@ -1,0 +1,11 @@
+update cesdb_arextension.dns_newtraumatologiagridexamenfisico set gexamfis_observacion='COLUMNA ANGULO DE TALLE AUMENTADO , DESVIACION DE COLUMNA LUMBAR OBSERVABLE ' where gexamfis_id=2562
+update cesdb_arextension.dns_antecedentespersonalesnewconext set antep_descripcion='ARTROSIS DG HACE 9 AÑOS EN TTO DEFLAZACORT 6MG ' where antep_id=81
+update cesdb_arextension.dns_antecedentespersonalesnewconext set antep_descripcion='ARTROSIS DG HACE 9 AÑOS EN TTO DEFLAZACORT 6MG ' where antep_id=81
+update cesdb_arextension.dns_antecedentespersonalesnewconext set antep_descripcion='ARTROSIS DG HACE 9 AÑOS EN TTO DEFLAZACORT 6MG 
+HERNIORRAFIA UMBILICAL HACE 2 AÑOS' where antep_id=81
+update cesdb_arextension.dns_newconsultaexternagridorgano set gorgano_observacion='DOLOR ABDOMINAL ' where gorgano_id=313
+update cesdb_arextension.dns_newconsultaexternagridexamenfisico set gexamfis_observacion='PACIENTE CONSCIENTE ORIENTADA AFEBRIL OBESA III MUCOSAS ORALES SEMIHUMEDAS SIGNO DE PLIEGUE CUTANEO LENTO, ABDOMEN DISTENDIDO DOLOROSO DIFUSAMENTE EN MESOGASTRIO E HIPOGASTRIO, RHA ++, TIMPANICO, NO IMPRESIONAN SIGNOS DE IRRTACIÓN PERITONEAL' where gexamfis_id=794
+update cesdb_arextension.dns_newtraumatologiagridorgano set gorgano_observacion='' where gorgano_id=1034
+update cesdb_arextension.dns_newtraumatologiagridorgano set gorgano_observacion='' where gorgano_id=1034
+update cesdb_arextension.dns_newtraumatologiagridorgano set gorgano_observacion='MIEMBRO INFERIOR IZQUIERDO A NIVEL DE PIE DOLOR A LA DIGITOPRESION EN CARA TARSAL ZONA MEDIA, EDEMA DE TEJIDO BLANDO EN ZONA DE EXPOSICION, DISCRETO LIMITACION FUNCIONAL A LA MOVILIDAD DISTAL, LLENADO CAPILAR ADECUADO, PULSOS DISTALES PRESENTES' where gorgano_id=1034
+update cesdb_arextension.dns_newtraumatologiagridexamenfisico set gexamfis_observacion='MIEMBRO INFERIOR IZQUIERDO A NIVEL DE PIE DOLOR A LA DIGITOPRESION EN CARA TARSAL ZONA MEDIA, EDEMA DE TEJIDO BLANDO EN ZONA DE EXPOSICION, DISCRETO LIMITACION FUNCIONAL A LA MOVILIDAD DISTAL, LLENADO CAPILAR ADECUADO, PULSOS DISTALES PRESENTES' where gexamfis_id=2590

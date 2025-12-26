@@ -1,0 +1,6 @@
+update cesdb_arextension.dns_newtraumatologiagridorgano set gorgano_observacion='DOLOR EN TOBILLO IZQUIERDO ' where gorgano_id=814
+update cesdb_arextension.dns_newtraumatologiagridexamenfisico set gexamfis_observacion='' where gexamfis_id=2040
+update cesdb_arextension.dns_newtraumatologiagridexamenfisico set gexamfis_observacion='TOBILLO IZQUIERDO EDEMA ++ QUE SE EXTIENDE A TERCIO INFERIOR DE PIERNA, DOLOR A LA PALPACION EN REGION MALEOLAR EXTERNA, LIMITACION FUNCIONAL AUNQUE PREVALECEN BUENA MOVILIDAD A LOS MOVIMIENTOS DE INVERSION Y EVERSION DE TOBILLO, FUERZA MUSCULAR NO VALORADA, SENSIBILIDAD CONSERVADA. ' where gexamfis_id=2040
+update cesdb_arextension.dns_newtraumatologiagridorgano set gorgano_observacion='DOLOR DE TOBILLOS ' where gorgano_id=824
+update cesdb_arextension.dns_newtraumatologiagridexamenfisico set gexamfis_observacion='TOBILLO DERECHO DOLOR A NIVEL DE ARTICULACION TIBIOPERONEA INFERIOR MOVILIDAD CONSERVADA 
+TOBILLO IZ DOLOR AL VARO FORZADO ' where gexamfis_id=2065

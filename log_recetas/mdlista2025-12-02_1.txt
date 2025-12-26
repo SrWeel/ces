@@ -1,0 +1,3 @@
+update cesdb_arextension.dns_antecedentespersonaleshospi set antep_descripcion='REDUCCION INCRUENTA BAJO SEDACIÓN POR LUXACION DE HOMBRO IZQUIERDO HACE 4 AÑOS ' where antep_id=2
+update cesdb_arextension.dns_antecedentesfamiliareshospi set antef_descripcion='ABUELA PATERNA CON HIPERTENSION ARTERIAL' where antef_id=4
+update cesdb_arextension.dns_newhospitalizaciongridorgano set gorgano_observacion='OMALGIA DERECHA ' where gorgano_id=444

@@ -266,7 +266,7 @@ if($_SESSION['ces1313777_sessid_inicio']) {
             }
             
             .tabla-notas th { 
-                background-color: #CCCCFF; 
+                background-color: #CCFFCC; 
                 color: black; 
                 padding: 6px 4px; 
                 text-align: left; 
@@ -322,7 +322,7 @@ if($_SESSION['ces1313777_sessid_inicio']) {
                     <div class="subtitulo">NOTAS DE ENFERMERÍA</div>
                 </td>
                 <td class="codigo-cell">
-                    <strong>CÓDIGO:</strong><br>'.$uni_codiog.'
+                    <strong>N° HCU:</strong><br>'.$hc.'
                 </td>
             </tr>
         </table>
@@ -346,7 +346,7 @@ if($_SESSION['ces1313777_sessid_inicio']) {
             
             <!-- FILA 3: DATOS (6 columnas) -->
             <tr>
-                <td class="celda-dato" colspan="2">'.$institucion_valor.'</td>
+                <td class="celda-dato" colspan="2">'.$nomb_centro.'</td>
                 <td class="celda-dato">'.$uni_codiog.'</td>
                 <td class="celda-dato" colspan="2">'.$nomb_centro.'</td>
                 <td class="celda-dato">'.$hc.'</td>
@@ -382,10 +382,14 @@ if($_SESSION['ces1313777_sessid_inicio']) {
         <!-- TABLA DE NOTAS DE ENFERMERÍA -->
         <table class="tabla-notas">
             <thead>
+            <tr>                
+                <td class="titulo-azul" colspan="5">B. NOTAS DE ENFERMERIA </td>
+                </tr>
                 <tr>
-                    <th width="45%">DOSIS, VÍA, FRECUENCIA</th>
+                   
                     <th width="12%">FECHA</th>
                     <th width="10%">HORA</th>
+                     <th width="45%">NOTAS DE ENFERMERIA</th>
                     <th width="23%">RESPONSABLE</th>
                     <th width="10%">REGISTRO</th>
                 </tr>
@@ -426,9 +430,10 @@ if($_SESSION['ces1313777_sessid_inicio']) {
 
             $html_reporte .= '
                 <tr>
-                    <td>'.$anotaciones.'</td>
+                    
                     <td>'.date("d/m/Y", strtotime($fecha)).'</td>
                     <td>'.$hora.'</td>
+                    <td>'.$anotaciones.'</td>
                     <td>'.$info_usuario.'</td>
                     <td>'.date("d/m/Y H:i", strtotime($fecha_registro)).'</td>
                 </tr>';

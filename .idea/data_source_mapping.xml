@@ -3,8 +3,12 @@
   <component name="DataSourcePerFileMappings">
     <file url="file://$APPLICATION_CONFIG_DIR$/consoles/db/63728ea9-59f4-49d0-b582-8ad81f0854ca/console.sql" value="63728ea9-59f4-49d0-b582-8ad81f0854ca" />
     <file url="file://$APPLICATION_CONFIG_DIR$/consoles/db/63728ea9-59f4-49d0-b582-8ad81f0854ca/console_1.sql" value="63728ea9-59f4-49d0-b582-8ad81f0854ca" />
+    <file url="file://$APPLICATION_CONFIG_DIR$/consoles/db/63728ea9-59f4-49d0-b582-8ad81f0854ca/console_11.sql" value="63728ea9-59f4-49d0-b582-8ad81f0854ca" />
     <file url="file://$APPLICATION_CONFIG_DIR$/consoles/db/63728ea9-59f4-49d0-b582-8ad81f0854ca/console_2.sql" value="63728ea9-59f4-49d0-b582-8ad81f0854ca" />
     <file url="file://$APPLICATION_CONFIG_DIR$/consoles/db/63728ea9-59f4-49d0-b582-8ad81f0854ca/console_3.sql" value="63728ea9-59f4-49d0-b582-8ad81f0854ca" />
     <file url="file://$APPLICATION_CONFIG_DIR$/consoles/db/63728ea9-59f4-49d0-b582-8ad81f0854ca/console_4.sql" value="63728ea9-59f4-49d0-b582-8ad81f0854ca" />
+    <file url="file://$APPLICATION_CONFIG_DIR$/consoles/db/63728ea9-59f4-49d0-b582-8ad81f0854ca/console_5.sql" value="63728ea9-59f4-49d0-b582-8ad81f0854ca" />
+    <file url="file://$APPLICATION_CONFIG_DIR$/consoles/db/63728ea9-59f4-49d0-b582-8ad81f0854ca/console_6.sql" value="63728ea9-59f4-49d0-b582-8ad81f0854ca" />
+    <file url="file://$APPLICATION_CONFIG_DIR$/consoles/db/63728ea9-59f4-49d0-b582-8ad81f0854ca/console_7.sql" value="63728ea9-59f4-49d0-b582-8ad81f0854ca" />
   </component>
 </project>

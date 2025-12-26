@@ -290,8 +290,8 @@ if($bloque_registro==1)
 $linkimprimir='onClick=genera_pdfevolucion();';
 $medicationadmin='onClick=genera_medicationadmin();';
 
-echo '<button type="button" class="mb-sm btn btn-info" '.$linkimprimir.'  style="cursor:pointer"><span class="glyphicon glyphicon-print"></span>Imprimir notas de enfermeria</button>&nbsp;&nbsp;';
-echo '<button type="button" class="mb-sm btn btn-info" '.$medicationadmin.'  style="cursor:pointer"><span class="glyphicon glyphicon-print"></span>Imprimir administración de medicamentos</button>&nbsp;&nbsp;';
+echo '<button type="button" class="mb-sm btn btn-info" '.$linkimprimir.'  style="cursor:pointer"><span class="glyphicon glyphicon-print"></span>NOTAS ENFERMERIA</button>&nbsp;&nbsp;';
+echo '<button type="button" class="mb-sm btn btn-info" '.$medicationadmin.'  style="cursor:pointer"><span class="glyphicon glyphicon-print"></span>ADM MEDICAMENTOS</button>&nbsp;&nbsp;';
 //////
 
 

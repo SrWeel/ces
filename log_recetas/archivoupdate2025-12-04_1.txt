@@ -1,0 +1,2 @@
+update cesdb_arextension.dns_newtraumatologiadiagnosticoanamnesis set diagn_cie='M751',diagn_descripcion='Síndrome del manguito rotatorio',diagn_tipo='DEFINITIVO' where diagn_id='104'
+update dns_signosvitales set signovita_presionarterial='120/80',signovita_temperaturabucal='36.2',signovita_talla='1.54',signovita_perimetrocefalico='',signovita_frecuenciacardiaca='78',signovita_frecuenciarespiratoria='17',signovita_peso='81.4',signovita_saturacionoxigeno='90',signovita_masacorporal='34.32',signovita_observaciones='' where signovita_id='274'

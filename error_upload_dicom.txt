@@ -1,0 +1,335 @@
+[22-Dec-2025 12:15:30 America/Guayaquil] =================================
+[22-Dec-2025 12:15:30 America/Guayaquil] === DIAGNÓSTICO CONFIGURACIÓN ===
+[22-Dec-2025 12:15:30 America/Guayaquil] =================================
+[22-Dec-2025 12:15:30 America/Guayaquil] upload_max_filesize: 40M
+[22-Dec-2025 12:15:30 America/Guayaquil] post_max_size: 80M
+[22-Dec-2025 12:15:30 America/Guayaquil] max_file_uploads: 20
+[22-Dec-2025 12:15:30 America/Guayaquil] memory_limit: -1
+[22-Dec-2025 12:15:30 America/Guayaquil] max_execution_time: 120
+[22-Dec-2025 12:15:30 America/Guayaquil] file_uploads: Enabled
+[22-Dec-2025 12:15:30 America/Guayaquil] upload_tmp_dir: F:\xampp\tmp
+[22-Dec-2025 12:15:30 America/Guayaquil] =================================
+[22-Dec-2025 12:15:31 America/Guayaquil] ✅ Carpeta base tiene permisos de escritura
+[22-Dec-2025 12:15:31 America/Guayaquil] =================================
+[22-Dec-2025 12:15:31 America/Guayaquil] === VALIDACIÓN DE ARCHIVOS ===
+[22-Dec-2025 12:15:31 America/Guayaquil] =================================
+[22-Dec-2025 12:15:31 America/Guayaquil] isset($_FILES['dicom_files']): SI
+[22-Dec-2025 12:15:31 America/Guayaquil] Estructura $_FILES['dicom_files']: Array
+(
+    [name] => Array
+        (
+            [0] => 36_egas manzano andres 36a_CLAVICULA_AP_image1762483345337.dcm
+            [1] => 36_egas manzano andres 36a_CLAVICULA_LORDOTICA_image1762483404042.dcm
+            [2] => 36_egas manzano andres 36a_CLAVICULA_LORDOTICA_image1762483440350.dcm
+            [3] => 36_egas manzano andres 36a_CLAVICULA_LORDOTICA_image1762483472425.dcm
+            [4] => 36_egas manzano andres 36a_CLAVICULA_LORDOTICA_image1762483505116.dcm
+        )
+
+    [type] => Array
+        (
+            [0] => application/octet-stream
+            [1] => application/octet-stream
+            [2] => application/octet-stream
+            [3] => application/octet-stream
+            [4] => application/octet-stream
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => F:\xampp\tmp\php17E7.tmp
+            [1] => F:\xampp\tmp\php1A79.tmp
+            [2] => F:\xampp\tmp\php1AF9.tmp
+            [3] => F:\xampp\tmp\php1C13.tmp
+            [4] => F:\xampp\tmp\php1D2E.tmp
+        )
+
+    [error] => Array
+        (
+            [0] => 0
+            [1] => 0
+            [2] => 0
+            [3] => 0
+            [4] => 0
+        )
+
+    [size] => Array
+        (
+            [0] => 18730390
+            [1] => 5425254
+            [2] => 10809788
+            [3] => 8751118
+            [4] => 9975718
+        )
+
+)
+
+[22-Dec-2025 12:15:31 America/Guayaquil] ¿Tiene name[0]?: SI
+[22-Dec-2025 12:15:31 America/Guayaquil] ¿name[0] está vacío?: NO
+[22-Dec-2025 12:15:31 America/Guayaquil] =================================
+[22-Dec-2025 12:15:31 America/Guayaquil] === DATOS DEL FORMULARIO ===
+[22-Dec-2025 12:15:31 America/Guayaquil] =================================
+[22-Dec-2025 12:15:31 America/Guayaquil] clie_id: 49
+[22-Dec-2025 12:15:31 America/Guayaquil] atenc_id: 17
+[22-Dec-2025 12:15:31 America/Guayaquil] centro_id: 1
+[22-Dec-2025 12:15:31 America/Guayaquil] usua_id: 1
+[22-Dec-2025 12:15:31 America/Guayaquil] imginfo_enlace: 49011212121212120251222121448233
+[22-Dec-2025 12:15:31 America/Guayaquil] imgag_id: 30
+[22-Dec-2025 12:15:31 America/Guayaquil] imginfo_id: 0
+[22-Dec-2025 12:15:31 America/Guayaquil] 🔍 Buscando imginfo_id usando imginfo_enlace: 49011212121212120251222121448233
+[22-Dec-2025 12:15:31 America/Guayaquil] ❌ No se encontró registro con imginfo_enlace: 49011212121212120251222121448233
+[22-Dec-2025 12:15:31 America/Guayaquil] =================================
+[22-Dec-2025 12:15:31 America/Guayaquil] === ❌ EXCEPCIÓN CAPTURADA ===
+[22-Dec-2025 12:15:31 America/Guayaquil] =================================
+[22-Dec-2025 12:15:31 America/Guayaquil] Mensaje: No se encontró el registro de imagenología. Guarde primero el formulario antes de subir archivos DICOM.
+[22-Dec-2025 12:15:31 America/Guayaquil] Archivo: F:\xampp\htdocs\ces\upload_dicom.php
+[22-Dec-2025 12:15:31 America/Guayaquil] Línea: 129
+[22-Dec-2025 12:15:31 America/Guayaquil] =================================
+[22-Dec-2025 12:15:31 America/Guayaquil] POST recibido:
+[22-Dec-2025 12:15:31 America/Guayaquil] Array
+(
+    [clie_id] => 49
+    [atenc_id] => 17
+    [centro_id] => 1
+    [usua_id] => 1
+    [imginfo_id] => 
+    [imginfo_enlace] => 49011212121212120251222121448233
+    [imginfo_fecharegistro] => 2025-12-22 12:14:48
+    [prob_codigo] => 
+    [imgag_id] => 30
+    [cant_codigo] => 
+    [imginfo_personarecibe] => 
+    [imginfo_fechaentrega] => 2025-12-23
+    [imginfo_profesionalsolicitante] => 
+    [imginfo_emergencia] => 0
+    [imginfo_consulta] => 0
+    [imginfo_hospital] => 0
+    [imginfo_servicio] => 
+    [imginfo_rxconvencional] => 0
+    [imginfo_tomografia] => 0
+    [imginfo_rxportatil] => 0
+    [imginfo_resonancia] => 0
+    [imginfo_ecografia] => 0
+    [imginfo_mamografia] => 0
+    [imginfo_procedimientos] => 0
+    [imginfo_otros] => 0
+    [imginfo_sedacion] => 
+    [imginfo_describir] => 
+    [imginfo_informe] => 
+    [dicom_folder_path] => 
+    [dicom_files_count] => 5
+    [imginfo_recomendaciones] => 
+    [csearch] => 
+    [clie_idx] => 49
+    [idab] => 
+    [opcion_dns_newimagenologiainfo] => guardar
+    [table] => dns_newimagenologiainfo
+    [atenc_idx] => 17
+    [imginfo_enlacex] => 49011212121212120251222121448233
+)
+
+[22-Dec-2025 12:15:31 America/Guayaquil] =================================
+[22-Dec-2025 12:15:31 America/Guayaquil] FILES recibido:
+[22-Dec-2025 12:15:31 America/Guayaquil] Array
+(
+    [dicom_files] => Array
+        (
+            [name] => Array
+                (
+                    [0] => 36_egas manzano andres 36a_CLAVICULA_AP_image1762483345337.dcm
+                    [1] => 36_egas manzano andres 36a_CLAVICULA_LORDOTICA_image1762483404042.dcm
+                    [2] => 36_egas manzano andres 36a_CLAVICULA_LORDOTICA_image1762483440350.dcm
+                    [3] => 36_egas manzano andres 36a_CLAVICULA_LORDOTICA_image1762483472425.dcm
+                    [4] => 36_egas manzano andres 36a_CLAVICULA_LORDOTICA_image1762483505116.dcm
+                )
+
+            [type] => Array
+                (
+                    [0] => application/octet-stream
+                    [1] => application/octet-stream
+                    [2] => application/octet-stream
+                    [3] => application/octet-stream
+                    [4] => application/octet-stream
+                )
+
+            [tmp_name] => Array
+                (
+                    [0] => F:\xampp\tmp\php17E7.tmp
+                    [1] => F:\xampp\tmp\php1A79.tmp
+                    [2] => F:\xampp\tmp\php1AF9.tmp
+                    [3] => F:\xampp\tmp\php1C13.tmp
+                    [4] => F:\xampp\tmp\php1D2E.tmp
+                )
+
+            [error] => Array
+                (
+                    [0] => 0
+                    [1] => 0
+                    [2] => 0
+                    [3] => 0
+                    [4] => 0
+                )
+
+            [size] => Array
+                (
+                    [0] => 18730390
+                    [1] => 5425254
+                    [2] => 10809788
+                    [3] => 8751118
+                    [4] => 9975718
+                )
+
+        )
+
+)
+
+[22-Dec-2025 12:15:31 America/Guayaquil] =================================
+[22-Dec-2025 12:15:40 America/Guayaquil] =================================
+[22-Dec-2025 12:15:40 America/Guayaquil] === DIAGNÓSTICO CONFIGURACIÓN ===
+[22-Dec-2025 12:15:40 America/Guayaquil] =================================
+[22-Dec-2025 12:15:40 America/Guayaquil] upload_max_filesize: 40M
+[22-Dec-2025 12:15:40 America/Guayaquil] post_max_size: 80M
+[22-Dec-2025 12:15:40 America/Guayaquil] max_file_uploads: 20
+[22-Dec-2025 12:15:40 America/Guayaquil] memory_limit: -1
+[22-Dec-2025 12:15:40 America/Guayaquil] max_execution_time: 120
+[22-Dec-2025 12:15:40 America/Guayaquil] file_uploads: Enabled
+[22-Dec-2025 12:15:41 America/Guayaquil] upload_tmp_dir: F:\xampp\tmp
+[22-Dec-2025 12:15:41 America/Guayaquil] =================================
+[22-Dec-2025 12:15:41 America/Guayaquil] ✅ Carpeta base tiene permisos de escritura
+[22-Dec-2025 12:15:41 America/Guayaquil] =================================
+[22-Dec-2025 12:15:41 America/Guayaquil] === VALIDACIÓN DE ARCHIVOS ===
+[22-Dec-2025 12:15:41 America/Guayaquil] =================================
+[22-Dec-2025 12:15:41 America/Guayaquil] isset($_FILES['dicom_files']): SI
+[22-Dec-2025 12:15:41 America/Guayaquil] Estructura $_FILES['dicom_files']: Array
+(
+    [name] => Array
+        (
+            [0] => 36_egas manzano andres 36a_CLAVICULA_AP_image1762483345337.dcm
+            [1] => 36_egas manzano andres 36a_CLAVICULA_LORDOTICA_image1762483404042.dcm
+            [2] => 36_egas manzano andres 36a_CLAVICULA_LORDOTICA_image1762483440350.dcm
+            [3] => 36_egas manzano andres 36a_CLAVICULA_LORDOTICA_image1762483472425.dcm
+            [4] => 36_egas manzano andres 36a_CLAVICULA_LORDOTICA_image1762483505116.dcm
+        )
+
+    [type] => Array
+        (
+            [0] => application/octet-stream
+            [1] => application/octet-stream
+            [2] => application/octet-stream
+            [3] => application/octet-stream
+            [4] => application/octet-stream
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => F:\xampp\tmp\php3FCC.tmp
+            [1] => F:\xampp\tmp\php424F.tmp
+            [2] => F:\xampp\tmp\php42DD.tmp
+            [3] => F:\xampp\tmp\php43D9.tmp
+            [4] => F:\xampp\tmp\php44B6.tmp
+        )
+
+    [error] => Array
+        (
+            [0] => 0
+            [1] => 0
+            [2] => 0
+            [3] => 0
+            [4] => 0
+        )
+
+    [size] => Array
+        (
+            [0] => 18730390
+            [1] => 5425254
+            [2] => 10809788
+            [3] => 8751118
+            [4] => 9975718
+        )
+
+)
+
+[22-Dec-2025 12:15:41 America/Guayaquil] ¿Tiene name[0]?: SI
+[22-Dec-2025 12:15:41 America/Guayaquil] ¿name[0] está vacío?: NO
+[22-Dec-2025 12:15:41 America/Guayaquil] =================================
+[22-Dec-2025 12:15:41 America/Guayaquil] === DATOS DEL FORMULARIO ===
+[22-Dec-2025 12:15:41 America/Guayaquil] =================================
+[22-Dec-2025 12:15:41 America/Guayaquil] clie_id: 49
+[22-Dec-2025 12:15:41 America/Guayaquil] atenc_id: 17
+[22-Dec-2025 12:15:41 America/Guayaquil] centro_id: 1
+[22-Dec-2025 12:15:41 America/Guayaquil] usua_id: 1
+[22-Dec-2025 12:15:41 America/Guayaquil] imginfo_enlace: 49011212121212120251222121448233
+[22-Dec-2025 12:15:41 America/Guayaquil] imgag_id: 30
+[22-Dec-2025 12:15:41 America/Guayaquil] imginfo_id: 35
+[22-Dec-2025 12:15:41 America/Guayaquil] 📁 Intentando crear carpeta: uploads/dicom/2025-12-22_121541_49_35_69497cbd2ab6b/
+[22-Dec-2025 12:15:41 America/Guayaquil] ✅ Carpeta creada con permisos correctos: uploads/dicom/2025-12-22_121541_49_35_69497cbd2ab6b/
+[22-Dec-2025 12:15:41 America/Guayaquil] =================================
+[22-Dec-2025 12:15:41 America/Guayaquil] === PROCESAMIENTO DE ARCHIVOS ===
+[22-Dec-2025 12:15:41 America/Guayaquil] =================================
+[22-Dec-2025 12:15:41 America/Guayaquil] 📦 Total archivos detectados: 5
+[22-Dec-2025 12:15:41 America/Guayaquil] --- Procesando archivo #1 ---
+[22-Dec-2025 12:15:41 America/Guayaquil]   📄 Nombre: 36_egas manzano andres 36a_CLAVICULA_AP_image1762483345337.dcm
+[22-Dec-2025 12:15:41 America/Guayaquil]   🔢 Código error: 0
+[22-Dec-2025 12:15:41 America/Guayaquil]   📏 Tamaño: 18730390 bytes
+[22-Dec-2025 12:15:41 America/Guayaquil]   📂 Tmp name: F:\xampp\tmp\php3FCC.tmp
+[22-Dec-2025 12:15:41 America/Guayaquil]   🚀 Moviendo archivo...
+[22-Dec-2025 12:15:41 America/Guayaquil]      Origen: F:\xampp\tmp\php3FCC.tmp
+[22-Dec-2025 12:15:41 America/Guayaquil]      Destino: uploads/dicom/2025-12-22_121541_49_35_69497cbd2ab6b/36_egas_manzano_andres_36a_CLAVICULA_AP_image1762483345337.dcm
+[22-Dec-2025 12:15:41 America/Guayaquil]   ✅ Archivo subido exitosamente: 36_egas_manzano_andres_36a_CLAVICULA_AP_image1762483345337.dcm
+[22-Dec-2025 12:15:41 America/Guayaquil] --- Procesando archivo #2 ---
+[22-Dec-2025 12:15:41 America/Guayaquil]   📄 Nombre: 36_egas manzano andres 36a_CLAVICULA_LORDOTICA_image1762483404042.dcm
+[22-Dec-2025 12:15:41 America/Guayaquil]   🔢 Código error: 0
+[22-Dec-2025 12:15:41 America/Guayaquil]   📏 Tamaño: 5425254 bytes
+[22-Dec-2025 12:15:41 America/Guayaquil]   📂 Tmp name: F:\xampp\tmp\php424F.tmp
+[22-Dec-2025 12:15:41 America/Guayaquil]   🚀 Moviendo archivo...
+[22-Dec-2025 12:15:41 America/Guayaquil]      Origen: F:\xampp\tmp\php424F.tmp
+[22-Dec-2025 12:15:41 America/Guayaquil]      Destino: uploads/dicom/2025-12-22_121541_49_35_69497cbd2ab6b/36_egas_manzano_andres_36a_CLAVICULA_LORDOTICA_image1762483404042.dcm
+[22-Dec-2025 12:15:41 America/Guayaquil]   ✅ Archivo subido exitosamente: 36_egas_manzano_andres_36a_CLAVICULA_LORDOTICA_image1762483404042.dcm
+[22-Dec-2025 12:15:41 America/Guayaquil] --- Procesando archivo #3 ---
+[22-Dec-2025 12:15:41 America/Guayaquil]   📄 Nombre: 36_egas manzano andres 36a_CLAVICULA_LORDOTICA_image1762483440350.dcm
+[22-Dec-2025 12:15:41 America/Guayaquil]   🔢 Código error: 0
+[22-Dec-2025 12:15:41 America/Guayaquil]   📏 Tamaño: 10809788 bytes
+[22-Dec-2025 12:15:41 America/Guayaquil]   📂 Tmp name: F:\xampp\tmp\php42DD.tmp
+[22-Dec-2025 12:15:41 America/Guayaquil]   🚀 Moviendo archivo...
+[22-Dec-2025 12:15:41 America/Guayaquil]      Origen: F:\xampp\tmp\php42DD.tmp
+[22-Dec-2025 12:15:41 America/Guayaquil]      Destino: uploads/dicom/2025-12-22_121541_49_35_69497cbd2ab6b/36_egas_manzano_andres_36a_CLAVICULA_LORDOTICA_image1762483440350.dcm
+[22-Dec-2025 12:15:41 America/Guayaquil]   ✅ Archivo subido exitosamente: 36_egas_manzano_andres_36a_CLAVICULA_LORDOTICA_image1762483440350.dcm
+[22-Dec-2025 12:15:41 America/Guayaquil] --- Procesando archivo #4 ---
+[22-Dec-2025 12:15:41 America/Guayaquil]   📄 Nombre: 36_egas manzano andres 36a_CLAVICULA_LORDOTICA_image1762483472425.dcm
+[22-Dec-2025 12:15:41 America/Guayaquil]   🔢 Código error: 0
+[22-Dec-2025 12:15:41 America/Guayaquil]   📏 Tamaño: 8751118 bytes
+[22-Dec-2025 12:15:41 America/Guayaquil]   📂 Tmp name: F:\xampp\tmp\php43D9.tmp
+[22-Dec-2025 12:15:41 America/Guayaquil]   🚀 Moviendo archivo...
+[22-Dec-2025 12:15:41 America/Guayaquil]      Origen: F:\xampp\tmp\php43D9.tmp
+[22-Dec-2025 12:15:41 America/Guayaquil]      Destino: uploads/dicom/2025-12-22_121541_49_35_69497cbd2ab6b/36_egas_manzano_andres_36a_CLAVICULA_LORDOTICA_image1762483472425.dcm
+[22-Dec-2025 12:15:42 America/Guayaquil]   ✅ Archivo subido exitosamente: 36_egas_manzano_andres_36a_CLAVICULA_LORDOTICA_image1762483472425.dcm
+[22-Dec-2025 12:15:42 America/Guayaquil] --- Procesando archivo #5 ---
+[22-Dec-2025 12:15:42 America/Guayaquil]   📄 Nombre: 36_egas manzano andres 36a_CLAVICULA_LORDOTICA_image1762483505116.dcm
+[22-Dec-2025 12:15:42 America/Guayaquil]   🔢 Código error: 0
+[22-Dec-2025 12:15:42 America/Guayaquil]   📏 Tamaño: 9975718 bytes
+[22-Dec-2025 12:15:42 America/Guayaquil]   📂 Tmp name: F:\xampp\tmp\php44B6.tmp
+[22-Dec-2025 12:15:42 America/Guayaquil]   🚀 Moviendo archivo...
+[22-Dec-2025 12:15:42 America/Guayaquil]      Origen: F:\xampp\tmp\php44B6.tmp
+[22-Dec-2025 12:15:42 America/Guayaquil]      Destino: uploads/dicom/2025-12-22_121541_49_35_69497cbd2ab6b/36_egas_manzano_andres_36a_CLAVICULA_LORDOTICA_image1762483505116.dcm
+[22-Dec-2025 12:15:42 America/Guayaquil]   ✅ Archivo subido exitosamente: 36_egas_manzano_andres_36a_CLAVICULA_LORDOTICA_image1762483505116.dcm
+[22-Dec-2025 12:15:42 America/Guayaquil] =================================
+[22-Dec-2025 12:15:42 America/Guayaquil] 📊 Total archivos procesados exitosamente: 5
+[22-Dec-2025 12:15:42 America/Guayaquil] =================================
+[22-Dec-2025 12:15:42 America/Guayaquil] =================================
+[22-Dec-2025 12:15:42 America/Guayaquil] === GUARDANDO EN BASE DE DATOS ===
+[22-Dec-2025 12:15:42 America/Guayaquil] =================================
+[22-Dec-2025 12:15:42 America/Guayaquil] 🗑️ Registros anteriores eliminados para imgag_id: 30
+[22-Dec-2025 12:15:42 America/Guayaquil] 💾 Insertando: 36_egas_manzano_andres_36a_CLAVICULA_AP_image1762483345337.dcm
+[22-Dec-2025 12:15:42 America/Guayaquil]   ✅ Archivo registrado en BD: 36_egas_manzano_andres_36a_CLAVICULA_AP_image1762483345337.dcm
+[22-Dec-2025 12:15:42 America/Guayaquil] 💾 Insertando: 36_egas_manzano_andres_36a_CLAVICULA_LORDOTICA_image1762483404042.dcm
+[22-Dec-2025 12:15:42 America/Guayaquil]   ✅ Archivo registrado en BD: 36_egas_manzano_andres_36a_CLAVICULA_LORDOTICA_image1762483404042.dcm
+[22-Dec-2025 12:15:42 America/Guayaquil] 💾 Insertando: 36_egas_manzano_andres_36a_CLAVICULA_LORDOTICA_image1762483440350.dcm
+[22-Dec-2025 12:15:42 America/Guayaquil]   ✅ Archivo registrado en BD: 36_egas_manzano_andres_36a_CLAVICULA_LORDOTICA_image1762483440350.dcm
+[22-Dec-2025 12:15:42 America/Guayaquil] 💾 Insertando: 36_egas_manzano_andres_36a_CLAVICULA_LORDOTICA_image1762483472425.dcm
+[22-Dec-2025 12:15:42 America/Guayaquil]   ✅ Archivo registrado en BD: 36_egas_manzano_andres_36a_CLAVICULA_LORDOTICA_image1762483472425.dcm
+[22-Dec-2025 12:15:42 America/Guayaquil] 💾 Insertando: 36_egas_manzano_andres_36a_CLAVICULA_LORDOTICA_image1762483505116.dcm
+[22-Dec-2025 12:15:42 America/Guayaquil]   ✅ Archivo registrado en BD: 36_egas_manzano_andres_36a_CLAVICULA_LORDOTICA_image1762483505116.dcm
+[22-Dec-2025 12:15:42 America/Guayaquil] 📊 Total registros insertados en BD: 5 de 5
+[22-Dec-2025 12:15:42 America/Guayaquil] ✅ Registro actualizado en dns_newimagenologiainfo
+[22-Dec-2025 12:15:42 America/Guayaquil] =================================
+[22-Dec-2025 12:15:42 America/Guayaquil] === ✅ SUBIDA COMPLETADA EXITOSAMENTE ===
+[22-Dec-2025 12:15:42 America/Guayaquil] =================================

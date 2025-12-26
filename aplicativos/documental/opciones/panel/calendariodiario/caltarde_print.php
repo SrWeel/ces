@@ -10,12 +10,12 @@ session_start();
 <?php
 
 // Conexi�n a la base de datos
+//$host = "localhost";
 $host = "localhost";
-//$host = "192.168.100.50";
 $db   = "cesdb_aroriginal";
 $user = "root"; 
+//$pass = "";     
 $pass = "";
-//$pass = "R003@CesDB.2025";
 $conexion = new mysqli($host, $user, $pass, $db);
 if ($conexion->connect_error) {
     die("Error de conexi�n: " . $conexion->connect_error);

@@ -1,0 +1,4 @@
+update gogess_sisfield set fie_group='1' where fie_id='12236';
+update gogess_sisfield set fie_orden='7' where fie_id='12236';
+update gogess_sisfield set fie_groupprint='1' where fie_id='12236';
+update gogess_sisfield set fie_anchocolomna='12' where fie_id='12236';

@@ -119,7 +119,50 @@
 $objformulario->generar_formulario_bootstrap(@$submit,$table,1,$DB_gogess); 
 $objformulario->generar_formulario_bootstrap(@$submit,$table,2,$DB_gogess); 
 $objformulario->generar_formulario_bootstrap(@$submit,$table,3,$DB_gogess);
-$objformulario->generar_formulario_bootstrap(@$submit,$table,4,$DB_gogess);
+?>
+<div class="form-group">
+    <?php $objformulario->generar_formulario_bootstrap(@$submit,$table,4,$DB_gogess); ?>
+    <div class="text-center mt-2">
+        <button type="button" class="btn btn-success ml-2" onclick="document.getElementById('dicomFiles').click()">
+            <span class="glyphicon glyphicon-file"></span> DICOM
+        </button>
+    </div>
+    <input type="file" id="dicomFiles" name="dicomFiles[]" webkitdirectory directory multiple style="display:none;" onchange="previewDicomFiles(this.files)">
+
+    <!-- Campo oculto para guardar la ruta de la carpeta DICOM -->
+    <input type="hidden" id="dicom_folder_path" name="dicom_folder_path" value="">
+    <input type="hidden" id="dicom_files_count" name="dicom_files_count" value="0">
+</div>
+
+<!-- Carrusel de miniaturas -->
+<div id="dicomPreview" style="margin-top:20px; display:none;">
+    <div style="position:relative; max-width:400px; margin:0 auto;">
+        <div id="currentDicomContainer" style="text-align:center; position:relative;">
+            <div id="currentDicomImage" style="width:300px; height:300px; border:1px solid #ccc; margin:0 auto; cursor:pointer; background:#000;"></div>
+            <p id="imageCounter" style="margin-top:10px; font-weight:bold;"></p>
+        </div>
+
+        <div style="text-align:center; margin-top:15px;">
+            <button id="prevBtn" class="btn btn-primary" onclick="navigateCarousel(-1)" style="margin-right:10px;">
+                <span class="glyphicon glyphicon-chevron-left"></span> Anterior
+            </button>
+            <button id="nextBtn" class="btn btn-primary" onclick="navigateCarousel(1)">
+                Siguiente <span class="glyphicon glyphicon-chevron-right"></span>
+            </button>
+        </div>
+
+        <!-- Progress bar para la carga -->
+        <div id="uploadProgress" style="margin-top:15px; display:none;">
+            <div class="progress">
+                <div id="uploadProgressBar" class="progress-bar progress-bar-striped active" role="progressbar" style="width: 0%">
+                    <span id="uploadProgressText">0%</span>
+                </div>
+            </div>
+            <p id="uploadStatus" style="text-align:center; margin-top:5px;">Subiendo archivos...</p>
+        </div>
+    </div>
+</div>
+<?php
 $objformulario->generar_formulario_bootstrap(@$submit,$table,5,$DB_gogess);
 $objformulario->generar_formulario_bootstrap(@$submit,$table,6,$DB_gogess);
 $objformulario->generar_formulario_bootstrap(@$submit,$table,7,$DB_gogess);
@@ -142,6 +185,8 @@ else
 }
 
 echo "<input name='csearch' type='hidden' value=''>
+<input  name='clie_idx'  type='hidden' value='". $clie_id ."'>
+
 <input name='idab' type='hidden' value=''>
 <input name='opcion_".$table."' type='hidden' value='".$valoropcion."' id='opcion_".$table."' >
 <input name='table' type='hidden' value='".$table."'>";
@@ -248,17 +293,17 @@ function genera_cieexterno(codigo,diagn_tipox,idext)
 {
 
 $.ajax({
-    // la URL para la petici�n
+    // la URL para la petici�n
     url : 'templateformsweb/maestro_standar_imagenologiainfo/searchcie.php',
-    // la informaci�n a enviar
-    // (tambi�n es posible utilizar una cadena de datos)
+    // la informaci�n a enviar
+    // (tambi�n es posible utilizar una cadena de datos)
     data : { term : codigo },
-    // especifica si ser� una petici�n POST o GET
+    // especifica si ser� una petici�n POST o GET
     type : 'GET',
-    // el tipo de informaci�n que se espera de respuesta
+    // el tipo de informaci�n que se espera de respuesta
     dataType : 'json',
-    // c�digo a ejecutar si la petici�n es satisfactoria;
-    // la respuesta es pasada como argumento a la funci�n
+    // c�digo a ejecutar si la petici�n es satisfactoria;
+    // la respuesta es pasada como argumento a la funci�n
     success : function(json) {
         //console.log(json[0]);	
 		$('#diagn_ciex'+idext).val(json[0].codigo);
@@ -266,15 +311,15 @@ $.ajax({
 		$('#diagn_tipox'+idext).val(diagn_tipox);
 		
     },
-    // c�digo a ejecutar si la petici�n falla;
-    // son pasados como argumentos a la funci�n
-    // el objeto de la petici�n en crudo y c�digo de estatus de la petici�n
+    // c�digo a ejecutar si la petici�n falla;
+    // son pasados como argumentos a la funci�n
+    // el objeto de la petici�n en crudo y c�digo de estatus de la petici�n
     error : function(xhr, status) {
-        ///alert('Disculpe, existi� un problema');
+        ///alert('Disculpe, existi� un problema');
     },
-    // c�digo a ejecutar sin importar si la petici�n fall� o no
+    // c�digo a ejecutar sin importar si la petici�n fall� o no
     complete : function(xhr, status) {
-        ///alert('Petici�n realizada');
+        ///alert('Petici�n realizada');
 		grid_extras_3987($('#imginfo_enlace').val(),0,1);
     }
 });
@@ -329,8 +374,1164 @@ if($objformulario->sendvar["imgag_idx"]>0)
 //busca dianosticos
 
 }
-?>	
-		 
+?>
+
+</script>
+
+<script>
+    // ============================================
+    // VARIABLES GLOBALES MEJORADAS
+    // ============================================
+    var DICOM_VIEWER = {
+        images: [],
+        currentIndex: 0,
+        modalElement: null,
+        currentImage: null,
+        modalViewport: null,
+        isInitialized: false,
+        wheelListener: null,
+        filesArray: [],
+        isUploading: false,
+        uploadCompleted: false,
+        scriptsLoaded: 0,
+        scriptsTotal: 3,
+        currentTool: null,
+        isDragging: false,
+        startPoint: null,
+        enabledElements: new Set(),
+        isLoadingImage: false,
+        isLoadingPreview: false,
+        loadStartTime: 0,
+        loadTimer: null,
+        successTimeout: null // ⏱️ Timeout para limpiar mensaje de éxito
+    };
+
+    // ============================================
+    // LIMPIEZA COMPLETA AL CARGAR PÁGINA
+    // ============================================
+    (function() {
+        // Limpiar cualquier instancia previa
+        if (window.DICOM_VIEWER_INITIALIZED) {
+            console.log('🧹 Limpiando instancia previa...');
+            cleanupAllCornerstone();
+        }
+        window.DICOM_VIEWER_INITIALIZED = true;
+    })();
+
+    // ============================================
+    // FUNCIÓN DE LIMPIEZA GLOBAL
+    // ============================================
+    function cleanupAllCornerstone() {
+        console.log('🧹 Iniciando limpieza completa...');
+
+        // Limpiar modal si existe
+        if (DICOM_VIEWER.modalElement) {
+            try {
+                cornerstone.disable(DICOM_VIEWER.modalElement);
+            } catch(e) {}
+        }
+
+        // Limpiar preview
+        var previewElement = document.getElementById('currentDicomImage');
+        if (previewElement) {
+            try {
+                cornerstone.disable(previewElement);
+            } catch(e) {}
+        }
+
+        // Limpiar todos los elementos registrados
+        DICOM_VIEWER.enabledElements.forEach(function(elementId) {
+            try {
+                var el = document.getElementById(elementId);
+                if (el) {
+                    cornerstone.disable(el);
+                }
+            } catch(e) {}
+        });
+
+        // Resetear estado
+        DICOM_VIEWER.enabledElements.clear();
+        DICOM_VIEWER.modalElement = null;
+        DICOM_VIEWER.modalViewport = null;
+        DICOM_VIEWER.wheelListener = null;
+        DICOM_VIEWER.isLoadingImage = false;
+        DICOM_VIEWER.isLoadingPreview = false;
+
+        // Cerrar modal si está abierto
+        $('#dicomModal').remove();
+        $('.modal-backdrop').remove();
+        $('body').removeClass('modal-open');
+
+        console.log('✅ Limpieza completa finalizada');
+    }
+
+    // ============================================
+    // LIMPIEZA ANTES DE SALIR DE LA PÁGINA
+    // ============================================
+    window.addEventListener('beforeunload', function() {
+        cleanupAllCornerstone();
+    });
+
+    // ============================================
+    // CARGA DE SCRIPTS CON PREVENCIÓN DE DUPLICADOS
+    // ============================================
+    function onScriptLoaded() {
+        DICOM_VIEWER.scriptsLoaded++;
+        console.log('✓ Script cargado (' + DICOM_VIEWER.scriptsLoaded + '/' + DICOM_VIEWER.scriptsTotal + ')');
+
+        if (DICOM_VIEWER.scriptsLoaded === DICOM_VIEWER.scriptsTotal) {
+            console.log('🎉 Todas las bibliotecas cargadas, inicializando...');
+            initializeCornerstone();
+        }
+    }
+
+    function loadScript(src, callback) {
+        // Verificar si el script ya está cargado
+        var existingScript = document.querySelector('script[src="' + src + '"]');
+        if (existingScript) {
+            console.log('⚠️ Script ya cargado, saltando:', src);
+            callback();
+            return;
+        }
+
+        var script = document.createElement('script');
+        script.src = src;
+        script.onload = callback;
+        script.onerror = function() {
+            console.error('❌ Error cargando script:', src);
+            alert('Error al cargar biblioteca DICOM. Intenta recargar la página.');
+        };
+        document.head.appendChild(script);
+    }
+
+    // Cargar bibliotecas solo si no están cargadas
+    if (typeof dicomParser === 'undefined') {
+        loadScript('https://cdn.jsdelivr.net/npm/dicom-parser@1.8.9/dist/dicomParser.min.js', function() {
+            console.log('dicomParser cargado');
+            onScriptLoaded();
+        });
+    } else {
+        console.log('dicomParser ya disponible');
+        onScriptLoaded();
+    }
+
+    if (typeof cornerstone === 'undefined') {
+        loadScript('https://cdn.jsdelivr.net/npm/cornerstone-core@2.3.0/dist/cornerstone.min.js', function() {
+            console.log('cornerstone cargado');
+            onScriptLoaded();
+        });
+    } else {
+        console.log('cornerstone ya disponible');
+        onScriptLoaded();
+    }
+
+    if (typeof cornerstoneWADOImageLoader === 'undefined') {
+        loadScript('https://unpkg.com/cornerstone-wado-image-loader@4.13.2/dist/cornerstoneWADOImageLoader.bundle.min.js', function() {
+            console.log('✓ cornerstoneWADOImageLoader cargado');
+            onScriptLoaded();
+        });
+    } else {
+        console.log('cornerstoneWADOImageLoader ya disponible');
+        onScriptLoaded();
+    }
+
+    // ============================================
+    // INICIALIZACIÓN DE CORNERSTONE (UNA SOLA VEZ)
+    // ============================================
+    function initializeCornerstone() {
+        if (DICOM_VIEWER.isInitialized) {
+            console.log('✅ Cornerstone ya está inicializado');
+            return true;
+        }
+
+        if (typeof cornerstone === 'undefined' ||
+            typeof dicomParser === 'undefined' ||
+            typeof cornerstoneWADOImageLoader === 'undefined') {
+            console.error('❌ Librerías no cargadas aún');
+            return false;
+        }
+
+        try {
+            cornerstoneWADOImageLoader.external.cornerstone = cornerstone;
+            cornerstoneWADOImageLoader.external.dicomParser = dicomParser;
+            cornerstone.registerImageLoader('wadouri', cornerstoneWADOImageLoader.wadouri.loadImage);
+
+            cornerstoneWADOImageLoader.configure({
+                beforeSend: function(xhr) {
+                    // Añadir headers para mejor performance en producción
+                    xhr.setRequestHeader('Cache-Control', 'public, max-age=31536000');
+                },
+                useWebWorkers: true,
+                decodeConfig: {
+                    // Optimizar decodificación
+                    convertFloatPixelDataToInt: false,
+                    use16BitDataType: true
+                }
+            });
+
+            var config = {
+                maxWebWorkers: Math.min(navigator.hardwareConcurrency || 4, 8), // Aumentado a 8
+                startWebWorkersOnDemand: false, // Iniciar workers inmediatamente
+                webWorkerTaskPaths: [],
+                taskConfiguration: {
+                    decodeTask: {
+                        initializeCodecsOnStartup: true, // Pre-inicializar codecs
+                        usePDFJS: false,
+                        strict: false
+                    }
+                }
+            };
+
+            if (cornerstoneWADOImageLoader.webWorkerManager) {
+                cornerstoneWADOImageLoader.webWorkerManager.initialize(config);
+            }
+
+            DICOM_VIEWER.isInitialized = true;
+            console.log('✅ Cornerstone inicializado con optimizaciones de producción');
+            return true;
+        } catch(e) {
+            console.error('❌ Error al inicializar:', e);
+            alert('Error al inicializar el visor DICOM: ' + e.message);
+            return false;
+        }
+    }
+
+    // ============================================
+    // FUNCIÓN PARA ESPERAR INICIALIZACIÓN
+    // ============================================
+    function waitForInitialization(callback, maxAttempts) {
+        maxAttempts = maxAttempts || 20;
+        var attempts = 0;
+
+        var checkInterval = setInterval(function() {
+            attempts++;
+
+            if (DICOM_VIEWER.isInitialized) {
+                clearInterval(checkInterval);
+                console.log('✅ Cornerstone listo, ejecutando callback...');
+                callback();
+            } else if (attempts >= maxAttempts) {
+                clearInterval(checkInterval);
+                console.error('❌ Timeout esperando inicialización de Cornerstone');
+                console.log('Puedes intentar recargar la página si las imágenes no cargan');
+            } else {
+                console.log('⏳ Esperando Cornerstone... (' + attempts + '/' + maxAttempts + ')');
+            }
+        }, 500);
+    }
+
+    // ============================================
+    // INICIALIZACIÓN DEL FORMULARIO
+    // ============================================
+    $(document).ready(function() {
+        console.log('🚀 Inicializando formulario DICOM...');
+
+        // Cargar imágenes existentes SOLO cuando Cornerstone esté listo
+        waitForInitialization(function() {
+            console.log('📥 Intentando cargar imágenes DICOM existentes...');
+            loadExistingDicomImages();
+        });
+
+        // Manejar submit del formulario
+        $('form').on('submit', function(e) {
+            if (DICOM_VIEWER.filesArray.length > 0 && !DICOM_VIEWER.uploadCompleted && !DICOM_VIEWER.isUploading) {
+                e.preventDefault();
+                console.log('🛑 Subiendo DICOM primero...');
+                uploadDicomFiles($(this));
+                return false;
+            }
+        });
+
+        console.log('✅ Formulario inicializado');
+    });
+
+    // ============================================
+    // PREVIEW DE ARCHIVOS DICOM
+    // ============================================
+    function previewDicomFiles(files) {
+        if (!DICOM_VIEWER.isInitialized) {
+            if (!initializeCornerstone()) {
+                alert('Por favor espera a que se carguen las bibliotecas DICOM e intenta de nuevo.');
+                return;
+            }
+        }
+
+        // Limpiar preview anterior
+        var previewElement = document.getElementById('currentDicomImage');
+        if (previewElement) {
+            try {
+                cornerstone.disable(previewElement);
+                DICOM_VIEWER.enabledElements.delete('currentDicomImage');
+            } catch(e) {}
+        }
+
+        DICOM_VIEWER.uploadCompleted = false;
+        DICOM_VIEWER.isUploading = false;
+        DICOM_VIEWER.images = [];
+        DICOM_VIEWER.filesArray = [];
+        DICOM_VIEWER.currentIndex = 0;
+        DICOM_VIEWER.isLoadingImage = false;
+        DICOM_VIEWER.isLoadingPreview = false;
+
+        var dicomFiles = Array.from(files).filter(function(file) {
+            return file.name.toLowerCase().endsWith('.dcm');
+        });
+
+        if (dicomFiles.length === 0) {
+            alert('No se encontraron archivos DICOM (.dcm)');
+            return;
+        }
+
+        document.getElementById('dicomPreview').style.display = 'block';
+
+        dicomFiles.forEach(function(file) {
+            try {
+                var imageId = cornerstoneWADOImageLoader.wadouri.fileManager.add(file);
+                DICOM_VIEWER.images.push({
+                    imageId: imageId,
+                    name: file.name
+                });
+                DICOM_VIEWER.filesArray.push(file);
+            } catch(e) {
+                console.error('Error agregando archivo:', file.name, e);
+            }
+        });
+
+        document.getElementById('dicom_files_count').value = DICOM_VIEWER.filesArray.length;
+
+        if (DICOM_VIEWER.images.length > 0) {
+            showCurrentImage();
+        } else {
+            alert('No se pudieron cargar los archivos DICOM');
+        }
+    }
+    function preloadNextImages() {
+        if (DICOM_VIEWER.images.length === 0) return;
+
+        var nextIndex = (DICOM_VIEWER.currentIndex + 1) % DICOM_VIEWER.images.length;
+        var prevIndex = (DICOM_VIEWER.currentIndex - 1 + DICOM_VIEWER.images.length) % DICOM_VIEWER.images.length;
+
+        // Pre-cargar siguiente y anterior para navegación instantánea
+        [nextIndex, prevIndex].forEach(function(index) {
+            var imageId = DICOM_VIEWER.images[index].imageId;
+
+            // Solo pre-cargar si no está en cache
+            if (!DICOM_VIEWER.imageCache.has(imageId)) {
+                cornerstone.loadImage(imageId)
+                    .then(function(image) {
+                        DICOM_VIEWER.imageCache.set(imageId, image);
+                        console.log('🚀 Pre-cargada imagen índice:', index);
+                    })
+                    .catch(function(err) {
+                        console.warn('⚠️ Error pre-cargando imagen:', err);
+                    });
+            }
+        });
+    }
+    // ============================================
+    // MOSTRAR IMAGEN ACTUAL (CON BLOQUEO Y PROGRESO)
+    // ============================================
+    function showCurrentImage() {
+        if (DICOM_VIEWER.isLoadingImage) {
+            console.warn('⚠️ Ya se está cargando una imagen, ignorando llamada...');
+            return;
+        }
+
+        if (DICOM_VIEWER.images.length === 0) {
+            console.log('⚠️ No hay imágenes para mostrar');
+            return;
+        }
+
+        var element = document.getElementById('currentDicomImage');
+        if (!element) {
+            console.error('❌ Elemento currentDicomImage no encontrado');
+            return;
+        }
+
+        DICOM_VIEWER.isLoadingImage = true;
+        DICOM_VIEWER.loadStartTime = Date.now();
+
+        clearSuccessTimeout();
+        hideLoadingIndicator();
+        showLoadingIndicator(element);
+
+        var counter = document.getElementById('imageCounter');
+        if (counter) {
+            counter.textContent = 'Imagen ' + (DICOM_VIEWER.currentIndex + 1) + ' de ' + DICOM_VIEWER.images.length;
+        }
+
+        try {
+            cornerstone.getEnabledElement(element);
+            console.log('♻️ Elemento ya habilitado, deshabilitando primero...');
+            cornerstone.disable(element);
+            DICOM_VIEWER.enabledElements.delete('currentDicomImage');
+        } catch(e) {
+            console.log('ℹ️ Elemento no estaba habilitado previamente');
+        }
+
+        setTimeout(function() {
+            try {
+                cornerstone.enable(element);
+                DICOM_VIEWER.enabledElements.add('currentDicomImage');
+                console.log('✅ Elemento habilitado: currentDicomImage');
+            } catch(e) {
+                console.error('❌ Error habilitando elemento:', e);
+                DICOM_VIEWER.isLoadingImage = false;
+                hideLoadingIndicator();
+                return;
+            }
+
+            var imageId = DICOM_VIEWER.images[DICOM_VIEWER.currentIndex].imageId;
+            console.log('🖼️ Cargando imagen:', imageId);
+
+            var cachedImage = DICOM_VIEWER.imageCache.get(imageId);
+
+            if (cachedImage) {
+                // 🚀 CARGA DESDE CACHE (INSTANTÁNEA)
+                var loadTime = ((Date.now() - DICOM_VIEWER.loadStartTime) / 1000).toFixed(3);
+                console.log('⚡ Imagen cargada desde CACHE en ' + loadTime + 's');
+                DICOM_VIEWER.currentImage = cachedImage;
+
+                try {
+                    cornerstone.displayImage(element, cachedImage);
+                    console.log('✅ Imagen mostrada correctamente desde cache');
+
+                    element.onclick = function() {
+                        openModal();
+                    };
+
+                    showLoadSuccess(loadTime, true);
+
+                    preloadNextImages();
+                } catch(displayErr) {
+                    console.error('❌ Error al mostrar imagen:', displayErr);
+                }
+
+                DICOM_VIEWER.isLoadingImage = false;
+                console.log('🔓 Bloqueo de carga liberado (cache)');
+            } else {
+                // 📥 CARGA DESDE SERVIDOR
+                cornerstone.loadImage(imageId)
+                    .then(function(image) {
+                        var loadTime = ((Date.now() - DICOM_VIEWER.loadStartTime) / 1000).toFixed(3);
+                        console.log('✅ Imagen cargada en ' + loadTime + 's, dimensiones:', image.width + 'x' + image.height);
+                        DICOM_VIEWER.currentImage = image;
+
+                        DICOM_VIEWER.imageCache.set(imageId, image);
+
+                        try {
+                            cornerstone.displayImage(element, image);
+                            console.log('✅ Imagen mostrada correctamente');
+
+                            element.onclick = function() {
+                                openModal();
+                            };
+
+                            showLoadSuccess(loadTime, false);
+
+                            preloadNextImages();
+                        } catch(displayErr) {
+                            console.error('❌ Error al mostrar imagen:', displayErr);
+                        }
+                    })
+                    .catch(function(err) {
+                        console.error("❌ Error cargando DICOM:", err);
+
+                        if (err.message && err.message.includes('404')) {
+                            console.error('🔍 Archivo no encontrado. Verificar ruta en servidor.');
+                        }
+
+                        showLoadError();
+                        alert('Error al cargar imagen DICOM: ' + err.message);
+                    })
+                    .finally(function() {
+                        DICOM_VIEWER.isLoadingImage = false;
+                        console.log('🔓 Bloqueo de carga liberado');
+                    });
+            }
+
+            var prevBtn = document.getElementById('prevBtn');
+            var nextBtn = document.getElementById('nextBtn');
+
+            if (prevBtn) prevBtn.disabled = false;
+            if (nextBtn) nextBtn.disabled = false;
+
+            if (DICOM_VIEWER.images.length <= 1) {
+                if (prevBtn) prevBtn.disabled = true;
+                if (nextBtn) nextBtn.disabled = true;
+            }
+        }, 20);
+    }
+
+    // ============================================
+    // INDICADORES DE CARGA UX
+    // ============================================
+    function showLoadingIndicator(element) {
+        var container = element.parentElement;
+        if (!container) return;
+
+        var loader = document.getElementById('dicomLoadingOverlay');
+        if (!loader) {
+            loader = document.createElement('div');
+            loader.id = 'dicomLoadingOverlay';
+            loader.style.cssText =
+                'position: absolute; ' +
+                'top: 0; left: 0; right: 0; bottom: 0; ' +
+                'background: rgba(0,0,0,0.7); ' +
+                'display: flex; flex-direction: column; ' +
+                'align-items: center; justify-content: center; ' +
+                'z-index: 1000; border-radius: 4px;';
+
+            container.style.position = 'relative';
+            container.appendChild(loader);
+
+            if (!document.getElementById('dicomSpinnerStyle')) {
+                var style = document.createElement('style');
+                style.id = 'dicomSpinnerStyle';
+                style.textContent = '@keyframes spin { to { transform: rotate(360deg); } }';
+                document.head.appendChild(style);
+            }
+        }
+
+        loader.innerHTML =
+            '<div style="text-align: center;">' +
+            '<div class="spinner" style="' +
+            'width: 40px; height: 40px; margin: 0 auto 15px; ' +
+            'border: 4px solid rgba(255,255,255,0.3); ' +
+            'border-top-color: #fff; border-radius: 50%; ' +
+            'animation: spin 0.8s linear infinite;"></div>' +
+            '<div style="color: #fff; font-size: 14px; font-weight: 500;">' +
+            'Cargando imagen...' +
+            '</div>' +
+            '<div id="dicomLoadTime" style="color: rgba(255,255,255,0.9); font-size: 13px; margin-top: 8px; font-weight: 600;">' +
+            '0.000s' +
+            '</div>' +
+            '</div>';
+
+        loader.style.display = 'flex';
+        loader.style.background = 'rgba(0,0,0,0.7)';
+
+        if (DICOM_VIEWER.loadTimer) {
+            clearInterval(DICOM_VIEWER.loadTimer);
+        }
+
+        DICOM_VIEWER.loadTimer = setInterval(function() {
+            var elapsed = ((Date.now() - DICOM_VIEWER.loadStartTime) / 1000).toFixed(3);
+            var timeEl = document.getElementById('dicomLoadTime');
+            if (timeEl) {
+                timeEl.textContent = elapsed + 's';
+            }
+        }, 50);
+    }
+
+    function hideLoadingIndicator() {
+        if (DICOM_VIEWER.loadTimer) {
+            clearInterval(DICOM_VIEWER.loadTimer);
+            DICOM_VIEWER.loadTimer = null;
+        }
+
+        var loader = document.getElementById('dicomLoadingOverlay');
+        if (loader) {
+            loader.style.display = 'none';
+        }
+    }
+
+    function clearSuccessTimeout() {
+        if (DICOM_VIEWER.successTimeout) {
+            clearTimeout(DICOM_VIEWER.successTimeout);
+            DICOM_VIEWER.successTimeout = null;
+        }
+    }
+
+    function showLoadSuccess(loadTime, fromCache) {
+        if (DICOM_VIEWER.loadTimer) {
+            clearInterval(DICOM_VIEWER.loadTimer);
+            DICOM_VIEWER.loadTimer = null;
+        }
+
+        var loader = document.getElementById('dicomLoadingOverlay');
+        if (!loader) return;
+
+        var cacheIndicator = fromCache ?
+            '<div style="color: #FFA726; font-size: 11px; margin-top: 5px;">⚡ Desde cache</div>' :
+            '';
+
+        loader.innerHTML =
+            '<div style="text-align: center;">' +
+            '<div style="width: 50px; height: 50px; margin: 0 auto 10px; ' +
+            'border: 3px solid #4CAF50; border-radius: 50%; ' +
+            'display: flex; align-items: center; justify-content: center;">' +
+            '<span style="color: #4CAF50; font-size: 28px;">✓</span>' +
+            '</div>' +
+            '<div style="color: #4CAF50; font-size: 14px; font-weight: 600;">' +
+            'Cargada en ' + loadTime + 's' +
+            '</div>' +
+            cacheIndicator +
+            '</div>';
+
+        loader.style.background = 'rgba(0,0,0,0.5)';
+        loader.style.display = 'flex';
+
+        clearSuccessTimeout();
+        DICOM_VIEWER.successTimeout = setTimeout(function() {
+            hideLoadingIndicator();
+        }, 1500);
+    }
+
+    function showLoadError() {
+        var loader = document.getElementById('dicomLoadingOverlay');
+        if (!loader) return;
+
+        if (DICOM_VIEWER.loadTimer) {
+            clearInterval(DICOM_VIEWER.loadTimer);
+            DICOM_VIEWER.loadTimer = null;
+        }
+
+        loader.innerHTML =
+            '<div style="text-align: center;">' +
+            '<div style="width: 50px; height: 50px; margin: 0 auto 10px; ' +
+            'border: 3px solid #f44336; border-radius: 50%; ' +
+            'display: flex; align-items: center; justify-content: center;">' +
+            '<span style="color: #f44336; font-size: 28px;">✗</span>' +
+            '</div>' +
+            '<div style="color: #f44336; font-size: 14px; font-weight: 500;">' +
+            'Error al cargar' +
+            '</div>' +
+            '</div>';
+
+        loader.style.background = 'rgba(0,0,0,0.5)';
+        loader.style.display = 'flex';
+
+        setTimeout(function() {
+            hideLoadingIndicator();
+        }, 2000);
+    }
+
+    // ============================================
+    // NAVEGACIÓN DEL CARRUSEL (CON PROTECCIÓN)
+    // ============================================
+    function navigateCarousel(direction) {
+        // 🚫 No permitir navegación mientras se carga una imagen
+        if (DICOM_VIEWER.isLoadingImage) {
+            console.warn('⏸️ Esperando a que termine de cargar la imagen actual...');
+            return;
+        }
+
+        DICOM_VIEWER.currentIndex += direction;
+        if (DICOM_VIEWER.currentIndex < 0) DICOM_VIEWER.currentIndex = 0;
+        if (DICOM_VIEWER.currentIndex >= DICOM_VIEWER.images.length) {
+            DICOM_VIEWER.currentIndex = DICOM_VIEWER.images.length - 1;
+        }
+        showCurrentImage();
+    }
+
+    // ============================================
+    // SUBIDA DE ARCHIVOS DICOM
+    // ============================================
+    function uploadDicomFiles(form) {
+        if (DICOM_VIEWER.isUploading) {
+            console.warn('⚠️ Ya se está subiendo, ignorando...');
+            return;
+        }
+
+        if (DICOM_VIEWER.uploadCompleted) {
+            console.warn('⚠️ Ya se subió anteriormente, ignorando...');
+            return;
+        }
+
+        DICOM_VIEWER.isUploading = true;
+        console.log('🚀 Iniciando subida de archivos DICOM...');
+
+        var formData = new FormData();
+
+        // Agregar campos del formulario
+        form.find('input, select, textarea').not('#dicomFiles').each(function() {
+            var $field = $(this);
+            var fieldName = $field.attr('name');
+            if (!fieldName) return;
+
+            if ($field.attr('type') === 'file' && $field.attr('id') !== 'dicomFiles') {
+                if ($field[0].files.length > 0) {
+                    formData.append(fieldName, $field[0].files[0]);
+                }
+            } else if ($field.attr('type') === 'checkbox') {
+                formData.append(fieldName, $field.is(':checked') ? 1 : 0);
+            } else if ($field.attr('type') === 'radio') {
+                if ($field.is(':checked')) {
+                    formData.append(fieldName, $field.val());
+                }
+            } else {
+                formData.append(fieldName, $field.val() || '');
+            }
+        });
+
+        // Asegurar IDs necesarios
+        if (!formData.has('clie_idx')) {
+            var clieId = $('input[name="clie_idx"]').val();
+            formData.append('clie_idx', clieId);
+        }
+
+        if (!formData.has('atenc_idx')) {
+            var atencId = $('input[name="atenc_idx"]').val() || $('input[name="atenc_id"]').val() || <?php echo isset($atenc_id) ? $atenc_id : 0; ?>;
+            formData.append('atenc_idx', atencId);
+        }
+
+        if (!formData.has('imginfo_enlacex')) {
+            var enlace = $('input[name="imginfo_enlacex"]').val() || $('input[name="codex"]').val() || $('#imginfo_enlace').val();
+            formData.append('imginfo_enlacex', enlace);
+        }
+
+        var imgag_id = $('input[name="imgag_id"]').val();
+        if (imgag_id && imgag_id > 0) {
+            formData.append('imgag_id', imgag_id);
+        }
+
+        // Agregar archivos DICOM
+        DICOM_VIEWER.filesArray.forEach(function(file) {
+            formData.append('dicom_files[]', file);
+        });
+
+        // Mostrar barra de progreso
+        $('#uploadProgress').show();
+        $('#uploadProgressBar').css('width', '0%');
+        $('#uploadProgressText').text('0%');
+        $('#uploadStatus').text('Preparando subida...');
+
+        // AJAX con manejo de caché
+        $.ajax({
+            url: 'upload_dicom.php?t=' + Date.now(),
+            type: 'POST',
+            data: formData,
+            processData: false,
+            contentType: false,
+            cache: false,
+            xhr: function() {
+                var xhr = new window.XMLHttpRequest();
+                xhr.upload.addEventListener("progress", function(evt) {
+                    if (evt.lengthComputable) {
+                        var percentComplete = Math.round((evt.loaded / evt.total) * 100);
+                        $('#uploadProgressBar').css('width', percentComplete + '%');
+                        $('#uploadProgressText').text(percentComplete + '%');
+                        $('#uploadStatus').text('Subiendo archivos DICOM... ' + percentComplete + '%');
+                    }
+                }, false);
+                return xhr;
+            },
+            success: function(response) {
+                try {
+                    var result = typeof response === 'string' ? JSON.parse(response) : response;
+
+                    if (result.success) {
+                        $('#uploadStatus').text('¡Archivos subidos exitosamente!');
+                        $('#uploadProgressBar').removeClass('active').addClass('progress-bar-success');
+                        $('#dicom_folder_path').val(result.folder_path);
+
+                        if (result.estudio_id && (!imgag_id || imgag_id == 0)) {
+                            $('input[name="imgag_id"]').val(result.estudio_id);
+                        }
+
+                        DICOM_VIEWER.uploadCompleted = true;
+                        DICOM_VIEWER.isUploading = false;
+
+                        alert('✅ ' + result.files_count + ' archivos DICOM guardados exitosamente');
+
+                        setTimeout(function() {
+                            $('#uploadProgress').fadeOut();
+                        }, 3000);
+
+                        if (result.redirect) {
+                            window.location.href = result.redirect;
+                        }
+                    } else {
+                        alert('❌ Error al guardar: ' + (result.message || 'Error desconocido'));
+                        $('#uploadProgress').hide();
+                        DICOM_VIEWER.isUploading = false;
+                    }
+                } catch(e) {
+                    console.error('❌ Error parseando respuesta:', e);
+                    alert('Error en la respuesta del servidor.');
+                    $('#uploadProgress').hide();
+                    DICOM_VIEWER.isUploading = false;
+                }
+            },
+            error: function(xhr, status, error) {
+                console.error('❌ Error en la carga:', error);
+                alert('❌ Error al subir los archivos: ' + error);
+                $('#uploadProgress').hide();
+                DICOM_VIEWER.isUploading = false;
+            }
+        });
+    }
+
+    // ============================================
+    // CARGAR IMÁGENES EXISTENTES
+    // ============================================
+    function loadExistingDicomImages() {
+        var imgag_id = $('#imgag_id').val() || $('input[name="imgag_id"]').val() || 0;
+
+        if (!imgag_id || imgag_id == '0') {
+            console.log('ℹ️ Nuevo registro - no hay DICOM para cargar');
+            return;
+        }
+
+        $.ajax({
+            url: 'load_dicom_images.php?t=' + Date.now(),
+            type: 'POST',
+            data: { imgag_id: imgag_id },
+            dataType: 'json',
+            cache: false,
+            success: function(result) {
+                if (result.success && result.files && result.files.length > 0) {
+                    DICOM_VIEWER.uploadCompleted = true;
+                    $('#dicom_files_count').val(result.count);
+                    $('#dicom_folder_path').val(result.folder_path);
+                    loadDicomPreviewFromServer(result.files);
+                    $('#uploadStatus').text('✅ ' + result.count + ' imágenes DICOM cargadas');
+                    $('#uploadStatus').css('color', '#5cb85c').show();
+                }
+            },
+            error: function(xhr, status, error) {
+                console.error('❌ Error cargando imágenes:', error);
+            }
+        });
+    }
+
+    // ============================================
+    // CARGAR PREVIEW DESDE SERVIDOR (CON PROTECCIÓN)
+    // ============================================
+    function loadDicomPreviewFromServer(files) {
+        console.log('📦 Cargando preview desde servidor, archivos:', files.length);
+
+        if (!DICOM_VIEWER.isInitialized) {
+            console.error('❌ Cornerstone no está inicializado');
+            console.log('⏳ Esperando a que se inicialice...');
+
+            waitForInitialization(function() {
+                loadDicomPreviewFromServer(files);
+            });
+            return;
+        }
+
+        if (DICOM_VIEWER.isLoadingPreview) {
+            console.warn('⚠️ Ya se está cargando preview, ignorando...');
+            return;
+        }
+
+        DICOM_VIEWER.isLoadingPreview = true;
+
+        var previewElement = document.getElementById('currentDicomImage');
+        if (previewElement) {
+            try {
+                cornerstone.getEnabledElement(previewElement);
+                cornerstone.disable(previewElement);
+                DICOM_VIEWER.enabledElements.delete('currentDicomImage');
+                console.log('🧹 Preview anterior limpiado');
+            } catch(e) {
+                console.log('ℹ️ No había preview previo que limpiar');
+            }
+        }
+
+        DICOM_VIEWER.images = [];
+        DICOM_VIEWER.currentIndex = 0;
+        DICOM_VIEWER.isLoadingImage = false;
+
+        if (DICOM_VIEWER.imageCache && typeof DICOM_VIEWER.imageCache.clear === 'function') {
+            DICOM_VIEWER.imageCache.clear();
+            console.log('🧹 Cache limpiado');
+        } else {
+            // Reinicializar cache si no existe
+            DICOM_VIEWER.imageCache = new Map();
+            console.log('🔄 Cache reinicializado');
+        }
+
+        console.log('📁 Procesando archivos DICOM...');
+        files.forEach(function(filePath, index) {
+            try {
+                var imageId = 'wadouri:' + filePath;
+                DICOM_VIEWER.images.push({
+                    imageId: imageId,
+                    name: filePath.split('/').pop()
+                });
+                console.log('  ✓ Archivo ' + (index + 1) + ':', filePath.split('/').pop());
+            } catch(e) {
+                console.error('  ✗ Error con archivo:', filePath, e);
+            }
+        });
+
+        if (DICOM_VIEWER.images.length > 0) {
+            console.log('✅ Total imágenes preparadas:', DICOM_VIEWER.images.length);
+            document.getElementById('dicomPreview').style.display = 'block';
+
+            setTimeout(function() {
+                console.log('🎬 Iniciando visualización de primera imagen...');
+                DICOM_VIEWER.isLoadingPreview = false;
+                showCurrentImage();
+
+                setTimeout(function() {
+                    for (var i = 1; i <= Math.min(3, DICOM_VIEWER.images.length - 1); i++) {
+                        (function(index) {
+                            var imageId = DICOM_VIEWER.images[index].imageId;
+                            cornerstone.loadImage(imageId)
+                                .then(function(img) {
+                                    DICOM_VIEWER.imageCache.set(imageId, img);
+                                    console.log('🚀 Pre-cargada imagen ' + (index + 1) + ' en background');
+                                })
+                                .catch(function(err) {
+                                    console.warn('⚠️ Error pre-cargando imagen ' + (index + 1) + ':', err);
+                                });
+                        })(i);
+                    }
+                }, 100);
+            }, 50);
+        } else {
+            console.error('❌ No se pudo preparar ninguna imagen');
+            alert('No se pudieron cargar las imágenes DICOM');
+            DICOM_VIEWER.isLoadingPreview = false;
+        }
+    }
+
+    // ============================================
+    // MODAL Y HERRAMIENTAS
+    // ============================================
+    function openModal() {
+        // Limpiar modal anterior
+        closeDicomModal();
+
+        var backdrop = $('<div class="modal-backdrop fade in"></div>');
+        backdrop.css({
+            'position': 'fixed',
+            'top': '0',
+            'right': '0',
+            'bottom': '0',
+            'left': '0',
+            'z-index': '999999',
+            'background-color': '#000',
+            'opacity': '0.5'
+        });
+
+        var modalHTML =
+            '<div id="dicomModal" class="modal fade in" tabindex="-1" role="dialog" style="position:fixed; top:0; right:0; bottom:0; left:0; z-index:9999999; overflow:auto; display:block;">' +
+            '<div class="modal-dialog modal-lg" style="max-width:90%; height:90vh; margin:30px auto;">' +
+            '<div class="modal-content" style="height:100%; background:#fff;">' +
+            '<div class="modal-header">' +
+            '<button type="button" class="close" onclick="closeDicomModal()">&times;</button>' +
+            '<h4 class="modal-title">Visor DICOM - <span id="modalImageName">' + DICOM_VIEWER.images[DICOM_VIEWER.currentIndex].name + '</span></h4>' +
+            '</div>' +
+            '<div class="modal-body" style="height:calc(100% - 120px); padding:20px;">' +
+            '<div id="modalDicomViewer" style="width:100%; height:100%; border:1px solid #ccc; background:#000;"></div>' +
+            '</div>' +
+            '<div class="modal-footer">' +
+            '<div class="btn-group">' +
+            '<button type="button" class="btn btn-info active" id="zoomBtn" onclick="activateTool(\'zoom\')"><span class="glyphicon glyphicon-search"></span> Zoom</button>' +
+            '<button type="button" class="btn btn-info" id="panBtn" onclick="activateTool(\'pan\')"><span class="glyphicon glyphicon-move"></span> Mover</button>' +
+            '<button type="button" class="btn btn-info" id="wwwcBtn" onclick="activateTool(\'wwwc\')"><span class="glyphicon glyphicon-adjust"></span> Ventana/Nivel</button>' +
+            '<button type="button" class="btn btn-warning" onclick="resetViewer()"><span class="glyphicon glyphicon-refresh"></span> Restaurar</button>' +
+            '</div>' +
+            '<button type="button" class="btn btn-default" onclick="closeDicomModal()">Cerrar</button>' +
+            '</div>' +
+            '</div>' +
+            '</div>' +
+            '</div>';
+
+        $('body').append(backdrop);
+        $('body').append(modalHTML);
+        $('body').addClass('modal-open');
+
+        backdrop.on('click', closeDicomModal);
+
+        setTimeout(function() {
+            DICOM_VIEWER.modalElement = document.getElementById('modalDicomViewer');
+
+            if (!DICOM_VIEWER.modalElement) {
+                console.error('❌ modalDicomViewer no encontrado');
+                return;
+            }
+
+            try {
+                cornerstone.enable(DICOM_VIEWER.modalElement);
+                DICOM_VIEWER.enabledElements.add('modalDicomViewer');
+
+                cornerstone.loadImage(DICOM_VIEWER.images[DICOM_VIEWER.currentIndex].imageId)
+                    .then(function(image) {
+                        cornerstone.displayImage(DICOM_VIEWER.modalElement, image);
+                        DICOM_VIEWER.modalViewport = cornerstone.getViewport(DICOM_VIEWER.modalElement);
+                        activateTool('zoom');
+                    })
+                    .catch(function(err) {
+                        console.error("❌ Error cargando en modal:", err);
+                        alert('Error al mostrar imagen: ' + err.message);
+                    });
+            } catch(e) {
+                console.error('❌ Error habilitando modal:', e);
+            }
+        }, 400);
+    }
+
+    function closeDicomModal() {
+        cleanupModalEvents();
+
+        if (DICOM_VIEWER.modalElement) {
+            try {
+                cornerstone.disable(DICOM_VIEWER.modalElement);
+                DICOM_VIEWER.enabledElements.delete('modalDicomViewer');
+            } catch(e) {}
+            DICOM_VIEWER.modalElement = null;
+            DICOM_VIEWER.modalViewport = null;
+        }
+
+        $('#dicomModal').remove();
+        $('.modal-backdrop').remove();
+        $('body').removeClass('modal-open');
+    }
+
+    function cleanupModalEvents() {
+        if (!DICOM_VIEWER.modalElement) return;
+
+        DICOM_VIEWER.modalElement.onmousedown = null;
+        DICOM_VIEWER.modalElement.onmousemove = null;
+        DICOM_VIEWER.modalElement.onmouseup = null;
+        DICOM_VIEWER.modalElement.onmouseleave = null;
+
+        if (DICOM_VIEWER.wheelListener) {
+            DICOM_VIEWER.modalElement.removeEventListener('wheel', DICOM_VIEWER.wheelListener);
+            DICOM_VIEWER.wheelListener = null;
+        }
+    }
+
+    function activateTool(toolName) {
+        if (!DICOM_VIEWER.modalElement) return;
+
+        DICOM_VIEWER.currentTool = toolName;
+        cleanupModalEvents();
+
+        $('#zoomBtn, #panBtn, #wwwcBtn').removeClass('active');
+
+        switch(toolName) {
+            case 'zoom':
+                $('#zoomBtn').addClass('active');
+                setupZoomTool();
+                break;
+            case 'pan':
+                $('#panBtn').addClass('active');
+                setupPanTool();
+                break;
+            case 'wwwc':
+                $('#wwwcBtn').addClass('active');
+                setupWwwcTool();
+                break;
+        }
+    }
+
+    function setupZoomTool() {
+        if (!DICOM_VIEWER.modalElement) return;
+        DICOM_VIEWER.modalElement.style.cursor = 'zoom-in';
+
+        DICOM_VIEWER.wheelListener = function(e) {
+            e.preventDefault();
+            var viewport = cornerstone.getViewport(DICOM_VIEWER.modalElement);
+            var delta = e.deltaY < 0 ? 0.15 : -0.15;
+            viewport.scale += delta;
+            viewport.scale = Math.max(0.1, Math.min(10, viewport.scale));
+            cornerstone.setViewport(DICOM_VIEWER.modalElement, viewport);
+        };
+
+        DICOM_VIEWER.modalElement.addEventListener('wheel', DICOM_VIEWER.wheelListener, { passive: false });
+
+        DICOM_VIEWER.modalElement.onmousedown = function(e) {
+            DICOM_VIEWER.isDragging = true;
+            DICOM_VIEWER.startPoint = { x: e.clientX, y: e.clientY };
+        };
+
+        DICOM_VIEWER.modalElement.onmousemove = function(e) {
+            if (!DICOM_VIEWER.isDragging) return;
+            var viewport = cornerstone.getViewport(DICOM_VIEWER.modalElement);
+            var deltaY = DICOM_VIEWER.startPoint.y - e.clientY;
+            viewport.scale += deltaY * 0.01;
+            viewport.scale = Math.max(0.1, Math.min(10, viewport.scale));
+            cornerstone.setViewport(DICOM_VIEWER.modalElement, viewport);
+            DICOM_VIEWER.startPoint = { x: e.clientX, y: e.clientY };
+        };
+
+        DICOM_VIEWER.modalElement.onmouseup = function() {
+            DICOM_VIEWER.isDragging = false;
+        };
+
+        DICOM_VIEWER.modalElement.onmouseleave = function() {
+            DICOM_VIEWER.isDragging = false;
+        };
+    }
+
+    function setupPanTool() {
+        if (!DICOM_VIEWER.modalElement) return;
+        DICOM_VIEWER.modalElement.style.cursor = 'move';
+
+        DICOM_VIEWER.modalElement.onmousedown = function(e) {
+            DICOM_VIEWER.isDragging = true;
+            DICOM_VIEWER.startPoint = { x: e.clientX, y: e.clientY };
+            DICOM_VIEWER.modalElement.style.cursor = 'grabbing';
+        };
+
+        DICOM_VIEWER.modalElement.onmousemove = function(e) {
+            if (!DICOM_VIEWER.isDragging) return;
+            var viewport = cornerstone.getViewport(DICOM_VIEWER.modalElement);
+            var deltaX = e.clientX - DICOM_VIEWER.startPoint.x;
+            var deltaY = e.clientY - DICOM_VIEWER.startPoint.y;
+            viewport.translation.x += deltaX;
+            viewport.translation.y += deltaY;
+            cornerstone.setViewport(DICOM_VIEWER.modalElement, viewport);
+            DICOM_VIEWER.startPoint = { x: e.clientX, y: e.clientY };
+        };
+
+        DICOM_VIEWER.modalElement.onmouseup = function() {
+            DICOM_VIEWER.isDragging = false;
+            DICOM_VIEWER.modalElement.style.cursor = 'move';
+        };
+
+        DICOM_VIEWER.modalElement.onmouseleave = function() {
+            DICOM_VIEWER.isDragging = false;
+        };
+    }
+
+    function setupWwwcTool() {
+        if (!DICOM_VIEWER.modalElement) return;
+        DICOM_VIEWER.modalElement.style.cursor = 'crosshair';
+
+        DICOM_VIEWER.modalElement.onmousedown = function(e) {
+            DICOM_VIEWER.isDragging = true;
+            DICOM_VIEWER.startPoint = { x: e.clientX, y: e.clientY };
+        };
+
+        DICOM_VIEWER.modalElement.onmousemove = function(e) {
+            if (!DICOM_VIEWER.isDragging) return;
+            var viewport = cornerstone.getViewport(DICOM_VIEWER.modalElement);
+            var deltaX = e.clientX - DICOM_VIEWER.startPoint.x;
+            var deltaY = e.clientY - DICOM_VIEWER.startPoint.y;
+
+            if (!viewport.voi) {
+                viewport.voi = { windowWidth: 255, windowCenter: 128 };
+            }
+
+            viewport.voi.windowWidth += deltaX * 4;
+            viewport.voi.windowCenter += deltaY * 4;
+            viewport.voi.windowWidth = Math.max(1, viewport.voi.windowWidth);
+
+            cornerstone.setViewport(DICOM_VIEWER.modalElement, viewport);
+            DICOM_VIEWER.startPoint = { x: e.clientX, y: e.clientY };
+        };
+
+        DICOM_VIEWER.modalElement.onmouseup = function() {
+            DICOM_VIEWER.isDragging = false;
+        };
+
+        DICOM_VIEWER.modalElement.onmouseleave = function() {
+            DICOM_VIEWER.isDragging = false;
+        };
+    }
+
+    function resetViewer() {
+        if (!DICOM_VIEWER.modalElement) return;
+        cornerstone.reset(DICOM_VIEWER.modalElement);
+    }
 </script>
 
 <?php

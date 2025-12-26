@@ -1,0 +1,53 @@
+update cesdb_arextension.dns_newtraumatologiagridexamenfisico set gexamfis_observacion='AL EXAMEN FISICO, CHASQUIDO ARTICULAR, SIGNO DE SOLLEN POSITIVO' where gexamfis_id=2290
+update cesdb_arextension.dns_antecedentespersonalesnewconext set antep_descripcion='CIRUGIA DE PLASTIA DE TENDON DE AQUILES ' where antep_id=71
+update cesdb_arextension.dns_newtraumatologiagridexamenfisico set gexamfis_observacion='BUENA MOVILIDAD DE DEDOS CIRCULACION DISTAL CONSERVADA ' where gexamfis_id=2315
+update cesdb_arextension.dns_antecedentespersonalesnewconext set antep_descripcion='ALERGIA AL DICLOFENACO' where antep_id=72
+update cesdb_arextension.dns_newtraumatologiagridexamenfisico set gexamfis_observacion='PACIENTE CONSCIENTE ORIENTADA HIDRATADA AFEBRIL, ALGICA, CABEZA NORMOCEFALICA, OJOS PUPILAS ISOCORICAS NORMOREACTIVAS, CUELLO MOVIL NO DOLOROSO, TORAX EXPANSIBLE, CARDIOPULMONAR CONSERVADO, ABDOMEN SUAVE DEPRESIBLE NO DOLOROSO, DOLOR A LA PALPACION A NIVEL DE CADERA IZQUIERDA, MULTIPLES HEMATOMAS A NIVEL DE CODO IZQUIERDO, DOLOR  LA MOVILIDAD NO SE PALPAN DEFORMIDADES OSEAS, A NIVEL DE MIEMBROS INFERIORES DOLOR A LA MOVILIDAD A NIVEL DE RODILLA DERECHA, EN TIBIA ANTERIOR ESCORIACION 1CM APROXIMADAMENTE Y HEMATOMA EN TERCIO MEDIO, EN TOBILLOS BILATERAL DOLOR, EDEMA ++ DE PREDOMINIO EN TOBILLO DERECHO Y LIMITACION FUNCIONAL.' where gexamfis_id=2340
+update cesdb_arextension.dns_newtraumatologiagridexamenfisico set gexamfis_observacion='PACIENTE CONSCIENTE ORIENTADA HIDRATADA AFEBRIL, ALGICA, CABEZA NORMOCEFALICA, OJOS PUPILAS ISOCORICAS NORMOREACTIVAS, CUELLO MOVIL NO DOLOROSO, TORAX EXPANSIBLE, CARDIOPULMONAR CONSERVADO, ABDOMEN SUAVE DEPRESIBLE NO DOLOROSO, DOLOR A LA PALPACION A NIVEL DE CADERA IZQUIERDA, MULTIPLES HEMATOMAS A NIVEL DE CODO IZQUIERDO, DOLOR  LA MOVILIDAD NO SE PALPAN DEFORMIDADES OSEAS, A NIVEL DE MIEMBROS INFERIORES DOLOR A LA MOVILIDAD A NIVEL DE RODILLA DERECHA, EN TIBIA ANTERIOR ESCORIACION 1CM APROXIMADAMENTE Y HEMATOMA EN TERCIO MEDIO, EN TOBILLOS BILATERAL DOLOR, EDEMA ++ DE PREDOMINIO EN TOBILLO DERECHO Y LIMITACION FUNCIONAL.' where gexamfis_id=2339
+update cesdb_arextension.dns_antecedentespersonalesnewconext set antep_descripcion='HIPOACUSIA BILATERAL DE LARGA DATA CON USO DE AURICULAR EXTERNA ' where antep_id=73
+update cesdb_arextension.dns_antecedentespersonalesnewconext set antep_descripcion='HIPOACUSIA BILATERAL DE LARGA DATA CON USO DE AURICULAR EXTERNA ' where antep_id=73
+update cesdb_arextension.dns_antecedentespersonalesnewconext set antep_descripcion='HIPOACUSIA BILATERAL DE LARGA DATA CON USO DE AURICULAR EXTERNA 
+PROSTACTECTOMIA HACE 1 AÑO Y 6 MESES, RESECCION DE PTERIGION DERECHO HACE 14 AÑOS' where antep_id=73
+update cesdb_arextension.dns_antecedentespersonalesnewconext set antep_descripcion='HIPOACUSIA BILATERAL DE LARGA DATA CON USO DE AURICULAR EXTERNA 
+PROSTACTECTOMIA HACE 1 AÑO Y 6 MESES, RESECCION DE PTERIGION DERECHO HACE 14 AÑOS' where antep_id=73
+update cesdb_arextension.dns_newtraumatologiagridorgano set gorgano_observacion='DOLOR EN MANO DERECHA Y RODILLA IZQUIERDA' where gorgano_id=944
+update cesdb_arextension.dns_newtraumatologiagridexamenfisico set gexamfis_observacion='SIN EVIDENCIA DE PATOLOGIA' where gexamfis_id=2364
+update cesdb_arextension.dns_newtraumatologiagridexamenfisico set gexamfis_observacion='RODILLA IZQUIERDA VISCAS CRUJIDO PRESENTE CEPILLADO POSITIVO ZHOLEM POSITIVO NO IMPRESIONA BOSTEZO NI CAJON ANTERIOR FUERZA MUSCULAR CONSERVADA, NO LIMITACION FUNCIONAL. ' where gexamfis_id=2365
+update cesdb_arextension.dns_newtraumatologiagridexamenfisico set gexamfis_observacion='RODILLA IZQUIERDA VISCAS CRUJIDO PRESENTE CEPILLADO POSITIVO ZHOLEM POSITIVO NO IMPRESIONA BOSTEZO NI CAJON ANTERIOR FUERZA MUSCULAR CONSERVADA, NO LIMITACION FUNCIONAL. ' where gexamfis_id=2365
+update cesdb_arextension.dns_newtraumatologiagridexamenfisico set gexamfis_observacion='MUÑECA DERECHA DOLOR A LA PALPACION EN LA APOFISIS  ESTILOIDES DEL CUBITO, LIMITACION FUNCIONAL A LA FLEXION PALMAR
+' where gexamfis_id=2364
+update cesdb_arextension.dns_antecedentespersonalesnewconext set antep_descripcion='HIPERTENSION ARTERIAL DG HACE 2 AÑOS SIN TRATAMIENTO ACTUAL
+' where antep_id=74
+update cesdb_arextension.dns_antecedentespersonalesnewconext set antep_descripcion='HERNIORRAFIA INGUINAL IZQUIERDA CON MALLA RESUELTA HACE 2 AÑOS, CESAREA HACE 33 AÑOS ' where antep_id=75
+update cesdb_arextension.dns_newtraumatologiagridexamenfisico set gexamfis_observacion='TOBILLO DERECHO DOLOR A LA DIGITOPRESION PROFUNDA EN ZONA DE SINDESMOSIS, RANDOS DE MOVILIDAD ADECUADOS NO EDEMA, FUERZA MUSCULAR OPTIMA, LLENADO CAPILAR ADECUADO. ' where gexamfis_id=2390
+update cesdb_arextension.dns_antecedentespersonalesnewconext set antep_descripcion='TENDINITIS DE QUERVARIN BAJO TRATAMIENTO CLINICO' where antep_id=76
+update cesdb_arextension.dns_newtraumatologiagridorgano set gorgano_observacion='OMALGIA IZQUIERDA Y DOLOR EN RODILLA DERECHA ' where gorgano_id=964
+update cesdb_arextension.dns_newtraumatologiagridexamenfisico set gexamfis_observacion='RODILLA DERECHA SIGNO DE ZHOLEM + CRUJIDO ARTICULAR PRESENTE CHASQUIDO + NO IMPRESIONA BOSTEZO NI CAJON ANTERIOR, ZHOLEM + ' where gexamfis_id=2415
+update cesdb_arextension.dns_newtraumatologiagridexamenfisico set gexamfis_observacion='RODILLA DERECHA SIGNO DE ZHOLEM + CRUJIDO ARTICULAR PRESENTE CHASQUIDO + NO IMPRESIONA BOSTEZO NI CAJON ANTERIOR, ZHOLEM + ' where gexamfis_id=2415
+update cesdb_arextension.dns_newtraumatologiagridexamenfisico set gexamfis_observacion='HOMBRO IZQUIERDO DOLOR A LA PALPACION EN CARA ANTERIOR, HK POSITIVO, RANGOS DE MOVILIDAD ADECUADOS, FUERZA MUSCULAR CONSERVADA
+' where gexamfis_id=2414
+update cesdb_arextension.dns_newtraumatologiagridexamenfisico set gexamfis_observacion='HOMBRO IZQUIERDO DOLOR A LA PALPACION EN CARA ANTERIOR, HK POSITIVO, RANGOS DE MOVILIDAD ADECUADOS, FUERZA MUSCULAR CONSERVADA
+' where gexamfis_id=2414
+update cesdb_arextension.dns_newtraumatologiagridexamenfisico set gexamfis_observacion='TOBILLO IZQUIERDO DISMINUCION DE EDEMA NO DOLOR DISCRETA LIMITACION FUNCIONAL SENSIBILIDAD Y LLENADO CAPILAR ADECUADO ' where gexamfis_id=2440
+update cesdb_arextension.dns_antecedentespersonalesnewconext set antep_descripcion='HIPERTENSION ARTERIAL ' where antep_id=77
+update cesdb_arextension.dns_antecedentespersonalesnewconext set antep_descripcion='OPERACIÓN OCULAR HACE 1 AÑO' where antep_id=78
+update cesdb_arextension.dns_newtraumatologiagridorgano set gorgano_observacion='HOMBRO IZQUIERDO POSQUIRURGICO ' where gorgano_id=984
+update cesdb_arextension.dns_newtraumatologiagridexamenfisico set gexamfis_observacion='HOMBRO IZQUIERDO HERIDA CON SIGNOS DE HUMEDAD ERITEMA LOCAL LIMITACION FUNCIONAL PRESENTE FUERZA MUSCULAR Y REFLEJOS OSTEOTENDINOSOS NO VALORADOS, REGION CERVICAL MUSCULATURA PARVERTEBRAL TENSA ' where gexamfis_id=2464
+update cesdb_arextension.dns_newtraumatologiagridexamenfisico set gexamfis_observacion='HOMBRO IZQUIERDO HERIDA CON SIGNOS DE HUMEDAD ERITEMA LOCAL LIMITACION FUNCIONAL PRESENTE FUERZA MUSCULAR Y REFLEJOS OSTEOTENDINOSOS NO VALORADOS, REGION CERVICAL MUSCULATURA PARVERTEBRAL TENSA ' where gexamfis_id=2464
+update cesdb_arextension.dns_newtraumatologiagridorgano set gorgano_observacion='OMALGIA IZQUIERDA ' where gorgano_id=994
+update cesdb_arextension.dns_newtraumatologiagridexamenfisico set gexamfis_observacion='' where gexamfis_id=2489
+update cesdb_arextension.dns_newtraumatologiagridexamenfisico set gexamfis_observacion='' where gexamfis_id=2489
+update cesdb_arextension.dns_newtraumatologiagridexamenfisico set gexamfis_observacion=' HOMBRO IZQUIERDO HERIDA EN BUENA CONDICION SIN SIGNOS DE INFECCIÓN PUNTOS ESTABLES EN PROCESO DE CICATRIZACIÓN, LIMITACION FUNCIONAL PRESENTE, REGION CERVICAL MUSCULATURA PARAVERTEBRAL TENSA. ' where gexamfis_id=2489
+update cesdb_arextension.dns_antecedentespersonalesnewconext set antep_descripcion=' CAUTERIZACION DE CORNETES + SEPTOPLASTIA HACE 2 AÑOS, APENDICECTOMIA ABIERTA HACE 20 AÑOS' where antep_id=79
+update cesdb_arextension.dns_antecedentespersonalesnewconext set antep_descripcion=' CAUTERIZACION DE CORNETES + SEPTOPLASTIA HACE 2 AÑOS, APENDICECTOMIA ABIERTA HACE 20 AÑOS' where antep_id=79
+update cesdb_arextension.dns_newtraumatologiagridorgano set gorgano_observacion='HOMBRO DERECHO POSQUIRURGICO ' where gorgano_id=1004
+update cesdb_arextension.dns_newtraumatologiagridexamenfisico set gexamfis_observacion='' where gexamfis_id=2514
+update cesdb_arextension.dns_newtraumatologiagridexamenfisico set gexamfis_observacion='' where gexamfis_id=2514
+update cesdb_arextension.dns_newtraumatologiagridexamenfisico set gexamfis_observacion='HOMBRO DERECHO HERIDAS EN BUENA CONDICION SIN SIGNOS DE INFECCIÓN EN PROCESO DE CICATRIZACION,, RANGOS DE MOVILIDAD EN PROGRESION, LLENADO CAPILAR ADECUADO PULSOS PRESENTES, FUERZA MUSCULAR 3/5' where gexamfis_id=2514
+update cesdb_arextension.dns_antecedentespersonalesnewconext set antep_descripcion='HIPOTIROIDISMO DESDE HACE MAS DE 10 AÑOS EN TRATAMIENTO CON LEVOTIROXINA DE 250MCG VO QD, HIPERTENSIÓN ARTERIAL DESDE HACE 4 AÑOS EN TRATAMIENTO CON MIOCARDIS PLUS 80MG/12,5MG VO QD' where antep_id=80
+update cesdb_arextension.dns_antecedentespersonalesnewconext set antep_descripcion='HIPOTIROIDISMO DESDE HACE MAS DE 10 AÑOS EN TRATAMIENTO CON LEVOTIROXINA DE 250MCG VO QD, HIPERTENSIÓN ARTERIAL DESDE HACE 4 AÑOS EN TRATAMIENTO CON MIOCARDIS PLUS 80MG/12,5MG VO QD' where antep_id=80
+update cesdb_arextension.dns_newtraumatologiagridorgano set gorgano_observacion='HOMBRO DERECHO POSQX ' where gorgano_id=1014
+update cesdb_arextension.dns_newtraumatologiagridexamenfisico set gexamfis_observacion='HOMBRO DERECHO HERIDAS EN BUENA CONDICIÓN NO SIGNOS DE INFECCION EN PROCESO DE CICATRIZACIÓN, LIMITACION FUNCIONAL, MOVILIDAD DISTAL ADECUADA, LLENADO CPAILAR ADECUADO 
+SE PROCEDE A RETIRO DE PUNTOS SIN COMPLICACIONES' where gexamfis_id=2539
+update cesdb_arextension.dns_newtraumatologiagridexamenfisico set gexamfis_observacion='HOMBRO DERECHO HERIDAS EN BUENA CONDICIÓN NO SIGNOS DE INFECCION EN PROCESO DE CICATRIZACIÓN, LIMITACION FUNCIONAL, MOVILIDAD DISTAL ADECUADA, LLENADO CPAILAR ADECUADO 
+SE PROCEDE A RETIRO DE PUNTOS SIN COMPLICACIONES' where gexamfis_id=2539

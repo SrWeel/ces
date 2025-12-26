@@ -1,0 +1,1 @@
+insert into dns_diagnosticonewimagensolicitud (diagn_cie,diagn_descripcion,diagn_tipo,imgag_enlace,diagn_fecharegistro,usua_id) values ('F340','Ciclotimia','DEFINITIVO','49011212121212120251222121112451','2025-12-22 12:11:38','1')

@@ -1,0 +1,2 @@
+update cesdb_arextension.dns_newtraumatologiagridorgano set gorgano_observacion='PACIENTE CONSCIENTE ORIENTADO: FROTE ARTICULAR  RODILLA IZQUIERDA, CRUJIDO ARTICULAR RODILLA DERECHA., ZOLEM + CAJON ANTERIOR + CAJON ROTATORIO +, CAJON INTERNO + ' where gorgano_id=904
+update cesdb_arextension.dns_antecedentespersonalesnewconext set antep_descripcion='ALERGIAS A LA PENICILINA' where antep_id=70

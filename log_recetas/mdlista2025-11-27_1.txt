@@ -1,0 +1,12 @@
+update cesdb_arextension.dns_antecedentespersonalesnewconext set antep_descripcion='NO REFIERE' where antep_id=64
+update cesdb_arextension.dns_antecedentespersonalesnewconext set antep_descripcion='NO REFIERE' where antep_id=65
+update cesdb_arextension.dns_antecedentespersonalesnewconext set antep_descripcion='NO REFIERE' where antep_id=65
+update cesdb_arextension.dns_newtraumatologiagridorgano set gorgano_observacion='RODILLA  IZQUIERDA PRESENCIA DE RECURBATUM, A LA FLEXION CRUJIDO CAJON - BOSTEZO - ZOLEM +
+RODILLA DERECHA: EDEMA +/+++ SIGNOS DE APRESION +, ZOLEM - FLEXION NO SUPERA 90°, EXTENSION DOLOR A LA PALPACION' where gorgano_id=834
+update cesdb_arextension.dns_newtraumatologiagridorgano set gorgano_observacion='RODILLA  IZQUIERDA PRESENCIA DE RECURBATUM, A LA FLEXION CRUJIDO CAJON - BOSTEZO - ZOLEM +
+RODILLA DERECHA: EDEMA +/+++ SIGNOS DE APRESION +, ZOLEM - FLEXION NO SUPERA 90°, EXTENSION DOLOR A LA PALPACION' where gorgano_id=834
+update cesdb_arextension.dns_newtraumatologiagridexamenfisico set gexamfis_observacion='TOBILLO DOLOR EN CARA EXTERNA A NIVEL DE EPIFISIS PERONE LIMITACION A LOS MOVIMIENTOS EDEMA ++/+++ BUENOS PULSOS SENSIBILIDAD CONSERVADA' where gexamfis_id=2115
+update cesdb_arextension.dns_antecedentespersonalesnewconext set antep_descripcion='FRACTURA DE ANTEBRAZO IZQUIERDO BAJO TRATAMIENTO CLINICO HACE 16 AÑOS 
+ APQX: APENDICECTOMIA ABIERTA HACE 4 AÑOS, VARICOLECTOMIA IZQUIERDA HACE 14 AÑOS' where antep_id=66
+update cesdb_arextension.dns_newtraumatologiagridexamenfisico set gexamfis_observacion='DISMINUYE EL EDEMA, DOLOR A LA PALPACION A NIVELD E LIGAMENTO ROTULIANO 
+SE RETIRA INMOVILIZACION CON VALVA DE YESO SUROPEDICA' where gexamfis_id=2140

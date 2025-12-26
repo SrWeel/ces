@@ -1,0 +1,4 @@
+update cesdb_arextension.dns_antecedentesfamiliaresnewconext set antef_descripcion='DISPLASIA CONGENITA DE CADERAS ' where antef_id=33
+update cesdb_arextension.dns_newtraumatologiagridorgano set gorgano_observacion='CONTROL CADERA' where gorgano_id=864
+update cesdb_arextension.dns_newtraumatologiagridexamenfisico set gexamfis_observacion='ABDUCCION LIMITADA ASIMETRIA DE PLIEGUES 
+' where gexamfis_id=2165

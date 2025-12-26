@@ -143,27 +143,54 @@ if($_SESSION['ces1313777_sessid_inicio']) {
     $primer_nombre = isset($partes_nombre[0]) ? $partes_nombre[0] : '';
     $segundo_nombre = isset($partes_nombre[1]) ? $partes_nombre[1] : '';
 
-    // PASO 2: CONSULTAR LA ADMINISTRACIÓN DE MEDICAMENTOS (CON ID)
+    //  MEDICAMENTOS (CON TODAS LAS RELACIONES) - se incluye operatorio
     $sql_medicamentos = "
-    SELECT 
-        m.gadmmedi_id, 
-        m.*, 
-        u.usua_nombre, 
-        u.usua_apellido, 
-        u.usua_codigo, 
-        u.usua_codigoiniciales 
-    FROM cesdb_arextension.dns_gridadmmedicamentos AS m
-    LEFT JOIN cesdb_aroriginal.app_usuario AS u 
-           ON m.usua_id = u.usua_id
-    WHERE m.enferm_enlace = ?
-    ORDER BY m.gadmmedi_fecha DESC, m.gadmmedi_hora DESC
+        SELECT 
+            m.gadmmedi_id, 
+            m.gadmmedi_medicamento,
+            m.gadmmedi_dosis,
+            m.gadmmedi_via,
+            m.gadmmedi_frecuencia,
+            m.gadmmedi_fecha,
+            m.gadmmedi_hora,
+            m.gadmmedi_fecharegistro,
+            m.enferm_enlace,
+            
+            -- Datos del usuario responsable
+            u.usua_nombre, 
+            u.usua_apellido, 
+            u.usua_codigo, 
+            u.usua_codigoiniciales,
+            
+            -- Datos de vía de administración
+            v.via_descripcion,
+            
+            -- Datos de frecuencia
+            f.frecue_frecuencia,
+            f.frecue_descripcion AS frecuencia_descripcion,
+            oper.enfope_descripcion AS control_preoperatorio
+        FROM cesdb_arextension.dns_gridadmmedicamentos AS m
+        
+        LEFT JOIN cesdb_aroriginal.app_usuario AS u 
+               ON m.usua_id = u.usua_id
+               
+        -- JOIN con tabla de vía de administración
+        LEFT JOIN cesdb_arcombos.dns_via AS v
+               ON m.gadmmedi_via = v.via_id
+        
+        LEFT JOIN cesdb_arcombos.dns_enfermeriaoperatorio AS oper
+                ON m.gadmmedi_operatorio = oper.enfope_id
+               
+        -- JOIN con tabla de frecuencia
+        LEFT JOIN cesdb_aroriginal.dns_frecuencia AS f
+               ON m.gadmmedi_frecuencia = f.frecue_id
+               
+        WHERE m.enferm_enlace = ?
+        
+        ORDER BY m.gadmmedi_medicamento ASC, m.gadmmedi_fecha ASC, m.gadmmedi_hora ASC
 ";
 
-
-
-
     $rs_medicamentos = $DB_gogess->executec($sql_medicamentos, array($enferm_enlace));
-
     // Construir HTML del reporte
     $html_reporte = '
     <!DOCTYPE html>
@@ -325,7 +352,7 @@ if($_SESSION['ces1313777_sessid_inicio']) {
                     <div class="subtitulo">ADMINISTRACIÓN DE MEDICAMENTOS - KÁRDEX</div>
                 </td>
                 <td class="codigo-cell">
-                    <strong>CÓDIGO:</strong><br>' . $uni_codiog . '
+                    <strong>N° HCU:</strong><br>' . $hc. '
                 </td>
             </tr>
         </table>
@@ -343,7 +370,7 @@ if($_SESSION['ces1313777_sessid_inicio']) {
                 <td class="encabezado-verde">N° DE HOJA</td>
             </tr>
             <tr>
-                <td class="celda-dato" colspan="2">' . $institucion_valor . '</td>
+                <td class="celda-dato" colspan="2">' . $nomb_centro . '</td>
                 <td class="celda-dato">' . $uni_codiog . '</td>
                 <td class="celda-dato" colspan="2">' . $nomb_centro . '</td>
                 <td class="celda-dato">' . $hc . '</td>
@@ -400,19 +427,20 @@ if($_SESSION['ces1313777_sessid_inicio']) {
 
             $medicamento_id = $rs_medicamentos->fields["gadmmedi_id"];
             $medicamento = htmlspecialchars($rs_medicamentos->fields["gadmmedi_medicamento"]);
-            $dosis = htmlspecialchars($rs_medicamentos->fields["gadmmedi_dosis"]);
-            $via = htmlspecialchars($rs_medicamentos->fields["gadmmedi_via"]);
-            $frecuencia = htmlspecialchars($rs_medicamentos->fields["gadmmedi_frecuencia"]);
+            $dosis = htmlspecialchars($rs_medicamentos->fields["gadmmedi_dosis"]); // Este parece ser texto libre
+            $via = htmlspecialchars($rs_medicamentos->fields["via_descripcion"]); // Ahora viene de la tabla
+            $frecuencia = htmlspecialchars($rs_medicamentos->fields["frecuencia_descripcion"]); // Ahora viene de la tabla
+            $oper = htmlspecialchars($rs_medicamentos->fields["control_preoperatorio"]); // Ahora viene de la tabla
+
             $fecha = $rs_medicamentos->fields["gadmmedi_fecha"];
             $hora = $rs_medicamentos->fields["gadmmedi_hora"];
-            $responsable_campo = htmlspecialchars($rs_medicamentos->fields["gadmmedi_responsable"]);
             $fecha_registro = $rs_medicamentos->fields["gadmmedi_fecharegistro"];
 
             $info_administracion = '';
             if($dosis) $info_administracion .= '<strong>Dosis:</strong> '.$dosis.'<br>';
             if($via) $info_administracion .= '<strong>Vía:</strong> '.$via.'<br>';
-            if($frecuencia) $info_administracion .= '<strong>Frecuencia:</strong> '.$frecuencia;
-
+            if($frecuencia) $info_administracion .= '<strong>Frecuencia:</strong> '.$frecuencia.'<br>';
+            if($oper) $info_administracion .= '<strong>Operatorio:</strong> '.$oper;
             $nombre_usuario = trim($rs_medicamentos->fields["usua_nombre"].' '.$rs_medicamentos->fields["usua_apellido"]);
             $codigo_usuario = $rs_medicamentos->fields["usua_codigo"];
             $iniciales_usuario = $rs_medicamentos->fields["usua_codigoiniciales"];
@@ -426,8 +454,6 @@ if($_SESSION['ces1313777_sessid_inicio']) {
                 if($codigo_usuario) {
                     $info_usuario .= '<div class="usuario-info">Cód: '.$codigo_usuario.'</div>';
                 }
-            } else if($responsable_campo) {
-                $info_usuario = '<strong>'.$responsable_campo.'</strong>';
             }
 
             $html_reporte .= '
@@ -441,7 +467,7 @@ if($_SESSION['ces1313777_sessid_inicio']) {
                     </td>
 
 
-                    <td>'.$info_usuario . $responsable_campo.'</td>
+                    <td>'.$info_usuario .'</td>
                     <td>'.($fecha_registro && $fecha_registro != '0000-00-00 00:00:00' ? date("d/m/Y H:i", strtotime($fecha_registro)) : '-').'</td>
                 </tr>';
 

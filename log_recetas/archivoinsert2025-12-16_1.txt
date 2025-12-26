@@ -1,0 +1,1 @@
+insert into dns_diagnosticonewimagensolicitud (diagn_cie,diagn_descripcion,diagn_tipo,imgag_enlace,diagn_fecharegistro,usua_id) values ('Y835','Amputación de miembro(s)','DEFINITIVO','2011212121212120251216102951165','2025-12-16 10:30:21','1')
