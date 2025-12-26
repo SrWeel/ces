@@ -3251,7 +3251,7 @@ test\\_%|schema||&apos;&apos;||UPDATE|G</Grants>
       <CollationName>utf8_general_ci</CollationName>
     </table>
     <table id="864" parent="327" name="dns_actividades">
-      <DetailsLevel>1</DetailsLevel>
+      <DetailsLevel>3</DetailsLevel>
       <Engine>InnoDB</Engine>
       <CollationName>latin1_swedish_ci</CollationName>
     </table>
@@ -3261,7 +3261,7 @@ test\\_%|schema||&apos;&apos;||UPDATE|G</Grants>
       <CollationName>latin1_swedish_ci</CollationName>
     </table>
     <table id="866" parent="327" name="dns_actividadesgenerales">
-      <DetailsLevel>1</DetailsLevel>
+      <DetailsLevel>3</DetailsLevel>
       <Engine>InnoDB</Engine>
       <CollationName>latin1_swedish_ci</CollationName>
     </table>
@@ -30343,7 +30343,7 @@ genr_mes</ColNames>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
     <column id="7676" parent="866" name="actemfgen_id">
-      <AutoIncrement>6</AutoIncrement>
+      <AutoIncrement>7</AutoIncrement>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StoredType>int(11)|0s</StoredType>

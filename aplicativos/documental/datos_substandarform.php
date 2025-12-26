@@ -290,10 +290,12 @@ if($bloque_registro==1)
 $linkimprimir='onClick=genera_pdfevolucion();';
 $medicationadmin='onClick=genera_medicationadmin();';
 $preoperative='onClick=genera_preoperative();';
+$acgnlnursing='onClick=genera_actgeneralnursing();';
 
 echo '<button type="button" class="mb-sm btn btn-info" '.$linkimprimir.'  style="cursor:pointer"><span class="glyphicon glyphicon-print"></span>NOTAS ENFERMERIA</button>&nbsp;&nbsp;';
 echo '<button type="button" class="mb-sm btn btn-info" '.$medicationadmin.'  style="cursor:pointer"><span class="glyphicon glyphicon-print"></span>ADM MEDICAMENTOS</button>&nbsp;&nbsp;';
 echo '<button type="button" class="mb-sm btn btn-info" '.$preoperative .'  style="cursor:pointer"><span class="glyphicon glyphicon-print"></span>PREOPERATORIO</button>&nbsp;&nbsp;';
+echo '<button type="button" class="mb-sm btn btn-info" '.$acgnlnursing .'  style="cursor:pointer"><span class="glyphicon glyphicon-print"></span>ACTIVIDADES GENERALES</button>&nbsp;&nbsp;';
 //////
 
 
@@ -549,6 +551,26 @@ function genera_preoperative()
     }
 
     var url = "pdfformularios/generate_preoperative.php?ssr=<?php echo $campos_data64; ?>|" + id_registro;
+    window.open(url, '_blank');
+}
+///////////
+
+//////////
+function genera_actgeneralnursing()
+{
+    var id_registro = $('#<?php echo $campo_primariodata; ?>').val();
+
+    if (!id_registro || id_registro <= 0) {
+        Swal.fire({
+            icon: 'warning',
+            title: '¡Espera!',
+            html: 'Por favor <b>guarda el registro</b> antes de imprimir .',
+            confirmButtonText: 'Entendido'
+        });
+        return;
+    }
+
+    var url = "pdfformularios/generate_acgnlnursing.php?ssr=<?php echo $campos_data64; ?>|" + id_registro;
     window.open(url, '_blank');
 }
 ///////////

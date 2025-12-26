@@ -5,8 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="07f0c92e-7bf6-4c93-80cc-47b21f8b0d04" name="Changes" comment="second">
-      <change afterPath="$PROJECT_DIR$/pdfformularios/generate_preoperative.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pdfformularios/generate_acgnlnursing.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/63728ea9-59f4-49d0-b582-8ad81f0854ca.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/63728ea9-59f4-49d0-b582-8ad81f0854ca.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/aplicativos/documental/datos_substandarform.php" beforeDir="false" afterPath="$PROJECT_DIR$/aplicativos/documental/datos_substandarform.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/libreria/dompdf/lib/fonts/log.htm" beforeDir="false" afterPath="$PROJECT_DIR$/libreria/dompdf/lib/fonts/log.htm" afterDir="false" />
@@ -221,7 +221,7 @@
       <workItem from="1766297671556" duration="266000" />
       <workItem from="1766418735735" duration="10365000" />
       <workItem from="1766500312130" duration="332000" />
-      <workItem from="1766759246464" duration="7703000" />
+      <workItem from="1766759246464" duration="10354000" />
     </task>
     <servers />
   </component>
