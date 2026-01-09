@@ -1,0 +1,8 @@
+update cesdb_arextension.dns_newconsultaexternagridexamenfisico set gexamfis_observacion='AL EXAMEN FISICO OROFARINGE CONGESTIVA ERITEMATOSA AMIGDALAS HIPERTROFICAS GRADO III, NO EXUDADO EN SU BASE. TORAX EXPANSIBLE CARDIO PULMONAR CONSERVADO' where gexamfis_id=1076
+update cesdb_arextension.dns_antecedentespersonalesnewconext set antep_descripcion='' where antep_id=95
+update cesdb_arextension.dns_antecedentespersonalesnewconext set antep_descripcion='' where antep_id=95
+update cesdb_arextension.dns_antecedentespersonalesnewconext set antep_descripcion='HIPERTENSION ARETERIAL EN PADRES, MADRE CANCER DE UTERO Y PIEL, HERMANA CON CANCER DE MAMA' where antep_id=95
+update cesdb_arextension.dns_antecedentespersonalesnewconext set antep_descripcion='HIPERTENSION ARETERIAL EN PADRES, MADRE CANCER DE UTERO Y PIEL, HERMANA CON CANCER DE MAMA' where antep_id=95
+update cesdb_arextension.dns_newconsultaexternagridexamenfisico set gexamfis_observacion='SIN EVIDENCIA DE PATOLOGIA' where gexamfis_id=1104
+update cesdb_arextension.dns_newconsultaexternagridexamenfisico set gexamfis_observacion='SIN EVIDENCIA DE PATOLOGIA' where gexamfis_id=1104
+update cesdb_arextension.dns_newconsultaexternagridexamenfisico set gexamfis_observacion='PACIENTE CONSCIENTE ORIENTADA HIDRATADA AFEBRIL, ALGICA, ABDOMEN SUAVE DEPRESIBLE, DOLOROSO A LA PALPACION EN EPIGASTRIO, MESOGASTRIO, PUNTOS URETERALES POSITIVOS MEDIOS Y ALTOS, SIGNOS APENDICULARES Y DE IRRITACION PERITONEAL NEGATIVOS, PUÑO PERCUSION BILATERAL POSITIVA DE PREDOMINIO DERECHO. ' where gexamfis_id=1104

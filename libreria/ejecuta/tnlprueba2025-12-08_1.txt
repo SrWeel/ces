@@ -32,3 +32,6 @@ dns_newemergenciaanamesis
 dns_newemergenciaanamesis
 dns_atencion
 dns_atencion
+dns_newprotocolooperatorio
+dns_newepicrisisanamesis
+dns_newepicrisisanamesis

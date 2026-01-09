@@ -1,0 +1,12 @@
+update cesdb_arextension.dns_antecedentespersonalesnewconext set antep_descripcion='FRACTURA EN DEDO DE MANO DERECHA HACE 12 AÑOS BAJO TRATAMIENTO CLINICO' where antep_id=94
+update cesdb_arextension.dns_newtraumatologiagridorgano set gorgano_observacion='DOLOR DE MANO IZQUIERDA ' where gorgano_id=1174
+update cesdb_arextension.dns_newtraumatologiagridexamenfisico set gexamfis_observacion='CABEZA NO HEMATOMAS PRESENCIA DE HEMORRAGIA CONJUNTIVAL BILATERAL, PIEL PRESENCIA DE EXCORIACIONES MULTIPLES CON ERITEMA LOCAL EN ROSTRO ANTEBRAZOS, CODOS Y MANOS BILATERAL; MSI A NIVEL DE MANO SE EVIDENCIA EDEMA EN DORSO CON LIMITACION FUNCIONAL A LA MOVILIDAD, PULSOS DISTALES PRESENTES LLENADO CAPILAR ADECUADO' where gexamfis_id=2939
+update cesdb_arextension.dns_newconsultaexternagridorgano set gorgano_observacion='EPIGASTRALGIA ' where gorgano_id=413
+update cesdb_arextension.dns_newconsultaexternagridexamenfisico set gexamfis_observacion=' PACIENTE CONSCIENTE ORIENTADA AFEBRIL MUCOSAS ORALES HUMEDAS ORF ERITEMATOSA NO PUSTULOSA ADENOPATIAS CERVICALES PRESENTES, ABDOMEN SUAVE DOLOROSO A LA PALPACION EN PIGASTRIO Y MESOGASTRIO NO SIGNOS DE IRRITACION PERITONEAL, RHA DISMINUIDOS, TIMPANISMO PRESENTE
+PULMONES MV CONSERVADO NO RUIDOS ' where gexamfis_id=1029
+update cesdb_arextension.dns_newtraumatologiagridexamenfisico set gexamfis_observacion='MID YESO CONTINENTE ADECUADO, MOVILIDAD DISTAL Y LLENADO CAPILAR ADECUADO
+' where gexamfis_id=2965
+update cesdb_arextension.dns_newtraumatologiagridexamenfisico set gexamfis_observacion='HOMBRO IZQUIERDO HERIDAS EN PROCESO DE CICATRIZACION PUNTOS ESTABLES BUENOS RANGOS DE MOVILIDAD, FUERZA MUSCULAR CONSERVADA, SENSIBILIDAD ADECUADA
+' where gexamfis_id=2989
+update cesdb_arextension.dns_newtraumatologiagridexamenfisico set gexamfis_observacion='HOMBRO IZQUIERDO HERIDAS EN PROCESO DE CICATRIZACION PUNTOS ESTABLES BUENOS RANGOS DE MOVILIDAD, FUERZA MUSCULAR CONSERVADA, SENSIBILIDAD ADECUADA
+' where gexamfis_id=2989

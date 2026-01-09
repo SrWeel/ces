@@ -1,0 +1,10 @@
+update cesdb_arextension.dns_antecedentespersonalesnewconext set antep_descripcion='ALERGIAS NO REIFERE
+APP NO REFIERE
+AQX CESAREAS HACE 15 Y 13 AÑOS ' where antep_id=93
+update cesdb_arextension.dns_antecedentesfamiliaresnewconext set antef_descripcion='HTA ABUELA PATERNA ' where antef_id=39
+update cesdb_arextension.dns_newconsultaexternagridorgano set gorgano_observacion='' where gorgano_id=402
+update cesdb_arextension.dns_newconsultaexternagridorgano set gorgano_observacion='' where gorgano_id=402
+update cesdb_arextension.dns_newconsultaexternagridorgano set gorgano_observacion='' where gorgano_id=402
+update cesdb_arextension.dns_newconsultaexternagridexamenfisico set gexamfis_observacion='PACIENTE CONSCIENTE ORIENTADA AFEBRIL OIDOS CAE PERMEABLE MT INTEGRA MUCOSAS ORALES SEMIHUMEDAS OROFARINGE LIGERAMENTE ERITEMATOSA SIGNO DE IRRITACION OROFARINGEO CON SIGNO DE EMPEDRADO AMIGDALAS NO PUSTULOSAS, PULMONES MV AUMENTADO CON RONCUS Y ESTERTORES EN AMBOS CAMPOS PULMONARES' where gexamfis_id=1003
+update cesdb_arextension.dns_newconsultaexternagridorgano set gorgano_observacion='TOS SECA, ODINOFAGIA ' where gorgano_id=402
+update cesdb_arextension.dns_newconsultaexternagridorgano set gorgano_observacion='TOS SECA, ODINOFAGIA ' where gorgano_id=402

@@ -1,0 +1,6 @@
+update cesdb_arextension.dns_antecedentespersonalesnewconext set antep_descripcion='REDUCCION ABIERTA + OTS DE FRACTURA DE CODO Y MUÑECA IZQUIERDA HACE 2 AÑOS ' where antep_id=85
+update cesdb_arextension.dns_antecedentespersonalesnewconext set antep_descripcion='REDUCCION ABIERTA + OTS DE FRACTURA DE CODO Y MUÑECA IZQUIERDA HACE 2 AÑOS ' where antep_id=85
+update cesdb_arextension.dns_antecedentespersonalesnewconext set antep_descripcion='REDUCCION ABIERTA + OTS DE FRACTURA DE CODO Y MUÑECA IZQUIERDA HACE 2 AÑOS ' where antep_id=85
+update cesdb_arextension.dns_newtraumatologiagridorgano set gorgano_observacion='DOLOR DE HOMBRO DERECHO, MUÑECAY CODO IZQUIERDO ' where gorgano_id=1144
+update cesdb_arextension.dns_newtraumatologiagridexamenfisico set gexamfis_observacion=' HOMBRO DERECHO DOLOR A LA DIGITOPRESION EN CARA ANTERIOR JOBE+ NEER+ LIMITACION FUNCIONAL A LA FLEXION ANTERIOR 120º FUERZA MUSCULAR CONSERVADA
+MUÑECA IZQUIERDA DOLOROSA A LA PALPACION EN APOFISIS ESTILOIDES DEL CUBITO BUEN LLENADO Y FUERZA MUSCULAR ' where gexamfis_id=2864

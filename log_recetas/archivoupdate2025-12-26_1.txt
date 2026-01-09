@@ -1,0 +1,1 @@
+update cesdb_arextension.dns_gridcontrolpreoperatorio set gconpre_preparacion='4',gconpre_servhospitalizacion='1',gconpre_centralquirurgica='0',gconpre_observacion='LE HACIA FRIO' where gconpre_id='14'

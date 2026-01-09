@@ -1,0 +1,4 @@
+update cesdb_arextension.dns_antecedentespersonalesnewconext set antep_descripcion='AQX VARICOCELECTOMIA DERECHA HACE 10 AÑOS ' where antep_id=100
+update cesdb_arextension.dns_newconsultaexternagridorgano set gorgano_observacion='TOS SECA, OTALGIA ODINOFAGIA ' where gorgano_id=492
+update cesdb_arextension.dns_newconsultaexternagridexamenfisico set gexamfis_observacion='PACIENTE CONSCIENTE ORIENTADO FEBRICULA OIDOS CAE PERMEABLE CON MT LIGERAMENTE ERITEMATOSA, NARIZ CN ERITEMA NASAL HIPERTROFIA DE CORNETES PRESENCIA DE SECRECIONES HIALINAS ABUNDANTES, MUCOSAS ORALES Y LABIALES SECAS OROFARINGE ERITEMATOSA AMIGDALAS GRADO I HIPEREMICAS NO PUSTULOSAS ADENOPATIAS CERVICALES PRESENTES, ' where gexamfis_id=1235
+update cesdb_arextension.dns_newconsultaexternagridexamenfisico set gexamfis_observacion='PULMONES MV AUMENTADO CON ESTERTORES BIBASALES, CORAZON TAQUICARDICO RITMICO ' where gexamfis_id=1228

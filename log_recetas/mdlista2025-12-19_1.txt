@@ -1,0 +1,37 @@
+update cesdb_arextension.dns_newtraumatologiagridexamenfisico set gexamfis_observacion='HOMBRO IZQUIERDO SIGNO DE INESTABILIDAD Y APREHENSION POSITIVOS, DOLOR A LA PALPACIÓN EN CARA ANTERIOR, FUERZA MUSCULAR Y SENBILIDAD CONSERVADA' where gexamfis_id=2889
+update cesdb_arextension.dns_newtraumatologiagridorgano set gorgano_observacion='OMALGIA IZQUIERDA ' where gorgano_id=1154
+update cesdb_arextension.dns_newtraumatologiagridexamenfisico set gexamfis_observacion='HOMBRO IZQUIERDO CICARTIZ OBSERVABLE, RECUPERACION DE RANGOS DE MOVILIDAD ACTIVA, LEVANTA MSI  CON FLEXIÓN ANTERIOR  Y ABDUCCION 90º, FUERZA MUSCULAR 3-4/10, SENSIBILIDAD CONSERVADA ' where gexamfis_id=2914
+update cesdb_arextension.dns_newconsultaexternagridexamenfisico set gexamfis_observacion='PACIENTE CONSCIENTE ORIENTADA ROSTRO EN REGION SUPRACILIAR DERECHA TERCIO DISTAL PARPADO FIJO PRESENCIA DE HERIDA TRANSVERSAL DE 1CM DE LONGITUD EN PROCESO DE CICATRIZACION PUNTOS ESTABLES' where gexamfis_id=901
+update cesdb_arextension.dns_antecedentespersonalesnewconext set antep_descripcion='ARRITMIA CARDIACA DG HACE 18 AÑOS EN TTO CON PLENACOR 25MG ' where antep_id=87
+update cesdb_arextension.dns_antecedentespersonalesnewconext set antep_descripcion='HISTERECTOMIA PARCIAL HACE 18 AÑOS, COLELAP HACE 4 AÑOS ' where antep_id=89
+update cesdb_arextension.dns_antecedentespersonalesnewconext set antep_descripcion='APF DIABETES MELLITUS II CANCER DE TIROIDES MADRE FALLECIDA, HTA PADRE ' where antep_id=90
+update cesdb_arextension.dns_antecedentesfamiliaresnewconext set antef_descripcion='APF DIABETES MELLITUS II CANCER DE TIROIDES MADRE FALLECIDA, HTA PADRE ' where antef_id=37
+update cesdb_arextension.dns_newconsultaexternagridorgano set gorgano_observacion='MALESTAR GENERALIZADO, LUMBAGO ' where gorgano_id=374
+update cesdb_arextension.dns_newconsultaexternagridexamenfisico set gexamfis_observacion='PACIENTE CONSCIENTE ORIENTADA AFEBRIL OIDOS CAE PERMEABLE MT INTEGRA APARIENCIA OPACA, NARIZ ERITEMA DE LA MUCOSA NASAL HIPERTROFIA CORNETES, MUCOSAS ORALES SECAS PIEZAS DENTALES EN REGULAR ESTADO OROFARINGE ERITEMATOSA AMIGDALAS GRADO I CRIPTICAS NO PUSTULOSAS,' where gexamfis_id=935
+update cesdb_arextension.dns_newconsultaexternagridexamenfisico set gexamfis_observacion='PULMONES MV DISMINUIDO EN BASES. ESTORTERES BILATERALES, ZONA DORSAL DOLOROSA A LA DIGITOPRESION 
+' where gexamfis_id=928
+update cesdb_arextension.dns_antecedentespersonalesnewconext set antep_descripcion='SINCOPE ULTIMO EPISODIO HACE 2 AÑOS SIN ETIOLOGI' where antep_id=91
+update cesdb_arextension.dns_antecedentesfamiliaresnewconext set antef_descripcion='PREDIABETES MADRE ' where antef_id=38
+update cesdb_arextension.dns_antecedentesfamiliaresnewconext set antef_descripcion='PREDIABETES MADRE ' where antef_id=38
+update cesdb_arextension.dns_newconsultaexternagridorgano set gorgano_observacion='TOS PRODUCTIVA, CONGESTION NASAL ' where gorgano_id=382
+update cesdb_arextension.dns_newconsultaexternagridexamenfisico set gexamfis_observacion='' where gexamfis_id=960
+update cesdb_arextension.dns_newconsultaexternagridexamenfisico set gexamfis_observacion='PACIENTE CONSCIENTE ORIENTADO DECAIDO OIDOS CAE PERMEABLE MT INTEGRA NARIZ ERITEMA EXTERNO, MUCOSA NASAL HIPEREMICA HIPERTROFIA DE CORNETES CON VESTIGIO DE SECRECIONES HIALINAS, MUCOSAS ORALES SEMIHUMEDA ORF ERITEMATOSA CONGESTIVA AMIGDALAS GRADO II A PREDOMINIO DE DERECHO CRIPTICAS NO PUSTULOSAS, ' where gexamfis_id=960
+update cesdb_arextension.dns_newconsultaexternagridexamenfisico set gexamfis_observacion='' where gexamfis_id=953
+update cesdb_arextension.dns_newconsultaexternagridexamenfisico set gexamfis_observacion='' where gexamfis_id=953
+update cesdb_arextension.dns_newconsultaexternagridexamenfisico set gexamfis_observacion='PULMONES MV CONSERVADO NO RUIDOS SOBREAÑADIDOS NO SIGNOS DE DIFICULTAD RESPIRATORIA
+' where gexamfis_id=953
+update cesdb_arextension.dns_antecedentespersonalesnewconext set antep_descripcion='ALERGIAS NO REFIERE
+APP HIPOTIROIDISMO POR SUPRESION HORMONAL EN TTO LEVOTIROXINA 100MG Y CALCIO 50MG
+AQX MASTECTOMIA LADO DERECHO POR CANCER DE MAMA HACE 15 AÑOS, RESECCION DE TIROIDES TOTAL HACE 15 AÑOS , RECONSTRUCCION MAMARIA DERECHA HACE 12 AÑOS, HERNIORRAFIA ABDOMINAL HACE 12 AÑOS' where antep_id=92
+update cesdb_arextension.dns_antecedentespersonalesnewconext set antep_descripcion='ALERGIAS NO REFIERE
+APP HIPOTIROIDISMO POR SUPRESION HORMONAL EN TTO LEVOTIROXINA 100MG Y CALCIO 50MG
+AQX MASTECTOMIA LADO DERECHO POR CANCER DE MAMA HACE 15 AÑOS, RESECCION DE TIROIDES TOTAL HACE 15 AÑOS , RECONSTRUCCION MAMARIA DERECHA HACE 12 AÑOS, HERNIORRAFIA ABDOMINAL HACE 12 AÑOS' where antep_id=92
+update cesdb_arextension.dns_newconsultaexternagridorgano set gorgano_observacion='CONGESTION NASAL, ' where gorgano_id=392
+update cesdb_arextension.dns_newconsultaexternagridorgano set gorgano_observacion='CONGESTION NASAL, ' where gorgano_id=392
+update cesdb_arextension.dns_newconsultaexternagridorgano set gorgano_observacion='CONGESTION NASAL, ODINOFAGIA ' where gorgano_id=392
+update cesdb_arextension.dns_newconsultaexternagridexamenfisico set gexamfis_observacion='' where gexamfis_id=985
+update cesdb_arextension.dns_newconsultaexternagridexamenfisico set gexamfis_observacion='' where gexamfis_id=985
+update cesdb_arextension.dns_newconsultaexternagridexamenfisico set gexamfis_observacion='PACIENTE CONSCIENTE ORIENTADA AFEBRIL OIDOS CAE PERMEABLE MT ERTEMATOSA EN OIDO DERECHO, NARIZ CON ERITEMA DE MUCOSA NASAL HIPERTROFIA DE CORNETES, MUCOSAS ORALES SEMIHUMEDAS ORF ERITEMATOSA AMIGDALAS GRADO I NO PUSTULOSAS, ADENOPATIAS CERVICALES PRESENTES' where gexamfis_id=985
+update cesdb_arextension.dns_newconsultaexternagridexamenfisico set gexamfis_observacion='' where gexamfis_id=978
+update cesdb_arextension.dns_newconsultaexternagridexamenfisico set gexamfis_observacion='' where gexamfis_id=978
+update cesdb_arextension.dns_newconsultaexternagridexamenfisico set gexamfis_observacion='PULMONES MV CONSERVADO CON SIBILANCIA EN BASES PULMONARES' where gexamfis_id=978

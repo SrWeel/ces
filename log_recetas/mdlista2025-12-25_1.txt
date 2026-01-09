@@ -1,0 +1,45 @@
+update cesdb_arextension.dns_newtraumatologiagridexamenfisico set gexamfis_observacion='RODILLA DERECHA ' where gexamfis_id=3015
+update cesdb_arextension.dns_newtraumatologiagridexamenfisico set gexamfis_observacion='RODILLA DERECHA ' where gexamfis_id=3015
+update cesdb_arextension.dns_newtraumatologiagridexamenfisico set gexamfis_observacion='RODILLA DERECHA  SIGNO DEL CHOQUE +/+++ LACERACION EN PIERNA DE UNOS 2 CM EN BUENAS CONDICIONES ' where gexamfis_id=3015
+update cesdb_arextension.dns_newtraumatologiagridexamenfisico set gexamfis_observacion='RODILLA DERECHA  SIGNO DEL CHOQUE +/+++ LACERACION EN PIERNA DE UNOS 2 CM EN BUENAS CONDICIONES ' where gexamfis_id=3015
+update cesdb_arextension.dns_newtraumatologiagridexamenfisico set gexamfis_observacion='HERIDA EN BUENAS CONDICONES SE OBSERVA EXTENSION 5 GRADOS DE MUÑECA MEJORA LA HIPOSTESIA DE RADIAL BUENA FUERZA MUSCULAR ' where gexamfis_id=3039
+update cesdb_arextension.dns_newtraumatologiagridexamenfisico set gexamfis_observacion='HERIDA EN BUENAS CONDICONES SE OBSERVA EXTENSION 5 GRADOS DE MUÑECA MEJORA LA HIPOSTESIA DE RADIAL BUENA FUERZA MUSCULAR ' where gexamfis_id=3039
+update cesdb_arextension.dns_newtraumatologiagridexamenfisico set gexamfis_observacion='BRAZO IZQUIERDO HERIDA EN BUENAS CONDICONES SE OBSERVA EXTENSION 5 GRADOS DE MUÑECA MEJORA LA HIPOSTESIA DE RADIAL BUENA FUERZA MUSCULAR ' where gexamfis_id=3039
+update cesdb_arextension.dns_antecedentespersonalesnewconext set antep_descripcion='CLAVO ENDOMEDULAR POR FRACTURA DE DEDO DEL CARPOMANO IZQUIERDA HACE 4 AÑOS, APENDILAP HACE 8 AÑOS' where antep_id=96
+update cesdb_arextension.dns_newconsultaexternagridexamenfisico set gexamfis_observacion='SIN EVIDENCIA DE PATOLOGIA' where gexamfis_id=1135
+update cesdb_arextension.dns_newconsultaexternagridexamenfisico set gexamfis_observacion='PACIENTE CONSCIENTE ORIENTADO EN 3 ESFERAS COGNITIVAS AFEBRIL, OIDOS CAE PERMEABLE MT INTEGRA, NARIZ CON ERITEMA DE MUCOSA NASAL, OROFARINGE ERITEMATOSA AMIGDALAS GRADO II CRIPTICAS A PREDOMINIO DE DERECHA, ADENOPATIAS CERVICALES PRESENTES, PULMONES MV DISMINUIDO NO RUIDOS SOBREAÑADIDOS. ' where gexamfis_id=1135
+update cesdb_arextension.dns_newconsultaexternagridorgano set gorgano_observacion='ODINOFAGIA CONGESTION NASAL ' where gorgano_id=452
+update cesdb_arextension.dns_newtraumatologiagridorgano set gorgano_observacion='OMALGIA IZQUIERDA ' where gorgano_id=1224
+update cesdb_arextension.dns_newtraumatologiagridexamenfisico set gexamfis_observacion='HOMBRO IZQUIERDO DOLOR EN CARA ANTERIOR EQUIMOSIS PRESENTE, LIMITACION FUNCIONAL JOBE Y HK IMPRESIONAN POSITIVOS, FUERZA MUSCULAR DISMINUIDA ' where gexamfis_id=3064
+update cesdb_arextension.dns_newtraumatologiagridexamenfisico set gexamfis_observacion='HOMBRO IZQUIERDO DOLOR EN CARA ANTERIOR EQUIMOSIS PRESENTE, LIMITACION FUNCIONAL JOBE Y HK IMPRESIONAN POSITIVOS, FUERZA MUSCULAR DISMINUIDA ' where gexamfis_id=3064
+update cesdb_arextension.dns_newtraumatologiagridorgano set gorgano_observacion='OMALGIA BILATERAL ' where gorgano_id=1234
+update cesdb_arextension.dns_newtraumatologiagridexamenfisico set gexamfis_observacion='' where gexamfis_id=3089
+update cesdb_arextension.dns_newtraumatologiagridexamenfisico set gexamfis_observacion='' where gexamfis_id=3089
+update cesdb_arextension.dns_newtraumatologiagridexamenfisico set gexamfis_observacion='HOMBROS DOLOR A LA DIGITOPRESION EN CARA LATERAL LIMITACION FUNCIONAL ABDUCCION 90º Y ROTACION INTERNA JOBE + NEER+ HK+ HOMBRO DERECHO CON RIGIDEZ ARTICULAR, FUERZA MUSCULAR 3/5' where gexamfis_id=3089
+update cesdb_arextension.dns_antecedentespersonalesnewconext set antep_descripcion='APP RINITIS VASOMOTORA SIN DG PREVIO, ESCOLIOSIS LUMBAR SIN TRATAMIENTO 
+AQX APENDILAP HACE 4 AÑOS, RESECCION DE QUISTE OVARICO DERECHO HACE 12 AÑOS 
+ALERGIAS FOSFOMICINA ' where antep_id=97
+update cesdb_arextension.dns_antecedentespersonalesnewconext set antep_descripcion='APP RINITIS VASOMOTORA SIN DG PREVIO, ESCOLIOSIS LUMBAR SIN TRATAMIENTO 
+AQX APENDILAP HACE 4 AÑOS, RESECCION DE QUISTE OVARICO DERECHO HACE 12 AÑOS 
+ALERGIAS FOSFOMICINA ' where antep_id=97
+update cesdb_arextension.dns_newconsultaexternagridorgano set gorgano_observacion='ODINOFAGIA TOS' where gorgano_id=462
+update cesdb_arextension.dns_newconsultaexternagridexamenfisico set gexamfis_observacion='PACIENTE ASTENICA CONSCIENTE ORIENTADA EN 3 ESFERAS OIDOS CAE PERMEABLE MT INTEGRA, NARIZ ERITEMA LOCAL, MUCOSAS ORALES HUMEDAS ORF ERITEMATOSA NO CONGESTIVA AMIGDALAS NO PUSTULOSAS' where gexamfis_id=1160
+update cesdb_arextension.dns_newconsultaexternagridexamenfisico set gexamfis_observacion='MV CONSERVADO NO RUIDOS SOBREAÑADIDOS ' where gexamfis_id=1153
+update cesdb_arextension.dns_antecedentespersonalesnewconext set antep_descripcion='APP ESTREÑIMIENTO HACE 6 AÑOS CADA 2 DIAS, COLON IRRITABLE DG HACE 6 AÑOS SIN TTO 
+AQX APENDILAP HACE 1 AÑO, CESAREA HACE 5 AÑOS POR MACROSOMIA FETAL' where antep_id=98
+update cesdb_arextension.dns_antecedentespersonalesnewconext set antep_descripcion='APP ESTREÑIMIENTO HACE 6 AÑOS CADA 2 DIAS, COLON IRRITABLE DG HACE 6 AÑOS SIN TTO 
+AQX APENDILAP HACE 1 AÑO, CESAREA HACE 5 AÑOS POR MACROSOMIA FETAL' where antep_id=98
+update cesdb_arextension.dns_antecedentespersonalesnewconext set antep_descripcion='APP ESTREÑIMIENTO HACE 6 AÑOS CADA 2 DIAS, COLON IRRITABLE DG HACE 6 AÑOS SIN TTO 
+AQX APENDILAP HACE 1 AÑO, CESAREA HACE 5 AÑOS POR MACROSOMIA FETAL
+AGO MENARQUIA 13A CMR FUM 31/11/2025 G1C1HV 1 PAPTEST ULTIMO HACE 1 AÑO NORMAL PLANIFICACION FAMILIAR NINGUNO ' where antep_id=98
+update cesdb_arextension.dns_antecedentespersonalesnewconext set antep_descripcion='APP ESTREÑIMIENTO HACE 6 AÑOS CADA 2 DIAS, COLON IRRITABLE DG HACE 6 AÑOS SIN TTO 
+AQX APENDILAP HACE 1 AÑO, CESAREA HACE 5 AÑOS POR MACROSOMIA FETAL
+AGO MENARQUIA 13A CMR FUM 31/11/2025 G1C1HV 1 PAPTEST ULTIMO HACE 1 AÑO NORMAL PLANIFICACION FAMILIAR NINGUNO ' where antep_id=98
+update cesdb_arextension.dns_antecedentesfamiliaresnewconext set antef_descripcion='APF CANCER DE PANCRES PADRE ' where antef_id=41
+update cesdb_arextension.dns_antecedentespersonalesnewconext set antep_descripcion='HTA DG HACE 10 AÑOS EN TTO CON LOSARTAN 100MG VO QD, ARTROSIS DE RODILLA DERECHA DG HACE 2 AÑOS SIN TTO' where antep_id=99
+update cesdb_arextension.dns_antecedentespersonalesnewconext set antep_descripcion='HTA DG HACE 10 AÑOS EN TTO CON LOSARTAN 100MG VO QD, ARTROSIS DE RODILLA DERECHA DG HACE 2 AÑOS SIN TTO' where antep_id=99
+update cesdb_arextension.dns_antecedentespersonalesnewconext set antep_descripcion='HTA DG HACE 10 AÑOS EN TTO CON LOSARTAN 100MG VO QD, ARTROSIS DE RODILLA DERECHA DG HACE 2 AÑOS SIN TTO
+AGO MENARQUIA 15 A MENOPAUSIA 50 A ' where antep_id=99
+update cesdb_arextension.dns_newconsultaexternagridexamenfisico set gexamfis_observacion='SIN EVIDENCIA DE PATOLOGIA' where gexamfis_id=1215
+update cesdb_arextension.dns_newconsultaexternagridexamenfisico set gexamfis_observacion='PACIENTE CONSCIENTE ORIENTADO AFEBRIL MUCOSAS ORALES SEMIHUMEDAS, TOBILLO DERECHO INFLAMACIÓN Y  EDEMA IMPORTANTE, EQUIMOSIS BIMALEOLAR QUE SE IRRADIA REGION PLANTAR DEL PIE, NO DOLOR A LA DIGITOPRESION, LIMITACION FUNCIONAL A LA MOVILIDAD, FUERZA MUSCULAR 4/5, SENSIBILIDAD CONSERVADA ' where gexamfis_id=1215
+update cesdb_arextension.dns_newconsultaexternagridorgano set gorgano_observacion='INFLAMACIONE EN TOBILLO DERECHO ' where gorgano_id=484

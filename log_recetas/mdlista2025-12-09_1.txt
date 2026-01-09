@@ -1,0 +1,6 @@
+update cesdb_arextension.dns_newtraumatologiagridexamenfisico set gexamfis_observacion='SIGNO DE CHOQUE POSITIVO, DOLOR A LA DIGITOPRESION EN CARA LATERAL DE RODILLA DERECHA EN INSERCION DE LIGAMENTO EXTENSOR DE LA PASCIA LATA, SIGNO DE ZOLLEN POSITIVO.' where gexamfis_id=2715
+update cesdb_arextension.dns_newtraumatologiagridexamenfisico set gexamfis_observacion='AL EXAMEN FISICO SE EVIDENCIA DEFORMIDAD DE ARTICULACIONES INTERFALANGICAS DE MANO DERECHA, A NIVEL DE PRIMER DEDO, DEDO EN RESORTE
+IDG: DEDO EN RESORTE' where gexamfis_id=2739
+update cesdb_arextension.dns_newtraumatologiagridexamenfisico set gexamfis_observacion='AL EXAMEN FISICO EDEMA A NIVEL DE 5TO 4TO 3ER METACARPIANO, EQUIMOSIS, DOLOR A LA DIGITOPRESION
+IDG: CONTUSION DE LA MANO A DESCARTAR FRACTURA DE METACARPO' where gexamfis_id=2764
+update cesdb_arextension.dns_newtraumatologiagridexamenfisico set gexamfis_observacion=' PRIMER DEDO DE PIE DERECHO , AMPUTACION  DE FALANGE DISTAL SIN SIGNOS DE INFECCION , SANGRADO PRESENTE SE OBSERVA TEJIDO NECROTICO.' where gexamfis_id=2790

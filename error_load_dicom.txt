@@ -1,72 +1,664 @@
-[19-Dec-2025 16:40:29 America/Guayaquil] === LOAD DICOM IMAGES ===
-[19-Dec-2025 16:40:29 America/Guayaquil] imgag_id: 29
-[19-Dec-2025 16:40:29 America/Guayaquil] imginfo_id: 0
-[19-Dec-2025 16:40:29 America/Guayaquil] imginfo_enlace: 
-[19-Dec-2025 16:40:29 America/Guayaquil] folder_path: 
-[19-Dec-2025 16:40:29 America/Guayaquil] Buscando por imgag_id: 29
-[19-Dec-2025 16:40:29 America/Guayaquil] ✅ Encontrado imginfo_id: 34
-[19-Dec-2025 16:40:29 America/Guayaquil] ✅ Total archivos: 5
-[22-Dec-2025 12:14:49 America/Guayaquil] === LOAD DICOM IMAGES ===
-[22-Dec-2025 12:14:49 America/Guayaquil] imgag_id: 30
-[22-Dec-2025 12:14:49 America/Guayaquil] imginfo_id: 0
-[22-Dec-2025 12:14:49 America/Guayaquil] imginfo_enlace: 
-[22-Dec-2025 12:14:49 America/Guayaquil] folder_path: 
-[22-Dec-2025 12:14:49 America/Guayaquil] Buscando por imgag_id: 30
-[22-Dec-2025 12:14:49 America/Guayaquil] Buscando en tabla de archivos...
-[22-Dec-2025 12:14:49 America/Guayaquil] ℹ️ No hay archivos DICOM guardados
-[22-Dec-2025 12:17:09 America/Guayaquil] === LOAD DICOM IMAGES ===
-[22-Dec-2025 12:17:09 America/Guayaquil] imgag_id: 30
-[22-Dec-2025 12:17:09 America/Guayaquil] imginfo_id: 0
-[22-Dec-2025 12:17:09 America/Guayaquil] imginfo_enlace: 
-[22-Dec-2025 12:17:09 America/Guayaquil] folder_path: 
-[22-Dec-2025 12:17:09 America/Guayaquil] Buscando por imgag_id: 30
-[22-Dec-2025 12:17:09 America/Guayaquil] ✅ Encontrado imginfo_id: 35
-[22-Dec-2025 12:17:09 America/Guayaquil] ✅ Total archivos: 5
-[22-Dec-2025 15:04:32 America/Guayaquil] === LOAD DICOM IMAGES ===
-[22-Dec-2025 15:04:32 America/Guayaquil] imgag_id: 30
-[22-Dec-2025 15:04:32 America/Guayaquil] imginfo_id: 0
-[22-Dec-2025 15:04:32 America/Guayaquil] imginfo_enlace: 
-[22-Dec-2025 15:04:32 America/Guayaquil] folder_path: 
-[22-Dec-2025 15:04:32 America/Guayaquil] Buscando por imgag_id: 30
-[22-Dec-2025 15:04:32 America/Guayaquil] ✅ Encontrado imginfo_id: 35
-[22-Dec-2025 15:04:32 America/Guayaquil] ✅ Total archivos: 5
-[22-Dec-2025 15:28:50 America/Guayaquil] === LOAD DICOM IMAGES ===
-[22-Dec-2025 15:28:50 America/Guayaquil] imgag_id: 30
-[22-Dec-2025 15:28:50 America/Guayaquil] imginfo_id: 0
-[22-Dec-2025 15:28:50 America/Guayaquil] imginfo_enlace: 
-[22-Dec-2025 15:28:50 America/Guayaquil] folder_path: 
-[22-Dec-2025 15:28:50 America/Guayaquil] Buscando por imgag_id: 30
-[22-Dec-2025 15:28:50 America/Guayaquil] ✅ Encontrado imginfo_id: 35
-[22-Dec-2025 15:28:50 America/Guayaquil] ✅ Total archivos: 5
-[22-Dec-2025 15:37:52 America/Guayaquil] === LOAD DICOM IMAGES ===
-[22-Dec-2025 15:37:52 America/Guayaquil] imgag_id: 30
-[22-Dec-2025 15:37:52 America/Guayaquil] imginfo_id: 0
-[22-Dec-2025 15:37:52 America/Guayaquil] imginfo_enlace: 
-[22-Dec-2025 15:37:52 America/Guayaquil] folder_path: 
-[22-Dec-2025 15:37:52 America/Guayaquil] Buscando por imgag_id: 30
-[22-Dec-2025 15:37:52 America/Guayaquil] ✅ Encontrado imginfo_id: 35
-[22-Dec-2025 15:37:52 America/Guayaquil] ✅ Total archivos: 5
-[22-Dec-2025 16:03:14 America/Guayaquil] === LOAD DICOM IMAGES ===
-[22-Dec-2025 16:03:14 America/Guayaquil] imgag_id: 30
-[22-Dec-2025 16:03:14 America/Guayaquil] imginfo_id: 0
-[22-Dec-2025 16:03:14 America/Guayaquil] imginfo_enlace: 
-[22-Dec-2025 16:03:14 America/Guayaquil] folder_path: 
-[22-Dec-2025 16:03:14 America/Guayaquil] Buscando por imgag_id: 30
-[22-Dec-2025 16:03:14 America/Guayaquil] ✅ Encontrado imginfo_id: 35
-[22-Dec-2025 16:03:14 America/Guayaquil] ✅ Total archivos: 5
-[22-Dec-2025 16:14:07 America/Guayaquil] === LOAD DICOM IMAGES ===
-[22-Dec-2025 16:14:07 America/Guayaquil] imgag_id: 30
-[22-Dec-2025 16:14:07 America/Guayaquil] imginfo_id: 0
-[22-Dec-2025 16:14:07 America/Guayaquil] imginfo_enlace: 
-[22-Dec-2025 16:14:07 America/Guayaquil] folder_path: 
-[22-Dec-2025 16:14:07 America/Guayaquil] Buscando por imgag_id: 30
-[22-Dec-2025 16:14:07 America/Guayaquil] ✅ Encontrado imginfo_id: 35
-[22-Dec-2025 16:14:07 America/Guayaquil] ✅ Total archivos: 5
-[22-Dec-2025 16:19:35 America/Guayaquil] === LOAD DICOM IMAGES ===
-[22-Dec-2025 16:19:35 America/Guayaquil] imgag_id: 30
-[22-Dec-2025 16:19:35 America/Guayaquil] imginfo_id: 0
-[22-Dec-2025 16:19:35 America/Guayaquil] imginfo_enlace: 
-[22-Dec-2025 16:19:35 America/Guayaquil] folder_path: 
-[22-Dec-2025 16:19:35 America/Guayaquil] Buscando por imgag_id: 30
-[22-Dec-2025 16:19:35 America/Guayaquil] ✅ Encontrado imginfo_id: 35
-[22-Dec-2025 16:19:35 America/Guayaquil] ✅ Total archivos: 5
+[19-Dec-2025 14:51:56 America/Guayaquil] === LOAD DICOM IMAGES ===
+[19-Dec-2025 14:51:56 America/Guayaquil] imgag_id: 26
+[19-Dec-2025 14:51:56 America/Guayaquil] imginfo_id: 0
+[19-Dec-2025 14:51:56 America/Guayaquil] imginfo_enlace: 
+[19-Dec-2025 14:51:56 America/Guayaquil] folder_path: 
+[19-Dec-2025 14:51:56 America/Guayaquil] Buscando por imgag_id: 26
+[19-Dec-2025 14:51:56 America/Guayaquil] ✅ Encontrado imginfo_id: 4
+[19-Dec-2025 14:51:56 America/Guayaquil] ✅ Total archivos: 5
+[19-Dec-2025 14:52:46 America/Guayaquil] === LOAD DICOM IMAGES ===
+[19-Dec-2025 14:52:46 America/Guayaquil] imgag_id: 26
+[19-Dec-2025 14:52:46 America/Guayaquil] imginfo_id: 0
+[19-Dec-2025 14:52:46 America/Guayaquil] imginfo_enlace: 
+[19-Dec-2025 14:52:46 America/Guayaquil] folder_path: 
+[19-Dec-2025 14:52:46 America/Guayaquil] Buscando por imgag_id: 26
+[19-Dec-2025 14:52:46 America/Guayaquil] ✅ Encontrado imginfo_id: 4
+[19-Dec-2025 14:52:46 America/Guayaquil] ✅ Total archivos: 5
+[19-Dec-2025 14:53:31 America/Guayaquil] === LOAD DICOM IMAGES ===
+[19-Dec-2025 14:53:31 America/Guayaquil] imgag_id: 26
+[19-Dec-2025 14:53:31 America/Guayaquil] imginfo_id: 0
+[19-Dec-2025 14:53:31 America/Guayaquil] imginfo_enlace: 
+[19-Dec-2025 14:53:31 America/Guayaquil] folder_path: 
+[19-Dec-2025 14:53:31 America/Guayaquil] Buscando por imgag_id: 26
+[19-Dec-2025 14:53:31 America/Guayaquil] ✅ Encontrado imginfo_id: 4
+[19-Dec-2025 14:53:31 America/Guayaquil] ✅ Total archivos: 5
+[19-Dec-2025 14:55:38 America/Guayaquil] === LOAD DICOM IMAGES ===
+[19-Dec-2025 14:55:38 America/Guayaquil] imgag_id: 26
+[19-Dec-2025 14:55:38 America/Guayaquil] imginfo_id: 0
+[19-Dec-2025 14:55:38 America/Guayaquil] imginfo_enlace: 
+[19-Dec-2025 14:55:38 America/Guayaquil] folder_path: 
+[19-Dec-2025 14:55:38 America/Guayaquil] Buscando por imgag_id: 26
+[19-Dec-2025 14:55:38 America/Guayaquil] ✅ Encontrado imginfo_id: 4
+[19-Dec-2025 14:55:38 America/Guayaquil] ✅ Total archivos: 5
+[19-Dec-2025 14:57:04 America/Guayaquil] === LOAD DICOM IMAGES ===
+[19-Dec-2025 14:57:04 America/Guayaquil] imgag_id: 26
+[19-Dec-2025 14:57:04 America/Guayaquil] imginfo_id: 0
+[19-Dec-2025 14:57:04 America/Guayaquil] imginfo_enlace: 
+[19-Dec-2025 14:57:04 America/Guayaquil] folder_path: 
+[19-Dec-2025 14:57:04 America/Guayaquil] Buscando por imgag_id: 26
+[19-Dec-2025 14:57:04 America/Guayaquil] ✅ Encontrado imginfo_id: 4
+[19-Dec-2025 14:57:04 America/Guayaquil] ✅ Total archivos: 5
+[19-Dec-2025 14:57:10 America/Guayaquil] === LOAD DICOM IMAGES ===
+[19-Dec-2025 14:57:10 America/Guayaquil] imgag_id: 26
+[19-Dec-2025 14:57:10 America/Guayaquil] imginfo_id: 0
+[19-Dec-2025 14:57:10 America/Guayaquil] imginfo_enlace: 
+[19-Dec-2025 14:57:10 America/Guayaquil] folder_path: 
+[19-Dec-2025 14:57:10 America/Guayaquil] Buscando por imgag_id: 26
+[19-Dec-2025 14:57:10 America/Guayaquil] ✅ Encontrado imginfo_id: 4
+[19-Dec-2025 14:57:10 America/Guayaquil] ✅ Total archivos: 5
+[19-Dec-2025 14:59:49 America/Guayaquil] === LOAD DICOM IMAGES ===
+[19-Dec-2025 14:59:49 America/Guayaquil] imgag_id: 26
+[19-Dec-2025 14:59:49 America/Guayaquil] imginfo_id: 0
+[19-Dec-2025 14:59:49 America/Guayaquil] imginfo_enlace: 
+[19-Dec-2025 14:59:49 America/Guayaquil] folder_path: 
+[19-Dec-2025 14:59:49 America/Guayaquil] Buscando por imgag_id: 26
+[19-Dec-2025 14:59:49 America/Guayaquil] ✅ Encontrado imginfo_id: 4
+[19-Dec-2025 14:59:49 America/Guayaquil] ✅ Total archivos: 5
+[19-Dec-2025 15:02:58 America/Guayaquil] === LOAD DICOM IMAGES ===
+[19-Dec-2025 15:02:58 America/Guayaquil] imgag_id: 26
+[19-Dec-2025 15:02:58 America/Guayaquil] imginfo_id: 0
+[19-Dec-2025 15:02:58 America/Guayaquil] imginfo_enlace: 
+[19-Dec-2025 15:02:58 America/Guayaquil] folder_path: 
+[19-Dec-2025 15:02:58 America/Guayaquil] Buscando por imgag_id: 26
+[19-Dec-2025 15:02:58 America/Guayaquil] ✅ Encontrado imginfo_id: 4
+[19-Dec-2025 15:02:58 America/Guayaquil] ✅ Total archivos: 5
+[19-Dec-2025 15:04:17 America/Guayaquil] === LOAD DICOM IMAGES ===
+[19-Dec-2025 15:04:17 America/Guayaquil] imgag_id: 26
+[19-Dec-2025 15:04:17 America/Guayaquil] imginfo_id: 0
+[19-Dec-2025 15:04:17 America/Guayaquil] imginfo_enlace: 
+[19-Dec-2025 15:04:17 America/Guayaquil] folder_path: 
+[19-Dec-2025 15:04:17 America/Guayaquil] Buscando por imgag_id: 26
+[19-Dec-2025 15:04:17 America/Guayaquil] ✅ Encontrado imginfo_id: 4
+[19-Dec-2025 15:04:17 America/Guayaquil] ✅ Total archivos: 5
+[19-Dec-2025 15:04:38 America/Guayaquil] === LOAD DICOM IMAGES ===
+[19-Dec-2025 15:04:38 America/Guayaquil] imgag_id: 26
+[19-Dec-2025 15:04:38 America/Guayaquil] imginfo_id: 0
+[19-Dec-2025 15:04:38 America/Guayaquil] imginfo_enlace: 
+[19-Dec-2025 15:04:38 America/Guayaquil] folder_path: 
+[19-Dec-2025 15:04:38 America/Guayaquil] Buscando por imgag_id: 26
+[19-Dec-2025 15:04:38 America/Guayaquil] ✅ Encontrado imginfo_id: 4
+[19-Dec-2025 15:04:38 America/Guayaquil] ✅ Total archivos: 5
+[19-Dec-2025 15:05:02 America/Guayaquil] === LOAD DICOM IMAGES ===
+[19-Dec-2025 15:05:02 America/Guayaquil] imgag_id: 26
+[19-Dec-2025 15:05:02 America/Guayaquil] imginfo_id: 0
+[19-Dec-2025 15:05:02 America/Guayaquil] imginfo_enlace: 
+[19-Dec-2025 15:05:02 America/Guayaquil] folder_path: 
+[19-Dec-2025 15:05:02 America/Guayaquil] Buscando por imgag_id: 26
+[19-Dec-2025 15:05:02 America/Guayaquil] ✅ Encontrado imginfo_id: 4
+[19-Dec-2025 15:05:02 America/Guayaquil] ✅ Total archivos: 5
+[19-Dec-2025 15:09:12 America/Guayaquil] === LOAD DICOM IMAGES ===
+[19-Dec-2025 15:09:12 America/Guayaquil] imgag_id: 26
+[19-Dec-2025 15:09:12 America/Guayaquil] imginfo_id: 0
+[19-Dec-2025 15:09:12 America/Guayaquil] imginfo_enlace: 
+[19-Dec-2025 15:09:12 America/Guayaquil] folder_path: 
+[19-Dec-2025 15:09:12 America/Guayaquil] Buscando por imgag_id: 26
+[19-Dec-2025 15:09:12 America/Guayaquil] ✅ Encontrado imginfo_id: 4
+[19-Dec-2025 15:09:12 America/Guayaquil] ✅ Total archivos: 5
+[19-Dec-2025 15:39:55 America/Guayaquil] === LOAD DICOM IMAGES ===
+[19-Dec-2025 15:39:55 America/Guayaquil] imgag_id: 26
+[19-Dec-2025 15:39:55 America/Guayaquil] imginfo_id: 0
+[19-Dec-2025 15:39:55 America/Guayaquil] imginfo_enlace: 
+[19-Dec-2025 15:39:55 America/Guayaquil] folder_path: 
+[19-Dec-2025 15:39:55 America/Guayaquil] Buscando por imgag_id: 26
+[19-Dec-2025 15:39:55 America/Guayaquil] ✅ Encontrado imginfo_id: 4
+[19-Dec-2025 15:39:55 America/Guayaquil] ✅ Total archivos: 5
+[19-Dec-2025 15:43:47 America/Guayaquil] === LOAD DICOM IMAGES ===
+[19-Dec-2025 15:43:47 America/Guayaquil] imgag_id: 26
+[19-Dec-2025 15:43:47 America/Guayaquil] imginfo_id: 0
+[19-Dec-2025 15:43:47 America/Guayaquil] imginfo_enlace: 
+[19-Dec-2025 15:43:47 America/Guayaquil] folder_path: 
+[19-Dec-2025 15:43:47 America/Guayaquil] Buscando por imgag_id: 26
+[19-Dec-2025 15:43:47 America/Guayaquil] ✅ Encontrado imginfo_id: 4
+[19-Dec-2025 15:43:47 America/Guayaquil] ✅ Total archivos: 5
+[19-Dec-2025 15:44:46 America/Guayaquil] === LOAD DICOM IMAGES ===
+[19-Dec-2025 15:44:46 America/Guayaquil] imgag_id: 26
+[19-Dec-2025 15:44:46 America/Guayaquil] imginfo_id: 0
+[19-Dec-2025 15:44:46 America/Guayaquil] imginfo_enlace: 
+[19-Dec-2025 15:44:46 America/Guayaquil] folder_path: 
+[19-Dec-2025 15:44:46 America/Guayaquil] Buscando por imgag_id: 26
+[19-Dec-2025 15:44:46 America/Guayaquil] ✅ Encontrado imginfo_id: 4
+[19-Dec-2025 15:44:46 America/Guayaquil] ✅ Total archivos: 5
+[19-Dec-2025 15:45:03 America/Guayaquil] === LOAD DICOM IMAGES ===
+[19-Dec-2025 15:45:03 America/Guayaquil] imgag_id: 26
+[19-Dec-2025 15:45:03 America/Guayaquil] imginfo_id: 0
+[19-Dec-2025 15:45:03 America/Guayaquil] imginfo_enlace: 
+[19-Dec-2025 15:45:03 America/Guayaquil] folder_path: 
+[19-Dec-2025 15:45:03 America/Guayaquil] Buscando por imgag_id: 26
+[19-Dec-2025 15:45:03 America/Guayaquil] ✅ Encontrado imginfo_id: 4
+[19-Dec-2025 15:45:03 America/Guayaquil] ✅ Total archivos: 5
+[19-Dec-2025 15:45:36 America/Guayaquil] === LOAD DICOM IMAGES ===
+[19-Dec-2025 15:45:36 America/Guayaquil] imgag_id: 26
+[19-Dec-2025 15:45:36 America/Guayaquil] imginfo_id: 0
+[19-Dec-2025 15:45:36 America/Guayaquil] imginfo_enlace: 
+[19-Dec-2025 15:45:36 America/Guayaquil] folder_path: 
+[19-Dec-2025 15:45:36 America/Guayaquil] Buscando por imgag_id: 26
+[19-Dec-2025 15:45:36 America/Guayaquil] ✅ Encontrado imginfo_id: 4
+[19-Dec-2025 15:45:36 America/Guayaquil] ✅ Total archivos: 5
+[19-Dec-2025 15:45:47 America/Guayaquil] === LOAD DICOM IMAGES ===
+[19-Dec-2025 15:45:47 America/Guayaquil] imgag_id: 26
+[19-Dec-2025 15:45:47 America/Guayaquil] imginfo_id: 0
+[19-Dec-2025 15:45:47 America/Guayaquil] imginfo_enlace: 
+[19-Dec-2025 15:45:47 America/Guayaquil] folder_path: 
+[19-Dec-2025 15:45:47 America/Guayaquil] Buscando por imgag_id: 26
+[19-Dec-2025 15:45:47 America/Guayaquil] ✅ Encontrado imginfo_id: 4
+[19-Dec-2025 15:45:47 America/Guayaquil] ✅ Total archivos: 5
+[19-Dec-2025 15:46:42 America/Guayaquil] === LOAD DICOM IMAGES ===
+[19-Dec-2025 15:46:42 America/Guayaquil] imgag_id: 26
+[19-Dec-2025 15:46:42 America/Guayaquil] imginfo_id: 0
+[19-Dec-2025 15:46:42 America/Guayaquil] imginfo_enlace: 
+[19-Dec-2025 15:46:42 America/Guayaquil] folder_path: 
+[19-Dec-2025 15:46:42 America/Guayaquil] Buscando por imgag_id: 26
+[19-Dec-2025 15:46:42 America/Guayaquil] ✅ Encontrado imginfo_id: 4
+[19-Dec-2025 15:46:42 America/Guayaquil] ✅ Total archivos: 5
+[19-Dec-2025 15:46:59 America/Guayaquil] === LOAD DICOM IMAGES ===
+[19-Dec-2025 15:46:59 America/Guayaquil] imgag_id: 26
+[19-Dec-2025 15:46:59 America/Guayaquil] imginfo_id: 0
+[19-Dec-2025 15:46:59 America/Guayaquil] imginfo_enlace: 
+[19-Dec-2025 15:46:59 America/Guayaquil] folder_path: 
+[19-Dec-2025 15:46:59 America/Guayaquil] Buscando por imgag_id: 26
+[19-Dec-2025 15:46:59 America/Guayaquil] ✅ Encontrado imginfo_id: 4
+[19-Dec-2025 15:46:59 America/Guayaquil] ✅ Total archivos: 5
+[19-Dec-2025 15:47:25 America/Guayaquil] === LOAD DICOM IMAGES ===
+[19-Dec-2025 15:47:25 America/Guayaquil] imgag_id: 26
+[19-Dec-2025 15:47:25 America/Guayaquil] imginfo_id: 0
+[19-Dec-2025 15:47:25 America/Guayaquil] imginfo_enlace: 
+[19-Dec-2025 15:47:25 America/Guayaquil] folder_path: 
+[19-Dec-2025 15:47:25 America/Guayaquil] Buscando por imgag_id: 26
+[19-Dec-2025 15:47:25 America/Guayaquil] ✅ Encontrado imginfo_id: 4
+[19-Dec-2025 15:47:25 America/Guayaquil] ✅ Total archivos: 5
+[19-Dec-2025 15:53:31 America/Guayaquil] === LOAD DICOM IMAGES ===
+[19-Dec-2025 15:53:31 America/Guayaquil] imgag_id: 26
+[19-Dec-2025 15:53:31 America/Guayaquil] imginfo_id: 0
+[19-Dec-2025 15:53:31 America/Guayaquil] imginfo_enlace: 
+[19-Dec-2025 15:53:31 America/Guayaquil] folder_path: 
+[19-Dec-2025 15:53:31 America/Guayaquil] Buscando por imgag_id: 26
+[19-Dec-2025 15:53:31 America/Guayaquil] ✅ Encontrado imginfo_id: 4
+[19-Dec-2025 15:53:31 America/Guayaquil] ✅ Total archivos: 5
+[19-Dec-2025 15:53:42 America/Guayaquil] === LOAD DICOM IMAGES ===
+[19-Dec-2025 15:53:42 America/Guayaquil] imgag_id: 26
+[19-Dec-2025 15:53:42 America/Guayaquil] imginfo_id: 0
+[19-Dec-2025 15:53:42 America/Guayaquil] imginfo_enlace: 
+[19-Dec-2025 15:53:42 America/Guayaquil] folder_path: 
+[19-Dec-2025 15:53:42 America/Guayaquil] Buscando por imgag_id: 26
+[19-Dec-2025 15:53:42 America/Guayaquil] ✅ Encontrado imginfo_id: 4
+[19-Dec-2025 15:53:42 America/Guayaquil] ✅ Total archivos: 5
+[19-Dec-2025 15:53:56 America/Guayaquil] === LOAD DICOM IMAGES ===
+[19-Dec-2025 15:53:56 America/Guayaquil] imgag_id: 26
+[19-Dec-2025 15:53:56 America/Guayaquil] imginfo_id: 0
+[19-Dec-2025 15:53:56 America/Guayaquil] imginfo_enlace: 
+[19-Dec-2025 15:53:56 America/Guayaquil] folder_path: 
+[19-Dec-2025 15:53:56 America/Guayaquil] Buscando por imgag_id: 26
+[19-Dec-2025 15:53:56 America/Guayaquil] ✅ Encontrado imginfo_id: 4
+[19-Dec-2025 15:53:56 America/Guayaquil] ✅ Total archivos: 5
+[19-Dec-2025 16:14:51 America/Guayaquil] === LOAD DICOM IMAGES ===
+[19-Dec-2025 16:14:51 America/Guayaquil] imgag_id: 26
+[19-Dec-2025 16:14:51 America/Guayaquil] imginfo_id: 0
+[19-Dec-2025 16:14:51 America/Guayaquil] imginfo_enlace: 
+[19-Dec-2025 16:14:51 America/Guayaquil] folder_path: 
+[19-Dec-2025 16:14:51 America/Guayaquil] Buscando por imgag_id: 26
+[19-Dec-2025 16:14:51 America/Guayaquil] ✅ Encontrado imginfo_id: 4
+[19-Dec-2025 16:14:51 America/Guayaquil] ✅ Total archivos: 5
+[19-Dec-2025 16:15:46 America/Guayaquil] === LOAD DICOM IMAGES ===
+[19-Dec-2025 16:15:46 America/Guayaquil] imgag_id: 26
+[19-Dec-2025 16:15:46 America/Guayaquil] imginfo_id: 0
+[19-Dec-2025 16:15:46 America/Guayaquil] imginfo_enlace: 
+[19-Dec-2025 16:15:46 America/Guayaquil] folder_path: 
+[19-Dec-2025 16:15:46 America/Guayaquil] Buscando por imgag_id: 26
+[19-Dec-2025 16:15:46 America/Guayaquil] ✅ Encontrado imginfo_id: 4
+[19-Dec-2025 16:15:46 America/Guayaquil] ✅ Total archivos: 5
+[19-Dec-2025 16:17:46 America/Guayaquil] === LOAD DICOM IMAGES ===
+[19-Dec-2025 16:17:46 America/Guayaquil] imgag_id: 26
+[19-Dec-2025 16:17:46 America/Guayaquil] imginfo_id: 0
+[19-Dec-2025 16:17:46 America/Guayaquil] imginfo_enlace: 
+[19-Dec-2025 16:17:46 America/Guayaquil] folder_path: 
+[19-Dec-2025 16:17:46 America/Guayaquil] Buscando por imgag_id: 26
+[19-Dec-2025 16:17:46 America/Guayaquil] ✅ Encontrado imginfo_id: 4
+[19-Dec-2025 16:17:46 America/Guayaquil] ✅ Total archivos: 5
+[19-Dec-2025 16:18:04 America/Guayaquil] === LOAD DICOM IMAGES ===
+[19-Dec-2025 16:18:04 America/Guayaquil] imgag_id: 26
+[19-Dec-2025 16:18:04 America/Guayaquil] imginfo_id: 0
+[19-Dec-2025 16:18:04 America/Guayaquil] imginfo_enlace: 
+[19-Dec-2025 16:18:04 America/Guayaquil] folder_path: 
+[19-Dec-2025 16:18:04 America/Guayaquil] Buscando por imgag_id: 26
+[19-Dec-2025 16:18:04 America/Guayaquil] ✅ Encontrado imginfo_id: 4
+[19-Dec-2025 16:18:04 America/Guayaquil] ✅ Total archivos: 5
+[19-Dec-2025 16:19:36 America/Guayaquil] === LOAD DICOM IMAGES ===
+[19-Dec-2025 16:19:36 America/Guayaquil] imgag_id: 26
+[19-Dec-2025 16:19:36 America/Guayaquil] imginfo_id: 0
+[19-Dec-2025 16:19:36 America/Guayaquil] imginfo_enlace: 
+[19-Dec-2025 16:19:36 America/Guayaquil] folder_path: 
+[19-Dec-2025 16:19:36 America/Guayaquil] Buscando por imgag_id: 26
+[19-Dec-2025 16:19:36 America/Guayaquil] ✅ Encontrado imginfo_id: 4
+[19-Dec-2025 16:19:36 America/Guayaquil] ✅ Total archivos: 5
+[19-Dec-2025 16:21:05 America/Guayaquil] === LOAD DICOM IMAGES ===
+[19-Dec-2025 16:21:05 America/Guayaquil] imgag_id: 26
+[19-Dec-2025 16:21:05 America/Guayaquil] imginfo_id: 0
+[19-Dec-2025 16:21:05 America/Guayaquil] imginfo_enlace: 
+[19-Dec-2025 16:21:05 America/Guayaquil] folder_path: 
+[19-Dec-2025 16:21:05 America/Guayaquil] Buscando por imgag_id: 26
+[19-Dec-2025 16:21:05 America/Guayaquil] ✅ Encontrado imginfo_id: 4
+[19-Dec-2025 16:21:05 America/Guayaquil] ✅ Total archivos: 5
+[19-Dec-2025 16:23:30 America/Guayaquil] === LOAD DICOM IMAGES ===
+[19-Dec-2025 16:23:30 America/Guayaquil] imgag_id: 26
+[19-Dec-2025 16:23:30 America/Guayaquil] imginfo_id: 0
+[19-Dec-2025 16:23:30 America/Guayaquil] imginfo_enlace: 
+[19-Dec-2025 16:23:30 America/Guayaquil] folder_path: 
+[19-Dec-2025 16:23:30 America/Guayaquil] Buscando por imgag_id: 26
+[19-Dec-2025 16:23:30 America/Guayaquil] ✅ Encontrado imginfo_id: 4
+[19-Dec-2025 16:23:30 America/Guayaquil] ✅ Total archivos: 5
+[19-Dec-2025 16:24:10 America/Guayaquil] === LOAD DICOM IMAGES ===
+[19-Dec-2025 16:24:10 America/Guayaquil] imgag_id: 26
+[19-Dec-2025 16:24:10 America/Guayaquil] imginfo_id: 0
+[19-Dec-2025 16:24:10 America/Guayaquil] imginfo_enlace: 
+[19-Dec-2025 16:24:10 America/Guayaquil] folder_path: 
+[19-Dec-2025 16:24:10 America/Guayaquil] Buscando por imgag_id: 26
+[19-Dec-2025 16:24:10 America/Guayaquil] ✅ Encontrado imginfo_id: 4
+[19-Dec-2025 16:24:10 America/Guayaquil] ✅ Total archivos: 5
+[19-Dec-2025 16:29:11 America/Guayaquil] === LOAD DICOM IMAGES ===
+[19-Dec-2025 16:29:11 America/Guayaquil] imgag_id: 26
+[19-Dec-2025 16:29:11 America/Guayaquil] imginfo_id: 0
+[19-Dec-2025 16:29:11 America/Guayaquil] imginfo_enlace: 
+[19-Dec-2025 16:29:11 America/Guayaquil] folder_path: 
+[19-Dec-2025 16:29:11 America/Guayaquil] Buscando por imgag_id: 26
+[19-Dec-2025 16:29:11 America/Guayaquil] ✅ Encontrado imginfo_id: 4
+[19-Dec-2025 16:29:11 America/Guayaquil] ✅ Total archivos: 5
+[19-Dec-2025 16:29:36 America/Guayaquil] === LOAD DICOM IMAGES ===
+[19-Dec-2025 16:29:36 America/Guayaquil] imgag_id: 26
+[19-Dec-2025 16:29:36 America/Guayaquil] imginfo_id: 0
+[19-Dec-2025 16:29:36 America/Guayaquil] imginfo_enlace: 
+[19-Dec-2025 16:29:36 America/Guayaquil] folder_path: 
+[19-Dec-2025 16:29:36 America/Guayaquil] Buscando por imgag_id: 26
+[19-Dec-2025 16:29:36 America/Guayaquil] ✅ Encontrado imginfo_id: 4
+[19-Dec-2025 16:29:36 America/Guayaquil] ✅ Total archivos: 5
+[19-Dec-2025 16:34:48 America/Guayaquil] === LOAD DICOM IMAGES ===
+[19-Dec-2025 16:34:48 America/Guayaquil] imgag_id: 26
+[19-Dec-2025 16:34:48 America/Guayaquil] imginfo_id: 0
+[19-Dec-2025 16:34:48 America/Guayaquil] imginfo_enlace: 
+[19-Dec-2025 16:34:48 America/Guayaquil] folder_path: 
+[19-Dec-2025 16:34:48 America/Guayaquil] Buscando por imgag_id: 26
+[19-Dec-2025 16:34:48 America/Guayaquil] ✅ Encontrado imginfo_id: 4
+[19-Dec-2025 16:34:48 America/Guayaquil] ✅ Total archivos: 5
+[19-Dec-2025 16:35:08 America/Guayaquil] === LOAD DICOM IMAGES ===
+[19-Dec-2025 16:35:08 America/Guayaquil] imgag_id: 26
+[19-Dec-2025 16:35:08 America/Guayaquil] imginfo_id: 0
+[19-Dec-2025 16:35:08 America/Guayaquil] imginfo_enlace: 
+[19-Dec-2025 16:35:08 America/Guayaquil] folder_path: 
+[19-Dec-2025 16:35:08 America/Guayaquil] Buscando por imgag_id: 26
+[19-Dec-2025 16:35:08 America/Guayaquil] ✅ Encontrado imginfo_id: 4
+[19-Dec-2025 16:35:08 America/Guayaquil] ✅ Total archivos: 5
+[19-Dec-2025 16:36:15 America/Guayaquil] === LOAD DICOM IMAGES ===
+[19-Dec-2025 16:36:15 America/Guayaquil] imgag_id: 26
+[19-Dec-2025 16:36:15 America/Guayaquil] imginfo_id: 0
+[19-Dec-2025 16:36:15 America/Guayaquil] imginfo_enlace: 
+[19-Dec-2025 16:36:15 America/Guayaquil] folder_path: 
+[19-Dec-2025 16:36:15 America/Guayaquil] Buscando por imgag_id: 26
+[19-Dec-2025 16:36:15 America/Guayaquil] ✅ Encontrado imginfo_id: 4
+[19-Dec-2025 16:36:15 America/Guayaquil] ✅ Total archivos: 5
+[19-Dec-2025 16:42:53 America/Guayaquil] === LOAD DICOM IMAGES ===
+[19-Dec-2025 16:42:53 America/Guayaquil] imgag_id: 26
+[19-Dec-2025 16:42:53 America/Guayaquil] imginfo_id: 0
+[19-Dec-2025 16:42:53 America/Guayaquil] imginfo_enlace: 
+[19-Dec-2025 16:42:53 America/Guayaquil] folder_path: 
+[19-Dec-2025 16:42:53 America/Guayaquil] Buscando por imgag_id: 26
+[19-Dec-2025 16:42:53 America/Guayaquil] ✅ Encontrado imginfo_id: 4
+[19-Dec-2025 16:42:53 America/Guayaquil] ✅ Total archivos: 5
+[19-Dec-2025 16:43:55 America/Guayaquil] === LOAD DICOM IMAGES ===
+[19-Dec-2025 16:43:55 America/Guayaquil] imgag_id: 26
+[19-Dec-2025 16:43:55 America/Guayaquil] imginfo_id: 0
+[19-Dec-2025 16:43:55 America/Guayaquil] imginfo_enlace: 
+[19-Dec-2025 16:43:55 America/Guayaquil] folder_path: 
+[19-Dec-2025 16:43:55 America/Guayaquil] Buscando por imgag_id: 26
+[19-Dec-2025 16:43:55 America/Guayaquil] ✅ Encontrado imginfo_id: 4
+[19-Dec-2025 16:43:55 America/Guayaquil] ✅ Total archivos: 5
+[22-Dec-2025 10:54:53 America/Guayaquil] === LOAD DICOM IMAGES ===
+[22-Dec-2025 10:54:53 America/Guayaquil] imgag_id: 26
+[22-Dec-2025 10:54:53 America/Guayaquil] imginfo_id: 0
+[22-Dec-2025 10:54:53 America/Guayaquil] imginfo_enlace: 
+[22-Dec-2025 10:54:53 America/Guayaquil] folder_path: 
+[22-Dec-2025 10:54:53 America/Guayaquil] Buscando por imgag_id: 26
+[22-Dec-2025 10:54:53 America/Guayaquil] ✅ Encontrado imginfo_id: 4
+[22-Dec-2025 10:54:53 America/Guayaquil] ✅ Total archivos: 5
+[22-Dec-2025 11:00:47 America/Guayaquil] === LOAD DICOM IMAGES ===
+[22-Dec-2025 11:00:47 America/Guayaquil] imgag_id: 27
+[22-Dec-2025 11:00:47 America/Guayaquil] imginfo_id: 0
+[22-Dec-2025 11:00:47 America/Guayaquil] imginfo_enlace: 
+[22-Dec-2025 11:00:47 America/Guayaquil] folder_path: 
+[22-Dec-2025 11:00:47 America/Guayaquil] Buscando por imgag_id: 27
+[22-Dec-2025 11:00:47 America/Guayaquil] Buscando en tabla de archivos...
+[22-Dec-2025 11:00:47 America/Guayaquil] ℹ️ No hay archivos DICOM guardados
+[22-Dec-2025 11:00:52 America/Guayaquil] === LOAD DICOM IMAGES ===
+[22-Dec-2025 11:00:52 America/Guayaquil] imgag_id: 26
+[22-Dec-2025 11:00:52 America/Guayaquil] imginfo_id: 0
+[22-Dec-2025 11:00:52 America/Guayaquil] imginfo_enlace: 
+[22-Dec-2025 11:00:52 America/Guayaquil] folder_path: 
+[22-Dec-2025 11:00:52 America/Guayaquil] Buscando por imgag_id: 26
+[22-Dec-2025 11:00:52 America/Guayaquil] ✅ Encontrado imginfo_id: 4
+[22-Dec-2025 11:00:52 America/Guayaquil] ✅ Total archivos: 5
+[22-Dec-2025 11:20:34 America/Guayaquil] === LOAD DICOM IMAGES ===
+[22-Dec-2025 11:20:34 America/Guayaquil] imgag_id: 28
+[22-Dec-2025 11:20:34 America/Guayaquil] imginfo_id: 0
+[22-Dec-2025 11:20:34 America/Guayaquil] imginfo_enlace: 
+[22-Dec-2025 11:20:34 America/Guayaquil] folder_path: 
+[22-Dec-2025 11:20:34 America/Guayaquil] Buscando por imgag_id: 28
+[22-Dec-2025 11:20:34 America/Guayaquil] Buscando en tabla de archivos...
+[22-Dec-2025 11:20:34 America/Guayaquil] ℹ️ No hay archivos DICOM guardados
+[22-Dec-2025 11:27:35 America/Guayaquil] === LOAD DICOM IMAGES ===
+[22-Dec-2025 11:27:35 America/Guayaquil] imgag_id: 27
+[22-Dec-2025 11:27:35 America/Guayaquil] imginfo_id: 0
+[22-Dec-2025 11:27:35 America/Guayaquil] imginfo_enlace: 
+[22-Dec-2025 11:27:35 America/Guayaquil] folder_path: 
+[22-Dec-2025 11:27:35 America/Guayaquil] Buscando por imgag_id: 27
+[22-Dec-2025 11:27:35 America/Guayaquil] Buscando en tabla de archivos...
+[22-Dec-2025 11:27:35 America/Guayaquil] ℹ️ No hay archivos DICOM guardados
+[22-Dec-2025 11:40:22 America/Guayaquil] === LOAD DICOM IMAGES ===
+[22-Dec-2025 11:40:22 America/Guayaquil] imgag_id: 28
+[22-Dec-2025 11:40:22 America/Guayaquil] imginfo_id: 0
+[22-Dec-2025 11:40:22 America/Guayaquil] imginfo_enlace: 
+[22-Dec-2025 11:40:22 America/Guayaquil] folder_path: 
+[22-Dec-2025 11:40:22 America/Guayaquil] Buscando por imgag_id: 28
+[22-Dec-2025 11:40:22 America/Guayaquil] ✅ Encontrado imginfo_id: 10
+[22-Dec-2025 11:40:22 America/Guayaquil] ✅ Total archivos: 5
+[22-Dec-2025 11:40:54 America/Guayaquil] === LOAD DICOM IMAGES ===
+[22-Dec-2025 11:40:54 America/Guayaquil] imgag_id: 28
+[22-Dec-2025 11:40:54 America/Guayaquil] imginfo_id: 0
+[22-Dec-2025 11:40:54 America/Guayaquil] imginfo_enlace: 
+[22-Dec-2025 11:40:54 America/Guayaquil] folder_path: 
+[22-Dec-2025 11:40:54 America/Guayaquil] Buscando por imgag_id: 28
+[22-Dec-2025 11:40:54 America/Guayaquil] ✅ Encontrado imginfo_id: 10
+[22-Dec-2025 11:40:54 America/Guayaquil] ✅ Total archivos: 5
+[22-Dec-2025 11:41:24 America/Guayaquil] === LOAD DICOM IMAGES ===
+[22-Dec-2025 11:41:24 America/Guayaquil] imgag_id: 28
+[22-Dec-2025 11:41:24 America/Guayaquil] imginfo_id: 0
+[22-Dec-2025 11:41:24 America/Guayaquil] imginfo_enlace: 
+[22-Dec-2025 11:41:24 America/Guayaquil] folder_path: 
+[22-Dec-2025 11:41:24 America/Guayaquil] Buscando por imgag_id: 28
+[22-Dec-2025 11:41:24 America/Guayaquil] ✅ Encontrado imginfo_id: 10
+[22-Dec-2025 11:41:24 America/Guayaquil] ✅ Total archivos: 5
+[22-Dec-2025 11:51:45 America/Guayaquil] === LOAD DICOM IMAGES ===
+[22-Dec-2025 11:51:45 America/Guayaquil] imgag_id: 28
+[22-Dec-2025 11:51:45 America/Guayaquil] imginfo_id: 0
+[22-Dec-2025 11:51:45 America/Guayaquil] imginfo_enlace: 
+[22-Dec-2025 11:51:45 America/Guayaquil] folder_path: 
+[22-Dec-2025 11:51:45 America/Guayaquil] Buscando por imgag_id: 28
+[22-Dec-2025 11:51:45 America/Guayaquil] ✅ Encontrado imginfo_id: 10
+[22-Dec-2025 11:51:45 America/Guayaquil] ✅ Total archivos: 5
+[22-Dec-2025 11:53:01 America/Guayaquil] === LOAD DICOM IMAGES ===
+[22-Dec-2025 11:53:01 America/Guayaquil] imgag_id: 28
+[22-Dec-2025 11:53:01 America/Guayaquil] imginfo_id: 0
+[22-Dec-2025 11:53:01 America/Guayaquil] imginfo_enlace: 
+[22-Dec-2025 11:53:01 America/Guayaquil] folder_path: 
+[22-Dec-2025 11:53:01 America/Guayaquil] Buscando por imgag_id: 28
+[22-Dec-2025 11:53:01 America/Guayaquil] ✅ Encontrado imginfo_id: 10
+[22-Dec-2025 11:53:01 America/Guayaquil] ✅ Total archivos: 5
+[22-Dec-2025 11:53:41 America/Guayaquil] === LOAD DICOM IMAGES ===
+[22-Dec-2025 11:53:41 America/Guayaquil] imgag_id: 28
+[22-Dec-2025 11:53:41 America/Guayaquil] imginfo_id: 0
+[22-Dec-2025 11:53:41 America/Guayaquil] imginfo_enlace: 
+[22-Dec-2025 11:53:41 America/Guayaquil] folder_path: 
+[22-Dec-2025 11:53:41 America/Guayaquil] Buscando por imgag_id: 28
+[22-Dec-2025 11:53:41 America/Guayaquil] ✅ Encontrado imginfo_id: 10
+[22-Dec-2025 11:53:41 America/Guayaquil] ✅ Total archivos: 5
+[22-Dec-2025 11:54:38 America/Guayaquil] === LOAD DICOM IMAGES ===
+[22-Dec-2025 11:54:38 America/Guayaquil] imgag_id: 28
+[22-Dec-2025 11:54:38 America/Guayaquil] imginfo_id: 0
+[22-Dec-2025 11:54:38 America/Guayaquil] imginfo_enlace: 
+[22-Dec-2025 11:54:38 America/Guayaquil] folder_path: 
+[22-Dec-2025 11:54:38 America/Guayaquil] Buscando por imgag_id: 28
+[22-Dec-2025 11:54:38 America/Guayaquil] ✅ Encontrado imginfo_id: 10
+[22-Dec-2025 11:54:38 America/Guayaquil] ✅ Total archivos: 5
+[22-Dec-2025 11:54:42 America/Guayaquil] === LOAD DICOM IMAGES ===
+[22-Dec-2025 11:54:42 America/Guayaquil] imgag_id: 28
+[22-Dec-2025 11:54:42 America/Guayaquil] imginfo_id: 0
+[22-Dec-2025 11:54:42 America/Guayaquil] imginfo_enlace: 
+[22-Dec-2025 11:54:42 America/Guayaquil] folder_path: 
+[22-Dec-2025 11:54:42 America/Guayaquil] Buscando por imgag_id: 28
+[22-Dec-2025 11:54:42 America/Guayaquil] ✅ Encontrado imginfo_id: 10
+[22-Dec-2025 11:54:42 America/Guayaquil] ✅ Total archivos: 5
+[22-Dec-2025 11:57:01 America/Guayaquil] === LOAD DICOM IMAGES ===
+[22-Dec-2025 11:57:01 America/Guayaquil] imgag_id: 28
+[22-Dec-2025 11:57:01 America/Guayaquil] imginfo_id: 0
+[22-Dec-2025 11:57:01 America/Guayaquil] imginfo_enlace: 
+[22-Dec-2025 11:57:01 America/Guayaquil] folder_path: 
+[22-Dec-2025 11:57:01 America/Guayaquil] Buscando por imgag_id: 28
+[22-Dec-2025 11:57:01 America/Guayaquil] ✅ Encontrado imginfo_id: 10
+[22-Dec-2025 11:57:01 America/Guayaquil] ✅ Total archivos: 5
+[22-Dec-2025 12:23:40 America/Guayaquil] === LOAD DICOM IMAGES ===
+[22-Dec-2025 12:23:40 America/Guayaquil] imgag_id: 28
+[22-Dec-2025 12:23:40 America/Guayaquil] imginfo_id: 0
+[22-Dec-2025 12:23:40 America/Guayaquil] imginfo_enlace: 
+[22-Dec-2025 12:23:40 America/Guayaquil] folder_path: 
+[22-Dec-2025 12:23:40 America/Guayaquil] Buscando por imgag_id: 28
+[22-Dec-2025 12:23:40 America/Guayaquil] ✅ Encontrado imginfo_id: 10
+[22-Dec-2025 12:23:40 America/Guayaquil] ✅ Total archivos: 5
+[22-Dec-2025 12:29:54 America/Guayaquil] === LOAD DICOM IMAGES ===
+[22-Dec-2025 12:29:54 America/Guayaquil] imgag_id: 28
+[22-Dec-2025 12:29:54 America/Guayaquil] imginfo_id: 0
+[22-Dec-2025 12:29:54 America/Guayaquil] imginfo_enlace: 
+[22-Dec-2025 12:29:54 America/Guayaquil] folder_path: 
+[22-Dec-2025 12:29:54 America/Guayaquil] Buscando por imgag_id: 28
+[22-Dec-2025 12:29:54 America/Guayaquil] ✅ Encontrado imginfo_id: 10
+[22-Dec-2025 12:29:54 America/Guayaquil] ✅ Total archivos: 5
+[22-Dec-2025 12:31:05 America/Guayaquil] === LOAD DICOM IMAGES ===
+[22-Dec-2025 12:31:05 America/Guayaquil] imgag_id: 28
+[22-Dec-2025 12:31:05 America/Guayaquil] imginfo_id: 0
+[22-Dec-2025 12:31:05 America/Guayaquil] imginfo_enlace: 
+[22-Dec-2025 12:31:05 America/Guayaquil] folder_path: 
+[22-Dec-2025 12:31:05 America/Guayaquil] Buscando por imgag_id: 28
+[22-Dec-2025 12:31:05 America/Guayaquil] ✅ Encontrado imginfo_id: 10
+[22-Dec-2025 12:31:05 America/Guayaquil] ✅ Total archivos: 5
+[22-Dec-2025 12:33:16 America/Guayaquil] === LOAD DICOM IMAGES ===
+[22-Dec-2025 12:33:16 America/Guayaquil] imgag_id: 28
+[22-Dec-2025 12:33:16 America/Guayaquil] imginfo_id: 0
+[22-Dec-2025 12:33:16 America/Guayaquil] imginfo_enlace: 
+[22-Dec-2025 12:33:16 America/Guayaquil] folder_path: 
+[22-Dec-2025 12:33:16 America/Guayaquil] Buscando por imgag_id: 28
+[22-Dec-2025 12:33:16 America/Guayaquil] ✅ Encontrado imginfo_id: 10
+[22-Dec-2025 12:33:16 America/Guayaquil] ✅ Total archivos: 5
+[22-Dec-2025 13:02:46 America/Guayaquil] === LOAD DICOM IMAGES ===
+[22-Dec-2025 13:02:46 America/Guayaquil] imgag_id: 26
+[22-Dec-2025 13:02:46 America/Guayaquil] imginfo_id: 0
+[22-Dec-2025 13:02:46 America/Guayaquil] imginfo_enlace: 
+[22-Dec-2025 13:02:46 America/Guayaquil] folder_path: 
+[22-Dec-2025 13:02:46 America/Guayaquil] Buscando por imgag_id: 26
+[22-Dec-2025 13:02:46 America/Guayaquil] ✅ Encontrado imginfo_id: 4
+[22-Dec-2025 13:02:46 America/Guayaquil] ✅ Total archivos: 5
+[22-Dec-2025 13:03:46 America/Guayaquil] === LOAD DICOM IMAGES ===
+[22-Dec-2025 13:03:46 America/Guayaquil] imgag_id: 26
+[22-Dec-2025 13:03:46 America/Guayaquil] imginfo_id: 0
+[22-Dec-2025 13:03:46 America/Guayaquil] imginfo_enlace: 
+[22-Dec-2025 13:03:46 America/Guayaquil] folder_path: 
+[22-Dec-2025 13:03:46 America/Guayaquil] Buscando por imgag_id: 26
+[22-Dec-2025 13:03:46 America/Guayaquil] ✅ Encontrado imginfo_id: 4
+[22-Dec-2025 13:03:46 America/Guayaquil] ✅ Total archivos: 5
+[22-Dec-2025 13:06:45 America/Guayaquil] === LOAD DICOM IMAGES ===
+[22-Dec-2025 13:06:45 America/Guayaquil] imgag_id: 26
+[22-Dec-2025 13:06:45 America/Guayaquil] imginfo_id: 0
+[22-Dec-2025 13:06:45 America/Guayaquil] imginfo_enlace: 
+[22-Dec-2025 13:06:45 America/Guayaquil] folder_path: 
+[22-Dec-2025 13:06:45 America/Guayaquil] Buscando por imgag_id: 26
+[22-Dec-2025 13:06:45 America/Guayaquil] ✅ Encontrado imginfo_id: 4
+[22-Dec-2025 13:06:45 America/Guayaquil] ✅ Total archivos: 5
+[22-Dec-2025 13:07:00 America/Guayaquil] === LOAD DICOM IMAGES ===
+[22-Dec-2025 13:07:00 America/Guayaquil] imgag_id: 26
+[22-Dec-2025 13:07:00 America/Guayaquil] imginfo_id: 0
+[22-Dec-2025 13:07:00 America/Guayaquil] imginfo_enlace: 
+[22-Dec-2025 13:07:00 America/Guayaquil] folder_path: 
+[22-Dec-2025 13:07:00 America/Guayaquil] Buscando por imgag_id: 26
+[22-Dec-2025 13:07:00 America/Guayaquil] ✅ Encontrado imginfo_id: 4
+[22-Dec-2025 13:07:00 America/Guayaquil] ✅ Total archivos: 5
+[22-Dec-2025 13:08:11 America/Guayaquil] === LOAD DICOM IMAGES ===
+[22-Dec-2025 13:08:11 America/Guayaquil] imgag_id: 26
+[22-Dec-2025 13:08:11 America/Guayaquil] imginfo_id: 0
+[22-Dec-2025 13:08:11 America/Guayaquil] imginfo_enlace: 
+[22-Dec-2025 13:08:11 America/Guayaquil] folder_path: 
+[22-Dec-2025 13:08:11 America/Guayaquil] Buscando por imgag_id: 26
+[22-Dec-2025 13:08:11 America/Guayaquil] ✅ Encontrado imginfo_id: 4
+[22-Dec-2025 13:08:11 America/Guayaquil] ✅ Total archivos: 5
+[22-Dec-2025 13:09:08 America/Guayaquil] === LOAD DICOM IMAGES ===
+[22-Dec-2025 13:09:08 America/Guayaquil] imgag_id: 26
+[22-Dec-2025 13:09:08 America/Guayaquil] imginfo_id: 0
+[22-Dec-2025 13:09:08 America/Guayaquil] imginfo_enlace: 
+[22-Dec-2025 13:09:08 America/Guayaquil] folder_path: 
+[22-Dec-2025 13:09:08 America/Guayaquil] Buscando por imgag_id: 26
+[22-Dec-2025 13:09:08 America/Guayaquil] ✅ Encontrado imginfo_id: 4
+[22-Dec-2025 13:09:08 America/Guayaquil] ✅ Total archivos: 5
+[22-Dec-2025 13:10:20 America/Guayaquil] === LOAD DICOM IMAGES ===
+[22-Dec-2025 13:10:20 America/Guayaquil] imgag_id: 26
+[22-Dec-2025 13:10:20 America/Guayaquil] imginfo_id: 0
+[22-Dec-2025 13:10:20 America/Guayaquil] imginfo_enlace: 
+[22-Dec-2025 13:10:20 America/Guayaquil] folder_path: 
+[22-Dec-2025 13:10:20 America/Guayaquil] Buscando por imgag_id: 26
+[22-Dec-2025 13:10:20 America/Guayaquil] ✅ Encontrado imginfo_id: 4
+[22-Dec-2025 13:10:20 America/Guayaquil] ✅ Total archivos: 5
+[22-Dec-2025 13:33:00 America/Guayaquil] === LOAD DICOM IMAGES ===
+[22-Dec-2025 13:33:00 America/Guayaquil] imgag_id: 26
+[22-Dec-2025 13:33:00 America/Guayaquil] imginfo_id: 0
+[22-Dec-2025 13:33:00 America/Guayaquil] imginfo_enlace: 
+[22-Dec-2025 13:33:00 America/Guayaquil] folder_path: 
+[22-Dec-2025 13:33:00 America/Guayaquil] Buscando por imgag_id: 26
+[22-Dec-2025 13:33:00 America/Guayaquil] ✅ Encontrado imginfo_id: 4
+[22-Dec-2025 13:33:00 America/Guayaquil] ✅ Total archivos: 5
+[22-Dec-2025 14:42:45 America/Guayaquil] === LOAD DICOM IMAGES ===
+[22-Dec-2025 14:42:45 America/Guayaquil] imgag_id: 28
+[22-Dec-2025 14:42:45 America/Guayaquil] imginfo_id: 0
+[22-Dec-2025 14:42:45 America/Guayaquil] imginfo_enlace: 
+[22-Dec-2025 14:42:45 America/Guayaquil] folder_path: 
+[22-Dec-2025 14:42:45 America/Guayaquil] Buscando por imgag_id: 28
+[22-Dec-2025 14:42:45 America/Guayaquil] ✅ Encontrado imginfo_id: 10
+[22-Dec-2025 14:42:45 America/Guayaquil] ✅ Total archivos: 5
+[22-Dec-2025 15:11:24 America/Guayaquil] === LOAD DICOM IMAGES ===
+[22-Dec-2025 15:11:24 America/Guayaquil] imgag_id: 28
+[22-Dec-2025 15:11:24 America/Guayaquil] imginfo_id: 0
+[22-Dec-2025 15:11:24 America/Guayaquil] imginfo_enlace: 
+[22-Dec-2025 15:11:24 America/Guayaquil] folder_path: 
+[22-Dec-2025 15:11:24 America/Guayaquil] Buscando por imgag_id: 28
+[22-Dec-2025 15:11:24 America/Guayaquil] ✅ Encontrado imginfo_id: 10
+[22-Dec-2025 15:11:24 America/Guayaquil] ✅ Total archivos: 5
+[22-Dec-2025 15:14:35 America/Guayaquil] === LOAD DICOM IMAGES ===
+[22-Dec-2025 15:14:35 America/Guayaquil] imgag_id: 28
+[22-Dec-2025 15:14:35 America/Guayaquil] imginfo_id: 0
+[22-Dec-2025 15:14:35 America/Guayaquil] imginfo_enlace: 
+[22-Dec-2025 15:14:35 America/Guayaquil] folder_path: 
+[22-Dec-2025 15:14:35 America/Guayaquil] Buscando por imgag_id: 28
+[22-Dec-2025 15:14:35 America/Guayaquil] ✅ Encontrado imginfo_id: 10
+[22-Dec-2025 15:14:35 America/Guayaquil] ✅ Total archivos: 5
+[22-Dec-2025 15:20:27 America/Guayaquil] === LOAD DICOM IMAGES ===
+[22-Dec-2025 15:20:27 America/Guayaquil] imgag_id: 28
+[22-Dec-2025 15:20:27 America/Guayaquil] imginfo_id: 0
+[22-Dec-2025 15:20:27 America/Guayaquil] imginfo_enlace: 
+[22-Dec-2025 15:20:27 America/Guayaquil] folder_path: 
+[22-Dec-2025 15:20:27 America/Guayaquil] Buscando por imgag_id: 28
+[22-Dec-2025 15:20:27 America/Guayaquil] ✅ Encontrado imginfo_id: 10
+[22-Dec-2025 15:20:27 America/Guayaquil] ✅ Total archivos: 5
+[22-Dec-2025 15:20:34 America/Guayaquil] === LOAD DICOM IMAGES ===
+[22-Dec-2025 15:20:34 America/Guayaquil] imgag_id: 28
+[22-Dec-2025 15:20:34 America/Guayaquil] imginfo_id: 0
+[22-Dec-2025 15:20:34 America/Guayaquil] imginfo_enlace: 
+[22-Dec-2025 15:20:34 America/Guayaquil] folder_path: 
+[22-Dec-2025 15:20:34 America/Guayaquil] Buscando por imgag_id: 28
+[22-Dec-2025 15:20:34 America/Guayaquil] ✅ Encontrado imginfo_id: 10
+[22-Dec-2025 15:20:34 America/Guayaquil] ✅ Total archivos: 5
+[22-Dec-2025 15:21:41 America/Guayaquil] === LOAD DICOM IMAGES ===
+[22-Dec-2025 15:21:41 America/Guayaquil] imgag_id: 27
+[22-Dec-2025 15:21:41 America/Guayaquil] imginfo_id: 0
+[22-Dec-2025 15:21:41 America/Guayaquil] imginfo_enlace: 
+[22-Dec-2025 15:21:41 America/Guayaquil] folder_path: 
+[22-Dec-2025 15:21:41 America/Guayaquil] Buscando por imgag_id: 27
+[22-Dec-2025 15:21:41 America/Guayaquil] ✅ Encontrado imginfo_id: 8
+[22-Dec-2025 15:21:41 America/Guayaquil] ✅ Total archivos: 5
+[22-Dec-2025 15:22:10 America/Guayaquil] === LOAD DICOM IMAGES ===
+[22-Dec-2025 15:22:10 America/Guayaquil] imgag_id: 27
+[22-Dec-2025 15:22:10 America/Guayaquil] imginfo_id: 0
+[22-Dec-2025 15:22:10 America/Guayaquil] imginfo_enlace: 
+[22-Dec-2025 15:22:10 America/Guayaquil] folder_path: 
+[22-Dec-2025 15:22:10 America/Guayaquil] Buscando por imgag_id: 27
+[22-Dec-2025 15:22:10 America/Guayaquil] ✅ Encontrado imginfo_id: 8
+[22-Dec-2025 15:22:10 America/Guayaquil] ✅ Total archivos: 5
+[22-Dec-2025 15:23:44 America/Guayaquil] === LOAD DICOM IMAGES ===
+[22-Dec-2025 15:23:44 America/Guayaquil] imgag_id: 27
+[22-Dec-2025 15:23:44 America/Guayaquil] imginfo_id: 0
+[22-Dec-2025 15:23:44 America/Guayaquil] imginfo_enlace: 
+[22-Dec-2025 15:23:44 America/Guayaquil] folder_path: 
+[22-Dec-2025 15:23:44 America/Guayaquil] Buscando por imgag_id: 27
+[22-Dec-2025 15:23:44 America/Guayaquil] ✅ Encontrado imginfo_id: 8
+[22-Dec-2025 15:23:44 America/Guayaquil] ✅ Total archivos: 5
+[22-Dec-2025 15:30:18 America/Guayaquil] === LOAD DICOM IMAGES ===
+[22-Dec-2025 15:30:18 America/Guayaquil] imgag_id: 28
+[22-Dec-2025 15:30:18 America/Guayaquil] imginfo_id: 0
+[22-Dec-2025 15:30:18 America/Guayaquil] imginfo_enlace: 
+[22-Dec-2025 15:30:18 America/Guayaquil] folder_path: 
+[22-Dec-2025 15:30:18 America/Guayaquil] Buscando por imgag_id: 28
+[22-Dec-2025 15:30:18 America/Guayaquil] ✅ Encontrado imginfo_id: 10
+[22-Dec-2025 15:30:18 America/Guayaquil] ✅ Total archivos: 5
+[22-Dec-2025 15:30:58 America/Guayaquil] === LOAD DICOM IMAGES ===
+[22-Dec-2025 15:30:58 America/Guayaquil] imgag_id: 28
+[22-Dec-2025 15:30:58 America/Guayaquil] imginfo_id: 0
+[22-Dec-2025 15:30:58 America/Guayaquil] imginfo_enlace: 
+[22-Dec-2025 15:30:58 America/Guayaquil] folder_path: 
+[22-Dec-2025 15:30:58 America/Guayaquil] Buscando por imgag_id: 28
+[22-Dec-2025 15:30:58 America/Guayaquil] ✅ Encontrado imginfo_id: 10
+[22-Dec-2025 15:30:58 America/Guayaquil] ✅ Total archivos: 5
+[22-Dec-2025 15:31:55 America/Guayaquil] === LOAD DICOM IMAGES ===
+[22-Dec-2025 15:31:55 America/Guayaquil] imgag_id: 28
+[22-Dec-2025 15:31:55 America/Guayaquil] imginfo_id: 0
+[22-Dec-2025 15:31:55 America/Guayaquil] imginfo_enlace: 
+[22-Dec-2025 15:31:55 America/Guayaquil] folder_path: 
+[22-Dec-2025 15:31:55 America/Guayaquil] Buscando por imgag_id: 28
+[22-Dec-2025 15:31:55 America/Guayaquil] ✅ Encontrado imginfo_id: 10
+[22-Dec-2025 15:31:55 America/Guayaquil] ✅ Total archivos: 5
+[22-Dec-2025 15:39:25 America/Guayaquil] === LOAD DICOM IMAGES ===
+[22-Dec-2025 15:39:25 America/Guayaquil] imgag_id: 28
+[22-Dec-2025 15:39:25 America/Guayaquil] imginfo_id: 0
+[22-Dec-2025 15:39:25 America/Guayaquil] imginfo_enlace: 
+[22-Dec-2025 15:39:25 America/Guayaquil] folder_path: 
+[22-Dec-2025 15:39:25 America/Guayaquil] Buscando por imgag_id: 28
+[22-Dec-2025 15:39:25 America/Guayaquil] ✅ Encontrado imginfo_id: 10
+[22-Dec-2025 15:39:25 America/Guayaquil] ✅ Total archivos: 5
+[22-Dec-2025 16:19:29 America/Guayaquil] === LOAD DICOM IMAGES ===
+[22-Dec-2025 16:19:29 America/Guayaquil] imgag_id: 28
+[22-Dec-2025 16:19:29 America/Guayaquil] imginfo_id: 0
+[22-Dec-2025 16:19:29 America/Guayaquil] imginfo_enlace: 
+[22-Dec-2025 16:19:29 America/Guayaquil] folder_path: 
+[22-Dec-2025 16:19:29 America/Guayaquil] Buscando por imgag_id: 28
+[22-Dec-2025 16:19:29 America/Guayaquil] ✅ Encontrado imginfo_id: 10
+[22-Dec-2025 16:19:29 America/Guayaquil] ✅ Total archivos: 5
+[22-Dec-2025 16:22:10 America/Guayaquil] === LOAD DICOM IMAGES ===
+[22-Dec-2025 16:22:10 America/Guayaquil] imgag_id: 28
+[22-Dec-2025 16:22:10 America/Guayaquil] imginfo_id: 0
+[22-Dec-2025 16:22:10 America/Guayaquil] imginfo_enlace: 
+[22-Dec-2025 16:22:10 America/Guayaquil] folder_path: 
+[22-Dec-2025 16:22:10 America/Guayaquil] Buscando por imgag_id: 28
+[22-Dec-2025 16:22:10 America/Guayaquil] ✅ Encontrado imginfo_id: 10
+[22-Dec-2025 16:22:10 America/Guayaquil] ✅ Total archivos: 5
+[22-Dec-2025 16:27:06 America/Guayaquil] === LOAD DICOM IMAGES ===
+[22-Dec-2025 16:27:06 America/Guayaquil] imgag_id: 27
+[22-Dec-2025 16:27:06 America/Guayaquil] imginfo_id: 0
+[22-Dec-2025 16:27:06 America/Guayaquil] imginfo_enlace: 
+[22-Dec-2025 16:27:06 America/Guayaquil] folder_path: 
+[22-Dec-2025 16:27:06 America/Guayaquil] Buscando por imgag_id: 27
+[22-Dec-2025 16:27:06 America/Guayaquil] ✅ Encontrado imginfo_id: 8
+[22-Dec-2025 16:27:06 America/Guayaquil] ✅ Total archivos: 5
+[22-Dec-2025 16:31:42 America/Guayaquil] === LOAD DICOM IMAGES ===
+[22-Dec-2025 16:31:42 America/Guayaquil] imgag_id: 26
+[22-Dec-2025 16:31:42 America/Guayaquil] imginfo_id: 0
+[22-Dec-2025 16:31:42 America/Guayaquil] imginfo_enlace: 
+[22-Dec-2025 16:31:42 America/Guayaquil] folder_path: 
+[22-Dec-2025 16:31:42 America/Guayaquil] Buscando por imgag_id: 26
+[22-Dec-2025 16:31:42 America/Guayaquil] ✅ Encontrado imginfo_id: 4
+[22-Dec-2025 16:31:42 America/Guayaquil] ✅ Total archivos: 5
+[22-Dec-2025 16:31:56 America/Guayaquil] === LOAD DICOM IMAGES ===
+[22-Dec-2025 16:31:56 America/Guayaquil] imgag_id: 16
+[22-Dec-2025 16:31:56 America/Guayaquil] imginfo_id: 0
+[22-Dec-2025 16:31:56 America/Guayaquil] imginfo_enlace: 
+[22-Dec-2025 16:31:56 America/Guayaquil] folder_path: 
+[22-Dec-2025 16:31:56 America/Guayaquil] Buscando por imgag_id: 16
+[22-Dec-2025 16:31:56 America/Guayaquil] Buscando en tabla de archivos...
+[22-Dec-2025 16:31:56 America/Guayaquil] ℹ️ No hay archivos DICOM guardados
+[22-Dec-2025 16:33:07 America/Guayaquil] === LOAD DICOM IMAGES ===
+[22-Dec-2025 16:33:07 America/Guayaquil] imgag_id: 26
+[22-Dec-2025 16:33:07 America/Guayaquil] imginfo_id: 0
+[22-Dec-2025 16:33:07 America/Guayaquil] imginfo_enlace: 
+[22-Dec-2025 16:33:07 America/Guayaquil] folder_path: 
+[22-Dec-2025 16:33:07 America/Guayaquil] Buscando por imgag_id: 26
+[22-Dec-2025 16:33:07 America/Guayaquil] ✅ Encontrado imginfo_id: 4
+[22-Dec-2025 16:33:07 America/Guayaquil] ✅ Total archivos: 5
