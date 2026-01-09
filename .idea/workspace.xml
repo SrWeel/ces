@@ -5,43 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="07f0c92e-7bf6-4c93-80cc-47b21f8b0d04" name="Changes" comment="second">
-      <change afterPath="$PROJECT_DIR$/pdfformularios/generate_ctevitalbh.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/63728ea9-59f4-49d0-b582-8ad81f0854ca.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/63728ea9-59f4-49d0-b582-8ad81f0854ca.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/aplicativos/documental/datos_substandarform.php" beforeDir="false" afterPath="$PROJECT_DIR$/aplicativos/documental/datos_substandarform.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/error_load_dicom.txt" beforeDir="false" afterPath="$PROJECT_DIR$/error_load_dicom.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/error_upload_dicom.txt" beforeDir="false" afterPath="$PROJECT_DIR$/error_upload_dicom.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jason_files/estructura/dns_enfermeria.json" beforeDir="false" afterPath="$PROJECT_DIR$/jason_files/estructura/dns_enfermeria.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/libreria/dompdf/lib/fonts/log.htm" beforeDir="false" afterPath="$PROJECT_DIR$/libreria/dompdf/lib/fonts/log.htm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libreria/ejecuta/archivoinsert2025-12-08_1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/libreria/ejecuta/archivoinsert2025-12-08_1.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libreria/ejecuta/archivoinsert2025-12-12_1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/libreria/ejecuta/archivoinsert2025-12-12_1.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libreria/ejecuta/archivoinsert2025-12-15_1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/libreria/ejecuta/archivoinsert2025-12-15_1.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libreria/ejecuta/archivoinsert2025-12-16_1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/libreria/ejecuta/archivoinsert2025-12-16_1.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libreria/ejecuta/archivoinsert2025-12-17_1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/libreria/ejecuta/archivoinsert2025-12-17_1.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libreria/ejecuta/archivoinsert2025-12-19_1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/libreria/ejecuta/archivoinsert2025-12-19_1.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libreria/ejecuta/archivoinsert2025-12-22_1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/libreria/ejecuta/archivoinsert2025-12-22_1.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libreria/ejecuta/e_archivoinsert2025-12-08_1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/libreria/ejecuta/e_archivoinsert2025-12-08_1.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libreria/ejecuta/e_archivoinsert2025-12-12_1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/libreria/ejecuta/e_archivoinsert2025-12-12_1.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libreria/ejecuta/e_archivoinsert2025-12-16_1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/libreria/ejecuta/e_archivoinsert2025-12-16_1.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libreria/ejecuta/e_archivoinsert2025-12-17_1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/libreria/ejecuta/e_archivoinsert2025-12-17_1.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libreria/ejecuta/e_archivoinsert2025-12-19_1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/libreria/ejecuta/e_archivoinsert2025-12-19_1.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libreria/ejecuta/e_archivoinsert2025-12-22_1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/libreria/ejecuta/e_archivoinsert2025-12-22_1.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libreria/ejecuta/tnlprueba2025-12-08_1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/libreria/ejecuta/tnlprueba2025-12-08_1.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libreria/ejecuta/tnlprueba2025-12-12_1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/libreria/ejecuta/tnlprueba2025-12-12_1.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libreria/ejecuta/tnlprueba2025-12-15_1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/libreria/ejecuta/tnlprueba2025-12-15_1.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libreria/ejecuta/tnlprueba2025-12-16_1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/libreria/ejecuta/tnlprueba2025-12-16_1.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libreria/ejecuta/tnlprueba2025-12-17_1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/libreria/ejecuta/tnlprueba2025-12-17_1.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libreria/ejecuta/tnlprueba2025-12-19_1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/libreria/ejecuta/tnlprueba2025-12-19_1.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libreria/ejecuta/tnlprueba2025-12-22_1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/libreria/ejecuta/tnlprueba2025-12-22_1.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libreria/estructura/dns_enfermeria.php" beforeDir="false" afterPath="$PROJECT_DIR$/libreria/estructura/dns_enfermeria.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libreria/estructura/gogess_sisfield.php" beforeDir="false" afterPath="$PROJECT_DIR$/libreria/estructura/gogess_sisfield.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/log_recetas/archivoinsert2025-12-08_1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/log_recetas/archivoinsert2025-12-08_1.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/log_recetas/archivoinsert2025-12-12_1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/log_recetas/archivoinsert2025-12-12_1.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/log_recetas/archivoinsert2025-12-16_1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/log_recetas/archivoinsert2025-12-16_1.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/log_recetas/archivoinsert2025-12-19_1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/log_recetas/archivoinsert2025-12-19_1.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/log_recetas/archivoinsert2025-12-22_1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/log_recetas/archivoinsert2025-12-22_1.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/log_recetas/archivoinsert2025-12-26_1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/log_recetas/archivoinsert2025-12-26_1.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templateformsweb/maestro_standar_newimagenologiainfo/formulario.php" beforeDir="false" afterPath="$PROJECT_DIR$/templateformsweb/maestro_standar_newimagenologiainfo/formulario.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pdfformularios/generate_ctevitalbh.php" beforeDir="false" afterPath="$PROJECT_DIR$/pdfformularios/generate_ctevitalbh.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -257,6 +225,7 @@
       <workItem from="1766952564195" duration="18000" />
       <workItem from="1767020210424" duration="14609000" />
       <workItem from="1767897737998" duration="39000" />
+      <workItem from="1767968897967" duration="6784000" />
     </task>
     <servers />
   </component>

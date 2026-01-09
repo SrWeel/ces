@@ -132,21 +132,38 @@ if($_SESSION['ces1313777_sessid_inicio']) {
     $primer_nombre = isset($partes_nombre[0]) ? $partes_nombre[0] : '';
     $segundo_nombre = isset($partes_nombre[1]) ? $partes_nombre[1] : '';
 
-    // CONSULTA DE CONSTANTES VITALES
+    // Obtener atenc_enlace desde dns_atencion
+    $sql_atenc_enlace = "SELECT atenc_enlace FROM dns_atencion WHERE atenc_id = ?";
+    $rs_atenc_enlace = $DB_gogess->executec($sql_atenc_enlace, array($atenc_id));
+
+    $atenc_enlace = '';
+    if($rs_atenc_enlace && !$rs_atenc_enlace->EOF) {
+        $atenc_enlace = $rs_atenc_enlace->fields["atenc_enlace"];
+    }
+
+    // CONSULTA DE SIGNOS VITALES (CONSTANTES VITALES)
     $sql_constantes = "
         SELECT 
-            cv.*,
+            sv.signovita_id,
+            sv.signovita_frecuenciacardiaca AS pulso,
+            sv.signovita_temperaturabucal AS temperatura,
+            sv.signovita_presionarterial,
+            sv.signovita_frecuenciarespiratoria,
+            sv.signovita_saturacionoxigeno,
+            sv.signovita_peso,
+            sv.signovita_talla,
+            sv.signovita_fecharegistro,
             u.usua_nombre, 
             u.usua_apellido, 
             u.usua_codigo, 
             u.usua_codigoiniciales
-        FROM cesdb_arextension.dns_gridconstantesvitales AS cv
-        LEFT JOIN cesdb_aroriginal.app_usuario AS u 
-               ON cv.usua_id = u.usua_id
-        WHERE cv.enferm_enlace = ?
-        ORDER BY cv.gconsv_fecharegistro ASC
+        FROM dns_signosvitales AS sv
+        LEFT JOIN app_usuario AS u 
+               ON sv.usua_id = u.usua_id
+        WHERE sv.atenc_enlace = ?
+        ORDER BY sv.signovita_fecharegistro ASC
     ";
-    $rs_constantes = $DB_gogess->executec($sql_constantes, array($enferm_enlace));
+    $rs_constantes = $DB_gogess->executec($sql_constantes, array($atenc_enlace));
 
     // CONSULTA DE INGESTA
     $sql_ingesta = "
@@ -473,34 +490,31 @@ if($_SESSION['ces1313777_sessid_inicio']) {
         </table>';
 
     // SECCIÓN B: CONSTANTES VITALES - 7 DÍAS CON 3 COLUMNAS CADA UNO (AM, PM, HS)
+    // SECCIÓN B: CONSTANTES VITALES - 7 DÍAS CON 3 COLUMNAS CADA UNO (AM, PM, HS)
     $html_reporte .= '
-        <table class="tabla-datos">
+    <table class="tabla-datos">
+        <tr>
+            <td class="titulo-azul">B. CONSTANTES VITALES</td>
+        </tr>
+    </table>
+    
+    <table class="tabla-grafica-constantes">
+        <thead>
             <tr>
-                <td class="titulo-azul">B. CONSTANTES VITALES</td>
-            </tr>
-        </table>
-        
-        <table class="tabla-grafica-constantes">
-            <thead>
-                <tr>
-                    <th>PULSO</th>
-                    <th>TEMPERATURA</th>
-                    <th>HORA</th>';
+                <th rowspan="2">PULSO</th>
+                <th rowspan="2">TEMPERATURA</th>';
 
-    // Generar encabezados de días (DÍA 1 a DÍA 7) con 3 columnas cada uno
+// Generar encabezados de días (DÍA 1 a DÍA 7) con 3 columnas cada uno
     $dias_nombres = array('DÍA 1', 'DÍA 2', 'DÍA 3', 'DÍA 4', 'DÍA 5', 'DÍA 6', 'DÍA 7');
     foreach($dias_nombres as $dia_nombre) {
         $html_reporte .= '<th colspan="3">' . $dia_nombre . '</th>';
     }
 
     $html_reporte .= '
-                </tr>
-                <tr>
-                    <th></th>
-                    <th></th>
-                    <th></th>';
+            </tr>
+            <tr>';
 
-    // Generar sub-encabezados AM, PM, HS para cada día
+// Generar sub-encabezados AM, PM, HS para cada día
     for ($dia = 0; $dia < 7; $dia++) {
         $html_reporte .= '<th>AM</th>';
         $html_reporte .= '<th>PM</th>';
@@ -508,22 +522,21 @@ if($_SESSION['ces1313777_sessid_inicio']) {
     }
 
     $html_reporte .= '
-                </tr>
-            </thead>
-            <tbody>';
+            </tr>
+        </thead>
+        <tbody>';
 
-    // Estructura de datos: [dia][periodo] = array de valores
-    // periodo: 0=AM (06:00-11:59), 1=PM (12:00-19:59), 2=HS (20:00-05:59)
-    $datos_por_dia_periodo = array();
+// Estructura de datos mejorada: [dia][periodo][tipo] = array de valores
+    $datos_grid = array();
     for($d = 0; $d < 7; $d++) {
-        $datos_por_dia_periodo[$d] = array(
-            'AM' => array('temperatura' => '', 'fc' => '', 'fr' => '', 'pa' => '', 'sat_o2' => '', 'peso' => '', 'talla' => ''),
-            'PM' => array('temperatura' => '', 'fc' => '', 'fr' => '', 'pa' => '', 'sat_o2' => '', 'peso' => '', 'talla' => ''),
-            'HS' => array('temperatura' => '', 'fc' => '', 'fr' => '', 'pa' => '', 'sat_o2' => '', 'peso' => '', 'talla' => '')
+        $datos_grid[$d] = array(
+            'AM' => array('pulsos' => array(), 'temperaturas' => array(), 'fechas' => array()),
+            'PM' => array('pulsos' => array(), 'temperaturas' => array(), 'fechas' => array()),
+            'HS' => array('pulsos' => array(), 'temperaturas' => array(), 'fechas' => array())
         );
     }
 
-    // Función para determinar el período según la hora
+// Función para determinar el período según la hora
     function obtener_periodo($hora) {
         if ($hora >= 6 && $hora < 12) {
             return 'AM';
@@ -534,78 +547,162 @@ if($_SESSION['ces1313777_sessid_inicio']) {
         }
     }
 
-    // Llenar datos existentes
-    if($rs_constantes && !$rs_constantes->EOF) {
-        $fecha_inicio = null;
+// Agrupar registros por fecha (sin hora) para determinar los días
+    $registros_por_fecha = array();
 
+    if($rs_constantes && !$rs_constantes->EOF) {
         while (!$rs_constantes->EOF) {
-            $fecha_registro = $rs_constantes->fields["gconsv_fecharegistro"];
+            $fecha_registro = $rs_constantes->fields["signovita_fecharegistro"];
             if($fecha_registro && $fecha_registro != '0000-00-00 00:00:00') {
                 $dt = new DateTime($fecha_registro);
+                $fecha_solo = $dt->format('Y-m-d');
 
-                // Establecer fecha de inicio si es el primer registro
-                if($fecha_inicio === null) {
-                    $fecha_inicio = clone $dt;
-                    $fecha_inicio->setTime(0, 0, 0);
+                if(!isset($registros_por_fecha[$fecha_solo])) {
+                    $registros_por_fecha[$fecha_solo] = array();
                 }
 
-                // Calcular días desde el inicio
-                $fecha_actual_sin_hora = clone $dt;
-                $fecha_actual_sin_hora->setTime(0, 0, 0);
-                $diff = $fecha_inicio->diff($fecha_actual_sin_hora);
-                $dia = $diff->days;
-
-                // Solo procesar si está dentro de los 7 días
-                if($dia >= 0 && $dia < 7) {
-                    $hora = (int)$dt->format('H');
-                    $periodo = obtener_periodo($hora);
-
-                    // Si ya hay datos en ese período, no sobreescribir (mantener el primero)
-                    if(empty($datos_por_dia_periodo[$dia][$periodo]['temperatura'])) {
-                        $datos_por_dia_periodo[$dia][$periodo]['temperatura'] = $rs_constantes->fields["gconsv_temperatura"] ?? '';
-                        $datos_por_dia_periodo[$dia][$periodo]['fc'] = $rs_constantes->fields["gconsv_frecuenciacardiaca"] ?? '';
-                        $datos_por_dia_periodo[$dia][$periodo]['fr'] = $rs_constantes->fields["gconsv_frecuenciarespiratoria"] ?? '';
-                        $datos_por_dia_periodo[$dia][$periodo]['pa'] = $rs_constantes->fields["gconsv_presionarterial"] ?? '';
-                        $datos_por_dia_periodo[$dia][$periodo]['sat_o2'] = $rs_constantes->fields["gconsv_saturacionoxigeno"] ?? '';
-                        $datos_por_dia_periodo[$dia][$periodo]['peso'] = $rs_constantes->fields["gconsv_peso"] ?? '';
-                        $datos_por_dia_periodo[$dia][$periodo]['talla'] = $rs_constantes->fields["gconsv_talla"] ?? '';
-                    }
-                }
+                $registros_por_fecha[$fecha_solo][] = array(
+                    'pulso' => $rs_constantes->fields["pulso"] ?? '',
+                    'temperatura' => $rs_constantes->fields["temperatura"] ?? '',
+                    'fecha_completa' => date("d/m/Y H:i", strtotime($fecha_registro)),
+                    'hora' => (int)$dt->format('H'),
+                    'datetime' => $dt
+                );
             }
             $rs_constantes->MoveNext();
         }
     }
 
-    // Definir valores para columnas de PULSO y TEMPERATURA
-    $valores_pulso = array(140, 130, 120, 110, 100, 90, 80, 70, 60, 50, 40);
-    $valores_temperatura = array('', '', 42, 41, 40, 39, 38, 37, 36, 35, '');
+// Ordenar fechas de más antigua a más reciente
+    ksort($registros_por_fecha);
 
-    // Generar filas (11 filas para cubrir todos los valores)
-    for($fila = 0; $fila < 11; $fila++) {
+// Asignar días (0-6) según antigüedad
+    $dia_actual = 0;
+    foreach($registros_por_fecha as $fecha => $registros) {
+        if($dia_actual >= 7) break;
+
+        foreach($registros as $registro) {
+            $periodo = obtener_periodo($registro['hora']);
+
+            // Guardar TODOS los pulsos (con decimales)
+            if(!empty($registro['pulso']) && is_numeric($registro['pulso'])) {
+                $valor_pulso = floatval($registro['pulso']);
+                $datos_grid[$dia_actual][$periodo]['pulsos'][] = $valor_pulso;
+            }
+
+            // Guardar TODAS las temperaturas (con decimales)
+            if(!empty($registro['temperatura']) && is_numeric($registro['temperatura'])) {
+                $valor_temp = floatval($registro['temperatura']);
+                $datos_grid[$dia_actual][$periodo]['temperaturas'][] = $valor_temp;
+            }
+
+            // Guardar TODAS las fechas/horas
+            $datos_grid[$dia_actual][$periodo]['fechas'][] = $registro['fecha_completa'];
+        }
+
+        $dia_actual++;
+    }
+
+// Crear un índice invertido: valor -> lista de [dia, periodo]
+    $indice_pulsos = array();
+    $indice_temperaturas = array();
+
+    for($d = 0; $d < 7; $d++) {
+        foreach(array('AM', 'PM', 'HS') as $periodo) {
+            // Indexar pulsos
+            foreach($datos_grid[$d][$periodo]['pulsos'] as $pulso) {
+                if(!isset($indice_pulsos[$pulso])) {
+                    $indice_pulsos[$pulso] = array();
+                }
+                $indice_pulsos[$pulso][] = array('dia' => $d, 'periodo' => $periodo);
+            }
+
+            // Indexar temperaturas
+            foreach($datos_grid[$d][$periodo]['temperaturas'] as $temp) {
+                if(!isset($indice_temperaturas[$temp])) {
+                    $indice_temperaturas[$temp] = array();
+                }
+                $indice_temperaturas[$temp][] = array('dia' => $d, 'periodo' => $periodo);
+            }
+        }
+    }
+
+// Definir valores para columnas de PULSO y TEMPERATURA
+    $valores_pulso = array(140, 130, 120, 110, 100, 90, 80, 70, 60, 50, 40);
+    $valores_temperatura = array(42, 41, 40, 39, 38, 37, 36, 35);
+
+// Encontrar el rango máximo de filas necesario
+    $max_filas = max(count($valores_pulso), count($valores_temperatura));
+
+// Generar filas
+    for($fila = 0; $fila < $max_filas; $fila++) {
         $html_reporte .= '<tr>';
 
         // Columna PULSO
-        $html_reporte .= '<td class="celda-parametro">' . $valores_pulso[$fila] . '</td>';
+        $valor_pulso_fila = isset($valores_pulso[$fila]) ? $valores_pulso[$fila] : '';
+        $html_reporte .= '<td class="celda-parametro">' . $valor_pulso_fila . '</td>';
 
         // Columna TEMPERATURA
-        $html_reporte .= '<td class="celda-parametro">' . $valores_temperatura[$fila] . '</td>';
+        $valor_temp_fila = isset($valores_temperatura[$fila]) ? $valores_temperatura[$fila] : '';
+        $html_reporte .= '<td class="celda-parametro">' . $valor_temp_fila . '</td>';
 
-        // Columna HORA (vacía)
-        $html_reporte .= '<td class="celda-parametro"></td>';
-
-        // Para cada día y cada período (AM, PM, HS) - celdas vacías para marcar valores
+        // Para cada día y cada período (AM, PM, HS)
         for($d = 0; $d < 7; $d++) {
             foreach(array('AM', 'PM', 'HS') as $periodo) {
-                $html_reporte .= '<td class="celda-valor"></td>';
+                $contenido_celda = '';
+
+                // Verificar si hay pulsos que coincidan con el valor de esta fila
+                if(!empty($valor_pulso_fila)) {
+                    // Buscar pulsos cercanos al valor de la fila (±5 unidades de tolerancia)
+                    foreach($datos_grid[$d][$periodo]['pulsos'] as $pulso) {
+                        if($pulso >= $valor_pulso_fila - 5 && $pulso <= $valor_pulso_fila + 5) {
+                            if(!empty($contenido_celda)) {
+                                $contenido_celda .= '<br>';
+                            }
+                            $contenido_celda .= number_format($pulso, 1, '.', '');
+                        }
+                    }
+                }
+
+                // Verificar si hay temperaturas que coincidan con el valor de esta fila
+                if(!empty($valor_temp_fila)) {
+                    // Buscar temperaturas cercanas al valor de la fila (±0.5 grados de tolerancia)
+                    foreach($datos_grid[$d][$periodo]['temperaturas'] as $temp) {
+                        if($temp >= $valor_temp_fila - 0.5 && $temp <= $valor_temp_fila + 0.5) {
+                            if(!empty($contenido_celda)) {
+                                $contenido_celda .= '<br>';
+                            }
+                            $contenido_celda .= number_format($temp, 1, '.', '');
+                        }
+                    }
+                }
+
+                $html_reporte .= '<td class="celda-valor">' . $contenido_celda . '</td>';
             }
         }
 
         $html_reporte .= '</tr>';
     }
 
+// FILA ADICIONAL PARA MOSTRAR FECHAS/HORAS
+    $html_reporte .= '<tr>';
+    $html_reporte .= '<td class="celda-parametro" colspan="2" style="background-color: #d1e7dd; font-weight: bold;">FECHA/HORA</td>';
+
+    for($d = 0; $d < 7; $d++) {
+        foreach(array('AM', 'PM', 'HS') as $periodo) {
+            $fechas_html = '';
+            if(!empty($datos_grid[$d][$periodo]['fechas'])) {
+                $fechas_html = implode('<br>', $datos_grid[$d][$periodo]['fechas']);
+            }
+            $html_reporte .= '<td class="celda-valor" style="font-size: 6px;">' . $fechas_html . '</td>';
+        }
+    }
+
+    $html_reporte .= '</tr>';
+
     $html_reporte .= '
-            </tbody>
-        </table>';
+        </tbody>
+    </table>';
 
     // SECCIÓN D: BALANCE HÍDRICO CON TÍTULOS VERTICALES ROTADOS 90°
     $html_reporte .= '

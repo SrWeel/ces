@@ -1174,61 +1174,61 @@ test\\_%|schema||&apos;&apos;||UPDATE|G</Grants>
     <schema id="324" parent="1" name="cesdb_arcombos">
       <AutoIntrospectionLevel>3</AutoIntrospectionLevel>
       <LastIntrospectionLevel>3</LastIntrospectionLevel>
-      <LastIntrospectionLocalTimestamp>2025-12-29.15:51:50</LastIntrospectionLocalTimestamp>
+      <LastIntrospectionLocalTimestamp>2026-01-09.14:53:52</LastIntrospectionLocalTimestamp>
       <CollationName>utf8mb4_general_ci</CollationName>
     </schema>
     <schema id="325" parent="1" name="cesdb_arextension">
       <AutoIntrospectionLevel>1</AutoIntrospectionLevel>
       <LastIntrospectionLevel>1</LastIntrospectionLevel>
-      <LastIntrospectionLocalTimestamp>2025-12-29.15:50:44</LastIntrospectionLocalTimestamp>
+      <LastIntrospectionLocalTimestamp>2026-01-09.14:53:25</LastIntrospectionLocalTimestamp>
       <CollationName>utf8mb4_general_ci</CollationName>
     </schema>
     <schema id="326" parent="1" name="cesdb_arlogs">
       <AutoIntrospectionLevel>3</AutoIntrospectionLevel>
       <LastIntrospectionLevel>3</LastIntrospectionLevel>
-      <LastIntrospectionLocalTimestamp>2025-12-29.15:51:50</LastIntrospectionLocalTimestamp>
+      <LastIntrospectionLocalTimestamp>2026-01-09.14:53:52</LastIntrospectionLocalTimestamp>
       <CollationName>utf8mb4_general_ci</CollationName>
     </schema>
     <schema id="327" parent="1" name="cesdb_aroriginal">
       <AutoIntrospectionLevel>1</AutoIntrospectionLevel>
       <LastIntrospectionLevel>1</LastIntrospectionLevel>
-      <LastIntrospectionLocalTimestamp>2025-12-29.15:50:44</LastIntrospectionLocalTimestamp>
+      <LastIntrospectionLocalTimestamp>2026-01-09.14:53:25</LastIntrospectionLocalTimestamp>
       <CollationName>utf8mb4_general_ci</CollationName>
     </schema>
     <schema id="328" parent="1" name="cesdb_arreportes">
       <AutoIntrospectionLevel>3</AutoIntrospectionLevel>
       <LastIntrospectionLevel>3</LastIntrospectionLevel>
-      <LastIntrospectionLocalTimestamp>2025-12-29.15:51:50</LastIntrospectionLocalTimestamp>
+      <LastIntrospectionLocalTimestamp>2026-01-09.14:53:52</LastIntrospectionLocalTimestamp>
       <CollationName>utf8mb4_general_ci</CollationName>
     </schema>
     <schema id="329" parent="1" name="information_schema">
       <AutoIntrospectionLevel>2</AutoIntrospectionLevel>
       <LastIntrospectionLevel>2</LastIntrospectionLevel>
-      <LastIntrospectionLocalTimestamp>2025-12-29.15:51:50</LastIntrospectionLocalTimestamp>
+      <LastIntrospectionLocalTimestamp>2026-01-09.14:53:52</LastIntrospectionLocalTimestamp>
       <CollationName>utf8_general_ci</CollationName>
     </schema>
     <schema id="330" parent="1" name="mysql">
       <AutoIntrospectionLevel>3</AutoIntrospectionLevel>
       <LastIntrospectionLevel>3</LastIntrospectionLevel>
-      <LastIntrospectionLocalTimestamp>2025-12-29.15:51:50</LastIntrospectionLocalTimestamp>
+      <LastIntrospectionLocalTimestamp>2026-01-09.14:53:52</LastIntrospectionLocalTimestamp>
       <CollationName>utf8mb4_general_ci</CollationName>
     </schema>
     <schema id="331" parent="1" name="performance_schema">
       <AutoIntrospectionLevel>3</AutoIntrospectionLevel>
       <LastIntrospectionLevel>3</LastIntrospectionLevel>
-      <LastIntrospectionLocalTimestamp>2025-12-29.15:51:50</LastIntrospectionLocalTimestamp>
+      <LastIntrospectionLocalTimestamp>2026-01-09.14:53:52</LastIntrospectionLocalTimestamp>
       <CollationName>utf8_general_ci</CollationName>
     </schema>
     <schema id="332" parent="1" name="phpmyadmin">
       <AutoIntrospectionLevel>3</AutoIntrospectionLevel>
       <LastIntrospectionLevel>3</LastIntrospectionLevel>
-      <LastIntrospectionLocalTimestamp>2025-12-29.15:51:50</LastIntrospectionLocalTimestamp>
+      <LastIntrospectionLocalTimestamp>2026-01-09.14:53:52</LastIntrospectionLocalTimestamp>
       <CollationName>utf8_bin</CollationName>
     </schema>
     <schema id="333" parent="1" name="test">
       <AutoIntrospectionLevel>3</AutoIntrospectionLevel>
       <LastIntrospectionLevel>3</LastIntrospectionLevel>
-      <LastIntrospectionLocalTimestamp>2025-12-29.15:51:50</LastIntrospectionLocalTimestamp>
+      <LastIntrospectionLocalTimestamp>2026-01-09.14:53:52</LastIntrospectionLocalTimestamp>
       <CollationName>latin1_swedish_ci</CollationName>
     </schema>
     <user id="334" parent="1" name="pma">
@@ -1984,7 +1984,7 @@ test\\_%|schema||&apos;&apos;||UPDATE|G</Grants>
       <DetailsLevel>1</DetailsLevel>
     </table>
     <table id="534" parent="325" name="dns_grideliminacion">
-      <DetailsLevel>3</DetailsLevel>
+      <DetailsLevel>1</DetailsLevel>
       <Engine>InnoDB</Engine>
       <CollationName>latin1_swedish_ci</CollationName>
     </table>
@@ -2007,7 +2007,7 @@ test\\_%|schema||&apos;&apos;||UPDATE|G</Grants>
       <DetailsLevel>1</DetailsLevel>
     </table>
     <table id="541" parent="325" name="dns_gridingesta">
-      <DetailsLevel>3</DetailsLevel>
+      <DetailsLevel>1</DetailsLevel>
       <Engine>InnoDB</Engine>
       <CollationName>latin1_swedish_ci</CollationName>
     </table>
@@ -3349,7 +3349,7 @@ test\\_%|schema||&apos;&apos;||UPDATE|G</Grants>
       <CollationName>utf8_general_ci</CollationName>
     </table>
     <table id="884" parent="327" name="dns_atencion">
-      <DetailsLevel>1</DetailsLevel>
+      <DetailsLevel>3</DetailsLevel>
       <Engine>InnoDB</Engine>
       <CollationName>latin1_swedish_ci</CollationName>
     </table>
@@ -4404,7 +4404,7 @@ test\\_%|schema||&apos;&apos;||UPDATE|G</Grants>
       <CollationName>utf8_general_ci</CollationName>
     </table>
     <table id="1095" parent="327" name="dns_signosvitales">
-      <DetailsLevel>1</DetailsLevel>
+      <DetailsLevel>3</DetailsLevel>
       <Engine>InnoDB</Engine>
       <CollationName>latin1_swedish_ci</CollationName>
     </table>
@@ -32069,7 +32069,7 @@ genr_mes</ColNames>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
     <column id="8026" parent="884" name="atenc_id">
-      <AutoIncrement>274</AutoIncrement>
+      <AutoIncrement>322</AutoIncrement>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StoredType>int(11)|0s</StoredType>
@@ -56954,7 +56954,7 @@ campoodo_id</ColNames>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
     <column id="13074" parent="1095" name="signovita_id">
-      <AutoIncrement>297</AutoIncrement>
+      <AutoIncrement>349</AutoIncrement>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StoredType>int(11)|0s</StoredType>
