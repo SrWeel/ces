@@ -1,0 +1,1 @@
+update cesdb_arextension.dns_newemergenciadiagnosticoanamnesis set diagn_cie='A090',diagn_descripcion='Otras gastroenteritis y colitis de origen infeccioso ',diagn_tipo='DEFINITIVO',diagn_alta='1' where diagn_id='241'

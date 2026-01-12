@@ -144,36 +144,41 @@ if($_SESSION['ces1313777_sessid_inicio']) {
 
     // CONSULTA DE ACTIVIDADES GENERALES
     $sql_actividades = "
-        SELECT 
-            ag.actemfgen_id, 
-            ag.actemfgen_observacion,
-            ag.actemfgen_fecharegistro,
-            ag.enferm_enlace,
-            
-            -- Datos de la actividad
-            a.activi_nombre,
-            a.activi_tipo,
-            
-            -- Datos del usuario responsable
-            u.usua_nombre, 
-            u.usua_apellido, 
-            u.usua_codigo, 
-            u.usua_codigoiniciales
-            
-        FROM cesdb_aroriginal.dns_actividadesgenerales AS ag
+    SELECT 
+        ag.actemfgen_id, 
+        ag.actemfgen_observacion,
+        ag.actemfgen_fecharegistro,
+        ag.enferm_enlace,
         
-        LEFT JOIN cesdb_aroriginal.dns_actividades AS a 
-               ON ag.activigen_id = a.activi_id
-               
-        LEFT JOIN cesdb_aroriginal.app_usuario AS u 
-               ON ag.usua_id = u.usua_id
-               
-        WHERE ag.enferm_enlace = ?
+        -- Datos de la actividad
+        a.activi_nombre,
+        a.activi_tipo,
         
-        ORDER BY ag.actemfgen_fecharegistro DESC, a.activi_nombre ASC
-    ";
+        -- Datos del usuario responsable
+        u.usua_nombre, 
+        u.usua_apellido, 
+        u.usua_codigo, 
+        u.usua_codigoiniciales
+        
+    FROM cesdb_aroriginal.dns_actividadesgenerales AS ag
+    
+    -- JOIN con dns_enfermeria para filtrar por enferm_id
+    INNER JOIN cesdb_aroriginal.dns_enfermeria AS e
+           ON ag.enferm_enlace = e.enferm_enlace
+    
+    LEFT JOIN cesdb_aroriginal.dns_actividades AS a 
+           ON ag.activigen_id = a.activi_id
+           
+    LEFT JOIN cesdb_aroriginal.app_usuario AS u 
+           ON ag.usua_id = u.usua_id
+           
+    WHERE e.enferm_id = ?
+    
+    ORDER BY ag.actemfgen_fecharegistro DESC, a.activi_nombre ASC
+";
 
-    $rs_actividades = $DB_gogess->executec($sql_actividades, array($enferm_enlace));
+    $rs_actividades = $DB_gogess->executec($sql_actividades, array($enferm_id));
+
 
     // Construir HTML del reporte
     $html_reporte = '

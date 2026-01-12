@@ -1,0 +1,15 @@
+update cesdb_arextension.dns_newtraumatologiagridexamenfisico set gexamfis_observacion='NEGATIVO, FUERZA MUSCULAR Y SENSIBILIDAD ADECUADA ' where gexamfis_id=3312
+update cesdb_arextension.dns_newtraumatologiagridorgano set gorgano_observacion='TOBILLO Y TALON DERECHO POSQUIRURGICO ' where gorgano_id=1334
+update cesdb_arextension.dns_newtraumatologiagridexamenfisico set gexamfis_observacion='YESO CERRADO DEFICIENTE AL RETIRO TOBILLO EDEMA DE TEJIDO BLANDO + A NIVEL DE TENDON CICATRIZ EN BUENA CONDICION, LMITACION FUNCIONAL PRESENTE, MOVILIDAD DISTAL Y LLENADO CAPILAR ADECUADO. 
+' where gexamfis_id=3340
+update cesdb_arextension.dns_newtraumatologiagridexamenfisico set gexamfis_observacion='YESO CERRADO DEFICIENTE AL RETIRO TOBILLO EDEMA DE TEJIDO BLANDO + A NIVEL DE TENDON CICATRIZ EN BUENA CONDICION, LMITACION FUNCIONAL PRESENTE, MOVILIDAD DISTAL Y LLENADO CAPILAR ADECUADO. 
+' where gexamfis_id=3340
+update cesdb_arextension.dns_newtraumatologiagridorgano set gorgano_observacion='DOLOR DE RODILLA IZQUERDA' where gorgano_id=1344
+update cesdb_arextension.dns_newtraumatologiagridexamenfisico set gexamfis_observacion='MIEMBRO INFERIOR IZQUERDO DOLOR A LA DIGITOPRESION EN CARA ANTERIOR, SIGNO DE CHOQUE POSITIVO, EDEMA  +++, LIMITACION FUNCIONAL , BOSTEZO INTERNO IMPRESIONA POSITIVO CAJON ANTERIOR Y STEINMANN DUDOSO FUERZA MUSCULAR Y SENSIBILIDAD NO VALORADA POR DOLOR, PULSOS DISTALES PRESENTES. 
+' where gexamfis_id=3365
+update cesdb_arextension.dns_newtraumatologiagridexamenfisico set gexamfis_observacion='EGION CERVICAL MUSCULATURA TENSA CON LIMITACION A LOS MOVIMIENTOS DE ROTACION COLUMNA LUMBAR PRUEBA DE INCLINACION NEGATIVA, SENSIBILIDAD NORMAL, FUERZA MUSCULAR4/5, REFLEJOS NORMALES ' where gexamfis_id=3377
+update cesdb_arextension.dns_newtraumatologiagridorgano set gorgano_observacion='DOLRO CERVICAL ' where gorgano_id=1374
+update cesdb_arextension.dns_newtraumatologiagridexamenfisico set gexamfis_observacion='REGION CERVICAL CON MUSCULATURA TENSA´LIMITACION A LOS MOVIMIENTOS DE ROTACION, FUERZA MUSCULAR Y SENSIBILIDAD CONSERVADA, PULSOS DISTALES PRESENTES ' where gexamfis_id=3437
+update cesdb_arextension.dns_antecedentespersonalesnewconext set antep_descripcion='HTA  MICARDIS PLUS Y ASA A EXPENZAS MUIF IZQ.
+FGX LUMBAR CON ESTASBILIZANOS CON BARRAS  L4 L5' where antep_id=113
+update cesdb_arextension.dns_antecedentespersonalesnewconext set antep_descripcion='GASTRITIS HACE 3 AÑOS ' where antep_id=114

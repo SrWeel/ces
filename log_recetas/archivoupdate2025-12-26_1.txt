@@ -1,1 +1,2 @@
 update cesdb_arextension.dns_gridcontrolpreoperatorio set gconpre_preparacion='4',gconpre_servhospitalizacion='1',gconpre_centralquirurgica='0',gconpre_observacion='LE HACIA FRIO' where gconpre_id='14'
+update dns_gridenfermeria set genfermeria_fecha='2025-12-26',genfermeria_hora='13 : 25',genfermeria_anotaciones='PACIENTE MASCULINO DE 35 AÑOS DE EDAD SE ENCUENTRA ESTABLE CONSCIENTE Y ORIENTADO ' where genfermeria_id='10'

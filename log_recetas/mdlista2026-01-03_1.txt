@@ -1,0 +1,44 @@
+update cesdb_arextension.dns_antecedentespersonalesnewconext set antep_descripcion='' where antep_id=103
+update cesdb_arextension.dns_antecedentespersonalesnewconext set antep_descripcion='' where antep_id=103
+update cesdb_arextension.dns_antecedentespersonalesnewconext set antep_descripcion='HIPERTENSIÓN ARTERIAL DG HACE 10 AÑOS EN TTO CON EXFORGE (AMLODIPINO/VALSARTAN 5/160MG) QD, ENFERMEDAD VENOSA CRÓNICA DG HACE 1 AÑO EN TTO CON DAFLON 1000MG QD, CÁNCER DE MAMA ETAPA INICIAL DG HACE 2 MESES EN TTO CON QUIMIOTERAPIA ORAL, TRASTORNO DE ANSIEDAD Y SUEÑO DESDE HACE 15 DIAS EN TTO AMITRIPTILINA 12.25MG QD ' where antep_id=103
+update cesdb_arextension.dns_antecedentespersonalesnewconext set antep_descripcion='HIPERTENSIÓN ARTERIAL DG HACE 10 AÑOS EN TTO CON EXFORGE (AMLODIPINO/VALSARTAN 5/160MG) QD, ENFERMEDAD VENOSA CRÓNICA DG HACE 1 AÑO EN TTO CON DAFLON 1000MG QD, CÁNCER DE MAMA ETAPA INICIAL DG HACE 2 MESES EN TTO CON QUIMIOTERAPIA ORAL, TRASTORNO DE ANSIEDAD Y SUEÑO DESDE HACE 15 DIAS EN TTO AMITRIPTILINA 12.25MG QD 
+' where antep_id=103
+update cesdb_arextension.dns_antecedentespersonalesnewconext set antep_descripcion='HIPERTENSIÓN ARTERIAL DG HACE 10 AÑOS EN TTO CON EXFORGE (AMLODIPINO/VALSARTAN 5/160MG) QD, ENFERMEDAD VENOSA CRÓNICA DG HACE 1 AÑO EN TTO CON DAFLON 1000MG QD, CÁNCER DE MAMA ETAPA INICIAL DG HACE 2 MESES EN TTO CON QUIMIOTERAPIA ORAL, TRASTORNO DE ANSIEDAD Y SUEÑO DESDE HACE 15 DIAS EN TTO AMITRIPTILINA 12.25MG QD 
+' where antep_id=103
+update cesdb_arextension.dns_antecedentespersonalesnewconext set antep_descripcion='HIPERTENSIÓN ARTERIAL DG HACE 10 AÑOS EN TTO CON EXFORGE (AMLODIPINO/VALSARTAN 5/160MG) QD, ENFERMEDAD VENOSA CRÓNICA DG HACE 1 AÑO EN TTO CON DAFLON 1000MG QD, CÁNCER DE MAMA ETAPA INICIAL DG HACE 2 MESES EN TTO CON QUIMIOTERAPIA ORAL, TRASTORNO DE ANSIEDAD Y SUEÑO DESDE HACE 15 DIAS EN TTO AMITRIPTILINA 12.25MG QD 
+AQX HISTERECTOMÍA TOTAL HACE 28 AÑOS, CRANEOTOMÍA DESCOMPRESIVA HACE 15 AÑOS, REDUCCION + OTS CON PLACA POR FRACTURA DE MUÑECA DERECHA HACE 12 AÑOS, CIRUGIA CORRECTIVA DE CATARATA OJO DERECHO 2018 IZQUIERDO 2019, RESECCIÓN DE NODULOS MAMARIOS HACE 2 MESES ' where antep_id=103
+update cesdb_arextension.dns_newconsultaexternagridorgano set gorgano_observacion='HERIDA EN TOBILLO Y TALON IZQUIERDO ' where gorgano_id=514
+update cesdb_arextension.dns_newconsultaexternagridexamenfisico set gexamfis_observacion='' where gexamfis_id=1290
+update cesdb_arextension.dns_newconsultaexternagridexamenfisico set gexamfis_observacion='' where gexamfis_id=1290
+update cesdb_arextension.dns_newconsultaexternagridexamenfisico set gexamfis_observacion=' INGLE IZQUIERDA HERIDA EN PROCESO DE CICATRIZACIÓN, TOBILLO IZQUIERDO CARA TARSAL  PRESENCIA DE HERIDA CUBIERTA CON PARCHE HIDROCOLOIDE DE ALGINATO, EDEMA DE TEJIDO BLANDO ++ CON ERITEMA LOCAL, EXUDADO EN TALÓN CON LEVANTAMIENTO DE TEJIDO EPIDERMICO DE FORMA PARCIAL, CON SANGRADO ESCASO BUEN LLENADO CAPILAR PULSOS DISTALES PRESENTES' where gexamfis_id=1290
+update cesdb_arextension.dns_antecedentespersonalesnewconext set antep_descripcion='ALERGIAS VITAMINA C + COMPLEJO B ' where antep_id=104
+update cesdb_arextension.dns_antecedentespersonalesnewconext set antep_descripcion='ALERGIAS VITAMINA C + COMPLEJO B ' where antep_id=104
+update cesdb_arextension.dns_antecedentespersonalesnewconext set antep_descripcion='HTA DE LARGA DATA EN TTO CON CLORTALIDONA 25MG Y LOSARTAN 50MG 
+' where antep_id=105
+update cesdb_arextension.dns_antecedentespersonalesnewconext set antep_descripcion='HIPOTIROIDISMO DG HACE 8 AÑOS EN TTO CON LEVOTIROXINA 88MCG ' where antep_id=106
+update cesdb_arextension.dns_antecedentespersonalesnewconext set antep_descripcion='ALERGIAS VITAMINA C + COMPLEJO B                                                            AQX TIROIDECTOMIA TOTAL HACE 8 AÑOS ' where antep_id=104
+update cesdb_arextension.dns_antecedentespersonalesnewconext set antep_descripcion='HTA DE LARGA DATA EN TTO CON CLORTALIDONA 25MG Y LOSARTAN 50MG 
+' where antep_id=105
+update cesdb_arextension.dns_newconsultaexternagridorgano set gorgano_observacion='TOS, FARINGODINIA ' where gorgano_id=522
+update cesdb_arextension.dns_newconsultaexternagridexamenfisico set gexamfis_observacion='PACIENTE CONSCIENTE ORIENTADA AFEBRIL CAE PERMEABLE MT INTEGRA OIDOS BILATERAL, NARIZ ERITEMA MUCOSA NASAL CON PRESENCIA DE SECRECIONES NASALES, OROFARINGE ERITEMATOSA AMIGDALAS GRADO II NO PUSTULOSAS NO ADENOPATIAS CERVICALES, ' where gexamfis_id=1310
+update cesdb_arextension.dns_newconsultaexternagridexamenfisico set gexamfis_observacion='PULMONES MV DISCRETAMENTE DISMINUIDOS CON PRESENCIA DE RONCUS ESTERTORES EN AMBOS AMPOS A PREDOMINIO DE LADO IZQUIERDO. ' where gexamfis_id=1303
+update cesdb_arextension.dns_antecedentespersonalesnewconext set antep_descripcion='HTA DG HACE 16 AÑOS EN TTO CON BLOPREX 16MG/12.5MG 
+DISLIPEMIA MIXTA EN TTO CON ROSUVASTATINA 20MG QD ' where antep_id=107
+update cesdb_arextension.dns_antecedentespersonalesnewconext set antep_descripcion='HIPOTIROIDISMO DG HACE 18 AÑOS EN TTO LEVOTIROXINA 88MCG' where antep_id=108
+update cesdb_arextension.dns_antecedentespersonalesnewconext set antep_descripcion='HIPOTIROIDISMO DG HACE 18 AÑOS EN TTO LEVOTIROXINA 88MCG' where antep_id=108
+update cesdb_arextension.dns_antecedentespersonalesnewconext set antep_descripcion='ALERGIA AMBROXOL                                                                                                                  AQX CESAREA HACE 36 AÑOS, RESECCION DE QUISTE OVARICO DERECHO HACE 37 AÑOS' where antep_id=109
+update cesdb_arextension.dns_newconsultaexternagridorgano set gorgano_observacion='ODINOFAGIA, OBSTRUCCION NASAL ' where gorgano_id=532
+update cesdb_arextension.dns_newconsultaexternagridexamenfisico set gexamfis_observacion='PACIENTE CONSCIENTE ORIENTADA AFEBRIL OIDOS CAE PERMEABLE MT IMPRESIONA OPACA, NARIZ CON ERITEMA DE MUCOSA NASAL, OROFARINGE ERITEMATOSA AMIGDALAS GRADO II-III CRIPTICAS NO PUSTULOSAS, NO ADENOPATIAS CERVICALES' where gexamfis_id=1335
+update cesdb_arextension.dns_newconsultaexternagridexamenfisico set gexamfis_observacion='PULMONES MV DISMINUIDO NO RUIDOS SOBREAÑADIDOS' where gexamfis_id=1328
+update cesdb_arextension.dns_antecedentespersonalesnewconext set antep_descripcion='APP MIGRAÑA DG HACE 12 AÑOS EN TTO CON X RAY DOL / NAPROXENO CAFEINA PARACETAMOL) 
+AQX APENDICECTOMIA ABIERTA HACE 15 AÑOS ' where antep_id=110
+update cesdb_arextension.dns_newconsultaexternagridexamenfisico set gexamfis_observacion='' where gexamfis_id=1351
+update cesdb_arextension.dns_newconsultaexternagridexamenfisico set gexamfis_observacion='' where gexamfis_id=1351
+update cesdb_arextension.dns_newconsultaexternagridexamenfisico set gexamfis_observacion='PACIENTE CONSCIENTE ORIENTADA AFEBRIL CABEZA DOLOROSO A LA DIGITOPRESION EN HEMICRANEO IZQUIERDO CADENAS CERVICALES TENSAS ARNOLDS POSITIVO, PUPILAS HIPEREACTIVAS A LA LUZ NO ADENOPATIAS CERVICALES. ' where gexamfis_id=1351
+update cesdb_arextension.dns_antecedentespersonalesnewconext set antep_descripcion='' where antep_id=13
+update cesdb_arextension.dns_antecedentespersonalesnewconext set antep_descripcion='' where antep_id=13
+update cesdb_arextension.dns_antecedentespersonalesnewconext set antep_descripcion='' where antep_id=12
+update cesdb_arextension.dns_antecedentespersonalesnewconext set antep_descripcion='' where antep_id=11
+update cesdb_arextension.dns_newconsultaexternagridorgano set gorgano_observacion='CONGESTION OBSTRUCCION NASAL, TOS ' where gorgano_id=552
+update cesdb_arextension.dns_newconsultaexternagridexamenfisico set gexamfis_observacion='PACIENTE CONSCIENTE ORIENTADA EN 3 ESFERAS AFEBRIL OIDO ERITEMA EN MEMBRANA TIMPANICA, NO DOLOR FACIAL, NARIZ CON FOSAS NASALES SEMIPERMEABLES CON PRESENCIA DE SECRECIONES AMARILLENTAS HIPERTROFIA DE CORNETES, OROFARINGE DISCRETAMENTE ERITEMATOSA AMIGDALAS GRADO I' where gexamfis_id=1383
+update cesdb_arextension.dns_newconsultaexternagridexamenfisico set gexamfis_observacion='PULMONES MV DISCRETAMENTE DISMINUIDO EN BASES NO RUIDOS SOBREAÑADIDOS' where gexamfis_id=1378

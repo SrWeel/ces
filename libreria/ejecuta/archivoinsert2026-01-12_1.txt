@@ -1,0 +1,2 @@
+1-->insert into dns_enfermeria (atenc_id,centro_id,clie_id,usua_id,enferm_archivo,protoop_tblprincipal,enferm_fecharegistro,protoop_idenlace,enferm_enlace) values (1,1,1,1,'','','2026-01-12 10:24:23','','1011212121212120260112102423139')-->2026-01-12 10:26:31
+1-->insert into dns_enfermeria (atenc_id,centro_id,clie_id,usua_id,enferm_archivo,protoop_tblprincipal,enferm_fecharegistro,protoop_idenlace,enferm_enlace) values (1,1,1,1,'','','2026-01-12 10:40:03','','1011212121212120260112104003369')-->2026-01-12 10:40:42

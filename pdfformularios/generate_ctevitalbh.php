@@ -143,28 +143,31 @@ if($_SESSION['ces1313777_sessid_inicio']) {
 
     // CONSULTA DE SIGNOS VITALES (CONSTANTES VITALES)
     $sql_constantes = "
-        SELECT 
-            sv.signovita_id,
-            sv.signovita_frecuenciacardiaca AS pulso,
-            sv.signovita_temperaturabucal AS temperatura,
-            sv.signovita_presionarterial,
-            sv.signovita_frecuenciarespiratoria,
-            sv.signovita_saturacionoxigeno,
-            sv.signovita_peso,
-            sv.signovita_talla,
-            sv.signovita_fecharegistro,
-            u.usua_nombre, 
-            u.usua_apellido, 
-            u.usua_codigo, 
-            u.usua_codigoiniciales
-        FROM dns_signosvitales AS sv
-        LEFT JOIN app_usuario AS u 
-               ON sv.usua_id = u.usua_id
-        WHERE sv.atenc_enlace = ?
-        ORDER BY sv.signovita_fecharegistro ASC
-    ";
-    $rs_constantes = $DB_gogess->executec($sql_constantes, array($atenc_enlace));
-
+    SELECT 
+        sv.signovita_id,
+        sv.signovita_frecuenciacardiaca AS pulso,
+        sv.signovita_temperaturabucal AS temperatura,
+        sv.signovita_presionarterial,
+        sv.signovita_frecuenciarespiratoria,
+        sv.signovita_saturacionoxigeno,
+        sv.signovita_peso,
+        sv.signovita_talla,
+        sv.signovita_fecharegistro,
+        u.usua_nombre, 
+        u.usua_apellido, 
+        u.usua_codigo, 
+        u.usua_codigoiniciales
+    FROM dns_signosvitales AS sv
+    INNER JOIN dns_atencion AS a
+           ON sv.atenc_enlace = a.atenc_enlace
+    LEFT JOIN app_usuario AS u 
+           ON sv.usua_id = u.usua_id
+           
+    WHERE a.atenc_id = ?
+    
+    ORDER BY sv.signovita_fecharegistro ASC
+";
+    $rs_constantes = $DB_gogess->executec($sql_constantes, array($atenc_id));
     // CONSULTA DE INGESTA
     $sql_ingesta = "
         SELECT 
@@ -207,6 +210,121 @@ if($_SESSION['ces1313777_sessid_inicio']) {
     ";
     $rs_eliminacion = $DB_gogess->executec($sql_eliminacion, array($enferm_enlace));
 
+
+    // CONSULTA DE ACTIVIDADES GENERALES
+    $sql_actividades = "
+    SELECT 
+        ag.actemfgen_id, 
+        ag.actemfgen_observacion,
+        ag.actemfgen_fecharegistro,
+        ag.enferm_enlace,
+        
+        -- Datos de la actividad
+        a.activi_nombre,
+        a.activi_tipo,
+        
+        -- Datos del usuario responsable
+        u.usua_nombre, 
+        u.usua_apellido, 
+        u.usua_codigo, 
+        u.usua_codigoiniciales
+        
+    FROM cesdb_aroriginal.dns_actividadesgenerales AS ag
+    
+    -- JOIN con dns_enfermeria para filtrar por enferm_id
+    INNER JOIN cesdb_aroriginal.dns_enfermeria AS e
+           ON ag.enferm_enlace = e.enferm_enlace
+    
+    LEFT JOIN cesdb_aroriginal.dns_actividades AS a 
+           ON ag.activigen_id = a.activi_id
+           
+    LEFT JOIN cesdb_aroriginal.app_usuario AS u 
+           ON ag.usua_id = u.usua_id
+           
+    WHERE e.enferm_id = ?
+    
+    ORDER BY ag.actemfgen_fecharegistro DESC, a.activi_nombre ASC
+";
+
+    $rs_actividades = $DB_gogess->executec($sql_actividades, array($enferm_id));
+
+// CONSULTA: Dispositivos Médicos
+    $sql_dispositivos = "
+    SELECT 
+        dm.dismed_id,
+        dm.dismed_observacion,
+        dm.dismed_fecharegistro,
+        dm.enferm_enlace,
+        
+        -- Datos del dispositivo
+        d.dis_nombre,
+        
+        -- Datos del usuario responsable
+        u.usua_nombre, 
+        u.usua_apellido, 
+        u.usua_codigo, 
+        u.usua_codigoiniciales
+        
+    FROM cesdb_arextension.dns_dispositivosmedicos AS dm
+    
+    -- JOIN con dns_enfermeria para filtrar por enferm_id
+    INNER JOIN dns_enfermeria AS e
+           ON dm.enferm_enlace = e.enferm_enlace
+    
+    -- JOIN con la tabla de dispositivos
+    LEFT JOIN cesdb_arcombos.dns_dispositivos AS d
+           ON dm.dis_id = d.dis_id
+           
+    -- JOIN con usuario
+    LEFT JOIN app_usuario AS u 
+           ON dm.usua_id = u.usua_id
+           
+    WHERE e.enferm_id = ?
+    
+    ORDER BY dm.dismed_fecharegistro DESC, d.dis_nombre ASC
+";
+
+    $rs_dispositivos = $DB_gogess->executec($sql_dispositivos, array($enferm_id));
+
+    $sql_balance_hidrico = "
+    SELECT 
+        gbh.gbh_id,
+        gbh.gbh_balancehidrico,
+        gbh.gbh_detalle,
+        gbh.gbh_fecharegistro,
+        gbh.enferm_enlace,
+        
+        -- Datos de la descripción del balance hídrico
+        bh.bh_descripcion,
+        
+        -- Datos del usuario responsable
+        u.usua_nombre, 
+        u.usua_apellido, 
+        u.usua_codigo, 
+        u.usua_codigoiniciales
+        
+    FROM cesdb_arextension.dns_gridbalancehidrico AS gbh
+    
+    -- JOIN con dns_enfermeria para filtrar por enferm_id
+    INNER JOIN dns_enfermeria AS e
+           ON gbh.enferm_enlace = e.enferm_enlace
+    
+    -- JOIN con dns_banacehidrico (tabla de catálogo)
+    LEFT JOIN cesdb_arcombos.dns_banacehidrico AS bh
+           ON gbh.gbh_balancehidrico = bh.bh_id
+           
+    -- JOIN con usuario
+    LEFT JOIN app_usuario AS u 
+           ON gbh.usua_id = u.usua_id
+           
+    WHERE e.enferm_id = ?
+    
+    ORDER BY gbh.gbh_fecharegistro DESC
+";
+
+    $rs_balance_hidrico = $DB_gogess->executec($sql_balance_hidrico, array($enferm_id));
+
+
     // Construir HTML del reporte
     $html_reporte = '
     <!DOCTYPE html>
@@ -215,220 +333,333 @@ if($_SESSION['ces1313777_sessid_inicio']) {
         <meta charset="UTF-8">
         <style>
             body { 
-                font-family: Arial, sans-serif; 
-                font-size: 9px; 
-                margin: 10px;
-            }
-            
-            .header-tabla {
-                width: 100%;
-                border: 2px solid #000;
-                border-collapse: collapse;
-                margin-bottom: 10px;
-            }
-            
-            .header-tabla td {
-                padding: 5px;
-                vertical-align: middle;
-            }
-            
-            .logo-cell {
-                width: 100px;
-                text-align: center;
-                border-right: 1px solid #000;
-            }
-            
-            .logo-cell img {
-                max-width: 90px;
-                height: auto;
-            }
-            
-            .titulo-cell {
-                text-align: center;
-                border-right: 1px solid #000;
-            }
-            
-            .titulo-principal {
-                font-size: 14px;
-                font-weight: bold;
-                margin-bottom: 3px;
-            }
-            
-            .subtitulo {
-                font-size: 11px;
-                font-weight: bold;
-            }
-            
-            .codigo-cell {
-                width: 100px;
-                text-align: center;
-                font-size: 8px;
-            }
-            
-            .tabla-datos {
-                width: 100%;
-                border: 1px solid #000;
-                border-collapse: collapse;
-                margin-bottom: 3px;
-            }
-            
-            .tabla-datos td {
-                border: 1px solid #000;
-                padding: 3px 2px;
-                font-size: 7px;
-                line-height: 1.1;
-            }
-            
-            .titulo-azul {
-                background-color: #CCCCFF;
-                color: black;
-                font-weight: bold;
-                text-align: left;
-                padding: 4px 5px;
-                font-size: 9px;
-            }
-            
-            .encabezado-verde {
-                background-color: #CCFFCC;
-                color: black;
-                font-weight: bold;
-                text-align: center;
-                padding: 2px 1px;
-                font-size: 6.5px;
-                white-space: nowrap;
-                line-height: 1.2;
-            }
-            
-            .celda-dato {
-                background-color: white;
-                text-align: center;
-                padding: 3px 2px;
-                font-size: 7px;
-            }
-            
-            /* TABLA DE CONSTANTES VITALES - 3 COLUMNAS POR DÍA */
-            .tabla-grafica-constantes {
-                width: 100%;
-                border-collapse: collapse;
-                margin-top: 10px;
-                margin-bottom: 15px;
-                page-break-inside: avoid;
-            }
-            
-            .tabla-grafica-constantes th {
-                background-color: #CCFFCC;
-                color: black;
-                padding: 3px 2px;
-                text-align: center;
-                border: 1px solid #000;
-                font-size: 7px;
-                font-weight: bold;
-                line-height: 1.1;
-            }
-            
-            .tabla-grafica-constantes td {
-                padding: 3px 2px;
-                border: 1px solid #000;
-                text-align: center;
-                font-size: 7px;
-                min-height: 20px;
-            }
-            
-            .celda-parametro {
-                background-color: #e9ecef;
-                font-weight: bold;
-                width: 8%;
-                font-size: 7px;
-            }
-            
-            .celda-dia {
-                background-color: #d1e7dd;
-                font-weight: bold;
-                text-align: center;
-                font-size: 7px;
-            }
-            
-            .celda-valor {
-                background-color: white;
-                width: 4%;
-            }
-            
-            /* TABLA BALANCE HÍDRICO CON TÍTULOS VERTICALES ROTADOS */
-            .tabla-balance-hidrico {
-                width: 100%;
-                border-collapse: collapse;
-                margin-top: 10px;
-                table-layout: fixed;
-            }
-            
-            .titulo-vertical-rotado {
-                background-color: #CCFFCC;
-                border: 1px solid #000;
-                width: 20px;
-                height: 150px;
-                text-align: center;
-                vertical-align: middle;
-                padding: 5px 2px;
-            }
+    font-family: Arial, sans-serif; 
+    font-size: 9px; 
+    margin: 10px;
+}
 
-            .titulo-vertical-rotado .texto-rotado {
-                transform: rotate(270deg);
-                white-space: nowrap;
-                font-weight: bold;
-                font-size: 9px;
-                display: inline-block;
-            }
-        
-            .seccion-contenido {
-                vertical-align: top;
-                padding: 0;
-                border: 1px solid #000;
-            }
-            
-            .tabla-interna {
-                width: 100%;
-                border-collapse: collapse;
-            }
-            
-            .tabla-interna th {
-                background-color: #e9ecef;
-                color: black;
-                padding: 4px 3px;
-                text-align: left;
-                border: 1px solid #000;
-                font-size: 7px;
-                font-weight: bold;
-            }
-            
-            .tabla-interna td {
-                padding: 4px 3px;
-                border: 1px solid #000;
-                font-size: 7px;
-            }
-            
-            .sin-datos {
-                text-align: center;
-                padding: 10px;
-                color: #999;
-                font-style: italic;
-                font-size: 7px;
-            }
-            
-            .usuario-info {
-                font-size: 6px;
-                color: #666;
-                font-style: italic;
-                margin-top: 2px;
-            }
-            
-            .footer {
-                margin-top: 15px;
-                font-size: 7px;
-                text-align: center;
-                color: #666;
-                border-top: 1px solid #ccc;
-                padding-top: 5px;
-            }
+.header-tabla {
+    width: 100%;
+    border: 2px solid #000;
+    border-collapse: collapse;
+    margin-bottom: 10px;
+}
+
+.header-tabla td {
+    padding: 5px;
+    vertical-align: middle;
+}
+
+.logo-cell {
+    width: 100px;
+    text-align: center;
+    border-right: 1px solid #000;
+}
+
+.logo-cell img {
+    max-width: 90px;
+    height: auto;
+}
+
+.titulo-cell {
+    text-align: center;
+    border-right: 1px solid #000;
+}
+
+.titulo-principal {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 3px;
+}
+
+.subtitulo {
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.codigo-cell {
+    width: 100px;
+    text-align: center;
+    font-size: 8px;
+}
+
+.tabla-datos {
+    width: 100%;
+    border: 1px solid #000;
+    border-collapse: collapse;
+    margin-bottom: 3px;
+}
+
+.tabla-datos td {
+    border: 1px solid #000;
+    padding: 3px 2px;
+    font-size: 7px;
+    line-height: 1.1;
+}
+
+.titulo-azul {
+    background-color: #CCCCFF;
+    color: black;
+    font-weight: bold;
+    text-align: left;
+    padding: 4px 5px;
+    font-size: 9px;
+}
+
+.encabezado-verde {
+    background-color: #CCFFCC;
+    color: black;
+    font-weight: bold;
+    text-align: center;
+    padding: 2px 1px;
+    font-size: 6.5px;
+    white-space: nowrap;
+    line-height: 1.2;
+}
+
+.celda-dato {
+    background-color: white;
+    text-align: center;
+    padding: 3px 2px;
+    font-size: 7px;
+}
+
+/* TABLA DE CONSTANTES VITALES - 3 COLUMNAS POR DÍA */
+.tabla-grafica-constantes {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    page-break-inside: avoid;
+}
+
+.tabla-grafica-constantes th {
+    background-color: #CCFFCC;
+    color: black;
+    padding: 3px 2px;
+    text-align: center;
+    border: 1px solid #000;
+    font-size: 7px;
+    font-weight: bold;
+    line-height: 1.1;
+}
+
+.tabla-grafica-constantes td {
+    padding: 3px 2px;
+    border: 1px solid #000;
+    text-align: center;
+    font-size: 7px;
+    min-height: 20px;
+}
+
+.celda-parametro {
+    background-color: #e9ecef;
+    font-weight: bold;
+    width: 8%;
+    font-size: 7px;
+}
+
+.celda-dia {
+    background-color: #d1e7dd;
+    font-weight: bold;
+    text-align: center;
+    font-size: 7px;
+}
+
+.celda-valor {
+    background-color: white;
+    width: 4%;
+}
+
+/* TABLA BALANCE HÍDRICO CON TÍTULOS VERTICALES ROTADOS */
+.tabla-balance-hidrico {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    table-layout: fixed;
+}
+
+.titulo-vertical-rotado {
+    background-color: #CCFFCC;
+    border: 1px solid #000;
+    width: 20px;
+    height: 150px;
+    text-align: center;
+    vertical-align: middle;
+    padding: 5px 2px;
+}
+
+.titulo-vertical-rotado .texto-rotado {
+    transform: rotate(270deg);
+    white-space: nowrap;
+    font-weight: bold;
+    font-size: 9px;
+    display: inline-block;
+}
+
+.seccion-contenido {
+    vertical-align: top;
+    padding: 0;
+    border: 1px solid #000;
+}
+
+.tabla-interna {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tabla-interna th {
+    background-color: #e9ecef;
+    color: black;
+    padding: 4px 3px;
+    text-align: left;
+    border: 1px solid #000;
+    font-size: 7px;
+    font-weight: bold;
+}
+
+.tabla-interna td {
+    padding: 4px 3px;
+    border: 1px solid #000;
+    font-size: 7px;
+}
+
+.sin-datos {
+    text-align: center;
+    padding: 10px;
+    color: #999;
+    font-style: italic;
+    font-size: 7px;
+}
+
+.usuario-info {
+    font-size: 6px;
+    color: #666;
+    font-style: italic;
+    margin-top: 2px;
+}
+
+.footer {
+    margin-top: 15px;
+    font-size: 7px;
+    text-align: center;
+    color: #666;
+    border-top: 1px solid #ccc;
+    padding-top: 5px;
+}
+
+/* TABLA DE ACTIVIDADES */
+.tabla-actividades { 
+    width: 100%; 
+    border-collapse: collapse; 
+    margin-top: 10px;
+}
+
+.tabla-actividades th { 
+    background-color: #CCFFCC; 
+    color: black; 
+    padding: 6px 4px; 
+    text-align: left; 
+    border: 1px solid #000;
+    font-size: 7px;
+    font-weight: bold;
+}
+
+.tabla-actividades td { 
+    padding: 5px 4px; 
+    border: 1px solid #000; 
+    vertical-align: top;
+    font-size: 8px;
+}
+
+/* TABLA DE DISPOSITIVOS */
+.tabla-dispositivos { 
+    width: 100%; 
+    border-collapse: collapse; 
+    margin-top: 10px;
+}
+
+.tabla-dispositivos th { 
+    background-color: #CCFFCC; 
+    color: black; 
+    padding: 6px 4px; 
+    text-align: left; 
+    border: 1px solid #000;
+    font-size: 7px;
+    font-weight: bold;
+}
+
+.tabla-dispositivos td { 
+    padding: 5px 4px; 
+    border: 1px solid #000; 
+    vertical-align: top;
+    font-size: 8px;
+}
+
+.tabla-dispositivos .observacion {
+    font-size: 8px;
+    line-height: 1.3;
+}
+
+.tabla-dispositivos .sin-datos {
+    text-align: center;
+    color: #666;
+    font-style: italic;
+    padding: 15px;
+}
+
+.tabla-dispositivos .usuario-info {
+    font-size: 7px;
+    color: #555;
+    margin-top: 2px;
+}
+
+/* TABLA DE DIETAS - Estilo genérico reutilizable */
+.tabla-dietas { 
+    width: 100%; 
+    border-collapse: collapse; 
+    margin-top: 10px;
+}
+
+.tabla-dietas th { 
+    background-color: #CCFFCC; 
+    color: black; 
+    padding: 6px 4px; 
+    text-align: left; 
+    border: 1px solid #000;
+    font-size: 7px;
+    font-weight: bold;
+}
+
+.tabla-dietas td { 
+    padding: 5px 4px; 
+    border: 1px solid #000; 
+    vertical-align: top;
+    font-size: 8px;
+}
+
+.tabla-dietas .detalle-dieta {
+    font-size: 7px;
+    line-height: 1.4;
+}
+
+.tabla-dietas .observacion {
+    font-size: 8px;
+    line-height: 1.3;
+}
+
+.tabla-dietas .sin-datos {
+    text-align: center;
+    color: #666;
+    font-style: italic;
+    padding: 15px;
+}
+
+.tabla-dietas .usuario-info {
+    font-size: 7px;
+    color: #555;
+    margin-top: 2px;
+}
         </style>
     </head>
     <body>
@@ -837,6 +1068,227 @@ if($_SESSION['ces1313777_sessid_inicio']) {
                     </table>
                 </td>
             </tr>
+        </table>';
+    $html_balance_hidrico = '
+<table class="tabla-dietas">
+    <thead>
+        <tr>                
+            <td class="titulo-azul" colspan="4">BALANCE HÍDRICO</td>
+        </tr>
+        <tr>
+            <th width="25%">TIPO DE BALANCE</th>
+            <th width="35%">DETALLE</th>
+            <th width="25%">RESPONSABLE</th>
+            <th width="15%">FECHA REGISTRO</th>
+        </tr>
+    </thead>
+    <tbody>';
+
+// Agregar filas de datos de balance hídrico
+    $hay_datos_balance = false;
+    if($rs_balance_hidrico && !$rs_balance_hidrico->EOF) {
+        while (!$rs_balance_hidrico->EOF) {
+            $hay_datos_balance = true;
+
+            $gbh_id = $rs_balance_hidrico->fields["gbh_id"];
+            $tipo_balance = htmlspecialchars($rs_balance_hidrico->fields["bh_descripcion"]);
+            $detalle = htmlspecialchars($rs_balance_hidrico->fields["gbh_detalle"]);
+            $fecha_registro = $rs_balance_hidrico->fields["gbh_fecharegistro"];
+
+            // Información del usuario
+            $nombre_usuario = trim($rs_balance_hidrico->fields["usua_nombre"].' '.$rs_balance_hidrico->fields["usua_apellido"]);
+            $codigo_usuario = $rs_balance_hidrico->fields["usua_codigo"];
+            $iniciales_usuario = $rs_balance_hidrico->fields["usua_codigoiniciales"];
+
+            $info_usuario = '';
+            if($nombre_usuario && $nombre_usuario != ' ') {
+                $info_usuario = '<strong>'.$nombre_usuario.'</strong>';
+                if($iniciales_usuario) {
+                    $info_usuario .= '<div class="usuario-info">'.$iniciales_usuario.'</div>';
+                }
+                if($codigo_usuario) {
+                    $info_usuario .= '<div class="usuario-info">Cód: '.$codigo_usuario.'</div>';
+                }
+            } else {
+                $info_usuario = '-';
+            }
+
+            $html_balance_hidrico .= '
+            <tr>
+                <td><strong>'.$tipo_balance.'</strong></td>
+                <td class="observacion">'.nl2br($detalle).'</td>
+                <td>'.$info_usuario.'</td>
+                <td style="text-align: center;">'.($fecha_registro && $fecha_registro != '0000-00-00 00:00:00' ? date("d/m/Y H:i", strtotime($fecha_registro)) : '-').'</td>
+            </tr>';
+
+            $rs_balance_hidrico->MoveNext();
+        }
+    }
+
+    if(!$hay_datos_balance) {
+        $html_balance_hidrico .= '
+        <tr>
+            <td colspan="4" class="sin-datos">
+                No hay registros de balance hídrico para este paciente
+            </td>
+        </tr>';
+    }
+
+    $html_balance_hidrico .= '
+    </tbody>
+</table>';
+
+// Agregar al reporte principal
+    $html_reporte .= $html_balance_hidrico;
+    $html_reporte .='   <table class="tabla-actividades">
+            <thead>
+                <tr>                
+                    <td class="titulo-azul" colspan="4">E. CUIDADOS GENERALES</td>
+                </tr>
+                <tr>
+                    <th width="25%">ACTIVIDAD</th>
+                    <th width="45%">OBSERVACIONES</th>
+                    <th width="25%">RESPONSABLE</th>
+                    <th width="14%">FECHA REGISTRO</th>
+                </tr>
+            </thead>
+            <tbody>';
+
+    // Agregar filas de datos de actividades
+    $hay_datos = false;
+    if($rs_actividades && !$rs_actividades->EOF) {
+        while (!$rs_actividades->EOF) {
+            $hay_datos = true;
+
+            $actividad_id = $rs_actividades->fields["actemfgen_id"];
+            $actividad_nombre = htmlspecialchars($rs_actividades->fields["activi_nombre"]);
+//            $actividad_tipo = $rs_actividades->fields["activi_tipo"];
+            $observacion = htmlspecialchars($rs_actividades->fields["actemfgen_observacion"]);
+            $fecha_registro = $rs_actividades->fields["actemfgen_fecharegistro"];
+
+            // Determinar etiqueta de tipo
+            $tipo_clase = 'tipo-1';
+            $tipo_texto = 'General';
+
+//            if($actividad_tipo == 1) {
+//                $tipo_clase = 'tipo-1';
+//                $tipo_texto = 'Cuidados';
+//            } elseif($actividad_tipo == 2) {
+//                $tipo_clase = 'tipo-2';
+//                $tipo_texto = 'Monitoreo';
+//            } elseif($actividad_tipo == 3) {
+//                $tipo_clase = 'tipo-3';
+//                $tipo_texto = 'Procedimiento';
+//            }
+
+            $nombre_usuario = trim($rs_actividades->fields["usua_nombre"].' '.$rs_actividades->fields["usua_apellido"]);
+            $codigo_usuario = $rs_actividades->fields["usua_codigo"];
+            $iniciales_usuario = $rs_actividades->fields["usua_codigoiniciales"];
+
+            $info_usuario = '';
+            if($nombre_usuario && $nombre_usuario != ' ') {
+                $info_usuario = '<strong>'.$nombre_usuario.'</strong>';
+                if($iniciales_usuario) {
+                    $info_usuario .= '<div class="usuario-info">'.$iniciales_usuario.'</div>';
+                }
+                if($codigo_usuario) {
+                    $info_usuario .= '<div class="usuario-info">Cód: '.$codigo_usuario.'</div>';
+                }
+            }
+
+            $html_reporte .= '
+                <tr>
+                    <td><strong>'.$actividad_nombre.'</strong></td>
+                    
+                    <td class="observacion">'.nl2br($observacion).'</td>
+                    <td>'.$info_usuario.'</td>
+                    <td style="text-align: center;">'.($fecha_registro && $fecha_registro != '0000-00-00 00:00:00' ? date("d/m/Y H:i", strtotime($fecha_registro)) : '-').'</td>
+                </tr>';
+
+            $rs_actividades->MoveNext();
+        }
+    }
+
+    if(!$hay_datos) {
+        $html_reporte .= '
+            <tr>
+                <td colspan="5" class="sin-datos">
+                    No hay actividades generales registradas para este paciente
+                </td>
+            </tr>';
+    }
+
+
+
+
+    $html_reporte .= '
+            </tbody>
+        </table>';
+    // HTML para Dispositivos Médicos
+    $html_reporte .= '
+        <table class="tabla-dispositivos">
+            <thead>
+                <tr>                
+                    <td class="titulo-azul" colspan="4">F. FECHA DE COLOCACIÓN DE DISPOSITIVOS MÉDICOS</td>
+                </tr>
+                <tr>
+                    <th width="25%">DISPOSITIVO</th>
+                    <th width="45%">OBSERVACIONES</th>
+                    <th width="25%">RESPONSABLE</th>
+                    <th width="14%">FECHA REGISTRO</th>
+                </tr>
+            </thead>
+            <tbody>';
+
+// Agregar filas de datos de dispositivos
+    $hay_datos_dispositivos = false;
+    if($rs_dispositivos && !$rs_dispositivos->EOF) {
+        while (!$rs_dispositivos->EOF) {
+            $hay_datos_dispositivos = true;
+
+            $dispositivo_id = $rs_dispositivos->fields["dismed_id"];
+            $dispositivo_nombre = htmlspecialchars($rs_dispositivos->fields["dis_nombre"]);
+            $observacion = htmlspecialchars($rs_dispositivos->fields["dismed_observacion"]);
+            $fecha_registro = $rs_dispositivos->fields["dismed_fecharegistro"];
+
+            $nombre_usuario = trim($rs_dispositivos->fields["usua_nombre"].' '.$rs_dispositivos->fields["usua_apellido"]);
+            $codigo_usuario = $rs_dispositivos->fields["usua_codigo"];
+            $iniciales_usuario = $rs_dispositivos->fields["usua_codigoiniciales"];
+
+            $info_usuario = '';
+            if($nombre_usuario && $nombre_usuario != ' ') {
+                $info_usuario = '<strong>'.$nombre_usuario.'</strong>';
+                if($iniciales_usuario) {
+                    $info_usuario .= '<div class="usuario-info">'.$iniciales_usuario.'</div>';
+                }
+                if($codigo_usuario) {
+                    $info_usuario .= '<div class="usuario-info">Cód: '.$codigo_usuario.'</div>';
+                }
+            }
+
+            $html_reporte .= '
+            <tr>
+                <td><strong>'.$dispositivo_nombre.'</strong></td>
+                <td class="observacion">'.nl2br($observacion).'</td>
+                <td>'.$info_usuario.'</td>
+                <td style="text-align: center;">'.($fecha_registro && $fecha_registro != '0000-00-00 00:00:00' ? date("d/m/Y H:i", strtotime($fecha_registro)) : '-').'</td>
+            </tr>';
+
+            $rs_dispositivos->MoveNext();
+        }
+    }
+
+    if(!$hay_datos_dispositivos) {
+        $html_reporte .= '
+        <tr>
+            <td colspan="4" class="sin-datos">
+                No hay dispositivos médicos registrados para este paciente
+            </td>
+        </tr>';
+    }
+
+    $html_reporte .= '
+            </tbody>
         </table>
         
         <div class="footer">

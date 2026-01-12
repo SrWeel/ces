@@ -13,7 +13,7 @@ $clie_id=$_POST["pVar2"];
 $mnupan_id=$_POST["pVar3"];
 $atenc_id=$_POST["pVar4"];
 
-@$protoop_idenlace=$_POST["pVar11"]; 
+@$protoop_idenlace=$_POST["pVar11"];
 @$protoop_tblprincipal=$_POST["pVar12"];
 
 $director='../../';
@@ -30,7 +30,7 @@ $titulo_btn='';
 $titulo_btn='GRABAR';
 if($rs_datosmenu->fields["mnupan_nboton"])
 {
-  $titulo_btn=$rs_datosmenu->fields["mnupan_nboton"];	
+  $titulo_btn=$rs_datosmenu->fields["mnupan_nboton"];
 }
 
 $lista_atencion="select * from dns_atencion where atenc_id=?";
@@ -60,7 +60,7 @@ $rs_dcliente = $DB_gogess->executec($datos_cliente,array());
 //echo $_POST["pVar1"];
 //Llamando objetos
 
-$table=$rs_tabla->fields["tab_name"];  
+$table=$rs_tabla->fields["tab_name"];
 
 
 //include(@$director."libreria/estructura/aqualis_master.php");
@@ -69,7 +69,7 @@ $lista_tbldata=array('gogess_sisfield','gogess_sistable');
 $contenido = file_get_contents(@$director."jason_files/tablas/".$table.".json");
 $gogess_sistable = json_decode($contenido, true);
 
- 
+
 $objformulario= new  ValidacionesFormulario();
 $objtableform= new templateform();
 
@@ -102,9 +102,9 @@ for($i=0;$i<count($lista_camposv);$i++)
 }
 
 //para cambiar el formato de algunos campos     
-	
-	$em_id_val=0;	
-		
+
+	$em_id_val=0;
+
 
 	$variableb=0;
 			if($_POST["pVar1"]=='undefined')
@@ -115,10 +115,10 @@ for($i=0;$i<count($lista_camposv);$i++)
 				  {
 					 $variableb=$_POST["pVar1"];
 					 $_REQUEST["opcion_".$table]="buscar";
-			         $csearch=$_POST["pVar1"];				 
+			         $csearch=$_POST["pVar1"];
 				  }
-		//echo $csearch; 
-		
+		//echo $csearch;
+
 //----------------------------------------------------------
 $bloque_registro=0;
 if($csearch)
@@ -127,48 +127,48 @@ if($csearch)
     if($table=='dns_histopatologia')
 	{
 	   $fech_fecharegistro='histopa_fecharegistro';
-	
+
 	}
 	if($table=='dns_fisioterapia')
 	{
 	   $fech_fecharegistro='fisiot_fecharegistro';
-	
+
 	}
-	
+
 	if($table=='dns_enfermeria')
 	{
 	   $fech_fecharegistro='enferm_fecharegistro';
-	
+
 	}
-	
-	
+
+
 	$busca_fecha="select *,DATE_ADD(".$fech_fecharegistro.",INTERVAL 3 DAY) as fechacierre from ".$table." where ".$campo_primariodata."='".$csearch."'";
 	$rs_bufecha = $DB_gogess->executec($busca_fecha,array());
-	
+
 	$bloque_registro=0;
 	if(@$rs_bufecha->fields["fechacierre"])
 	{
 	  //echo $rs_sihaydata->fields["fechacierre"];
 	   if(date("Y-m-d")>$rs_bufecha->fields["fechacierre"])
 	   {
-	   
+
 	   $bloque_registro=1;
 	   }
-	   
+
 	}
-	
+
 	if($table=='dns_fisioterapia')
 	{
 	   $bloque_registro=0;
-	
+
 	}
 	//echo $bloque_registro;
 }
 //----------------------------------------------------------	
-		
+
 		 $comillasimple="'";
-		 
-		 
+
+
 $botonenvio='<br><br>
 <div align="center">
 		 <div class="form-group">
@@ -179,7 +179,7 @@ $botonenvio='<br><br>
 		</div>
 		</div>
 </div>
-';	
+';
 
 $botonenvio='
  <div class="alert alert-info" role="alert">
@@ -221,7 +221,7 @@ if($bloque_registro==1)
 }
 		$mensajege='<span style="font-family:Verdana, Arial, Helvetica, sans-serif; font-size:11px; color:#006600;" >Registro guardado con exito...</span>';
         @$funciones_cuandoguarda="$('#".@$divresultado."').html('".@$mensajege."')";
-		
+
 		 @$funcionextrag=" 
 		setTimeout(function () { $('#mensaje_gsistema').fadeIn(); },1);
 		setTimeout(function () { $('#mensaje_gsistema2').fadeIn(); },1);
@@ -237,8 +237,8 @@ if($bloque_registro==1)
 		genera_cobro();
 
 		";
-		
-		
+
+
 		if($rs_datosmenu->fields["mnupan_templatetabla"])
 		{
   		$template_reemplazo='templateformsweb/'.$rs_datosmenu->fields["mnupan_templatetabla"].'/';
@@ -246,11 +246,11 @@ if($bloque_registro==1)
 		else
 		{
 		$template_reemplazo='templateformsweb/maestro_standar_substandar/';
-		
+
 		}
 		//echo $template_reemplazo;
-	
-?>	
+
+?>
 
 <br>
 
@@ -265,9 +265,13 @@ if($bloque_registro==1)
 
  </div>
 <div class="panel-body">
-
+    <?php
+    echo '<div style="margin-bottom:10px;">';
+    ?>
 <button type="button" class="mb-sm btn btn-success" onclick="ver_formularioenpantallaextendida('aplicativos/documental/opciones/panel/panel_substandarformularios.php','Perfil','divBody_ext',0,'<?php echo @$clie_id; ?>','<?php echo $mnupan_id; ?>','<?php echo $atenc_id; ?>',0,0,0,0,0,0,'<?php echo $protoop_idenlace; ?>','<?php echo $protoop_tblprincipal; ?>')" style="cursor:pointer"><span class="glyphicon glyphicon-arrow-left"></span> Regresar </button>
-
+    <?php
+    echo '</div>';
+    ?>
 <?php
 
 
@@ -292,13 +296,9 @@ $medicationadmin='onClick=genera_medicationadmin();';
 $preoperative='onClick=genera_preoperative();';
 $acgnlnursing='onClick=genera_actgeneralnursing();';
 $ctevitalbh='onClick=genera_constvitalbh();';
+$dietasm='onClick=genera_dtsuministrada();';
+$implhosp='onClick=genera_implementacionhosp();';
 
-echo '<button type="button" class="mb-sm btn btn-info" '.$linkimprimir.'  style="cursor:pointer"><span class="glyphicon glyphicon-print"></span>NOTAS ENFERMERIA</button>&nbsp;&nbsp;';
-echo '<button type="button" class="mb-sm btn btn-info" '.$medicationadmin.'  style="cursor:pointer"><span class="glyphicon glyphicon-print"></span>ADM MEDICAMENTOS</button>&nbsp;&nbsp;';
-echo '<button type="button" class="mb-sm btn btn-info" '.$preoperative .'  style="cursor:pointer"><span class="glyphicon glyphicon-print"></span>PREOPERATORIO</button>&nbsp;&nbsp;';
-echo '<button type="button" class="mb-sm btn btn-info" '.$acgnlnursing .'  style="cursor:pointer"><span class="glyphicon glyphicon-print"></span>ACTIVIDADES GENERALES</button>&nbsp;&nbsp;';
-echo '<button type="button" class="mb-sm btn btn-info" '.$ctevitalbh .'  style="cursor:pointer"><span class="glyphicon glyphicon-print"></span>CTE VITAL/BH</button>&nbsp;&nbsp;';
-//////
 
 
 switch ($table) {
@@ -318,9 +318,18 @@ echo '<button type="button" class="mb-sm btn btn-info" '.$linkimprimir.'  style=
         break;
     default:
        {
+           echo '<div>';
 	     $linkimprimir='onClick=imprimir_datos();';
-echo '<button type="button" class="mb-sm btn btn-info" '.$linkimprimir.'  style="cursor:pointer"><span class="glyphicon glyphicon-print"></span> IMPRIMIR </button>';
-	   
+           echo '<button type="button" class="mb-sm btn btn-info" '.$linkimprimir.'  style="cursor:pointer"><span class="glyphicon glyphicon-print"></span> IMPRIMIR </button>&nbsp;&nbsp;';
+           echo '<button type="button" class="mb-sm btn btn-info" '.$linkimprimir.'  style="cursor:pointer"><span class="glyphicon glyphicon-print"></span>NOTAS ENFERMERIA</button>&nbsp;&nbsp;';
+           echo '<button type="button" class="mb-sm btn btn-info" '.$medicationadmin.'  style="cursor:pointer"><span class="glyphicon glyphicon-print"></span>ADM MEDICAMENTOS</button>&nbsp;&nbsp;';
+           echo '<button type="button" class="mb-sm btn btn-info" '.$preoperative .'  style="cursor:pointer"><span class="glyphicon glyphicon-print"></span>PREOPERATORIO</button>&nbsp;&nbsp;';
+           echo '<button type="button" class="mb-sm btn btn-info" '.$acgnlnursing .'  style="cursor:pointer"><span class="glyphicon glyphicon-print"></span>ACT. GENERALES</button>&nbsp;&nbsp;';
+           echo '<button type="button" class="mb-sm btn btn-info" '.$ctevitalbh .'  style="cursor:pointer"><span class="glyphicon glyphicon-print"></span>CTE VITAL/BH</button>&nbsp;&nbsp;';
+           echo '<button type="button" class="mb-sm btn btn-info" '.$dietasm .'  style="cursor:pointer"><span class="glyphicon glyphicon-print"></span>DIETAS</button>&nbsp;&nbsp;';
+           echo '<button type="button" class="mb-sm btn btn-info" '.$implhosp .'  style="cursor:pointer"><span class="glyphicon glyphicon-print"></span>IMPL HOSP</button>&nbsp;&nbsp;';
+
+           echo '</div>';
 	   }
 }
 
@@ -331,27 +340,26 @@ echo '<button type="button" class="mb-sm btn btn-info" '.$linkimprimir.'  style=
 
 </div>
 
-<form id="form_<?php echo $table; ?>" name="form_<?php echo $table; ?>" method="post" action="" class="form-horizontal" > 
-<?php		
+<form id="form_<?php echo $table; ?>" name="form_<?php echo $table; ?>" method="post" action="" class="form-horizontal" >
+<?php
 		echo $botonenvio;
 		include("tablas.php");
 		echo $botonenvio2;
-		
-?>	
+
+?>
 </form>
 </div>
 </div>
 <?php
-}			
+}
 ?>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script type="text/javascript">
 <!--
 
 
 function imprimir_datos()
 {
-	
+
   if($('#<?php echo $campo_primariodata; ?>').val()>0)
 	 {
    myWindow3=window.open('aplicativos/documental/datos_substandarformdoble_print.php?iddata=<?php echo $tab_id ?>&pVar2=<?php echo @$clie_id; ?>&pVar4=<?php echo $atenc_id; ?>&pVar5='+$('#<?php echo $campo_primariodata; ?>').val()+'&pVar3=<?php echo $mnupan_id; ?>','ventana_reporteunico','width=850,height=700,scrollbars=YES');
@@ -361,22 +369,22 @@ function imprimir_datos()
    else
    {
    alert("Por favor guarde el resgistro para imprimir");
-     
-   
+
+
    }
 
-   
+
 }
 
 
 function guarda_datalocal()
 {
- <?php 
+ <?php
  if($table=='dns_histopatologia' or $table=='dns_fisioterapia' or $table=='dns_enfermeria')
  {
  ?>
-  
-  
+
+
   if($('#diagn_numval').val()==0)
   {
     //alert("Por favor agrege al menos un DIAGNOSITCO");
@@ -384,10 +392,10 @@ function guarda_datalocal()
   }
  <?php
  }
- ?> 
- 
+ ?>
 
- <?php 
+
+ <?php
  if($table=='dns_fisioterapia' or $table=='dns_enfermeria')
  {
  ?>
@@ -395,15 +403,15 @@ function guarda_datalocal()
   {
     //alert("Por favor agrege al menos una registro en TARIFARIO");
 	//return false;
-  
+
   }
  <?php
  }
- ?>  
-  
+ ?>
+
   <?php
     echo $rs_tabla->fields["tab_valextguardar"];
-	
+
     $comillasimple="'";
     echo 'enviar_formulariodatadirecto('.$comillasimple.'form_'.$table.$comillasimple.')';
    ?>
@@ -415,11 +423,11 @@ function verl_turno()
   $("#lista_turnosval").load("aplicativos/documental/opciones/panel/turnos_alert.php",{
     especi_id:'<?php echo $rs_datosmenu->fields["especi_id"]; ?>',
 	centro_id:'<?php echo $_SESSION['ces1313777_centro_id']; ?>'
-  },function(result){  
+  },function(result){
 
-  });  
+  });
 
-  $("#lista_turnosval").html("Espere un momento");  
+  $("#lista_turnosval").html("Espere un momento");
 
 }
 
@@ -427,9 +435,9 @@ verl_turno();
 
 function ver_turnos()
 {
-	
+
 	abrir_standar_pop("aplicativos/documental/listados_turnos.php","TURNOS","divBody_turnos","divDialog_turnos",400,400,"<?php echo $rs_datosmenu->fields["especi_id"]; ?>","<?php echo $_SESSION['ces1313777_centro_id']; ?>",0,0,0,0,0);
-	
+
 }
 
 
@@ -446,13 +454,13 @@ function genera_pdf()
 {
   if($('#<?php echo $campo_primariodata; ?>').val()>0)
 	 {
-	 
+
 	    location.href = "pdfformularios/pdfreferencia.php?ssr=<?php echo $campos_data64."|" ?>"+$('#<?php echo $campo_primariodata; ?>').val();
 	 }
 	 else
 	 {
-       alert("Por favor guarde el resgistro para imprimir"); 	 
-	 
+       alert("Por favor guarde el resgistro para imprimir");
+
 	 }
 
 }
@@ -465,11 +473,11 @@ function genera_cobro()
 	atenc_id:'<?php echo $atenc_id; ?>',
 	centro_id:'<?php echo $centro_id; ?>',
 	anam_id:$('#<?php echo $campo_primariodata; ?>').val()
-  },function(result){  
+  },function(result){
 
-  });  
+  });
 
-  $("#genera_pro").html("Espere un momento");  
+  $("#genera_pro").html("Espere un momento");
 
 
 }
@@ -489,13 +497,13 @@ function genera_interconsultapdf()
 {
   if($('#<?php echo $campo_primariodata; ?>').val()>0)
 	 {
-	 
+
 	    location.href = "pdfformularios/pdformulariointerconsulta.php?ssr=<?php echo $campos_data64."|" ?>"+$('#<?php echo $campo_primariodata; ?>').val();
 	 }
 	 else
 	 {
-       alert("Por favor guarde el resgistro para imprimir"); 	 
-	 
+       alert("Por favor guarde el resgistro para imprimir");
+
 	 }
 
 }
@@ -592,6 +600,43 @@ function genera_constvitalbh()
     }
 
     var url = "pdfformularios/generate_ctevitalbh.php?ssr=<?php echo $campos_data64; ?>|" + id_registro;
+    window.open(url, '_blank');
+}
+///////////
+function genera_dtsuministrada()
+{
+    var id_registro = $('#<?php echo $campo_primariodata; ?>').val();
+
+    if (!id_registro || id_registro <= 0) {
+        Swal.fire({
+            icon: 'warning',
+            title: '¡Espera!',
+            html: 'Por favor <b>guarda el registro</b> antes de imprimir .',
+            confirmButtonText: 'Entendido'
+        });
+        return;
+    }
+
+    var url = "pdfformularios/generate_dtsm.php?ssr=<?php echo $campos_data64; ?>|" + id_registro;
+    window.open(url, '_blank');
+}
+///////////
+///////////
+function genera_implementacionhosp()
+{
+    var id_registro = $('#<?php echo $campo_primariodata; ?>').val();
+
+    if (!id_registro || id_registro <= 0) {
+        Swal.fire({
+            icon: 'warning',
+            title: '¡Espera!',
+            html: 'Por favor <b>guarda el registro</b> antes de imprimir .',
+            confirmButtonText: 'Entendido'
+        });
+        return;
+    }
+
+    var url = "pdfformularios/generate_implhosp.php?ssr=<?php echo $campos_data64; ?>|" + id_registro;
     window.open(url, '_blank');
 }
 ///////////

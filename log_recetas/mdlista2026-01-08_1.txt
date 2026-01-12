@@ -1,0 +1,3 @@
+update cesdb_arextension.dns_newtraumatologiagridexamenfisico set gexamfis_observacion='AL EXAMEN FISICO LEVE DOLOR A LA DIGITOPRESION FUERZA MUSCULAR 4/5 DE HOMBRO DERECHO' where gexamfis_id=3514
+update cesdb_arextension.dns_newtraumatologiagridexamenfisico set gexamfis_observacion='AL EXAMEN FISICO LEVE DOLOR A LA DIGITOPRESION FUERZA MUSCULAR 4/5 DE HOMBRO DERECHO' where gexamfis_id=3539
+update cesdb_arextension.dns_newtraumatologiagridexamenfisico set gexamfis_observacion='AL EXAMEN FISICO DOLOR A LA DIGITOPRESION EN HOMBRO IZQUIERDO, NEER +, JOBE +' where gexamfis_id=3564

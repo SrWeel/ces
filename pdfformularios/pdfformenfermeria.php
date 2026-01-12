@@ -133,19 +133,15 @@ if($_SESSION['ces1313777_sessid_inicio']) {
     }
 
     // PASO 2: CONSULTAR LAS NOTAS DE ENFERMERÍA
-    $sql_notas = "SELECT g.*, u.usua_nombre, u.usua_apellido, u.usua_codigo, u.usua_codigoiniciales 
-                  FROM dns_gridenfermeria g
-                  LEFT JOIN app_usuario u ON g.usua_id = u.usua_id
-                  WHERE g.enferm_enlace = ?
-                  ORDER BY g.genfermeria_fecha DESC, g.genfermeria_hora DESC";
+    $sql_notas = "SELECT g.*, u.usua_nombre, u.usua_apellido, u.usua_codigo, u.usua_codigoiniciales,
+              e.enferm_enlace
+              FROM dns_gridenfermeria g
+              LEFT JOIN app_usuario u ON g.usua_id = u.usua_id
+              LEFT JOIN dns_enfermeria e ON g.enferm_enlace = e.enferm_enlace
+              WHERE e.enferm_id = ?
+              ORDER BY g.genfermeria_fecha DESC, g.genfermeria_hora DESC";
 
-    $rs_notas = $DB_gogess->executec($sql_notas, array($enferm_enlace));
-
-    // Construir HTML del reporte
-    // REEMPLAZA desde $html_reporte hasta antes de "// Agregar filas de datos"
-
-    // REEMPLAZA desde $html_reporte hasta antes de "// Agregar filas de datos"
-
+    $rs_notas = $DB_gogess->executec($sql_notas, array($enferm_id));
     // Dividir nombres y apellidos
     $partes_apellido = explode(' ', trim($apellido_paciente), 2);
     $primer_apellido = isset($partes_apellido[0]) ? $partes_apellido[0] : '';

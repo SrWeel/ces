@@ -1,0 +1,9 @@
+update cesdb_arextension.dns_antecedentesfamiliaresnewconext set antef_descripcion='ABUELA MATERNA CON HIPERTENSION ARTERIAL' where antef_id=42
+update cesdb_arextension.dns_newtraumatologiagridexamenfisico set gexamfis_observacion='EN MUÑECA IZQUIERDA EDEMA +, DISMINUCION DE LA FUERZA DOLOR A LA PALPACION EN LIGAMENTO EXTENSOR DE PULGAR, MANIOBRA DE QUERVAIN POSITIVO.' where gexamfis_id=3164
+update cesdb_arextension.dns_newtraumatologiagridexamenfisico set gexamfis_observacion='EDEMA +, DOLOR A LA DIGITOPRESION EN MALEOLO EXTERNO Y EN DORSO DE PIE' where gexamfis_id=3190
+update cesdb_arextension.dns_newconsultaexternagridexamenfisico set gexamfis_observacion='PACIENTE ACUDE PARA RETIRO DE PUNTOS, HERIDA EN REGION CILIAR DERECHA Y LABIAL DE BUENAS CARACTERISTICAS DE CICATRIZACION ' where gexamfis_id=1256
+update cesdb_arextension.dns_antecedentespersonalesnewconext set antep_descripcion=' HIPERTENSION ARTERIAL DESDE HACE 15 AÑOS EN TRATAMIENTO CON LOSARTAN 100MG VO QD, AMLODIPINO 5MG VO QD' where antep_id=102
+update cesdb_arextension.dns_antecedentespersonalesnewconext set antep_descripcion=' HIPERTENSION ARTERIAL DESDE HACE 15 AÑOS EN TRATAMIENTO CON LOSARTAN 100MG VO QD, AMLODIPINO 5MG VO QD' where antep_id=102
+update cesdb_arextension.dns_antecedentesfamiliaresnewconext set antef_descripcion='MADRE CON DIABETES MELLITUS, PADRE CON ALZHEIMER' where antef_id=43
+update cesdb_arextension.dns_antecedentesfamiliaresnewconext set antef_descripcion='MADRE CON DIABETES MELLITUS, PADRE CON ALZHEIMER' where antef_id=43
+update cesdb_arextension.dns_newtraumatologiagridexamenfisico set gexamfis_observacion='CADERA DERECHA BLOQUEADA INTENSO DOLOR  IZ  EN MENOR INTENSIDAD  LASEGUE +' where gexamfis_id=3215

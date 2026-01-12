@@ -1,0 +1,1 @@
+update cesdb_arextension.dns_dietas set tipodiet_id='1',diet_general='rr',diet_liqestricta='yy',diet_blandagastrica='tt',diet_blandahipograsa='tt',diet_hiposodica='tt',diet_diabetico='tt',diet_observacion='tt' where diet_id='1'

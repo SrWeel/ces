@@ -11,7 +11,7 @@ session_start();
 
 // Conexi�n a la base de datos
 //$host = "localhost";
-$host = "localhost";
+$host = "";
 $db   = "cesdb_aroriginal";
 $user = "root"; 
 //$pass = "";     
