@@ -1300,7 +1300,7 @@ if($_SESSION['ces1313777_sessid_inicio']) {
 
     // Generar PDF
     $dompdf = new DOMPDF();
-    $dompdf->set_paper('A4', 'landscape');
+    $dompdf->set_paper('A4');
     $dompdf->load_html($html_reporte, 'UTF-8');
     $dompdf->render();
 

@@ -42,7 +42,12 @@ $objtableform= new templateform();
 $comillasimple="'";
 $subindice='_substandarform';
 $carpeta='substandarform';
+    $tab_id=$rs_datosmenu->fields["tab_id"];
+    $campo_primariodata=$rs_tabla->fields["tab_campoprimario"];
 
+// Preparar datos para PDFs
+    $campos_data='iddata='.$tab_id.'&pVar2='.@$clie_id.'&pVar4='.$atenc_id.'&pVar3='.$mnupan_id;
+    $campos_data64=base64_encode($campos_data);
 ?>
 
 <script type="text/javascript">
@@ -332,6 +337,103 @@ function refreshFrame(nframe,path){
     $('#'+nframe).attr('src', path);
 
 }
+// funciones de pdfs generales
+
+
+//////////
+function genera_pdfevolucion_general()
+{
+    var atenc_id = '<?php echo $atenc_id; ?>';
+
+    if (!atenc_id || atenc_id <= 0) {
+        Swal.fire({
+            icon: 'warning',
+            title: '¡Espera!',
+            html: 'No se encontró información de la atención.',
+            confirmButtonText: 'Entendido'
+        });
+        return;
+    }
+
+    // Esta URL genera PDF con TODOS los registros de la atención
+    var url = "pdfformularios/pdfformenfermeria_consolidado.php?ssr=<?php echo $campos_data64; ?>";
+    window.open(url, '_blank');
+}
+//////////
+function genera_medicationadmin_general()
+{
+    var atenc_id = '<?php echo $atenc_id; ?>';
+    if (!atenc_id || atenc_id <= 0) {
+        Swal.fire({icon: 'warning', title: '¡Espera!', html: 'No se encontró información de la atención.', confirmButtonText: 'Entendido'});
+        return;
+    }
+    var url = "pdfformularios/genera_medicationadmin_consolidado.php?ssr=<?php echo $campos_data64; ?>";
+    window.open(url, '_blank');
+}
+///////////
+//////////
+function genera_preoperative_general()
+{
+    var atenc_id = '<?php echo $atenc_id; ?>';
+    if (!atenc_id || atenc_id <= 0) {
+        Swal.fire({icon: 'warning', title: '¡Espera!', html: 'No se encontró información de la atención.', confirmButtonText: 'Entendido'});
+        return;
+    }
+    var url = "pdfformularios/generate_preoperative_consolidado.php?ssr=<?php echo $campos_data64; ?>";
+    window.open(url, '_blank');
+}
+///////////
+
+//////////
+function genera_actgeneralnursing_general()
+{
+    var atenc_id = '<?php echo $atenc_id; ?>';
+    if (!atenc_id || atenc_id <= 0) {
+        Swal.fire({icon: 'warning', title: '¡Espera!', html: 'No se encontró información de la atención.', confirmButtonText: 'Entendido'});
+        return;
+    }
+    var url = "pdfformularios/generate_acgnlnursing_consolidado.php?ssr=<?php echo $campos_data64; ?>";
+    window.open(url, '_blank');
+}
+/////
+//////////
+function genera_constvitalbh_general()
+{
+    var atenc_id = '<?php echo $atenc_id; ?>';
+    if (!atenc_id || atenc_id <= 0) {
+        Swal.fire({icon: 'warning', title: '¡Espera!', html: 'No se encontró información de la atención.', confirmButtonText: 'Entendido'});
+        return;
+    }
+    var url = "pdfformularios/generate_ctevitalbh_consolidado.php?ssr=<?php echo $campos_data64; ?>";
+    window.open(url, '_blank');
+}
+///////////
+function genera_dt_general()
+{
+    var atenc_id = '<?php echo $atenc_id; ?>';
+    if (!atenc_id || atenc_id <= 0) {
+        Swal.fire({icon: 'warning', title: '¡Espera!', html: 'No se encontró información de la atención.', confirmButtonText: 'Entendido'});
+        return;
+    }
+    var url = "pdfformularios/generate_dtsm_consolidado.php?ssr=<?php echo $campos_data64; ?>";
+    window.open(url, '_blank');
+}
+
+///////////
+///////////
+function genera_implhosp_general()
+{
+    var atenc_id = '<?php echo $atenc_id; ?>';
+    if (!atenc_id || atenc_id <= 0) {
+        Swal.fire({icon: 'warning', title: '¡Espera!', html: 'No se encontró información de la atención.', confirmButtonText: 'Entendido'});
+        return;
+    }
+    var url = "pdfformularios/generate_implhosp_consolidado.php?ssr=<?php echo $campos_data64; ?>";
+    window.open(url, '_blank');
+}
+
+///////////
+
 
 //  End -->
 </script>
@@ -413,6 +515,8 @@ $medicationadmingeneral='onClick=genera_medicationadmin_general();';
 $preoperativegeneral='onClick=genera_preoperative_general();';
 $acgnlnursinggeneral='onClick=genera_actgeneralnursing_general();';
 $ctevitalbhgeneral='onClick=genera_constvitalbh_general();';
+$dietasmgeneral='onClick=genera_dt_general();';
+$implhospgeneral='onClick=genera_implhosp_general();';
 echo '<div>';
 
 echo '<button type="button" class="mb-sm btn btn-info" '.$linkimprimirgeneral.'  style="cursor:pointer"><span class="glyphicon glyphicon-print"></span>NOTAS ENFERMERIA</button>&nbsp;&nbsp;';
@@ -420,6 +524,9 @@ echo '<button type="button" class="mb-sm btn btn-info" '.$medicationadmingeneral
 echo '<button type="button" class="mb-sm btn btn-info" '.$preoperativegeneral .'  style="cursor:pointer"><span class="glyphicon glyphicon-print"></span>PREOPERATORIO</button>&nbsp;&nbsp;';
 echo '<button type="button" class="mb-sm btn btn-info" '.$acgnlnursinggeneral .'  style="cursor:pointer"><span class="glyphicon glyphicon-print"></span>ACTIVIDADES GENERALES</button>&nbsp;&nbsp;';
 echo '<button type="button" class="mb-sm btn btn-info" '.$ctevitalbhgeneral .'  style="cursor:pointer"><span class="glyphicon glyphicon-print"></span>CTE VITAL/BH</button>&nbsp;&nbsp;';
+
+echo '<button type="button" class="mb-sm btn btn-info" '.$dietasmgeneral .'  style="cursor:pointer"><span class="glyphicon glyphicon-print"></span>DIETAS</button>&nbsp;&nbsp;';
+echo '<button type="button" class="mb-sm btn btn-info" '.$implhospgeneral .'  style="cursor:pointer"><span class="glyphicon glyphicon-print"></span>IMPL HOSP</button>&nbsp;&nbsp;';
 echo '</div>';
 //////
 

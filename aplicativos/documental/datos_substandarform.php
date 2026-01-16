@@ -292,6 +292,7 @@ if($bloque_registro==1)
 
 ///////
 $linkimprimir='onClick=genera_pdfevolucion();';
+$notasenfer='onClick=genera_pdfevolucion();';
 $medicationadmin='onClick=genera_medicationadmin();';
 $preoperative='onClick=genera_preoperative();';
 $acgnlnursing='onClick=genera_actgeneralnursing();';
@@ -321,7 +322,7 @@ echo '<button type="button" class="mb-sm btn btn-info" '.$linkimprimir.'  style=
            echo '<div>';
 	     $linkimprimir='onClick=imprimir_datos();';
            echo '<button type="button" class="mb-sm btn btn-info" '.$linkimprimir.'  style="cursor:pointer"><span class="glyphicon glyphicon-print"></span> IMPRIMIR </button>&nbsp;&nbsp;';
-           echo '<button type="button" class="mb-sm btn btn-info" '.$linkimprimir.'  style="cursor:pointer"><span class="glyphicon glyphicon-print"></span>NOTAS ENFERMERIA</button>&nbsp;&nbsp;';
+           echo '<button type="button" class="mb-sm btn btn-info" '.$notasenfer.'  style="cursor:pointer"><span class="glyphicon glyphicon-print"></span>NOTAS ENFERMERIA</button>&nbsp;&nbsp;';
            echo '<button type="button" class="mb-sm btn btn-info" '.$medicationadmin.'  style="cursor:pointer"><span class="glyphicon glyphicon-print"></span>ADM MEDICAMENTOS</button>&nbsp;&nbsp;';
            echo '<button type="button" class="mb-sm btn btn-info" '.$preoperative .'  style="cursor:pointer"><span class="glyphicon glyphicon-print"></span>PREOPERATORIO</button>&nbsp;&nbsp;';
            echo '<button type="button" class="mb-sm btn btn-info" '.$acgnlnursing .'  style="cursor:pointer"><span class="glyphicon glyphicon-print"></span>ACT. GENERALES</button>&nbsp;&nbsp;';

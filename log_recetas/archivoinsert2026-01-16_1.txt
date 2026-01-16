@@ -1,0 +1,1 @@
+insert into cesdb_arextension.dns_dietas (tipodiet_id,diet_general,diet_liqestricta,diet_blandagastrica,diet_blandahipograsa,diet_hiposodica,diet_diabetico,diet_observacion,enferm_enlace,diet_fecharegistro,usua_id) values ('3','a','a','a','a','a','a','a','1011212121212120260112104003369','2026-01-16 01:53:36','1')
