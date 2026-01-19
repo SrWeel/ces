@@ -351,7 +351,7 @@ function imprimir_datos()
 	
   if($('#<?php echo $campo_primariodata; ?>').val()>0)
 	 {
-   myWindow3=window.open('aplicativos/documental/datos_substandarprint_print.php?iddata=<?php echo $tab_id ?>&pVar2=&pVar4=&pVar5='+$('#<?php echo $campo_primariodata; ?>').val()+'&pVar3=<?php echo $mnupan_id; ?>','ventana_reporteunico','width=850,height=700,scrollbars=YES');
+   myWindow3=window.open('pdfformularios/generate_preoperativepdf.php?iddata=<?php echo $tab_id ?>&pVar2=&pVar4=&pVar5='+$('#<?php echo $campo_primariodata; ?>').val()+'&pVar3=<?php echo $mnupan_id; ?>','ventana_reporteunico','width=850,height=700,scrollbars=YES');
 
    myWindow3.focus();
    }
