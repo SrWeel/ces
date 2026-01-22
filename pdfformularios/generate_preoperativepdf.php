@@ -60,9 +60,39 @@ if($_SESSION['ces1313777_sessid_inicio']) {
     $partop_teamqx = $rs_partop->fields["partop_teamqx"];
     $partop_destino = $rs_partop->fields["partop_destino"];
     $partop_observacion = $rs_partop->fields["partop_observacion"];
-    $partop_cedula = $rs_partop->fields["partop_cedula"];
+    $partop_cedula = $rs_partop->fields["partop_cipaciente"];
     $partop_fecharegistro = $rs_partop->fields["partop_fecharegistro"];
+    $partop_complejidad = $rs_partop->fields["partop_complejidad"];
+    $partop_tipoatencion = $rs_partop->fields["partop_tipoatencion"];
+    $partop_quirofano = $rs_partop->fields["partop_quirofano"];
+    $partop_anestesia = $rs_partop->fields["partop_anestesia"];
 
+    //requerimientos especiales deseados
+    $an_bco_sangre = $rs_partop->fields["partop_bcosangre"];
+    $an_personal = $rs_partop->fields["partop_personal"];
+    $an_equipos = $rs_partop->fields["partop_equipos"];
+    $an_rayosx = $rs_partop->fields["partop_rayosx"];
+    $an_materiales = $rs_partop->fields["partop_materiales"];
+    $an_video = $rs_partop->fields["partop_video"];
+    $an_tvcircuitocer = $rs_partop->fields["partop_tvcircuito"];
+    $an_masquirofano = $rs_partop->fields["partop_masquirofano"];
+
+    // analisis preoperatorio
+    $anp_hcto = $rs_partop->fields["partop_hct"];
+    $anp_glucosa = $rs_partop->fields["partop_glucosa"];
+    $anp_rxtorax = $rs_partop->fields["partop_rxtorax"];
+    $anp_hb = $rs_partop->fields["partop_hb"];
+    $anp_creatinina = $rs_partop->fields["partop_creatinina"];
+    $anp_tp = $rs_partop->fields["partop_tp"];
+    $anp_ttp = $rs_partop->fields["partop_ttp"];
+    $anp_bun = $rs_partop->fields["partop_bun"];
+    $anp_ccfg = $rs_partop->fields["partop_ccfg"];
+    $anp_serologico = $rs_partop->fields["partop_serologico"];
+    $anp_otros = $rs_partop->fields["partop_otros"];
+// Cerca de donde extraes otros campos del parte operatorio, agrega:
+    $partop_observacion_anestesia = $rs_partop->fields["partop_observacion"];
+
+    $partop_sesion = $rs_partop->fields["partop_destino"]; // o el nombre que tenga tu campo
     // Buscar datos del paciente en app_cliente usando la cédula
     $nombre_paciente = '';
     $apellido_paciente = '';
@@ -71,7 +101,22 @@ if($_SESSION['ces1313777_sessid_inicio']) {
     $clie_rucci = $partop_cedula;
     $conve_id = 0;
     $hc = '';
+// Obtener nombre tipo de anestesia
+    $nombre_anestesia = '';
+    $es_otra_anestesia = false;
+    if($partop_anestesia > 0) {
+        $sql_anestesia = "SELECT tanes_nombre FROM dns_tipoanestesia WHERE tanes_id = ?";
+        $rs_anestesia = $DB_gogess->executec($sql_anestesia, array($partop_anestesia));
+        if($rs_anestesia && !$rs_anestesia->EOF) {
+            $nombre_anestesia = $rs_anestesia->fields["tanes_nombre"];
+        }
 
+        // Determinar si es "otra" anestesia (IDs diferentes a 1=General, 2=Local, 3=Raquídea)
+        // Ajusta estos IDs según tu base de datos
+        if($partop_anestesia != 1 && $partop_anestesia != 2 && $partop_anestesia != 3) {
+            $es_otra_anestesia = true;
+        }
+    }
     if(!empty($partop_cedula)) {
         $sql_cliente = "SELECT * FROM app_cliente WHERE clie_rucci = ?";
         $rs_cliente = $DB_gogess->executec($sql_cliente, array($partop_cedula));
@@ -128,12 +173,49 @@ if($_SESSION['ces1313777_sessid_inicio']) {
     if($clie_genero=='F') {
         $valor_sexo='FEMENINO';
     }
+    $partes_apellido = explode(' ', trim($apellido_paciente), 2);
+    $primer_apellido = isset($partes_apellido[0]) ? $partes_apellido[0] : '';
+    $segundo_apellido = isset($partes_apellido[1]) ? $partes_apellido[1] : '';
+
+    $partes_nombre = explode(' ', trim($nombre_paciente), 2);
+    $primer_nombre = isset($partes_nombre[0]) ? $partes_nombre[0] : '';
+    $segundo_nombre = isset($partes_nombre[1]) ? $partes_nombre[1] : '';
 
     // Nombre completo del paciente
     if(empty($nombre_paciente) && empty($apellido_paciente)) {
         $nombre_completo_paciente = $partop_paciente;
     } else {
         $nombre_completo_paciente = trim($apellido_paciente . ' ' . $nombre_paciente);
+    }
+
+    // Obtener nombre de complejidad
+    $nombre_complejidad = '';
+    if($partop_complejidad > 0) {
+        $sql_complejidad = "SELECT compl_nombre FROM dns_complejidad WHERE compl_id = ?";
+        $rs_complejidad = $DB_gogess->executec($sql_complejidad, array($partop_complejidad));
+        if($rs_complejidad && !$rs_complejidad->EOF) {
+            $nombre_complejidad = $rs_complejidad->fields["compl_nombre"];
+        }
+    }
+
+    // Obtener nombre tipo de atención
+    $nombre_tipoatencion = '';
+    if($partop_tipoatencion > 0) {
+        $sql_tipoatencion = "SELECT tpat_nombre FROM dns_tipoatencion WHERE tpat_id = ?";
+        $rs_tipoatencion = $DB_gogess->executec($sql_tipoatencion, array($partop_tipoatencion));
+        if($rs_tipoatencion && !$rs_tipoatencion->EOF) {
+            $nombre_tipoatencion = $rs_tipoatencion->fields["tpat_nombre"];
+        }
+    }
+
+    // Obtener nombre tipo de anestesia
+    $nombre_anestesia = '';
+    if($partop_anestesia > 0) {
+        $sql_anestesia = "SELECT tanes_nombre FROM dns_tipoanestesia WHERE tanes_id = ?";
+        $rs_anestesia = $DB_gogess->executec($sql_anestesia, array($partop_anestesia));
+        if($rs_anestesia && !$rs_anestesia->EOF) {
+            $nombre_anestesia = $rs_anestesia->fields["tanes_nombre"];
+        }
     }
 
     // HTML DE GENERACIÓN
@@ -149,6 +231,48 @@ if($_SESSION['ces1313777_sessid_inicio']) {
                 font-size: 9px; 
                 margin: 15px;
             }
+            
+            .tabla-datos {
+                width: 100%;
+                border: 1px solid #000;
+                border-collapse: collapse;
+                margin-bottom: 3px;
+            }
+            
+            .tabla-datos td {
+                border: 1px solid #000;
+                padding: 3px 2px;
+                font-size: 7px;
+                line-height: 1.1;
+            }
+            
+            .titulo-azul {
+                background-color: #CCCCFF;
+                color: black;
+                font-weight: bold;
+                text-align: left;
+                padding: 4px 5px;
+                font-size: 9px;
+            }
+            
+            .encabezado-verde {
+                background-color: #CCFFCC;
+                color: black;
+                font-weight: bold;
+                text-align: center;
+                padding: 2px 1px;
+                font-size: 6.5px;
+                white-space: nowrap;
+                line-height: 1.2;
+            }
+            
+            .celda-dato {
+                background-color: white;
+                text-align: center;
+                padding: 3px 2px;
+                font-size: 7px;
+            }
+            
             .header-tabla {
                 width: 100%;
                 border: 2px solid #000;
@@ -206,11 +330,10 @@ if($_SESSION['ces1313777_sessid_inicio']) {
             
             .etiqueta {
                 font-weight: bold;
-                background-color: #E8E8E8;
+                background-color: #CCCCFF;
             }
             
             .checkbox-container {
-                display: inline-block;
                 margin-right: 15px;
             }
             
@@ -221,6 +344,27 @@ if($_SESSION['ces1313777_sessid_inicio']) {
                 border: 2px solid #000;
                 margin-right: 5px;
                 vertical-align: middle;
+            }
+            
+            .checkbox-checked {
+                display: inline-block;
+                width: 12px;
+                height: 12px;
+                border: 2px solid #000;
+                margin-right: 5px;
+                vertical-align: middle;
+                background-color: #000;
+                position: relative;
+            }
+            
+            .checkbox-checked:after {
+                content: "X";
+                color: white;
+                position: absolute;
+                top: -2px;
+                left: 2px;
+                font-size: 10px;
+                font-weight: bold;
             }
             
             .tabla-quirofano {
@@ -236,6 +380,11 @@ if($_SESSION['ces1313777_sessid_inicio']) {
                 font-weight: bold;
             }
             
+            .quirofano-selected {
+                background-color: #FF0000;
+                color: white;
+            }
+            
             .titulo-seccion {
                 background-color: #CCCCCC;
                 font-weight: bold;
@@ -246,9 +395,9 @@ if($_SESSION['ces1313777_sessid_inicio']) {
             
             .firma-box {
                 text-align: center;
-                padding: 30px 5px 5px 5px;
+                padding: 10px 5px 5px 5px;
                 border-top: 1px solid #000;
-                margin-top: 20px;
+                margin-top: 70px;
             }
             
             .page-break {
@@ -297,59 +446,97 @@ if($_SESSION['ces1313777_sessid_inicio']) {
             </tr>
     </table>
     
-    <!-- LINEA 1: PACIENTE, H.C, SEXO -->
+        <table class="tabla-datos">
+            <tr>
+                <td class="titulo-azul" colspan="8">A. DATOS DEL ESTABLECIMIENTO DE SALUD Y USUARIO / PACIENTE</td>
+            </tr>
+            <tr>
+                <td class="encabezado-verde" colspan="2">INSTITUCIÓN DEL SISTEMA</td>
+                <td class="encabezado-verde">UNICÓDIGO</td>
+                <td class="encabezado-verde" colspan="2">ESTABLECIMIENTO DE SALUD</td>
+                <td class="encabezado-verde">N° HCU</td>
+                <td class="encabezado-verde">N° ARCHIVO</td>
+                <td class="encabezado-verde">N° DE HOJA</td>
+            </tr>
+            <tr>
+                <td class="celda-dato" colspan="2">' . $nomb_centro . '</td>
+                <td class="celda-dato">' . $uni_codiog . '</td>
+                <td class="celda-dato" colspan="2">' . $nomb_centro . '</td>
+                <td class="celda-dato">' . $hc . '</td>
+                <td class="celda-dato">-</td>
+                <td class="celda-dato">' . $clie_rucci . '</td>
+            </tr>
+            <tr>
+                <td class="encabezado-verde">PRIMER APELLIDO</td>
+                <td class="encabezado-verde">SEGUNDO APELLIDO</td>
+                <td class="encabezado-verde">PRIMER NOMBRE</td>
+                <td class="encabezado-verde">SEGUNDO NOMBRE</td>
+                <td class="encabezado-verde">SEXO</td>
+                <td class="encabezado-verde">FECHA NACIMIENTO</td>
+                <td class="encabezado-verde">EDAD</td>
+                <td class="encabezado-verde">CONDICIÓN DE EDAD</td>
+            </tr>
+            <tr>
+                <td class="celda-dato">' . $primer_apellido . '</td>
+                <td class="celda-dato">' . $segundo_apellido . '</td>
+                <td class="celda-dato">' . $primer_nombre . '</td>
+                <td class="celda-dato">' . $segundo_nombre . '</td>
+                <td class="celda-dato">' . $valor_sexo . '</td>
+                <td class="celda-dato">' . ($clie_fechanacimiento != '0000-00-00' ? date("d/m/Y", strtotime($clie_fechanacimiento)) : '-') . '</td>
+                <td class="celda-dato">' . $edad_texto . '</td>
+                <td class="celda-dato">' . ($diferencia && $diferencia->y > 0 ? 'AÑOS' : ($diferencia && $diferencia->m > 0 ? 'MESES' : 'DÍAS')) . '</td>
+            </tr>
+        </table>
     <table class="linea-datos">
         <tr>
-            <td class="etiqueta" width="12%">PACIENTE:</td>
-            <td width="48%">' . strtoupper(htmlspecialchars($nombre_completo_paciente)) . '</td>
-            <td class="etiqueta" width="8%">H.C:</td>
-            <td width="12%">' . ($hc ? $hc : '-') . '</td>
-            <td class="etiqueta" width="8%">SEXO:</td>
-            <td width="12%">' . $valor_sexo . '</td>
-        </tr>
-    </table>
-    
-    <!-- LINEA 2: SERVICIO, PISO, EDAD -->
-    <table class="linea-datos">
-        <tr>
-            <td class="etiqueta" width="12%">SERVICIO:</td>
-            <td width="38%">' . htmlspecialchars($partop_destino) . '</td>
+            <td class="etiqueta" width="10%">SERVICIO:</td>
+            <td width="30%"></td>
             <td class="etiqueta" width="10%">PISO:</td>
-            <td width="20%">-</td>
-            <td class="etiqueta" width="8%">EDAD:</td>
-            <td width="12%">' . $edad_texto . '</td>
+            <td width="20%"></td>            
+            <td class="etiqueta" width="12%">ÁREA:</td>
+            <td width="25%">' . htmlspecialchars($partop_sala) . '</td>
+            <td class="etiqueta" width="10%">CAMA:</td>
+            <td width="15%">' . htmlspecialchars($partop_hab) . '</td>
         </tr>
     </table>
     
-    <!-- LINEA 3: AREA, CAMA -->
-    <table class="linea-datos">
-        <tr>
-            <td class="etiqueta" width="12%">ÁREA:</td>
-            <td width="53%">' . htmlspecialchars($partop_sala) . '</td>
-            <td class="etiqueta" width="10%">CAMA:</td>
-            <td width="25%">' . htmlspecialchars($partop_hab) . '</td>
-        </tr>
-    </table>
+    
     
     <!-- LINEA 4: GRADO DE COMPLEJIDAD CON CHECKBOXES -->
     <table class="linea-datos">
         <tr>
-            <td class="etiqueta" width="25%">GRADO DE COMPLEJIDAD:</td>
+            <td class="etiqueta" width="17%">GRADO DE COMPLEJIDAD:</td>
             <td width="75%">
                 <span class="checkbox-container">
-                    <span class="checkbox"></span> I
+                    <span class="' .($partop_complejidad == 1 ? 'checkbox-checked' : 'checkbox'). '"></span> I
                 </span>
                 <span class="checkbox-container">
-                    <span class="checkbox"></span> II
+                    <span class="' .($partop_complejidad == 2 ? 'checkbox-checked' : 'checkbox'). '"></span> II
                 </span>
                 <span class="checkbox-container">
-                    <span class="checkbox"></span> III
+                    <span class="' . ($partop_complejidad == 3 ? 'checkbox-checked' : 'checkbox') . '"></span> III
                 </span>
                 <span class="checkbox-container">
-                    <span class="checkbox"></span> IV
+                    <span class="' . ($partop_complejidad == 4 ? 'checkbox-checked' : 'checkbox') . '"></span> IV
                 </span>
                 <span class="checkbox-container">
-                    <span class="checkbox"></span> V
+                    <span class="' . ($partop_complejidad == 5 ? 'checkbox-checked' : 'checkbox') . '"></span> V
+                </span>
+            </td>
+        </tr>
+    </table>
+    
+    <table class="linea-datos">
+        <tr>
+            <td width="75%">
+                <span class="checkbox-container">
+                    <span class="' . ($partop_tipoatencion == 1 ? 'checkbox-checked' : 'checkbox') . '"></span> PROGRAMA
+                </span>
+                <span class="checkbox-container">
+                    <span class="' . ($partop_tipoatencion == 2  ? 'checkbox-checked' : 'checkbox') . '"></span> EMERGENCIA
+                </span>
+                <span class="checkbox-container">
+                    <span class="' . ($partop_tipoatencion == 3 ? 'checkbox-checked' : 'checkbox') . '"></span> URGENCIA
                 </span>
             </td>
         </tr>
@@ -358,7 +545,7 @@ if($_SESSION['ces1313777_sessid_inicio']) {
     <!-- LINEA 5: DIAGNOSTICO PREOPERATORIO, TIEMPO CALCULADO -->
     <table class="linea-datos">
         <tr>
-            <td class="etiqueta" width="25%">DIAGNÓSTICO PREOPERATORIO:</td>
+            <td class="etiqueta" width="18%">DIAGNÓSTICO PREOPERATORIO:</td>
             <td width="55%">' . htmlspecialchars($partop_descripcion) . '</td>
             <td class="etiqueta" width="15%">TIEMPO CALCULADO:</td>
             <td width="10%">' . $partop_tquirofano . '</td>
@@ -368,10 +555,10 @@ if($_SESSION['ces1313777_sessid_inicio']) {
     <!-- LINEA 6: PROCEDIMIENTO QUIRURGICO, TIEMPO REAL -->
     <table class="linea-datos">
         <tr>
-            <td class="etiqueta" width="25%">PROCEDIMIENTO QUIRÚRGICO:</td>
+            <td class="etiqueta" width="18%">PROCEDIMIENTO QUIRÚRGICO:</td>
             <td width="55%">' . htmlspecialchars($partop_procedimiento) . '</td>
-            <td class="etiqueta" width="12%">TIEMPO REAL:</td>
-            <td width="8%">' . $partop_hora . '</td>
+            <td class="etiqueta" width="15%">TIEMPO REAL:</td>
+            <td width="10%">' . $partop_hora . '</td>
         </tr>
     </table>
     
@@ -379,15 +566,15 @@ if($_SESSION['ces1313777_sessid_inicio']) {
     <table class="linea-datos">
         <tr>
             <td class="etiqueta" width="18%" rowspan="3" style="vertical-align: middle;">TEAM OPERATORIO:</td>
-            <td class="etiqueta" width="15%">CIRUJANO:</td>
+            <td class="encabezado-verde" width="15%">CIRUJANO:</td>
             <td width="67%">' . htmlspecialchars($partop_cirujano) . '</td>
         </tr>
         <tr>
-            <td class="etiqueta" width="15%">AYUDANTE:</td>
+            <td class="encabezado-verde" width="15%">AYUDANTE:</td>
             <td width="67%">' . htmlspecialchars($partop_ayudante) . '</td>
         </tr>
         <tr>
-            <td class="etiqueta" width="15%">AYUDANTE:</td>
+            <td class="encabezado-verde" width="15%">AYUDANTE:</td>
             <td width="67%">' . htmlspecialchars($partop_anesteciologo) . '</td>
         </tr>
     </table>
@@ -400,119 +587,123 @@ if($_SESSION['ces1313777_sessid_inicio']) {
     </table>
     <table class="tabla-quirofano">
         <tr>
-            <td width="20%">1</td>
-            <td width="20%">2</td>
-            <td width="20%">3</td>
-            <td width="20%">4</td>
-            <td width="20%">5</td>
+            <td width="20%" class="' . ($partop_quirofano == 1 ? 'quirofano-selected' : '') . '">1</td>
+            <td width="20%" class="' . ($partop_quirofano == 2 ? 'quirofano-selected' : '') . '">2</td>
+            <td width="20%" class="' . ($partop_quirofano == 3 ? 'quirofano-selected' : '') . '">3</td>
+            <td width="20%" class="' . ($partop_quirofano == 4 ? 'quirofano-selected' : '') . '">4</td>
+            <td width="20%" class="' . ($partop_quirofano == 5 ? 'quirofano-selected' : '') . '">5</td>
         </tr>
     </table>
     
     <!-- FECHA DESEADA, HORA, SESION -->
-    <table class="linea-datos">
-        <tr>
-            <td class="etiqueta" width="18%">FECHA DESEADA:</td>
-            <td width="28%"></td>
-            <td class="etiqueta" width="10%">HORA:</td>
-            <td width="18%"></td>
-            <td class="etiqueta" width="10%">SESIÓN:</td>
-            <td width="8%" style="text-align: center;">
-                <span class="checkbox"></span>
-            </td>
-            <td width="8%" style="text-align: left;">MATUTINA</td>
-        </tr>
-        <tr>
-            <td colspan="5"></td>
-            <td width="8%" style="text-align: center;">
-                <span class="checkbox"></span>
-            </td>
-            <td width="8%" style="text-align: left;">VESPERTINA</td>
-        </tr>
-    </table>
+    <table class="linea-datos" style="width:100%; border-collapse: collapse;">
+    <tr>
+        <td class="etiqueta" style="width:18%;">FECHA DESEADA:</td>
+        <td style="width:32%;">' . ($partop_fecha && $partop_fecha != '0000-00-00' ? date("d/m/Y", strtotime($partop_fecha)) : '') . '</td>
+        <td class="etiqueta" style="width:10%;">HORA:</td>
+        <td style="width:40%;">' . $partop_hora . '</td>
+    </tr>
+
+    <tr>
+        <td class="etiqueta">SESIÓN:</td>
+        <td style="text-align:left;">
+            <span class="' . ($partop_sesion == 1 ? 'checkbox-checked' : 'checkbox') . '"></span>
+            MATUTINA
+        </td>
+        <td class="etiqueta">SESIÓN:</td>
+        <td style="text-align:left;">
+            <span class="' . ($partop_sesion == 2 ? 'checkbox-checked' : 'checkbox') . '"></span>
+            VESPERTINA
+        </td>
+    </tr>
+</table>
+
     
     <!-- REQUERIMIENTOS ESPECIALES DESEADOS -->
     <table class="linea-datos">
         <tr>
-            <td class="titulo-seccion" colspan="4">REQUERIMIENTOS ESPECIALES DESEADOS</td>
+            <td class="titulo-azul" colspan="4">REQUERIMIENTOS ESPECIALES DESEADOS</td>
         </tr>
         <tr>
-            <td class="etiqueta" width="25%">BCO. SANGRE</td>
-            <td width="25%"></td>
-            <td class="etiqueta" width="25%">MATERIALES</td>
-            <td width="25%"></td>
+            <td class="encabezado-verde" width="25%">BCO. SANGRE</td>
+            <td width="25%"> '. $an_bco_sangre.'</td>
+            <td class="encabezado-verde" width="25%">MATERIALES</td>
+            <td width="25%">'. $an_materiales.'</td>
         </tr>
         <tr>
-            <td class="etiqueta" width="25%">PERSONAL</td>
-            <td width="25%"></td>
-            <td class="etiqueta" width="25%">VIDEO</td>
-            <td width="25%"></td>
+            <td class="encabezado-verde" width="25%">PERSONAL</td>
+            <td width="25%">'. $an_personal.'</td>
+            <td class="encabezado-verde" width="25%">VIDEO</td>
+            <td width="25%">'. $an_video.'</td>
         </tr>
         <tr>
-            <td class="etiqueta" width="25%">EQUIPOS</td>
-            <td width="25%"></td>
-            <td class="etiqueta" width="25%">TV. CIRCUITO CERRADO</td>
-            <td width="25%"></td>
+            <td class="encabezado-verde" width="25%">EQUIPOS</td>
+            <td width="25%">'. $an_equipos.'</td>
+            <td class="encabezado-verde" width="25%">TV. CIRCUITO CERRADO</td>
+            <td width="25%">'. $an_tvcircuitocer.'</td>
         </tr>
         <tr>
-            <td class="etiqueta" width="25%">RAYOS X</td>
-            <td width="25%"></td>
-            <td class="etiqueta" width="25%">MÁS UN QUIRÓFANO</td>
-            <td width="25%"></td>
+            <td class="encabezado-verde" width="25%">RAYOS X</td>
+            <td width="25%">'. $an_rayosx.'</td>
+            <td class="encabezado-verde" width="25%">MÁS UN QUIRÓFANO</td>
+            <td width="25%">'. $an_masquirofano.'</td>
         </tr>
     </table>
     
     <!-- ANALISIS PREOPERATORIO -->
     <table class="linea-datos">
         <tr>
-            <td class="titulo-seccion" colspan="4">ANÁLISIS PREOPERATORIO</td>
+            <td class="titulo-azul" colspan="4">ANÁLISIS PREOPERATORIO</td>
         </tr>
         <tr>
-            <td class="etiqueta" width="25%">HCTO</td>
-            <td width="25%"></td>
-            <td class="etiqueta" width="25%">TTP</td>
-            <td width="25%"></td>
+            <td class="encabezado-verde" width="25%">HCTO</td>
+            <td width="25%">'. $anp_hcto.'</td>
+            <td class="encabezado-verde" width="25%">TTP</td>
+            <td width="25%">'. $anp_ttp.'</td>
         </tr>
         <tr>
-            <td class="etiqueta" width="25%">GLUCOSA</td>
-            <td width="25%"></td>
-            <td class="etiqueta" width="25%">BUN</td>
-            <td width="25%"></td>
+            <td class="encabezado-verde" width="25%">GLUCOSA</td>
+            <td width="25%">'. $anp_glucosa.'</td>
+            <td class="encabezado-verde" width="25%">BUN</td>
+            <td width="25%">'. $anp_bun.'</td>
         </tr>
         <tr>
-            <td class="etiqueta" width="25%">RX TÓRAX</td>
-            <td width="25%"></td>
-            <td class="etiqueta" width="25%">CC + FKG</td>
-            <td width="25%"></td>
+            <td class="encabezado-verde" width="25%">RX TÓRAX</td>
+            <td width="25%">'. $anp_rxtorax.'</td>
+            <td class="encabezado-verde" width="25%">CC + FKG</td>
+            <td width="25%">'. $anp_ccfg.'</td>
         </tr>
         <tr>
-            <td class="etiqueta" width="25%">HB</td>
-            <td width="25%"></td>
-            <td class="etiqueta" width="25%">OTROS</td>
-            <td width="25%"></td>
+            <td class="encabezado-verde" width="25%">HB</td>
+            <td width="25%">'. $anp_hb.'</td>
+            <td class="encabezado-verde" width="25%">Serológicos</td>
+            <td width="25%">'. $anp_serologico.'</td>
         </tr>
         <tr>
-            <td class="etiqueta" width="25%">CREATININA</td>
-            <td width="25%"></td>
-            <td colspan="2"></td>
+            <td class="encabezado-verde" width="25%">CREATININA</td>
+            <td width="25%">'. $anp_creatinina.'</td>
+            <td class="encabezado-verde" width="25%">OTROS</td>
+            <td width="25%">'. $anp_otros.'</td>
         </tr>
         <tr>
-            <td class="etiqueta" width="25%">TP</td>
-            <td width="25%"></td>
+            <td class="encabezado-verde" width="25%">TP</td>
+            <td width="25%">'. $anp_tp.'</td>
             <td colspan="2"></td>
         </tr>
     </table>
     
     <!-- FIRMAS -->
-    <table class="linea-datos" style="margin-top: 15px;">
+    <table class="linea-datos" style="margin-top: 8px;">
+      <tr>
+            <td class="titulo-azul" colspan="2">FIRMA:</td>
+        </tr>
         <tr>
+        
             <td width="33%" style="border-right: none; border-bottom: none;">
                 <div class="firma-box">Cirujano Solicitante</div>
             </td>
             <td width="34%" style="border-right: none; border-bottom: none; border-left: none;">
                 <div class="firma-box">Jefe de Servicio</div>
-            </td>
-            <td width="33%" style="border-bottom: none; border-left: none;">
-                <div class="firma-box">FIRMA:</div>
             </td>
         </tr>
     </table>
@@ -533,10 +724,10 @@ if($_SESSION['ces1313777_sessid_inicio']) {
         He sido informado por los facultativos de la <strong>' . strtoupper($emp_nombre) . '</strong> de la naturaleza de la dolencia de (mi persona, hijo, hermano, allegado), de los beneficios del procedimiento quirúrgico a que (seré, será) sometido. Así mismo, del riesgo que (Correré, correrá), de las complicaciones e inclusive del peligro de muerte. Conocedor del prestigio de la Institución y de su cuerpo Médico, me someto libremente al tratamiento del caso y revelo al personal de la Clínica de toda responsabilidad por cualquier complicación posterior.
     </div>
     
-    <table class="linea-datos" style="margin-top: 30px;">
+    <table class="linea-datos">
         <tr>
             <td width="50%" style="border-right: none;">
-                <div class="firma-box">Testigo<br>Firma</div>
+                <div class="firma-box">Testigo</div>
             </td>
             <td width="50%" style="border-left: none;">
                 <div class="firma-box">Firma</div>
@@ -550,71 +741,83 @@ if($_SESSION['ces1313777_sessid_inicio']) {
     <table class="linea-datos">
         <tr>
             <td class="etiqueta" colspan="2">Parte Quirúrgico aceptado</td>
-            <td class="etiqueta" colspan="2">Parte Quirúrgico rechazado</td>
         </tr>
         <tr>
-            <td class="etiqueta" width="15%">Fecha:</td>
+            <td class="encabezado-verde" width="15%">Fecha:</td>
             <td width="35%">' . ($partop_fecha && $partop_fecha != '0000-00-00' ? date("d-m-Y", strtotime($partop_fecha)) : '') . '</td>
-            <td class="etiqueta" width="15%">Razón:</td>
-            <td width="35%"></td>
+            
         </tr>
         <tr>
-            <td class="etiqueta" width="15%">Hora:</td>
+            <td class="encabezado-verde" width="15%">Hora:</td>
             <td width="35%">' . $partop_hora . '</td>
-            <td class="etiqueta" width="15%">Observaciones:</td>
-            <td width="35%" rowspan="3" style="vertical-align: top;"></td>
         </tr>
         <tr>
-            <td class="etiqueta" width="15%">Quirófano:</td>
-            <td width="35%"></td>
+            <td class="encabezado-verde" width="15%">Quirófano:</td>
+            <td width="35%">' . $partop_quirofano . '</td>
         </tr>
         <tr>
-            <td class="etiqueta" width="15%">Anestesiólogo (s):</td>
+            <td class="encabezado-verde" width="15%">Anestesiólogo (s):</td>
             <td width="35%">' . htmlspecialchars($partop_anesteciologo) . '</td>
         </tr>
     </table>
     
     <table class="linea-datos">
-        <tr>
-            <td class="etiqueta" colspan="4">TIPO DE ANESTESIA:</td>
-        </tr>
-        <tr>
-            <td width="25%">
-                <span class="checkbox"></span> General
-            </td>
-            <td width="25%">
-                <span class="checkbox"></span> Local
-            </td>
-            <td width="25%">
-                <span class="checkbox"></span> Raquídea
-            </td>
-            <td width="25%">
-                Otra: ______________
-            </td>
-        </tr>
-    </table>
+    <tr>
+        <td class="etiqueta" colspan="4">TIPO DE ANESTESIA:</td>
+    </tr>
+    <tr>
+        <td width="25%">
+            <span class="' . ($partop_anestesia == 1 ? 'checkbox-checked' : 'checkbox') . '"></span> General
+        </td>
+        <td width="25%">
+            <span class="' . ($partop_anestesia == 2 ? 'checkbox-checked' : 'checkbox') . '"></span> Local
+        </td>
+        <td width="25%">
+            <span class="' . ($partop_anestesia == 3 ? 'checkbox-checked' : 'checkbox') . '"></span> Raquídea
+        </td>
+        <td width="25%">
+            <span class="' . ($es_otra_anestesia ? 'checkbox-checked' : 'checkbox') . '"></span> 
+            Otra: ' . ($es_otra_anestesia ? htmlspecialchars($partop_observacion_anestesia) : '______________') . '
+        </td>
+    </tr>
+</table>    
     
-    <table class="linea-datos" style="margin-top: 20px;">
+    <table class="linea-datos" >
+      <tr>
+            <td class="titulo-azul" colspan="1">FIRMA:</td>
+        </tr>
         <tr>
-            <td width="50%" style="border-right: none;">
-                <div class="firma-box">Jefe de Servicio</div>
-            </td>
             <td width="50%" style="border-left: none;">
-                <div class="firma-box">Anestesiólogo<br>C.I. _______________<br>Reg. Senescyt. _______________</div>
+                <div class="firma-box">Anestesiólogo</div>
             </td>
         </tr>
     </table>
     
-    <table class="linea-datos" style="margin-top: 20px;">
+      <table class="linea-datos" style="margin-top: 20px;">
+        <tr>
+            <td class="etiqueta" colspan="2">Parte Quirúrgico rechazado</td>
+        </tr>
+        <tr class="fila-razon">
+            <td class="encabezado-verde" width="15%">Razón:</td>
+            <td width="35%"></td>
+        </tr>
+    </table>
+
+
+
+    <table class="linea-datos">
+        <tr>
+            <td class="etiqueta" colspan="2">Observaciones:</td>
+        </tr>
         <tr>
             <td class="etiqueta" colspan="2">Recepción parte operatorio en centro quirúrgico</td>
         </tr>
         <tr>
-            <td class="etiqueta" width="30%">Fecha / Hora:</td>
+            <td class="encabezado-verde" width="30%">Fecha / Hora:</td>
             <td width="70%"></td>
         </tr>
         <tr>
-            <td class="etiqueta" width="30%">Responsable:</td>
+            <td class="encabezado-verde" width="30%">Responsable:</td>
             <td width="70%"></td>
         </tr>
     </table>

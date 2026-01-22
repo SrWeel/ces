@@ -36,7 +36,7 @@ $campo_primariodata=$rs_tabla->fields["tab_campoprimario"];
 
 
 
-$table=$rs_tabla->fields["tab_name"];  
+$table=$rs_tabla->fields["tab_name"];
 
 
 
@@ -58,7 +58,7 @@ $gogess_sisfield = json_decode($contenido, true);
 
   {
 
-  $objtableform->select_templateform(@$table,$DB_gogess);	
+  $objtableform->select_templateform(@$table,$DB_gogess);
 
   }
 
@@ -96,13 +96,13 @@ for($i=0;$i<count($lista_camposv);$i++)
 
 
 
-//para cambiar el formato de algunos campos     
+//para cambiar el formato de algunos campos
 
-	
 
-	$em_id_val=0;	
 
-		
+	$em_id_val=0;
+
+
 
 
 
@@ -124,11 +124,11 @@ for($i=0;$i<count($lista_camposv);$i++)
 
 					 $_REQUEST["opcion_".$table]="buscar";
 
-			         $csearch=$_POST["pVar1"];				 
+			         $csearch=$_POST["pVar1"];
 
 				  }
 
-		 
+
 
 		 $comillasimple="'";
 
@@ -140,7 +140,7 @@ for($i=0;$i<count($lista_camposv);$i++)
 		</div>
 		</div>
 </div>
-';	
+';
 
 
  $botonenvio='
@@ -188,8 +188,8 @@ $botonenvio2='
 		$('#div_".$table."').html('.');
 
 		";
-		
-	
+
+
 
 		if($rs_datosmenu->fields["mnupan_templatetabla"])
 		{
@@ -199,13 +199,13 @@ $botonenvio2='
 		}
 		else
 		{
-		$template_reemplazo='templateformsweb/maestro_standar_standar/';	
+		$template_reemplazo='templateformsweb/maestro_standar_standar/';
 
-		}	
+		}
 
 		//echo $template_reemplazo;
 
-?>	
+?>
 
 <style>
 
@@ -251,7 +251,7 @@ border:1px dotted red;
 
 
 
-</style> 
+</style>
 
 <style type="text/css">
 
@@ -297,15 +297,15 @@ echo '<button type="button" class="mb-sm btn btn-info" '.$linkimprimir.'  style=
 
 &nbsp;&nbsp;&nbsp;<button type="button" class="mb-sm btn btn-primary" onclick="ver_formularioenpantalla('aplicativos/documental/datos_standar.php','TARIFARIO','divBody_ext',0,'<?php echo $mnupan_id; ?>',0,0,0,0,0)" style="cursor:pointer"><span class="glyphicon glyphicon-plus"></span>NUEVO REGISTRO</button>
 
-<form id="form_<?php echo $table; ?>" name="form_<?php echo $table; ?>" method="post" action="" class="form-horizontal" > 
+<form id="form_<?php echo $table; ?>" name="form_<?php echo $table; ?>" method="post" action="" class="form-horizontal" >
 
-<?php		
+<?php
         echo $botonenvio;
 		include("tablas.php");
         echo $botonenvio2;
-		
 
-?>	
+
+?>
 
 </form>
 
@@ -322,9 +322,9 @@ else
 
 echo '<div style="background-color: rgb(255, 238, 221);" id="msg" class="errors">Su sesi&oacute;n a caducado de precione F5 para continuar...</div>';
 
-	
 
-}		
+
+}
 
 ?>
 
@@ -348,21 +348,20 @@ function guarda_data()
 
 function imprimir_datos()
 {
-	
+
   if($('#<?php echo $campo_primariodata; ?>').val()>0)
 	 {
-   myWindow3=window.open('pdfformularios/generate_preoperativepdf.php?iddata=<?php echo $tab_id ?>&pVar2=&pVar4=&pVar5='+$('#<?php echo $campo_primariodata; ?>').val()+'&pVar3=<?php echo $mnupan_id; ?>','ventana_reporteunico','width=850,height=700,scrollbars=YES');
-
+         myWindow3=window.open('pdfformularios/generate_preoperativepdf.php?iddata=<?php echo $tab_id ?>&pVar2=&pVar4=&pVar5='+$('#<?php echo $campo_primariodata; ?>').val()+'&pVar3=<?php echo $mnupan_id; ?>','ventana_reporteunico','width=850,height=700,scrollbars=YES');
    myWindow3.focus();
    }
    else
    {
    alert("Por favor guarde el resgistro para imprimir");
-     
-   
+
+
    }
 
-   
+
 }
 
 

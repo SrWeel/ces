@@ -1,1 +1,1 @@
-update cesdb_arextension.dns_implementoshospi set ga_id='',gb_id='',gc_id='1',imphos_cantidad='1',imphos_entrega='1',imphos_recepcion='0',imphos_descripcion='test nota actual' where imphos_id='3'
+update dns_signosvitales set signovita_presionarterial='100/70',signovita_temperaturabucal='36.1',signovita_talla='1.55',signovita_perimetrocefalico='',signovita_frecuenciacardiaca='82',signovita_frecuenciarespiratoria='19',signovita_peso='59.9',signovita_saturacionoxigeno='90',signovita_masacorporal='24.93',signovita_observaciones='' where signovita_id='405'

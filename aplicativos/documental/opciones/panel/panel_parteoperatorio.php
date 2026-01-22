@@ -95,7 +95,7 @@ function borrar_registro(tabla,campo,valor)
    $(".messages").hide();
     //queremos que esta variable sea global
     var fileExtension = "";
-    //funciï¿½n que observa los cambios del campo file y obtiene informaciï¿½n
+    //función que observa los cambios del campo file y obtiene información
 
 function informacion_archivo(campo)
 {
@@ -108,11 +108,11 @@ function informacion_archivo(campo)
 
         var fileName = file.name;
 
-        //obtenemos la extensiï¿½n del archivo
+        //obtenemos la extensión del archivo
 
         fileExtension = fileName.substring(fileName.lastIndexOf('.') + 1);
 
-        //obtenemos el tamaï¿½o del archivo
+        //obtenemos el tamaño del archivo
 
         var fileSize = file.size;
 
@@ -120,7 +120,7 @@ function informacion_archivo(campo)
 
         var fileType = file.type;
 
-        //mensaje con la informaciï¿½n del archivo
+        //mensaje con la información del archivo
 
 		var megas=0;
 
@@ -152,7 +152,7 @@ function subir_archivo(ncampo,table,anchot,altot,anchoor,altoor)
 
         var message = ""; 
 
-        //hacemos la peticiï¿½n ajax  
+        //hacemos la petición ajax  
 
 		
 
@@ -282,9 +282,9 @@ else
 
 
 
-//como la utilizamos demasiadas veces, creamos una funciï¿½n para 
+//como la utilizamos demasiadas veces, creamos una función para 
 
-//evitar repeticiï¿½n de cï¿½digo
+//evitar repetición de código
 
 function showMessage(message,campo){
 
@@ -379,20 +379,13 @@ border-color:#000000;
 
 $comill_s="'";
 
-$linkeditar= 'onClick="ver_formularioenpantalla('.$comill_s.'aplicativos/documental/datos_parteoperatorio.php'.$comill_s.','.$comill_s.'TARIFARIO'.$comill_s.','.$comill_s.'divBody_ext'.$comill_s.',0,'.$comill_s.$_POST["pVar2"].$comill_s.',0,0,0,0,0)" style=cursor:pointer';
-$preoper_link='onClick=genera_implhosp_general();';
+$linkeditar= 'onClick="ver_formularioenpantalla('.$comill_s.'aplicativos/documental/datos_parteoperatorio.php'.$comill_s.','.$comill_s.'TARIFARIO'.$comill_s.','.$comill_s.'divBody_ext'.$comill_s.',0,'.$comill_s.$_POST["pVar2"].$comill_s.',0,0,0,0,0)" style=cursor:pointer';	
 
 
 
 echo '<div align="center">';
-echo '<div style="margin-bottom:10px;">';
 
 echo '<button type="button" class="mb-sm btn btn-primary"  '.$linkeditar.'  style="background-color:#000066"  ><span class="glyphicon glyphicon-plus"></span>NUEVO REGISTRO</button>';
-echo '</div>';
-echo '<div>';
-//echo '<button type="button" class="mb-sm btn btn-info" '.$preoper_link .'  style="cursor:pointer"><span class="glyphicon glyphicon-print"></span>IMPL HOSP</button>&nbsp;&nbsp;';
-
-echo '</div>';
 
 if($rs_tabla->fields["tab_name"]=='conco_rubrosg')
 {

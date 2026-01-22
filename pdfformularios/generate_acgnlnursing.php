@@ -179,7 +179,7 @@ if($_SESSION['ces1313777_sessid_inicio']) {
 
     $rs_actividades = $DB_gogess->executec($sql_actividades, array($enferm_id));
 
-
+ 
     // Construir HTML del reporte
     $html_reporte = '
     <!DOCTYPE html>

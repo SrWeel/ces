@@ -303,69 +303,13 @@ if($rs_ap)
 $logo = $objformulario->replace_cmb("app_empresa", "emp_id,emp_logoreporte", "where emp_id=", 1, $DB_gogess);
 $logoc ='<img src="../archivo/'.$logo.'" alt="125x125" width="140px">';
 
-
 $emp_nombre = $objformulario->replace_cmb("app_empresa", "emp_id,emp_nombre", "where emp_id=", 1, $DB_gogess);
 $emp_piedepagina = $objformulario->replace_cmb("app_empresa", "emp_id,emp_piedepagina", "where emp_id=", 1, $DB_gogess);
 $emp_logo = $objformulario->replace_cmb("app_empresa", "emp_id,emp_logo", "where emp_id=", 1, $DB_gogess);
-
-    $headerTabla = '
-<style>
-.header-tabla {
-    width: 100%;
-    border: 2px solid #000;
-    border-collapse: collapse;
-}
-.header-tabla td {
-    padding: 5px;
-    vertical-align: middle;
-}
-.logo-cell {
-    width: 100px;
-    text-align: center;
-    border-right: 1px solid #000;
-}
-.logo-cell img {
-    max-width: 90px;
-    height: auto;
-}
-.titulo-cell {
-    text-align: center;
-    border-right: 1px solid #000;
-}
-.titulo-principal {
-    font-size: 14px;
-    font-weight: bold;
-    margin-bottom: 3px;
-}
-.subtitulo {
-    font-size: 11px;
-    font-weight: bold;
-}
-.codigo-cell {
-    width: 100px;
-    text-align: center;
-    font-size: 8px;
-}
-</style>
-
-<table class="header-tabla">
-    <tr>
-        <td class="logo-cell">
-            <img src="../archivo/'.$logo.'" alt="Logo">
-        </td>
-        <td class="titulo-cell">
-            <div class="titulo-principal">'.$emp_nombre.'</div>
-            <div class="subtitulo">HOSPITALIZACIÓN</div>
-        </td>
-        <td class="codigo-cell">
-            <strong>N° HCU:</strong><br>'.$hc.'
-        </td>
-    </tr>
-</table>
-';
+  
+  
   //cabecera y pie de pagina
-//    $lee_plantilla = str_replace("-graficologo-", $headerTabla, $lee_plantilla);
-    $lee_plantilla = str_replace("-graficologo-", $logoc, $lee_plantilla);
+$lee_plantilla = str_replace("-graficologo-", $logoc, $lee_plantilla);
 $lee_plantilla = str_replace("-empresanombre-", $emp_nombre, $lee_plantilla);
 $lee_plantilla = str_replace("-piedepagina-", $emp_piedepagina, $lee_plantilla);
 $lee_plantilla = str_replace("-logofondo-", $emp_logo, $lee_plantilla);

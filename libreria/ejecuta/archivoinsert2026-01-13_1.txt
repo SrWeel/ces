@@ -1,0 +1,102 @@
+1-->update dns_newimagenologiainfo set clie_id=164,atenc_id=132,centro_id=1,imginfo_rxconvencional='',imginfo_informe='',imginfo_recomendaciones='',imginfo_personarecibe='',usua_id=8,imginfo_fechaentrega='2026-01-12',imginfo_tomografia='',imginfo_rxportatil='',imginfo_enlace='164010503878241820260112085144353',imginfo_profesionalsolicitante='',imginfo_resonancia='',imginfo_fecharegistro='2026-01-12 20:51:44',imginfo_ecografia='',prob_codigo='',imginfo_emergencia='',imgag_id=17,imginfo_consulta='',imginfo_mamografia='',imginfo_procedimientos='',cant_codigo='',imginfo_hospital='',imginfo_servicio='',imginfo_otros='',imginfo_sedacion='0',imginfo_describir='' where imginfo_id=15 -->2026-01-13 07:32:02
+1-->insert into dns_newhospitalizacionconsultaexterna (clie_id,usua_id,centro_id,atenc_id,conext_notasdeevolucion,anam_id,conext_fechar,estaatenc_id,conext_fecharegistro,conext_horar,conext_prescripciones,conext_horaf,conext_enlace) values (164,1,1,132,'',3,'2026-01-13',1,'2026-01-13 07:43:37','07:43','','','16401121212121212026011307433726')-->2026-01-13 07:43:38
+36-->update dns_newhospitalizacionconsultaexterna set clie_id=164,usua_id=1,centro_id=1,atenc_id=132,conext_notasdeevolucion='',anam_id=3,conext_fechar='2026-01-13',estaatenc_id=1,conext_fecharegistro='2026-01-13 07:43:37',conext_horar='07:43',conext_prescripciones='',conext_horaf='00:00',conext_enlace='16401121212121212026011307433726' where conext_id=11 -->2026-01-13 07:44:55
+36-->update dns_newhospitalizacionconsultaexterna set clie_id=164,usua_id=1,centro_id=1,atenc_id=132,conext_notasdeevolucion='Bajo anestesia general con paciente en decubito ventral y silla de playa con uso de equipo spider se realiza: Estabilizacion con tecnica de latarjet abierta + tornillos canulados.',anam_id=3,conext_fechar='2026-01-13',estaatenc_id=1,conext_fecharegistro='2026-01-13 07:43:37',conext_horar='07:43',conext_prescripciones='1. Pase a recuperacion 
+2. CSV c/15 minutos en recuperacion 
+3. NPO por 4 horas, luego tolerancia a liquidos
+4. Solucion Salina 0.9% IV a 80 cc/hora',conext_horaf='00:00',conext_enlace='16401121212121212026011307433726' where conext_id=11 -->2026-01-13 07:47:21
+36-->insert into dns_newhospitalizacionconsultaexterna (clie_id,usua_id,centro_id,atenc_id,conext_notasdeevolucion,anam_id,conext_fechar,estaatenc_id,conext_fecharegistro,conext_horar,conext_prescripciones,conext_horaf,conext_enlace) values (164,36,1,132,'',3,'2026-01-13',1,'2026-01-13 07:47:33','07:47','','','1640117273498943620260113074733335')-->2026-01-13 07:47:35
+36-->update dns_newhospitalizacionconsultaexterna set clie_id=164,usua_id=36,centro_id=1,atenc_id=132,conext_notasdeevolucion='PACIENTE POSQUIRURGICO 2 HORAS POSTERIOR A EVENTO QUIRURGICO CONSCIENTE, ORIENTADO EN 3 ESFERAS COGNITIVAS, MEJORA DOLOR EN SITIO QUIRURGICO, SE MANTIENE EN NPO, CON CABESTRILLO EN ABDUCCION, SIGNOS VITALES ESTABLES, SE LOGRARA DESTETE DE O2.',anam_id=3,conext_fechar='2026-01-13',estaatenc_id=1,conext_fecharegistro='2026-01-13 07:47:33',conext_horar='07:47',conext_prescripciones='1. PROBAR TOLERANCIA ORAL EN 2 HORAS.
+2. HIELO LOCAL',conext_horaf='',conext_enlace='1640117273498943620260113074733335' where conext_id=12 -->2026-01-13 07:50:14
+36-->update dns_newhospitalizacionconsultaexterna set clie_id=164,usua_id=1,centro_id=1,atenc_id=132,conext_notasdeevolucion='Bajo anestesia general con paciente en decubito ventral y silla de playa con uso de equipo spider se realiza: Estabilizacion con tecnica de latarjet abierta + tornillos canulados.',anam_id=3,conext_fechar='2026-01-13',estaatenc_id=1,conext_fecharegistro='2026-01-13 07:43:37',conext_horar='07:43',conext_prescripciones='1. Pase a recuperacion 
+2. CSV c/15 minutos en recuperacion 
+3. NPO por 4 horas, luego tolerancia a liquidos
+4. Solucion Salina 0.9% IV a 80 cc/hora',conext_horaf='00:00',conext_enlace='16401121212121212026011307433726' where conext_id=11 -->2026-01-13 07:51:54
+9-->update dns_newprotocolooperatorio set centro_id=1,clie_id=164,atenc_id='132',usua_id=41,protoop_tblprincipal='dns_newhospitalizacionanamesis',protoop_fecharegistro='2025-12-02 01:01:09',protoop_selectiva='1',protoop_cirujanouno='DR. HUGO SANTIAGO BARROS MORETA',protoop_fechaoperacion='2025-12-01',protoop_sintesis='',protoop_idenlace='3',protoop_general='1',protoop_transquirurgico='',protoop_emergencia='',protoop_cirujanodos='DR. HUGO EDGAR BARROS FLORES',protoop_horainicio='09:25',protoop_sintesisimagen='',protoop_regional='',protoop_biopsia='0',protoop_paleativa='',protoop_ayudanteuno='',protoop_horafin='11:55',protoop_sedacion='',protoop_bioresultado='',protoop_proyectada='ESTABILIZACIÓN CON TECNICA DE LATARJET ABIERTA',protoop_ayudantedos='',protoop_examen='0',protoop_otroanestesia='',protoop_realizada='ESTABILIZACIÓN CON TECNICA DE LATARJET ABIERTA',protoop_dieresis='1.	INCISIÓN 6 CM DE LONGITUD A NIVEL DEL SURCO DELTO PECTORAL DERECHO QUE COMPROMETE PIEL Y TEJIDO CELULAR SUBCUTANEO.',protoop_examendetalle='',protoop_tecerayudante='',protoop_patologo='',protoop_instrumentista='LCDA. ELSA MASAPANTA',protoop_enlace='1640117227803254120251202010109190',protoop_circulante='LCDA. VANESSA ALMEIDA',protoop_exposicion='1.	MANUAL E INSTRUMENTAL
+2.	SEPARADORES DE FARABEAUF, MAYO COLLINS, VOLKMAN, RETRACTOR DE GELPHY, HOFFMAN, FUKUDA
+3.	KIT DE TRACCION DE HOMBRO SPIDER',protoop_anestesiologo='DR. JORGE CEVALLOS ZAMBRANO',protoop_exploracion='1.	GLENA INSUFICIENTE PEQUEÑA CON LESIÓN DEL 20% 
+2.	APÓFISIS CORACOIDES NORMAL
+3.	DISTENSIÓN DE SUBESCAPULAR',protoop_ayudanteanestesia='',protoop_otrointegrante='',protoop_procedimiento='BAJO ANESTESIA GENERAL Y EN SILLA DE PLAYA CON USO DE KIT DE TRACCIÓN SPIDER SE REALIZA:
+1.	ASEPSIA Y ANTISEPSIA 
+2.	COLOCACIÓN DE CAMPOS QUIRÚRGICOS.
+3.	DIÉRESIS DESCRITA
+4.	HEMOSTASIA CON ELECTROCAUTERIO
+5.	IDENTIFICACIÓN DEL ESPACIO DELTOPECTORAL
+6.	IDENTIFICACIÓN DE VENA BRAQUIOCEFÁLICA
+7.	LIBERACIÓN DE LIGAMENTO CORACOACROMIAL CON ELECTROCAUTERIO
+8.	LIGADURA DE VENAS Y ARTERIAS COLATERALES
+9.	IDENTIFICACIÓN Y LIBERACIÓN DE APÓFISIS CORACOIDES 
+10.	OSTEOTOMÍA EN LA BASE DE APÓFISIS CORACOIDES CON TENDÓN CONJUNTO MEDIANTE SIERRA FLEXIBLE (GUÍA DE CORTE ACCU-CUT) 
+11.	ELABORACIÓN DEL INJERTO
+12.	COLOCACIÓN DE CLAVO STEINMANN PARA AMPLIAR CAMPO OPERATORIO
+13.	LAVADO CON SUERO FISIOLÓGICO 
+14.	ABORDAJE A LA GLENA
+15.	ELABORACIÓN DE LECHO EN CARA ANTERIOR DE LA GLENA CON TRANSPOSICIÓN DE INJERTO DE APÓFISIS CORACOIDES CON TENDÓN CONJUNTO Y ESTABILIZACIÓN MEDIANTE GUÍA Y 2 TORNILLOS LATARJET CANULADOS DE  4. 0M X 30MM Y 4.0 X 36MM + CAPSULORRAFIA ANTERIOR. 
+16.	TRANSFERENCIA DEL PECTORAL MENOR A BASE DE LA CORACOIDES CON SÚPER SUTURA DE ALTA RESISTENCIA
+17.	CAPSULORRAFIA ANTERIOR CON REPARACIÓN LABRAL
+18.	RETENZADO DE SUBESCAPULAR CON VYCRIL 2/0 
+19.	REDUCCIÓN Y ESTABILIZACIÓN DE ARTICULACIÓN GLENOHUMERAL
+20.	LAVADO CON SUERO FISIOLÓGICO
+21.	COMPROBACIÓN DE ESTABILIDAD DEL INJERTO
+22.	COLOCACIÓN DE VANCOMICINA EN POLVO 1GR
+23.	CIERRE POR PLANOS 
+24.	VERIFICACIÓN NEUROVASCULAR DISTAL
+25.	INFILTRACIÓN CON XILOCAINA SIN EPINEFRINA 6ML, 30MG KETOROLACO CON 13CC DE SOLUCIÓN SALINA 0.9% 
+26.	INMOVILIZACIÓN DE HOMBRO Y COLOCACIÓN DE CABESTRILLO EN ABDUCCIÓN',protoop_complicaciones='NINGUNA',protoop_perdida='100',protoop_sangrado='100',protoop_protesico='0',anam_enlace='' where protoop_id=2 -->2026-01-13 09:14:07
+14-->insert into app_cliente (clie_foto,clie_archivosrespaldo,clie_titularseguro,clie_diagnosticorecepcion,clie_token,grp_id,clie_cirugia,clie_especialidad,emp_id,clie_registrado,clie_tratante,tipoci_id,clie_ayudante,clie_direccion,clie_rucci,clie_apellido,prob_codigo,clie_anestesiologo,tippo_id,cant_codigo,clie_nombre,conve_id,clie_parroquia,civil_id,clie_codigoisspol,clie_telefono,clie_ocupacion,clie_lugarnacimiento,clie_fechanacimiento,clie_celular,clie_poliza,nac_id,tarterial_id,clie_email,clie_monto,clie_genero,clie_encadodeemergencia,clie_personaautoriza,idgen_id,orien_id,clie_parentescocontacto,clie_deducible,clie_emergenciatelf,clie_emergenciacelu,clie_cobertura,clie_institucion,clie_direccioncontacto,clie_copago,clie_registro,clie_enlace,clie_garantia,usua_id,clie_detallegarantia,clie_fechaingreso,centro_id,clie_seguromsparchivo,clie_hcpinos,clie_dondetrabaja,clie_tipoempresa,clie_puestotrabaja,clie_instruccion,clie_seguroprivadoarchivo,clie_clave) values ('','',0,'','',4,'','',1,'REGISTRADO','',1,'','LA FORESTAL SANTA CECILIA Y GUACHANAMA','1753874104','VALDIVIESO OLAVE','17','',3,'1701','ANDY SEBASTIAN',2,'CHIBACALLE',1,'','','ESTUDIANTE','QUITO','2013-02-22','0988449961','',56,5,'christian_valdivieso17@hotmail.com','','M','OLAVE POZO CINTHIA','',4,4,'MADRE',0,'','0982690381',0,'','',0,'2026-01-13 11:27:30','011724631260142026011311273032999',0,'14','',NULL,'1','','467','ESTUDIANTE','ESTUDIANTE','ESTUDIANTE','2','','')-->2026-01-13 11:54:36
+1-->update dns_newtraumatologiaanamesis set clie_id=474,usua_id=41,centro_id=1,atenc_id=369,anam_referencia='DERIVADO',anam_emferpactual='ARTROSIS + LUMBALGIA',anam_planes='RX',anam_centrorefiere='',estaatenc_id=4,anam_profesionarefiere='',anam_vidasexualactiva='',anam_motivoconsulta='ARTROSIS',anam_vidasexualactivaobs='',anam_respiratorio='0',anam_fecharegistro='2026-01-12 19:05:10',anam_observacionrespiratorio='',anam_atpreventiva=1,anam_nhoja='',anam_enlace='47401172278032541202601120705108' where anam_id=131 -->2026-01-13 14:53:48
+1-->update dns_newimagenologiainfo set clie_id=164,atenc_id=132,centro_id=1,imginfo_rxconvencional='',imginfo_informe='',imginfo_recomendaciones='',imginfo_personarecibe='',usua_id=8,imginfo_fechaentrega='2026-01-12',imginfo_tomografia='',imginfo_rxportatil='',imginfo_enlace='164010503878241820260112085144353',imginfo_profesionalsolicitante='',imginfo_resonancia='',imginfo_fecharegistro='2026-01-12 20:51:44',imginfo_ecografia='',prob_codigo='',imginfo_emergencia='',imgag_id=17,imginfo_consulta='',imginfo_mamografia='',imginfo_procedimientos='',cant_codigo='',imginfo_hospital='',imginfo_servicio='',imginfo_otros='',imginfo_sedacion='0',imginfo_describir='' where imginfo_id=15 -->2026-01-13 14:59:25
+8-->update dns_newimagenologiainfo set clie_id=164,atenc_id=132,centro_id=1,imginfo_rxconvencional='',imginfo_informe='DENSIDAD ÓSEA ADECUADA. 
+NO SE OBSERVAN SIGNOS DE LESIÓN ÓSEA TRAUMÁTICA. 
+RELACIONES OSTEO-ARTICULARES  CONTROL  POST  QUIRURGICO
+TEJIDOS BLANDOS   PRESENCIA  DE MATERIAL DE OSTESINTESIS
+
+
+
+Atentamente;
+
+
+
+
+
+
+ 
+Dr.  TORRES FRANKLIN 
+Especialista en Imagenologia',imginfo_recomendaciones='',imginfo_personarecibe='',usua_id=8,imginfo_fechaentrega='2026-01-12',imginfo_tomografia='',imginfo_rxportatil='',imginfo_enlace='164010503878241820260112085144353',imginfo_profesionalsolicitante='',imginfo_resonancia='',imginfo_fecharegistro='2026-01-12 20:51:44',imginfo_ecografia='',prob_codigo='',imginfo_emergencia='',imgag_id=17,imginfo_consulta='',imginfo_mamografia='',imginfo_procedimientos='',cant_codigo='',imginfo_hospital='',imginfo_servicio='',imginfo_otros='',imginfo_sedacion='0',imginfo_describir='' where imginfo_id=15 -->2026-01-13 15:03:25
+1-->update dns_newimagenologiainfo set clie_id=164,atenc_id=132,centro_id=1,imginfo_rxconvencional='',imginfo_informe='DENSIDAD ÓSEA ADECUADA. 
+NO SE OBSERVAN SIGNOS DE LESIÓN ÓSEA TRAUMÁTICA. 
+RELACIONES OSTEO-ARTICULARES  CONTROL  POST  QUIRURGICO
+TEJIDOS BLANDOS   PRESENCIA  DE MATERIAL DE OSTESINTESIS
+
+
+
+Atentamente;
+
+
+
+
+
+
+ 
+Dr.  TORRES FRANKLIN 
+Especialista en Imagenologia',imginfo_recomendaciones='',imginfo_personarecibe='',usua_id=8,imginfo_fechaentrega='2026-01-12',imginfo_tomografia='',imginfo_rxportatil='',imginfo_enlace='164010503878241820260112085144353',imginfo_profesionalsolicitante='',imginfo_resonancia='',imginfo_fecharegistro='2026-01-12 20:51:44',imginfo_ecografia='',prob_codigo='',imginfo_emergencia='',imgag_id=17,imginfo_consulta='',imginfo_mamografia='',imginfo_procedimientos='',cant_codigo='',imginfo_hospital='',imginfo_servicio='',imginfo_otros='',imginfo_sedacion='0',imginfo_describir='' where imginfo_id=15 -->2026-01-13 15:05:49
+1-->update dns_newimagenologiainfo set clie_id=164,atenc_id=132,centro_id=1,imginfo_rxconvencional='',imginfo_informe='DENSIDAD ÓSEA ADECUADA. 
+NO SE OBSERVAN SIGNOS DE LESIÓN ÓSEA TRAUMÁTICA. 
+RELACIONES OSTEO-ARTICULARES  CONTROL  POST  QUIRURGICO
+TEJIDOS BLANDOS   PRESENCIA  DE MATERIAL DE OSTESINTESIS
+
+
+
+Atentamente;
+
+
+
+
+
+
+ 
+Dr.  TORRES FRANKLIN 
+Especialista en Imagenologia',imginfo_recomendaciones='',imginfo_personarecibe='',usua_id=8,imginfo_fechaentrega='2026-01-12',imginfo_tomografia='',imginfo_rxportatil='',imginfo_enlace='164010503878241820260112085144353',imginfo_profesionalsolicitante='',imginfo_resonancia='',imginfo_fecharegistro='2026-01-12 20:51:44',imginfo_ecografia='',prob_codigo='',imginfo_emergencia='',imgag_id=17,imginfo_consulta='',imginfo_mamografia='',imginfo_procedimientos='',cant_codigo='',imginfo_hospital='',imginfo_servicio='',imginfo_otros='',imginfo_sedacion='0',imginfo_describir='' where imginfo_id=15 -->2026-01-13 15:05:51
+14-->insert into app_cliente (clie_foto,clie_archivosrespaldo,clie_titularseguro,clie_diagnosticorecepcion,clie_token,grp_id,clie_cirugia,clie_especialidad,emp_id,clie_registrado,clie_tratante,tipoci_id,clie_ayudante,clie_direccion,clie_rucci,clie_apellido,prob_codigo,clie_anestesiologo,tippo_id,cant_codigo,clie_nombre,clie_complejidad,conve_id,clie_parroquia,civil_id,clie_tipoatencion,clie_codigoisspol,clie_telefono,clie_ocupacion,clie_lugarnacimiento,clie_quirofano,clie_fechanacimiento,clie_celular,clie_poliza,nac_id,tarterial_id,clie_email,clie_monto,clie_genero,clie_encadodeemergencia,clie_personaautoriza,idgen_id,orien_id,clie_parentescocontacto,clie_deducible,clie_emergenciatelf,clie_emergenciacelu,clie_cobertura,clie_institucion,clie_direccioncontacto,clie_copago,clie_registro,clie_enlace,clie_garantia,usua_id,clie_detallegarantia,clie_fechaingreso,centro_id,clie_seguromsparchivo,clie_hcpinos,clie_dondetrabaja,clie_tipoempresa,clie_puestotrabaja,clie_instruccion,clie_seguroprivadoarchivo,clie_clave) values ('','',1,'','',4,'','',1,'REGISTRADO','',1,'','PARAISO S22-72','1755232392','RODAS TOSCANO','17','',2,'1701','DANIEL FERNANDO','',22,'BELLA ARGELIA',1,'','','','ESTUDIANTE','QUITO','','2014-03-11','0984550828','',56,5,'deycitoscano@hotmail.com','','F','FERNANDO RODAS','',4,4,'PAPA',0,'','0984550588',0,'','',0,'2026-01-13 14:02:29','011724631260142026011302022941207',0,'14','',NULL,'1','','468','','','','2','','')-->2026-01-13 15:46:04
+37-->insert into dns_atencion (centro_id,clie_id,atenc_hc,tiposerv_id,usua_id,atenc_fecharegistro,esept_id,atenc_condiciondeingreso,atenc_fechaingreso,atenc_fechasalida,atenc_condiciondeegreso,atenc_observacion,emp_id,clie_ci,atenc_referencia,atenc_archivo,atenc_enlace,atenc_alergias) values (1,476,'1755232392-1','2',37,'2026-01-13 15:52:32','','','2026-01-13 15:52:32','2026-01-13 15:52:32','VIVO','GOLPE EN DEDOS PORUN COMPAÑERO ESTANDO JUGANDO',1,'1755232392','','','0117249395803720260113035232323','NINGUNA')-->2026-01-13 15:53:34
+14-->insert into app_cliente (clie_foto,clie_archivosrespaldo,clie_titularseguro,clie_diagnosticorecepcion,clie_token,grp_id,clie_cirugia,clie_especialidad,emp_id,clie_registrado,clie_tratante,tipoci_id,clie_ayudante,clie_direccion,clie_rucci,clie_apellido,prob_codigo,clie_anestesiologo,tippo_id,cant_codigo,clie_nombre,clie_complejidad,conve_id,clie_parroquia,civil_id,clie_tipoatencion,clie_codigoisspol,clie_telefono,clie_ocupacion,clie_lugarnacimiento,clie_quirofano,clie_fechanacimiento,clie_celular,clie_poliza,nac_id,tarterial_id,clie_email,clie_monto,clie_genero,clie_encadodeemergencia,clie_personaautoriza,idgen_id,orien_id,clie_parentescocontacto,clie_deducible,clie_emergenciatelf,clie_emergenciacelu,clie_cobertura,clie_institucion,clie_direccioncontacto,clie_copago,clie_registro,clie_enlace,clie_garantia,usua_id,clie_detallegarantia,clie_fechaingreso,centro_id,clie_seguromsparchivo,clie_hcpinos,clie_dondetrabaja,clie_tipoempresa,clie_puestotrabaja,clie_instruccion,clie_seguroprivadoarchivo,clie_clave) values ('','',0,'','',1,'','',1,'REGISTRADO','',1,'','DIAZ DE PINEDA OE2-155 Y PEDRO DORADO','0600160071','PAREDES VALDIVIESO','17','',3,'1701','ANGEL SALOMON','',2,'LA MAGDALENA',3,'','','','JUBILADO','CHIBORAZO','','1934-11-04','0984595292','',56,7,'parrilladaslachimenea@hotmail.com','','M','PATRICIO PAREDES','',4,4,'HIJO',0,'','0984595292',0,'','DIAZ DE PINEDA OE2-155 Y PEDRO DORADO',0,'2026-01-13 17:05:05','011724631260142026011305050540875',0,'14','',NULL,'1','','469','','','','2','','')-->2026-01-13 17:09:57

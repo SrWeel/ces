@@ -1,0 +1,11 @@
+update cesdb_arextension.dns_antecedentespersonalesnewconext set antep_descripcion='RECONSTRUCCION INTESTINAL TRAS TRAUMA CERRADO DE ABDOMEN POR ACCIDENTE DE TRANSITO HACE 30 AÑOS 
+ALERGIA MELOXICAM ' where antep_id=115
+update cesdb_arextension.dns_newtraumatologiagridorgano set gorgano_observacion='OMALGIA IZQUIERDA ' where gorgano_id=1434
+update cesdb_arextension.dns_newtraumatologiagridexamenfisico set gexamfis_observacion='' where gexamfis_id=3589
+update cesdb_arextension.dns_newtraumatologiagridexamenfisico set gexamfis_observacion='' where gexamfis_id=3589
+update cesdb_arextension.dns_newtraumatologiagridexamenfisico set gexamfis_observacion='HOMBRO IZQUIERDO DOLOR EN CARA LATERAL Y EN TRAYECTORIO DE BICEPS, JOBE + NEER+ FUERZA MUSCULAR DISMINUIDA, FLEXION ANTERIOR 120 Y ABDUCCION 145 º DOLOROSO, SENSIBILIDAD CONSERVADA' where gexamfis_id=3589
+update cesdb_arextension.dns_antecedentespersonalesnewconext set antep_descripcion='RINITIS ALERGICA DG RECIENTE EN TTO CETIRIZINA Y SPRAY CORTICOIDE' where antep_id=116
+update cesdb_arextension.dns_newconsultaexternagridorgano set gorgano_observacion='ODINOFAGIA ' where gorgano_id=572
+update cesdb_arextension.dns_newconsultaexternagridorgano set gorgano_observacion='ODINOFAGIA ' where gorgano_id=572
+update cesdb_arextension.dns_newconsultaexternagridorgano set gorgano_observacion='ODINOFAGIA, RINORREA, DISFAGIA ' where gorgano_id=572
+update cesdb_arextension.dns_newconsultaexternagridexamenfisico set gexamfis_observacion='PACIENTE CONSCIENTE ORIENTADA AFEBRIL OIDOS CAE PERMEABLE CON ERITEMA EN MEMBRANA TIMPANICA, NARIZ CON ERITEMA DE LA MUCOSA NASAL HIPERTROFIA DE CORNETES CON VESTIGIO DE SECRECIONES HIALINAS, MUCOSAS ORALES SEMIHUMEDAS OROFARINGE ERITEMATOSA AMIGDALAS GRADO I SIGNO DE EMPEDRADO, ADENOPATIAS CERVICALES PRESENTES, PULMONES MV DISCRETAMENTE DISMINUIDO NO RUIDOS' where gexamfis_id=1435

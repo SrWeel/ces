@@ -1,0 +1,15 @@
+update gogess_sisfield set fie_title='Grado de Complejidad:' where fie_id='12247';
+update gogess_sisfield set fie_group='4' where fie_id='12247';
+update gogess_sisfield set fie_orden='8' where fie_id='12247';
+update gogess_sisfield set fie_anchocolomna='' where fie_id='12247';
+update gogess_sisfield set fie_groupprint='4' where fie_id='12247';
+update gogess_sisfield set fie_group='4' where fie_id='12248';
+update gogess_sisfield set fie_orden='9' where fie_id='12248';
+update gogess_sisfield set fie_groupprint='4' where fie_id='12248';
+update gogess_sisfield set fie_anchocolomna='6' where fie_id='12248';
+update gogess_sisfield set fie_group='4' where fie_id='12249';
+update gogess_sisfield set fie_orden='10' where fie_id='12249';
+update gogess_sisfield set fie_groupprint='4' where fie_id='12249';
+update gogess_sisfield set fie_anchocolomna='6' where fie_id='12249';
+update gogess_sisfield set fie_anchocolomna='6' where fie_id='12247';
+update gogess_sisfield set fie_anchocolomna='6' where fie_id='8051';

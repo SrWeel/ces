@@ -30,6 +30,7 @@ dns_newemergenciaanamesis
 dns_newemergenciaanamesis
 app_cliente
 app_cliente
-dns_enfermeria
-dns_enfermeria
-dns_enfermeria
+app_cliente
+dns_atencion
+app_cliente
+dns_newemergenciaanamesis

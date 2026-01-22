@@ -1,0 +1,1 @@
+update cesdb_arextension.dns_antecedentespersonalesnewconext set antep_descripcion='ARTROSIS LUMBAR' where antep_id=117

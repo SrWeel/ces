@@ -920,3 +920,1369 @@
 [22-Dec-2025 16:34:16 America/Guayaquil] =================================
 [22-Dec-2025 16:34:16 America/Guayaquil] === ✅ SUBIDA COMPLETADA EXITOSAMENTE ===
 [22-Dec-2025 16:34:16 America/Guayaquil] =================================
+[12-Jan-2026 20:28:18 America/Guayaquil] =================================
+[12-Jan-2026 20:28:18 America/Guayaquil] === DIAGNÓSTICO CONFIGURACIÓN ===
+[12-Jan-2026 20:28:18 America/Guayaquil] =================================
+[12-Jan-2026 20:28:18 America/Guayaquil] upload_max_filesize: 40M
+[12-Jan-2026 20:28:18 America/Guayaquil] post_max_size: 80M
+[12-Jan-2026 20:28:18 America/Guayaquil] max_file_uploads: 20
+[12-Jan-2026 20:28:18 America/Guayaquil] memory_limit: -1
+[12-Jan-2026 20:28:18 America/Guayaquil] max_execution_time: 30
+[12-Jan-2026 20:28:18 America/Guayaquil] file_uploads: Enabled
+[12-Jan-2026 20:28:18 America/Guayaquil] upload_tmp_dir: default
+[12-Jan-2026 20:28:18 America/Guayaquil] =================================
+[12-Jan-2026 20:28:18 America/Guayaquil] ✅ Carpeta base tiene permisos de escritura
+[12-Jan-2026 20:28:18 America/Guayaquil] =================================
+[12-Jan-2026 20:28:18 America/Guayaquil] === VALIDACIÓN DE ARCHIVOS ===
+[12-Jan-2026 20:28:18 America/Guayaquil] =================================
+[12-Jan-2026 20:28:18 America/Guayaquil] isset($_FILES['dicom_files']): NO
+[12-Jan-2026 20:28:18 America/Guayaquil] =================================
+[12-Jan-2026 20:28:18 America/Guayaquil] === ❌ EXCEPCIÓN CAPTURADA ===
+[12-Jan-2026 20:28:18 America/Guayaquil] =================================
+[12-Jan-2026 20:28:18 America/Guayaquil] Mensaje: No se recibieron archivos DICOM. Verifica que el formulario tenga enctype="multipart/form-data"
+[12-Jan-2026 20:28:18 America/Guayaquil] Archivo: /var/www/html/ces/upload_dicom.php
+[12-Jan-2026 20:28:18 America/Guayaquil] Línea: 78
+[12-Jan-2026 20:28:18 America/Guayaquil] =================================
+[12-Jan-2026 20:28:18 America/Guayaquil] POST recibido:
+[12-Jan-2026 20:28:18 America/Guayaquil] Array
+(
+)
+
+[12-Jan-2026 20:28:18 America/Guayaquil] =================================
+[12-Jan-2026 20:28:18 America/Guayaquil] FILES recibido:
+[12-Jan-2026 20:28:18 America/Guayaquil] Array
+(
+)
+
+[12-Jan-2026 20:28:18 America/Guayaquil] =================================
+[12-Jan-2026 20:43:15 America/Guayaquil] =================================
+[12-Jan-2026 20:43:15 America/Guayaquil] === DIAGNÓSTICO CONFIGURACIÓN ===
+[12-Jan-2026 20:43:15 America/Guayaquil] =================================
+[12-Jan-2026 20:43:15 America/Guayaquil] upload_max_filesize: 40M
+[12-Jan-2026 20:43:15 America/Guayaquil] post_max_size: 80M
+[12-Jan-2026 20:43:15 America/Guayaquil] max_file_uploads: 20
+[12-Jan-2026 20:43:15 America/Guayaquil] memory_limit: -1
+[12-Jan-2026 20:43:15 America/Guayaquil] max_execution_time: 30
+[12-Jan-2026 20:43:15 America/Guayaquil] file_uploads: Enabled
+[12-Jan-2026 20:43:15 America/Guayaquil] upload_tmp_dir: default
+[12-Jan-2026 20:43:15 America/Guayaquil] =================================
+[12-Jan-2026 20:43:15 America/Guayaquil] ✅ Carpeta base tiene permisos de escritura
+[12-Jan-2026 20:43:15 America/Guayaquil] =================================
+[12-Jan-2026 20:43:15 America/Guayaquil] === VALIDACIÓN DE ARCHIVOS ===
+[12-Jan-2026 20:43:15 America/Guayaquil] =================================
+[12-Jan-2026 20:43:15 America/Guayaquil] isset($_FILES['dicom_files']): NO
+[12-Jan-2026 20:43:15 America/Guayaquil] =================================
+[12-Jan-2026 20:43:15 America/Guayaquil] === ❌ EXCEPCIÓN CAPTURADA ===
+[12-Jan-2026 20:43:15 America/Guayaquil] =================================
+[12-Jan-2026 20:43:15 America/Guayaquil] Mensaje: No se recibieron archivos DICOM. Verifica que el formulario tenga enctype="multipart/form-data"
+[12-Jan-2026 20:43:15 America/Guayaquil] Archivo: /var/www/html/ces/upload_dicom.php
+[12-Jan-2026 20:43:15 America/Guayaquil] Línea: 78
+[12-Jan-2026 20:43:15 America/Guayaquil] =================================
+[12-Jan-2026 20:43:15 America/Guayaquil] POST recibido:
+[12-Jan-2026 20:43:15 America/Guayaquil] Array
+(
+)
+
+[12-Jan-2026 20:43:15 America/Guayaquil] =================================
+[12-Jan-2026 20:43:15 America/Guayaquil] FILES recibido:
+[12-Jan-2026 20:43:15 America/Guayaquil] Array
+(
+)
+
+[12-Jan-2026 20:43:15 America/Guayaquil] =================================
+[12-Jan-2026 20:43:42 America/Guayaquil] =================================
+[12-Jan-2026 20:43:42 America/Guayaquil] === DIAGNÓSTICO CONFIGURACIÓN ===
+[12-Jan-2026 20:43:42 America/Guayaquil] =================================
+[12-Jan-2026 20:43:42 America/Guayaquil] upload_max_filesize: 40M
+[12-Jan-2026 20:43:42 America/Guayaquil] post_max_size: 80M
+[12-Jan-2026 20:43:42 America/Guayaquil] max_file_uploads: 20
+[12-Jan-2026 20:43:42 America/Guayaquil] memory_limit: -1
+[12-Jan-2026 20:43:42 America/Guayaquil] max_execution_time: 30
+[12-Jan-2026 20:43:42 America/Guayaquil] file_uploads: Enabled
+[12-Jan-2026 20:43:42 America/Guayaquil] upload_tmp_dir: default
+[12-Jan-2026 20:43:42 America/Guayaquil] =================================
+[12-Jan-2026 20:43:42 America/Guayaquil] ✅ Carpeta base tiene permisos de escritura
+[12-Jan-2026 20:43:42 America/Guayaquil] =================================
+[12-Jan-2026 20:43:42 America/Guayaquil] === VALIDACIÓN DE ARCHIVOS ===
+[12-Jan-2026 20:43:42 America/Guayaquil] =================================
+[12-Jan-2026 20:43:42 America/Guayaquil] isset($_FILES['dicom_files']): NO
+[12-Jan-2026 20:43:42 America/Guayaquil] =================================
+[12-Jan-2026 20:43:42 America/Guayaquil] === ❌ EXCEPCIÓN CAPTURADA ===
+[12-Jan-2026 20:43:42 America/Guayaquil] =================================
+[12-Jan-2026 20:43:42 America/Guayaquil] Mensaje: No se recibieron archivos DICOM. Verifica que el formulario tenga enctype="multipart/form-data"
+[12-Jan-2026 20:43:42 America/Guayaquil] Archivo: /var/www/html/ces/upload_dicom.php
+[12-Jan-2026 20:43:42 America/Guayaquil] Línea: 78
+[12-Jan-2026 20:43:42 America/Guayaquil] =================================
+[12-Jan-2026 20:43:42 America/Guayaquil] POST recibido:
+[12-Jan-2026 20:43:42 America/Guayaquil] Array
+(
+)
+
+[12-Jan-2026 20:43:42 America/Guayaquil] =================================
+[12-Jan-2026 20:43:42 America/Guayaquil] FILES recibido:
+[12-Jan-2026 20:43:42 America/Guayaquil] Array
+(
+)
+
+[12-Jan-2026 20:43:42 America/Guayaquil] =================================
+[12-Jan-2026 20:44:07 America/Guayaquil] =================================
+[12-Jan-2026 20:44:07 America/Guayaquil] === DIAGNÓSTICO CONFIGURACIÓN ===
+[12-Jan-2026 20:44:07 America/Guayaquil] =================================
+[12-Jan-2026 20:44:07 America/Guayaquil] upload_max_filesize: 40M
+[12-Jan-2026 20:44:07 America/Guayaquil] post_max_size: 80M
+[12-Jan-2026 20:44:07 America/Guayaquil] max_file_uploads: 20
+[12-Jan-2026 20:44:07 America/Guayaquil] memory_limit: -1
+[12-Jan-2026 20:44:07 America/Guayaquil] max_execution_time: 30
+[12-Jan-2026 20:44:07 America/Guayaquil] file_uploads: Enabled
+[12-Jan-2026 20:44:07 America/Guayaquil] upload_tmp_dir: default
+[12-Jan-2026 20:44:07 America/Guayaquil] =================================
+[12-Jan-2026 20:44:07 America/Guayaquil] ✅ Carpeta base tiene permisos de escritura
+[12-Jan-2026 20:44:07 America/Guayaquil] =================================
+[12-Jan-2026 20:44:07 America/Guayaquil] === VALIDACIÓN DE ARCHIVOS ===
+[12-Jan-2026 20:44:07 America/Guayaquil] =================================
+[12-Jan-2026 20:44:07 America/Guayaquil] isset($_FILES['dicom_files']): NO
+[12-Jan-2026 20:44:07 America/Guayaquil] =================================
+[12-Jan-2026 20:44:07 America/Guayaquil] === ❌ EXCEPCIÓN CAPTURADA ===
+[12-Jan-2026 20:44:07 America/Guayaquil] =================================
+[12-Jan-2026 20:44:07 America/Guayaquil] Mensaje: No se recibieron archivos DICOM. Verifica que el formulario tenga enctype="multipart/form-data"
+[12-Jan-2026 20:44:07 America/Guayaquil] Archivo: /var/www/html/ces/upload_dicom.php
+[12-Jan-2026 20:44:07 America/Guayaquil] Línea: 78
+[12-Jan-2026 20:44:07 America/Guayaquil] =================================
+[12-Jan-2026 20:44:07 America/Guayaquil] POST recibido:
+[12-Jan-2026 20:44:07 America/Guayaquil] Array
+(
+)
+
+[12-Jan-2026 20:44:07 America/Guayaquil] =================================
+[12-Jan-2026 20:44:07 America/Guayaquil] FILES recibido:
+[12-Jan-2026 20:44:07 America/Guayaquil] Array
+(
+)
+
+[12-Jan-2026 20:44:07 America/Guayaquil] =================================
+[12-Jan-2026 20:46:53 America/Guayaquil] =================================
+[12-Jan-2026 20:46:53 America/Guayaquil] === DIAGNÓSTICO CONFIGURACIÓN ===
+[12-Jan-2026 20:46:53 America/Guayaquil] =================================
+[12-Jan-2026 20:46:53 America/Guayaquil] upload_max_filesize: 40M
+[12-Jan-2026 20:46:53 America/Guayaquil] post_max_size: 80M
+[12-Jan-2026 20:46:53 America/Guayaquil] max_file_uploads: 20
+[12-Jan-2026 20:46:53 America/Guayaquil] memory_limit: -1
+[12-Jan-2026 20:46:53 America/Guayaquil] max_execution_time: 30
+[12-Jan-2026 20:46:53 America/Guayaquil] file_uploads: Enabled
+[12-Jan-2026 20:46:53 America/Guayaquil] upload_tmp_dir: default
+[12-Jan-2026 20:46:53 America/Guayaquil] =================================
+[12-Jan-2026 20:46:53 America/Guayaquil] ✅ Carpeta base tiene permisos de escritura
+[12-Jan-2026 20:46:53 America/Guayaquil] =================================
+[12-Jan-2026 20:46:53 America/Guayaquil] === VALIDACIÓN DE ARCHIVOS ===
+[12-Jan-2026 20:46:53 America/Guayaquil] =================================
+[12-Jan-2026 20:46:53 America/Guayaquil] isset($_FILES['dicom_files']): SI
+[12-Jan-2026 20:46:53 America/Guayaquil] Estructura $_FILES['dicom_files']: Array
+(
+    [name] => Array
+        (
+            [0] => 1714943444_BARROS MORETA SARHI 44_SPN_WATERS_image1767813651670.dcm
+            [1] => 1714943444_BARROS MORETA SARHI 44_SPN_CALDWELL_image1767813708046.dcm
+            [2] => 1714943444_BARROS MORETA SARHI 44_SPN_LATERAL_image1767813749590.dcm
+        )
+
+    [type] => Array
+        (
+            [0] => application/octet-stream
+            [1] => application/octet-stream
+            [2] => application/octet-stream
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => /tmp/phpf0nZN0
+            [1] => /tmp/phpV48dhy
+            [2] => /tmp/phphSSMCY
+        )
+
+    [error] => Array
+        (
+            [0] => 0
+            [1] => 0
+            [2] => 0
+        )
+
+    [size] => Array
+        (
+            [0] => 8131702
+            [1] => 7748888
+            [2] => 10868570
+        )
+
+)
+
+[12-Jan-2026 20:46:53 America/Guayaquil] ¿Tiene name[0]?: SI
+[12-Jan-2026 20:46:53 America/Guayaquil] ¿name[0] está vacío?: NO
+[12-Jan-2026 20:46:53 America/Guayaquil] =================================
+[12-Jan-2026 20:46:53 America/Guayaquil] === DATOS DEL FORMULARIO ===
+[12-Jan-2026 20:46:53 America/Guayaquil] =================================
+[12-Jan-2026 20:46:53 America/Guayaquil] clie_id: 26
+[12-Jan-2026 20:46:53 America/Guayaquil] atenc_id: 16
+[12-Jan-2026 20:46:53 America/Guayaquil] centro_id: 1
+[12-Jan-2026 20:46:53 America/Guayaquil] usua_id: 8
+[12-Jan-2026 20:46:53 America/Guayaquil] imginfo_enlace: 26010503878241820260112084640479
+[12-Jan-2026 20:46:53 America/Guayaquil] imgag_id: 7
+[12-Jan-2026 20:46:53 America/Guayaquil] imginfo_id: 0
+[12-Jan-2026 20:46:53 America/Guayaquil] 🔍 Buscando imginfo_id usando imginfo_enlace: 26010503878241820260112084640479
+[12-Jan-2026 20:46:53 America/Guayaquil] ❌ No se encontró registro con imginfo_enlace: 26010503878241820260112084640479
+[12-Jan-2026 20:46:53 America/Guayaquil] =================================
+[12-Jan-2026 20:46:53 America/Guayaquil] === ❌ EXCEPCIÓN CAPTURADA ===
+[12-Jan-2026 20:46:53 America/Guayaquil] =================================
+[12-Jan-2026 20:46:53 America/Guayaquil] Mensaje: No se encontró el registro de imagenología. Guarde primero el formulario antes de subir archivos DICOM.
+[12-Jan-2026 20:46:53 America/Guayaquil] Archivo: /var/www/html/ces/upload_dicom.php
+[12-Jan-2026 20:46:53 America/Guayaquil] Línea: 129
+[12-Jan-2026 20:46:53 America/Guayaquil] =================================
+[12-Jan-2026 20:46:53 America/Guayaquil] POST recibido:
+[12-Jan-2026 20:46:53 America/Guayaquil] Array
+(
+    [clie_id] => 26
+    [atenc_id] => 16
+    [centro_id] => 1
+    [usua_id] => 8
+    [imginfo_id] => 
+    [imginfo_enlace] => 26010503878241820260112084640479
+    [imginfo_fecharegistro] => 2026-01-12 20:46:40
+    [prob_codigo] => 
+    [imgag_id] => 7
+    [cant_codigo] => 
+    [imginfo_personarecibe] => 
+    [imginfo_fechaentrega] => 
+    [imginfo_profesionalsolicitante] => 
+    [imginfo_emergencia] => 0
+    [imginfo_consulta] => 0
+    [imginfo_hospital] => 0
+    [imginfo_servicio] => 
+    [imginfo_rxconvencional] => 0
+    [imginfo_tomografia] => 0
+    [imginfo_rxportatil] => 0
+    [imginfo_resonancia] => 0
+    [imginfo_ecografia] => 0
+    [imginfo_mamografia] => 0
+    [imginfo_procedimientos] => 0
+    [imginfo_otros] => 0
+    [imginfo_sedacion] => 
+    [imginfo_describir] => 
+    [imginfo_informe] => 
+    [dicom_folder_path] => 
+    [dicom_files_count] => 3
+    [imginfo_recomendaciones] => 
+    [csearch] => 
+    [clie_idx] => 26
+    [idab] => 
+    [opcion_dns_newimagenologiainfo] => guardar
+    [table] => dns_newimagenologiainfo
+    [atenc_idx] => 16
+    [imginfo_enlacex] => 26010503878241820260112084640479
+)
+
+[12-Jan-2026 20:46:53 America/Guayaquil] =================================
+[12-Jan-2026 20:46:53 America/Guayaquil] FILES recibido:
+[12-Jan-2026 20:46:53 America/Guayaquil] Array
+(
+    [dicom_files] => Array
+        (
+            [name] => Array
+                (
+                    [0] => 1714943444_BARROS MORETA SARHI 44_SPN_WATERS_image1767813651670.dcm
+                    [1] => 1714943444_BARROS MORETA SARHI 44_SPN_CALDWELL_image1767813708046.dcm
+                    [2] => 1714943444_BARROS MORETA SARHI 44_SPN_LATERAL_image1767813749590.dcm
+                )
+
+            [type] => Array
+                (
+                    [0] => application/octet-stream
+                    [1] => application/octet-stream
+                    [2] => application/octet-stream
+                )
+
+            [tmp_name] => Array
+                (
+                    [0] => /tmp/phpf0nZN0
+                    [1] => /tmp/phpV48dhy
+                    [2] => /tmp/phphSSMCY
+                )
+
+            [error] => Array
+                (
+                    [0] => 0
+                    [1] => 0
+                    [2] => 0
+                )
+
+            [size] => Array
+                (
+                    [0] => 8131702
+                    [1] => 7748888
+                    [2] => 10868570
+                )
+
+        )
+
+)
+
+[12-Jan-2026 20:46:53 America/Guayaquil] =================================
+[12-Jan-2026 20:47:08 America/Guayaquil] =================================
+[12-Jan-2026 20:47:08 America/Guayaquil] === DIAGNÓSTICO CONFIGURACIÓN ===
+[12-Jan-2026 20:47:08 America/Guayaquil] =================================
+[12-Jan-2026 20:47:08 America/Guayaquil] upload_max_filesize: 40M
+[12-Jan-2026 20:47:08 America/Guayaquil] post_max_size: 80M
+[12-Jan-2026 20:47:08 America/Guayaquil] max_file_uploads: 20
+[12-Jan-2026 20:47:08 America/Guayaquil] memory_limit: -1
+[12-Jan-2026 20:47:08 America/Guayaquil] max_execution_time: 30
+[12-Jan-2026 20:47:08 America/Guayaquil] file_uploads: Enabled
+[12-Jan-2026 20:47:08 America/Guayaquil] upload_tmp_dir: default
+[12-Jan-2026 20:47:08 America/Guayaquil] =================================
+[12-Jan-2026 20:47:08 America/Guayaquil] ✅ Carpeta base tiene permisos de escritura
+[12-Jan-2026 20:47:08 America/Guayaquil] =================================
+[12-Jan-2026 20:47:08 America/Guayaquil] === VALIDACIÓN DE ARCHIVOS ===
+[12-Jan-2026 20:47:08 America/Guayaquil] =================================
+[12-Jan-2026 20:47:08 America/Guayaquil] isset($_FILES['dicom_files']): SI
+[12-Jan-2026 20:47:08 America/Guayaquil] Estructura $_FILES['dicom_files']: Array
+(
+    [name] => Array
+        (
+            [0] => 1714943444_BARROS MORETA SARHI 44_SPN_WATERS_image1767813651670.dcm
+            [1] => 1714943444_BARROS MORETA SARHI 44_SPN_CALDWELL_image1767813708046.dcm
+            [2] => 1714943444_BARROS MORETA SARHI 44_SPN_LATERAL_image1767813749590.dcm
+        )
+
+    [type] => Array
+        (
+            [0] => application/octet-stream
+            [1] => application/octet-stream
+            [2] => application/octet-stream
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => /tmp/phpja9Xq1
+            [1] => /tmp/phpDMleWJ
+            [2] => /tmp/phpTcbhMO
+        )
+
+    [error] => Array
+        (
+            [0] => 0
+            [1] => 0
+            [2] => 0
+        )
+
+    [size] => Array
+        (
+            [0] => 8131702
+            [1] => 7748888
+            [2] => 10868570
+        )
+
+)
+
+[12-Jan-2026 20:47:08 America/Guayaquil] ¿Tiene name[0]?: SI
+[12-Jan-2026 20:47:08 America/Guayaquil] ¿name[0] está vacío?: NO
+[12-Jan-2026 20:47:08 America/Guayaquil] =================================
+[12-Jan-2026 20:47:08 America/Guayaquil] === DATOS DEL FORMULARIO ===
+[12-Jan-2026 20:47:08 America/Guayaquil] =================================
+[12-Jan-2026 20:47:08 America/Guayaquil] clie_id: 26
+[12-Jan-2026 20:47:08 America/Guayaquil] atenc_id: 16
+[12-Jan-2026 20:47:08 America/Guayaquil] centro_id: 1
+[12-Jan-2026 20:47:08 America/Guayaquil] usua_id: 8
+[12-Jan-2026 20:47:08 America/Guayaquil] imginfo_enlace: 26010503878241820260112084640479
+[12-Jan-2026 20:47:08 America/Guayaquil] imgag_id: 7
+[12-Jan-2026 20:47:08 America/Guayaquil] imginfo_id: 0
+[12-Jan-2026 20:47:08 America/Guayaquil] 🔍 Buscando imginfo_id usando imginfo_enlace: 26010503878241820260112084640479
+[12-Jan-2026 20:47:08 America/Guayaquil] ❌ No se encontró registro con imginfo_enlace: 26010503878241820260112084640479
+[12-Jan-2026 20:47:08 America/Guayaquil] =================================
+[12-Jan-2026 20:47:08 America/Guayaquil] === ❌ EXCEPCIÓN CAPTURADA ===
+[12-Jan-2026 20:47:08 America/Guayaquil] =================================
+[12-Jan-2026 20:47:08 America/Guayaquil] Mensaje: No se encontró el registro de imagenología. Guarde primero el formulario antes de subir archivos DICOM.
+[12-Jan-2026 20:47:08 America/Guayaquil] Archivo: /var/www/html/ces/upload_dicom.php
+[12-Jan-2026 20:47:08 America/Guayaquil] Línea: 129
+[12-Jan-2026 20:47:08 America/Guayaquil] =================================
+[12-Jan-2026 20:47:08 America/Guayaquil] POST recibido:
+[12-Jan-2026 20:47:08 America/Guayaquil] Array
+(
+    [clie_id] => 26
+    [atenc_id] => 16
+    [centro_id] => 1
+    [usua_id] => 8
+    [imginfo_id] => 
+    [imginfo_enlace] => 26010503878241820260112084640479
+    [imginfo_fecharegistro] => 2026-01-12 20:46:40
+    [prob_codigo] => 
+    [imgag_id] => 7
+    [cant_codigo] => 
+    [imginfo_personarecibe] => 
+    [imginfo_fechaentrega] => 2026-01-07
+    [imginfo_profesionalsolicitante] => 
+    [imginfo_emergencia] => 0
+    [imginfo_consulta] => 0
+    [imginfo_hospital] => 0
+    [imginfo_servicio] => 
+    [imginfo_rxconvencional] => 0
+    [imginfo_tomografia] => 0
+    [imginfo_rxportatil] => 0
+    [imginfo_resonancia] => 0
+    [imginfo_ecografia] => 0
+    [imginfo_mamografia] => 0
+    [imginfo_procedimientos] => 0
+    [imginfo_otros] => 0
+    [imginfo_sedacion] => 
+    [imginfo_describir] => 
+    [imginfo_informe] => 
+    [dicom_folder_path] => 
+    [dicom_files_count] => 3
+    [imginfo_recomendaciones] => 
+    [csearch] => 
+    [clie_idx] => 26
+    [idab] => 
+    [opcion_dns_newimagenologiainfo] => guardar
+    [table] => dns_newimagenologiainfo
+    [atenc_idx] => 16
+    [imginfo_enlacex] => 26010503878241820260112084640479
+)
+
+[12-Jan-2026 20:47:08 America/Guayaquil] =================================
+[12-Jan-2026 20:47:08 America/Guayaquil] FILES recibido:
+[12-Jan-2026 20:47:08 America/Guayaquil] Array
+(
+    [dicom_files] => Array
+        (
+            [name] => Array
+                (
+                    [0] => 1714943444_BARROS MORETA SARHI 44_SPN_WATERS_image1767813651670.dcm
+                    [1] => 1714943444_BARROS MORETA SARHI 44_SPN_CALDWELL_image1767813708046.dcm
+                    [2] => 1714943444_BARROS MORETA SARHI 44_SPN_LATERAL_image1767813749590.dcm
+                )
+
+            [type] => Array
+                (
+                    [0] => application/octet-stream
+                    [1] => application/octet-stream
+                    [2] => application/octet-stream
+                )
+
+            [tmp_name] => Array
+                (
+                    [0] => /tmp/phpja9Xq1
+                    [1] => /tmp/phpDMleWJ
+                    [2] => /tmp/phpTcbhMO
+                )
+
+            [error] => Array
+                (
+                    [0] => 0
+                    [1] => 0
+                    [2] => 0
+                )
+
+            [size] => Array
+                (
+                    [0] => 8131702
+                    [1] => 7748888
+                    [2] => 10868570
+                )
+
+        )
+
+)
+
+[12-Jan-2026 20:47:08 America/Guayaquil] =================================
+[12-Jan-2026 20:52:10 America/Guayaquil] =================================
+[12-Jan-2026 20:52:10 America/Guayaquil] === DIAGNÓSTICO CONFIGURACIÓN ===
+[12-Jan-2026 20:52:10 America/Guayaquil] =================================
+[12-Jan-2026 20:52:10 America/Guayaquil] upload_max_filesize: 40M
+[12-Jan-2026 20:52:10 America/Guayaquil] post_max_size: 80M
+[12-Jan-2026 20:52:10 America/Guayaquil] max_file_uploads: 20
+[12-Jan-2026 20:52:10 America/Guayaquil] memory_limit: -1
+[12-Jan-2026 20:52:10 America/Guayaquil] max_execution_time: 30
+[12-Jan-2026 20:52:10 America/Guayaquil] file_uploads: Enabled
+[12-Jan-2026 20:52:10 America/Guayaquil] upload_tmp_dir: default
+[12-Jan-2026 20:52:10 America/Guayaquil] =================================
+[12-Jan-2026 20:52:10 America/Guayaquil] ✅ Carpeta base tiene permisos de escritura
+[12-Jan-2026 20:52:10 America/Guayaquil] =================================
+[12-Jan-2026 20:52:10 America/Guayaquil] === VALIDACIÓN DE ARCHIVOS ===
+[12-Jan-2026 20:52:10 America/Guayaquil] =================================
+[12-Jan-2026 20:52:10 America/Guayaquil] isset($_FILES['dicom_files']): SI
+[12-Jan-2026 20:52:10 America/Guayaquil] Estructura $_FILES['dicom_files']: Array
+(
+    [name] => Array
+        (
+            [0] => 25AA_ZUMBA ROBLES MOSCAR_CLAVICULA_AP_image1768249062567.dcm
+            [1] => 25AA_ZUMBA ROBLES MOSCAR_CLAVICULA_LORDOTICA_image1768249081086.dcm
+        )
+
+    [type] => Array
+        (
+            [0] => application/octet-stream
+            [1] => application/octet-stream
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => /tmp/phpyVgHYj
+            [1] => /tmp/php4HbbAl
+        )
+
+    [error] => Array
+        (
+            [0] => 0
+            [1] => 0
+        )
+
+    [size] => Array
+        (
+            [0] => 6987830
+            [1] => 8701374
+        )
+
+)
+
+[12-Jan-2026 20:52:10 America/Guayaquil] ¿Tiene name[0]?: SI
+[12-Jan-2026 20:52:10 America/Guayaquil] ¿name[0] está vacío?: NO
+[12-Jan-2026 20:52:10 America/Guayaquil] =================================
+[12-Jan-2026 20:52:10 America/Guayaquil] === DATOS DEL FORMULARIO ===
+[12-Jan-2026 20:52:10 America/Guayaquil] =================================
+[12-Jan-2026 20:52:10 America/Guayaquil] clie_id: 164
+[12-Jan-2026 20:52:10 America/Guayaquil] atenc_id: 132
+[12-Jan-2026 20:52:10 America/Guayaquil] centro_id: 1
+[12-Jan-2026 20:52:10 America/Guayaquil] usua_id: 8
+[12-Jan-2026 20:52:10 America/Guayaquil] imginfo_enlace: 164010503878241820260112085144353
+[12-Jan-2026 20:52:10 America/Guayaquil] imgag_id: 17
+[12-Jan-2026 20:52:10 America/Guayaquil] imginfo_id: 0
+[12-Jan-2026 20:52:10 America/Guayaquil] 🔍 Buscando imginfo_id usando imginfo_enlace: 164010503878241820260112085144353
+[12-Jan-2026 20:52:10 America/Guayaquil] ❌ No se encontró registro con imginfo_enlace: 164010503878241820260112085144353
+[12-Jan-2026 20:52:10 America/Guayaquil] =================================
+[12-Jan-2026 20:52:10 America/Guayaquil] === ❌ EXCEPCIÓN CAPTURADA ===
+[12-Jan-2026 20:52:10 America/Guayaquil] =================================
+[12-Jan-2026 20:52:10 America/Guayaquil] Mensaje: No se encontró el registro de imagenología. Guarde primero el formulario antes de subir archivos DICOM.
+[12-Jan-2026 20:52:10 America/Guayaquil] Archivo: /var/www/html/ces/upload_dicom.php
+[12-Jan-2026 20:52:10 America/Guayaquil] Línea: 129
+[12-Jan-2026 20:52:10 America/Guayaquil] =================================
+[12-Jan-2026 20:52:10 America/Guayaquil] POST recibido:
+[12-Jan-2026 20:52:10 America/Guayaquil] Array
+(
+    [clie_id] => 164
+    [atenc_id] => 132
+    [centro_id] => 1
+    [usua_id] => 8
+    [imginfo_id] => 
+    [imginfo_enlace] => 164010503878241820260112085144353
+    [imginfo_fecharegistro] => 2026-01-12 20:51:44
+    [prob_codigo] => 
+    [imgag_id] => 17
+    [cant_codigo] => 
+    [imginfo_personarecibe] => 
+    [imginfo_fechaentrega] => 
+    [imginfo_profesionalsolicitante] => 
+    [imginfo_emergencia] => 0
+    [imginfo_consulta] => 0
+    [imginfo_hospital] => 0
+    [imginfo_servicio] => 
+    [imginfo_rxconvencional] => 0
+    [imginfo_tomografia] => 0
+    [imginfo_rxportatil] => 0
+    [imginfo_resonancia] => 0
+    [imginfo_ecografia] => 0
+    [imginfo_mamografia] => 0
+    [imginfo_procedimientos] => 0
+    [imginfo_otros] => 0
+    [imginfo_sedacion] => 
+    [imginfo_describir] => 
+    [imginfo_informe] => 
+    [dicom_folder_path] => 
+    [dicom_files_count] => 2
+    [imginfo_recomendaciones] => 
+    [csearch] => 
+    [clie_idx] => 164
+    [idab] => 
+    [opcion_dns_newimagenologiainfo] => guardar
+    [table] => dns_newimagenologiainfo
+    [atenc_idx] => 132
+    [imginfo_enlacex] => 164010503878241820260112085144353
+)
+
+[12-Jan-2026 20:52:10 America/Guayaquil] =================================
+[12-Jan-2026 20:52:10 America/Guayaquil] FILES recibido:
+[12-Jan-2026 20:52:10 America/Guayaquil] Array
+(
+    [dicom_files] => Array
+        (
+            [name] => Array
+                (
+                    [0] => 25AA_ZUMBA ROBLES MOSCAR_CLAVICULA_AP_image1768249062567.dcm
+                    [1] => 25AA_ZUMBA ROBLES MOSCAR_CLAVICULA_LORDOTICA_image1768249081086.dcm
+                )
+
+            [type] => Array
+                (
+                    [0] => application/octet-stream
+                    [1] => application/octet-stream
+                )
+
+            [tmp_name] => Array
+                (
+                    [0] => /tmp/phpyVgHYj
+                    [1] => /tmp/php4HbbAl
+                )
+
+            [error] => Array
+                (
+                    [0] => 0
+                    [1] => 0
+                )
+
+            [size] => Array
+                (
+                    [0] => 6987830
+                    [1] => 8701374
+                )
+
+        )
+
+)
+
+[12-Jan-2026 20:52:10 America/Guayaquil] =================================
+[12-Jan-2026 20:52:18 America/Guayaquil] =================================
+[12-Jan-2026 20:52:18 America/Guayaquil] === DIAGNÓSTICO CONFIGURACIÓN ===
+[12-Jan-2026 20:52:18 America/Guayaquil] =================================
+[12-Jan-2026 20:52:18 America/Guayaquil] upload_max_filesize: 40M
+[12-Jan-2026 20:52:18 America/Guayaquil] post_max_size: 80M
+[12-Jan-2026 20:52:18 America/Guayaquil] max_file_uploads: 20
+[12-Jan-2026 20:52:18 America/Guayaquil] memory_limit: -1
+[12-Jan-2026 20:52:18 America/Guayaquil] max_execution_time: 30
+[12-Jan-2026 20:52:18 America/Guayaquil] file_uploads: Enabled
+[12-Jan-2026 20:52:18 America/Guayaquil] upload_tmp_dir: default
+[12-Jan-2026 20:52:18 America/Guayaquil] =================================
+[12-Jan-2026 20:52:18 America/Guayaquil] ✅ Carpeta base tiene permisos de escritura
+[12-Jan-2026 20:52:18 America/Guayaquil] =================================
+[12-Jan-2026 20:52:18 America/Guayaquil] === VALIDACIÓN DE ARCHIVOS ===
+[12-Jan-2026 20:52:18 America/Guayaquil] =================================
+[12-Jan-2026 20:52:18 America/Guayaquil] isset($_FILES['dicom_files']): SI
+[12-Jan-2026 20:52:18 America/Guayaquil] Estructura $_FILES['dicom_files']: Array
+(
+    [name] => Array
+        (
+            [0] => 25AA_ZUMBA ROBLES MOSCAR_CLAVICULA_AP_image1768249062567.dcm
+            [1] => 25AA_ZUMBA ROBLES MOSCAR_CLAVICULA_LORDOTICA_image1768249081086.dcm
+        )
+
+    [type] => Array
+        (
+            [0] => application/octet-stream
+            [1] => application/octet-stream
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => /tmp/phpSLkHoa
+            [1] => /tmp/phpvZjlfC
+        )
+
+    [error] => Array
+        (
+            [0] => 0
+            [1] => 0
+        )
+
+    [size] => Array
+        (
+            [0] => 6987830
+            [1] => 8701374
+        )
+
+)
+
+[12-Jan-2026 20:52:18 America/Guayaquil] ¿Tiene name[0]?: SI
+[12-Jan-2026 20:52:18 America/Guayaquil] ¿name[0] está vacío?: NO
+[12-Jan-2026 20:52:18 America/Guayaquil] =================================
+[12-Jan-2026 20:52:18 America/Guayaquil] === DATOS DEL FORMULARIO ===
+[12-Jan-2026 20:52:18 America/Guayaquil] =================================
+[12-Jan-2026 20:52:18 America/Guayaquil] clie_id: 164
+[12-Jan-2026 20:52:18 America/Guayaquil] atenc_id: 132
+[12-Jan-2026 20:52:18 America/Guayaquil] centro_id: 1
+[12-Jan-2026 20:52:18 America/Guayaquil] usua_id: 8
+[12-Jan-2026 20:52:18 America/Guayaquil] imginfo_enlace: 164010503878241820260112085144353
+[12-Jan-2026 20:52:18 America/Guayaquil] imgag_id: 17
+[12-Jan-2026 20:52:18 America/Guayaquil] imginfo_id: 0
+[12-Jan-2026 20:52:18 America/Guayaquil] 🔍 Buscando imginfo_id usando imginfo_enlace: 164010503878241820260112085144353
+[12-Jan-2026 20:52:18 America/Guayaquil] ❌ No se encontró registro con imginfo_enlace: 164010503878241820260112085144353
+[12-Jan-2026 20:52:18 America/Guayaquil] =================================
+[12-Jan-2026 20:52:18 America/Guayaquil] === ❌ EXCEPCIÓN CAPTURADA ===
+[12-Jan-2026 20:52:18 America/Guayaquil] =================================
+[12-Jan-2026 20:52:18 America/Guayaquil] Mensaje: No se encontró el registro de imagenología. Guarde primero el formulario antes de subir archivos DICOM.
+[12-Jan-2026 20:52:18 America/Guayaquil] Archivo: /var/www/html/ces/upload_dicom.php
+[12-Jan-2026 20:52:18 America/Guayaquil] Línea: 129
+[12-Jan-2026 20:52:18 America/Guayaquil] =================================
+[12-Jan-2026 20:52:18 America/Guayaquil] POST recibido:
+[12-Jan-2026 20:52:18 America/Guayaquil] Array
+(
+    [clie_id] => 164
+    [atenc_id] => 132
+    [centro_id] => 1
+    [usua_id] => 8
+    [imginfo_id] => 
+    [imginfo_enlace] => 164010503878241820260112085144353
+    [imginfo_fecharegistro] => 2026-01-12 20:51:44
+    [prob_codigo] => 
+    [imgag_id] => 17
+    [cant_codigo] => 
+    [imginfo_personarecibe] => 
+    [imginfo_fechaentrega] => 2026-01-12
+    [imginfo_profesionalsolicitante] => 
+    [imginfo_emergencia] => 0
+    [imginfo_consulta] => 0
+    [imginfo_hospital] => 0
+    [imginfo_servicio] => 
+    [imginfo_rxconvencional] => 0
+    [imginfo_tomografia] => 0
+    [imginfo_rxportatil] => 0
+    [imginfo_resonancia] => 0
+    [imginfo_ecografia] => 0
+    [imginfo_mamografia] => 0
+    [imginfo_procedimientos] => 0
+    [imginfo_otros] => 0
+    [imginfo_sedacion] => 
+    [imginfo_describir] => 
+    [imginfo_informe] => 
+    [dicom_folder_path] => 
+    [dicom_files_count] => 2
+    [imginfo_recomendaciones] => 
+    [csearch] => 
+    [clie_idx] => 164
+    [idab] => 
+    [opcion_dns_newimagenologiainfo] => guardar
+    [table] => dns_newimagenologiainfo
+    [atenc_idx] => 132
+    [imginfo_enlacex] => 164010503878241820260112085144353
+)
+
+[12-Jan-2026 20:52:18 America/Guayaquil] =================================
+[12-Jan-2026 20:52:18 America/Guayaquil] FILES recibido:
+[12-Jan-2026 20:52:18 America/Guayaquil] Array
+(
+    [dicom_files] => Array
+        (
+            [name] => Array
+                (
+                    [0] => 25AA_ZUMBA ROBLES MOSCAR_CLAVICULA_AP_image1768249062567.dcm
+                    [1] => 25AA_ZUMBA ROBLES MOSCAR_CLAVICULA_LORDOTICA_image1768249081086.dcm
+                )
+
+            [type] => Array
+                (
+                    [0] => application/octet-stream
+                    [1] => application/octet-stream
+                )
+
+            [tmp_name] => Array
+                (
+                    [0] => /tmp/phpSLkHoa
+                    [1] => /tmp/phpvZjlfC
+                )
+
+            [error] => Array
+                (
+                    [0] => 0
+                    [1] => 0
+                )
+
+            [size] => Array
+                (
+                    [0] => 6987830
+                    [1] => 8701374
+                )
+
+        )
+
+)
+
+[12-Jan-2026 20:52:18 America/Guayaquil] =================================
+[12-Jan-2026 20:52:50 America/Guayaquil] =================================
+[12-Jan-2026 20:52:50 America/Guayaquil] === DIAGNÓSTICO CONFIGURACIÓN ===
+[12-Jan-2026 20:52:50 America/Guayaquil] =================================
+[12-Jan-2026 20:52:50 America/Guayaquil] upload_max_filesize: 40M
+[12-Jan-2026 20:52:50 America/Guayaquil] post_max_size: 80M
+[12-Jan-2026 20:52:50 America/Guayaquil] max_file_uploads: 20
+[12-Jan-2026 20:52:50 America/Guayaquil] memory_limit: -1
+[12-Jan-2026 20:52:50 America/Guayaquil] max_execution_time: 30
+[12-Jan-2026 20:52:50 America/Guayaquil] file_uploads: Enabled
+[12-Jan-2026 20:52:50 America/Guayaquil] upload_tmp_dir: default
+[12-Jan-2026 20:52:50 America/Guayaquil] =================================
+[12-Jan-2026 20:52:50 America/Guayaquil] ✅ Carpeta base tiene permisos de escritura
+[12-Jan-2026 20:52:50 America/Guayaquil] =================================
+[12-Jan-2026 20:52:50 America/Guayaquil] === VALIDACIÓN DE ARCHIVOS ===
+[12-Jan-2026 20:52:50 America/Guayaquil] =================================
+[12-Jan-2026 20:52:50 America/Guayaquil] isset($_FILES['dicom_files']): SI
+[12-Jan-2026 20:52:50 America/Guayaquil] Estructura $_FILES['dicom_files']: Array
+(
+    [name] => Array
+        (
+            [0] => 25AA_ZUMBA ROBLES MOSCAR_CLAVICULA_AP_image1768249062567.dcm
+            [1] => 25AA_ZUMBA ROBLES MOSCAR_CLAVICULA_LORDOTICA_image1768249081086.dcm
+        )
+
+    [type] => Array
+        (
+            [0] => application/octet-stream
+            [1] => application/octet-stream
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => /tmp/phpL7g3r6
+            [1] => /tmp/php4CfNJD
+        )
+
+    [error] => Array
+        (
+            [0] => 0
+            [1] => 0
+        )
+
+    [size] => Array
+        (
+            [0] => 6987830
+            [1] => 8701374
+        )
+
+)
+
+[12-Jan-2026 20:52:50 America/Guayaquil] ¿Tiene name[0]?: SI
+[12-Jan-2026 20:52:50 America/Guayaquil] ¿name[0] está vacío?: NO
+[12-Jan-2026 20:52:50 America/Guayaquil] =================================
+[12-Jan-2026 20:52:50 America/Guayaquil] === DATOS DEL FORMULARIO ===
+[12-Jan-2026 20:52:50 America/Guayaquil] =================================
+[12-Jan-2026 20:52:50 America/Guayaquil] clie_id: 164
+[12-Jan-2026 20:52:50 America/Guayaquil] atenc_id: 132
+[12-Jan-2026 20:52:50 America/Guayaquil] centro_id: 1
+[12-Jan-2026 20:52:50 America/Guayaquil] usua_id: 8
+[12-Jan-2026 20:52:50 America/Guayaquil] imginfo_enlace: 164010503878241820260112085144353
+[12-Jan-2026 20:52:50 America/Guayaquil] imgag_id: 17
+[12-Jan-2026 20:52:50 America/Guayaquil] imginfo_id: 15
+[12-Jan-2026 20:52:50 America/Guayaquil] 📁 Intentando crear carpeta: uploads/dicom/2026-01-12_205250_164_15_6965a572a0776/
+[12-Jan-2026 20:52:50 America/Guayaquil] ✅ Carpeta creada con permisos correctos: uploads/dicom/2026-01-12_205250_164_15_6965a572a0776/
+[12-Jan-2026 20:52:50 America/Guayaquil] =================================
+[12-Jan-2026 20:52:50 America/Guayaquil] === PROCESAMIENTO DE ARCHIVOS ===
+[12-Jan-2026 20:52:50 America/Guayaquil] =================================
+[12-Jan-2026 20:52:50 America/Guayaquil] 📦 Total archivos detectados: 2
+[12-Jan-2026 20:52:50 America/Guayaquil] --- Procesando archivo #1 ---
+[12-Jan-2026 20:52:50 America/Guayaquil]   📄 Nombre: 25AA_ZUMBA ROBLES MOSCAR_CLAVICULA_AP_image1768249062567.dcm
+[12-Jan-2026 20:52:50 America/Guayaquil]   🔢 Código error: 0
+[12-Jan-2026 20:52:50 America/Guayaquil]   📏 Tamaño: 6987830 bytes
+[12-Jan-2026 20:52:50 America/Guayaquil]   📂 Tmp name: /tmp/phpL7g3r6
+[12-Jan-2026 20:52:50 America/Guayaquil]   🚀 Moviendo archivo...
+[12-Jan-2026 20:52:50 America/Guayaquil]      Origen: /tmp/phpL7g3r6
+[12-Jan-2026 20:52:50 America/Guayaquil]      Destino: uploads/dicom/2026-01-12_205250_164_15_6965a572a0776/25AA_ZUMBA_ROBLES_MOSCAR_CLAVICULA_AP_image1768249062567.dcm
+[12-Jan-2026 20:52:50 America/Guayaquil]   ✅ Archivo subido exitosamente: 25AA_ZUMBA_ROBLES_MOSCAR_CLAVICULA_AP_image1768249062567.dcm
+[12-Jan-2026 20:52:50 America/Guayaquil] --- Procesando archivo #2 ---
+[12-Jan-2026 20:52:50 America/Guayaquil]   📄 Nombre: 25AA_ZUMBA ROBLES MOSCAR_CLAVICULA_LORDOTICA_image1768249081086.dcm
+[12-Jan-2026 20:52:50 America/Guayaquil]   🔢 Código error: 0
+[12-Jan-2026 20:52:50 America/Guayaquil]   📏 Tamaño: 8701374 bytes
+[12-Jan-2026 20:52:50 America/Guayaquil]   📂 Tmp name: /tmp/php4CfNJD
+[12-Jan-2026 20:52:50 America/Guayaquil]   🚀 Moviendo archivo...
+[12-Jan-2026 20:52:50 America/Guayaquil]      Origen: /tmp/php4CfNJD
+[12-Jan-2026 20:52:50 America/Guayaquil]      Destino: uploads/dicom/2026-01-12_205250_164_15_6965a572a0776/25AA_ZUMBA_ROBLES_MOSCAR_CLAVICULA_LORDOTICA_image1768249081086.dcm
+[12-Jan-2026 20:52:50 America/Guayaquil]   ✅ Archivo subido exitosamente: 25AA_ZUMBA_ROBLES_MOSCAR_CLAVICULA_LORDOTICA_image1768249081086.dcm
+[12-Jan-2026 20:52:50 America/Guayaquil] =================================
+[12-Jan-2026 20:52:50 America/Guayaquil] 📊 Total archivos procesados exitosamente: 2
+[12-Jan-2026 20:52:50 America/Guayaquil] =================================
+[12-Jan-2026 20:52:50 America/Guayaquil] =================================
+[12-Jan-2026 20:52:50 America/Guayaquil] === GUARDANDO EN BASE DE DATOS ===
+[12-Jan-2026 20:52:50 America/Guayaquil] =================================
+[12-Jan-2026 20:52:50 America/Guayaquil] 🗑️ Registros anteriores eliminados para imgag_id: 17
+[12-Jan-2026 20:52:50 America/Guayaquil] 💾 Insertando: 25AA_ZUMBA_ROBLES_MOSCAR_CLAVICULA_AP_image1768249062567.dcm
+[12-Jan-2026 20:52:50 America/Guayaquil]   ✅ Archivo registrado en BD: 25AA_ZUMBA_ROBLES_MOSCAR_CLAVICULA_AP_image1768249062567.dcm
+[12-Jan-2026 20:52:50 America/Guayaquil] 💾 Insertando: 25AA_ZUMBA_ROBLES_MOSCAR_CLAVICULA_LORDOTICA_image1768249081086.dcm
+[12-Jan-2026 20:52:50 America/Guayaquil]   ✅ Archivo registrado en BD: 25AA_ZUMBA_ROBLES_MOSCAR_CLAVICULA_LORDOTICA_image1768249081086.dcm
+[12-Jan-2026 20:52:50 America/Guayaquil] 📊 Total registros insertados en BD: 2 de 2
+[12-Jan-2026 20:52:50 America/Guayaquil] ✅ Registro actualizado en dns_newimagenologiainfo
+[12-Jan-2026 20:52:50 America/Guayaquil] =================================
+[12-Jan-2026 20:52:50 America/Guayaquil] === ✅ SUBIDA COMPLETADA EXITOSAMENTE ===
+[12-Jan-2026 20:52:50 America/Guayaquil] =================================
+[12-Jan-2026 20:55:00 America/Guayaquil] =================================
+[12-Jan-2026 20:55:00 America/Guayaquil] === DIAGNÓSTICO CONFIGURACIÓN ===
+[12-Jan-2026 20:55:00 America/Guayaquil] =================================
+[12-Jan-2026 20:55:00 America/Guayaquil] upload_max_filesize: 40M
+[12-Jan-2026 20:55:00 America/Guayaquil] post_max_size: 80M
+[12-Jan-2026 20:55:00 America/Guayaquil] max_file_uploads: 20
+[12-Jan-2026 20:55:00 America/Guayaquil] memory_limit: -1
+[12-Jan-2026 20:55:00 America/Guayaquil] max_execution_time: 30
+[12-Jan-2026 20:55:00 America/Guayaquil] file_uploads: Enabled
+[12-Jan-2026 20:55:00 America/Guayaquil] upload_tmp_dir: default
+[12-Jan-2026 20:55:00 America/Guayaquil] =================================
+[12-Jan-2026 20:55:00 America/Guayaquil] ✅ Carpeta base tiene permisos de escritura
+[12-Jan-2026 20:55:00 America/Guayaquil] =================================
+[12-Jan-2026 20:55:00 America/Guayaquil] === VALIDACIÓN DE ARCHIVOS ===
+[12-Jan-2026 20:55:00 America/Guayaquil] =================================
+[12-Jan-2026 20:55:00 America/Guayaquil] isset($_FILES['dicom_files']): SI
+[12-Jan-2026 20:55:00 America/Guayaquil] Estructura $_FILES['dicom_files']: Array
+(
+    [name] => Array
+        (
+            [0] => 1754029120_MELANIE BAZAN TAPIA 12_TOBILLO_AP_image1768236874577.dcm
+            [1] => 1754029120_MELANIE BAZAN TAPIA 12_TOBILLO_LATERAL_image1768237016215.dcm
+            [2] => 1754029120_MELANIE BAZAN TAPIA 12_TOBILLO_LATERAL_image1768237094756.dcm
+            [3] => 1754029120_MELANIE BAZAN TAPIA 12_TOBILLO_AP_image1768237156456.dcm
+        )
+
+    [type] => Array
+        (
+            [0] => application/octet-stream
+            [1] => application/octet-stream
+            [2] => application/octet-stream
+            [3] => application/octet-stream
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => /tmp/php0LxVgB
+            [1] => /tmp/phpPwA5TK
+            [2] => /tmp/phpXY6dp1
+            [3] => /tmp/phpqB9KX5
+        )
+
+    [error] => Array
+        (
+            [0] => 0
+            [1] => 0
+            [2] => 0
+            [3] => 0
+        )
+
+    [size] => Array
+        (
+            [0] => 11911614
+            [1] => 4578450
+            [2] => 4978138
+            [3] => 5055326
+        )
+
+)
+
+[12-Jan-2026 20:55:00 America/Guayaquil] ¿Tiene name[0]?: SI
+[12-Jan-2026 20:55:00 America/Guayaquil] ¿name[0] está vacío?: NO
+[12-Jan-2026 20:55:00 America/Guayaquil] =================================
+[12-Jan-2026 20:55:00 America/Guayaquil] === DATOS DEL FORMULARIO ===
+[12-Jan-2026 20:55:00 America/Guayaquil] =================================
+[12-Jan-2026 20:55:00 America/Guayaquil] clie_id: 471
+[12-Jan-2026 20:55:00 America/Guayaquil] atenc_id: 367
+[12-Jan-2026 20:55:00 America/Guayaquil] centro_id: 1
+[12-Jan-2026 20:55:00 America/Guayaquil] usua_id: 8
+[12-Jan-2026 20:55:00 America/Guayaquil] imginfo_enlace: 471010503878241820260112085444393
+[12-Jan-2026 20:55:00 America/Guayaquil] imgag_id: 31
+[12-Jan-2026 20:55:00 America/Guayaquil] imginfo_id: 0
+[12-Jan-2026 20:55:00 America/Guayaquil] 🔍 Buscando imginfo_id usando imginfo_enlace: 471010503878241820260112085444393
+[12-Jan-2026 20:55:00 America/Guayaquil] ❌ No se encontró registro con imginfo_enlace: 471010503878241820260112085444393
+[12-Jan-2026 20:55:00 America/Guayaquil] =================================
+[12-Jan-2026 20:55:00 America/Guayaquil] === ❌ EXCEPCIÓN CAPTURADA ===
+[12-Jan-2026 20:55:00 America/Guayaquil] =================================
+[12-Jan-2026 20:55:00 America/Guayaquil] Mensaje: No se encontró el registro de imagenología. Guarde primero el formulario antes de subir archivos DICOM.
+[12-Jan-2026 20:55:00 America/Guayaquil] Archivo: /var/www/html/ces/upload_dicom.php
+[12-Jan-2026 20:55:00 America/Guayaquil] Línea: 129
+[12-Jan-2026 20:55:00 America/Guayaquil] =================================
+[12-Jan-2026 20:55:00 America/Guayaquil] POST recibido:
+[12-Jan-2026 20:55:00 America/Guayaquil] Array
+(
+    [clie_id] => 471
+    [atenc_id] => 367
+    [centro_id] => 1
+    [usua_id] => 8
+    [imginfo_id] => 
+    [imginfo_enlace] => 471010503878241820260112085444393
+    [imginfo_fecharegistro] => 2026-01-12 20:54:44
+    [prob_codigo] => 
+    [imgag_id] => 31
+    [cant_codigo] => 
+    [imginfo_personarecibe] => 
+    [imginfo_fechaentrega] => 
+    [imginfo_profesionalsolicitante] => 
+    [imginfo_emergencia] => 0
+    [imginfo_consulta] => 0
+    [imginfo_hospital] => 0
+    [imginfo_servicio] => 
+    [imginfo_rxconvencional] => 0
+    [imginfo_tomografia] => 0
+    [imginfo_rxportatil] => 0
+    [imginfo_resonancia] => 0
+    [imginfo_ecografia] => 0
+    [imginfo_mamografia] => 0
+    [imginfo_procedimientos] => 0
+    [imginfo_otros] => 0
+    [imginfo_sedacion] => 
+    [imginfo_describir] => 
+    [imginfo_informe] => 
+    [dicom_folder_path] => 
+    [dicom_files_count] => 4
+    [imginfo_recomendaciones] => 
+    [csearch] => 
+    [clie_idx] => 471
+    [idab] => 
+    [opcion_dns_newimagenologiainfo] => guardar
+    [table] => dns_newimagenologiainfo
+    [atenc_idx] => 367
+    [imginfo_enlacex] => 471010503878241820260112085444393
+)
+
+[12-Jan-2026 20:55:00 America/Guayaquil] =================================
+[12-Jan-2026 20:55:00 America/Guayaquil] FILES recibido:
+[12-Jan-2026 20:55:00 America/Guayaquil] Array
+(
+    [dicom_files] => Array
+        (
+            [name] => Array
+                (
+                    [0] => 1754029120_MELANIE BAZAN TAPIA 12_TOBILLO_AP_image1768236874577.dcm
+                    [1] => 1754029120_MELANIE BAZAN TAPIA 12_TOBILLO_LATERAL_image1768237016215.dcm
+                    [2] => 1754029120_MELANIE BAZAN TAPIA 12_TOBILLO_LATERAL_image1768237094756.dcm
+                    [3] => 1754029120_MELANIE BAZAN TAPIA 12_TOBILLO_AP_image1768237156456.dcm
+                )
+
+            [type] => Array
+                (
+                    [0] => application/octet-stream
+                    [1] => application/octet-stream
+                    [2] => application/octet-stream
+                    [3] => application/octet-stream
+                )
+
+            [tmp_name] => Array
+                (
+                    [0] => /tmp/php0LxVgB
+                    [1] => /tmp/phpPwA5TK
+                    [2] => /tmp/phpXY6dp1
+                    [3] => /tmp/phpqB9KX5
+                )
+
+            [error] => Array
+                (
+                    [0] => 0
+                    [1] => 0
+                    [2] => 0
+                    [3] => 0
+                )
+
+            [size] => Array
+                (
+                    [0] => 11911614
+                    [1] => 4578450
+                    [2] => 4978138
+                    [3] => 5055326
+                )
+
+        )
+
+)
+
+[12-Jan-2026 20:55:00 America/Guayaquil] =================================
+[12-Jan-2026 20:55:13 America/Guayaquil] =================================
+[12-Jan-2026 20:55:13 America/Guayaquil] === DIAGNÓSTICO CONFIGURACIÓN ===
+[12-Jan-2026 20:55:13 America/Guayaquil] =================================
+[12-Jan-2026 20:55:13 America/Guayaquil] upload_max_filesize: 40M
+[12-Jan-2026 20:55:13 America/Guayaquil] post_max_size: 80M
+[12-Jan-2026 20:55:13 America/Guayaquil] max_file_uploads: 20
+[12-Jan-2026 20:55:13 America/Guayaquil] memory_limit: -1
+[12-Jan-2026 20:55:13 America/Guayaquil] max_execution_time: 30
+[12-Jan-2026 20:55:13 America/Guayaquil] file_uploads: Enabled
+[12-Jan-2026 20:55:13 America/Guayaquil] upload_tmp_dir: default
+[12-Jan-2026 20:55:13 America/Guayaquil] =================================
+[12-Jan-2026 20:55:13 America/Guayaquil] ✅ Carpeta base tiene permisos de escritura
+[12-Jan-2026 20:55:13 America/Guayaquil] =================================
+[12-Jan-2026 20:55:13 America/Guayaquil] === VALIDACIÓN DE ARCHIVOS ===
+[12-Jan-2026 20:55:13 America/Guayaquil] =================================
+[12-Jan-2026 20:55:13 America/Guayaquil] isset($_FILES['dicom_files']): SI
+[12-Jan-2026 20:55:13 America/Guayaquil] Estructura $_FILES['dicom_files']: Array
+(
+    [name] => Array
+        (
+            [0] => 1754029120_MELANIE BAZAN TAPIA 12_TOBILLO_AP_image1768236874577.dcm
+            [1] => 1754029120_MELANIE BAZAN TAPIA 12_TOBILLO_LATERAL_image1768237016215.dcm
+            [2] => 1754029120_MELANIE BAZAN TAPIA 12_TOBILLO_LATERAL_image1768237094756.dcm
+            [3] => 1754029120_MELANIE BAZAN TAPIA 12_TOBILLO_AP_image1768237156456.dcm
+        )
+
+    [type] => Array
+        (
+            [0] => application/octet-stream
+            [1] => application/octet-stream
+            [2] => application/octet-stream
+            [3] => application/octet-stream
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => /tmp/php2E7OCB
+            [1] => /tmp/phpVfy8X0
+            [2] => /tmp/phpUzsrYu
+            [3] => /tmp/php3DtEJ5
+        )
+
+    [error] => Array
+        (
+            [0] => 0
+            [1] => 0
+            [2] => 0
+            [3] => 0
+        )
+
+    [size] => Array
+        (
+            [0] => 11911614
+            [1] => 4578450
+            [2] => 4978138
+            [3] => 5055326
+        )
+
+)
+
+[12-Jan-2026 20:55:13 America/Guayaquil] ¿Tiene name[0]?: SI
+[12-Jan-2026 20:55:13 America/Guayaquil] ¿name[0] está vacío?: NO
+[12-Jan-2026 20:55:13 America/Guayaquil] =================================
+[12-Jan-2026 20:55:13 America/Guayaquil] === DATOS DEL FORMULARIO ===
+[12-Jan-2026 20:55:13 America/Guayaquil] =================================
+[12-Jan-2026 20:55:13 America/Guayaquil] clie_id: 471
+[12-Jan-2026 20:55:13 America/Guayaquil] atenc_id: 367
+[12-Jan-2026 20:55:13 America/Guayaquil] centro_id: 1
+[12-Jan-2026 20:55:13 America/Guayaquil] usua_id: 8
+[12-Jan-2026 20:55:13 America/Guayaquil] imginfo_enlace: 471010503878241820260112085444393
+[12-Jan-2026 20:55:13 America/Guayaquil] imgag_id: 31
+[12-Jan-2026 20:55:13 America/Guayaquil] imginfo_id: 0
+[12-Jan-2026 20:55:13 America/Guayaquil] 🔍 Buscando imginfo_id usando imginfo_enlace: 471010503878241820260112085444393
+[12-Jan-2026 20:55:13 America/Guayaquil] ❌ No se encontró registro con imginfo_enlace: 471010503878241820260112085444393
+[12-Jan-2026 20:55:13 America/Guayaquil] =================================
+[12-Jan-2026 20:55:13 America/Guayaquil] === ❌ EXCEPCIÓN CAPTURADA ===
+[12-Jan-2026 20:55:13 America/Guayaquil] =================================
+[12-Jan-2026 20:55:13 America/Guayaquil] Mensaje: No se encontró el registro de imagenología. Guarde primero el formulario antes de subir archivos DICOM.
+[12-Jan-2026 20:55:13 America/Guayaquil] Archivo: /var/www/html/ces/upload_dicom.php
+[12-Jan-2026 20:55:13 America/Guayaquil] Línea: 129
+[12-Jan-2026 20:55:13 America/Guayaquil] =================================
+[12-Jan-2026 20:55:13 America/Guayaquil] POST recibido:
+[12-Jan-2026 20:55:13 America/Guayaquil] Array
+(
+    [clie_id] => 471
+    [atenc_id] => 367
+    [centro_id] => 1
+    [usua_id] => 8
+    [imginfo_id] => 
+    [imginfo_enlace] => 471010503878241820260112085444393
+    [imginfo_fecharegistro] => 2026-01-12 20:54:44
+    [prob_codigo] => 
+    [imgag_id] => 31
+    [cant_codigo] => 
+    [imginfo_personarecibe] => 
+    [imginfo_fechaentrega] => 2026-01-12
+    [imginfo_profesionalsolicitante] => 
+    [imginfo_emergencia] => 0
+    [imginfo_consulta] => 0
+    [imginfo_hospital] => 0
+    [imginfo_servicio] => 
+    [imginfo_rxconvencional] => 0
+    [imginfo_tomografia] => 0
+    [imginfo_rxportatil] => 0
+    [imginfo_resonancia] => 0
+    [imginfo_ecografia] => 0
+    [imginfo_mamografia] => 0
+    [imginfo_procedimientos] => 0
+    [imginfo_otros] => 0
+    [imginfo_sedacion] => 
+    [imginfo_describir] => 
+    [imginfo_informe] => 
+    [dicom_folder_path] => 
+    [dicom_files_count] => 4
+    [imginfo_recomendaciones] => 
+    [csearch] => 
+    [clie_idx] => 471
+    [idab] => 
+    [opcion_dns_newimagenologiainfo] => guardar
+    [table] => dns_newimagenologiainfo
+    [atenc_idx] => 367
+    [imginfo_enlacex] => 471010503878241820260112085444393
+)
+
+[12-Jan-2026 20:55:13 America/Guayaquil] =================================
+[12-Jan-2026 20:55:13 America/Guayaquil] FILES recibido:
+[12-Jan-2026 20:55:13 America/Guayaquil] Array
+(
+    [dicom_files] => Array
+        (
+            [name] => Array
+                (
+                    [0] => 1754029120_MELANIE BAZAN TAPIA 12_TOBILLO_AP_image1768236874577.dcm
+                    [1] => 1754029120_MELANIE BAZAN TAPIA 12_TOBILLO_LATERAL_image1768237016215.dcm
+                    [2] => 1754029120_MELANIE BAZAN TAPIA 12_TOBILLO_LATERAL_image1768237094756.dcm
+                    [3] => 1754029120_MELANIE BAZAN TAPIA 12_TOBILLO_AP_image1768237156456.dcm
+                )
+
+            [type] => Array
+                (
+                    [0] => application/octet-stream
+                    [1] => application/octet-stream
+                    [2] => application/octet-stream
+                    [3] => application/octet-stream
+                )
+
+            [tmp_name] => Array
+                (
+                    [0] => /tmp/php2E7OCB
+                    [1] => /tmp/phpVfy8X0
+                    [2] => /tmp/phpUzsrYu
+                    [3] => /tmp/php3DtEJ5
+                )
+
+            [error] => Array
+                (
+                    [0] => 0
+                    [1] => 0
+                    [2] => 0
+                    [3] => 0
+                )
+
+            [size] => Array
+                (
+                    [0] => 11911614
+                    [1] => 4578450
+                    [2] => 4978138
+                    [3] => 5055326
+                )
+
+        )
+
+)
+
+[12-Jan-2026 20:55:13 America/Guayaquil] =================================
+[12-Jan-2026 20:55:27 America/Guayaquil] =================================
+[12-Jan-2026 20:55:27 America/Guayaquil] === DIAGNÓSTICO CONFIGURACIÓN ===
+[12-Jan-2026 20:55:27 America/Guayaquil] =================================
+[12-Jan-2026 20:55:27 America/Guayaquil] upload_max_filesize: 40M
+[12-Jan-2026 20:55:27 America/Guayaquil] post_max_size: 80M
+[12-Jan-2026 20:55:27 America/Guayaquil] max_file_uploads: 20
+[12-Jan-2026 20:55:27 America/Guayaquil] memory_limit: -1
+[12-Jan-2026 20:55:27 America/Guayaquil] max_execution_time: 30
+[12-Jan-2026 20:55:27 America/Guayaquil] file_uploads: Enabled
+[12-Jan-2026 20:55:27 America/Guayaquil] upload_tmp_dir: default
+[12-Jan-2026 20:55:27 America/Guayaquil] =================================
+[12-Jan-2026 20:55:27 America/Guayaquil] ✅ Carpeta base tiene permisos de escritura
+[12-Jan-2026 20:55:27 America/Guayaquil] =================================
+[12-Jan-2026 20:55:27 America/Guayaquil] === VALIDACIÓN DE ARCHIVOS ===
+[12-Jan-2026 20:55:27 America/Guayaquil] =================================
+[12-Jan-2026 20:55:27 America/Guayaquil] isset($_FILES['dicom_files']): SI
+[12-Jan-2026 20:55:27 America/Guayaquil] Estructura $_FILES['dicom_files']: Array
+(
+    [name] => Array
+        (
+            [0] => 1754029120_MELANIE BAZAN TAPIA 12_TOBILLO_AP_image1768236874577.dcm
+            [1] => 1754029120_MELANIE BAZAN TAPIA 12_TOBILLO_LATERAL_image1768237016215.dcm
+            [2] => 1754029120_MELANIE BAZAN TAPIA 12_TOBILLO_LATERAL_image1768237094756.dcm
+            [3] => 1754029120_MELANIE BAZAN TAPIA 12_TOBILLO_AP_image1768237156456.dcm
+        )
+
+    [type] => Array
+        (
+            [0] => application/octet-stream
+            [1] => application/octet-stream
+            [2] => application/octet-stream
+            [3] => application/octet-stream
+        )
+
+    [tmp_name] => Array
+        (
+            [0] => /tmp/phpDQjdtJ
+            [1] => /tmp/phpGYxZ1v
+            [2] => /tmp/phpgGbZp3
+            [3] => /tmp/phpeZVR93
+        )
+
+    [error] => Array
+        (
+            [0] => 0
+            [1] => 0
+            [2] => 0
+            [3] => 0
+        )
+
+    [size] => Array
+        (
+            [0] => 11911614
+            [1] => 4578450
+            [2] => 4978138
+            [3] => 5055326
+        )
+
+)
+
+[12-Jan-2026 20:55:27 America/Guayaquil] ¿Tiene name[0]?: SI
+[12-Jan-2026 20:55:27 America/Guayaquil] ¿name[0] está vacío?: NO
+[12-Jan-2026 20:55:27 America/Guayaquil] =================================
+[12-Jan-2026 20:55:27 America/Guayaquil] === DATOS DEL FORMULARIO ===
+[12-Jan-2026 20:55:27 America/Guayaquil] =================================
+[12-Jan-2026 20:55:27 America/Guayaquil] clie_id: 471
+[12-Jan-2026 20:55:27 America/Guayaquil] atenc_id: 367
+[12-Jan-2026 20:55:27 America/Guayaquil] centro_id: 1
+[12-Jan-2026 20:55:27 America/Guayaquil] usua_id: 8
+[12-Jan-2026 20:55:27 America/Guayaquil] imginfo_enlace: 471010503878241820260112085444393
+[12-Jan-2026 20:55:27 America/Guayaquil] imgag_id: 31
+[12-Jan-2026 20:55:27 America/Guayaquil] imginfo_id: 16
+[12-Jan-2026 20:55:27 America/Guayaquil] 📁 Intentando crear carpeta: uploads/dicom/2026-01-12_205527_471_16_6965a60f94cf3/
+[12-Jan-2026 20:55:27 America/Guayaquil] ✅ Carpeta creada con permisos correctos: uploads/dicom/2026-01-12_205527_471_16_6965a60f94cf3/
+[12-Jan-2026 20:55:27 America/Guayaquil] =================================
+[12-Jan-2026 20:55:27 America/Guayaquil] === PROCESAMIENTO DE ARCHIVOS ===
+[12-Jan-2026 20:55:27 America/Guayaquil] =================================
+[12-Jan-2026 20:55:27 America/Guayaquil] 📦 Total archivos detectados: 4
+[12-Jan-2026 20:55:27 America/Guayaquil] --- Procesando archivo #1 ---
+[12-Jan-2026 20:55:27 America/Guayaquil]   📄 Nombre: 1754029120_MELANIE BAZAN TAPIA 12_TOBILLO_AP_image1768236874577.dcm
+[12-Jan-2026 20:55:27 America/Guayaquil]   🔢 Código error: 0
+[12-Jan-2026 20:55:27 America/Guayaquil]   📏 Tamaño: 11911614 bytes
+[12-Jan-2026 20:55:27 America/Guayaquil]   📂 Tmp name: /tmp/phpDQjdtJ
+[12-Jan-2026 20:55:27 America/Guayaquil]   🚀 Moviendo archivo...
+[12-Jan-2026 20:55:27 America/Guayaquil]      Origen: /tmp/phpDQjdtJ
+[12-Jan-2026 20:55:27 America/Guayaquil]      Destino: uploads/dicom/2026-01-12_205527_471_16_6965a60f94cf3/1754029120_MELANIE_BAZAN_TAPIA_12_TOBILLO_AP_image1768236874577.dcm
+[12-Jan-2026 20:55:27 America/Guayaquil]   ✅ Archivo subido exitosamente: 1754029120_MELANIE_BAZAN_TAPIA_12_TOBILLO_AP_image1768236874577.dcm
+[12-Jan-2026 20:55:27 America/Guayaquil] --- Procesando archivo #2 ---
+[12-Jan-2026 20:55:27 America/Guayaquil]   📄 Nombre: 1754029120_MELANIE BAZAN TAPIA 12_TOBILLO_LATERAL_image1768237016215.dcm
+[12-Jan-2026 20:55:27 America/Guayaquil]   🔢 Código error: 0
+[12-Jan-2026 20:55:27 America/Guayaquil]   📏 Tamaño: 4578450 bytes
+[12-Jan-2026 20:55:27 America/Guayaquil]   📂 Tmp name: /tmp/phpGYxZ1v
+[12-Jan-2026 20:55:27 America/Guayaquil]   🚀 Moviendo archivo...
+[12-Jan-2026 20:55:27 America/Guayaquil]      Origen: /tmp/phpGYxZ1v
+[12-Jan-2026 20:55:27 America/Guayaquil]      Destino: uploads/dicom/2026-01-12_205527_471_16_6965a60f94cf3/1754029120_MELANIE_BAZAN_TAPIA_12_TOBILLO_LATERAL_image1768237016215.dcm
+[12-Jan-2026 20:55:27 America/Guayaquil]   ✅ Archivo subido exitosamente: 1754029120_MELANIE_BAZAN_TAPIA_12_TOBILLO_LATERAL_image1768237016215.dcm
+[12-Jan-2026 20:55:27 America/Guayaquil] --- Procesando archivo #3 ---
+[12-Jan-2026 20:55:27 America/Guayaquil]   📄 Nombre: 1754029120_MELANIE BAZAN TAPIA 12_TOBILLO_LATERAL_image1768237094756.dcm
+[12-Jan-2026 20:55:27 America/Guayaquil]   🔢 Código error: 0
+[12-Jan-2026 20:55:27 America/Guayaquil]   📏 Tamaño: 4978138 bytes
+[12-Jan-2026 20:55:27 America/Guayaquil]   📂 Tmp name: /tmp/phpgGbZp3
+[12-Jan-2026 20:55:27 America/Guayaquil]   🚀 Moviendo archivo...
+[12-Jan-2026 20:55:27 America/Guayaquil]      Origen: /tmp/phpgGbZp3
+[12-Jan-2026 20:55:27 America/Guayaquil]      Destino: uploads/dicom/2026-01-12_205527_471_16_6965a60f94cf3/1754029120_MELANIE_BAZAN_TAPIA_12_TOBILLO_LATERAL_image1768237094756.dcm
+[12-Jan-2026 20:55:27 America/Guayaquil]   ✅ Archivo subido exitosamente: 1754029120_MELANIE_BAZAN_TAPIA_12_TOBILLO_LATERAL_image1768237094756.dcm
+[12-Jan-2026 20:55:27 America/Guayaquil] --- Procesando archivo #4 ---
+[12-Jan-2026 20:55:27 America/Guayaquil]   📄 Nombre: 1754029120_MELANIE BAZAN TAPIA 12_TOBILLO_AP_image1768237156456.dcm
+[12-Jan-2026 20:55:27 America/Guayaquil]   🔢 Código error: 0
+[12-Jan-2026 20:55:27 America/Guayaquil]   📏 Tamaño: 5055326 bytes
+[12-Jan-2026 20:55:27 America/Guayaquil]   📂 Tmp name: /tmp/phpeZVR93
+[12-Jan-2026 20:55:27 America/Guayaquil]   🚀 Moviendo archivo...
+[12-Jan-2026 20:55:27 America/Guayaquil]      Origen: /tmp/phpeZVR93
+[12-Jan-2026 20:55:27 America/Guayaquil]      Destino: uploads/dicom/2026-01-12_205527_471_16_6965a60f94cf3/1754029120_MELANIE_BAZAN_TAPIA_12_TOBILLO_AP_image1768237156456.dcm
+[12-Jan-2026 20:55:27 America/Guayaquil]   ✅ Archivo subido exitosamente: 1754029120_MELANIE_BAZAN_TAPIA_12_TOBILLO_AP_image1768237156456.dcm
+[12-Jan-2026 20:55:27 America/Guayaquil] =================================
+[12-Jan-2026 20:55:27 America/Guayaquil] 📊 Total archivos procesados exitosamente: 4
+[12-Jan-2026 20:55:27 America/Guayaquil] =================================
+[12-Jan-2026 20:55:27 America/Guayaquil] =================================
+[12-Jan-2026 20:55:27 America/Guayaquil] === GUARDANDO EN BASE DE DATOS ===
+[12-Jan-2026 20:55:27 America/Guayaquil] =================================
+[12-Jan-2026 20:55:27 America/Guayaquil] 🗑️ Registros anteriores eliminados para imgag_id: 31
+[12-Jan-2026 20:55:27 America/Guayaquil] 💾 Insertando: 1754029120_MELANIE_BAZAN_TAPIA_12_TOBILLO_AP_image1768236874577.dcm
+[12-Jan-2026 20:55:27 America/Guayaquil]   ✅ Archivo registrado en BD: 1754029120_MELANIE_BAZAN_TAPIA_12_TOBILLO_AP_image1768236874577.dcm
+[12-Jan-2026 20:55:27 America/Guayaquil] 💾 Insertando: 1754029120_MELANIE_BAZAN_TAPIA_12_TOBILLO_LATERAL_image1768237016215.dcm
+[12-Jan-2026 20:55:27 America/Guayaquil]   ✅ Archivo registrado en BD: 1754029120_MELANIE_BAZAN_TAPIA_12_TOBILLO_LATERAL_image1768237016215.dcm
+[12-Jan-2026 20:55:27 America/Guayaquil] 💾 Insertando: 1754029120_MELANIE_BAZAN_TAPIA_12_TOBILLO_LATERAL_image1768237094756.dcm
+[12-Jan-2026 20:55:27 America/Guayaquil]   ✅ Archivo registrado en BD: 1754029120_MELANIE_BAZAN_TAPIA_12_TOBILLO_LATERAL_image1768237094756.dcm
+[12-Jan-2026 20:55:27 America/Guayaquil] 💾 Insertando: 1754029120_MELANIE_BAZAN_TAPIA_12_TOBILLO_AP_image1768237156456.dcm
+[12-Jan-2026 20:55:27 America/Guayaquil]   ✅ Archivo registrado en BD: 1754029120_MELANIE_BAZAN_TAPIA_12_TOBILLO_AP_image1768237156456.dcm
+[12-Jan-2026 20:55:27 America/Guayaquil] 📊 Total registros insertados en BD: 4 de 4
+[12-Jan-2026 20:55:27 America/Guayaquil] ✅ Registro actualizado en dns_newimagenologiainfo
+[12-Jan-2026 20:55:27 America/Guayaquil] =================================
+[12-Jan-2026 20:55:27 America/Guayaquil] === ✅ SUBIDA COMPLETADA EXITOSAMENTE ===
+[12-Jan-2026 20:55:27 America/Guayaquil] =================================
