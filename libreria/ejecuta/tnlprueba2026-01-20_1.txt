@@ -1,1 +1,12 @@
+dns_newprotocolooperatorio
+dns_atencion
+dns_atencion
 lpin_parteoperatorio
+lpin_parteoperatorio
+lpin_parteoperatorio
+lpin_parteoperatorio
+lpin_parteoperatorio
+lpin_parteoperatorio
+lpin_parteoperatorio
+dns_atencion
+app_cliente

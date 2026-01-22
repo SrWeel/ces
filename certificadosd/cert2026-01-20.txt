@@ -1,0 +1,45 @@
+insert into dns_certificadogenerado (certif_id,especi_id,clie_ci,med_ci,certifg_texto,usua_id,certifg_fecharegistro,nd_otorgado,emp_id,centro_id,certifg_especialidad,certifg_code) values ('5','','1711467884','1212121212','  <p style="text-align:center"><strong>CERTIFICADO MEDICO</strong></p>
+
+<p style="text-align:center"><strong>CLÍNICA DE ESPECIALIDADES SUR</strong></p>
+
+<p style="text-align:right"> </p>
+
+<p style="text-align:right">QuitoQUITO,  20 de Enero de 2026</p>
+
+<p style="text-align:justify"> </p>
+
+<p style="text-align:justify"><strong>CERTIFICO</strong>, que el Sr.(a) Franklin Aguas, con cedula de identidad e Historia clinica numero 1711467884, ingreso el QUITO,  20 de Enero de 2026, cuyo diagn<!--StartFragment-->ó<!--EndFragment-->stico es:</p>
+
+<p style="text-align:justify"><ul><li>Z003 Examen del estado de desarrollo del adolescente</li></ul></p>
+
+<p style="text-align:justify">y cirugia realizada: -cirugia-, el -fechacirugia-, por lo cual, NECESITA REPOSO ABSOLUTO, desde el  2026-01-20 hasta el 2026-01-31 </p>
+
+<p style="text-align:justify"> </p>
+
+<p style="text-align:justify">12 dias de reposo.</p>
+
+<p> </p>
+
+<p>El paciente desarrolla su ACTIVIDAD LABORAL como: -actividadlaboral-</p>
+
+<p> </p>
+
+<p> </p>
+
+<p><strong>MEDICO TRATANTE:</strong></p>
+
+<p><b>Ing. ADMINISTRADOR SISTEMA</b><br><br>COD: 001<br>MSP: 002<p> </p><p> </p></p>
+
+<p> </p>
+
+<p> </p>
+
+<p> </p>
+
+<p><strong>Nota:</strong> Este formulario debe ser entregado al patrono por el afiliado para justificar el ausentismo por:</p>
+
+<p> </p>
+
+<p>( ) Enfermedad General    ( ) Accidente de trabajo   ( ) Enfermedad Profesional   ( ) Maternidad (niño vivo)</p>
+
+<p> </p>  <div align="center"><br><img src="temporal/QR_202601201110291_15.jpg" height="120" width="120" ><br>CERT51711467884121212121211202601201110293894</div>','1','2026-01-20','','1','1','','CERT51711467884121212121211202601201110293894');

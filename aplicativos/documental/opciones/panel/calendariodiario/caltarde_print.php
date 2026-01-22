@@ -9,15 +9,16 @@ session_start();
 ?>
 <?php
 
-// Conexiï¿½n a la base de datos
-$host = "localhost";
+// Conexión a la base de datos
+//$host = "localhost";
+$host = "192.168.100.50";
 $db   = "cesdb_aroriginal";
 $user = "root"; 
 //$pass = "";     
-$pass = "";
+$pass = "R003@CesDB.2025";
 $conexion = new mysqli($host, $user, $pass, $db);
 if ($conexion->connect_error) {
-    die("Error de conexiï¿½n: " . $conexion->connect_error);
+    die("Error de conexión: " . $conexion->connect_error);
 }
 
 // Captura filtros
@@ -25,7 +26,7 @@ $fecha_ini = isset($_GET['fecha_ini']) ? $_GET['fecha_ini'] : '';
 $fecha_fin = isset($_GET['fecha_fin']) ? $_GET['fecha_fin'] : '';
 $usua_id   = isset($_GET['usua_id']) ? intval($_GET['usua_id']) : 0;
 
-// Construir condiciones dinï¿½micas
+// Construir condiciones dinámicas
 $condiciones = [];
 if($fecha_ini != '') $condiciones[] = "t.terap_fecha >= '$fecha_ini'";
 if($fecha_fin != '') $condiciones[] = "t.terap_fecha <= '$fecha_fin'";
@@ -175,7 +176,7 @@ echo '</select> ';
 echo '<input type="submit" value="Filtrar">';
 echo '</form>';
 
-// Enlaces de exportaciï¿½n
+// Enlaces de exportación
 $params = $_GET;
 $params['export'] = 'excel';
 $linkExcel = '?'.http_build_query($params);
@@ -184,7 +185,7 @@ $linkPDF = '?'.http_build_query($params);
 
 echo '<a href="'.$linkExcel.'">Exportar a Excel</a> | <a href="'.$linkPDF.'"> </a>';
 
-// Mostrar tabla en pantalla con colores segï¿½n confirmaciï¿½n
+// Mostrar tabla en pantalla con colores según confirmación
 echo '<table border="1" cellpadding="5">';
 echo '<tr>';
 foreach($mostrarColumnas as $key => $mostrar){

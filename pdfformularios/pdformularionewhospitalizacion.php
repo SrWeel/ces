@@ -300,19 +300,18 @@ if($rs_ap)
   $lee_plantilla=str_replace("-ap11-",'',$lee_plantilla); 
   
    //=========================   
-$logo = $objformulario->replace_cmb("app_empresa", "emp_id,emp_logoreporte", "where emp_id=", 1, $DB_gogess);
-$logoc ='<img src="../archivo/'.$logo.'" alt="125x125" width="140px">';
+    $logo = $objformulario->replace_cmb("app_empresa", "emp_id,emp_logoreporte", "where emp_id=", 1, $DB_gogess);
+    $logoc ='<img src="../archivo/'.$logo.'" alt="125x125" width="90px">';
 
-$emp_nombre = $objformulario->replace_cmb("app_empresa", "emp_id,emp_nombre", "where emp_id=", 1, $DB_gogess);
-$emp_piedepagina = $objformulario->replace_cmb("app_empresa", "emp_id,emp_piedepagina", "where emp_id=", 1, $DB_gogess);
-$emp_logo = $objformulario->replace_cmb("app_empresa", "emp_id,emp_logo", "where emp_id=", 1, $DB_gogess);
-  
-  
-  //cabecera y pie de pagina
-$lee_plantilla = str_replace("-graficologo-", $logoc, $lee_plantilla);
-$lee_plantilla = str_replace("-empresanombre-", $emp_nombre, $lee_plantilla);
-$lee_plantilla = str_replace("-piedepagina-", $emp_piedepagina, $lee_plantilla);
-$lee_plantilla = str_replace("-logofondo-", $emp_logo, $lee_plantilla);
+    $emp_nombre = $objformulario->replace_cmb("app_empresa", "emp_id,emp_nombre", "where emp_id=", 1, $DB_gogess);
+    $emp_piedepagina = $objformulario->replace_cmb("app_empresa", "emp_id,emp_piedepagina", "where emp_id=", 1, $DB_gogess);
+    $emp_logo = $objformulario->replace_cmb("app_empresa", "emp_id,emp_logo", "where emp_id=", 1, $DB_gogess);
+
+// Cabecera y pie de página - REEMPLAZOS
+    $lee_plantilla = str_replace("-graficologo-", $logoc, $lee_plantilla);
+    $lee_plantilla = str_replace("-empresanombre-", $emp_nombre, $lee_plantilla);
+    $lee_plantilla = str_replace("-piedepagina-", $emp_piedepagina, $lee_plantilla);
+    $lee_plantilla = str_replace("-logofondo-", $emp_logo, $lee_plantilla);
   //=========================
   
   

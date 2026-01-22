@@ -1,0 +1,3 @@
+update cesdb_arextension.dns_gridingesta set ginge_ingesta='2',ginge_detalle='20' where ginge_id='21'
+update cesdb_arextension.dns_gridingesta set ginge_ingesta='2',ginge_detalle='20eee',ginge_descripcion='dddd' where ginge_id='21'
+update cesdb_arextension.dns_gridingesta set ginge_ingesta='2',ginge_detalle='20fyui',ginge_descripcion='dddd' where ginge_id='21'

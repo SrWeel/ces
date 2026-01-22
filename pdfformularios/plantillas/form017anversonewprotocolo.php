@@ -60,27 +60,86 @@ body { margin: 10px; }
   .pagenum:before {
     content: counter(page);
   }
+  .header-tabla {
+      width: 100%;
+      border: 2px solid #000;
+      border-collapse: collapse;
+      margin-bottom: 10px;
+  }
+
+  .header-tabla td {
+      padding: 5px;
+      vertical-align: middle;
+  }
+
+  .logo-cell {
+      width: 100px;
+      text-align: center;
+      border-right: 1px solid #000;
+  }
+
+  .logo-cell img {
+      max-width: 90px;
+      height: auto;
+  }
+
+  .titulo-cell {
+      text-align: center;
+      border-right: 1px solid #000;
+  }
+
+  .titulo-principal {
+      font-size: 14px;
+      font-weight: bold;
+      margin-bottom: 3px;
+  }
+
+  .subtitulo {
+      font-size: 11px;
+      font-weight: bold;
+  }
+
+  .codigo-cell {
+      width: 100px;
+      text-align: center;
+      font-size: 8px;
+  }
+  .footer-content {
+      font-size: 7px;
+      text-align: center;
+      color: #666;
+      line-height: 1.3;
+  }
 </style>
 
 </head>
 
 <body>
-    
-      <header>
-  <table width="101%"  border="0" cellpadding="0" cellspacing="0">
-  <tr>
-     <td  class="style1">-graficologo-</td>  
-    <td  class="style1" valign="bottom" style="width: 20%;"  >
-    <div align="right" style="font-size: 15px" ><center></center></div></td>
-  </tr>
-</table>
+
+<header>
+    <table class="header-tabla">
+        <tr>
+            <td class="logo-cell">
+                -graficologo-
+            </td>
+            <td class="titulo-cell">
+                <div class="titulo-principal">-empresanombre-</div>
+                <div class="subtitulo">PROTOCOLO OPERATORIO</div>
+            </td>
+            <td class="codigo-cell">
+                <strong>N° HCU:</strong><br>-hc-
+            </td>
+        </tr>
+    </table>
 </header>
 
 <footer>
-  <div class="contenedor">
-        <b>-piedepagina-</b>
-  </div>
-</footer> 
+    <div class="footer-content">
+        <p><b>-piedepagina-</b></p>
+        <p>Este documento contiene información médica confidencial del paciente</p>
+        <p>Página <span class="pagenum"></span></p>
+    </div>
+</footer>
 
 <table width="101%" height="16" border="0" cellpadding="0" cellspacing="0">
   <tr>

@@ -1,112 +1,165 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-<title>FORMULARIO</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+    <title>FORMULARIO</title>
 
-<style type="text/css">
-<!--
-body,td,th {
-	font-family: Arial;
-	font-size: 11px;
-}
-.borde_all{
-	border: 1px solid #000000;
-}
-.css_5 {font-size: 5px}
-.css_6 {font-size: 6px}
-.css_7 {font-size: 7px}
-.css_8 {font-size: 8px}
-.css_9 {font-size: 9px}
-.css_10 {font-size: 10px}
-.css_11 {font-size: 11px}
-.css_12 {font-size: 12px}
+    <style type="text/css">
+        <!--
+        body,td,th {
+            font-family: Arial;
+            font-size: 11px;
+        }
+        .borde_all{
+            border: 1px solid #000000;
+        }
+        .css_5 {font-size: 5px}
+        .css_6 {font-size: 6px}
+        .css_7 {font-size: 7px}
+        .css_8 {font-size: 8px}
+        .css_9 {font-size: 9px}
+        .css_10 {font-size: 10px}
+        .css_11 {font-size: 11px}
+        .css_12 {font-size: 12px}
 
-@page { margin: 10px; } 
-body { margin: 10px; } 
-.style1 {font-size: 12px; font-weight: bold; }
--->
-</style>
+        @page { margin: 10px; }
+        body { margin: 10px; }
+        .style1 {font-size: 12px; font-weight: bold; }
+        -->
+    </style>
 
-<style>
-  @page {
-    margin: 100px 20px;
-  }
+    <style>
+        @page {
+            margin: 100px 20px;
+        }
 
-  header {
-    position: fixed;
-    top: -80px;
-    left: 0;
-    right: 0;
-    height: 40px;
-    text-align: center;
-    font-size: 14px;
-    font-weight: bold;
-  }
+        header {
+            position: fixed;
+            top: -80px;
+            left: 0;
+            right: 0;
+            height: 80px;
+            text-align: center;
+        }
 
-  footer {
-    position: fixed;
-    bottom: -30px;
-    left: 0;
-    right: 0;
-    height: 30px;
-    text-align: center;
-    font-size: 12px;
-  }
+        footer {
+            position: fixed;
+            bottom: -30px;
+            left: 0;
+            right: 0;
+            height: 30px;
+            text-align: center;
+            font-size: 7px;
+            color: #666;
+            border-top: 1px solid #ccc;
+            padding-top: 5px;
+        }
 
-  .pagenum:before {
-    content: counter(page);
-  }
-</style>
+        .pagenum:before {
+            content: counter(page);
+        }
+
+        /* Estilos para el nuevo encabezado */
+        .header-tabla {
+            width: 100%;
+            border: 2px solid #000;
+            border-collapse: collapse;
+        }
+
+        .header-tabla td {
+            padding: 5px;
+            vertical-align: middle;
+        }
+
+        .logo-cell {
+            width: 100px;
+            text-align: center;
+            border-right: 1px solid #000;
+        }
+
+        .logo-cell img {
+            max-width: 90px;
+            height: auto;
+        }
+
+        .titulo-cell {
+            text-align: center;
+            border-right: 1px solid #000;
+        }
+
+        .titulo-principal {
+            font-size: 14px;
+            font-weight: bold;
+            margin-bottom: 3px;
+        }
+
+        .subtitulo {
+            font-size: 11px;
+            font-weight: bold;
+        }
+
+        .codigo-cell {
+            width: 100px;
+            text-align: center;
+            font-size: 8px;
+        }
+    </style>
 
 -stylemapa-
 </head>
 
 <body>
-    
-      <header>
-  <table width="101%"  border="0" cellpadding="0" cellspacing="0">
-  <tr>
-     <td  class="style1">-graficologo-</td>  
-    <td  class="style1" valign="bottom" style="width: 20%;"  >
-    <div align="right" style="font-size: 15px" ><center></center></div></td>
-  </tr>
-</table>
+<header>
+    <table class="header-tabla">
+        <tr>
+            <td class="logo-cell">
+                -graficologo-
+            </td>
+            <td class="titulo-cell">
+                <div class="titulo-principal">-empresanombre-</div>
+                <div class="subtitulo">HOSPITALIZACION - ANAMNESIS</div>
+            </td>
+            <td class="codigo-cell">
+                <strong>N° HCU:</strong><br>-hc-
+            </td>
+        </tr>
+    </table>
 </header>
 
 <footer>
-  <div class="contenedor">
-        <b>-piedepagina-</b>
-  </div>
-</footer> 
+    <div>
+        <p>-piedepagina-</p>
+        <p>Este documento contiene información médica confidencial del paciente</p>
+    </div>
+</footer>
 
 <table width="101%" height="16" border="0" cellpadding="0" cellspacing="0">
-  <tr>
-    <td bgcolor="#CCCCFF" class="style1">A DATOS DEL ESTABLECIMIENTO Y USUARIO / PACIENTE
-      <div align="right"></div></td>
-  </tr>
+    <tr>
+        <td bgcolor="#CCCCFF" class="style1">A DATOS DEL ESTABLECIMIENTO Y USUARIO / PACIENTE
+            <div align="right"></div></td>
+    </tr>
 </table>
 <table width="570" cellpadding="0" cellspacing="0">
-  <tr>
-    <td colspan="10" bgcolor="#CCFFCC" class="borde_all"><div align="center">INSTITUCION DEL SISTEMA </div></td>
-    <td colspan="9" bgcolor="#CCFFCC" class="borde_all"><div align="center">UNICODIGO</div></td>
-    <td colspan="12" bgcolor="#CCFFCC" class="borde_all"><div align="center">ESTABLECIMIENTO DE SALUD </div></td>
-    <td colspan="3" bgcolor="#CCFFCC" class="borde_all"><div align="center">HCU</div></td>
-    <td colspan="3" bgcolor="#CCFFCC" class="borde_all"><div align="center">N&deg;&nbsp;ARCHIVO</div></td>
-  </tr>
-  <tr>
-    <td colspan="10" class="borde_all css_8"><div align="center">
-      <div align="center">
-        <div align="center">-institucion-</div>
-      </div>
-    </div></td>
-    <td colspan="9" class="borde_all css_8"><div align="center">
-      <div align="center">-ucodigo-</div>
-    </div></td>
-    <td colspan="12" class="borde_all css_8"><div align="center">-centro-</div></td>
-    <td colspan="3" class="borde_all css_8"><div align="center">-hc-</div></td>
-    <td colspan="3" class="borde_all css_8"><div align="center">-hcpinos-</div></td>
-  </tr>
+    <tr>
+        <td colspan="10" bgcolor="#CCFFCC" class="borde_all"><div align="center">INSTITUCION DEL SISTEMA </div></td>
+        <td colspan="9" bgcolor="#CCFFCC" class="borde_all"><div align="center">UNICODIGO</div></td>
+        <td colspan="12" bgcolor="#CCFFCC" class="borde_all"><div align="center">ESTABLECIMIENTO DE SALUD </div></td>
+        <td colspan="3" bgcolor="#CCFFCC" class="borde_all"><div align="center">HCU</div></td>
+        <td colspan="3" bgcolor="#CCFFCC" class="borde_all"><div align="center">N&deg;&nbsp;ARCHIVO</div></td>
+    </tr>
+    <tr>
+        <td colspan="10" class="borde_all css_8"><div align="center">
+                <div align="center">
+                    <div align="center">-institucion-</div>
+                </div>
+            </div></td>
+        <td colspan="9" class="borde_all css_8"><div align="center">
+                <div align="center">-ucodigo-</div>
+            </div></td>
+        <td colspan="12" class="borde_all css_8"><div align="center">-centro-</div></td>
+        <td colspan="3" class="borde_all css_8"><div align="center">-hc-</div></td>
+        <td colspan="3" class="borde_all css_8"><div align="center">-hcpinos-</div></td>
+    </tr>
 </table>
 <table width="570" cellpadding="0" cellspacing="0">
   <tr>

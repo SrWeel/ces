@@ -1,0 +1,3 @@
+update cesdb_arextension.dns_newconsultaexternagridorgano set gorgano_observacion='ERUPCION CUTANEA' where gorgano_id=581
+update cesdb_arextension.dns_newconsultaexternagridexamenfisico set gexamfis_observacion='NIÑO CONSCIENTE ORIENTADO EN 3 ESFERAS COGNITIVAS, AFEBRIL PIEL NARIZ CON PRESENCIA DE LESIONES COSTROSAS CON ERITEMA Y RUBOR LOCAL EN AREA CIRCUNDANTE, OJO IZQUIERDO CANTO INTERNO DE PARPADO PRESENCIA DE ERUPCION DE PEQUEÑO DIAMETRO -2CMM TIPO PAPULA ERITEMATOSA
+A' where gexamfis_id=1451

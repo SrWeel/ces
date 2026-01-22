@@ -1,0 +1,2 @@
+update gogess_sisfield set fie_title='INGESTA - ELIMINACION / BALANCE HIDRICO' where fie_id='12237';
+update gogess_sisfield set fie_title='DETALLE DE INGESTA' where fie_id='12239';
