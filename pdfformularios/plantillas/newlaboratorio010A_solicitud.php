@@ -24,93 +24,86 @@ body,td,th {
 @page { margin: 10px; } 
 body { margin: 10px; } 
 .style1 {font-size: 12px;  }
--->
-</style>
- <style type="text/css">
-<!--
 
-.cmb_campot {
-	font-size: 10px;
-	font-family: Verdana, Arial, Helvetica, sans-serif;
-
-	border: 1px solid #666666;			
- }
-
-.cmb_campot2 {
-	font-size: 7px;
-	font-family: Verdana, Arial, Helvetica, sans-serif;
-		
- }
- 
-
-.txt_odonto{
-    font-size: 10px;
-	font-family: Verdana, Arial, Helvetica, sans-serif;
-		
-} 
-
-table {
-    border-collapse: separate;
-    text-indent: initial;
-    border-spacing: 0px;
+.header-tabla {
+    width: 100%;
+    border: 2px solid #000;
+    border-collapse: collapse;
+    margin-bottom: 5px;
 }
 
+.header-tabla td {
+    padding: 5px;
+    vertical-align: middle;
+}
+
+.logo-cell {
+    width: 100px;
+    text-align: center;
+    border-right: 1px solid #000;
+}
+
+.logo-cell img {
+    max-width: 90px;
+    height: auto;
+}
+
+.titulo-cell {
+    text-align: center;
+    border-right: 1px solid #000;
+}
+
+.titulo-principal {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 3px;
+}
+
+.subtitulo {
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.codigo-cell {
+    width: 100px;
+    text-align: center;
+    font-size: 8px;
+}
+
+/* Estilos del footer */
+.footer-content {
+    font-size: 7px;
+    text-align: center;
+    color: #666;
+    line-height: 1.3;
+}
 -->
  </style>
- 
- <style>
-  @page {
-    margin: 100px 20px;
-  }
 
-  header {
-    position: fixed;
-    top: -80px;
-    left: 0;
-    right: 0;
-    height: 50px;
-    text-align: center;
-    font-size: 14px;
-
-  }
-
-  footer {
-    position: fixed;
-    bottom: -30px;
-    left: 0;
-    right: 0;
-    height: 30px;
-    text-align: center;
-    font-size: 12px;
-  }
-
-  .pagenum:before {
-    content: counter(page);
-  }
-</style>
 
 
 </head>
 
 <body>
-    
-       
-    
+
+
 <header>
-  <table width="101%"  border="0" cellpadding="0" cellspacing="0">
-  <tr>
-     <td  class="style1">-graficologo-</td>  
-    <td  class="style1" valign="bottom" style="width: 20%;"  >
-    <div align="right" style="font-size: 15px" ><center></center></div></td>
-  </tr>
-</table>
+    <table class="header-tabla">
+        <tr>
+            <td class="logo-cell">
+                -graficologo-
+            </td>
+            <td class="titulo-cell">
+                <div class="titulo-principal">-empresanombre-</div>
+                <div class="subtitulo">LABORATORIO </div>
+            </td>
+            <td class="codigo-cell">
+                <strong>N° HCU:</strong><br>-hc-
+            </td>
+        </tr>
+    </table>
 </header>
 
-<footer>
-  <div class="contenedor">
-        <b>-piedepagina-</b>
-  </div>
-</footer>  
 
 <table width="570" cellpadding="0" cellspacing="0">
   <tr>
@@ -492,6 +485,12 @@ HISTORIA CL&Iacute;NICA</strong><strong> UNICA </strong></div></td>
     </table></td>
   </tr>
 </table>
+<footer>
+    <div class="footer-content">
+        <p><b>-piedepagina-</b></p>
+        <p>Este documento contiene información médica confidencial del paciente</p>
+    </div>
+</footer>
 </body>
 </html>
 

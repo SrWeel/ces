@@ -9,11 +9,11 @@ $DB_gogess = DatabaseLayer::getConnection("AdodbPhp",$host,$user,$pass,$dbname,$
 */
 
 
-$host = "192.168.100.50";
+$host = "localhost";
 //$user = 'remote-user';
 //$pass = 'Remote@CesDB.2025';
 $user = 'root';
-$pass = 'R003@CesDB.2025';
+$pass = '';
 $dbname = 'cesdb_aroriginal';
 $tipobase = 'mysqli';
 $DB_gogess = DatabaseLayer::getConnection("AdodbPhp", $host, $user, $pass, $dbname, $tipobase);

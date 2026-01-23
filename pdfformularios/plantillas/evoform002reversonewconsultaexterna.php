@@ -24,11 +24,82 @@ body,td,th {
 @page { margin: 10px; } 
 body { margin: 10px; } 
 .style1 {font-size: 12px; font-weight: bold; }
+.header-tabla {
+    width: 100%;
+    border: 2px solid #000;
+    border-collapse: collapse;
+    margin-bottom: 5px;
+}
+
+.header-tabla td {
+    padding: 5px;
+    vertical-align: middle;
+}
+
+.logo-cell {
+    width: 100px;
+    text-align: center;
+    border-right: 1px solid #000;
+}
+
+.logo-cell img {
+    max-width: 90px;
+    height: auto;
+}
+
+.titulo-cell {
+    text-align: center;
+    border-right: 1px solid #000;
+}
+
+.titulo-principal {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 3px;
+}
+
+.subtitulo {
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.codigo-cell {
+    width: 100px;
+    text-align: center;
+    font-size: 8px;
+}
+
+/* Estilos del footer */
+.footer-content {
+    font-size: 7px;
+    text-align: center;
+    color: #666;
+    line-height: 1.3;
+}
+
 -->
+
 </style>
 </head>
 
 <body>
+<header>
+    <table class="header-tabla">
+        <tr>
+            <td class="logo-cell">
+                -graficologo-
+            </td>
+            <td class="titulo-cell">
+                <div class="titulo-principal">-empresanombre-</div>
+                <div class="subtitulo">CONSULTA EXTERNA- Evolución y Prescripciones </div>
+            </td>
+            <td class="codigo-cell">
+                <strong>N° HCU:</strong><br>-hc-
+            </td>
+        </tr>
+    </table>
+</header>
+
 <table width="570" cellpadding="0" cellspacing="0">
   <tr>
     <td colspan="9" bgcolor="#CCCCFF" class="borde_all"><strong>A. DATOS DEL ESTABLECIMIENTO Y USUARIO / PACIENTE</strong>
@@ -246,6 +317,11 @@ body { margin: 10px; }
     </table></td>
   </tr>
 </table>
-
+<footer>
+    <div class="footer-content">
+        <p><b>-piedepagina-</b></p>
+        <p>Este documento contiene información médica confidencial del paciente</p>
+    </div>
+</footer>
 </body>
 </html>

@@ -25,86 +25,83 @@ body,td,th {
 body { margin: 10px; } 
 .style1 {font-size: 12px; font-weight: bold; }
 .Estilo1 {border: 1px solid #000000; font-weight: bold; }
+
+  .header-tabla {
+      width: 100%;
+      border: 2px solid #000;
+      border-collapse: collapse;
+      margin-bottom: 5px;
+  }
+
+  .header-tabla td {
+      padding: 5px;
+      vertical-align: middle;
+  }
+
+  .logo-cell {
+      width: 100px;
+      text-align: center;
+      border-right: 1px solid #000;
+  }
+
+  .logo-cell img {
+      max-width: 90px;
+      height: auto;
+  }
+
+  .titulo-cell {
+      text-align: center;
+      border-right: 1px solid #000;
+  }
+
+  .titulo-principal {
+      font-size: 14px;
+      font-weight: bold;
+      margin-bottom: 3px;
+  }
+
+  .subtitulo {
+      font-size: 11px;
+      font-weight: bold;
+  }
+
+  .codigo-cell {
+      width: 100px;
+      text-align: center;
+      font-size: 8px;
+  }
+
+  /* Estilos del footer */
+  .footer-content {
+      font-size: 7px;
+      text-align: center;
+      color: #666;
+      line-height: 1.3;
+  }
 -->
-</style>
-<style>
-  @page {
-    margin: 100px 20px;
-  }
-
-  header {
-    position: fixed;
-    top: -80px;
-    left: 0;
-    right: 0;
-    height: 50px;
-    text-align: center;
-    font-size: 14px;
-    font-weight: bold;
-  }
-
-  footer {
-    position: fixed;
-    bottom: -30px;
-    left: 0;
-    right: 0;
-    height: 30px;
-    text-align: center;
-    font-size: 12px;
-  }
-
-  .pagenum:before {
-    content: counter(page);
-  }
-</style>
-
-
-<style>
-
-  /* Capa de marca de agua */
-  .watermark {
-    position: fixed;
-    top: 0; left: 0; right: 0; bottom: 0;
-    z-index: 0;  /* detrás de todo */
-    text-align: center;
-  }
-
-  .watermark img {
-    width: 600px;   /* ajusta tamaño */
-    opacity: 0.05;  /* ↓ baja color (entre 0.05 y 0.15 suele quedar bien) */
-  }
-
-  /* Asegura que el contenido quede por encima */
-  body * {
-
-    z-index: 1;
-  }
-
 </style>
 
 </head>
 
 <body>
-    
-    <div class="watermark"><br><br><br>
-    <img src="../archivo/-logofondo-" alt="Logo fondo">
-  </div>
-    
+
 <header>
-  <table width="101%"  border="0" cellpadding="0" cellspacing="0">
-  <tr>
-     <td  class="style1">-graficologo-</td>  
-    <td  class="style1" valign="bottom" style="width: 20%;"  >
-    <div align="right" style="font-size: 15px" ><center></center></div></td>
-  </tr>
-</table>
+    <table class="header-tabla">
+        <tr>
+            <td class="logo-cell">
+                -graficologo-
+            </td>
+            <td class="titulo-cell">
+                <div class="titulo-principal">-empresanombre-</div>
+                <div class="subtitulo">CONSULTA EXTERNA </div>
+            </td>
+            <td class="codigo-cell">
+                <strong>N° HCU:</strong><br>-hc-
+            </td>
+        </tr>
+    </table>
 </header>
 
-<footer>
-  <div class="contenedor">
-        <b>-piedepagina-</b>
-  </div>
-</footer>
     
 <table width="101%" height="16" border="0" cellpadding="0" cellspacing="0">
   <tr>
@@ -516,6 +513,12 @@ PERINATAL</td>
     </table></td>
   </tr>
 </table>
+<footer>
+    <div class="footer-content">
+        <p><b>-piedepagina-</b></p>
+        <p>Este documento contiene información médica confidencial del paciente</p>
+    </div>
+</footer>
 <div style="page-break-after:always;"></div>
 
 <br />
@@ -752,5 +755,11 @@ DEF= DEFINITIVO</td>
     </table></td>
   </tr>
 </table>
+<footer>
+    <div class="footer-content">
+        <p><b>-piedepagina-</b></p>
+        <p>Este documento contiene información médica confidencial del paciente</p>
+    </div>
+</footer>
 </body>
 </html>

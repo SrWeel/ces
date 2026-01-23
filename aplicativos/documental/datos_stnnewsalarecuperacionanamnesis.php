@@ -90,7 +90,22 @@ $gogess_sistable = json_decode($contenido, true);
  
 $objformulario= new  ValidacionesFormulario();
 $objtableform= new templateform();
+$comillasimple = "'";
+$subindice     = '_substandarform';
+$carpeta       = 'substandarform';
 
+/* === DATOS DE TABLA === */
+$tab_id               = $rs_datosmenu->fields["tab_id"];
+$campo_primariodata   = $rs_tabla->fields["tab_campoprimario"];
+
+/* === PREPARAR DATOS PARA PDF === */
+$campos_data =
+        'iddata=' . $tab_id .
+        '&pVar2=' . $clie_id .
+        '&pVar3=' . $mnupan_id .
+        '&pVar4=' . $atenc_id;
+
+$campos_data64 = base64_encode($campos_data);
 //leer con json
 $contenido = file_get_contents(@$director."jason_files/estructura/".$table.".json");
 $gogess_sisfield = json_decode($contenido, true);
@@ -293,9 +308,10 @@ echo '<button type="button" class="mb-sm btn btn-success" '.$linkapaciente.'  st
 
 
 $linkimprimir='onClick=imprimir_datos();';
-$linkimprimir='onClick=genera_pdf();';
+$linkimprimirREC='onClick=genera_pdfREC();';
 
-echo '<button type="button" class="mb-sm btn btn-info" '.$linkimprimir.'  style="cursor:pointer"><span class="glyphicon glyphicon-print"></span></button>';
+//echo '<button type="button" class="mb-sm btn btn-info" '.$linkimprimir.'  style="cursor:pointer"><span class="glyphicon glyphicon-print"></span></button>';
+echo '<button type="button" class="mb-sm btn btn-info" '.$linkimprimirREC.'  style="cursor:pointer"><span class="glyphicon glyphicon-print"></span>IMPRIMIR SALA DE REC.</button>';
 
 $linkgayuda="onclick=abrir_standar('ayuda/ayuda.php','AYUDA','divBody_unico','divDialog_unico',900,600,3,0,0,0,0,0,0) style='cursor:pointer'";
 echo '&nbsp;&nbsp;&nbsp;<button type="button" class="mb-sm btn btn-primary" '.$linkgayuda.'  style="cursor:pointer"> AYUDA </button>';
@@ -325,7 +341,23 @@ echo '<div id="divBody_foto"></div>';
 <br />
 <div id="lista_turnosval">
 </div>
-
+    <script>
+        function genera_pdfREC()
+        {
+            if($('#<?php echo $campo_primariodata; ?>').val()>0)
+            {
+                // Abrir en nueva pestaña usando window.open
+                window.open(
+                    "pdfformularios/generate_recoveryhall.php?ssr=<?php echo $campos_data64."|" ?>"+$('#<?php echo $campo_primariodata; ?>').val(),
+                    '_blank'  // Este parámetro indica que se abrirá en nueva pestaña
+                );
+            }
+            else
+            {
+                alert("Por favor guarde el registro para imprimir");
+            }
+        }
+    </script>
 <form id="form_<?php echo $table; ?>" name="form_<?php echo $table; ?>" method="post" action="" class="form-horizontal" > 
 
 <?php		
