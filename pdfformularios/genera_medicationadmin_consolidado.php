@@ -343,6 +343,11 @@ if($_SESSION['ces1313777_sessid_inicio']) {
                 border-top: 1px solid #ccc;
                 padding-top: 5px;
             }
+            .footer-normativa td {
+    font-size: 10px;
+    vertical-align: middle;
+}
+
         </style>
     </head>
     <body>
@@ -490,7 +495,17 @@ if($_SESSION['ces1313777_sessid_inicio']) {
     $html_reporte .= '
             </tbody>
         </table>
-        
+        <table class="footer-normativa" width="100%" cellspacing="0" cellpadding="0">
+    <tr>
+        <td style="text-align:left;">
+            <strong>SNS-MSP/HCU-form.022/2021</strong>
+        </td>
+        <td style="text-align:right;">
+            <strong>ADMINISTRACIÓN DE MEDICAMENTOS</strong>
+        </td>
+    </tr>
+</table>
+
         <div class="footer">
             <p><strong>REPORTE CONSOLIDADO - Total de administraciones: '.$contador_medicamentos.'</strong></p>
             <p>'.$emp_piedepagina.'</p>

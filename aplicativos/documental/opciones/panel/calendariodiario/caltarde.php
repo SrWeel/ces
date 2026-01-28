@@ -370,7 +370,7 @@ $fecha_agendar=$fecha_valor;
                                         $link_obs_modal = 'onclick="abrir_standar(\'aplicativos/documental/opciones/panel/calendariodiario/obs.php\',\'OBSERVACION\',\'divBody_obs\',\'divDialog_obs\',400,250,\'' . $rs_lbuscat->fields["terap_id"] . '\',0,0,0,0,0,0);" style="cursor:pointer"';
 
                                         if ($es_turno_extra) {
-                                            $contenido_observacion = '<img src="extra.jpg" width="70" height="70" title="TURNO EXTRA " style="display:block; margin:0; transition:transform 0.2s ease;" ' . ' onmouseover="this.style.transform=\'scale(1.1)\'" onmouseout="this.style.transform=\'scale(1)\'" />';
+                                            $contenido_observacion = '<img src="archivo/extra.png" width="70" height="70" title="TURNO EXTRA " style="display:block; margin:0; transition:transform 0.2s ease;" ' . ' onmouseover="this.style.transform=\'scale(1.1)\'" onmouseout="this.style.transform=\'scale(1)\'" />';
                                         } else {
                                             $contenido_observacion = '<div '  . ' style="transition:color 0.2s ease; font-size:18px;" >' . nl2br(htmlspecialchars($observacion)) . '</div>';
                                         }

@@ -148,6 +148,8 @@ $objformulario->generar_formulario_bootstrap(@$submit,$table,2,$DB_gogess);
 <input type="button" name="btn_quimicainf_id" id="btn_quimicainf_id" value="QUIMICA"  onclick="ocultar_mostrarlabinfo('quimicainf_id')" />
 <input type="button" name="btn_uroanalisisinf_id" id="btn_uroanalisisinf_id" value="UROANALISIS"  onclick="ocultar_mostrarlabinfo('uroanalisisinf_id')" />
 <input type="button" name="btn_serologia_id" id="btn_serologia_id" value="SEROLOGIA"  onclick="ocultar_mostrarlabinfo('serologia_id')" />
+<input type="button" name="btn_bacte_id" id="btn_bacte_id" value="BACTEOROLOGIA"  onclick="ocultar_mostrarlabinfo('bacte_id')" />
+<input type="button" name="btn_otros_id" id="btn_otros_id" value="OTROS"  onclick="ocultar_mostrarlabinfo('otros_id')" />
 
 
 <div id="hematologicoinf_id">
@@ -176,13 +178,22 @@ $objformulario->generar_formulario_bootstrap(@$submit,$table,6,$DB_gogess);
 $objformulario->generar_formulario_bootstrap(@$submit,$table,7,$DB_gogess);
 ?>
 </div>
+<div id="bacte_id">
 
 <?php
-$objformulario->generar_formulario_bootstrap(@$submit,$table,8,$DB_gogess); 
+$objformulario->generar_formulario_bootstrap(@$submit,$table,8,$DB_gogess);
+?>
+</div>
+<?php
 $objformulario->generar_formulario_bootstrap(@$submit,$table,9,$DB_gogess);
-$objformulario->generar_formulario_bootstrap(@$submit,$table,10,$DB_gogess);
 ?>
 
+<div id="otros_id">
+
+<?php
+$objformulario->generar_formulario_bootstrap(@$submit,$table,10,$DB_gogess);
+?>
+</div>
 <?php
 $bandera_cie=0;
 if($objformulario->contenid["labinfor_enlace"])
@@ -201,9 +212,9 @@ else
 
 }
 ?>
-
-<input type="button" name="btn_diagnosticoinf_id" id="btn_diagnosticoinf_id" value="DIAGNOSTICOS"  onclick="ocultar_mostrarlabinfo2('diagnosticoinf_id')" />
 <!--
+<input type="button" name="btn_diagnosticoinf_id" id="btn_diagnosticoinf_id" value="DIAGNOSTICOS"  onclick="ocultar_mostrarlabinfo2('diagnosticoinf_id')" />
+
 <input type="button" name="btn_dispositivosinf_id" id="btn_dispositivosinf_id" value="DISPOSITIVOS MEDICOS"  onclick="ocultar_mostrarlabinfo2('dispositivosinf_id')" />
 <input type="button" name="btn_tarifarioinf_id" id="btn_tarifarioinf_id" value="TARIFARIO"  onclick="ocultar_mostrarlabinfo2('tarifarioinf_id')" /> -->
 <div id="diagnosticoinf_id" >
@@ -336,32 +347,36 @@ echo "<input name='csearch' type='hidden' value=''>
 	
 	$('#serologia_id').hide();
 	cambio_inactivo('serologia_id',0);
-	
-	
-	
-	$('#'+muestra).show();
-	cambio_inactivo(muestra,1);
-  
-  }	
-  
- 
-  function ocultar_mostrarlabinfo2(muestra)
-  {
-  
-    $('#dispositivosinf_id').hide();
-	cambio_inactivo('dispositivosinf_id',0);
-	
-    $('#tarifarioinf_id').hide();
-	cambio_inactivo('tarifarioinf_id',0);
-	
-    $('#diagnosticoinf_id').hide();
-	cambio_inactivo('diagnosticoinf_id',0);
+	$('#bacte_id').hide();
+	cambio_inactivo('serologia_id',0);
+	$('#otros_id').hide();
+	cambio_inactivo('serologia_id',0);
+
 	
 	
 	$('#'+muestra).show();
 	cambio_inactivo(muestra,1);
   
   }	
+  
+  //
+  // function ocultar_mostrarlabinfo2(muestra)
+  // {
+  //
+  //   $('#dispositivosinf_id').hide();
+	// cambio_inactivo('dispositivosinf_id',0);
+	//
+  //   $('#tarifarioinf_id').hide();
+	// cambio_inactivo('tarifarioinf_id',0);
+	//
+  //   $('#diagnosticoinf_id').hide();
+	// cambio_inactivo('diagnosticoinf_id',0);
+	//
+	//
+	// $('#'+muestra).show();
+	// cambio_inactivo(muestra,1);
+  //
+  // }
 		 
  function cambio_inactivo(divdata,opcion)
   {  
@@ -392,17 +407,17 @@ function genera_cieexterno(codigo,diagn_tipox,idext)
 {
 
 $.ajax({
-    // la URL para la petición
+    // la URL para la peticiï¿½n
     url : 'templateformsweb/maestro_standar_laboratorio/searchcie.php',
-    // la información a enviar
-    // (también es posible utilizar una cadena de datos)
+    // la informaciï¿½n a enviar
+    // (tambiï¿½n es posible utilizar una cadena de datos)
     data : { term : codigo },
-    // especifica si será una petición POST o GET
+    // especifica si serï¿½ una peticiï¿½n POST o GET
     type : 'GET',
-    // el tipo de información que se espera de respuesta
+    // el tipo de informaciï¿½n que se espera de respuesta
     dataType : 'json',
-    // código a ejecutar si la petición es satisfactoria;
-    // la respuesta es pasada como argumento a la función
+    // cï¿½digo a ejecutar si la peticiï¿½n es satisfactoria;
+    // la respuesta es pasada como argumento a la funciï¿½n
     success : function(json) {
         //console.log(json[0]);	
 		$('#diagn_ciex'+idext).val(json[0].codigo);
@@ -410,15 +425,15 @@ $.ajax({
 		$('#diagn_tipox'+idext).val(diagn_tipox);
 		
     },
-    // código a ejecutar si la petición falla;
-    // son pasados como argumentos a la función
-    // el objeto de la petición en crudo y código de estatus de la petición
+    // cï¿½digo a ejecutar si la peticiï¿½n falla;
+    // son pasados como argumentos a la funciï¿½n
+    // el objeto de la peticiï¿½n en crudo y cï¿½digo de estatus de la peticiï¿½n
     error : function(xhr, status) {
-        ///alert('Disculpe, existió un problema');
+        ///alert('Disculpe, existiï¿½ un problema');
     },
-    // código a ejecutar sin importar si la petición falló o no
+    // cï¿½digo a ejecutar sin importar si la peticiï¿½n fallï¿½ o no
     complete : function(xhr, status) {
-        ///alert('Petición realizada');
+        ///alert('Peticiï¿½n realizada');
 		grid_extras_6187($('#labinfor_enlace').val(),0,1);
     }
 });

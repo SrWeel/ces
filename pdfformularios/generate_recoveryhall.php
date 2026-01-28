@@ -202,6 +202,7 @@ if($_SESSION['ces1313777_sessid_inicio']) {
         sv.signovita_peso,
         sv.signovita_talla,
         sv.signovita_fecharegistro,
+        sv.signovita_observaciones,
         u.usua_nombre, 
         u.usua_apellido, 
         u.usua_codigo, 
@@ -636,7 +637,7 @@ if($_SESSION['ces1313777_sessid_inicio']) {
                 $registros_por_fecha[$fecha_solo][] = array(
                     'pulso' => $rs_constantes->fields["pulso"] ?? '',
                     'temperatura' => $rs_constantes->fields["temperatura"] ?? '',
-                    'observacion' => $rs_constantes->fields["signovita_observacion"] ?? '',
+                    'observacion' => $rs_constantes->fields["signovita_observaciones"] ?? '',
                     'fecha_completa' => date("d/m/Y H:i", strtotime($fecha_registro)),
                     'hora' => (int)$dt->format('H'),
                     'datetime' => $dt

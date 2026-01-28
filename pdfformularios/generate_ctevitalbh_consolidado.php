@@ -585,6 +585,10 @@ ORDER BY gbh.gbh_fecharegistro DESC
     border-top: 1px solid #ccc;
     padding-top: 5px;
 }
+  .footer-normativa td {
+    font-size: 10px;
+    vertical-align: middle;
+}
 
 /* TABLA DE ACTIVIDADES */
 .tabla-actividades { 
@@ -698,6 +702,7 @@ ORDER BY gbh.gbh_fecharegistro DESC
     color: #555;
     margin-top: 2px;
 }
+
         </style>
     </head>
     <body>
@@ -1328,7 +1333,16 @@ ORDER BY gbh.gbh_fecharegistro DESC
     $html_reporte .= '
             </tbody>
         </table>
-        
+                 <table class="footer-normativa" width="100%" cellspacing="0" cellpadding="0">
+    <tr>
+        <td style="text-align:left;">
+            <strong>SNS-MSP/HCU-form.020/2021</strong>
+        </td>
+        <td style="text-align:right;">
+            <strong>CONSTANTES VITALES / BALANCE HÍDRICO</strong>
+        </td>
+    </tr>
+</table>
         <div class="footer">
             <p>'.$emp_piedepagina.'</p>
             <p>Este documento contiene información médica confidencial del paciente</p>

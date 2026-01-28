@@ -196,6 +196,7 @@ if($_SESSION['ces1313777_sessid_inicio']) {
             ge.geli_detalle,
             ge.geli_fecharegistro,
             e.eli_descripcion,
+            ge.geli_descripcion,
             u.usua_nombre, 
             u.usua_apellido, 
             u.usua_codigo, 
@@ -660,6 +661,10 @@ if($_SESSION['ces1313777_sessid_inicio']) {
     color: #555;
     margin-top: 2px;
 }
+  .footer-normativa td {
+    font-size: 10px;
+    vertical-align: middle;
+}
         </style>
     </head>
     <body>
@@ -1018,6 +1023,7 @@ if($_SESSION['ces1313777_sessid_inicio']) {
                         <thead>
                             <tr>
                                 <th width="25%">TIPO DE ELIMINACIÓN</th>
+                                <th width="40%">Valor ML</th>
                                 <th width="40%">DETALLE</th>
                                 <th width="20%">RESPONSABLE</th>
                                 <th width="15%">FECHA/HORA</th>
@@ -1030,6 +1036,7 @@ if($_SESSION['ces1313777_sessid_inicio']) {
         while (!$rs_eliminacion->EOF) {
             $hay_eliminacion = true;
             $tipo_eliminacion = htmlspecialchars($rs_eliminacion->fields["eli_descripcion"]);
+            $des_eliminacion = htmlspecialchars($rs_eliminacion->fields["geli_descripcion"]);
             $detalle = htmlspecialchars($rs_eliminacion->fields["geli_detalle"]);
             $fecha_registro = $rs_eliminacion->fields["geli_fecharegistro"];
 
@@ -1048,6 +1055,8 @@ if($_SESSION['ces1313777_sessid_inicio']) {
                             <tr>
                                 <td><strong>'.$tipo_eliminacion.'</strong></td>
                                 <td>'.nl2br($detalle).'</td>
+                                                                <td><strong>'.$des_eliminacion.'</strong></td>
+
                                 <td>'.$info_usuario.'</td>
                                 <td style="text-align: center;">'.($fecha_registro && $fecha_registro != '0000-00-00 00:00:00' ? date("d/m/Y H:i", strtotime($fecha_registro)) : '-').'</td>
                             </tr>';
@@ -1059,7 +1068,7 @@ if($_SESSION['ces1313777_sessid_inicio']) {
     if(!$hay_eliminacion) {
         $html_reporte .= '
                             <tr>
-                                <td colspan="4" class="sin-datos">No hay registros de eliminación</td>
+                                <td colspan="5" class="sin-datos">No hay registros de eliminación</td>
                             </tr>';
     }
 
@@ -1290,7 +1299,16 @@ if($_SESSION['ces1313777_sessid_inicio']) {
     $html_reporte .= '
             </tbody>
         </table>
-        
+                <table class="footer-normativa" width="100%" cellspacing="0" cellpadding="0">
+    <tr>
+        <td style="text-align:left;">
+            <strong>SNS-MSP/HCU-form.020/2021</strong>
+        </td>
+        <td style="text-align:right;">
+            <strong>CONSTANTES VITALES / BALANCE HÍDRICO</strong>
+        </td>
+    </tr>
+</table>
         <div class="footer">
             <p>'.$emp_piedepagina.'</p>
             <p>Este documento contiene información médica confidencial del paciente</p>

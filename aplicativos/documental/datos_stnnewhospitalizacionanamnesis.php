@@ -72,6 +72,7 @@ $rs_sihaydata = $DB_gogess->executec($busca_sihaydata,array($_POST["pVar1"]));
 $bloque_registro=0;
 if(@$rs_sihaydata->fields["anam_fecharegistro"])
 {
+
   //echo $rs_sihaydata->fields["fechacierre"];
    if(date("Y-m-d")>$rs_sihaydata->fields["fechacierre"])
    {
@@ -332,7 +333,128 @@ echo '&nbsp;&nbsp;<a href="javascript:abrir_interconsulta();"><img src="images/i
 $linkeditar= 'onClick=abrir_certificado();';
 //echo '&nbsp;&nbsp;&nbsp;<button type="button" class="mb-sm btn btn-primary"  '.$linkeditar.'  style="background-color:#000066"  ><span class="glyphicon glyphicon-plus"></span>CERTIFICADO</button>';
 echo '&nbsp;&nbsp;<a href="javascript:abrir_certificado();"><img src="images/cericon.png?dtt='.date("his").'"><span class="selected"></span></a>';
+if(@$rs_sihaydata->fields["anam_fecharegistro"])
+{
 
+    echo '
+<style>
+@keyframes shine-flow {
+    0% {
+        background-position: -200% center;
+    }
+    100% {
+        background-position: 200% center;
+    }
+}
+
+@keyframes fade-in-down {
+    0% {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.btn-sala-recuperacion {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 20px;
+    background: linear-gradient(
+        90deg,
+        #ffffff 0%,
+        #f8f9fa 20%,
+        #ffffff 40%,
+        #f8f9fa 60%,
+        #ffffff 80%,
+        #f8f9fa 100%
+    );
+    background-size: 200% 100%;
+    color: #000000;
+    border: 1.5px solid #000000;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    cursor: pointer;
+    position: relative;
+    top: 7px;
+    animation: shine-flow 4s linear infinite, fade-in-down 0.5s ease-out 50ms forwards;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    letter-spacing: 0.2px;
+    transition: all 0.3s ease;
+    opacity: 0;
+}
+
+.btn-sala-recuperacion:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-color: #000000;
+}
+
+.btn-sala-recuperacion:active {
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+}
+
+.icon-bed {
+    width: 18px;
+    height: 18px;
+    filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.05));
+    transition: filter 0.3s ease;
+}
+
+.btn-sala-recuperacion:hover .icon-bed {
+    filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.1));
+}
+</style>
+
+<script type="text/javascript">
+function sala_recuperacion()
+{
+    if (!$("#' . $campo_primario . '").val() || $("#' . $campo_primario . '").val() == 0)
+    {
+        alert("Guarde el registro para continuar");
+        return false;
+    }
+
+    ver_formularioenpantallaextendida(
+        "aplicativos/documental/opciones/panel/panel_stnnewhospitalizacionanamnesis.php",
+        "Perfil",
+        "divBody_ext",
+        "",
+        "' . $clie_id . '",
+        "231",
+        "' . $atenc_id . '",
+        0,
+        "0",
+        "' . $centro_id . '",
+        0,
+        0,
+        0,
+        $("#' . $campo_primario . '").val(),
+        "' . $table . '"
+    );
+}
+</script>
+
+<button type="button" class="btn-sala-recuperacion" onclick="sala_recuperacion();">
+    <svg class="icon-bed" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="2" y="12" width="20" height="6" rx="1.5" fill="#64B5F6"/>
+        <rect x="4" y="8" width="4" height="4" rx="1" fill="#81C784"/>
+        <circle cx="6" cy="10" r="1.5" fill="#ffffff"/>
+        <path d="M2 18h20M7 12V9M17 12V9" stroke="#455A64" stroke-width="1.5" stroke-linecap="round"/>
+        <rect x="8" y="10" width="12" height="2" rx="0.5" fill="#B0BEC5"/>
+        <circle cx="20" cy="15" r="1" fill="#4FC3F7" opacity="0.6"/>
+        <circle cx="4" cy="15" r="1" fill="#4FC3F7" opacity="0.6"/>
+    </svg>
+    Sala de Recuperación
+</button>
+';
+}
 
 echo '<div id="divBody_foto"></div>';
 //cambio de fecha registro
