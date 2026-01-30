@@ -917,6 +917,280 @@ DECLARACION DE VOLUNTAD.- El Contratante o el Paciente en su calidad de Consumid
         </body>
         </html>';
     }
+    elseif($conset_nombre == 'CES CONSENTIMIENTO INFORMADO FISIOTERAPIA')
+    {
+        $html_reporte = '
+        <!DOCTYPE html>
+        <html>
+        <head>
+            <meta charset="UTF-8">
+            <style>
+                body { 
+                    font-family: Arial, sans-serif; 
+                    font-size: 11px; 
+                    margin: 20px;
+                    line-height: 1.6;
+                }
+                
+                .header-tabla {
+                    width: 100%;
+                    border: 2px solid #000;
+                    border-collapse: collapse;
+                    margin-bottom: 20px;
+                }
+                
+                .header-tabla td {
+                    padding: 8px;
+                    vertical-align: middle;
+                }
+                
+                .logo-cell {
+                    width: 100px;
+                    text-align: center;
+                    border-right: 1px solid #000;
+                }
+                
+                .logo-cell img {
+                    max-width: 90px;
+                    height: auto;
+                }
+                
+                .titulo-cell {
+                    text-align: center;
+                    border-right: 1px solid #000;
+                }
+                
+                .titulo-principal {
+                    font-size: 14px;
+                    font-weight: bold;
+                    margin-bottom: 5px;
+                }
+                
+                .subtitulo {
+                    font-size: 12px;
+                    font-weight: bold;
+                    color: #0066CC;
+                }
+                
+                .codigo-cell {
+                    width: 100px;
+                    text-align: center;
+                    font-size: 10px;
+                }
+
+                .destinatario {
+                    margin-bottom: 20px;
+                    line-height: 1.4;
+                }
+                
+                .contenido {
+                    text-align: justify;
+                    margin-bottom: 30px;
+                }
+                
+                .contenido p {
+                    margin-bottom: 15px;
+                }
+                
+                .firma-seccion {
+                    margin-top: 80px;
+                    text-align: left;
+                }
+                
+                .linea-firma {
+                    border-top: 1px solid #000;
+                    width: 170px;
+                    text-align: left;
+                }
+                
+                .nombre-cedula {
+                    font-weight: bold;
+                }
+            </style>
+        </head>
+        <body>
+            <table class="header-tabla">
+                <tr>
+                    <td class="logo-cell">
+                        <img src="../archivo/' . $logo . '" alt="Logo">
+                    </td>
+                    <td class="titulo-cell">
+                        <div class="titulo-principal">' . $emp_nombre . '</div>
+                        <div class="subtitulo">CONSENTIMIENTO INFORMADO FISIOTERAPIA</div>
+                    </td>
+                    <td class="codigo-cell">
+                        <strong>N° HCU:</strong><br>' . $hc . '
+                    </td>
+                </tr>
+            </table>   
+            <div class="contenido"> 
+                <p>
+                <strong>Paciente: </strong>' . strtoupper($nombre_completo) . '
+                </p>
+                <p>
+                <strong>Cédula:&nbsp;&nbsp;&nbsp;&nbsp;</strong>' . $clie_rucci . '<strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fecha: </strong>' . $fecha_atencion . '
+                </p>
+                <p>
+                Declaro que he sido informado/a de manera clara y comprensible sobre el tratamiento de <strong>fisioterapia</strong>, el cual puede incluir evaluación, ejercicios terapéuticos, terapia manual y aplicación de agentes físicos (electroterapia, termoterapia, crioterapia u otros), según mi condición clínica.
+                </p>
+                <p>
+                Comprendo que el objetivo del tratamiento es mejorar mi función, movilidad y calidad de vida, y que los resultados pueden variar según mi evolución. Se me ha explicado que pueden presentarse molestias leves y temporales como dolor muscular o fatiga.
+                </p>
+                <p>
+                Entiendo que puedo realizar preguntas, rechazar o suspender el tratamiento en cualquier momento, sin que esto afecte mi atención, y autorizo el manejo confidencial de mi información clínica conforme a la normativa vigente.
+                </p>
+                <p>
+                Por lo anterior <strong>, ACEPTO VOLUNTARIAMENTE</strong> recibir tratamiento fisioterapéutico.
+                </p>
+                <br>
+                <br>
+                <p>
+                <strong>Firma del paciente: </strong>__________________________
+                </p>
+                <p>
+                <strong>Firma del fisioterapeuta: </strong>_____________________
+                </p>  
+            </div>
+        </body>
+        </html>';
+    }
+    elseif  ($conset_nombre == 'CES CONSENTIMIENTO INFORMADO LABORATORIO CLINICO')
+    {
+        $html_reporte = '
+        <!DOCTYPE html>
+        <html>
+        <head>
+            <meta charset="UTF-8">
+            <style>
+                body { 
+                    font-family: Arial, sans-serif; 
+                    font-size: 11px; 
+                    margin: 20px;
+                    line-height: 1.6;
+                }
+                
+                .header-tabla {
+                    width: 100%;
+                    border: 2px solid #000;
+                    border-collapse: collapse;
+                    margin-bottom: 20px;
+                }
+                
+                .header-tabla td {
+                    padding: 8px;
+                    vertical-align: middle;
+                }
+                
+                .logo-cell {
+                    width: 100px;
+                    text-align: center;
+                    border-right: 1px solid #000;
+                }
+                
+                .logo-cell img {
+                    max-width: 90px;
+                    height: auto;
+                }
+                
+                .titulo-cell {
+                    text-align: center;
+                    border-right: 1px solid #000;
+                }
+                
+                .titulo-principal {
+                    font-size: 14px;
+                    font-weight: bold;
+                    margin-bottom: 5px;
+                }
+                
+                .subtitulo {
+                    font-size: 12px;
+                    font-weight: bold;
+                    color: #0066CC;
+                }
+                
+                .codigo-cell {
+                    width: 100px;
+                    text-align: center;
+                    font-size: 10px;
+                }
+
+                .destinatario {
+                    margin-bottom: 20px;
+                    line-height: 1.4;
+                }
+                
+                .contenido {
+                    text-align: justify;
+                    margin-bottom: 30px;
+                }
+                
+                .contenido p {
+                    margin-bottom: 15px;
+                }
+                
+                .firma-seccion {
+                    margin-top: 80px;
+                    text-align: left;
+                }
+                
+                .linea-firma {
+                    border-top: 1px solid #000;
+                    width: 170px;
+                    text-align: left;
+                }
+                
+                .nombre-cedula {
+                    font-weight: bold;
+                }
+            </style>
+        </head>
+        <body>
+            <table class="header-tabla">
+                <tr>
+                    <td class="logo-cell">
+                        <img src="../archivo/' . $logo . '" alt="Logo">
+                    </td>
+                    <td class="titulo-cell">
+                        <div class="titulo-principal">' . $emp_nombre . '</div>
+                        <div class="subtitulo">CONSENTIMIENTO INFORMADO LABORATORIO CLÍNICO</div>
+                    </td>
+                    <td class="codigo-cell">
+                        <strong>N° HCU:</strong><br>' . $hc . '
+                    </td>
+                </tr>
+            </table>   
+            <div class="contenido"> 
+                <p>
+                <strong>Paciente: </strong>' . strtoupper($nombre_completo) . '
+                </p>
+                <p>
+                <strong>Cédula:&nbsp;&nbsp;&nbsp;&nbsp;</strong>' . $clie_rucci . '<strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fecha: </strong>' . $fecha_atencion . '
+                </p>
+                <p>
+                    Declaro que he sido informado/a de manera clara, suficiente y comprensible sobre los procedimientos de laboratorio clínico que se me realizarán, los cuales pueden incluir la toma de muestras biológicas como sangre, orina, heces, secreciones u otras, de acuerdo con la solicitud médica y mi condición clínica.               
+                </p>
+                <p>
+                    Comprendo que dichos exámenes tienen como finalidad contribuir al diagnóstico, control, seguimiento y prevención de enfermedades, y que los resultados pueden variar según múltiples factores. Se me ha explicado que la toma de muestras puede ocasionar molestias leves y temporales, tales como dolor, ardor, hematomas u otros efectos poco frecuentes.
+                </p>
+                <p>
+                    Asimismo, autorizo el manejo confidencial de mi información clínica y de los resultados de los exámenes, conforme a la normativa legal vigente.                
+                </p>
+                <p>
+                    Por lo anterior <strong>, ACEPTO VOLUNTARIAMENTE</strong> la realización de los procedimientos de laboratorio clínico indicados.
+                </p>
+                <br>
+                <br>
+                <p>
+                <strong>Firma del paciente: </strong>__________________________
+                </p>
+                <p>
+                <strong>Firma del profesional responsable: </strong>_____________________
+                </p>  
+            </div>
+        </body>
+        </html>';
+    }
     // ============================================================================
     // Si no coincide con ningún tipo conocido, mostrar mensaje
     // ============================================================================

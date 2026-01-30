@@ -295,8 +295,15 @@ echo '<button type="button" class="mb-sm btn btn-success" '.$linkapaciente.'  st
 
 $linkimprimir='onClick=imprimir_datos();';
 $linkimprimir='onClick=genera_pdf();';
-
-echo '<button type="button" class="mb-sm btn btn-info" '.$linkimprimir.'  style="cursor:pointer"><span class="glyphicon glyphicon-print"></span></button>';
+$linkimprimirREC='onClick=genera_pdfREC();';
+echo '<div style="display:inline-flex; gap:5px;">';
+echo '<button type="button" class="mb-sm btn btn-info" '.$linkimprimir.' style="cursor:pointer">
+        <span class="glyphicon glyphicon-print"></span>
+      </button>';
+echo '<button type="button" class="mb-sm btn btn-info" '.$linkimprimirREC.' style="cursor:pointer">
+        <span class="glyphicon glyphicon-print"></span> IMPRIMIR SALA DE REC.
+      </button>';
+echo '</div>';
 
 $linkgayuda="onclick=abrir_standar('ayuda/ayuda.php','AYUDA','divBody_unico','divDialog_unico',900,600,3,0,0,0,0,0,0) style='cursor:pointer'";
 echo '&nbsp;&nbsp;&nbsp;<button type="button" class="mb-sm btn btn-primary" '.$linkgayuda.'  style="cursor:pointer"> AYUDA </button>';
@@ -523,7 +530,23 @@ abrir_standar("aplicativos/documental/activar_sesion.php","Activar_Sesi&oacute;n
 ?>
 <div id="divBodypop_ext" style="font-family:Verdana, Arial, Helvetica, sans-serif; font-size:11px"></div>
 <div id="verifica_sess"></div>
-
+    <script>
+        function genera_pdfREC()
+        {
+            if($('#<?php echo $campo_primariodata; ?>').val()>0)
+            {
+                // Abrir en nueva pestaña usando window.open
+                window.open(
+                    "pdfformularios/generate_recoveryhall.php?ssr=<?php echo $campos_data64."|" ?>"+$('#<?php echo $campo_primariodata; ?>').val(),
+                    '_blank'  // Este parámetro indica que se abrirá en nueva pestaña
+                );
+            }
+            else
+            {
+                alert("Por favor guarde el registro para imprimir");
+            }
+        }
+    </script>
 <script type="text/javascript">
 <!--
 function abrir_protocolo()

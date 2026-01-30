@@ -20,10 +20,6 @@ $rs_ATENCIOn = $DB_gogess->executec($busca_atencionactual,array());
 $clie_id=$rs_ATENCIOn->fields["clie_id"];
 $atenc_id=$_POST["atenc_id"];
 
-// ARRAYS PARA CONTROLAR DUPLICADOS
-$laboratorios_mostrados = array();
-$imagenes_mostradas = array();
-
 ?>
 <style type="text/css">
     <!--
@@ -39,9 +35,13 @@ $imagenes_mostradas = array();
     </tr>
     <?php
 
+    // ARRAYS PARA CONTROLAR DUPLICADOS - DEBEN ESTAR AQUÍ PARA QUE PERSISTAN
+    $laboratorios_mostrados = array();
+    $imagenes_mostradas = array();
 
-    // NOTA: Se removió 'dns_newtraumatologiaanamesis' de la lista de exclusión para que se muestren los registros
-    $lista_tabeval="select * from gogess_sistable where tab_name not in ('dns_imagenologia','dns_laboratorio','dns_laboratorioinforme','dns_consultaexterna','dns_rehabilitacionanamesis','dns_otorrinoanamesis','dns_ginecologiaconsultaexterna','dns_emergenciaconsultaexterna','dns_gastroenterologiaconsultaexterna','dns_pediatriaconsultaexterna','dns_cardiologiaconsultaexterna','dns_traumatologiaconsultaexterna','dns_enfermeria','dns_hospitalconsultaexterna','dns_newinterconsulta','dns_newhospitalizacionconsultaexterna','dns_newgastroenterologiaanamesis','dns_newgastroenterologiaconsultaexterna','dns_newcardiologiaanamesis','dns_newcardiologiaconsultaexterna','dns_newpediatriaanamesis','dns_newpediatriaconsultaexterna','dns_newtraumatologiaconsultaexterna','dns_newconsultaexternaconsultaexterna','dns_newemergenciaanamesis','dns_newemergenciaconsultaexterna','dns_newprotocolooperatorio','dns_protocolooperatorio','dns_epicrisisanamesis','dns_epicrisisconsultaexterna','dns_newepicrisisanamesis','dns_newreferencia','dns_newimagenologiainfo','dns_odontologia','dns_imagenologiainfo') and  tab_sysmedico=1";
+    // NOTA: Esta consulta busca las tablas de PRIMERA VEZ (anamnesis).
+    // Se excluyen las tablas de subsecuentes (evoluciones/consultas externas), laboratorios e imágenes que se buscan por separado
+    $lista_tabeval="select * from gogess_sistable where tab_name not in ('dns_imagenologia','dns_laboratorio','dns_laboratorioinforme','dns_consultaexterna','dns_rehabilitacionanamesis','dns_otorrinoanamesis','dns_ginecologiaconsultaexterna','dns_emergenciaconsultaexterna','dns_gastroenterologiaconsultaexterna','dns_pediatriaconsultaexterna','dns_cardiologiaconsultaexterna','dns_traumatologiaconsultaexterna','dns_hospitalconsultaexterna','dns_newinterconsulta','dns_newhospitalizacionconsultaexterna','dns_newgastroenterologiaconsultaexterna','dns_newcardiologiaconsultaexterna','dns_newpediatriaconsultaexterna','dns_newtraumatologiaconsultaexterna','dns_newconsultaexternaconsultaexterna','dns_newemergenciaconsultaexterna','dns_newprotocolooperatorio','dns_protocolooperatorio','dns_epicrisisconsultaexterna','dns_newimagenologia','dns_newimagenologiainfo','dns_imagenologiainfo','dns_newlaboratorio') and  tab_sysmedico=1";
     $rs_tabeval = $DB_gogess->executec($lista_tabeval,array());
     if($rs_tabeval)
     {
@@ -168,56 +168,45 @@ $imagenes_mostradas = array();
                         $campos_data='iddata='.$rs_tabeval->fields["tab_id"].'&pVar2='.@$clie_id.'&pVar4='.$atenc_id.'&pVar5='.$eteneva_id.'&pVar3='.$mnupan_id;
                         $campos_data64=base64_encode($campos_data);
 
+                        $linkpdfg="pdformularionewtraumatologia";
+                        $urllinkg="pdfformularios/".$linkpdfg.".php?ssr=".$campos_data64."|"."+".$rs_seccion->fields[$rs_tabeval->fields["tab_campoprimario"]];
+                        $linkimprimirg="onClick=ver_pdfform('".$urllinkg."')";
+
+                        $campo_fecha='anam_fecharegistro';
+
+                    }
+
+                    if($rs_tabeval->fields["tab_name"]=='dns_traumatologiaanamesis')
+                    {
+
+                        $campos_data='';
+                        $campos_data64='';
+                        $campos_data='iddata='.$rs_tabeval->fields["tab_id"].'&pVar2='.@$clie_id.'&pVar4='.$atenc_id.'&pVar5='.$eteneva_id.'&pVar3='.$mnupan_id;
+                        $campos_data64=base64_encode($campos_data);
+
                         $linkpdfg="pdformulariotraumatologiaanamesis";
                         $urllinkg="pdfformularios/".$linkpdfg.".php?ssr=".$campos_data64."|"."+".$rs_seccion->fields[$rs_tabeval->fields["tab_campoprimario"]];
                         $linkimprimirg="onClick=ver_pdfform('".$urllinkg."')";
 
                         $campo_fecha='anam_fecharegistro';
 
-                        // MOSTRAR EL REGISTRO PRINCIPAL (PRIMERA VEZ)
-                        ?>
-                        <tr>
-                            <td><?php echo $rs_seccion->fields[$campo_fecha]; ?></td>
-                            <td><?php echo $rs_datosmenu->fields["mnupan_nombre"]; ?> - PRIMERA VEZ</td>
-                            <td <?php echo $linkimprimirg; ?> style="cursor:pointer"><img src="images/pdfdoc.png" ></td>
-                        </tr>
-                        <?php
-
-                        // BUSCAR Y MOSTRAR SUBSECUENTES RELACIONADOS
-                        $anam_id_principal = $rs_seccion->fields[$rs_tabeval->fields["tab_campoprimario"]];
-
-                        // Buscar subsecuentes vinculados a esta anamnesis (primera vez)
-                        $busca_subsecuentes = "SELECT * FROM dns_newtraumatologiaconsultaexterna 
-                                              WHERE anam_id = '".$anam_id_principal."' 
-                                              ORDER BY cons_fecharegistro DESC";
-                        $rs_subsecuentes = $DB_gogess->executec($busca_subsecuentes, array());
-
-                        if($rs_subsecuentes && !$rs_subsecuentes->EOF)
-                        {
-                            while (!$rs_subsecuentes->EOF)
-                            {
-                                // Preparar datos para PDF de subsecuente
-                                $eteneva_id_sub = '';
-                                $tab_id_sub = $rs_tabeval->fields["tab_id"]; // Usar el mismo tab_id o buscar el específico
-                                $mnupan_id_sub = $mnupan_id;
-
-                                $campos_data_sub = 'iddata='.$tab_id_sub.'&pVar2='.$clie_id.'&pVar4='.$atenc_id.'&pVar5='.$eteneva_id_sub.'&pVar3='.$mnupan_id_sub;
-                                $campos_data64_sub = base64_encode($campos_data_sub);
-
-                                $linkpdf_sub = "pdformulariotraumatologiaconsultaexterna"; // Nombre del PDF para subsecuentes
-                                $urllink_sub = "pdfformularios/".$linkpdf_sub.".php?ssr=".$campos_data64_sub."|"."+".$rs_subsecuentes->fields["cons_id"];
-                                $linkimprimir_sub = "onClick=ver_pdfform('".$urllink_sub."')";
-                                ?>
-                                <tr class="subsecuente">
-                                    <td><?php echo $rs_subsecuentes->fields["cons_fecharegistro"]; ?></td>
-                                    <td>&nbsp;&nbsp;&nbsp;↳ SUBSECUENTE</td>
-                                    <td <?php echo $linkimprimir_sub; ?> style="cursor:pointer"><img src="images/pdfdoc.png" ></td>
-                                </tr>
-                                <?php
-                                $rs_subsecuentes->MoveNext();
-                            }
-                        }
                     }
+
+
+                    if($rs_tabeval->fields["tab_name"]=='dns_hospitalanamesis')
+                    {
+
+                        $campos_data='';
+                        $campos_data64='';
+                        $campos_data='iddata='.$rs_tabeval->fields["tab_id"].'&pVar2='.@$clie_id.'&pVar4='.$atenc_id.'&pVar5='.$eteneva_id.'&pVar3='.$mnupan_id;
+                        $campos_data64=base64_encode($campos_data);
+
+                        $linkpdfg="pdformulariohospitalanamesis";
+                        $urllinkg="pdfformularios/".$linkpdfg.".php?ssr=".$campos_data64."|"."+".$rs_seccion->fields[$rs_tabeval->fields["tab_campoprimario"]];
+                        $linkimprimirg="onClick=ver_pdfform('".$urllinkg."')";
+                        $campo_fecha='anam_fecharegistro';
+                    }
+
 
                     if($rs_tabeval->fields["tab_name"]=='dns_cardiologiaanamesis')
                     {
@@ -230,11 +219,9 @@ $imagenes_mostradas = array();
                         $linkpdfg="pdformulariocardiologiaanamesis";
                         $urllinkg="pdfformularios/".$linkpdfg.".php?ssr=".$campos_data64."|"."+".$rs_seccion->fields[$rs_tabeval->fields["tab_campoprimario"]];
                         $linkimprimirg="onClick=ver_pdfform('".$urllinkg."')";
-
                         $campo_fecha='anam_fecharegistro';
 
                     }
-
 
                     if($rs_tabeval->fields["tab_name"]=='dns_ginecologiaanamesis')
                     {
@@ -247,12 +234,10 @@ $imagenes_mostradas = array();
                         $linkpdfg="pdformularioginecologiaanamesis";
                         $urllinkg="pdfformularios/".$linkpdfg.".php?ssr=".$campos_data64."|"."+".$rs_seccion->fields[$rs_tabeval->fields["tab_campoprimario"]];
                         $linkimprimirg="onClick=ver_pdfform('".$urllinkg."')";
-
                         $campo_fecha='anam_fecharegistro';
-
                     }
 
-                    if($rs_tabeval->fields["tab_name"]=='dns_otorrinolaringologiaanamesis')
+                    if($rs_tabeval->fields["tab_name"]=='dns_interconsulta')
                     {
 
                         $campos_data='';
@@ -260,15 +245,13 @@ $imagenes_mostradas = array();
                         $campos_data='iddata='.$rs_tabeval->fields["tab_id"].'&pVar2='.@$clie_id.'&pVar4='.$atenc_id.'&pVar5='.$eteneva_id.'&pVar3='.$mnupan_id;
                         $campos_data64=base64_encode($campos_data);
 
-                        $linkpdfg="pdformulariootorrinolaringologiaanamesis";
+                        $linkpdfg="pdformulariointerconsulta";
                         $urllinkg="pdfformularios/".$linkpdfg.".php?ssr=".$campos_data64."|"."+".$rs_seccion->fields[$rs_tabeval->fields["tab_campoprimario"]];
                         $linkimprimirg="onClick=ver_pdfform('".$urllinkg."')";
-
-                        $campo_fecha='anam_fecharegistro';
-
+                        $campo_fecha='intercon_fecharegistro';
                     }
 
-                    if($rs_tabeval->fields["tab_name"]=='dns_rehabilitacionfisicaanamesis')
+                    if($rs_tabeval->fields["tab_name"]=='dns_referencia')
                     {
 
                         $campos_data='';
@@ -276,32 +259,531 @@ $imagenes_mostradas = array();
                         $campos_data='iddata='.$rs_tabeval->fields["tab_id"].'&pVar2='.@$clie_id.'&pVar4='.$atenc_id.'&pVar5='.$eteneva_id.'&pVar3='.$mnupan_id;
                         $campos_data64=base64_encode($campos_data);
 
-                        $linkpdfg="pdformulariorehabilitacionfisicaanamesis";
+                        $linkpdfg="pdfreferencia";
                         $urllinkg="pdfformularios/".$linkpdfg.".php?ssr=".$campos_data64."|"."+".$rs_seccion->fields[$rs_tabeval->fields["tab_campoprimario"]];
                         $linkimprimirg="onClick=ver_pdfform('".$urllinkg."')";
-
-                        $campo_fecha='anam_fecharegistro';
-
+                        $campo_fecha='referencia_fecharegistro';
                     }
 
-                    // MOSTRAR EL TR PARA TODAS LAS DEMÁS TABLAS (EXCEPTO dns_newtraumatologiaanamesis que ya se mostró arriba)
-                    if($rs_tabeval->fields["tab_name"]!='dns_newtraumatologiaanamesis' && $campo_fecha!='')
+                    if($rs_tabeval->fields["tab_name"]=='dns_enfermeria')
                     {
-                        ?>
-                        <tr>
-                            <td><?php echo $rs_seccion->fields[$campo_fecha]; ?></td>
-                            <td><?php echo $rs_datosmenu->fields["mnupan_nombre"]; ?></td>
-                            <td <?php echo $linkimprimirg; ?> style="cursor:pointer"><img src="images/pdfdoc.png" ></td>
-                        </tr>
-                        <?php
+
+                        $campos_data='';
+                        $campos_data64='';
+                        $campos_data='iddata='.$rs_tabeval->fields["tab_id"].'&pVar2='.@$clie_id.'&pVar4='.$atenc_id.'&pVar5='.$eteneva_id.'&pVar3='.$mnupan_id;
+                        $campos_data64=base64_encode($campos_data);
+
+                        $linkpdfg="pdfformenfermeria_consolidado";
+                        $urllinkg="pdfformularios/".$linkpdfg.".php?ssr=".$campos_data64."|"."+".$rs_seccion->fields[$rs_tabeval->fields["tab_campoprimario"]];
+                        $linkimprimirg="onClick=generate_viewpdf_enfermeria('".$urllinkg."')";
+                        $campo_fecha='enfer_fecharegistro';
                     }
 
+                    if($rs_tabeval->fields["tab_name"]=='dns_newhospitalizacionanamesis')
+                    {
 
-                    //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+                        $campos_data='';
+                        $campos_data64='';
+                        $campos_data='iddata='.$rs_tabeval->fields["tab_id"].'&pVar2='.@$clie_id.'&pVar4='.$atenc_id.'&pVar5='.$eteneva_id.'&pVar3='.$mnupan_id;
+                        $campos_data64=base64_encode($campos_data);
 
-                    //busca laboratorio nuevo
+                        $linkpdfg="pdformularionewshospitalizacion";
+                        $urllinkg="pdfformularios/".$linkpdfg.".php?ssr=".$campos_data64."|"."+".$rs_seccion->fields[$rs_tabeval->fields["tab_campoprimario"]];
+                        $linkimprimirg="onClick=ver_pdfform('".$urllinkg."')";
+                        $campo_fecha='anam_fecharegistro';
+                    }
 
-                    $busca_laborato="select * from dns_newlaboratorio where lab_tablaexterno='".$rs_tabeval->fields["tab_name"]."' and lab_idexterno='".$rs_seccion->fields[$rs_tabeval->fields["tab_campoprimario"]]."' order by lab_fecharegistro desc";
+                    if($rs_tabeval->fields["tab_name"]=='dns_recuperacion')
+                    {
+
+                        $campos_data='';
+                        $campos_data64='';
+                        $campos_data='iddata='.$rs_tabeval->fields["tab_id"].'&pVar2='.@$clie_id.'&pVar4='.$atenc_id.'&pVar5='.$eteneva_id.'&pVar3='.$mnupan_id;
+                        $campos_data64=base64_encode($campos_data);
+
+                        $linkpdfg="pdfrecuperacion";
+                        $urllinkg="pdfformularios/".$linkpdfg.".php?ssr=".$campos_data64."|"."+".$rs_seccion->fields[$rs_tabeval->fields["tab_campoprimario"]];
+                        $linkimprimirg="onClick=ver_pdfform('".$urllinkg."')";
+                        $campo_fecha='recup_fecharegistro';
+                    }
+
+                    ?>
+                    <tr>
+                        <td valign="top"><?php  echo $rs_seccion->fields[$campo_fecha]; ?></td>
+                        <td><?php  echo $rs_tabeval->fields["tab_title"]; ?><hr />
+                            <?php
+
+                            // ============================================
+                            // BUSCA SUBSECUENTES PARA CADA TIPO DE CONSULTA
+                            // ============================================
+
+                            // SUBSECUENTES PARA CONSULTA EXTERNA NEW
+                            if($rs_tabeval->fields["tab_name"]=='dns_newconsultaexternaanamesis')
+                            {
+
+                                $lista_datosmenu_sub="select * from gogess_menupanel where tab_id='558'";
+                                $rs_datosmenu_sub = $DB_gogess->executec($lista_datosmenu_sub,array($mnupan_id));
+                                $mnupan_id_sub=$rs_datosmenu_sub->fields["mnupan_id"];
+
+                                $lista_subsecuentes="select * from dns_newconsultaexternaconsultaexterna where anam_id='".$rs_seccion->fields["anam_id"]."' order by conext_fecharegistro desc";
+                                $rs_subsecuentes = $DB_gogess->executec($lista_subsecuentes,array());
+                                if($rs_subsecuentes)
+                                {
+                                    while (!$rs_subsecuentes->EOF) {
+
+                                        $campos_data='';
+                                        $campos_data64='';
+                                        $campos_data='pVar2='.@$clie_id.'&pVar4='.$atenc_id.'&pVar3='.$mnupan_id_sub;
+                                        $campos_data64=base64_encode($campos_data);
+
+                                        $linkpdfgx="pdfformevolucionnewconsultaexterna";
+                                        $urllinkgx="pdfformularios/".$linkpdfgx.".php?ssr=".$campos_data64."|"."+".$rs_seccion->fields["anam_id"];
+                                        $linkimprimirgx="onClick=ver_pdfform('".$urllinkgx."')";
+                                        $campo_fechax='conext_fecharegistro';
+
+                                        $lista_tabevalx="select * from gogess_sistable where tab_name='dns_consultaexterna'";
+                                        $rs_tablax = $DB_gogess->executec($lista_tabevalx,array());
+
+                                        echo $rs_subsecuentes->fields[$campo_fechax]." -- >".$rs_tablax->fields["tab_title"]." --> "."<span ".$linkimprimirgx." style='cursor:pointer' ><img src='images/pdfdoc.png' width='30' ></span><br>";
+
+
+
+                                        $rs_subsecuentes->MoveNext();
+                                    }
+                                }
+
+
+                            }
+
+                            // SUBSECUENTES PARA ANAMNESIS EXAMEN FISICO
+                            if($rs_tabeval->fields["tab_name"]=='dns_anamesisexamenfisico')
+                            {
+
+                                $lista_datosmenu_sub="select * from gogess_menupanel where tab_id='320'";
+                                $rs_datosmenu_sub = $DB_gogess->executec($lista_datosmenu_sub,array($mnupan_id));
+                                $mnupan_id_sub=$rs_datosmenu_sub->fields["mnupan_id"];
+
+                                $lista_subsecuentes="select * from dns_consultaexterna where anam_id='".$rs_seccion->fields["anam_id"]."' order by conext_fecharegistro desc";
+                                $rs_subsecuentes = $DB_gogess->executec($lista_subsecuentes,array());
+                                if($rs_subsecuentes)
+                                {
+                                    while (!$rs_subsecuentes->EOF) {
+
+                                        $campos_data='';
+                                        $campos_data64='';
+                                        $campos_data='pVar2='.@$clie_id.'&pVar4='.$atenc_id.'&pVar3='.$mnupan_id_sub;
+                                        $campos_data64=base64_encode($campos_data);
+
+                                        $linkpdfgx="pdfformularioevolucion";
+                                        $urllinkgx="pdfformularios/".$linkpdfgx.".php?ssr=".$campos_data64."|"."+".$rs_seccion->fields["anam_id"];
+                                        $linkimprimirgx="onClick=ver_pdfform('".$urllinkgx."')";
+                                        $campo_fechax='conext_fecharegistro';
+
+                                        $lista_tabevalx="select * from gogess_sistable where tab_name='dns_consultaexterna'";
+                                        $rs_tablax = $DB_gogess->executec($lista_tabevalx,array());
+
+                                        echo $rs_subsecuentes->fields[$campo_fechax]." -- >".$rs_tablax->fields["tab_title"]." --> "."<span ".$linkimprimirgx." style='cursor:pointer' ><img src='images/pdfdoc.png' width='30' ></span><br>";
+
+
+
+                                        $rs_subsecuentes->MoveNext();
+                                    }
+                                }
+
+
+                            }
+
+                            // SUBSECUENTES PARA EMERGENCIA
+                            if($rs_tabeval->fields["tab_name"]=='dns_emergenciaanamesis')
+                            {
+
+                                $lista_datosmenu_sub="select * from gogess_menupanel where tab_id='464'";
+                                $rs_datosmenu_sub = $DB_gogess->executec($lista_datosmenu_sub,array($mnupan_id));
+                                $mnupan_id_sub=$rs_datosmenu_sub->fields["mnupan_id"];
+
+                                $lista_subsecuentes="select * from dns_emergenciaconsultaexterna where anam_id='".$rs_seccion->fields["anam_id"]."' order by conext_fecharegistro desc";
+                                $rs_subsecuentes = $DB_gogess->executec($lista_subsecuentes,array());
+                                if($rs_subsecuentes)
+                                {
+                                    while (!$rs_subsecuentes->EOF) {
+
+                                        $campos_data='';
+                                        $campos_data64='';
+                                        $campos_data='pVar2='.@$clie_id.'&pVar4='.$atenc_id.'&pVar3='.$mnupan_id_sub;
+                                        $campos_data64=base64_encode($campos_data);
+
+                                        $linkpdfgx="pdfformevolucionemergencia";
+                                        $urllinkgx="pdfformularios/".$linkpdfgx.".php?ssr=".$campos_data64."|"."+".$rs_seccion->fields["anam_id"];
+                                        $linkimprimirgx="onClick=ver_pdfform('".$urllinkgx."')";
+                                        $campo_fechax='conext_fecharegistro';
+
+                                        $lista_tabevalx="select * from gogess_sistable where tab_name='dns_emergenciaconsultaexterna'";
+                                        $rs_tablax = $DB_gogess->executec($lista_tabevalx,array());
+
+                                        echo $rs_subsecuentes->fields[$campo_fechax]." -- >".$rs_tablax->fields["tab_title"]." --> "."<span ".$linkimprimirgx." style='cursor:pointer' ><img src='images/pdfdoc.png' width='30' ></span><br>";
+
+
+
+                                        $rs_subsecuentes->MoveNext();
+                                    }
+                                }
+
+
+                            }
+
+                            // SUBSECUENTES PARA GASTROENTEROLOGIA
+                            if($rs_tabeval->fields["tab_name"]=='dns_gastroenterologiaanamesis')
+                            {
+
+                                $lista_datosmenu_sub="select * from gogess_menupanel where tab_id='450'";
+                                $rs_datosmenu_sub = $DB_gogess->executec($lista_datosmenu_sub,array($mnupan_id));
+                                $mnupan_id_sub=$rs_datosmenu_sub->fields["mnupan_id"];
+
+                                $lista_subsecuentes="select * from dns_gastroenterologiaconsultaexterna where anam_id='".$rs_seccion->fields["anam_id"]."' order by conext_fecharegistro desc";
+                                $rs_subsecuentes = $DB_gogess->executec($lista_subsecuentes,array());
+                                if($rs_subsecuentes)
+                                {
+                                    while (!$rs_subsecuentes->EOF) {
+
+                                        $campos_data='';
+                                        $campos_data64='';
+                                        $campos_data='pVar2='.@$clie_id.'&pVar4='.$atenc_id.'&pVar3='.$mnupan_id_sub;
+                                        $campos_data64=base64_encode($campos_data);
+
+                                        $linkpdfgx="pdfformevoluciongastroenterologia";
+                                        $urllinkgx="pdfformularios/".$linkpdfgx.".php?ssr=".$campos_data64."|"."+".$rs_seccion->fields["anam_id"];
+                                        $linkimprimirgx="onClick=ver_pdfform('".$urllinkgx."')";
+                                        $campo_fechax='conext_fecharegistro';
+
+                                        $lista_tabevalx="select * from gogess_sistable where tab_name='dns_gastroenterologiaconsultaexterna'";
+                                        $rs_tablax = $DB_gogess->executec($lista_tabevalx,array());
+
+                                        echo $rs_subsecuentes->fields[$campo_fechax]." -- >".$rs_tablax->fields["tab_title"]." --> "."<span ".$linkimprimirgx." style='cursor:pointer' ><img src='images/pdfdoc.png' width='30' ></span><br>";
+
+
+
+                                        $rs_subsecuentes->MoveNext();
+                                    }
+                                }
+
+
+                            }
+
+                            // SUBSECUENTES PARA PEDIATRIA
+                            if($rs_tabeval->fields["tab_name"]=='dns_pediatriaanamesis')
+                            {
+
+                                $lista_datosmenu_sub="select * from gogess_menupanel where tab_id='442'";
+                                $rs_datosmenu_sub = $DB_gogess->executec($lista_datosmenu_sub,array($mnupan_id));
+                                $mnupan_id_sub=$rs_datosmenu_sub->fields["mnupan_id"];
+
+                                $lista_subsecuentes="select * from dns_pediatriaconsultaexterna where anam_id='".$rs_seccion->fields["anam_id"]."' order by conext_fecharegistro desc";
+                                $rs_subsecuentes = $DB_gogess->executec($lista_subsecuentes,array());
+                                if($rs_subsecuentes)
+                                {
+                                    while (!$rs_subsecuentes->EOF) {
+
+                                        $campos_data='';
+                                        $campos_data64='';
+                                        $campos_data='pVar2='.@$clie_id.'&pVar4='.$atenc_id.'&pVar3='.$mnupan_id_sub;
+                                        $campos_data64=base64_encode($campos_data);
+
+                                        $linkpdfgx="pdfformevolucionpediatria";
+                                        $urllinkgx="pdfformularios/".$linkpdfgx.".php?ssr=".$campos_data64."|"."+".$rs_seccion->fields["anam_id"];
+                                        $linkimprimirgx="onClick=ver_pdfform('".$urllinkgx."')";
+                                        $campo_fechax='conext_fecharegistro';
+
+                                        $lista_tabevalx="select * from gogess_sistable where tab_name='dns_pediatriaconsultaexterna'";
+                                        $rs_tablax = $DB_gogess->executec($lista_tabevalx,array());
+
+                                        echo $rs_subsecuentes->fields[$campo_fechax]." -- >".$rs_tablax->fields["tab_title"]." --> "."<span ".$linkimprimirgx." style='cursor:pointer' ><img src='images/pdfdoc.png' width='30' ></span><br>";
+
+
+
+                                        $rs_subsecuentes->MoveNext();
+                                    }
+                                }
+
+
+                            }
+
+                            // SUBSECUENTES PARA TRAUMATOLOGIA NEW
+                            if($rs_tabeval->fields["tab_name"]=='dns_newtraumatologiaanamesis')
+                            {
+
+                                $lista_datosmenu_sub="select * from gogess_menupanel where tab_id='582'";
+                                $rs_datosmenu_sub = $DB_gogess->executec($lista_datosmenu_sub,array($mnupan_id));
+                                $mnupan_id_sub=$rs_datosmenu_sub->fields["mnupan_id"];
+
+                                $lista_subsecuentes="select * from dns_newtraumatologiaconsultaexterna where anam_id='".$rs_seccion->fields["anam_id"]."' order by conext_fecharegistro desc";
+                                $rs_subsecuentes = $DB_gogess->executec($lista_subsecuentes,array());
+                                if($rs_subsecuentes)
+                                {
+                                    while (!$rs_subsecuentes->EOF) {
+
+                                        $campos_data='';
+                                        $campos_data64='';
+                                        $campos_data='pVar2='.@$clie_id.'&pVar4='.$atenc_id.'&pVar3='.$mnupan_id_sub;
+                                        $campos_data64=base64_encode($campos_data);
+
+                                        $linkpdfgx="pdfformevolucionnewtraumatologia";
+                                        $urllinkgx="pdfformularios/".$linkpdfgx.".php?ssr=".$campos_data64."|"."+".$rs_seccion->fields["anam_id"];
+                                        $linkimprimirgx="onClick=ver_pdfform('".$urllinkgx."')";
+                                        $campo_fechax='conext_fecharegistro';
+
+                                        $lista_tabevalx="select * from gogess_sistable where tab_name='dns_newtraumatologiaconsultaexterna'";
+                                        $rs_tablax = $DB_gogess->executec($lista_tabevalx,array());
+
+                                        echo $rs_subsecuentes->fields[$campo_fechax]." -- >".$rs_tablax->fields["tab_title"]." --> "."<span ".$linkimprimirgx." style='cursor:pointer' ><img src='images/pdfdoc.png' width='30' ></span><br>";
+
+
+
+                                        $rs_subsecuentes->MoveNext();
+                                    }
+                                }
+
+
+                            }
+
+                            // SUBSECUENTES PARA TRAUMATOLOGIA
+                            if($rs_tabeval->fields["tab_name"]=='dns_traumatologiaanamesis')
+                            {
+
+                                $lista_datosmenu_sub="select * from gogess_menupanel where tab_id='454'";
+                                $rs_datosmenu_sub = $DB_gogess->executec($lista_datosmenu_sub,array($mnupan_id));
+                                $mnupan_id_sub=$rs_datosmenu_sub->fields["mnupan_id"];
+
+                                $lista_subsecuentes="select * from dns_traumatologiaconsultaexterna where anam_id='".$rs_seccion->fields["anam_id"]."' order by conext_fecharegistro desc";
+                                $rs_subsecuentes = $DB_gogess->executec($lista_subsecuentes,array());
+                                if($rs_subsecuentes)
+                                {
+                                    while (!$rs_subsecuentes->EOF) {
+
+                                        $campos_data='';
+                                        $campos_data64='';
+                                        $campos_data='pVar2='.@$clie_id.'&pVar4='.$atenc_id.'&pVar3='.$mnupan_id_sub;
+                                        $campos_data64=base64_encode($campos_data);
+
+                                        $linkpdfgx="pdfformevoluciontraumatologia";
+                                        $urllinkgx="pdfformularios/".$linkpdfgx.".php?ssr=".$campos_data64."|"."+".$rs_seccion->fields["anam_id"];
+                                        $linkimprimirgx="onClick=ver_pdfform('".$urllinkgx."')";
+                                        $campo_fechax='conext_fecharegistro';
+
+                                        $lista_tabevalx="select * from gogess_sistable where tab_name='dns_traumatologiaconsultaexterna'";
+                                        $rs_tablax = $DB_gogess->executec($lista_tabevalx,array());
+
+                                        echo $rs_subsecuentes->fields[$campo_fechax]." -- >".$rs_tablax->fields["tab_title"]." --> "."<span ".$linkimprimirgx." style='cursor:pointer' ><img src='images/pdfdoc.png' width='30' ></span><br>";
+
+
+
+                                        $rs_subsecuentes->MoveNext();
+                                    }
+                                }
+
+
+                            }
+
+                            // SUBSECUENTES PARA CARDIOLOGIA
+                            if($rs_tabeval->fields["tab_name"]=='dns_cardiologiaanamesis')
+                            {
+
+                                $lista_datosmenu_sub="select * from gogess_menupanel where tab_id='446'";
+                                $rs_datosmenu_sub = $DB_gogess->executec($lista_datosmenu_sub,array($mnupan_id));
+                                $mnupan_id_sub=$rs_datosmenu_sub->fields["mnupan_id"];
+
+                                $lista_subsecuentes="select * from dns_cardiologiaconsultaexterna where anam_id='".$rs_seccion->fields["anam_id"]."' order by conext_fecharegistro desc";
+                                $rs_subsecuentes = $DB_gogess->executec($lista_subsecuentes,array());
+                                if($rs_subsecuentes)
+                                {
+                                    while (!$rs_subsecuentes->EOF) {
+
+                                        $campos_data='';
+                                        $campos_data64='';
+                                        $campos_data='pVar2='.@$clie_id.'&pVar4='.$atenc_id.'&pVar3='.$mnupan_id_sub;
+                                        $campos_data64=base64_encode($campos_data);
+
+                                        $linkpdfgx="pdfformevolucioncardiologia";
+                                        $urllinkgx="pdfformularios/".$linkpdfgx.".php?ssr=".$campos_data64."|"."+".$rs_seccion->fields["anam_id"];
+                                        $linkimprimirgx="onClick=ver_pdfform('".$urllinkgx."')";
+                                        $campo_fechax='conext_fecharegistro';
+
+                                        $lista_tabevalx="select * from gogess_sistable where tab_name='dns_cardiologiaconsultaexterna'";
+                                        $rs_tablax = $DB_gogess->executec($lista_tabevalx,array());
+
+                                        echo $rs_subsecuentes->fields[$campo_fechax]." -- >".$rs_tablax->fields["tab_title"]." --> "."<span ".$linkimprimirgx." style='cursor:pointer' ><img src='images/pdfdoc.png' width='30' ></span><br>";
+
+
+
+                                        $rs_subsecuentes->MoveNext();
+                                    }
+                                }
+
+
+                            }
+
+                            // SUBSECUENTES PARA GINECOLOGIA
+                            if($rs_tabeval->fields["tab_name"]=='dns_ginecologiaanamesis')
+                            {
+
+                                $lista_datosmenu_sub="select * from gogess_menupanel where tab_id='458'";
+                                $rs_datosmenu_sub = $DB_gogess->executec($lista_datosmenu_sub,array($mnupan_id));
+                                $mnupan_id_sub=$rs_datosmenu_sub->fields["mnupan_id"];
+
+                                $lista_subsecuentes="select * from dns_ginecologiaconsultaexterna where anam_id='".$rs_seccion->fields["anam_id"]."' order by conext_fecharegistro desc";
+                                $rs_subsecuentes = $DB_gogess->executec($lista_subsecuentes,array());
+                                if($rs_subsecuentes)
+                                {
+                                    while (!$rs_subsecuentes->EOF) {
+
+                                        $campos_data='';
+                                        $campos_data64='';
+                                        $campos_data='pVar2='.@$clie_id.'&pVar4='.$atenc_id.'&pVar3='.$mnupan_id_sub;
+                                        $campos_data64=base64_encode($campos_data);
+
+                                        $linkpdfgx="pdfformevolucionginecologia";
+                                        $urllinkgx="pdfformularios/".$linkpdfgx.".php?ssr=".$campos_data64."|"."+".$rs_seccion->fields["anam_id"];
+                                        $linkimprimirgx="onClick=ver_pdfform('".$urllinkgx."')";
+                                        $campo_fechax='conext_fecharegistro';
+
+                                        $lista_tabevalx="select * from gogess_sistable where tab_name='dns_ginecologiaconsultaexterna'";
+                                        $rs_tablax = $DB_gogess->executec($lista_tabevalx,array());
+
+                                        echo $rs_subsecuentes->fields[$campo_fechax]." -- >".$rs_tablax->fields["tab_title"]." --> "."<span ".$linkimprimirgx." style='cursor:pointer' ><img src='images/pdfdoc.png' width='30' ></span><br>";
+
+
+
+                                        $rs_subsecuentes->MoveNext();
+                                    }
+                                }
+
+
+                            }
+
+                            // SUBSECUENTES PARA HOSPITAL (PROTOCOLO OPERATORIO)
+                            if($rs_tabeval->fields["tab_name"]=='dns_hospitalanamesis')
+                            {
+
+                                $lista_datosmenu_sub="select * from gogess_menupanel where tab_id='432'";
+                                $rs_datosmenu_sub = $DB_gogess->executec($lista_datosmenu_sub,array($mnupan_id));
+                                $mnupan_id_sub=$rs_datosmenu_sub->fields["mnupan_id"];
+
+                                $lista_subsecuentes="select * from dns_protocolooperatorio where protoop_tblprincipal='dns_hospitalanamesis' and protoop_idenlace='".$rs_seccion->fields["anam_id"]."' order by protoop_fecharegistro desc";
+                                $rs_subsecuentes = $DB_gogess->executec($lista_subsecuentes,array());
+                                if($rs_subsecuentes)
+                                {
+                                    while (!$rs_subsecuentes->EOF) {
+
+                                        $campos_data='';
+                                        $campos_data64='';
+                                        $campos_data='pVar2='.@$clie_id.'&pVar4='.$atenc_id.'&pVar3='.$mnupan_id_sub;
+                                        $campos_data64=base64_encode($campos_data);
+
+                                        $protoop_id=$rs_subsecuentes->fields["protoop_id"];
+
+                                        $linkpdfgx="pdformularioprotocolo";
+                                        $urllinkgx="pdfformularios/".$linkpdfgx.".php?ssr=".$campos_data64."|"."+".$protoop_id;
+                                        $linkimprimirgx="onClick=ver_pdfform('".$urllinkgx."')";
+                                        $campo_fechax='protoop_fecharegistro';
+
+                                        $lista_tabevalx="select * from gogess_sistable where tab_name='dns_protocolooperatorio'";
+                                        $rs_tablax = $DB_gogess->executec($lista_tabevalx,array());
+
+                                        echo $rs_subsecuentes->fields[$campo_fechax]." -- >".$rs_tablax->fields["tab_title"]." --> "."<span ".$linkimprimirgx." style='cursor:pointer' ><img src='images/pdfdoc.png' width='30' ></span><br>";
+
+
+
+                                        $rs_subsecuentes->MoveNext();
+                                    }
+                                }
+
+
+                                // SUBSECUENTES PARA HOSPITAL (EPICRISIS)
+                                $lista_datosmenu_sub="select * from gogess_menupanel where tab_id='436'";
+                                $tab_id=436;
+                                $rs_datosmenu_sub = $DB_gogess->executec($lista_datosmenu_sub,array($mnupan_id));
+                                $mnupan_id_sub=$rs_datosmenu_sub->fields["mnupan_id"];
+
+                                $lista_subsecuentes="select * from dns_epicrisisanamesis where protoop_tblprincipal='dns_hospitalanamesis' and protoop_idenlace='".$rs_seccion->fields["anam_id"]."' order by anam_fecharegistro desc";
+                                $rs_subsecuentes = $DB_gogess->executec($lista_subsecuentes,array());
+                                if($rs_subsecuentes)
+                                {
+                                    while (!$rs_subsecuentes->EOF) {
+
+                                        $campos_data='';
+                                        $campos_data64='';
+                                        $campos_data='iddata='.$tab_id.'&pVar2='.@$clie_id.'&pVar4='.$atenc_id.'&pVar5=0&pVar3='.$mnupan_id_sub;
+                                        $campos_data64=base64_encode($campos_data);
+
+                                        $anam_id=$rs_subsecuentes->fields["anam_id"];
+
+                                        $linkpdfgx="pdformularioepicrisis";
+                                        $urllinkgx="pdfformularios/".$linkpdfgx.".php?ssr=".$campos_data64."|"."+".$anam_id;
+                                        $linkimprimirgx="onClick=ver_pdfform('".$urllinkgx."')";
+                                        $campo_fechax='anam_fecharegistro';
+
+                                        $lista_tabevalx="select * from gogess_sistable where tab_name='dns_epicrisisanamesis'";
+                                        $rs_tablax = $DB_gogess->executec($lista_tabevalx,array());
+
+                                        echo $rs_subsecuentes->fields[$campo_fechax]." -- >".$rs_tablax->fields["tab_title"]." --> "."<span ".$linkimprimirgx." style='cursor:pointer' ><img src='images/pdfdoc.png' width='30' ></span><br>";
+
+
+
+                                        $rs_subsecuentes->MoveNext();
+                                    }
+                                }
+
+
+                            }
+
+                            // SUBSECUENTES PARA NEWHOSPITALIZACION
+                            if($rs_tabeval->fields["tab_name"]=='dns_newhospitalizacionanamesis')
+                            {
+
+                                $lista_datosmenu_sub="select * from gogess_menupanel where tab_id='554'";
+                                $rs_datosmenu_sub = $DB_gogess->executec($lista_datosmenu_sub,array($mnupan_id));
+                                $mnupan_id_sub=$rs_datosmenu_sub->fields["mnupan_id"];
+
+                                $lista_subsecuentes="select * from dns_newhospitalizacionconsultaexterna where anam_id='".$rs_seccion->fields["anam_id"]."' order by conext_fecharegistro desc";
+                                $rs_subsecuentes = $DB_gogess->executec($lista_subsecuentes,array());
+                                if($rs_subsecuentes)
+                                {
+                                    while (!$rs_subsecuentes->EOF) {
+
+                                        $campos_data='';
+                                        $campos_data64='';
+                                        $campos_data='pVar2='.@$clie_id.'&pVar4='.$atenc_id.'&pVar3='.$mnupan_id_sub;
+                                        $campos_data64=base64_encode($campos_data);
+
+                                        $linkpdfgx="pdfformevolucionnewshospitalizacion";
+                                        $urllinkgx="pdfformularios/".$linkpdfgx.".php?ssr=".$campos_data64."|"."+".$rs_seccion->fields["anam_id"];
+                                        $linkimprimirgx="onClick=ver_pdfform('".$urllinkgx."')";
+                                        $campo_fechax='conext_fecharegistro';
+
+                                        $lista_tabevalx="select * from gogess_sistable where tab_name='dns_newhospitalizacionconsultaexterna'";
+                                        $rs_tablax = $DB_gogess->executec($lista_tabevalx,array());
+
+                                        echo $rs_subsecuentes->fields[$campo_fechax]." -- >".$rs_tablax->fields["tab_title"]." --> "."<span ".$linkimprimirgx." style='cursor:pointer' ><img src='images/pdfdoc.png' width='30' ></span><br>";
+
+
+
+                                        $rs_subsecuentes->MoveNext();
+                                    }
+                                }
+
+
+                            }
+
+                            ?>
+                        </td>
+                        <td valign="top" style="cursor:pointer" <?php echo $linkimprimirg; ?> ><img src="images/pdfdoc.png" ></td>
+                        <td>
+                            <?php //echo $links_data; ?>
+                        </td>
+                    </tr>
+                    <?php
+
+                    //busca laboratorio
+                    $busca_laborato="select * from dns_laboratorio where lab_tablaexterno='".$rs_tabeval->fields["tab_name"]."' and lab_idexterno='".$rs_seccion->fields[$rs_tabeval->fields["tab_campoprimario"]]."'";
                     $rs_laborato = $DB_gogess->executec($busca_laborato,array());
                     if($rs_laborato)
                     {
@@ -312,11 +794,88 @@ $imagenes_mostradas = array();
                                 // Agregar al array de mostrados
                                 $laboratorios_mostrados[] = $rs_laborato->fields["lab_id"];
 
-                                $campo_fechasecun='lab_fecharegistro';
+                                $eteneva_id=0;
+                                $tab_id=284;
+                                $mnupan_id=60;
+                                $campos_data='';
+                                $campos_data64='';
+                                $campos_data='iddata='.$tab_id.'&pVar2='.@$clie_id.'&pVar4='.$atenc_id.'&pVar5='.$eteneva_id.'&pVar3='.$mnupan_id;
+                                $campos_data64=base64_encode($campos_data);
+                                $linkpdf="pdflaboratorio";
+                                $urllink="pdfformularios/".$linkpdf.".php?ssr=".$campos_data64."|"."+".$rs_laborato->fields["lab_id"];
+                                $linkimprimir="onClick=ver_pdfform('".$urllink."')";
+
+                                //busca id informe
+                                $busca_informeimg="select * from dns_laboratorioinforme where lab_id='".$rs_laborato->fields["lab_id"]."'";
+                                $rs_laboratoinforme = $DB_gogess->executec($busca_informeimg,array());
+                                //busca id informe
+
+                                $logoinforme='';
+                                $eteneva_idi=0;
+                                $tab_idi=325;
+                                $mnupan_idi=91;
+                                $linkpdfi="pdflaboratorioinforme";
+                                $campos_datai='';
+                                $campos_data64i='';
+                                $campos_datai='iddata='.$tab_idi.'&pVar2='.@$clie_id.'&pVar4='.$atenc_id.'&pVar5='.$eteneva_id.'&pVar3=91';
+                                $campos_data64i=base64_encode($campos_datai);
+                                $urllinki="pdfformularios/".$linkpdfi.".php?ssr=".$campos_data64i."|"."+".$rs_laboratoinforme->fields["labinfor_id"];
+
+                                if($rs_laboratoinforme->fields["labinfor_id"]>0)
+                                {
+                                    $linkimprimiri="onClick=ver_pdfform('".$urllinki."')";
+                                    $logoinforme='<img src="images/pdfdoc.png" ><br />Informe';
+                                }
+
+                                $logoinforme='';
+                                ?>
+
+                                <tr>
+                                    <td></td>
+                                    <td>LABORATORIO CLINICO - SOLICITUD (SNS-MSP / HCU-form.010 / 2008)<br /> <?php echo $rs_laborato->fields["lab_fecharegistro"]; ?></td>
+                                    <td>
+
+                                        <table border="0" cellpadding="0" cellspacing="0">
+                                            <tr>
+                                                <td <?php echo $linkimprimir; ?> style="cursor:pointer" ><img src="images/pdfdoc.png" ><br />Solicitud</td>
+                                                <td <?php echo $linkimprimiri; ?> style="cursor:pointer" ><?php echo $logoinforme; ?></td>
+                                            </tr>
+                                        </table>
+
+                                    </td>
+                                    <td>
+                                        <?php //echo $links_data; ?>
+                                    </td>
+                                </tr>
+
+                                <?php
+                            } // Fin del control de duplicados
+                            $rs_laborato->MoveNext();
+                        }
+                    }
+
+                    //busca laboratorio
+
+
+
+                    //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+                    //busca laboratorio nuevo
+
+                    $busca_laborato="select * from dns_newlaboratorio where lab_tablaexterno='".$rs_tabeval->fields["tab_name"]."' and lab_idexterno='".$rs_seccion->fields[$rs_tabeval->fields["tab_campoprimario"]]."'";
+                    $rs_laborato = $DB_gogess->executec($busca_laborato,array());
+                    if($rs_laborato)
+                    {
+                        while (!$rs_laborato->EOF) {
+
+                            // CONTROL DE DUPLICADOS: Solo mostrar si no se ha mostrado antes
+                            if(!in_array($rs_laborato->fields["lab_id"], $laboratorios_mostrados)) {
+                                // Agregar al array de mostrados
+                                $laboratorios_mostrados[] = $rs_laborato->fields["lab_id"];
 
                                 $eteneva_id=0;
-                                $tab_id=504;
-                                $mnupan_id=207;
+                                $tab_id=590;
+                                $mnupan_id=219;
                                 $campos_data='';
                                 $campos_data64='';
                                 $campos_data='iddata='.$tab_id.'&pVar2='.@$clie_id.'&pVar4='.$atenc_id.'&pVar5='.$eteneva_id.'&pVar3='.$mnupan_id;
@@ -326,18 +885,18 @@ $imagenes_mostradas = array();
                                 $linkimprimir="onClick=ver_pdfform('".$urllink."')";
 
                                 //busca id informe
-                                $busca_laboratoinforme="select * from dns_newlaboratorioinforme where lab_id='".$rs_laborato->fields["lab_id"]."'";
-                                $rs_laboratoinforme = $DB_gogess->executec($busca_laboratoinforme,array());
+                                $busca_informeimg="select * from dns_laboratorioinforme where lab_id='".$rs_laborato->fields["lab_id"]."'";
+                                $rs_laboratoinforme = $DB_gogess->executec($busca_informeimg,array());
                                 //busca id informe
 
                                 $logoinforme='';
                                 $eteneva_idi=0;
-                                $tab_idi=586;
-                                $mnupan_idi=216;
-                                $linkpdfi="pdfnewlaboratorioinforme";
+                                $tab_idi=325;
+                                $mnupan_idi=91;
+                                $linkpdfi="pdflaboratorioinforme";
                                 $campos_datai='';
                                 $campos_data64i='';
-                                $campos_datai='iddata=586&pVar2='.@$clie_id.'&pVar4='.$atenc_id.'&pVar5='.$eteneva_id.'&pVar3=216';
+                                $campos_datai='iddata='.$tab_idi.'&pVar2='.@$clie_id.'&pVar4='.$atenc_id.'&pVar5='.$eteneva_id.'&pVar3=91';
                                 $campos_data64i=base64_encode($campos_datai);
                                 $urllinki="pdfformularios/".$linkpdfi.".php?ssr=".$campos_data64i."|"."+".$rs_laboratoinforme->fields["labinfor_id"];
 
@@ -382,6 +941,83 @@ $imagenes_mostradas = array();
 
 
                     ///=====================================================================================================
+
+                    //busca imagen (versión antigua)
+                    $busca_imagen="select * from dns_imagenologia where imgag_tablaexterno='".$rs_tabeval->fields["tab_name"]."' and imgag_idexterno='".$rs_seccion->fields[$rs_tabeval->fields["tab_campoprimario"]]."' order by imgag_fecharegistro desc";
+                    $rs_imagen = $DB_gogess->executec($busca_imagen,array());
+                    if($rs_imagen)
+                    {
+                        while (!$rs_imagen->EOF) {
+
+                            // CONTROL DE DUPLICADOS: Solo mostrar si no se ha mostrado antes
+                            if(!in_array($rs_imagen->fields["imgag_id"], $imagenes_mostradas)) {
+                                // Agregar al array de mostrados
+                                $imagenes_mostradas[] = $rs_imagen->fields["imgag_id"];
+
+                                $campo_fechasecun='imgag_fecharegistro';
+
+                                $eteneva_id=0;
+                                $tab_id=285;
+                                $mnupan_id=61;
+                                $campos_data='';
+                                $campos_data64='';
+                                $campos_data='iddata='.$tab_id.'&pVar2='.@$clie_id.'&pVar4='.$atenc_id.'&pVar5='.$eteneva_id.'&pVar3='.$mnupan_id;
+                                $campos_data64=base64_encode($campos_data);
+                                $linkpdf="pdfimagen";
+                                $urllink="pdfformularios/".$linkpdf.".php?ssr=".$campos_data64."|"."+".$rs_imagen->fields["imgag_id"];
+                                $linkimprimir="onClick=ver_pdfform('".$urllink."')";
+
+                                //busca id informe
+                                $busca_informeimg="select * from dns_imagenologiainfo where imgag_id='".$rs_imagen->fields["imgag_id"]."'";
+                                $rs_imageninforme = $DB_gogess->executec($busca_informeimg,array());
+                                //busca id informe
+
+                                $logoinforme='';
+                                $eteneva_idi=0;
+                                $tab_idi=324;
+                                $mnupan_idi=90;
+                                $linkpdfi="pdfimageninforme";
+                                $campos_datai='';
+                                $campos_data64i='';
+                                $campos_datai='iddata=324&pVar2='.@$clie_id.'&pVar4='.$atenc_id.'&pVar5='.$eteneva_id.'&pVar3=90';
+                                $campos_data64i=base64_encode($campos_datai);
+                                $urllinki="pdfformularios/".$linkpdfi.".php?ssr=".$campos_data64i."|"."+".$rs_imageninforme->fields["imginfo_id"];
+
+                                if($rs_imageninforme->fields["imginfo_id"]>0)
+                                {
+                                    $linkimprimiri="onClick=ver_pdfform('".$urllinki."')";
+                                    $logoinforme='<img src="images/pdfdoc.png" ><br />Informe';
+                                }
+
+
+                                ?>
+
+                                <tr>
+                                    <td></td>
+                                    <td>IMAGENOLOGIA - SOLICITUD (SNS-MSP / HCU-form.012 / 2008)<br><?php echo $rs_imagen->fields["imgag_fecharegistro"]; ?></td>
+                                    <td>
+
+
+                                        <table border="0" cellpadding="0" cellspacing="0">
+                                            <tr>
+                                                <td <?php echo $linkimprimir; ?> style="cursor:pointer" ><img src="images/pdfdoc.png" ><br />Solicitud</td>
+                                                <td <?php echo $linkimprimiri; ?> style="cursor:pointer" ><?php echo $logoinforme; ?></td>
+                                            </tr>
+                                        </table>
+
+                                    </td>
+                                    <td>
+                                        <?php //echo $links_data; ?>
+                                    </td>
+                                </tr>
+
+                                <?php
+                            } // Fin del control de duplicados
+                            $rs_imagen->MoveNext();
+                        }
+                    }
+                    //busca imagen (versión antigua)
+
 
 
                     //busca imagen nuevo
@@ -468,8 +1104,6 @@ $imagenes_mostradas = array();
 
 
 
-
-
                     $rs_seccion->MoveNext();
                 }
             }
@@ -488,6 +1122,12 @@ $imagenes_mostradas = array();
     {
 
         location.href = url;
+
+    }
+    function generate_viewpdf_enfermeria(url)
+    {
+
+        window.open(url, '_blank');
 
     }
 

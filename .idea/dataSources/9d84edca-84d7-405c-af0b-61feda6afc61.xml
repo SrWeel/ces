@@ -1136,31 +1136,31 @@
     <schema id="324" parent="1" name="cesdb_arcombos">
       <AutoIntrospectionLevel>3</AutoIntrospectionLevel>
       <LastIntrospectionLevel>3</LastIntrospectionLevel>
-      <LastIntrospectionLocalTimestamp>2026-01-28.14:46:21</LastIntrospectionLocalTimestamp>
+      <LastIntrospectionLocalTimestamp>2026-01-30.12:06:11</LastIntrospectionLocalTimestamp>
       <CollationName>utf8mb4_general_ci</CollationName>
     </schema>
     <schema id="325" parent="1" name="cesdb_arextension">
       <AutoIntrospectionLevel>1</AutoIntrospectionLevel>
       <LastIntrospectionLevel>1</LastIntrospectionLevel>
-      <LastIntrospectionLocalTimestamp>2026-01-28.14:45:57</LastIntrospectionLocalTimestamp>
+      <LastIntrospectionLocalTimestamp>2026-01-30.12:05:41</LastIntrospectionLocalTimestamp>
       <CollationName>utf8mb4_general_ci</CollationName>
     </schema>
     <schema id="326" parent="1" name="cesdb_arlogs">
       <AutoIntrospectionLevel>3</AutoIntrospectionLevel>
       <LastIntrospectionLevel>3</LastIntrospectionLevel>
-      <LastIntrospectionLocalTimestamp>2026-01-28.14:46:21</LastIntrospectionLocalTimestamp>
+      <LastIntrospectionLocalTimestamp>2026-01-30.12:06:11</LastIntrospectionLocalTimestamp>
       <CollationName>utf8mb4_general_ci</CollationName>
     </schema>
     <schema id="327" parent="1" name="cesdb_aroriginal">
       <AutoIntrospectionLevel>1</AutoIntrospectionLevel>
       <LastIntrospectionLevel>1</LastIntrospectionLevel>
-      <LastIntrospectionLocalTimestamp>2026-01-28.14:45:57</LastIntrospectionLocalTimestamp>
+      <LastIntrospectionLocalTimestamp>2026-01-30.12:05:41</LastIntrospectionLocalTimestamp>
       <CollationName>utf8mb4_general_ci</CollationName>
     </schema>
     <schema id="328" parent="1" name="cesdb_arreportes">
       <AutoIntrospectionLevel>3</AutoIntrospectionLevel>
       <LastIntrospectionLevel>3</LastIntrospectionLevel>
-      <LastIntrospectionLocalTimestamp>2026-01-28.14:46:21</LastIntrospectionLocalTimestamp>
+      <LastIntrospectionLocalTimestamp>2026-01-30.12:06:11</LastIntrospectionLocalTimestamp>
       <CollationName>utf8mb4_general_ci</CollationName>
     </schema>
     <schema id="329" parent="1" name="information_schema">
