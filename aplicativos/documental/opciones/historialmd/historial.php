@@ -28,6 +28,7 @@ $imagenes_mostradas = array();
 <style type="text/css">
     <!--
     .css_listaespe {font-size: 10px; font-family: Verdana, Arial, Helvetica, sans-serif; font-weight: bold; }
+    .subsecuente {padding-left: 20px; background-color: #F5F5F5;}
     -->
 </style>
 <table width="890" border="0" align="center" cellpadding="0" cellspacing="0">
@@ -39,7 +40,7 @@ $imagenes_mostradas = array();
     <?php
 
 
-
+    // NOTA: Se removió 'dns_newtraumatologiaanamesis' de la lista de exclusión para que se muestren los registros
     $lista_tabeval="select * from gogess_sistable where tab_name not in ('dns_imagenologia','dns_laboratorio','dns_laboratorioinforme','dns_consultaexterna','dns_rehabilitacionanamesis','dns_otorrinoanamesis','dns_ginecologiaconsultaexterna','dns_emergenciaconsultaexterna','dns_gastroenterologiaconsultaexterna','dns_pediatriaconsultaexterna','dns_cardiologiaconsultaexterna','dns_traumatologiaconsultaexterna','dns_enfermeria','dns_hospitalconsultaexterna','dns_newinterconsulta','dns_newhospitalizacionconsultaexterna','dns_newgastroenterologiaanamesis','dns_newgastroenterologiaconsultaexterna','dns_newcardiologiaanamesis','dns_newcardiologiaconsultaexterna','dns_newpediatriaanamesis','dns_newpediatriaconsultaexterna','dns_newtraumatologiaconsultaexterna','dns_newconsultaexternaconsultaexterna','dns_newemergenciaanamesis','dns_newemergenciaconsultaexterna','dns_newprotocolooperatorio','dns_protocolooperatorio','dns_epicrisisanamesis','dns_epicrisisconsultaexterna','dns_newepicrisisanamesis','dns_newreferencia','dns_newimagenologiainfo','dns_odontologia','dns_imagenologiainfo') and  tab_sysmedico=1";
     $rs_tabeval = $DB_gogess->executec($lista_tabeval,array());
     if($rs_tabeval)
@@ -167,30 +168,56 @@ $imagenes_mostradas = array();
                         $campos_data='iddata='.$rs_tabeval->fields["tab_id"].'&pVar2='.@$clie_id.'&pVar4='.$atenc_id.'&pVar5='.$eteneva_id.'&pVar3='.$mnupan_id;
                         $campos_data64=base64_encode($campos_data);
 
-                        $linkpdfg="pdformularionewtraumatologia";
+                        $linkpdfg="pdformulariotraumatologiaanamesis";
                         $urllinkg="pdfformularios/".$linkpdfg.".php?ssr=".$campos_data64."|"."+".$rs_seccion->fields[$rs_tabeval->fields["tab_campoprimario"]];
                         $linkimprimirg="onClick=ver_pdfform('".$urllinkg."')";
 
                         $campo_fecha='anam_fecharegistro';
 
+                        // MOSTRAR EL REGISTRO PRINCIPAL (PRIMERA VEZ)
+                        ?>
+                        <tr>
+                            <td><?php echo $rs_seccion->fields[$campo_fecha]; ?></td>
+                            <td><?php echo $rs_datosmenu->fields["mnupan_nombre"]; ?> - PRIMERA VEZ</td>
+                            <td <?php echo $linkimprimirg; ?> style="cursor:pointer"><img src="images/pdfdoc.png" ></td>
+                        </tr>
+                        <?php
+
+                        // BUSCAR Y MOSTRAR SUBSECUENTES RELACIONADOS
+                        $anam_id_principal = $rs_seccion->fields[$rs_tabeval->fields["tab_campoprimario"]];
+
+                        // Buscar subsecuentes vinculados a esta anamnesis (primera vez)
+                        $busca_subsecuentes = "SELECT * FROM dns_newtraumatologiaconsultaexterna 
+                                              WHERE anam_id = '".$anam_id_principal."' 
+                                              ORDER BY cons_fecharegistro DESC";
+                        $rs_subsecuentes = $DB_gogess->executec($busca_subsecuentes, array());
+
+                        if($rs_subsecuentes && !$rs_subsecuentes->EOF)
+                        {
+                            while (!$rs_subsecuentes->EOF)
+                            {
+                                // Preparar datos para PDF de subsecuente
+                                $eteneva_id_sub = '';
+                                $tab_id_sub = $rs_tabeval->fields["tab_id"]; // Usar el mismo tab_id o buscar el específico
+                                $mnupan_id_sub = $mnupan_id;
+
+                                $campos_data_sub = 'iddata='.$tab_id_sub.'&pVar2='.$clie_id.'&pVar4='.$atenc_id.'&pVar5='.$eteneva_id_sub.'&pVar3='.$mnupan_id_sub;
+                                $campos_data64_sub = base64_encode($campos_data_sub);
+
+                                $linkpdf_sub = "pdformulariotraumatologiaconsultaexterna"; // Nombre del PDF para subsecuentes
+                                $urllink_sub = "pdfformularios/".$linkpdf_sub.".php?ssr=".$campos_data64_sub."|"."+".$rs_subsecuentes->fields["cons_id"];
+                                $linkimprimir_sub = "onClick=ver_pdfform('".$urllink_sub."')";
+                                ?>
+                                <tr class="subsecuente">
+                                    <td><?php echo $rs_subsecuentes->fields["cons_fecharegistro"]; ?></td>
+                                    <td>&nbsp;&nbsp;&nbsp;↳ SUBSECUENTE</td>
+                                    <td <?php echo $linkimprimir_sub; ?> style="cursor:pointer"><img src="images/pdfdoc.png" ></td>
+                                </tr>
+                                <?php
+                                $rs_subsecuentes->MoveNext();
+                            }
+                        }
                     }
-
-                    if($rs_tabeval->fields["tab_name"]=='dns_newhospitalizacionanamesis')
-                    {
-
-                        $campos_data='';
-                        $campos_data64='';
-                        $campos_data='iddata='.$rs_tabeval->fields["tab_id"].'&pVar2='.@$clie_id.'&pVar4='.$atenc_id.'&pVar5='.$eteneva_id.'&pVar3='.$mnupan_id;
-                        $campos_data64=base64_encode($campos_data);
-
-                        $linkpdfg="pdformularionewanamesishospitalizacion";
-                        $urllinkg="pdfformularios/".$linkpdfg.".php?ssr=".$campos_data64."|"."+".$rs_seccion->fields[$rs_tabeval->fields["tab_campoprimario"]];
-                        $linkimprimirg="onClick=ver_pdfform('".$urllinkg."')";
-
-                        $campo_fecha='anam_fecharegistro';
-
-                    }
-
 
                     if($rs_tabeval->fields["tab_name"]=='dns_cardiologiaanamesis')
                     {
@@ -208,6 +235,7 @@ $imagenes_mostradas = array();
 
                     }
 
+
                     if($rs_tabeval->fields["tab_name"]=='dns_ginecologiaanamesis')
                     {
 
@@ -224,10 +252,7 @@ $imagenes_mostradas = array();
 
                     }
 
-
-
-
-                    if($rs_tabeval->fields["tab_name"]=='dns_interconsulta')
+                    if($rs_tabeval->fields["tab_name"]=='dns_otorrinolaringologiaanamesis')
                     {
 
                         $campos_data='';
@@ -235,15 +260,15 @@ $imagenes_mostradas = array();
                         $campos_data='iddata='.$rs_tabeval->fields["tab_id"].'&pVar2='.@$clie_id.'&pVar4='.$atenc_id.'&pVar5='.$eteneva_id.'&pVar3='.$mnupan_id;
                         $campos_data64=base64_encode($campos_data);
 
-                        $linkpdfg="pdformulariointerconsulta";
+                        $linkpdfg="pdformulariootorrinolaringologiaanamesis";
                         $urllinkg="pdfformularios/".$linkpdfg.".php?ssr=".$campos_data64."|"."+".$rs_seccion->fields[$rs_tabeval->fields["tab_campoprimario"]];
                         $linkimprimirg="onClick=ver_pdfform('".$urllinkg."')";
 
-                        $campo_fecha='interco_fecharegistro';
+                        $campo_fecha='anam_fecharegistro';
 
                     }
 
-                    if($rs_tabeval->fields["tab_name"]=='dns_referencia')
+                    if($rs_tabeval->fields["tab_name"]=='dns_rehabilitacionfisicaanamesis')
                     {
 
                         $campos_data='';
@@ -251,36 +276,32 @@ $imagenes_mostradas = array();
                         $campos_data='iddata='.$rs_tabeval->fields["tab_id"].'&pVar2='.@$clie_id.'&pVar4='.$atenc_id.'&pVar5='.$eteneva_id.'&pVar3='.$mnupan_id;
                         $campos_data64=base64_encode($campos_data);
 
-                        $linkpdfg="pdformularioreferencia";
+                        $linkpdfg="pdformulariorehabilitacionfisicaanamesis";
                         $urllinkg="pdfformularios/".$linkpdfg.".php?ssr=".$campos_data64."|"."+".$rs_seccion->fields[$rs_tabeval->fields["tab_campoprimario"]];
                         $linkimprimirg="onClick=ver_pdfform('".$urllinkg."')";
 
-                        $campo_fecha='refe_fecharegistro';
+                        $campo_fecha='anam_fecharegistro';
 
                     }
 
-
-
-
-                    if($linkpdfg!='')
+                    // MOSTRAR EL TR PARA TODAS LAS DEMÁS TABLAS (EXCEPTO dns_newtraumatologiaanamesis que ya se mostró arriba)
+                    if($rs_tabeval->fields["tab_name"]!='dns_newtraumatologiaanamesis' && $campo_fecha!='')
                     {
-
                         ?>
                         <tr>
                             <td><?php echo $rs_seccion->fields[$campo_fecha]; ?></td>
                             <td><?php echo $rs_datosmenu->fields["mnupan_nombre"]; ?></td>
-                            <td><img src="images/pdfdoc.png" alt="" <?php echo $linkimprimirg; ?> style="cursor:pointer" /></td>
+                            <td <?php echo $linkimprimirg; ?> style="cursor:pointer"><img src="images/pdfdoc.png" ></td>
                         </tr>
-
                         <?php
                     }
 
 
-
+                    //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
                     //busca laboratorio nuevo
 
-                    $busca_laborato="select * from dns_newlaboratorio where lab_tablaexterno='".$rs_tabeval->fields["tab_name"]."' and lab_idexterno='".$rs_seccion->fields[$rs_tabeval->fields["tab_campoprimario"]]."'";
+                    $busca_laborato="select * from dns_newlaboratorio where lab_tablaexterno='".$rs_tabeval->fields["tab_name"]."' and lab_idexterno='".$rs_seccion->fields[$rs_tabeval->fields["tab_campoprimario"]]."' order by lab_fecharegistro desc";
                     $rs_laborato = $DB_gogess->executec($busca_laborato,array());
                     if($rs_laborato)
                     {
@@ -291,9 +312,11 @@ $imagenes_mostradas = array();
                                 // Agregar al array de mostrados
                                 $laboratorios_mostrados[] = $rs_laborato->fields["lab_id"];
 
+                                $campo_fechasecun='lab_fecharegistro';
+
                                 $eteneva_id=0;
-                                $tab_id=590;
-                                $mnupan_id=219;
+                                $tab_id=504;
+                                $mnupan_id=207;
                                 $campos_data='';
                                 $campos_data64='';
                                 $campos_data='iddata='.$tab_id.'&pVar2='.@$clie_id.'&pVar4='.$atenc_id.'&pVar5='.$eteneva_id.'&pVar3='.$mnupan_id;
@@ -303,18 +326,18 @@ $imagenes_mostradas = array();
                                 $linkimprimir="onClick=ver_pdfform('".$urllink."')";
 
                                 //busca id informe
-                                $busca_informeimg="select * from dns_laboratorioinforme where lab_id='".$rs_laborato->fields["lab_id"]."'";
-                                $rs_laboratoinforme = $DB_gogess->executec($busca_informeimg,array());
+                                $busca_laboratoinforme="select * from dns_newlaboratorioinforme where lab_id='".$rs_laborato->fields["lab_id"]."'";
+                                $rs_laboratoinforme = $DB_gogess->executec($busca_laboratoinforme,array());
                                 //busca id informe
 
                                 $logoinforme='';
                                 $eteneva_idi=0;
-                                $tab_idi=325;
-                                $mnupan_idi=91;
-                                $linkpdfi="pdflaboratorioinforme";
+                                $tab_idi=586;
+                                $mnupan_idi=216;
+                                $linkpdfi="pdfnewlaboratorioinforme";
                                 $campos_datai='';
                                 $campos_data64i='';
-                                $campos_datai='iddata='.$tab_idi.'&pVar2='.@$clie_id.'&pVar4='.$atenc_id.'&pVar5='.$eteneva_id.'&pVar3=91';
+                                $campos_datai='iddata=586&pVar2='.@$clie_id.'&pVar4='.$atenc_id.'&pVar5='.$eteneva_id.'&pVar3=216';
                                 $campos_data64i=base64_encode($campos_datai);
                                 $urllinki="pdfformularios/".$linkpdfi.".php?ssr=".$campos_data64i."|"."+".$rs_laboratoinforme->fields["labinfor_id"];
 
@@ -351,7 +374,7 @@ $imagenes_mostradas = array();
                         }
                     }
 
-                    //busca aboratorio nuevo
+                    //busca laboratorio nuevo
 
 
 

@@ -41,59 +41,66 @@ body { margin: 10px; }
 -->
 </style>
 
+    <style>
+        @page {
+            margin: 100px 20px;
+        }
 
-<style>
-  @page {
-    margin: 100px 20px;
-  }
+        header {
+            position: fixed;
+            top: -80px;
+            left: 0;
+            right: 0;
+            height: 40px;
+            text-align: center;
+            font-size: 14px;
+            font-weight: bold;
+        }
 
-  header {
-    position: fixed;
-    top: -80px;
-    left: 0;
-    right: 0;
-    height: 40px;
-    text-align: center;
-    font-size: 14px;
-    font-weight: bold;
-  }
+        footer {
+            position: fixed;
+            bottom: -30px;
+            left: 0;
+            right: 0;
+            height: 30px;
+            text-align: center;
+            font-size: 12px;
+        }
 
-  footer {
-    position: fixed;
-    bottom: -30px;
-    left: 0;
-    right: 0;
-    height: 30px;
-    text-align: center;
-    font-size: 12px;
-  }
-
-  .pagenum:before {
-    content: counter(page);
-  }
-</style>
+        .pagenum:before {
+            content: counter(page);
+        }
+    </style>
 
 
 
 </head>
 
 <body>
-    
-    <header>
-  <table width="101%"  border="0" cellpadding="0" cellspacing="0">
-  <tr>
-     <td  class="style1">-graficologo-</td>  
-    <td  class="style1" valign="bottom" style="width: 20%;"  >
-    <div align="right" style="font-size: 15px" ><center></center></div></td>
-  </tr>
-</table>
+
+<header>
+    <table class="header-tabla" style="width: 100%; border: 2px solid #000; border-collapse: collapse; margin-bottom: 10px;">
+        <tr>
+            <td class="logo-cell" style="width: 100px; text-align: center; border-right: 1px solid #000; padding: 5px;">
+                <img src="../archivo/-logoreporte-" alt="Logo" style="max-width: 90px; height: auto;">
+            </td>
+            <td class="titulo-cell" style="text-align: center; border-right: 1px solid #000; padding: 5px;">
+                <div class="titulo-principal" style="font-size: 14px; font-weight: bold; margin-bottom: 3px;">-empresanombre-</div>
+                <div class="subtitulo" style="font-size: 11px; font-weight: bold;">CONSULTA EXTERNA - ANAMNESIS</div>
+            </td>
+            <td class="codigo-cell" style="width: 100px; text-align: center; font-size: 8px; padding: 5px;">
+                <strong>N° HCU:</strong><br>-hc-
+            </td>
+        </tr>
+    </table>
 </header>
 
 <footer>
-  <div class="contenedor">
-        <b>-piedepagina-</b>
-  </div>
-</footer>  
+    <div class="footer" style="font-size: 7px; text-align: center; color: #666; border-top: 1px solid #ccc; padding-top: 5px;">
+        <p><b>-piedepagina-</b></p>
+        <p>Este documento contiene información médica confidencial del paciente</p>
+    </div>
+</footer>
 
 <table width="570" cellpadding="0" cellspacing="0">
   

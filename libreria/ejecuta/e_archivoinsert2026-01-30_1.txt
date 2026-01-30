@@ -1,0 +1,1 @@
+1-->insert into api_consentimientoi (conset_nombre,conset_archivo,usua_id,conset_fecharegistro) values ('CES CONSENTIMIENTO INFORMADO REHABILITACIÓN','',1,'2026-01-30 05:41:58')-->2026-01-30 05:43:04

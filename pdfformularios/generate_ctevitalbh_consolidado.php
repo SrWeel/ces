@@ -176,6 +176,7 @@ SELECT
     gi.ginge_id, 
     gi.ginge_detalle,
     gi.ginge_fecharegistro,
+    gi.ginge_descripcion,
     i.inge_descripcion,
     e.enferm_id,
     a.atenc_id,
@@ -202,6 +203,7 @@ ORDER BY gi.ginge_fecharegistro DESC
 SELECT 
     ge.geli_id, 
     ge.geli_detalle,
+    ge.geli_descripcion,
     ge.geli_fecharegistro,
     e_combo.eli_descripcion,
     e.enferm_id,
@@ -978,7 +980,7 @@ ORDER BY gbh.gbh_fecharegistro DESC
         </tbody>
     </table>';
 
-    // SECCIÓN D: BALANCE HÍDRICO CON TÍTULOS VERTICALES ROTADOS 90°
+// SECCIÓN D: BALANCE HÍDRICO CON TÍTULOS VERTICALES ROTADOS 90°
     $html_reporte .= '
         <table class="tabla-datos">
             <tr>
@@ -999,6 +1001,7 @@ ORDER BY gbh.gbh_fecharegistro DESC
                         <thead>
                             <tr>
                                 <th width="25%">TIPO DE INGESTA</th>
+                                <th width="40%">VALOR ML</th>
                                 <th width="40%">DETALLE</th>
                                 <th width="20%">RESPONSABLE</th>
                                 <th width="15%">FECHA/HORA</th>
@@ -1007,12 +1010,19 @@ ORDER BY gbh.gbh_fecharegistro DESC
                         <tbody>';
 
     $hay_ingesta = false;
+    $total_ingesta = 0; // Variable para acumular el total
+
     if($rs_ingesta && !$rs_ingesta->EOF) {
         while (!$rs_ingesta->EOF) {
             $hay_ingesta = true;
             $tipo_ingesta = htmlspecialchars($rs_ingesta->fields["inge_descripcion"]);
             $detalle = htmlspecialchars($rs_ingesta->fields["ginge_detalle"]);
             $fecha_registro = $rs_ingesta->fields["ginge_fecharegistro"];
+            $ingesta_descripcion = $rs_ingesta->fields["ginge_descripcion"];
+
+            // Extraer valor numérico del detalle (asumiendo que está en ML)
+            $valor_ml = floatval($detalle);
+            $total_ingesta += $valor_ml;
 
             $nombre_usuario = trim($rs_ingesta->fields["usua_nombre"].' '.$rs_ingesta->fields["usua_apellido"]);
             $iniciales_usuario = $rs_ingesta->fields["usua_codigoiniciales"];
@@ -1029,18 +1039,27 @@ ORDER BY gbh.gbh_fecharegistro DESC
                             <tr>
                                 <td><strong>'.$tipo_ingesta.'</strong></td>
                                 <td>'.nl2br($detalle).'</td>
+                                <td><strong>'.$ingesta_descripcion.'</strong></td>
                                 <td>'.$info_usuario.'</td>
                                 <td style="text-align: center;">'.($fecha_registro && $fecha_registro != '0000-00-00 00:00:00' ? date("d/m/Y H:i", strtotime($fecha_registro)) : '-').'</td>
                             </tr>';
 
             $rs_ingesta->MoveNext();
         }
+
+        // Agregar fila de TOTAL
+        $html_reporte .= '
+                            <tr style="background-color: #e8f4f8; font-weight: bold;">
+                                <td><strong>TOTAL</strong></td>
+                                <td><strong>'.number_format($total_ingesta, 2).' ml</strong></td>
+                                <td colspan="3"></td>
+                            </tr>';
     }
 
     if(!$hay_ingesta) {
         $html_reporte .= '
                             <tr>
-                                <td colspan="4" class="sin-datos">No hay registros de ingesta</td>
+                                <td colspan="5" class="sin-datos">No hay registros de ingesta</td>
                             </tr>';
     }
 
@@ -1061,6 +1080,7 @@ ORDER BY gbh.gbh_fecharegistro DESC
                         <thead>
                             <tr>
                                 <th width="25%">TIPO DE ELIMINACIÓN</th>
+                                <th width="40%">VALOR ML</th>
                                 <th width="40%">DETALLE</th>
                                 <th width="20%">RESPONSABLE</th>
                                 <th width="15%">FECHA/HORA</th>
@@ -1069,12 +1089,19 @@ ORDER BY gbh.gbh_fecharegistro DESC
                         <tbody>';
 
     $hay_eliminacion = false;
+    $total_eliminacion = 0; // Variable para acumular el total
+
     if($rs_eliminacion && !$rs_eliminacion->EOF) {
         while (!$rs_eliminacion->EOF) {
             $hay_eliminacion = true;
             $tipo_eliminacion = htmlspecialchars($rs_eliminacion->fields["eli_descripcion"]);
+            $des_eliminacion = htmlspecialchars($rs_eliminacion->fields["geli_descripcion"]);
             $detalle = htmlspecialchars($rs_eliminacion->fields["geli_detalle"]);
             $fecha_registro = $rs_eliminacion->fields["geli_fecharegistro"];
+
+            // Extraer valor numérico del detalle (asumiendo que está en ML)
+            $valor_ml = floatval($detalle);
+            $total_eliminacion += $valor_ml;
 
             $nombre_usuario = trim($rs_eliminacion->fields["usua_nombre"].' '.$rs_eliminacion->fields["usua_apellido"]);
             $iniciales_usuario = $rs_eliminacion->fields["usua_codigoiniciales"];
@@ -1091,18 +1118,27 @@ ORDER BY gbh.gbh_fecharegistro DESC
                             <tr>
                                 <td><strong>'.$tipo_eliminacion.'</strong></td>
                                 <td>'.nl2br($detalle).'</td>
+                                <td><strong>'.$des_eliminacion.'</strong></td>
                                 <td>'.$info_usuario.'</td>
                                 <td style="text-align: center;">'.($fecha_registro && $fecha_registro != '0000-00-00 00:00:00' ? date("d/m/Y H:i", strtotime($fecha_registro)) : '-').'</td>
                             </tr>';
 
             $rs_eliminacion->MoveNext();
         }
+
+        // Agregar fila de TOTAL
+        $html_reporte .= '
+                            <tr style="background-color: #e8f4f8; font-weight: bold;">
+                                <td><strong>TOTAL</strong></td>
+                                <td><strong>'.number_format($total_eliminacion, 2).' ml</strong></td>
+                                <td colspan="3"></td>
+                            </tr>';
     }
 
     if(!$hay_eliminacion) {
         $html_reporte .= '
                             <tr>
-                                <td colspan="4" class="sin-datos">No hay registros de eliminación</td>
+                                <td colspan="5" class="sin-datos">No hay registros de eliminación</td>
                             </tr>';
     }
 
