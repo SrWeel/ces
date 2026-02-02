@@ -4,5 +4,6 @@
     <file url="file://$PROJECT_DIR$/aplicativos/documental/opciones/historialmd/historial.php" dialect="GenericSQL" />
     <file url="file://$PROJECT_DIR$/pdfformularios/genera_medicationadmin.php" dialect="GenericSQL" />
     <file url="file://$PROJECT_DIR$/pdfformularios/generate_preoperative.php" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/templateformsweb/maestro_standar_parteop/ajax/busca_paciente_ci.php" dialect="GenericSQL" />
   </component>
 </project>

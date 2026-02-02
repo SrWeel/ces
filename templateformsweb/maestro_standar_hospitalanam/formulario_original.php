@@ -146,7 +146,7 @@ if($csearch)
 <?php
 
 echo '<div class="col-sm-4">';
-echo '<a href="docu/cirugiasegura.pdf" target="_blank" >';
+echo '<a href="pdfformularios/pdf_cirugia_unificado.php?atenc_id='.$atenc_id.'" target="_blank">';
 echo '<img src="images/cirugiasegura.png"><span class="selected"></span></a></div>'; 					
 					
 echo '<div class="col-sm-4">';

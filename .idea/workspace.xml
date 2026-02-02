@@ -5,17 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="07f0c92e-7bf6-4c93-80cc-47b21f8b0d04" name="Changes" comment="second">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pdfformularios/pdf_cirugia_unificado.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templateformsweb/maestro_standar_parteop/ajax/busca_paciente_ci.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/9d84edca-84d7-405c-af0b-61feda6afc61.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/9d84edca-84d7-405c-af0b-61feda6afc61.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/aplicativos/documental/datos_stnnewhospitalizacionanamnesis.php" beforeDir="false" afterPath="$PROJECT_DIR$/aplicativos/documental/datos_stnnewhospitalizacionanamnesis.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/aplicativos/documental/opciones/historialmd/historial.php" beforeDir="false" afterPath="$PROJECT_DIR$/aplicativos/documental/opciones/historialmd/historial.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cfg/conexion.php" beforeDir="false" afterPath="$PROJECT_DIR$/cfg/conexion.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/libreria/dompdf/lib/fonts/log.htm" beforeDir="false" afterPath="$PROJECT_DIR$/libreria/dompdf/lib/fonts/log.htm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libreria/ejecuta/archivoinsert2026-01-30_1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/libreria/ejecuta/archivoinsert2026-01-30_1.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libreria/ejecuta/e_archivoinsert2026-01-30_1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/libreria/ejecuta/e_archivoinsert2026-01-30_1.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libreria/ejecuta/tnlprueba2026-01-30_1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/libreria/ejecuta/tnlprueba2026-01-30_1.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pdfformularios/generate_consentimiento_pdf.php" beforeDir="false" afterPath="$PROJECT_DIR$/pdfformularios/generate_consentimiento_pdf.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pdfroles/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/pdfroles/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templateformsweb/maestro_standar_hospitalanam/formulario_original.php" beforeDir="false" afterPath="$PROJECT_DIR$/templateformsweb/maestro_standar_hospitalanam/formulario_original.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templateformsweb/maestro_standar_parteop/formulario.php" beforeDir="false" afterPath="$PROJECT_DIR$/templateformsweb/maestro_standar_parteop/formulario.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -248,7 +246,10 @@
       <workItem from="1769172506179" duration="22092000" />
       <workItem from="1769440457634" duration="8750000" />
       <workItem from="1769603921331" duration="16280000" />
-      <workItem from="1769767982468" duration="14113000" />
+      <workItem from="1769767982468" duration="20530000" />
+      <workItem from="1769997923809" duration="29000" />
+      <workItem from="1770029066476" duration="4086000" />
+      <workItem from="1770045248087" duration="37000" />
     </task>
     <servers />
   </component>

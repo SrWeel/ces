@@ -21,9 +21,10 @@
 			$objformulario->sendvar["partop_codex"]=$codig_unicovalor;		
 			 
 
-$objformulario->generar_formulario_bootstrap(@$submit,$table,1,$DB_gogess); 
-$objformulario->generar_formulario_bootstrap(@$submit,$table,2,$DB_gogess); 
-$objformulario->generar_formulario_bootstrap(@$submit,$table,3,$DB_gogess); 
+$objformulario->generar_formulario_bootstrap(@$submit,$table,1,$DB_gogess);
+
+$objformulario->generar_formulario_bootstrap(@$submit,$table,2,$DB_gogess);
+$objformulario->generar_formulario_bootstrap(@$submit,$table,3,$DB_gogess);
 $objformulario->generar_formulario_bootstrap(@$submit,$table,4,$DB_gogess); 
 $objformulario->generar_formulario_bootstrap(@$submit,$table,5,$DB_gogess); 
 $objformulario->generar_formulario_bootstrap(@$submit,$table,6,$DB_gogess); 
@@ -144,6 +145,106 @@ $('#boton_guardarformdata2').hide();
 }
 
 ?>
+<script type="text/javascript">
+    $(document).ready(function(){
+
+        if($("#lista_pacientes_ci").length === 0){
+
+            $("body").append(`
+            <div id="lista_pacientes_ci"
+                 style="
+                    position:absolute;
+                    z-index:99999;
+                    background:#fff;
+                    border:1px solid #ccc;
+                    display:none;
+                    max-height:200px;
+                    overflow-y:auto;
+                    box-shadow:0 2px 6px rgba(0,0,0,.2);
+                 ">
+            </div>
+        `);
+        }
+
+    });
+</script>
+<script type="text/javascript">
+    let espera_ci = null;
+
+    $(document).on("keyup", "#partop_cipaciente", function(){
+
+        clearTimeout(espera_ci);
+
+        let ci = $(this).val();
+        let $input = $(this);
+        let $lista = $("#lista_pacientes_ci");
+
+        espera_ci = setTimeout(function(){
+
+
+            $.ajax({
+                url: "templateformsweb/maestro_standar_parteop/ajax/busca_paciente_ci.php",
+                type: "POST",
+                dataType: "json",
+                data: { ci: ci },
+                success: function(resp){
+
+                    if(!resp.ok || resp.data.length === 0){
+                        $lista.hide().html('');
+                        return;
+                    }
+
+                    let offset = $input.offset();
+
+                    $lista.css({
+                        top: offset.top + $input.outerHeight(),
+                        left: offset.left,
+                        width: $input.outerWidth()
+                    });
+
+                    let html = '<ul style="list-style:none;margin:0;padding:0;">';
+
+                    resp.data.forEach(function(p){
+                        html += `
+                        <li class="item-paciente-ci"
+                            data-id="${p.clie_id}"
+                            data-ci="${p.ci}"
+                            data-nombre="${p.nombre}"
+                            data-edad="${p.edad}"
+                            style="padding:6px 8px; cursor:pointer; border-bottom:1px solid #eee;">
+                            <strong>${p.ci}</strong> - ${p.nombre} (${p.edad})
+                        </li>
+                    `;
+                    });
+
+                    html += '</ul>';
+
+                    $lista.html(html).show();
+                }
+            });
+
+        }, 300);
+    });
+
+    /* CLICK EN RESULTADO */
+    $(document).on("click", ".item-paciente-ci", function(){
+
+        $("#partop_cipaciente").val($(this).data("ci"));
+        $("#partop_paciente").val($(this).data("nombre"));
+        $("#partop_edad").val($(this).data("edad"));
+        $("#clie_id").val($(this).data("id"));
+
+        $("#lista_pacientes_ci").hide().html('');
+    });
+
+    /* CERRAR AL HACER CLICK FUERA */
+    $(document).on("click", function(e){
+        if(!$(e.target).closest("#partop_cipaciente, #lista_pacientes_ci").length){
+            $("#lista_pacientes_ci").hide();
+        }
+    });
+</script>
+
 
 <script type="text/javascript">
 <!--
