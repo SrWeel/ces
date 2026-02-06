@@ -1,0 +1,16 @@
+update app_empresa set emp_ruc='1793193923001',emp_nombre='CLÍNICA DE ESPECIALIDADES SUR',emp_direccion='Av. Rodrigo de Chavez OE 2-115 y Pedro de Alfaro',emp_telefono='0981404079',emp_estado=1,prob_codigo='17',cant_codigo='1701',temp_id=4,emp_logo='gogess_data76627LSZ20250908.png',pais_id=1,emp_email='info@ces.med.ec',emp_restaporcentaje='6.5',emp_valorgastosadm='10',emp_valoriva='12',emp_xml='',emp_leyendapdf='',emp_cabecerareportes='<div align="center">
+<b>CLÍNICA DE ESPECIALIDADES SUR
+<br>
+Av. Rodrigo de Chavez OE 2-115 y Pedro de Alfaro
+<br>
+RUC: 1793193923001
+<br></b>
+</div>',emp_salariominimo=460,emp_departamento='DIRECCIÓN DE TALENTO HUMANO',emp_logoreporte='gogess_data15341DRH20260130.png',emp_piedepagina='Av. Rodrigo de Chavez OE 2-115 y Pedro de Alfaro <br>Email: info@ces.med.ec<br> Cel: 0981404079',emp_razonsocial='CLÍNICA DE ESPECIALIDADES SUR' where emp_id=1 
+update app_empresa set emp_ruc='1793193923001',emp_nombre='CLÍNICA DE ESPECIALIDADES SUR',emp_direccion='Av. Rodrigo de Chavez OE 2-115 y Pedro de Alfaro',emp_telefono='0981404079',emp_estado=1,prob_codigo='17',cant_codigo='1701',temp_id=4,emp_logo='gogess_data76627LSZ20250908.png',pais_id=1,emp_email='info@ces.med.ec',emp_restaporcentaje='6.5',emp_valorgastosadm='10',emp_valoriva='12',emp_xml='',emp_leyendapdf='',emp_cabecerareportes='<div align="center">
+<b>CLÍNICA DE ESPECIALIDADES SUR
+<br>
+Av. Rodrigo de Chavez OE 2-115 y Pedro de Alfaro
+<br>
+RUC: 1793193923001
+<br></b>
+</div>',emp_salariominimo=460,emp_departamento='DIRECCIÓN DE TALENTO HUMANO',emp_logoreporte='gogess_data86858TERAR20260130.png',emp_piedepagina='Av. Rodrigo de Chavez OE 2-115 y Pedro de Alfaro <br>Email: info@ces.med.ec<br> Cel: 0981404079',emp_razonsocial='CLÍNICA DE ESPECIALIDADES SUR' where emp_id=1 

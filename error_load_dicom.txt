@@ -823,11 +823,35 @@
 [15-Jan-2026 11:22:58 America/Guayaquil] Buscando por imgag_id: 17
 [15-Jan-2026 11:22:58 America/Guayaquil] ✅ Encontrado imginfo_id: 15
 [15-Jan-2026 11:22:58 America/Guayaquil] ✅ Total archivos: 2
-[28-Jan-2026 12:24:26 America/Guayaquil] === LOAD DICOM IMAGES ===
-[28-Jan-2026 12:24:26 America/Guayaquil] imgag_id: 26
-[28-Jan-2026 12:24:26 America/Guayaquil] imginfo_id: 0
-[28-Jan-2026 12:24:26 America/Guayaquil] imginfo_enlace: 
-[28-Jan-2026 12:24:26 America/Guayaquil] folder_path: 
-[28-Jan-2026 12:24:26 America/Guayaquil] Buscando por imgag_id: 26
-[28-Jan-2026 12:24:26 America/Guayaquil] ✅ Encontrado imginfo_id: 4
-[28-Jan-2026 12:24:26 America/Guayaquil] ✅ Total archivos: 5
+[22-Jan-2026 16:06:16 America/Guayaquil] === LOAD DICOM IMAGES ===
+[22-Jan-2026 16:06:16 America/Guayaquil] imgag_id: 26
+[22-Jan-2026 16:06:16 America/Guayaquil] imginfo_id: 0
+[22-Jan-2026 16:06:16 America/Guayaquil] imginfo_enlace: 
+[22-Jan-2026 16:06:16 America/Guayaquil] folder_path: 
+[22-Jan-2026 16:06:16 America/Guayaquil] Buscando por imgag_id: 26
+[22-Jan-2026 16:06:16 America/Guayaquil] ✅ Encontrado imginfo_id: 4
+[22-Jan-2026 16:06:16 America/Guayaquil] ✅ Total archivos: 5
+[23-Jan-2026 12:45:28 America/Guayaquil] === LOAD DICOM IMAGES ===
+[23-Jan-2026 12:45:28 America/Guayaquil] imgag_id: 26
+[23-Jan-2026 12:45:28 America/Guayaquil] imginfo_id: 0
+[23-Jan-2026 12:45:28 America/Guayaquil] imginfo_enlace: 
+[23-Jan-2026 12:45:28 America/Guayaquil] folder_path: 
+[23-Jan-2026 12:45:28 America/Guayaquil] Buscando por imgag_id: 26
+[23-Jan-2026 12:45:28 America/Guayaquil] ✅ Encontrado imginfo_id: 4
+[23-Jan-2026 12:45:28 America/Guayaquil] ✅ Total archivos: 5
+[28-Jan-2026 12:59:55 America/Guayaquil] === LOAD DICOM IMAGES ===
+[28-Jan-2026 12:59:55 America/Guayaquil] imgag_id: 33
+[28-Jan-2026 12:59:55 America/Guayaquil] imginfo_id: 0
+[28-Jan-2026 12:59:55 America/Guayaquil] imginfo_enlace: 
+[28-Jan-2026 12:59:55 America/Guayaquil] folder_path: 
+[28-Jan-2026 12:59:55 America/Guayaquil] Buscando por imgag_id: 33
+[28-Jan-2026 12:59:55 America/Guayaquil] Buscando en tabla de archivos...
+[28-Jan-2026 12:59:55 America/Guayaquil] ℹ️ No hay archivos DICOM guardados
+[28-Jan-2026 13:02:33 America/Guayaquil] === LOAD DICOM IMAGES ===
+[28-Jan-2026 13:02:33 America/Guayaquil] imgag_id: 17
+[28-Jan-2026 13:02:33 America/Guayaquil] imginfo_id: 0
+[28-Jan-2026 13:02:33 America/Guayaquil] imginfo_enlace: 
+[28-Jan-2026 13:02:33 America/Guayaquil] folder_path: 
+[28-Jan-2026 13:02:33 America/Guayaquil] Buscando por imgag_id: 17
+[28-Jan-2026 13:02:33 America/Guayaquil] ✅ Encontrado imginfo_id: 15
+[28-Jan-2026 13:02:33 America/Guayaquil] ✅ Total archivos: 2

@@ -1,9 +1,10 @@
 api_consentimientoi
 api_consentimientoi
 api_consentimientoi
-dns_newhospitalizacionconsultaexterna
-dns_newtraumatologiaconsultaexterna
-dns_newconsultaexternaconsultaexterna
-dns_newconsultaexternaconsultaexterna
-dns_newconsultaexternaconsultaexterna
 api_consentimientoi
+app_cliente
+dns_atencion
+app_cliente
+dns_atencion
+dns_atencion
+app_cliente

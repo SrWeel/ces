@@ -144,17 +144,63 @@ if($csearch)
 
 <?php
 
-echo '<div class="col-sm-4">';
-echo '<a href="docu/cirugiasegura.pdf" target="_blank" >';
-echo '<img src="images/cirugiasegura.png"><span class="selected"></span></a></div>'; 					
-					
-echo '<div class="col-sm-4">';
-echo '<a href="docu/consentimientoinformado.pdf" target="_blank" >';
-echo '<img src="images/consentimientoinformado.png"><span class="selected"></span></a></div>'; 
-					
-echo '<div class="col-sm-4">';
-echo '<a href="docu/hojadeanestesia.pdf" target="_blank" >';
-echo '<img src="images/hojadeanestesia.png"><span class="selected"></span></a></div>'; 
+echo '<table class="table table-bordered table-striped" style="width:100%; text-align:center;">';
+
+/* FILA 1 */
+echo '<tr>';
+echo '<td style="vertical-align:top;">
+        <a href="docu/cirugiasegura.pdf" target="_blank">
+            <img src="images/cirugiasegura.png" style="max-width:120px;"><br>
+            <strong>Cirugía Segura</strong>
+        </a>
+
+        <div id="slot_cirugia_segura" style="margin-top:6px;"></div>
+      </td>';
+
+
+echo '<td style="vertical-align:top;">
+        <a href="docu/consentimientoinformado.pdf" target="_blank">
+            <img src="images/consentimientoinformado.png" style="max-width:120px;"><br>
+            <strong>Consentimiento Informado</strong>
+        </a>
+
+        <div id="slot_consentimiento" style="margin-top:6px;"></div>
+      </td>';
+
+echo '<td style="vertical-align:top;">
+        <a href="docu/hojadeanestesia.pdf" target="_blank">
+            <img src="images/hojadeanestesia.png" style="max-width:120px;"><br>
+            <strong>Hoja de Anestesia</strong>
+        </a>
+
+        <div id="slot_anestesia" style="margin-top:6px;"></div>
+      </td>';
+
+
+echo '</tr>';
+
+/* FILA 2 */
+echo '<tr>';
+
+echo '<td>
+        <a href="docu/19.FORMATO DE ESCALA DE VALORACION-SEGURIDAD DEL PACIENTE..pdf" target="_blank">
+            <span class="glyphicon glyphicon-file" style="font-size:40px; color:#d9534f;"></span><br>
+            <strong>Formato de Valoración Escala</strong>
+        </a>
+      </td>';
+
+echo '<td>
+        <a href="docu/20.FORMATO SAER..pdf" target="_blank">
+            <span class="glyphicon glyphicon-file" style="font-size:40px; color:#d9534f;"></span><br>
+            <strong>Formato SAER</strong>
+        </a>
+      </td>';
+
+echo '<td></td>'; // celda vacía para mantener simetría
+
+echo '</tr>';
+
+echo '</table>';
 
 ?>
 
@@ -307,9 +353,31 @@ echo "<input name='csearch' type='hidden' value=''>
 <input name='table' type='hidden' value='".$table."'>";
 ?>
 <div id=div_<?php echo $table ?> > </div>
+<script>
+    $(document).ready(function () {
+
+        // Cirugía segura
+        $('#slot_cirugia_segura').append(
+            $('#anam_pdfcirugiaimagen').closest('.form-group')
+        );
+
+        // Consentimiento informado
+        $('#slot_consentimiento').append(
+            $('#anam_pdfconsentidoimagen').closest('.form-group')
+        );
+
+        // Hoja de anestesia
+        $('#slot_anestesia').append(
+            $('#anam_pdfanestesiaimagen').closest('.form-group')
+        );
+
+    });
+</script>
+
 
 
 <script>
+
          $(function() {
             $( "#diagn_ciex" ).autocomplete({
                source: "templateformsweb/maestro_standar_anamnesisclinica/searchcie.php",

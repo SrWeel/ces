@@ -43,6 +43,242 @@ $atenc_id=$_POST["atenc_id"];
     // Se excluyen las tablas de subsecuentes (evoluciones/consultas externas), laboratorios e imágenes que se buscan por separado
     $lista_tabeval="select * from gogess_sistable where tab_name not in ('dns_imagenologia','dns_laboratorio','dns_laboratorioinforme','dns_consultaexterna','dns_rehabilitacionanamesis','dns_otorrinoanamesis','dns_ginecologiaconsultaexterna','dns_emergenciaconsultaexterna','dns_gastroenterologiaconsultaexterna','dns_pediatriaconsultaexterna','dns_cardiologiaconsultaexterna','dns_traumatologiaconsultaexterna','dns_hospitalconsultaexterna','dns_newinterconsulta','dns_newhospitalizacionconsultaexterna','dns_newgastroenterologiaconsultaexterna','dns_newcardiologiaconsultaexterna','dns_newpediatriaconsultaexterna','dns_newtraumatologiaconsultaexterna','dns_newconsultaexternaconsultaexterna','dns_newemergenciaconsultaexterna','dns_newprotocolooperatorio','dns_protocolooperatorio','dns_epicrisisconsultaexterna','dns_newimagenologia','dns_newimagenologiainfo','dns_imagenologiainfo','dns_newlaboratorio') and  tab_sysmedico=1";
     $rs_tabeval = $DB_gogess->executec($lista_tabeval,array());
+//    $log_file = 'diagnostico_paciente_' . $clie_id . '_' . date('Y-m-d_His') . '.txt';
+//    $log_content = "=== DIAGNÓSTICO DE REGISTROS DEL PACIENTE ===\n";
+//    $log_content .= "Cliente ID: " . $clie_id . "\n";
+//    $log_content .= "Atención ID: " . $atenc_id . "\n";
+//    $log_content .= "RUC/CI: " . $_POST["clie_rucci"] . "\n";
+//    $log_content .= "Fecha: " . date('Y-m-d H:i:s') . "\n";
+//    $log_content .= "==========================================\n\n";
+//
+//    // Array de tablas que SÍ tienen PDF configurado en el código
+//    $tablas_con_pdf = array(
+//            'dns_newconsultaexternaanamesis',
+//            'dns_anamesisexamenfisico',
+//            'dns_emergenciaanamesis',
+//            'dns_gastroenterologiaanamesis',
+//            'dns_pediatriaanamesis',
+//            'dns_newtraumatologiaanamesis',
+//            'dns_newcardiologiaanamesis',
+//            'dns_neonatologiaanamesis',
+//            'dns_newginecologiaanamesis',
+//            'dns_newoftalmologiaanamesis',
+//            'dns_newurologiaanamesis',
+//            'dns_newdermatologiaanamesis',
+//            'dns_cirugiaanamesis',
+//            'dns_newmedicinainternaanamesis',
+//            'dns_cardiologiaanamesis',
+//            'dns_cirugiavascularconsultaexterna',
+//            'dns_nuevainternacion',
+//            'dns_newhospitalizacionanamesis',
+//            'dns_ginecologiaanamesis',
+//            'dns_odontologiaanamesis',
+//            'dns_otorrinolaringologiaanamesis',
+//            'dns_medicinainternaanamnesis',
+//            'dns_cirugiapediatricaanamnesis',
+//            'dns_otorrinoanamesis',
+//            'dns_traumatologiaanamesis',
+//            'dns_colposcopia',
+//            'dns_oftalmologiaanamesis',
+//            'dns_psicologiaanamesis',
+//            'dns_urologiaanamesis',
+//            'dns_dermatologiaanamesis',
+//            'dns_nuevointerconsulta',
+//            'dns_odontologianewconsultaexterna'
+//    );
+//
+//    // Consulta todas las tablas médicas (misma lógica del código original)
+//    $lista_tabeval_diagnostico = "select * from gogess_sistable where tab_name not in ('dns_imagenologia','dns_laboratorio','dns_laboratorioinforme','dns_consultaexterna','dns_rehabilitacionanamesis','dns_otorrinoanamesis','dns_ginecologiaconsultaexterna','dns_emergenciaconsultaexterna','dns_gastroenterologiaconsultaexterna','dns_pediatriaconsultaexterna','dns_cardiologiaconsultaexterna','dns_traumatologiaconsultaexterna','dns_hospitalconsultaexterna','dns_newinterconsulta','dns_newhospitalizacionconsultaexterna','dns_newgastroenterologiaconsultaexterna','dns_newcardiologiaconsultaexterna','dns_newpediatriaconsultaexterna','dns_newtraumatologiaconsultaexterna','dns_newconsultaexternaconsultaexterna','dns_newemergenciaconsultaexterna','dns_newprotocolooperatorio','dns_protocolooperatorio','dns_epicrisisconsultaexterna','dns_newimagenologia','dns_newimagenologiainfo','dns_imagenologiainfo','dns_newlaboratorio') and tab_sysmedico=1 order by tab_name";
+//
+//    $rs_tabeval_diagnostico = $DB_gogess->executec($lista_tabeval_diagnostico, array());
+//
+//    $contador_total = 0;
+//    $contador_con_pdf = 0;
+//    $contador_sin_pdf = 0;
+//    $registros_sin_pdf = array();
+//
+//    if($rs_tabeval_diagnostico) {
+//        while (!$rs_tabeval_diagnostico->EOF) {
+//            $tab_name = $rs_tabeval_diagnostico->fields["tab_name"];
+//            $tab_id = $rs_tabeval_diagnostico->fields["tab_id"];
+//            $tab_campoprimario = $rs_tabeval_diagnostico->fields["tab_campoprimario"];
+//            $tab_descripcion = $rs_tabeval_diagnostico->fields["tab_descripcion"];
+//
+//            // Busca registros del paciente en esta tabla
+//            $separa_subind = explode("_", $tab_campoprimario);
+//            $campo_fechareg = $separa_subind[0] . "_fecharegistro";
+//
+//            $lista_secciones_diagnostico = "select * from " . $tab_name . " where atenc_id='" . $atenc_id . "' order by " . $campo_fechareg . " desc";
+//
+//            $rs_seccion_diagnostico = $DB_gogess->executec($lista_secciones_diagnostico, array());
+//
+//            if($rs_seccion_diagnostico && !$rs_seccion_diagnostico->EOF) {
+//                $num_registros = 0;
+//
+//                // Cuenta registros
+//                while (!$rs_seccion_diagnostico->EOF) {
+//                    $num_registros++;
+//                    $rs_seccion_diagnostico->MoveNext();
+//                }
+//
+//                if($num_registros > 0) {
+//                    $contador_total += $num_registros;
+//                    $tiene_pdf = in_array($tab_name, $tablas_con_pdf);
+//
+//                    if($tiene_pdf) {
+//                        $contador_con_pdf += $num_registros;
+//                        $status = "✓ CON PDF CONFIGURADO";
+//                    } else {
+//                        $contador_sin_pdf += $num_registros;
+//                        $status = "✗ SIN PDF CONFIGURADO";
+//                        $registros_sin_pdf[] = array(
+//                                'tabla' => $tab_name,
+//                                'cantidad' => $num_registros,
+//                                'tab_id' => $tab_id,
+//                                'descripcion' => $tab_descripcion,
+//                                'campo_fecha' => $campo_fechareg,
+//                                'campo_primario' => $tab_campoprimario
+//                        );
+//                    }
+//
+//                    $log_content .= "TABLA: " . $tab_name . "\n";
+//                    $log_content .= "  Tab ID: " . $tab_id . "\n";
+//                    $log_content .= "  Descripción: " . $tab_descripcion . "\n";
+//                    $log_content .= "  Registros encontrados: " . $num_registros . "\n";
+//                    $log_content .= "  Status: " . $status . "\n";
+//                    $log_content .= "  Campo fecha: " . $campo_fechareg . "\n";
+//                    $log_content .= "  Campo primario: " . $tab_campoprimario . "\n";
+//                    $log_content .= "  ---\n\n";
+//                }
+//            }
+//
+//            $rs_tabeval_diagnostico->MoveNext();
+//        }
+//    }
+//
+//    // Buscar laboratorios
+//    $log_content .= "\n=== LABORATORIOS ===\n\n";
+//
+//    // Laboratorio antiguo
+//    $busca_lab_antiguo = "select * from dns_laboratorio where atenc_id='" . $atenc_id . "'";
+//    $rs_lab_antiguo = $DB_gogess->executec($busca_lab_antiguo, array());
+//    $num_lab_antiguo = 0;
+//    if($rs_lab_antiguo) {
+//        while (!$rs_lab_antiguo->EOF) {
+//            $num_lab_antiguo++;
+//            $rs_lab_antiguo->MoveNext();
+//        }
+//    }
+//
+//    // Laboratorio nuevo
+//    $busca_lab_nuevo = "select * from dns_newlaboratorio where atenc_id='" . $atenc_id . "'";
+//    $rs_lab_nuevo = $DB_gogess->executec($busca_lab_nuevo, array());
+//    $num_lab_nuevo = 0;
+//    if($rs_lab_nuevo) {
+//        while (!$rs_lab_nuevo->EOF) {
+//            $num_lab_nuevo++;
+//            $rs_lab_nuevo->MoveNext();
+//        }
+//    }
+//
+//    $log_content .= "Laboratorios (versión antigua): " . $num_lab_antiguo . " registros ✓ CON PDF\n";
+//    $log_content .= "Laboratorios (versión nueva): " . $num_lab_nuevo . " registros ✓ CON PDF\n";
+//
+//    // Buscar imagenología
+//    $log_content .= "\n=== IMAGENOLOGÍA ===\n\n";
+//
+//    // Imagenología antigua
+//    $busca_img_antiguo = "select * from dns_imagenologia where atenc_id='" . $atenc_id . "'";
+//    $rs_img_antiguo = $DB_gogess->executec($busca_img_antiguo, array());
+//    $num_img_antiguo = 0;
+//    if($rs_img_antiguo) {
+//        while (!$rs_img_antiguo->EOF) {
+//            $num_img_antiguo++;
+//            $rs_img_antiguo->MoveNext();
+//        }
+//    }
+//
+//    // Imagenología nueva
+//    $busca_img_nuevo = "select * from dns_newimagenologia where atenc_id='" . $atenc_id . "'";
+//    $rs_img_nuevo = $DB_gogess->executec($busca_img_nuevo, array());
+//    $num_img_nuevo = 0;
+//    if($rs_img_nuevo) {
+//        while (!$rs_img_nuevo->EOF) {
+//            $num_img_nuevo++;
+//            $rs_img_nuevo->MoveNext();
+//        }
+//    }
+//
+//    $log_content .= "Imagenología (versión antigua): " . $num_img_antiguo . " registros ✓ CON PDF\n";
+//    $log_content .= "Imagenología (versión nueva): " . $num_img_nuevo . " registros ✓ CON PDF\n";
+//
+//    // RESUMEN
+//    $log_content .= "\n\n==============================================\n";
+//    $log_content .= "RESUMEN DEL DIAGNÓSTICO\n";
+//    $log_content .= "==============================================\n\n";
+//    $log_content .= "Total de registros analizados: " . $contador_total . "\n";
+//    $log_content .= "Registros CON PDF configurado: " . $contador_con_pdf . "\n";
+//    $log_content .= "Registros SIN PDF configurado: " . $contador_sin_pdf . "\n";
+//    $log_content .= "Laboratorios: " . ($num_lab_antiguo + $num_lab_nuevo) . " (CON PDF)\n";
+//    $log_content .= "Imagenología: " . ($num_img_antiguo + $num_img_nuevo) . " (CON PDF)\n";
+//
+//    if($contador_sin_pdf > 0) {
+//        $log_content .= "\n\n!!! ATENCIÓN: HAY " . $contador_sin_pdf . " REGISTROS SIN PDF CONFIGURADO !!!\n\n";
+//        $log_content .= "==============================================\n";
+//        $log_content .= "TABLAS QUE NECESITAN CONFIGURACIÓN DE PDF\n";
+//        $log_content .= "==============================================\n\n";
+//
+//        foreach($registros_sin_pdf as $registro) {
+//            $log_content .= "TABLA: " . $registro['tabla'] . "\n";
+//            $log_content .= "  Registros sin PDF: " . $registro['cantidad'] . "\n";
+//            $log_content .= "  Tab ID: " . $registro['tab_id'] . "\n";
+//            $log_content .= "  Descripción: " . $registro['descripcion'] . "\n";
+//            $log_content .= "  Campo fecha: " . $registro['campo_fecha'] . "\n";
+//            $log_content .= "  Campo primario: " . $registro['campo_primario'] . "\n";
+//            $log_content .= "\n";
+//            $log_content .= "  CÓDIGO A AGREGAR EN HISTORIAL.PHP:\n";
+//            $log_content .= "  -----------------------------------\n";
+//            $log_content .= "  if(\$rs_tabeval->fields[\"tab_name\"]=='" . $registro['tabla'] . "')\n";
+//            $log_content .= "  {\n";
+//            $log_content .= "      \$campos_data='';\n";
+//            $log_content .= "      \$campos_data64='';\n";
+//            $log_content .= "      \$campos_data='iddata='.\$rs_tabeval->fields[\"tab_id\"].'&pVar2='.@\$clie_id.'&pVar4='.\$atenc_id.'&pVar5='.\$eteneva_id.'&pVar3='.\$mnupan_id;\n";
+//            $log_content .= "      \$campos_data64=base64_encode(\$campos_data);\n";
+//            $log_content .= "      \n";
+//            $log_content .= "      \$linkpdfg=\"pdformulario_" . strtolower($registro['tabla']) . "\";  // CAMBIAR NOMBRE DEL PDF\n";
+//            $log_content .= "      \$urllinkg=\"pdfformularios/\".\$linkpdfg.\".php?ssr=\".\$campos_data64.\"|\".\"+\".\$rs_seccion->fields[\$rs_tabeval->fields[\"tab_campoprimario\"]];\n";
+//            $log_content .= "      \$linkimprimirg=\"onClick=ver_pdfform('\".\$urllinkg.\"')\";\n";
+//            $log_content .= "      \n";
+//            $log_content .= "      \$campo_fecha='" . $registro['campo_fecha'] . "';\n";
+//            $log_content .= "  }\n";
+//            $log_content .= "  -----------------------------------\n\n";
+//        }
+//    } else {
+//        $log_content .= "\n✓ TODAS LAS TABLAS TIENEN PDF CONFIGURADO\n";
+//    }
+//
+//    // Guardar el log
+//    file_put_contents($log_file, $log_content);
+//
+//    // Mostrar mensaje en pantalla
+//    echo "<div style='background-color: #fff3cd; border: 2px solid #ffc107; padding: 15px; margin: 20px; border-radius: 5px;'>";
+//    echo "<h3 style='color: #856404; margin-top: 0;'>📋 DIAGNÓSTICO GENERADO</h3>";
+//    echo "<p style='color: #856404; font-size: 14px;'>";
+//    echo "Se ha generado el archivo de diagnóstico:<br>";
+//    echo "<strong>" . $log_file . "</strong><br><br>";
+//    echo "Total registros: <strong>" . $contador_total . "</strong><br>";
+//    echo "Con PDF: <strong style='color: green;'>" . $contador_con_pdf . "</strong><br>";
+//    echo "Sin PDF: <strong style='color: red;'>" . $contador_sin_pdf . "</strong><br>";
+//    echo "Laboratorios: <strong style='color: green;'>" . ($num_lab_antiguo + $num_lab_nuevo) . "</strong><br>";
+//    echo "Imagenología: <strong style='color: green;'>" . ($num_img_antiguo + $num_img_nuevo) . "</strong>";
+//    echo "</p>";
+//    if($contador_sin_pdf > 0) {
+//        echo "<p style='color: red; font-weight: bold;'>⚠️ ATENCIÓN: Hay " . $contador_sin_pdf . " registros sin PDF configurado</p>";
+//    }
+//    echo "<p style='color: #856404; font-size: 12px; margin-bottom: 0;'>";
+//    echo "Revisa el archivo de log para ver el detalle completo y el código que necesitas agregar.";
+//    echo "</p>";
+//    echo "</div>";
     if($rs_tabeval)
     {
         while (!$rs_tabeval->EOF) {
@@ -84,6 +320,23 @@ $atenc_id=$_POST["atenc_id"];
                         $campos_data64=base64_encode($campos_data);
 
                         $linkpdfg="pdformularionewconsultaexterna";
+                        $urllinkg="pdfformularios/".$linkpdfg.".php?ssr=".$campos_data64."|"."+".$rs_seccion->fields[$rs_tabeval->fields["tab_campoprimario"]];
+                        $linkimprimirg="onClick=ver_pdfform('".$urllinkg."')";
+
+                        $campo_fecha='anam_fecharegistro';
+
+
+                    }
+
+                    if($rs_tabeval->fields["tab_name"]=='dns_newemergenciaanamesis')
+                    {
+
+                        $campos_data='';
+                        $campos_data64='';
+                        $campos_data='iddata='.$rs_tabeval->fields["tab_id"].'&pVar2='.@$clie_id.'&pVar4='.$atenc_id.'&pVar5='.$eteneva_id.'&pVar3='.$mnupan_id;
+                        $campos_data64=base64_encode($campos_data);
+
+                        $linkpdfg="pdformularionewemergencia";
                         $urllinkg="pdfformularios/".$linkpdfg.".php?ssr=".$campos_data64."|"."+".$rs_seccion->fields[$rs_tabeval->fields["tab_campoprimario"]];
                         $linkimprimirg="onClick=ver_pdfform('".$urllinkg."')";
 
@@ -267,16 +520,54 @@ $atenc_id=$_POST["atenc_id"];
 
                     if($rs_tabeval->fields["tab_name"]=='dns_enfermeria')
                     {
+                        $campo_fecha='enfer_fecharegistro';
 
+                        // Preparar datos base para los enlaces
                         $campos_data='';
                         $campos_data64='';
                         $campos_data='iddata='.$rs_tabeval->fields["tab_id"].'&pVar2='.@$clie_id.'&pVar4='.$atenc_id.'&pVar5='.$eteneva_id.'&pVar3='.$mnupan_id;
                         $campos_data64=base64_encode($campos_data);
 
-                        $linkpdfg="pdfformenfermeria_consolidado";
-                        $urllinkg="pdfformularios/".$linkpdfg.".php?ssr=".$campos_data64."|"."+".$rs_seccion->fields[$rs_tabeval->fields["tab_campoprimario"]];
-                        $linkimprimirg="onClick=generate_viewpdf_enfermeria('".$urllinkg."')";
-                        $campo_fecha='enfer_fecharegistro';
+                        // Definir los 7 reportes consolidados de enfermería
+                        $reportes_enfermeria = array(
+                                array(
+                                        'titulo' => 'REGISTRO DE IMPLEMENTOS HOSPITALARIOS',
+                                        'archivo' => 'generate_implhosp_consolidado.php'
+                                ),
+                                array(
+                                        'titulo' => 'REGISTRO DE DIETAS SUMINISTRADAS',
+                                        'archivo' => 'generate_dtsm_consolidado.php'
+                                ),
+                                array(
+                                        'titulo' => 'CLÍNICA DE ESPECIALIDADES SUR CONSTANTES VITALES Y BALANCE HÍDRICO',
+                                        'archivo' => 'generate_ctevitalbh_consolidado.php'
+                                ),
+                                array(
+                                        'titulo' => 'ACTIVIDADES GENERALES DE ENFERMERÍA - REPORTE CONSOLIDADO',
+                                        'archivo' => 'generate_acgnlnursing_consolidado.php'
+                                ),
+                                array(
+                                        'titulo' => 'CONTROL PREOPERATORIO - REPORTE CONSOLIDADO',
+                                        'archivo' => 'generate_preoperative_consolidado.php'
+                                ),
+                                array(
+                                        'titulo' => 'ADMINISTRACIÓN DE MEDICAMENTOS - KÁRDEX CONSOLIDADO',
+                                        'archivo' => 'genera_medicationadmin_consolidado.php'
+                                ),
+                                array(
+                                        'titulo' => 'NOTAS DE ENFERMERÍA - REPORTE CONSOLIDADO',
+                                        'archivo' => 'pdfformenfermeria_consolidado.php'
+                                )
+                        );
+
+                        // Marcar que se encontró enfermería para mostrar los 7 reportes
+                        $mostrar_reportes_enfermeria = true;
+                        $fecha_enfermeria = $rs_seccion->fields[$campo_fecha];
+
+                        // IMPORTANTE: Hacer skip de este registro para que NO se muestre en la tabla
+                        // Solo se mostrarán los 7 reportes consolidados al final
+                        $rs_seccion->MoveNext();
+                        continue; // Saltar a la siguiente iteración sin mostrar este registro
                     }
 
                     if($rs_tabeval->fields["tab_name"]=='dns_newhospitalizacionanamesis')
@@ -287,7 +578,7 @@ $atenc_id=$_POST["atenc_id"];
                         $campos_data='iddata='.$rs_tabeval->fields["tab_id"].'&pVar2='.@$clie_id.'&pVar4='.$atenc_id.'&pVar5='.$eteneva_id.'&pVar3='.$mnupan_id;
                         $campos_data64=base64_encode($campos_data);
 
-                        $linkpdfg="pdformularionewshospitalizacion";
+                        $linkpdfg="pdformularionewhospitalizacion";
                         $urllinkg="pdfformularios/".$linkpdfg.".php?ssr=".$campos_data64."|"."+".$rs_seccion->fields[$rs_tabeval->fields["tab_campoprimario"]];
                         $linkimprimirg="onClick=ver_pdfform('".$urllinkg."')";
                         $campo_fecha='anam_fecharegistro';
@@ -301,9 +592,35 @@ $atenc_id=$_POST["atenc_id"];
                         $campos_data='iddata='.$rs_tabeval->fields["tab_id"].'&pVar2='.@$clie_id.'&pVar4='.$atenc_id.'&pVar5='.$eteneva_id.'&pVar3='.$mnupan_id;
                         $campos_data64=base64_encode($campos_data);
 
-                        $linkpdfg="pdfrecuperacion";
+                        $linkpdfg="generate_recoveryhall";
                         $urllinkg="pdfformularios/".$linkpdfg.".php?ssr=".$campos_data64."|"."+".$rs_seccion->fields[$rs_tabeval->fields["tab_campoprimario"]];
                         $linkimprimirg="onClick=ver_pdfform('".$urllinkg."')";
+                        $campo_fecha='recup_fecharegistro';
+                    }
+                    if($rs_tabeval->fields["tab_name"]=='dns_newsalarecuperacionanamesis')
+                    {
+
+                        $campos_data='';
+                        $campos_data64='';
+                        $campos_data='iddata='.$rs_tabeval->fields["tab_id"].'&pVar2='.@$clie_id.'&pVar4='.$atenc_id.'&pVar5='.$eteneva_id.'&pVar3='.$mnupan_id;
+                        $campos_data64=base64_encode($campos_data);
+
+                        $linkpdfg="generate_recoveryhall";
+                        $urllinkg="pdfformularios/".$linkpdfg.".php?ssr=".$campos_data64."|"."+".$rs_seccion->fields[$rs_tabeval->fields["tab_campoprimario"]];
+                        $linkimprimirg="onClick=generate_viewpdf_enfermeria('".$urllinkg."')";
+                        $campo_fecha='recup_fecharegistro';
+                    }
+                    if($rs_tabeval->fields["tab_name"]=='dns_newepicrisisanamesis')
+                    {
+
+                        $campos_data='';
+                        $campos_data64='';
+                        $campos_data='iddata='.$rs_tabeval->fields["tab_id"].'&pVar2='.@$clie_id.'&pVar4='.$atenc_id.'&pVar5='.$eteneva_id.'&pVar3='.$mnupan_id;
+                        $campos_data64=base64_encode($campos_data);
+
+                        $linkpdfg="pdformularionewepicrisis";
+                        $urllinkg="pdfformularios/".$linkpdfg.".php?ssr=".$campos_data64."|"."+".$rs_seccion->fields[$rs_tabeval->fields["tab_campoprimario"]];
+                        $linkimprimirg="onClick=generate_viewpdf_enfermeria('".$urllinkg."')";
                         $campo_fecha='recup_fecharegistro';
                     }
 
@@ -754,7 +1071,7 @@ $atenc_id=$_POST["atenc_id"];
                                         $campos_data='pVar2='.@$clie_id.'&pVar4='.$atenc_id.'&pVar3='.$mnupan_id_sub;
                                         $campos_data64=base64_encode($campos_data);
 
-                                        $linkpdfgx="pdfformevolucionnewshospitalizacion";
+                                        $linkpdfgx="pdfformevolucionnewhospitalizacion";
                                         $urllinkgx="pdfformularios/".$linkpdfgx.".php?ssr=".$campos_data64."|"."+".$rs_seccion->fields["anam_id"];
                                         $linkimprimirgx="onClick=ver_pdfform('".$urllinkgx."')";
                                         $campo_fechax='conext_fecharegistro';
@@ -1112,6 +1429,42 @@ $atenc_id=$_POST["atenc_id"];
             $rs_tabeval->MoveNext();
         }
     }
+
+    // ============================================
+    // MOSTRAR REPORTES CONSOLIDADOS DE ENFERMERÍA
+    // ============================================
+    // Si se encontró al menos un registro de enfermería, mostrar los 7 reportes consolidados
+    if(isset($mostrar_reportes_enfermeria) && $mostrar_reportes_enfermeria === true && isset($reportes_enfermeria))
+    {
+        // Preparar datos base para los enlaces (usar los últimos datos de enfermería encontrados)
+        $campos_data_enf = 'pVar2='.$clie_id.'&pVar4='.$atenc_id;
+        $campos_data64_enf = base64_encode($campos_data_enf);
+
+        foreach($reportes_enfermeria as $reporte)
+        {
+            $urllink_enf = "pdfformularios/".$reporte['archivo']."?ssr=".$campos_data64_enf;
+            ?>
+            <tr>
+                <td valign="top"><?php echo isset($fecha_enfermeria) ? $fecha_enfermeria : ''; ?></td>
+                <td><strong>ENFERMERÍA</strong><br /><?php echo $reporte['titulo']; ?></td>
+                <td>
+                    <table border="0" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td onClick="generate_viewpdf_enfermeria('<?php echo $urllink_enf; ?>')" style="cursor:pointer">
+                                <img src="images/pdfdoc.png"><br />Ver Reporte
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                <td></td>
+            </tr>
+            <?php
+        }
+    }
+    // ============================================
+    // FIN REPORTES CONSOLIDADOS DE ENFERMERÍA
+    // ============================================
+
     ?>
 </table>
 
@@ -1121,7 +1474,7 @@ $atenc_id=$_POST["atenc_id"];
     function ver_pdfform(url)
     {
 
-        location.href = url;
+        window.open(url, '_blank');
 
     }
     function generate_viewpdf_enfermeria(url)

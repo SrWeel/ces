@@ -34,6 +34,14 @@ if($_SESSION['ces1313777_sessid_inicio']) {
     $apellido_paciente = $rs_dcliente->fields["clie_apellido"];
     $clie_rucci = $rs_dcliente->fields["clie_rucci"];
     $nombre_completo = trim($nombre_paciente . ' ' . $apellido_paciente);
+    $apellidos = preg_split('/\s+/', trim($apellido_paciente), 2);
+
+    $apellido_paterno = $apellidos[0];
+    $apellido_materno = isset($apellidos[1]) ? $apellidos[1] : '';
+    $nombres = preg_split('/\s+/', trim($nombre_paciente), 2);
+
+    $nombre_primero = $nombres[0];
+    $nombre_segundo = isset($nombres[1]) ? $nombres[1] : '';
 
     $sql = "
 SELECT 
@@ -1161,6 +1169,7 @@ DECLARACION DE VOLUNTAD.- El Contratante o el Paciente en su calidad de Consumid
                 </tr>
             </table>   
             <div class="contenido"> 
+            
                 <p>
                 <strong>Paciente: </strong>' . strtoupper($nombre_completo) . '
                 </p>
@@ -1187,6 +1196,532 @@ DECLARACION DE VOLUNTAD.- El Contratante o el Paciente en su calidad de Consumid
                 <p>
                 <strong>Firma del profesional responsable: </strong>_____________________
                 </p>  
+            </div>
+        </body>
+        </html>';
+    }
+    elseif  ($conset_nombre == 'CES CONSENTIMIENTO INFORMADO RX')
+    {
+        $html_reporte = '
+        <!DOCTYPE html>
+        <html>
+        <head>
+            <meta charset="UTF-8">
+            <style>
+                body { 
+                    font-family: Arial, sans-serif; 
+                    font-size: 11px; 
+                    margin: 20px;
+                    line-height: 1.6;
+                }
+                
+                .header-tabla {
+                    width: 100%;
+                    border: 2px solid #000;
+                    border-collapse: collapse;
+                    margin-bottom: 20px;
+                }
+                
+                .header-tabla td {
+                    padding: 8px;
+                    vertical-align: middle;
+                }
+                
+                .logo-cell {
+                    width: 100px;
+                    text-align: center;
+                    border-right: 1px solid #000;
+                }
+                
+                .logo-cell img {
+                    max-width: 90px;
+                    height: auto;
+                }
+                
+                .titulo-cell {
+                    text-align: center;
+                    border-right: 1px solid #000;
+                }
+                
+                .titulo-principal {
+                    font-size: 14px;
+                    font-weight: bold;
+                    margin-bottom: 5px;
+                }
+                
+                .subtitulo {
+                    font-size: 12px;
+                    font-weight: bold;
+                    color: #0066CC;
+                }
+                
+                .codigo-cell {
+                    width: 100px;
+                    text-align: center;
+                    font-size: 10px;
+                }
+
+                .destinatario {
+                    margin-bottom: 20px;
+                    line-height: 1.4;
+                }
+                
+                .contenido {
+                    text-align: justify;
+                    margin-bottom: 30px;
+                }
+                
+                .contenido p {
+                    margin-bottom: 15px;
+                }
+                
+                .firma-seccion {
+                    margin-top: 80px;
+                    text-align: left;
+                }
+                
+                .linea-firma {
+                    border-top: 1px solid #000;
+                    width: 170px;
+                    text-align: left;
+                }
+                
+                .nombre-cedula {
+                    font-weight: bold;
+                }
+            </style>
+        </head>
+        <body>
+            <table class="header-tabla">
+                <tr>
+                    <td class="logo-cell">
+                        <img src="../archivo/' . $logo . '" alt="Logo">
+                    </td>
+                    <td class="titulo-cell">
+                        <div class="titulo-principal">' . $emp_nombre . '</div>
+                        <div class="subtitulo">CONSENTIMIENTO INFORMADO PARA LA REALIZACIÓN DE EXÁMENES RADIOLÓGICOS</div>
+                    </td>
+                    <td class="codigo-cell">
+                        <strong>N° HCU:</strong><br>' . $hc . '
+                    </td>
+                </tr>
+            </table>   
+            <div class="contenido"> 
+                <p>
+                    Yo <strong>' . strtoupper($nombre_completo) . '</strong> con cédula de identidad <strong>' . $clie_rucci . '</strong>, he solicitado por mi voluntad los servicios médicos de la CLÍNICA DE ESPECIALIDADES SUR y encontrándome en pleno uso de mis facultades mentales y con plena capacidad legal de autorización, por medio del presente documento DOY mi CONSENTIMIENTO INFORMADO  para la realización de procedimientos médicos y/o radiológicos que sean necesarios bajo los siguientes criterios:
+                </p>
+                <p>
+                <strong>1.	INFORMACIÓN MÉDICA: </strong>RECONOZCO que he sido debidamente informado en lenguaje comprensible de mi estado de salud, por la cual según me informa el médico tratante se requiere de atención y de procedimientos médicos y/o radiológicos, los cuales yo he escogido dentro de un grupo de alternativas terapéuticas que he discutido con el médico tratante y <strong>AUTORIZO</strong> estos en particular, comprendiendo los riesgos y beneficios que estos procedimientos con llevan. 
+                </p>                
+                <p>
+                <strong>2.	RIESGOS Y COMPLICACIONES: </strong>ACEPTO que la medicina no es una ciencia exacta y he sido debidamente informado de los riesgos y complicaciones específicos que pueden surgir a raíz de estos procedimientos mencionados , estos posibles riesgos y/o complicaciones COMPRENDO y soy consciente que no existen garantías absolutas de los resultados, pero que estos procedimientos están plenamente justificados para la recuperación de la salud como paciente y que la necesidad de realizarlos supera los riesgos de las posibles complicaciones.
+                </p>                
+                <p>
+                <strong>3.	RIESGOS DE LOS RAYOS X: </strong> ENTIENDO que cuando se usan adecuadamente, los beneficios diagnósticos de los rayos x superan los riesgos considerablemente. Los rayos x pueden diagnosticar condiciones potencialmente mortales, tales como vasos sanguíneos bloqueados, cáncer de huesos e infecciones. Sin embargo, los rayos X producen radiación ionizante, una forma de radiación que tiene el potencial de dañar el tejido vivo. Este es un riesgo que aumenta con el número de exposiciones sumadas a lo largo de la vida de una persona. Sin embargo, el riesgo de desarrollar cáncer por exposición a la radiación es generalmente bajo.
+                </p>                
+                <br>
+                <br>
+                <p>
+                <strong>Firma del paciente: </strong>__________________________
+                </p> 
+            </div>
+        </body>
+        </html>';
+    }
+    elseif  ($conset_nombre == 'CES ARTROSCOPIA HOMBRO DERECHO')
+    {
+        $html_reporte = '
+        <!DOCTYPE html>
+        <html>
+        <head>
+            <meta charset="UTF-8">
+            <style>
+                body { 
+                    font-family: Arial, sans-serif; 
+                    font-size: 11px; 
+                    margin: 20px;
+                    line-height: 1.6;
+                }
+                
+                .header-tabla {
+                    width: 100%;
+                    border: 2px solid #000;
+                    border-collapse: collapse;
+                    margin-bottom: 20px;
+                }
+                
+                .header-tabla td {
+                    padding: 8px;
+                    vertical-align: middle;
+                }
+                
+                .logo-cell {
+                    width: 100px;
+                    text-align: center;
+                    border-right: 1px solid #000;
+                }
+                
+                .logo-cell img {
+                    max-width: 90px;
+                    height: auto;
+                }
+                
+                .titulo-cell {
+                    text-align: center;
+                    border-right: 1px solid #000;
+                }
+                
+                .titulo-principal {
+                    font-size: 14px;
+                    font-weight: bold;
+                    margin-bottom: 5px;
+                }
+                
+                .subtitulo {
+                    font-size: 12px;
+                    font-weight: bold;
+                    color: #0066CC;
+                }
+                
+                .codigo-cell {
+                    width: 100px;
+                    text-align: center;
+                    font-size: 10px;
+                }
+
+                .destinatario {
+                    margin-bottom: 20px;
+                    line-height: 1.4;
+                }
+                
+                .contenido {
+                    text-align: justify;
+                }
+                
+                .contenido p {
+                    margin-bottom: 15px;
+                }
+                
+                .firma-seccion {
+                    margin-top: 80px;
+                    text-align: left;
+                }
+                
+                .linea-firma {
+                    border-top: 1px solid #000;
+                    width: 170px;
+                    text-align: left;
+                }
+                
+                .nombre-cedula {
+                    font-weight: bold;
+                }
+            </style>
+        </head>
+        <body>
+            <table class="header-tabla">
+                <tr>
+                    <td class="logo-cell">
+                        <img src="../archivo/' . $logo . '" alt="Logo">
+                    </td>
+                    <td class="titulo-cell">
+                        <div class="titulo-principal">' . $emp_nombre . '</div>
+                        <div class="subtitulo">Consentimiento Informado HOSPITALIZACIÓN</div>
+                    </td>
+                    <td class="codigo-cell">
+                        <strong>Servicio TRAUMATOLOGÍA </strong><br>
+                        <strong>N° HCU:</strong><br>' . $hc . '
+                    </td>
+                </tr>
+            </table>        
+            <div class="contenido"> 
+                            <p style="font-size: 10px">
+NÚMERO DE CÉDULA:<strong>' . $clie_rucci . '</strong> HCU DEL PACIENTE: <strong>' . $hc . '</strong></p>
+            <table width="100%" >
+                <tr>
+                    <td style="text-align: left; font-size: 9px;">
+                        Quito, ' . $fecha_atencion . '
+                    </td>
+                    <td style="text-align: right; font-size: 9px;">
+                        Hora: ' . $hora_atencion . '
+                    </td>
+                </tr>
+            </table>
+                           <p style="font-size: 10px">
+APELLIDO PATERNO: '.$apellido_paterno.' / APELLIDO MATERNO: '.$apellido_materno.' / PRIMER NOMBRE: '.$nombre_primero.' / SEGUNDO NOMBRE: '.$nombre_segundo.'</p>
+               
+                <p style="font-size: 10px">
+                TIPO DE ATENCIÓN: Ambulatoria:___ 	Hospitalización:_X_	
+                </p> 
+                <p style="font-size: 10px">
+                NOMBRE DEL DIAGNÓSTICO (codificación CIE10) <strong>SINDROME DE MANGUITO ROTADOR CIE10.- M751</strong>
+                </p>  
+                <p style="font-size: 10px">
+                NOMBRE DEL PROCEDIMIENTO RECOMENDADO: <strong>ARTROSCOPIA DIAGNOSTICA Y TERAPÉUTICA DE HOMBRO </strong>                
+                </p>             
+                <p style="font-size: 9px">
+                ¿EN QUÉ CONSISTE?  ES UNA CIRUGÍA EN LA CUAL SE UTILIZA UNA PEQUEÑA CÁMARA (ARTROSCOPIO) PARA EXAMINAR Y REPARAR LOS TEJIDOS DENTRO O ALREDEDOR DE LA ARTICULACIÓN DE HOMBRO
+                ¿CÓMO SE REALIZA?  SE INTRODUCE EL ARTROSCOPIO EN EL HOMBRO A TRAVÉS DE PEQUEÑAS INCISIONES, SE CONECTA A UN MONITOR DE VIDEO DE QUIRÓFANO, SE INSPECCIONAN LOS TEJIDOS DE LA ARTICULACIÓN DEL HOMBRO, SE REPARA EL TEJIDO DAÑADO CON INSTRUMENTACIÓN ARTROSCÓPICA, SE PROCEDE A SÍNTESIS POR PLANOS 
+                GRÁFICO DE LA INTERVENCIÓN (incluya un gráfico previamente seleccionado que facilite la comprensión al paciente)
+                </p>                
+                
+                <div align="center" style="margin:10px 0;">
+                    <img src="../archivo/manguito.jpg" width="380" height="auto">
+                </div>
+                <p style="font-size: 10px">
+                DURACIÓN ESTIMADA DE LA INTERVENCIÓN:  <strong>2-3H</strong>
+                </p>
+                <p style="font-size: 10px">
+                BENEFICIOS DEL PROCEDIMIENTO: mejoría clínica y funcional: <strong>ALIVIO DEL DOLOR, RECUPERACION ANATÓMICA Y FUNCIONAL</strong> 
+                 </p>
+                <p style="font-size: 10px">
+                RIESGOS FRECUENTES (POCO GRAVES): <strong>INFECCIÓN DE SITIO QUIRURGICO, SANGRADO, SHOCK</strong> 
+                </p>
+                <p style="font-size: 10px">
+                RIESGOS POCO FRECUENTES (GRAVES): <strong> ROTURA DE MANGUITO</strong>
+                 </p>
+                <p style="font-size: 10px">
+                DE EXISTIR, ESCRIBA LOS RIESGOS ESPECÍFICOS RELACIONADOS CON EL PACIENTE (edad, estado de salud, creencias, valores, etc.): dolor, edema, sangrado
+                 </p>
+                <p style="font-size: 10px">
+                ALTERNATIVAS AL PROCEDIMIENTO: <strong>TRATAMIENTO CLÍNICO</strong>
+                </p>
+                <p style="font-size: 10px">
+                DESCRIPCIÓN DEL MANEJO POSTERIOR AL PROCEDIMIENTO:  <strong>REHABILITACIÓN FÍSICA</strong>	
+                </p>
+                <p style="font-size: 10px">
+                CONSECUENCIAS POSIBLES SI NO SE REALIZA EL PROCEDIMIENTO: <strong>IMPOTENCIA FUNCIONAL</strong>
+
+                </p>
+  <p style="font-size: 10px">
+                  <strong>DECLARACIÓN DE CONSENTIMIENTO INFORMADO</strong>&nbsp;&nbsp;&nbsp;&nbsp;<strong>Fecha:</strong> 	' . $fecha_atencion . '                                    <strong>    Hora:</strong> ' . $hora_atencion . ' 
+                   </p>
+                <p style="font-size: 9px">
+He facilitado la información completa que conozco, y me ha sido solicitada, sobre los antecedentes personales, familiares y de mi estado de salud. Soy consciente de que omitir estos datos puede afectar los resultados del tratamiento. Estoy de acuerdo con el procedimiento que se me ha propuesto; he sido informado de las ventajas e inconvenientes del mismo; se me ha explicado de forma clara en qué consiste, los beneficios y posibles riesgos del procedimiento. He escuchado, leído y comprendido la información recibida y se me ha dado la oportunidad de preguntar sobre el procedimiento. He tomado consciente y libremente la decisión de autorizar el procedimiento. Consiento que, durante la intervención, me realicen otro procedimiento adicional, si es considerado necesario según el juicio del profesional de la salud, para mi beneficio. También conozco que puedo retirar mi consentimiento cuando lo estime oportuno.
+
+</p>
+<table width="100%" cellspacing="0" cellpadding="2"
+      style="border-collapse:collapse; font-size:9px; color:#000;">
+    <tr>
+        <td style="border:1px solid #999; width:45%; background:#f2f2f2;">
+            Nombre completo del paciente
+        </td>
+        <td style="border:1px solid #999; width:25%; background:#f2f2f2;">
+            Cédula de ciudadanía
+        </td>
+        <td style="border:1px solid #999; width:30%; background:#f2f2f2;">
+            Firma del paciente o huella, según el caso
+        </td>
+    </tr>
+    <tr>
+        <td style="border:1px solid #999;">
+            '.$nombre_completo.'
+        </td>
+        <td style="border:1px solid #999;">
+            '.$clie_rucci.'
+        </td>
+        <td style="border:1px solid #999; text-align:center;">
+            __________________________
+        </td>
+    </tr>
+</table>
+<br>
+<table width="100%" cellspacing="0" cellpadding="2"
+      style="border-collapse:collapse; font-size:8px; color:#000;">
+    <tr>
+        <td style="border:1px solid #999; width:50%; background:#f2f2f2;">
+            Nombre de profesional que realiza el procedimiento
+        </td>
+        <td style="border:1px solid #999; width:50%; background:#f2f2f2;">
+            Sello y código del profesional
+        </td>
+    </tr>
+    <tr>
+        <td style="border:1px solid #999; height:40px; text-align:center;">
+        </td>
+        <td style="border:1px solid #999; height:40px;">
+            
+        </td>
+    </tr>
+</table>
+<p style="font-size: 9px">Si el paciente no está en capacidad para firmar el consentimiento informado:</p>
+<table width="100%" cellspacing="0" cellpadding="2"
+      style="border-collapse:collapse; font-size:9px; color:#000;">
+    <tr>
+        <td style="border:1px solid #999; width:45%; background:#f2f2f2;">
+            Nombre del representante legal
+        </td>
+        <td style="border:1px solid #999; width:25%; background:#f2f2f2;">
+            Cédula de ciudadanía
+        </td>
+        <td style="border:1px solid #999; width:30%; background:#f2f2f2;">
+            Firma del representante legal Parentesco
+        </td>
+    </tr>
+    <tr>
+        <td style="border:1px solid #999;">
+        </td>
+        <td style="border:1px solid #999;">
+        </td>
+        <td style="border:1px solid #999; text-align:center;">
+            __________________________
+        </td>
+    </tr>
+</table>
+<p>
+<strong>NEGATIVA DEL CONSENTIMIENTO INFORMADO</strong> &nbsp;&nbsp;&nbsp;&nbsp;	Fecha: <strong>'.$fecha_atencion.'</strong>&nbsp;&nbsp;&nbsp;&nbsp;Hora: <strong>'.$hora_atencion.'</strong>
+</p>
+<p style="font-size: 9px">
+Una vez que he entendido claramente el procedimiento propuesto, así como las consecuencias posibles si no se realiza la intervención, no autorizo y me niego a que se me realice el procedimiento propuesto y desvinculo de responsabilidades futuras de cualquier índole al establecimiento de salud y al profesional sanitario que me atiende, por no realizar la intervención sugerida.
+
+
+</p>
+<table width="100%" cellspacing="0" cellpadding="2"
+      style="border-collapse:collapse; font-size:9px; color:#000;">
+    <tr>
+        <td style="border:1px solid #999; width:45%; background:#f2f2f2;">
+            Nombre completo del paciente
+        </td>
+        <td style="border:1px solid #999; width:25%; background:#f2f2f2;">
+            Cédula de ciudadanía
+        </td>
+        <td style="border:1px solid #999; width:30%; background:#f2f2f2;">
+            Firma del paciente o huella, según el caso
+        </td>
+    </tr>
+    <tr>
+        <td style="border:1px solid #999;">
+            '.$nombre_completo.'
+        </td>
+        <td style="border:1px solid #999;">
+            '.$clie_rucci.'
+        </td>
+        <td style="border:1px solid #999; text-align:center;">
+            __________________________
+        </td>
+    </tr>
+</table>
+<br>
+<table width="100%" cellspacing="0" cellpadding="2"
+      style="border-collapse:collapse; font-size:8px; color:#000;">
+    <tr>
+        <td style="border:1px solid #999; width:50%; background:#f2f2f2;">
+            Nombre de profesional que realiza el procedimiento
+        </td>
+        <td style="border:1px solid #999; width:50%; background:#f2f2f2;">
+            Sello y código del profesional
+        </td>
+    </tr>
+    <tr>
+        <td style="border:1px solid #999; height:40px; text-align:center;">
+        </td>
+        <td style="border:1px solid #999; height:40px;">
+            
+        </td>
+    </tr>
+</table>
+<p style="font-size: 9px">Si el paciente no está en capacidad para firmar el consentimiento informado:</p>
+<table width="100%" cellspacing="0" cellpadding="2"
+      style="border-collapse:collapse; font-size:9px; color:#000;">
+    <tr>
+        <td style="border:1px solid #999; width:45%; background:#f2f2f2;">
+            Nombre del representante legal
+        </td>
+        <td style="border:1px solid #999; width:25%; background:#f2f2f2;">
+            Cédula de ciudadanía
+        </td>
+        <td style="border:1px solid #999; width:30%; background:#f2f2f2;">
+            Firma del representante legal Parentesco
+        </td>
+    </tr>
+    <tr>
+        <td style="border:1px solid #999;">
+        </td>
+        <td style="border:1px solid #999;">
+        </td>
+        <td style="border:1px solid #999; text-align:center;">
+            __________________________
+        </td>
+    </tr>
+</table>
+         <p>
+<strong>REVOCATORIA DE CONSENTIMIENTO INFORMADO</strong> &nbsp;&nbsp;&nbsp;&nbsp;	Fecha: <strong>'.$fecha_atencion.'</strong>&nbsp;&nbsp;&nbsp;&nbsp;Hora: <strong>'.$hora_atencion.'</strong>
+</p>
+<p style="font-size: 9px">
+De forma libre y voluntaria, revoco el consentimiento realizado en fecha y manifiesto expresamente mi deseo de no continuar con el procedimiento médico que doy por finalizado en esta fecha:
+Libero de responsabilidades futuras de cualquier índole al establecimiento de salud y al profesional sanitario que me atiende.
+
+
+</p>
+<table width="100%" cellspacing="0" cellpadding="2"
+      style="border-collapse:collapse; font-size:9px; color:#000;">
+    <tr>
+        <td style="border:1px solid #999; width:45%; background:#f2f2f2;">
+            Nombre completo del paciente
+        </td>
+        <td style="border:1px solid #999; width:25%; background:#f2f2f2;">
+            Cédula de ciudadanía
+        </td>
+        <td style="border:1px solid #999; width:30%; background:#f2f2f2;">
+            Firma del paciente o huella, según el caso
+        </td>
+    </tr>
+    <tr>
+        <td style="border:1px solid #999;">
+            '.$nombre_completo.'
+        </td>
+        <td style="border:1px solid #999;">
+            '.$clie_rucci.'
+        </td>
+        <td style="border:1px solid #999; text-align:center;">
+            __________________________
+        </td>
+    </tr>
+</table>
+<br>
+<table width="100%" cellspacing="0" cellpadding="2"
+      style="border-collapse:collapse; font-size:8px; color:#000;">
+    <tr>
+        <td style="border:1px solid #999; width:50%; background:#f2f2f2;">
+            Nombre de profesional que realiza el procedimiento
+        </td>
+        <td style="border:1px solid #999; width:50%; background:#f2f2f2;">
+            Sello y código del profesional
+        </td>
+    </tr>
+    <tr>
+        <td style="border:1px solid #999; height:40px; text-align:center;">
+        </td>
+        <td style="border:1px solid #999; height:40px;">
+            
+        </td>
+    </tr>
+</table>
+<p style="font-size: 9px">Si el paciente no está en capacidad para firmar el consentimiento informado:</p>
+<table width="100%" cellspacing="0" cellpadding="2"
+      style="border-collapse:collapse; font-size:9px; color:#000;">
+    <tr>
+        <td style="border:1px solid #999; width:45%; background:#f2f2f2;">
+            Nombre del representante legal
+        </td>
+        <td style="border:1px solid #999; width:25%; background:#f2f2f2;">
+            Cédula de ciudadanía
+        </td>
+        <td style="border:1px solid #999; width:30%; background:#f2f2f2;">
+            Firma del representante legal Parentesco
+        </td>
+    </tr>
+    <tr>
+        <td style="border:1px solid #999;">
+        </td>
+        <td style="border:1px solid #999;">
+        </td>
+        <td style="border:1px solid #999; text-align:center;">
+            __________________________
+        </td>
+    </tr>
+</table>
+                     
             </div>
         </body>
         </html>';

@@ -1,0 +1,17 @@
+update cesdb_arextension.dns_newconsultaexternagridexamenfisico set gexamfis_observacion='PACIENTE CONSCIENTE ORIENTADO AFEBRIL MUCOSAS ORALES SEMIHUMEDAS OIDOS CAE PERMEABLE MT INTEGRA OROFARINGE ERITEMATOSA AMIGDALAS GRADO I NO PUSTULOSAS ADENOPATIAS CERVI ALES PRESENTES NARIZ ERITEMA DE LA MUCOSA NASAL CON VESTIGIOS DE SECRECIONES. ' where gexamfis_id=1485
+update cesdb_arextension.dns_newconsultaexternagridorgano set gorgano_observacion='ARDOR OROFARINGEO, RINORREA ' where gorgano_id=592
+update cesdb_arextension.dns_antecedentespersonalesnewconext set antep_descripcion='ALERGIAS NO REFIERE
+APP TIROIDITIS DE HASHIMOTO, PREDIABETES' where antep_id=118
+update cesdb_arextension.dns_newtraumatologiagridorgano set gorgano_observacion='DOLOR E 5TO DEDO PIE IZQUIERDO ' where gorgano_id=1464
+update cesdb_arextension.dns_newtraumatologiagridexamenfisico set gexamfis_observacion='PIE IZQUIERDO 5TO DEDO EDEMA, DOLOR, EQUIMOSIS, LIMITACION FUNCIONAL A LOS MOVIMIENTOS, LLENADO CAPILAR ADECUADO PULSO PRESENTE 
+' where gexamfis_id=3665
+update cesdb_arextension.dns_newtraumatologiagridorgano set gorgano_observacion='DOLOR DE COLUMNA LUMBAR ' where gorgano_id=1474
+update cesdb_arextension.dns_newtraumatologiagridexamenfisico set gexamfis_observacion='AUMENTO DEL TRIANGUO DEL TALLE IZ PRUEBA DE INCLINACION POSITIVA ' where gexamfis_id=3687
+update cesdb_arextension.dns_newtraumatologiagridexamenfisico set gexamfis_observacion='AUMENTO DEL TRIANGUO DEL TALLE IZ PRUEBA DE INCLINACION POSITIVA ' where gexamfis_id=3687
+update cesdb_arextension.dns_newtraumatologiagridexamenfisico set gexamfis_observacion='' where gexamfis_id=3715
+update cesdb_arextension.dns_newtraumatologiagridexamenfisico set gexamfis_observacion='' where gexamfis_id=3714
+update cesdb_arextension.dns_newtraumatologiagridexamenfisico set gexamfis_observacion='' where gexamfis_id=3714
+update cesdb_arextension.dns_newtraumatologiagridexamenfisico set gexamfis_observacion='ABEZA REGION FRONTAL PRESENCIA DE LACERACION SUPERFICIAL LADO IZQUIERDO PEQUEÑO DIAMETRO, HEMATOMA DE 2CM DE DIAMETRO DOLOROSO A LA DIGITOPRESION NO SIGNOS DE FOCALIDAD NEUROLOGICA, ABDOMEN BLANDO DEPRESIBLE NO DOLOROSO A LA PALPACION RHA PRESENTES, MIEMBRO SUPERIOR IZQUIERDO A NIVEL DE MUÑECA DEFORMIDAD PRESENTE EDEMA DE TEJIDO BLANDO DOLOR A LA DIGITOPRESION, LIMITACION FUNCIONAL PRESENTE, MANO EDEMA EN CARA DORSAL CON DOLOR A LA DIGITOPRESION LLENADO CAPILAR ADECUADO, PULSOS DISTALES PRESENTES' where gexamfis_id=3714
+update cesdb_arextension.dns_antecedentespersonalesnewconext set antep_descripcion='' where antep_id=119
+update cesdb_arextension.dns_newtraumatologiagridexamenfisico set gexamfis_observacion='RODILLA DERECHA BOSTEZO INTERNO +/+++ CAJON ANTERIOR NEGATIVO BUENA MOVILIDAD FUERZA MUSCULAR NORMAL ZOLEN+CIRCULACION DISTAL NORMAL' where gexamfis_id=3740
+update cesdb_arextension.dns_newtraumatologiagridexamenfisico set gexamfis_observacion='RODILLA DERECHA BOSTEZO INTERNO +/+++ CAJON ANTERIOR NEGATIVO BUENA MOVILIDAD FUERZA MUSCULAR NORMAL ZOLEN+CIRCULACION DISTAL NORMAL' where gexamfis_id=3740

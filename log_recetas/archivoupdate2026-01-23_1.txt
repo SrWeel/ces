@@ -1,0 +1,1 @@
+update cesdb_arextension.dns_dietas set tipodiet_id='1',diet_general='JUGO + GALLETAS',diet_liqestricta='',diet_blandagastrica='',diet_blandahipograsa='',diet_hiposodica='',diet_diabetico='',diet_observacion='3 RZFFDFDA' where diet_id='5'

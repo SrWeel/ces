@@ -1,0 +1,34 @@
+update cesdb_arextension.dns_antecedentespersonalesnewconext set antep_descripcion='AQX COLELAP HACE 5 AÑOS ' where antep_id=123
+update cesdb_arextension.dns_antecedentespersonalesnewconext set antep_descripcion='AQX COLELAP HACE 5 AÑOS 
+APF ' where antep_id=123
+update cesdb_arextension.dns_antecedentespersonalesnewconext set antep_descripcion='AQX COLELAP HACE 5 AÑOS 
+APF ' where antep_id=123
+update cesdb_arextension.dns_antecedentespersonalesnewconext set antep_descripcion='AQX COLELAP HACE 5 AÑOS 
+' where antep_id=123
+update cesdb_arextension.dns_antecedentesfamiliaresnewconext set antef_descripcion='APF MADRE DIABETES MELLITUS II E HIPOTIROIDISMO PADRE EPOC' where antef_id=45
+update cesdb_arextension.dns_antecedentesfamiliaresnewconext set antef_descripcion='APF MADRE DIABETES MELLITUS II E HIPOTIROIDISMO ' where antef_id=46
+update cesdb_arextension.dns_antecedentesfamiliaresnewconext set antef_descripcion='PADRE EPOC' where antef_id=47
+update cesdb_arextension.dns_antecedentesfamiliaresnewconext set antef_descripcion='PADRE EPOC' where antef_id=47
+update cesdb_arextension.dns_antecedentesfamiliaresnewconext set antef_descripcion='MADRE DIABETES MELLITUS II E HIPOTIROIDISMO ' where antef_id=46
+update cesdb_arextension.dns_newconsultaexternagridexamenfisico set gexamfis_observacion='PACIENTE CONSCIENTE ORIENTADA EN 3 ESFERAS COGNITIVAS AFEBRIL 
+MUCOSAS ORALES SECAS ORF NO ERITEMATOSA AMIGDALAS GRADO I CRIPTICAS, ABDOMEN SUAVE DEPRESIBLE DOLOROSO A LA PALPACION DIFUSAMENTE A PREDOMINIO DE MESOGASTRIO E HIPOCONDRIO DERECHO, VESTIGIOS DE CICATRICES ANTERIORES, TIMPANISMO PRESENTE, RHA DISMINUIDOS. NO IMPRESIONAN SIGNOS DE IRRITACION PERITONEAL ' where gexamfis_id=1669
+update cesdb_arextension.dns_newconsultaexternagridorgano set gorgano_observacion='DIARREA, DOLOR ABDOMINAL ' where gorgano_id=663
+update cesdb_arextension.dns_newconsultaexternagridorgano set gorgano_observacion='DIARREA, DOLOR ABDOMINAL ' where gorgano_id=663
+update cesdb_arextension.dns_antecedentespersonalesnewconext set antep_descripcion=' PRENATALES IVU EN 3ER TRIMESTRE CON TTO, NATALES PRODUCTO DE 1ERA GESTA CESAREA POR SUFRIMIENTO FETAL SIN COMPLICACIONES VACUNACION INCOMPLETA INFLUENZA PD' where antep_id=124
+update cesdb_arextension.dns_newconsultaexternagridexamenfisico set gexamfis_observacion='PACIENTE DECAIDA CONSCIENTE ORIENTADA CON SENSACION DE HIPERTERMIA, OIDOS CAE PERMEABLE, MT NTEGRA, NARIZ CON HIPERTROFIA DE CORNETES ERITEMA DE MUCOSA NASAL VESTIGIOS DE SECRECIONES HIALINAS, ' where gexamfis_id=1683
+update cesdb_arextension.dns_newconsultaexternagridexamenfisico set gexamfis_observacion='PULMONES MV DISMINUIDO NO RUIDOS SOBREAÑADIDOS,' where gexamfis_id=1678
+update cesdb_arextension.dns_newconsultaexternagridexamenfisico set gexamfis_observacion=' ABDOMEN SUAVE DOLOROSO A LA DIGITOPRESION EN MESOGASTRIO Y EPIGASTRIO RHA DISMINUDIOS NO TIMPANISMO, PUNTOS URETERALES BAJOS POSITIVOS ' where gexamfis_id=1679
+update cesdb_arextension.dns_antecedentespersonalesnewconext set antep_descripcion='AQX CESAREA HACE 11 AÑOS' where antep_id=125
+update cesdb_arextension.dns_antecedentespersonalesnewconext set antep_descripcion='AQX CESAREA HACE 11 AÑOS' where antep_id=125
+update cesdb_arextension.dns_antecedentespersonalesnewconext set antep_descripcion='AQX CESAREA HACE 11 AÑOS
+AGO MENARQUIA 14A CMI FUM 5/1/2026 X 3 DIAS G2C1P1HV 2 PAPTEST HACE 12 AÑOS NORMAL PLANIFICACION NINGUNO' where antep_id=125
+update cesdb_arextension.dns_newconsultaexternagridorgano set gorgano_observacion='DOLOR PELVICO' where gorgano_id=688
+update cesdb_arextension.dns_newconsultaexternagridexamenfisico set gexamfis_observacion='' where gexamfis_id=1720
+update cesdb_arextension.dns_newconsultaexternagridexamenfisico set gexamfis_observacion='' where gexamfis_id=1720
+update cesdb_arextension.dns_newconsultaexternagridexamenfisico set gexamfis_observacion='PACIENTE CONSCIENTE ORIENTADA AFEBRIL MUCOSAS ORALES SEMIHUMEDAS, ABDOMEN SUAVE DISTENDIDO DEPRESIBLE DOLOROSO A LA PALPACION EN REGION PELVICA PUNTOS URETERALES BAJOS POSITIVOS NO TIMPANISMO RHA PRESENTES, NO IMPRESIONAN SIGNOS DE IRRITACION PERITONEAL, PUÑOPERCUSION NEGATIVA' where gexamfis_id=1720
+update cesdb_arextension.dns_antecedentespersonaleshospi set antep_descripcion='CESAREA HACE 12 AÑOS ' where antep_id=4
+update cesdb_arextension.dns_antecedentesfamiliareshospi set antef_descripcion='PADRE ' where antef_id=6
+update cesdb_arextension.dns_newhospitalizaciongridorgano set gorgano_observacion='OMALGIA DERECHA ' where gorgano_id=1274
+update cesdb_arextension.dns_antecedentespersonalesnewconext set antep_descripcion='DDDDD' where antep_id=126
+update cesdb_arextension.dns_antecedentespersonalesnewconext set antep_descripcion='DS' where antep_id=128
+update cesdb_arextension.dns_newconsultaexternagridorgano set gorgano_observacion='YYYYYY' where gorgano_id=691

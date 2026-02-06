@@ -1,0 +1,312 @@
+=== DIAGNÓSTICO DE REGISTROS DEL PACIENTE ===
+Cliente ID: 1
+Atención ID: 1
+RUC/CI: 1711467884
+Fecha: 2026-02-06 12:27:24
+==========================================
+
+TABLA: dns_enfermeria
+  Tab ID: 328
+  Descripción: 
+  Registros encontrados: 6
+  Status: ✗ SIN PDF CONFIGURADO
+  Campo fecha: enferm_fecharegistro
+  Campo primario: enferm_id
+  ---
+
+TABLA: dns_ginecologiaanamesis
+  Tab ID: 378
+  Descripción: 
+  Registros encontrados: 1
+  Status: ✓ CON PDF CONFIGURADO
+  Campo fecha: anam_fecharegistro
+  Campo primario: anam_id
+  ---
+
+TABLA: dns_newcardiologiaanamesis
+  Tab ID: 568
+  Descripción: 
+  Registros encontrados: 1
+  Status: ✓ CON PDF CONFIGURADO
+  Campo fecha: anam_fecharegistro
+  Campo primario: anam_id
+  ---
+
+TABLA: dns_newconsultaexternaanamesis
+  Tab ID: 556
+  Descripción: 
+  Registros encontrados: 2
+  Status: ✓ CON PDF CONFIGURADO
+  Campo fecha: anam_fecharegistro
+  Campo primario: anam_id
+  ---
+
+TABLA: dns_newemergenciaanamesis
+  Tab ID: 536
+  Descripción: 
+  Registros encontrados: 1
+  Status: ✗ SIN PDF CONFIGURADO
+  Campo fecha: anam_fecharegistro
+  Campo primario: anam_id
+  ---
+
+TABLA: dns_newepicrisisanamesis
+  Tab ID: 582
+  Descripción: 
+  Registros encontrados: 1
+  Status: ✗ SIN PDF CONFIGURADO
+  Campo fecha: anam_fecharegistro
+  Campo primario: anam_id
+  ---
+
+TABLA: dns_newgastroenterologiaanamesis
+  Tab ID: 572
+  Descripción: 
+  Registros encontrados: 1
+  Status: ✗ SIN PDF CONFIGURADO
+  Campo fecha: anam_fecharegistro
+  Campo primario: anam_id
+  ---
+
+TABLA: dns_newhospitalizacionanamesis
+  Tab ID: 576
+  Descripción: 
+  Registros encontrados: 1
+  Status: ✓ CON PDF CONFIGURADO
+  Campo fecha: anam_fecharegistro
+  Campo primario: anam_id
+  ---
+
+TABLA: dns_newpediatriaanamesis
+  Tab ID: 564
+  Descripción: 
+  Registros encontrados: 1
+  Status: ✗ SIN PDF CONFIGURADO
+  Campo fecha: anam_fecharegistro
+  Campo primario: anam_id
+  ---
+
+TABLA: dns_newreferencia
+  Tab ID: 466
+  Descripción: 
+  Registros encontrados: 1
+  Status: ✗ SIN PDF CONFIGURADO
+  Campo fecha: referencia_fecharegistro
+  Campo primario: referencia_id
+  ---
+
+TABLA: dns_newsalarecuperacionanamesis
+  Tab ID: 605
+  Descripción: 
+  Registros encontrados: 1
+  Status: ✗ SIN PDF CONFIGURADO
+  Campo fecha: anam_fecharegistro
+  Campo primario: anam_id
+  ---
+
+TABLA: dns_newtraumatologiaanamesis
+  Tab ID: 560
+  Descripción: 
+  Registros encontrados: 1
+  Status: ✓ CON PDF CONFIGURADO
+  Campo fecha: anam_fecharegistro
+  Campo primario: anam_id
+  ---
+
+
+=== LABORATORIOS ===
+
+Laboratorios (versión antigua): 0 registros ✓ CON PDF
+Laboratorios (versión nueva): 5 registros ✓ CON PDF
+
+=== IMAGENOLOGÍA ===
+
+Imagenología (versión antigua): 0 registros ✓ CON PDF
+Imagenología (versión nueva): 5 registros ✓ CON PDF
+
+
+==============================================
+RESUMEN DEL DIAGNÓSTICO
+==============================================
+
+Total de registros analizados: 18
+Registros CON PDF configurado: 6
+Registros SIN PDF configurado: 12
+Laboratorios: 5 (CON PDF)
+Imagenología: 5 (CON PDF)
+
+
+!!! ATENCIÓN: HAY 12 REGISTROS SIN PDF CONFIGURADO !!!
+
+==============================================
+TABLAS QUE NECESITAN CONFIGURACIÓN DE PDF
+==============================================
+
+TABLA: dns_enfermeria
+  Registros sin PDF: 6
+  Tab ID: 328
+  Descripción: 
+  Campo fecha: enferm_fecharegistro
+  Campo primario: enferm_id
+
+  CÓDIGO A AGREGAR EN HISTORIAL.PHP:
+  -----------------------------------
+  if($rs_tabeval->fields["tab_name"]=='dns_enfermeria')
+  {
+      $campos_data='';
+      $campos_data64='';
+      $campos_data='iddata='.$rs_tabeval->fields["tab_id"].'&pVar2='.@$clie_id.'&pVar4='.$atenc_id.'&pVar5='.$eteneva_id.'&pVar3='.$mnupan_id;
+      $campos_data64=base64_encode($campos_data);
+      
+      $linkpdfg="pdformulario_dns_enfermeria";  // CAMBIAR NOMBRE DEL PDF
+      $urllinkg="pdfformularios/".$linkpdfg.".php?ssr=".$campos_data64."|"."+".$rs_seccion->fields[$rs_tabeval->fields["tab_campoprimario"]];
+      $linkimprimirg="onClick=ver_pdfform('".$urllinkg."')";
+      
+      $campo_fecha='enferm_fecharegistro';
+  }
+  -----------------------------------
+
+TABLA: dns_newemergenciaanamesis
+  Registros sin PDF: 1
+  Tab ID: 536
+  Descripción: 
+  Campo fecha: anam_fecharegistro
+  Campo primario: anam_id
+
+  CÓDIGO A AGREGAR EN HISTORIAL.PHP:
+  -----------------------------------
+  if($rs_tabeval->fields["tab_name"]=='dns_newemergenciaanamesis')
+  {
+      $campos_data='';
+      $campos_data64='';
+      $campos_data='iddata='.$rs_tabeval->fields["tab_id"].'&pVar2='.@$clie_id.'&pVar4='.$atenc_id.'&pVar5='.$eteneva_id.'&pVar3='.$mnupan_id;
+      $campos_data64=base64_encode($campos_data);
+      
+      $linkpdfg="pdformulario_dns_newemergenciaanamesis";  // CAMBIAR NOMBRE DEL PDF
+      $urllinkg="pdfformularios/".$linkpdfg.".php?ssr=".$campos_data64."|"."+".$rs_seccion->fields[$rs_tabeval->fields["tab_campoprimario"]];
+      $linkimprimirg="onClick=ver_pdfform('".$urllinkg."')";
+      
+      $campo_fecha='anam_fecharegistro';
+  }
+  -----------------------------------
+
+TABLA: dns_newepicrisisanamesis
+  Registros sin PDF: 1
+  Tab ID: 582
+  Descripción: 
+  Campo fecha: anam_fecharegistro
+  Campo primario: anam_id
+
+  CÓDIGO A AGREGAR EN HISTORIAL.PHP:
+  -----------------------------------
+  if($rs_tabeval->fields["tab_name"]=='dns_newepicrisisanamesis')
+  {
+      $campos_data='';
+      $campos_data64='';
+      $campos_data='iddata='.$rs_tabeval->fields["tab_id"].'&pVar2='.@$clie_id.'&pVar4='.$atenc_id.'&pVar5='.$eteneva_id.'&pVar3='.$mnupan_id;
+      $campos_data64=base64_encode($campos_data);
+      
+      $linkpdfg="pdformulario_dns_newepicrisisanamesis";  // CAMBIAR NOMBRE DEL PDF
+      $urllinkg="pdfformularios/".$linkpdfg.".php?ssr=".$campos_data64."|"."+".$rs_seccion->fields[$rs_tabeval->fields["tab_campoprimario"]];
+      $linkimprimirg="onClick=ver_pdfform('".$urllinkg."')";
+      
+      $campo_fecha='anam_fecharegistro';
+  }
+  -----------------------------------
+
+TABLA: dns_newgastroenterologiaanamesis
+  Registros sin PDF: 1
+  Tab ID: 572
+  Descripción: 
+  Campo fecha: anam_fecharegistro
+  Campo primario: anam_id
+
+  CÓDIGO A AGREGAR EN HISTORIAL.PHP:
+  -----------------------------------
+  if($rs_tabeval->fields["tab_name"]=='dns_newgastroenterologiaanamesis')
+  {
+      $campos_data='';
+      $campos_data64='';
+      $campos_data='iddata='.$rs_tabeval->fields["tab_id"].'&pVar2='.@$clie_id.'&pVar4='.$atenc_id.'&pVar5='.$eteneva_id.'&pVar3='.$mnupan_id;
+      $campos_data64=base64_encode($campos_data);
+      
+      $linkpdfg="pdformulario_dns_newgastroenterologiaanamesis";  // CAMBIAR NOMBRE DEL PDF
+      $urllinkg="pdfformularios/".$linkpdfg.".php?ssr=".$campos_data64."|"."+".$rs_seccion->fields[$rs_tabeval->fields["tab_campoprimario"]];
+      $linkimprimirg="onClick=ver_pdfform('".$urllinkg."')";
+      
+      $campo_fecha='anam_fecharegistro';
+  }
+  -----------------------------------
+
+TABLA: dns_newpediatriaanamesis
+  Registros sin PDF: 1
+  Tab ID: 564
+  Descripción: 
+  Campo fecha: anam_fecharegistro
+  Campo primario: anam_id
+
+  CÓDIGO A AGREGAR EN HISTORIAL.PHP:
+  -----------------------------------
+  if($rs_tabeval->fields["tab_name"]=='dns_newpediatriaanamesis')
+  {
+      $campos_data='';
+      $campos_data64='';
+      $campos_data='iddata='.$rs_tabeval->fields["tab_id"].'&pVar2='.@$clie_id.'&pVar4='.$atenc_id.'&pVar5='.$eteneva_id.'&pVar3='.$mnupan_id;
+      $campos_data64=base64_encode($campos_data);
+      
+      $linkpdfg="pdformulario_dns_newpediatriaanamesis";  // CAMBIAR NOMBRE DEL PDF
+      $urllinkg="pdfformularios/".$linkpdfg.".php?ssr=".$campos_data64."|"."+".$rs_seccion->fields[$rs_tabeval->fields["tab_campoprimario"]];
+      $linkimprimirg="onClick=ver_pdfform('".$urllinkg."')";
+      
+      $campo_fecha='anam_fecharegistro';
+  }
+  -----------------------------------
+
+TABLA: dns_newreferencia
+  Registros sin PDF: 1
+  Tab ID: 466
+  Descripción: 
+  Campo fecha: referencia_fecharegistro
+  Campo primario: referencia_id
+
+  CÓDIGO A AGREGAR EN HISTORIAL.PHP:
+  -----------------------------------
+  if($rs_tabeval->fields["tab_name"]=='dns_newreferencia')
+  {
+      $campos_data='';
+      $campos_data64='';
+      $campos_data='iddata='.$rs_tabeval->fields["tab_id"].'&pVar2='.@$clie_id.'&pVar4='.$atenc_id.'&pVar5='.$eteneva_id.'&pVar3='.$mnupan_id;
+      $campos_data64=base64_encode($campos_data);
+      
+      $linkpdfg="pdformulario_dns_newreferencia";  // CAMBIAR NOMBRE DEL PDF
+      $urllinkg="pdfformularios/".$linkpdfg.".php?ssr=".$campos_data64."|"."+".$rs_seccion->fields[$rs_tabeval->fields["tab_campoprimario"]];
+      $linkimprimirg="onClick=ver_pdfform('".$urllinkg."')";
+      
+      $campo_fecha='referencia_fecharegistro';
+  }
+  -----------------------------------
+
+TABLA: dns_newsalarecuperacionanamesis
+  Registros sin PDF: 1
+  Tab ID: 605
+  Descripción: 
+  Campo fecha: anam_fecharegistro
+  Campo primario: anam_id
+
+  CÓDIGO A AGREGAR EN HISTORIAL.PHP:
+  -----------------------------------
+  if($rs_tabeval->fields["tab_name"]=='dns_newsalarecuperacionanamesis')
+  {
+      $campos_data='';
+      $campos_data64='';
+      $campos_data='iddata='.$rs_tabeval->fields["tab_id"].'&pVar2='.@$clie_id.'&pVar4='.$atenc_id.'&pVar5='.$eteneva_id.'&pVar3='.$mnupan_id;
+      $campos_data64=base64_encode($campos_data);
+      
+      $linkpdfg="pdformulario_dns_newsalarecuperacionanamesis";  // CAMBIAR NOMBRE DEL PDF
+      $urllinkg="pdfformularios/".$linkpdfg.".php?ssr=".$campos_data64."|"."+".$rs_seccion->fields[$rs_tabeval->fields["tab_campoprimario"]];
+      $linkimprimirg="onClick=ver_pdfform('".$urllinkg."')";
+      
+      $campo_fecha='anam_fecharegistro';
+  }
+  -----------------------------------
+

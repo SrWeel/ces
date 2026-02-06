@@ -1,0 +1,20 @@
+update cesdb_arextension.dns_antecedentespersonalesnewconext set antep_descripcion='ALERGIAS NO REFIERE 
+APP ALZHEIRMER + DEMENCIA SENIL EN TTO CON EUTOBROL DUO, SERTALINA 1/2TAB 1D, 
+HTA DG HACE 10 AÑOS EN TTO AMLODIPINO 10MG HIDROCLOROTIAZIDA 12.5MG QD  
+EPOC EN TTO INHALADOR SPIRIVA
+AQX EXTIRPACION TESTICULAR HACE 3 AÑOS
+PROSTACTECTOMIA HACE 10 Y 3 AÑOS CON DG DE CA DE PROSTATA , PROTESIS DE RODILLA DERECHA HACE 12 AÑOS ' where antep_id=120
+update cesdb_arextension.dns_newconsultaexternagridexamenfisico set gexamfis_observacion=' PACIENTE ADULTO MAYOR EDENTULO 
+ABDOMEN TENSO NO DOLOROSO A LA PALPACION, RHA PRESENTES, TIMPANISMO PRESENTE, REGION ANAL SE PRESENICA VESTIGIOS DE HECES DURA A LA ENTRADA DE LA APERTURA ANAL 
+
+EN POSICION FETAL SE PROCEDE A REALIZA 2 FLEET ENEMA A PRESION, POSTERIOR MASAJE ABDOMINAL CON REALIZACION DE DEPOSICION ABUNDANTE CANTIDAD 
+' where gexamfis_id=1579
+update cesdb_arextension.dns_newconsultaexternagridexamenfisico set gexamfis_observacion=' PACIENTE ADULTO MAYOR EDENTULO 
+ABDOMEN TENSO NO DOLOROSO A LA PALPACION, RHA PRESENTES, TIMPANISMO PRESENTE, REGION ANAL SE PRESENICA VESTIGIOS DE HECES DURA A LA ENTRADA DE LA APERTURA ANAL 
+
+EN POSICION FETAL SE PROCEDE A REALIZA 2 FLEET ENEMA A PRESION, POSTERIOR MASAJE ABDOMINAL CON REALIZACION DE DEPOSICION ABUNDANTE CANTIDAD 
+' where gexamfis_id=1579
+update cesdb_arextension.dns_antecedentespersonalesnewconext set antep_descripcion='HIPERTENSION' where antep_id=121
+update cesdb_arextension.dns_antecedentesfamiliaresnewconext set antef_descripcion='ENFERMEDAD PULMONAR' where antef_id=44
+update cesdb_arextension.dns_newtraumatologiagridorgano set gorgano_observacion='GASTRITIS' where gorgano_id=1553
+update cesdb_arextension.dns_newtraumatologiagridexamenfisico set gexamfis_observacion='DEFORMIDAD EN ANTEBRAZO' where gexamfis_id=3889

@@ -169,8 +169,7 @@ WHERE a.clie_id = ?
 
 ORDER BY sv.signovita_fecharegistro ASC
 ";
-    $rs_constantes = $DB_gogess->executec($sql_constantes, array($atenc_id));
-    // CONSULTA DE INGESTA
+    $rs_constantes = $DB_gogess->executec($sql_constantes, array($clie_id));    // CONSULTA DE INGESTA
     $sql_ingesta = "
 SELECT 
     gi.ginge_id, 

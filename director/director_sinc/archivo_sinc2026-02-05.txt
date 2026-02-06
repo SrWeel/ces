@@ -1,0 +1,2 @@
+update gogess_sisfield set fie_type='hidden2' where fie_id='12407';
+update gogess_sisfield set fie_typeweb='hidden2' where fie_id='12407';

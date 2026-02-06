@@ -60,7 +60,6 @@ if($_SESSION['ces1313777_sessid_inicio']) {
     if($rs_enfermeria && !$rs_enfermeria->EOF) {
         $enferm_enlace = $rs_enfermeria->fields["enferm_enlace"];
     }
-//    echo $enferm_enlace;
 
     // Obtener datos del paciente
     $datos_cliente="SELECT * FROM app_cliente WHERE clie_id=?";
@@ -143,7 +142,10 @@ if($_SESSION['ces1313777_sessid_inicio']) {
     $primer_nombre = isset($partes_nombre[0]) ? $partes_nombre[0] : '';
     $segundo_nombre = isset($partes_nombre[1]) ? $partes_nombre[1] : '';
 
-    //  MEDICAMENTOS (CON TODAS LAS RELACIONES) - se incluye operatorio
+    // ========================================================================
+    // CORRECCIÓN: Filtrar por enferm_id en la tabla dns_enfermeria
+    // y hacer JOIN con dns_gridadmmedicamentos usando enferm_enlace
+    // ========================================================================
     $sql_medicamentos = "
         SELECT 
             m.gadmmedi_id, 
@@ -171,6 +173,11 @@ if($_SESSION['ces1313777_sessid_inicio']) {
             oper.enfope_descripcion AS control_preoperatorio
         FROM cesdb_arextension.dns_gridadmmedicamentos AS m
         
+        -- JOIN con dns_enfermeria para filtrar por enferm_id específico
+        INNER JOIN cesdb_aroriginal.dns_enfermeria AS e
+               ON m.enferm_enlace = e.enferm_enlace
+               AND e.enferm_id = ?
+        
         LEFT JOIN cesdb_aroriginal.app_usuario AS u 
                ON m.usua_id = u.usua_id
                
@@ -185,12 +192,10 @@ if($_SESSION['ces1313777_sessid_inicio']) {
         LEFT JOIN cesdb_aroriginal.dns_frecuencia AS f
                ON m.gadmmedi_frecuencia = f.frecue_id
                
-        WHERE m.enferm_enlace = ?
-        
         ORDER BY m.gadmmedi_medicamento ASC, m.gadmmedi_fecha ASC, m.gadmmedi_hora ASC
-";
+    ";
 
-    $rs_medicamentos = $DB_gogess->executec($sql_medicamentos, array($enferm_enlace));
+    $rs_medicamentos = $DB_gogess->executec($sql_medicamentos, array($enferm_id));
     // Construir HTML del reporte
     $html_reporte = '
     <!DOCTYPE html>
@@ -198,7 +203,7 @@ if($_SESSION['ces1313777_sessid_inicio']) {
     <head>
         <meta charset="UTF-8">
         <style>
-            body { 
+           body { 
                 font-family: Arial, sans-serif; 
                 font-size: 9px; 
                 margin: 10px;
@@ -343,6 +348,8 @@ if($_SESSION['ces1313777_sessid_inicio']) {
     font-size: 10px;
     vertical-align: middle;
 }
+
+
 
         </style>
     </head>

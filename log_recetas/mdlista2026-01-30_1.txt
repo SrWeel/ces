@@ -1,0 +1,8 @@
+update cesdb_arextension.dns_newconsultaexternagridorgano set gorgano_observacion='CEFALEA ' where gorgano_id=650
+update cesdb_arextension.dns_newconsultaexternagridexamenfisico set gexamfis_observacion=' PACIENTE CONSCIENTE ORIENTADA EN 3 ESFERAS COGNITIVAS AFEBRIL CABEZA DOLOROSA  A LA DIGITOPRESION EN ZONA FRONTAL RETROAURICULAR Y OCCIPITAL, REGION CERVICAL CADENAS CERVICALES TENSAS DOLOROSA A LA DIGITOPRESION, TEST DE ROMBERT POSITIVO, ARNOLDS POSITIVO' where gexamfis_id=1601
+update cesdb_arextension.dns_antecedentespersonalesnewconext set antep_descripcion='ALERGIAS: CURAM (AMOXICILINA + AC CLAVULANICO)
+APP: GASTRITIS DESDE HACE 10 AÑOS EN TRATAMIENTO CON OMEPRAZOL DE 40MG QD
+AQX: NO REFIERE' where antep_id=122
+update cesdb_arextension.dns_newconsultaexternagridorgano set gorgano_observacion='DOLOR ABDOMINAL ' where gorgano_id=653
+update cesdb_arextension.dns_newconsultaexternagridexamenfisico set gexamfis_observacion='' where gexamfis_id=1629
+update cesdb_arextension.dns_newconsultaexternagridexamenfisico set gexamfis_observacion=' PACIENTE CONSCIENTE ORIENTADA MUCOSAS ORALES SEMIHUMEDAS ORF LIGERAMENTE ERITEMATOSA, ABDOMEN DISTENDIDO DOLOROSO DE FORMA DIFUSA CON PREDOMINIO DE EPIGASTRIO Y REGION PELVICA RHA AUMENTADOS TIMPANISMO PRESENTE SIGNOS DE IRRITACION PERITONEAL NO IMPRESIONA ' where gexamfis_id=1629

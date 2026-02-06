@@ -276,7 +276,7 @@ if($bloque_registro==1)
 		$template_reemplazo='templateformsweb/maestro_standar_substandar/';
 		}
 
-		//echo $template_reemplazo;
+		echo $template_reemplazo;
 
 ?>
 <div class="container" style="padding-top: 1em; padding-right:1em; padding-left:1em; max-width:100%;">
