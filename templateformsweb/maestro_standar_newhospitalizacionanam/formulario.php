@@ -187,6 +187,8 @@ echo '<td>
             <span class="glyphicon glyphicon-file" style="font-size:40px; color:#d9534f;"></span><br>
             <strong>Formato de Valoración Escala</strong>
         </a>
+                <div id="slot_formatoscal" style="margin-top:6px;"></div>
+
       </td>';
 
 echo '<td>
@@ -194,6 +196,8 @@ echo '<td>
             <span class="glyphicon glyphicon-file" style="font-size:40px; color:#d9534f;"></span><br>
             <strong>Formato SAER</strong>
         </a>
+                <div id="slot_saer" style="margin-top:6px;"></div>
+
       </td>';
 
 echo '<td></td>'; // celda vacía para mantener simetría
@@ -369,6 +373,14 @@ echo "<input name='csearch' type='hidden' value=''>
         // Hoja de anestesia
         $('#slot_anestesia').append(
             $('#anam_pdfanestesiaimagen').closest('.form-group')
+        );
+        // Hoja de slot_formatoscal
+        $('#slot_formatoscal').append(
+            $('#anam_pdfescalavalimagen').closest('.form-group')
+        );
+        // Hoja de saer
+        $('#slot_saer').append(
+            $('#anam_pdfsaerimagen').closest('.form-group')
         );
 
     });

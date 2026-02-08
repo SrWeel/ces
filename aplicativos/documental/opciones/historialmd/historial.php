@@ -666,6 +666,7 @@ $atenc_id=$_POST["atenc_id"];
 
 
                                         $rs_subsecuentes->MoveNext();
+                                        break;
                                     }
                                 }
 
@@ -704,6 +705,7 @@ $atenc_id=$_POST["atenc_id"];
 
 
                                         $rs_subsecuentes->MoveNext();
+                                        break;
                                     }
                                 }
 
@@ -742,6 +744,7 @@ $atenc_id=$_POST["atenc_id"];
 
 
                                         $rs_subsecuentes->MoveNext();
+                                        break;
                                     }
                                 }
 
@@ -780,6 +783,7 @@ $atenc_id=$_POST["atenc_id"];
 
 
                                         $rs_subsecuentes->MoveNext();
+                                        break;
                                     }
                                 }
 
@@ -818,6 +822,7 @@ $atenc_id=$_POST["atenc_id"];
 
 
                                         $rs_subsecuentes->MoveNext();
+                                        break;
                                     }
                                 }
 
@@ -856,6 +861,7 @@ $atenc_id=$_POST["atenc_id"];
 
 
                                         $rs_subsecuentes->MoveNext();
+                                        break;
                                     }
                                 }
 
@@ -894,6 +900,7 @@ $atenc_id=$_POST["atenc_id"];
 
 
                                         $rs_subsecuentes->MoveNext();
+                                        break;
                                     }
                                 }
 
@@ -932,6 +939,7 @@ $atenc_id=$_POST["atenc_id"];
 
 
                                         $rs_subsecuentes->MoveNext();
+                                        break;
                                     }
                                 }
 
@@ -970,6 +978,7 @@ $atenc_id=$_POST["atenc_id"];
 
 
                                         $rs_subsecuentes->MoveNext();
+                                        break;
                                     }
                                 }
 
@@ -1010,6 +1019,7 @@ $atenc_id=$_POST["atenc_id"];
 
 
                                         $rs_subsecuentes->MoveNext();
+                                        break;
                                     }
                                 }
 
@@ -1046,6 +1056,7 @@ $atenc_id=$_POST["atenc_id"];
 
 
                                         $rs_subsecuentes->MoveNext();
+                                        break;
                                     }
                                 }
 
@@ -1072,7 +1083,8 @@ $atenc_id=$_POST["atenc_id"];
                                         $campos_data64=base64_encode($campos_data);
 
                                         $linkpdfgx="pdfformevolucionnewhospitalizacion";
-                                        $urllinkgx="pdfformularios/".$linkpdfgx.".php?ssr=".$campos_data64."|"."+".$rs_seccion->fields["anam_id"];
+                                        $conext_id=$rs_subsecuentes->fields["conext_id"];
+                                        $urllinkgx="pdfformularios/".$linkpdfgx.".php?ssr=".$campos_data64."|"."+".$conext_id;
                                         $linkimprimirgx="onClick=ver_pdfform('".$urllinkgx."')";
                                         $campo_fechax='conext_fecharegistro';
 
@@ -1084,6 +1096,7 @@ $atenc_id=$_POST["atenc_id"];
 
 
                                         $rs_subsecuentes->MoveNext();
+                                        break;
                                     }
                                 }
 

@@ -1,0 +1,16 @@
+update gogess_sisfield set fie_type='txtgraficopeke' where fie_id='12449';
+update gogess_sisfield set fie_typeweb='txtgraficopeke' where fie_id='12449';
+update gogess_sisfield set fie_type='txtgraficopeke' where fie_id='12450';
+update gogess_sisfield set fie_typeweb='txtgraficopeke' where fie_id='12450';
+update gogess_sisfield set fie_orden='3' where fie_id='12449';
+update gogess_sisfield set fie_orden='4' where fie_id='12450';
+update gogess_sisfield set fie_orden='5' where fie_id='11398';
+update gogess_sisfield set fie_orden='6' where fie_id='11266';
+update gogess_sisfield set fie_orden='7' where fie_id='11334';
+update gogess_sisfield set fie_orden='8' where fie_id='11270';
+update gogess_sisfield set fie_orden='9' where fie_id='11273';
+update gogess_sisfield set fie_orden='10' where fie_id='11327';
+update gogess_sisfield set fie_orden='11' where fie_id='11268';
+update gogess_sisfield set fie_orden='12' where fie_id='11294';
+update gogess_sisfield set fie_anchocolomna='4' where fie_id='12449';
+update gogess_sisfield set fie_anchocolomna='4' where fie_id='12450';
